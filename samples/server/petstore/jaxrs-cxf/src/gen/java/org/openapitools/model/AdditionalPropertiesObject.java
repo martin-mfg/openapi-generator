@@ -1,7 +1,5 @@
 package org.openapitools.model;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
@@ -10,7 +8,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-public class AdditionalPropertiesObject extends HashMap<String, Map> {
+public class AdditionalPropertiesObject extends java.util.HashMap<String, java.util.Map> {
   
   @ApiModelProperty(value = "")
   private String name;

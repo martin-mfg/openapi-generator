@@ -12,8 +12,6 @@
 
 package org.openapitools.server.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.server.model.ModelFile;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
@@ -28,7 +26,7 @@ public class FileSchemaTestClass  {
   
   private ModelFile _file;
 
-  private List<ModelFile> files = null;
+  private java.util.List<ModelFile> files = null;
 
  /**
    * Get _file
@@ -54,18 +52,18 @@ public class FileSchemaTestClass  {
    * Get files
    * @return files
   **/
-  public List<ModelFile> getFiles() {
+  public java.util.List<ModelFile> getFiles() {
     return files;
   }
 
   /**
     * Set files
   **/
-  public void setFiles(List<ModelFile> files) {
+  public void setFiles(java.util.List<ModelFile> files) {
     this.files = files;
   }
 
-  public FileSchemaTestClass files(List<ModelFile> files) {
+  public FileSchemaTestClass files(java.util.List<ModelFile> files) {
     this.files = files;
     return this;
   }

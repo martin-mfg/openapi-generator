@@ -19,12 +19,6 @@ import org.openapitools.client.model.OuterComposite;
 import org.openapitools.client.model.OuterEnum;
 import org.openapitools.client.model.User;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FakeApi {
   private ApiClient apiClient;
@@ -236,7 +230,7 @@ public class FakeApi {
   /**
    * Array of Enums
    * 
-   * @return List&lt;OuterEnum&gt;
+   * @return java.util.List&lt;OuterEnum&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -244,14 +238,14 @@ public class FakeApi {
        <tr><td> 200 </td><td> Got named array of enums </td><td>  -  </td></tr>
      </table>
    */
-  public List<OuterEnum> getArrayOfEnums() throws ApiException {
+  public java.util.List<OuterEnum> getArrayOfEnums() throws ApiException {
     return getArrayOfEnumsWithHttpInfo().getData();
   }
 
   /**
    * Array of Enums
    * 
-   * @return ApiResponse&lt;List&lt;OuterEnum&gt;&gt;
+   * @return ApiResponse&lt;java.util.List&lt;OuterEnum&gt;&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -259,10 +253,10 @@ public class FakeApi {
        <tr><td> 200 </td><td> Got named array of enums </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<List<OuterEnum>> getArrayOfEnumsWithHttpInfo() throws ApiException {
+  public ApiResponse<java.util.List<OuterEnum>> getArrayOfEnumsWithHttpInfo() throws ApiException {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
-    GenericType<List<OuterEnum>> localVarReturnType = new GenericType<List<OuterEnum>>() {};
+    GenericType<java.util.List<OuterEnum>> localVarReturnType = new GenericType<java.util.List<OuterEnum>>() {};
     return apiClient.invokeAPI("FakeApi.getArrayOfEnums", "/fake/array-of-enums", "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                null, localVarReturnType, false);
@@ -345,7 +339,7 @@ public class FakeApi {
     }
 
     // Query parameters
-    List<Pair> localVarQueryParams = new ArrayList<>(
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>(
             apiClient.parameterToPairs("", "query", query)
     );
 
@@ -467,7 +461,7 @@ public class FakeApi {
     }
 
     // Form parameters
-    Map<String, Object> localVarFormParams = new LinkedHashMap<>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.LinkedHashMap<>();
     if (integer != null) {
       localVarFormParams.put("integer", integer);
     }
@@ -529,7 +523,7 @@ public class FakeApi {
        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
      </table>
    */
-  public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws ApiException {
+  public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws ApiException {
     testEnumParametersWithHttpInfo(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
   }
 
@@ -553,9 +547,9 @@ public class FakeApi {
        <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<Void> testEnumParametersWithHttpInfo(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws ApiException {
+  public ApiResponse<Void> testEnumParametersWithHttpInfo(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws ApiException {
     // Query parameters
-    List<Pair> localVarQueryParams = new ArrayList<>(
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>(
             apiClient.parameterToPairs("multi", "enum_query_string_array", enumQueryStringArray)
     );
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "enum_query_string", enumQueryString));
@@ -563,7 +557,7 @@ public class FakeApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "enum_query_double", enumQueryDouble));
 
     // Header parameters
-    Map<String, String> localVarHeaderParams = new LinkedHashMap<>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.LinkedHashMap<>();
     if (enumHeaderStringArray != null) {
       localVarHeaderParams.put("enum_header_string_array", apiClient.parameterToString(enumHeaderStringArray));
     }
@@ -572,7 +566,7 @@ public class FakeApi {
     }
 
     // Form parameters
-    Map<String, Object> localVarFormParams = new LinkedHashMap<>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.LinkedHashMap<>();
     if (enumFormStringArray != null) {
       localVarFormParams.put("enum_form_string_array", enumFormStringArray);
     }
@@ -600,7 +594,7 @@ private ApiResponse<Void> testGroupParametersWithHttpInfo(Integer requiredString
     }
 
     // Query parameters
-    List<Pair> localVarQueryParams = new ArrayList<>(
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>(
             apiClient.parameterToPairs("", "required_string_group", requiredStringGroup)
     );
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "required_int64_group", requiredInt64Group));
@@ -608,7 +602,7 @@ private ApiResponse<Void> testGroupParametersWithHttpInfo(Integer requiredString
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "int64_group", int64Group));
 
     // Header parameters
-    Map<String, String> localVarHeaderParams = new LinkedHashMap<>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.LinkedHashMap<>();
     localVarHeaderParams.put("required_boolean_group", apiClient.parameterToString(requiredBooleanGroup));
     if (booleanGroup != null) {
       localVarHeaderParams.put("boolean_group", apiClient.parameterToString(booleanGroup));
@@ -747,7 +741,7 @@ private ApiResponse<Void> testGroupParametersWithHttpInfo(Integer requiredString
        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
    */
-  public void testInlineAdditionalProperties(Map<String, String> requestBody) throws ApiException {
+  public void testInlineAdditionalProperties(java.util.Map<String, String> requestBody) throws ApiException {
     testInlineAdditionalPropertiesWithHttpInfo(requestBody);
   }
 
@@ -763,7 +757,7 @@ private ApiResponse<Void> testGroupParametersWithHttpInfo(Integer requiredString
        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<Void> testInlineAdditionalPropertiesWithHttpInfo(Map<String, String> requestBody) throws ApiException {
+  public ApiResponse<Void> testInlineAdditionalPropertiesWithHttpInfo(java.util.Map<String, String> requestBody) throws ApiException {
     // Check required parameters
     if (requestBody == null) {
       throw new ApiException(400, "Missing the required parameter 'requestBody' when calling testInlineAdditionalProperties");
@@ -814,7 +808,7 @@ private ApiResponse<Void> testGroupParametersWithHttpInfo(Integer requiredString
     }
 
     // Form parameters
-    Map<String, Object> localVarFormParams = new LinkedHashMap<>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.LinkedHashMap<>();
     localVarFormParams.put("param", param);
     localVarFormParams.put("param2", param2);
 
@@ -839,7 +833,7 @@ private ApiResponse<Void> testGroupParametersWithHttpInfo(Integer requiredString
        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
    */
-  public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws ApiException {
+  public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws ApiException {
     testQueryParameterCollectionFormatWithHttpInfo(pipe, ioutil, http, url, context);
   }
 
@@ -859,7 +853,7 @@ private ApiResponse<Void> testGroupParametersWithHttpInfo(Integer requiredString
        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<Void> testQueryParameterCollectionFormatWithHttpInfo(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws ApiException {
+  public ApiResponse<Void> testQueryParameterCollectionFormatWithHttpInfo(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws ApiException {
     // Check required parameters
     if (pipe == null) {
       throw new ApiException(400, "Missing the required parameter 'pipe' when calling testQueryParameterCollectionFormat");
@@ -878,7 +872,7 @@ private ApiResponse<Void> testGroupParametersWithHttpInfo(Integer requiredString
     }
 
     // Query parameters
-    List<Pair> localVarQueryParams = new ArrayList<>(
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>(
             apiClient.parameterToPairs("multi", "pipe", pipe)
     );
     localVarQueryParams.addAll(apiClient.parameterToPairs("csv", "ioutil", ioutil));

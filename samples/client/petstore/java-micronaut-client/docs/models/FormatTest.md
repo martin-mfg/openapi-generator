@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **binary** | `File` |  |  [optional property]
 **date** | `LocalDate` |  | 
 **dateTime** | `OffsetDateTime` |  |  [optional property]
-**uuid** | `UUID` |  |  [optional property]
+**uuid** | `java.util.UUID` |  |  [optional property]
 **password** | `String` |  | 
 **bigDecimal** | `BigDecimal` |  |  [optional property]
 

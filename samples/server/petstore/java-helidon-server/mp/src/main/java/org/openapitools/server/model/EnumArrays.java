@@ -14,8 +14,6 @@ package org.openapitools.server.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
 
@@ -123,7 +121,7 @@ public enum ArrayEnumEnum {
     }
 }
 
-  private List<ArrayEnumEnum> arrayEnum = null;
+  private java.util.List<ArrayEnumEnum> arrayEnum = null;
 
  /**
    * Get justSymbol
@@ -149,18 +147,18 @@ public enum ArrayEnumEnum {
    * Get arrayEnum
    * @return arrayEnum
   **/
-  public List<ArrayEnumEnum> getArrayEnum() {
+  public java.util.List<ArrayEnumEnum> getArrayEnum() {
     return arrayEnum;
   }
 
   /**
     * Set arrayEnum
   **/
-  public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
   }
 
-  public EnumArrays arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public EnumArrays arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
     return this;
   }

@@ -5,12 +5,7 @@ import org.openapitools.client.ApiClient;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -96,7 +91,7 @@ public class UserApi {
      * @param body List of user object (required)
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void createUsersWithArrayInput(List<User> body) throws RestClientException {
+    public void createUsersWithArrayInput(java.util.List<User> body) throws RestClientException {
         createUsersWithArrayInputWithHttpInfo(body);
     }
 
@@ -108,7 +103,7 @@ public class UserApi {
      * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Void> createUsersWithArrayInputWithHttpInfo(List<User> body) throws RestClientException {
+    public ResponseEntity<Void> createUsersWithArrayInputWithHttpInfo(java.util.List<User> body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'body' is set
@@ -139,7 +134,7 @@ public class UserApi {
      * @param body List of user object (required)
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void createUsersWithListInput(List<User> body) throws RestClientException {
+    public void createUsersWithListInput(java.util.List<User> body) throws RestClientException {
         createUsersWithListInputWithHttpInfo(body);
     }
 
@@ -151,7 +146,7 @@ public class UserApi {
      * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Void> createUsersWithListInputWithHttpInfo(List<User> body) throws RestClientException {
+    public ResponseEntity<Void> createUsersWithListInputWithHttpInfo(java.util.List<User> body) throws RestClientException {
         Object localVarPostBody = body;
         
         // verify the required parameter 'body' is set

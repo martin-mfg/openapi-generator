@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **floatItem** | `Float` |  | 
 **integerItem** | `Integer` |  | 
 **boolItem** | `Boolean` |  | 
-**arrayItem** | `List&lt;Integer&gt;` |  | 
+**arrayItem** | `java.util.List&lt;Integer&gt;` |  | 
 
 
 

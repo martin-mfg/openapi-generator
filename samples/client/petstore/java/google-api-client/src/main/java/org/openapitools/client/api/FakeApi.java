@@ -869,7 +869,7 @@ public class FakeApi {
     * @param enumFormString Form parameter enum test (string)
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws IOException {
+    public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws IOException {
         testEnumParametersForHttpResponse(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
     }
 
@@ -885,7 +885,7 @@ public class FakeApi {
         testEnumParametersForHttpResponse(params);
     }
 
-    public HttpResponse testEnumParametersForHttpResponse(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws IOException {
+    public HttpResponse testEnumParametersForHttpResponse(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws IOException {
         
         UriBuilder uriBuilder = UriBuilder.fromUri(apiClient.getBasePath() + "/fake");
         if (enumQueryStringArray != null) {
@@ -1107,7 +1107,7 @@ public class FakeApi {
     * @param param request body
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void testInlineAdditionalProperties(Map<String, String> param) throws IOException {
+    public void testInlineAdditionalProperties(java.util.Map<String, String> param) throws IOException {
         testInlineAdditionalPropertiesForHttpResponse(param);
     }
 
@@ -1118,11 +1118,11 @@ public class FakeApi {
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void testInlineAdditionalProperties(Map<String, String> param, Map<String, Object> params) throws IOException {
+    public void testInlineAdditionalProperties(java.util.Map<String, String> param, Map<String, Object> params) throws IOException {
         testInlineAdditionalPropertiesForHttpResponse(param, params);
     }
 
-    public HttpResponse testInlineAdditionalPropertiesForHttpResponse(Map<String, String> param) throws IOException {
+    public HttpResponse testInlineAdditionalPropertiesForHttpResponse(java.util.Map<String, String> param) throws IOException {
         // verify the required parameter 'param' is set
         if (param == null) {
             throw new IllegalArgumentException("Missing the required parameter 'param' when calling testInlineAdditionalProperties");
@@ -1152,7 +1152,7 @@ public class FakeApi {
               return apiClient.getHttpRequestFactory().buildRequest(HttpMethods.POST, genericUrl, content).execute();
       }
 
-    public HttpResponse testInlineAdditionalPropertiesForHttpResponse(Map<String, String> param, Map<String, Object> params) throws IOException {
+    public HttpResponse testInlineAdditionalPropertiesForHttpResponse(java.util.Map<String, String> param, Map<String, Object> params) throws IOException {
         // verify the required parameter 'param' is set
         if (param == null) {
             throw new IllegalArgumentException("Missing the required parameter 'param' when calling testInlineAdditionalProperties");
@@ -1271,7 +1271,7 @@ public class FakeApi {
     * @param context The context parameter
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws IOException {
+    public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws IOException {
         testQueryParameterCollectionFormatForHttpResponse(pipe, ioutil, http, url, context);
     }
 
@@ -1286,11 +1286,11 @@ public class FakeApi {
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, Map<String, Object> params) throws IOException {
+    public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, Map<String, Object> params) throws IOException {
         testQueryParameterCollectionFormatForHttpResponse(pipe, ioutil, http, url, context, params);
     }
 
-    public HttpResponse testQueryParameterCollectionFormatForHttpResponse(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws IOException {
+    public HttpResponse testQueryParameterCollectionFormatForHttpResponse(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws IOException {
         // verify the required parameter 'pipe' is set
         if (pipe == null) {
             throw new IllegalArgumentException("Missing the required parameter 'pipe' when calling testQueryParameterCollectionFormat");
@@ -1367,7 +1367,7 @@ public class FakeApi {
         return apiClient.getHttpRequestFactory().buildRequest(HttpMethods.PUT, genericUrl, content).execute();
     }
 
-    public HttpResponse testQueryParameterCollectionFormatForHttpResponse(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, Map<String, Object> params) throws IOException {
+    public HttpResponse testQueryParameterCollectionFormatForHttpResponse(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, Map<String, Object> params) throws IOException {
         // verify the required parameter 'pipe' is set
         if (pipe == null) {
             throw new IllegalArgumentException("Missing the required parameter 'pipe' when calling testQueryParameterCollectionFormat");

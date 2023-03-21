@@ -6,3 +6,4 @@ additionalProperties:
   artifactId: jaxrs-resteasy-joda-server
   hideGenerationTimestamp: "true"
   dateLibrary: joda
+  fullJavaUtil: true

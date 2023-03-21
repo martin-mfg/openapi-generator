@@ -5,3 +5,4 @@ templateDir: modules/openapi-generator/src/main/resources/JavaPlayFramework
 additionalProperties:
   hideGenerationTimestamp: "true"
   useBeanValidation: "false"
+  fullJavaUtil: true

@@ -3,8 +3,6 @@ package org.openapitools.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.io.Serializable;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
@@ -25,7 +23,7 @@ public class TypeHolderDefault  implements Serializable {
   private @Valid BigDecimal numberItem;
   private @Valid Integer integerItem;
   private @Valid Boolean boolItem = true;
-  private @Valid List<Integer> arrayItem = new ArrayList<>();
+  private @Valid java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   protected TypeHolderDefault(TypeHolderDefaultBuilder<?, ?> b) {
     this.stringItem = b.stringItem;
@@ -120,7 +118,7 @@ public class TypeHolderDefault  implements Serializable {
 
   /**
    **/
-  public TypeHolderDefault arrayItem(List<Integer> arrayItem) {
+  public TypeHolderDefault arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
@@ -129,18 +127,18 @@ public class TypeHolderDefault  implements Serializable {
   @ApiModelProperty(required = true, value = "")
   @JsonProperty("array_item")
   @NotNull
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
   @JsonProperty("array_item")
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 
   public TypeHolderDefault addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
 
     this.arrayItem.add(arrayItemItem);
@@ -224,7 +222,7 @@ public class TypeHolderDefault  implements Serializable {
     private BigDecimal numberItem;
     private Integer integerItem;
     private Boolean boolItem = true;
-    private List<Integer> arrayItem = new ArrayList<>();
+    private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
     protected abstract B self();
 
     public abstract C build();
@@ -245,7 +243,7 @@ public class TypeHolderDefault  implements Serializable {
       this.boolItem = boolItem;
       return self();
     }
-    public B arrayItem(List<Integer> arrayItem) {
+    public B arrayItem(java.util.List<Integer> arrayItem) {
       this.arrayItem = arrayItem;
       return self();
     }

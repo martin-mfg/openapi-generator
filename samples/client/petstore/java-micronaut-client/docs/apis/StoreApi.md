@@ -65,7 +65,7 @@ For valid response try integer IDs with value &lt; 1000. Anything above 1000 or 
 <a name="getInventory"></a>
 # **getInventory**
 ```java
-Mono<Map<String, Integer>> StoreApi.getInventory()
+Mono<java.util.Map<String, Integer>> StoreApi.getInventory()
 ```
 
 Returns pet inventories by status
@@ -75,7 +75,7 @@ Returns a map of status codes to quantities
 
 
 ### Return type
-`Map&lt;String, Integer&gt;`
+`java.util.Map&lt;String, Integer&gt;`
 
 ### Authorization
 * **[api_key](auth.md#api_key)**

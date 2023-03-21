@@ -18,7 +18,7 @@
 |**binary** | **File** |  |  [optional] |
 |**date** | **LocalDate** |  |  |
 |**dateTime** | **LocalDateTime** |  |  [optional] |
-|**uuid** | **UUID** |  |  [optional] |
+|**uuid** | **java.util.UUID** |  |  [optional] |
 |**password** | **String** |  |  |
 |**bigDecimal** | **BigDecimal** |  |  [optional] |
 

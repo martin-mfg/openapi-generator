@@ -2,7 +2,6 @@ package org.openapitools.api;
 
 import org.openapitools.model.ApiResponseDto;
 import org.openapitools.model.PetDto;
-import java.util.Set;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,6 @@
 package org.openapitools.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
@@ -30,7 +28,7 @@ public class TypeHolderExample  {
   private Boolean boolItem;
 
   @ApiModelProperty(example = "[0, 1, 2, 3]", required = true, value = "")
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
  /**
    * Get stringItem
    * @return stringItem
@@ -132,15 +130,15 @@ public class TypeHolderExample  {
   **/
   @JsonProperty("array_item")
   @NotNull
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 
-  public TypeHolderExample arrayItem(List<Integer> arrayItem) {
+  public TypeHolderExample arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }

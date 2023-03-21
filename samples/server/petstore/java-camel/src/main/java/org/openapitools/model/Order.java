@@ -5,7 +5,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
@@ -44,7 +43,7 @@ public class Order {
 
   @JacksonXmlProperty(localName = "shipDate")
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-  private Date shipDate;
+  private java.util.Date shipDate;
 
   /**
    * Order Status
@@ -149,7 +148,7 @@ public class Order {
     this.quantity = quantity;
   }
 
-  public Order shipDate(Date shipDate) {
+  public Order shipDate(java.util.Date shipDate) {
     this.shipDate = shipDate;
     return this;
   }
@@ -161,11 +160,11 @@ public class Order {
   @Valid 
   @Schema(name = "shipDate", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("shipDate")
-  public Date getShipDate() {
+  public java.util.Date getShipDate() {
     return shipDate;
   }
 
-  public void setShipDate(Date shipDate) {
+  public void setShipDate(java.util.Date shipDate) {
     this.shipDate = shipDate;
   }
 

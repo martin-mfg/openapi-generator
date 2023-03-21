@@ -12,12 +12,7 @@ import org.openapitools.client.model.OuterComposite;
 import org.openapitools.client.model.User;
 import org.openapitools.client.model.XmlItem;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -541,7 +536,7 @@ public class FakeApi {
      * @param enumFormString Form parameter enum test (string) (optional, default to -efg)
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws RestClientException {
+    public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws RestClientException {
         testEnumParametersWithHttpInfo(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
     }
 
@@ -561,7 +556,7 @@ public class FakeApi {
      * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Void> testEnumParametersWithHttpInfo(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws RestClientException {
+    public ResponseEntity<Void> testEnumParametersWithHttpInfo(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -677,7 +672,7 @@ public class FakeApi {
      * @param param request body (required)
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void testInlineAdditionalProperties(Map<String, String> param) throws RestClientException {
+    public void testInlineAdditionalProperties(java.util.Map<String, String> param) throws RestClientException {
         testInlineAdditionalPropertiesWithHttpInfo(param);
     }
 
@@ -689,7 +684,7 @@ public class FakeApi {
      * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Void> testInlineAdditionalPropertiesWithHttpInfo(Map<String, String> param) throws RestClientException {
+    public ResponseEntity<Void> testInlineAdditionalPropertiesWithHttpInfo(java.util.Map<String, String> param) throws RestClientException {
         Object localVarPostBody = param;
         
         // verify the required parameter 'param' is set
@@ -783,7 +778,7 @@ public class FakeApi {
      * @param context  (required)
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws RestClientException {
+    public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws RestClientException {
         testQueryParameterCollectionFormatWithHttpInfo(pipe, ioutil, http, url, context);
     }
 
@@ -799,7 +794,7 @@ public class FakeApi {
      * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Void> testQueryParameterCollectionFormatWithHttpInfo(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws RestClientException {
+    public ResponseEntity<Void> testQueryParameterCollectionFormatWithHttpInfo(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'pipe' is set

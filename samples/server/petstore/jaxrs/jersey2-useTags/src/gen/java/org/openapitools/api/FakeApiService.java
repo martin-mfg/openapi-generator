@@ -6,10 +6,9 @@ import org.glassfish.jersey.media.multipart.FormDataBodyPart;
 
 import java.math.BigDecimal;
 import org.openapitools.model.Client;
-import java.util.Date;
+import org.openapitools.model.Date;
 import java.io.File;
 import org.openapitools.model.FileSchemaTestClass;
-import java.util.Map;
 import org.openapitools.model.OuterComposite;
 import org.openapitools.model.User;
 import org.openapitools.model.XmlItem;
@@ -32,10 +31,10 @@ public abstract class FakeApiService {
     public abstract Response testBodyWithFileSchema(FileSchemaTestClass body,SecurityContext securityContext) throws NotFoundException;
     public abstract Response testBodyWithQueryParams( @NotNull String query,User body,SecurityContext securityContext) throws NotFoundException;
     public abstract Response testClientModel(Client body,SecurityContext securityContext) throws NotFoundException;
-    public abstract Response testEndpointParameters(BigDecimal number,Double _double,String patternWithoutDelimiter,byte[] _byte,Integer integer,Integer int32,Long int64,Float _float,String string,FormDataBodyPart binaryBodypart,Date date,Date dateTime,String password,String paramCallback,SecurityContext securityContext) throws NotFoundException;
-    public abstract Response testEnumParameters(List<String> enumHeaderStringArray,String enumHeaderString,List<String> enumQueryStringArray,String enumQueryString,Integer enumQueryInteger,Double enumQueryDouble,List<String> enumFormStringArray,String enumFormString,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response testEndpointParameters(BigDecimal number,Double _double,String patternWithoutDelimiter,byte[] _byte,Integer integer,Integer int32,Long int64,Float _float,String string,FormDataBodyPart binaryBodypart,Date date,java.util.Date dateTime,String password,String paramCallback,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response testEnumParameters(java.util.List<String> enumHeaderStringArray,String enumHeaderString,java.util.List<String> enumQueryStringArray,String enumQueryString,Integer enumQueryInteger,Double enumQueryDouble,java.util.List<String> enumFormStringArray,String enumFormString,SecurityContext securityContext) throws NotFoundException;
     public abstract Response testGroupParameters( @NotNull Integer requiredStringGroup, @NotNull Boolean requiredBooleanGroup, @NotNull Long requiredInt64Group,Integer stringGroup,Boolean booleanGroup,Long int64Group,SecurityContext securityContext) throws NotFoundException;
-    public abstract Response testInlineAdditionalProperties(Map<String, String> param,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response testInlineAdditionalProperties(java.util.Map<String, String> param,SecurityContext securityContext) throws NotFoundException;
     public abstract Response testJsonFormData(String param,String param2,SecurityContext securityContext) throws NotFoundException;
-    public abstract Response testQueryParameterCollectionFormat( @NotNull List<String> pipe, @NotNull List<String> ioutil, @NotNull List<String> http, @NotNull List<String> url, @NotNull List<String> context,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response testQueryParameterCollectionFormat( @NotNull java.util.List<String> pipe, @NotNull java.util.List<String> ioutil, @NotNull java.util.List<String> http, @NotNull java.util.List<String> url, @NotNull java.util.List<String> context,SecurityContext securityContext) throws NotFoundException;
 }

@@ -2,7 +2,6 @@ package org.openapitools.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 import java.io.Serializable;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
@@ -22,7 +21,7 @@ public class Order  implements Serializable {
   private @Valid Long id;
   private @Valid Long petId;
   private @Valid Integer quantity;
-  private @Valid Date shipDate;
+  private @Valid java.util.Date shipDate;
   public enum StatusEnum {
 
     PLACED(String.valueOf("placed")), APPROVED(String.valueOf("approved")), DELIVERED(String.valueOf("delivered"));
@@ -144,7 +143,7 @@ public class Order  implements Serializable {
 
   /**
    **/
-  public Order shipDate(Date shipDate) {
+  public Order shipDate(java.util.Date shipDate) {
     this.shipDate = shipDate;
     return this;
   }
@@ -152,12 +151,12 @@ public class Order  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("shipDate")
-  public Date getShipDate() {
+  public java.util.Date getShipDate() {
     return shipDate;
   }
 
   @JsonProperty("shipDate")
-  public void setShipDate(Date shipDate) {
+  public void setShipDate(java.util.Date shipDate) {
     this.shipDate = shipDate;
   }
 
@@ -271,7 +270,7 @@ public class Order  implements Serializable {
     private Long id;
     private Long petId;
     private Integer quantity;
-    private Date shipDate;
+    private java.util.Date shipDate;
     private StatusEnum status;
     private Boolean complete = false;
     protected abstract B self();
@@ -290,7 +289,7 @@ public class Order  implements Serializable {
       this.quantity = quantity;
       return self();
     }
-    public B shipDate(Date shipDate) {
+    public B shipDate(java.util.Date shipDate) {
       this.shipDate = shipDate;
       return self();
     }

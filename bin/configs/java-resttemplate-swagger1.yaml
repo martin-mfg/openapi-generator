@@ -8,3 +8,4 @@ additionalProperties:
   hideGenerationTimestamp: "true"
   annotationLibrary: "swagger1"
   java8: true
+  fullJavaUtil: true

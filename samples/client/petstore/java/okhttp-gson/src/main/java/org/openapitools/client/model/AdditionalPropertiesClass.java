@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -53,11 +51,11 @@ import org.openapitools.client.JSON;
 public class AdditionalPropertiesClass {
   public static final String SERIALIZED_NAME_MAP_PROPERTY = "map_property";
   @SerializedName(SERIALIZED_NAME_MAP_PROPERTY)
-  private Map<String, String> mapProperty = new HashMap<>();
+  private java.util.Map<String, String> mapProperty = new java.util.HashMap<>();
 
   public static final String SERIALIZED_NAME_MAP_OF_MAP_PROPERTY = "map_of_map_property";
   @SerializedName(SERIALIZED_NAME_MAP_OF_MAP_PROPERTY)
-  private Map<String, Map<String, String>> mapOfMapProperty = new HashMap<>();
+  private java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty = new java.util.HashMap<>();
 
   public static final String SERIALIZED_NAME_ANYTYPE1 = "anytype_1";
   @SerializedName(SERIALIZED_NAME_ANYTYPE1)
@@ -73,7 +71,7 @@ public class AdditionalPropertiesClass {
 
   public static final String SERIALIZED_NAME_MAP_WITH_UNDECLARED_PROPERTIES_ANYTYPE3 = "map_with_undeclared_properties_anytype_3";
   @SerializedName(SERIALIZED_NAME_MAP_WITH_UNDECLARED_PROPERTIES_ANYTYPE3)
-  private Map<String, Object> mapWithUndeclaredPropertiesAnytype3 = new HashMap<>();
+  private java.util.Map<String, Object> mapWithUndeclaredPropertiesAnytype3 = new java.util.HashMap<>();
 
   public static final String SERIALIZED_NAME_EMPTY_MAP = "empty_map";
   @SerializedName(SERIALIZED_NAME_EMPTY_MAP)
@@ -81,12 +79,12 @@ public class AdditionalPropertiesClass {
 
   public static final String SERIALIZED_NAME_MAP_WITH_UNDECLARED_PROPERTIES_STRING = "map_with_undeclared_properties_string";
   @SerializedName(SERIALIZED_NAME_MAP_WITH_UNDECLARED_PROPERTIES_STRING)
-  private Map<String, String> mapWithUndeclaredPropertiesString = new HashMap<>();
+  private java.util.Map<String, String> mapWithUndeclaredPropertiesString = new java.util.HashMap<>();
 
   public AdditionalPropertiesClass() {
   }
 
-  public AdditionalPropertiesClass mapProperty(Map<String, String> mapProperty) {
+  public AdditionalPropertiesClass mapProperty(java.util.Map<String, String> mapProperty) {
     
     this.mapProperty = mapProperty;
     return this;
@@ -94,7 +92,7 @@ public class AdditionalPropertiesClass {
 
   public AdditionalPropertiesClass putMapPropertyItem(String key, String mapPropertyItem) {
     if (this.mapProperty == null) {
-      this.mapProperty = new HashMap<>();
+      this.mapProperty = new java.util.HashMap<>();
     }
     this.mapProperty.put(key, mapPropertyItem);
     return this;
@@ -106,25 +104,25 @@ public class AdditionalPropertiesClass {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, String> getMapProperty() {
+  public java.util.Map<String, String> getMapProperty() {
     return mapProperty;
   }
 
 
-  public void setMapProperty(Map<String, String> mapProperty) {
+  public void setMapProperty(java.util.Map<String, String> mapProperty) {
     this.mapProperty = mapProperty;
   }
 
 
-  public AdditionalPropertiesClass mapOfMapProperty(Map<String, Map<String, String>> mapOfMapProperty) {
+  public AdditionalPropertiesClass mapOfMapProperty(java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty) {
     
     this.mapOfMapProperty = mapOfMapProperty;
     return this;
   }
 
-  public AdditionalPropertiesClass putMapOfMapPropertyItem(String key, Map<String, String> mapOfMapPropertyItem) {
+  public AdditionalPropertiesClass putMapOfMapPropertyItem(String key, java.util.Map<String, String> mapOfMapPropertyItem) {
     if (this.mapOfMapProperty == null) {
-      this.mapOfMapProperty = new HashMap<>();
+      this.mapOfMapProperty = new java.util.HashMap<>();
     }
     this.mapOfMapProperty.put(key, mapOfMapPropertyItem);
     return this;
@@ -136,12 +134,12 @@ public class AdditionalPropertiesClass {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, Map<String, String>> getMapOfMapProperty() {
+  public java.util.Map<String, java.util.Map<String, String>> getMapOfMapProperty() {
     return mapOfMapProperty;
   }
 
 
-  public void setMapOfMapProperty(Map<String, Map<String, String>> mapOfMapProperty) {
+  public void setMapOfMapProperty(java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty) {
     this.mapOfMapProperty = mapOfMapProperty;
   }
 
@@ -212,7 +210,7 @@ public class AdditionalPropertiesClass {
   }
 
 
-  public AdditionalPropertiesClass mapWithUndeclaredPropertiesAnytype3(Map<String, Object> mapWithUndeclaredPropertiesAnytype3) {
+  public AdditionalPropertiesClass mapWithUndeclaredPropertiesAnytype3(java.util.Map<String, Object> mapWithUndeclaredPropertiesAnytype3) {
     
     this.mapWithUndeclaredPropertiesAnytype3 = mapWithUndeclaredPropertiesAnytype3;
     return this;
@@ -220,7 +218,7 @@ public class AdditionalPropertiesClass {
 
   public AdditionalPropertiesClass putMapWithUndeclaredPropertiesAnytype3Item(String key, Object mapWithUndeclaredPropertiesAnytype3Item) {
     if (this.mapWithUndeclaredPropertiesAnytype3 == null) {
-      this.mapWithUndeclaredPropertiesAnytype3 = new HashMap<>();
+      this.mapWithUndeclaredPropertiesAnytype3 = new java.util.HashMap<>();
     }
     this.mapWithUndeclaredPropertiesAnytype3.put(key, mapWithUndeclaredPropertiesAnytype3Item);
     return this;
@@ -232,12 +230,12 @@ public class AdditionalPropertiesClass {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, Object> getMapWithUndeclaredPropertiesAnytype3() {
+  public java.util.Map<String, Object> getMapWithUndeclaredPropertiesAnytype3() {
     return mapWithUndeclaredPropertiesAnytype3;
   }
 
 
-  public void setMapWithUndeclaredPropertiesAnytype3(Map<String, Object> mapWithUndeclaredPropertiesAnytype3) {
+  public void setMapWithUndeclaredPropertiesAnytype3(java.util.Map<String, Object> mapWithUndeclaredPropertiesAnytype3) {
     this.mapWithUndeclaredPropertiesAnytype3 = mapWithUndeclaredPropertiesAnytype3;
   }
 
@@ -264,7 +262,7 @@ public class AdditionalPropertiesClass {
   }
 
 
-  public AdditionalPropertiesClass mapWithUndeclaredPropertiesString(Map<String, String> mapWithUndeclaredPropertiesString) {
+  public AdditionalPropertiesClass mapWithUndeclaredPropertiesString(java.util.Map<String, String> mapWithUndeclaredPropertiesString) {
     
     this.mapWithUndeclaredPropertiesString = mapWithUndeclaredPropertiesString;
     return this;
@@ -272,7 +270,7 @@ public class AdditionalPropertiesClass {
 
   public AdditionalPropertiesClass putMapWithUndeclaredPropertiesStringItem(String key, String mapWithUndeclaredPropertiesStringItem) {
     if (this.mapWithUndeclaredPropertiesString == null) {
-      this.mapWithUndeclaredPropertiesString = new HashMap<>();
+      this.mapWithUndeclaredPropertiesString = new java.util.HashMap<>();
     }
     this.mapWithUndeclaredPropertiesString.put(key, mapWithUndeclaredPropertiesStringItem);
     return this;
@@ -284,12 +282,12 @@ public class AdditionalPropertiesClass {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, String> getMapWithUndeclaredPropertiesString() {
+  public java.util.Map<String, String> getMapWithUndeclaredPropertiesString() {
     return mapWithUndeclaredPropertiesString;
   }
 
 
-  public void setMapWithUndeclaredPropertiesString(Map<String, String> mapWithUndeclaredPropertiesString) {
+  public void setMapWithUndeclaredPropertiesString(java.util.Map<String, String> mapWithUndeclaredPropertiesString) {
     this.mapWithUndeclaredPropertiesString = mapWithUndeclaredPropertiesString;
   }
 

@@ -74,7 +74,7 @@ public class UserApi {
     * @param body List of user object (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void createUsersWithArrayInput(List<User> body, Handler<AsyncResult<Void>> resultHandler) {
+    public void createUsersWithArrayInput(java.util.List<User> body, Handler<AsyncResult<Void>> resultHandler) {
         delegate.createUsersWithArrayInput(body, resultHandler);
     }
 
@@ -85,7 +85,7 @@ public class UserApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void createUsersWithArrayInput(List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void createUsersWithArrayInput(java.util.List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         delegate.createUsersWithArrayInput(body, authInfo, resultHandler);
     }
 
@@ -95,7 +95,7 @@ public class UserApi {
     * @param body List of user object (required)
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxCreateUsersWithArrayInput(List<User> body) {
+    public Single<Void> rxCreateUsersWithArrayInput(java.util.List<User> body) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.createUsersWithArrayInput(body, fut)
         ));
@@ -108,7 +108,7 @@ public class UserApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxCreateUsersWithArrayInput(List<User> body, ApiClient.AuthInfo authInfo) {
+    public Single<Void> rxCreateUsersWithArrayInput(java.util.List<User> body, ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.createUsersWithArrayInput(body, authInfo, fut)
         ));
@@ -119,7 +119,7 @@ public class UserApi {
     * @param body List of user object (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void createUsersWithListInput(List<User> body, Handler<AsyncResult<Void>> resultHandler) {
+    public void createUsersWithListInput(java.util.List<User> body, Handler<AsyncResult<Void>> resultHandler) {
         delegate.createUsersWithListInput(body, resultHandler);
     }
 
@@ -130,7 +130,7 @@ public class UserApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void createUsersWithListInput(List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void createUsersWithListInput(java.util.List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         delegate.createUsersWithListInput(body, authInfo, resultHandler);
     }
 
@@ -140,7 +140,7 @@ public class UserApi {
     * @param body List of user object (required)
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxCreateUsersWithListInput(List<User> body) {
+    public Single<Void> rxCreateUsersWithListInput(java.util.List<User> body) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.createUsersWithListInput(body, fut)
         ));
@@ -153,7 +153,7 @@ public class UserApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxCreateUsersWithListInput(List<User> body, ApiClient.AuthInfo authInfo) {
+    public Single<Void> rxCreateUsersWithListInput(java.util.List<User> body, ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.createUsersWithListInput(body, authInfo, fut)
         ));

@@ -7,8 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.model.FileDto;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
@@ -30,7 +28,7 @@ public class FileSchemaTestClassDto {
   private FileDto file;
 
   @Valid
-  private List<@Valid FileDto> files;
+  private java.util.List<@Valid FileDto> files;
 
   public FileSchemaTestClassDto file(FileDto file) {
     this.file = file;
@@ -52,7 +50,7 @@ public class FileSchemaTestClassDto {
     this.file = file;
   }
 
-  public FileSchemaTestClassDto files(List<@Valid FileDto> files) {
+  public FileSchemaTestClassDto files(java.util.List<@Valid FileDto> files) {
     this.files = files;
     return this;
   }
@@ -72,11 +70,11 @@ public class FileSchemaTestClassDto {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("files")
-  public List<@Valid FileDto> getFiles() {
+  public java.util.List<@Valid FileDto> getFiles() {
     return files;
   }
 
-  public void setFiles(List<@Valid FileDto> files) {
+  public void setFiles(java.util.List<@Valid FileDto> files) {
     this.files = files;
   }
 

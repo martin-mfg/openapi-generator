@@ -13,8 +13,8 @@ import java.util.Map;
 
 public interface UserApi  {
     Future<ApiResponse<Void>> createUser(User user);
-    Future<ApiResponse<Void>> createUsersWithArrayInput(List<User> user);
-    Future<ApiResponse<Void>> createUsersWithListInput(List<User> user);
+    Future<ApiResponse<Void>> createUsersWithArrayInput(java.util.List<User> user);
+    Future<ApiResponse<Void>> createUsersWithListInput(java.util.List<User> user);
     Future<ApiResponse<Void>> deleteUser(String username);
     Future<ApiResponse<User>> getUserByName(String username);
     Future<ApiResponse<String>> loginUser(String username, String password);

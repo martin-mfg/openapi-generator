@@ -50,33 +50,33 @@ public abstract class PetApiControllerImpInterface {
 
     public abstract void deletePet(Http.Request request, Long petId, String apiKey) throws Exception;
 
-    public Result findPetsByStatusHttp(Http.Request request, List<String> status) throws Exception {
+    public Result findPetsByStatusHttp(Http.Request request, java.util.List<String> status) throws Exception {
         if (!securityAPIUtils.isRequestTokenValid(request, "petstore_auth")) {
             return unauthorized();
         }
 
-        List<Pet> obj = findPetsByStatus(request, status);
+        array<java.util.List<Pet>> obj = findPetsByStatus(request, status);
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);
 
     }
 
-    public abstract List<Pet> findPetsByStatus(Http.Request request, List<String> status) throws Exception;
+    public abstract array<java.util.List<Pet>> findPetsByStatus(Http.Request request, java.util.List<String> status) throws Exception;
 
-    public Result findPetsByTagsHttp(Http.Request request, List<String> tags) throws Exception {
+    public Result findPetsByTagsHttp(Http.Request request, java.util.List<String> tags) throws Exception {
         if (!securityAPIUtils.isRequestTokenValid(request, "petstore_auth")) {
             return unauthorized();
         }
 
-        List<Pet> obj = findPetsByTags(request, tags);
+        array<java.util.List<Pet>> obj = findPetsByTags(request, tags);
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);
 
     }
 
-    public abstract List<Pet> findPetsByTags(Http.Request request, List<String> tags) throws Exception;
+    public abstract array<java.util.List<Pet>> findPetsByTags(Http.Request request, java.util.List<String> tags) throws Exception;
 
     public Result getPetByIdHttp(Http.Request request, Long petId) throws Exception {
         Pet obj = getPetById(request, petId);

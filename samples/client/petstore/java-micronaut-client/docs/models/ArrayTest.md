@@ -8,9 +8,9 @@ The class is defined in **[ArrayTest.java](../../src/main/java/org/openapitools/
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**arrayOfString** | `List&lt;String&gt;` |  |  [optional property]
-**arrayArrayOfInteger** | `List&lt;List&lt;Long&gt;&gt;` |  |  [optional property]
-**arrayArrayOfModel** | `List&lt;List&lt;ReadOnlyFirst&gt;&gt;` |  |  [optional property]
+**arrayOfString** | `java.util.List&lt;String&gt;` |  |  [optional property]
+**arrayArrayOfInteger** | `java.util.List&lt;java.util.List&lt;Long&gt;&gt;` |  |  [optional property]
+**arrayArrayOfModel** | `java.util.List&lt;java.util.List&lt;ReadOnlyFirst&gt;&gt;` |  |  [optional property]
 
 
 

@@ -1,7 +1,5 @@
 package org.openapitools.api;
 
-import java.util.Date;
-import java.util.List;
 import org.openapitools.model.User;
 
 import javax.ws.rs.*;
@@ -31,14 +29,14 @@ public interface UserApi {
     @ApiOperation(value = "Creates list of users with given input array", notes = "", tags={ "user" })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "successful operation", response = Void.class) })
-    void createUsersWithArrayInput(@Valid @NotNull List<User> body);
+    void createUsersWithArrayInput(@Valid @NotNull java.util.List<User> body);
 
     @POST
     @Path("/createWithList")
     @ApiOperation(value = "Creates list of users with given input array", notes = "", tags={ "user" })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "successful operation", response = Void.class) })
-    void createUsersWithListInput(@Valid @NotNull List<User> body);
+    void createUsersWithListInput(@Valid @NotNull java.util.List<User> body);
 
     @DELETE
     @Path("/{username}")

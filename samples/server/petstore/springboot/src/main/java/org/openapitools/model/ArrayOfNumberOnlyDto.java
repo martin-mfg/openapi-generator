@@ -8,8 +8,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -28,9 +26,9 @@ import javax.annotation.Generated;
 public class ArrayOfNumberOnlyDto {
 
   @Valid
-  private List<BigDecimal> arrayNumber;
+  private java.util.List<BigDecimal> arrayNumber;
 
-  public ArrayOfNumberOnlyDto arrayNumber(List<BigDecimal> arrayNumber) {
+  public ArrayOfNumberOnlyDto arrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
     return this;
   }
@@ -50,11 +48,11 @@ public class ArrayOfNumberOnlyDto {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("ArrayNumber")
-  public List<BigDecimal> getArrayNumber() {
+  public java.util.List<BigDecimal> getArrayNumber() {
     return arrayNumber;
   }
 
-  public void setArrayNumber(List<BigDecimal> arrayNumber) {
+  public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
   }
 

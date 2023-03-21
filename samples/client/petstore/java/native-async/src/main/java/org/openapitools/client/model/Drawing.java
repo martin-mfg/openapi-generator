@@ -29,10 +29,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.openapitools.client.model.Fruit;
 import org.openapitools.client.model.NullableShape;
 import org.openapitools.client.model.Shape;
@@ -54,7 +50,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Drawing.JSON_PROPERTY_SHAPES
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class Drawing extends HashMap<String, Fruit> {
+public class Drawing extends java.util.HashMap<String, Fruit> {
   public static final String JSON_PROPERTY_MAIN_SHAPE = "mainShape";
   private Shape mainShape;
 
@@ -65,7 +61,7 @@ public class Drawing extends HashMap<String, Fruit> {
   private JsonNullable<NullableShape> nullableShape = JsonNullable.<NullableShape>undefined();
 
   public static final String JSON_PROPERTY_SHAPES = "shapes";
-  private List<Shape> shapes;
+  private java.util.List<Shape> shapes;
 
   public Drawing() { 
   }
@@ -153,7 +149,7 @@ public class Drawing extends HashMap<String, Fruit> {
   }
 
 
-  public Drawing shapes(List<Shape> shapes) {
+  public Drawing shapes(java.util.List<Shape> shapes) {
     this.shapes = shapes;
     return this;
   }
@@ -174,14 +170,14 @@ public class Drawing extends HashMap<String, Fruit> {
   @JsonProperty(JSON_PROPERTY_SHAPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<Shape> getShapes() {
+  public java.util.List<Shape> getShapes() {
     return shapes;
   }
 
 
   @JsonProperty(JSON_PROPERTY_SHAPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setShapes(List<Shape> shapes) {
+  public void setShapes(java.util.List<Shape> shapes) {
     this.shapes = shapes;
   }
 

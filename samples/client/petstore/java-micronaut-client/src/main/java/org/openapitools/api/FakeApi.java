@@ -27,10 +27,6 @@ import org.openapitools.model.OuterComposite;
 import org.openapitools.model.User;
 import org.openapitools.model.XmlItem;
 import javax.annotation.Generated;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -190,13 +186,13 @@ public interface FakeApi {
     @Get(uri="/fake")
     @Produces({"application/x-www-form-urlencoded"})
     Mono<Void> testEnumParameters(
-        @Header(name="enum_header_string_array") @Nullable List<String> enumHeaderStringArray, 
+        @Header(name="enum_header_string_array") @Nullable java.util.List<String> enumHeaderStringArray, 
         @Header(name="enum_header_string", defaultValue="-efg") @Nullable String enumHeaderString, 
-        @QueryValue(value="enum_query_string_array") @Nullable List<String> enumQueryStringArray, 
+        @QueryValue(value="enum_query_string_array") @Nullable java.util.List<String> enumQueryStringArray, 
         @QueryValue(value="enum_query_string", defaultValue="-efg") @Nullable String enumQueryString, 
         @QueryValue(value="enum_query_integer") @Nullable Integer enumQueryInteger, 
         @QueryValue(value="enum_query_double") @Nullable Double enumQueryDouble, 
-        @Nullable List<String> enumFormStringArray, 
+        @Nullable java.util.List<String> enumFormStringArray, 
         @Nullable String enumFormString
     );
 
@@ -229,7 +225,7 @@ public interface FakeApi {
     @Post(uri="/fake/inline-additionalProperties")
     @Produces({"application/json"})
     Mono<Void> testInlineAdditionalProperties(
-        @Body @NotNull Map<String, String> param
+        @Body @NotNull java.util.Map<String, String> param
     );
 
     /**
@@ -256,11 +252,11 @@ public interface FakeApi {
      */
     @Put(uri="/fake/test-query-parameters")
     Mono<Void> testQueryParameterCollectionFormat(
-        @QueryValue(value="pipe") @NotNull List<String> pipe, 
-        @QueryValue(value="ioutil") @NotNull List<String> ioutil, 
-        @QueryValue(value="http") @NotNull List<String> http, 
-        @QueryValue(value="url") @NotNull List<String> url, 
-        @QueryValue(value="context") @NotNull List<String> context
+        @QueryValue(value="pipe") @NotNull java.util.List<String> pipe, 
+        @QueryValue(value="ioutil") @NotNull java.util.List<String> ioutil, 
+        @QueryValue(value="http") @NotNull java.util.List<String> http, 
+        @QueryValue(value="url") @NotNull java.util.List<String> url, 
+        @QueryValue(value="context") @NotNull java.util.List<String> context
     );
 
 }

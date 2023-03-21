@@ -6,9 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.model.AnimalDto;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -27,15 +24,15 @@ import jakarta.annotation.Generated;
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class MixedPropertiesAndAdditionalPropertiesClassDto {
 
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private OffsetDateTime dateTime;
 
   
-  private Map<String, AnimalDto> map = new HashMap<>();
+  private java.util.Map<String, AnimalDto> map = new java.util.HashMap<>();
 
-  public MixedPropertiesAndAdditionalPropertiesClassDto uuid(UUID uuid) {
+  public MixedPropertiesAndAdditionalPropertiesClassDto uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -46,11 +43,11 @@ public class MixedPropertiesAndAdditionalPropertiesClassDto {
   */
   
   @JsonProperty("uuid")
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
@@ -73,14 +70,14 @@ public class MixedPropertiesAndAdditionalPropertiesClassDto {
     this.dateTime = dateTime;
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClassDto map(Map<String, AnimalDto> map) {
+  public MixedPropertiesAndAdditionalPropertiesClassDto map(java.util.Map<String, AnimalDto> map) {
     this.map = map;
     return this;
   }
 
   public MixedPropertiesAndAdditionalPropertiesClassDto putMapItem(String key, AnimalDto mapItem) {
     if (this.map == null) {
-      this.map = new HashMap<>();
+      this.map = new java.util.HashMap<>();
     }
     this.map.put(key, mapItem);
     return this;
@@ -92,11 +89,11 @@ public class MixedPropertiesAndAdditionalPropertiesClassDto {
   */
   
   @JsonProperty("map")
-  public Map<String, AnimalDto> getMap() {
+  public java.util.Map<String, AnimalDto> getMap() {
     return map;
   }
 
-  public void setMap(Map<String, AnimalDto> map) {
+  public void setMap(java.util.Map<String, AnimalDto> map) {
     this.map = map;
   }
 

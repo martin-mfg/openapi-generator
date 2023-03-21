@@ -20,10 +20,6 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.exceptions.HttpStatusException;
 import org.openapitools.model.Order;
 import javax.annotation.Generated;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.Operation;
@@ -70,14 +66,14 @@ public class StoreController {
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
      *
-     * @return Map&lt;String, Integer&gt;
+     * @return java.util.Map&lt;String, Integer&gt;
      */
     @Operation(
         operationId = "getInventory",
         summary = "Returns pet inventories by status",
         responses = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = {
-                @Content(mediaType = "application/json", schema = @Schema(implementation = Map.class))
+                @Content(mediaType = "application/json", schema = @Schema(implementation = java.util.Map.class))
             })
         },
         security = {
@@ -86,7 +82,7 @@ public class StoreController {
     )
     @Get(uri="/store/inventory")
     @Produces(value = {"application/json"})
-    public Mono<Map<String, Integer>> getInventory() {
+    public Mono<java.util.Map<String, Integer>> getInventory() {
         // TODO implement getInventory();
         return Mono.error(new HttpStatusException(HttpStatus.NOT_IMPLEMENTED, null));
     }

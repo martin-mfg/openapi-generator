@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.Map;
 import apimodels.Order;
 
 import com.google.inject.Inject;
@@ -46,7 +45,7 @@ public abstract class StoreApiControllerImpInterface {
     public abstract void deleteOrder(Http.Request request, String orderId) throws Exception;
 
     public CompletionStage<Result> getInventoryHttp(Http.Request request) throws Exception {
-        CompletionStage<Map<String, Integer>> stage = getInventory(request).thenApply(obj -> { 
+        CompletionStage<Map<String, java.util.Map<String, Integer>>> stage = getInventory(request).thenApply(obj -> { 
         return obj;
     });
 return stage.thenApply(obj -> {
@@ -57,7 +56,7 @@ return stage.thenApply(obj -> {
 
     }
 
-    public abstract CompletionStage<Map<String, Integer>> getInventory(Http.Request request) throws Exception;
+    public abstract CompletionStage<Map<String, java.util.Map<String, Integer>>> getInventory(Http.Request request) throws Exception;
 
     public CompletionStage<Result> getOrderByIdHttp(Http.Request request,  @Min(1) @Max(5)Long orderId) throws Exception {
         CompletionStage<Order> stage = getOrderById(request, orderId).thenApply(obj -> { 

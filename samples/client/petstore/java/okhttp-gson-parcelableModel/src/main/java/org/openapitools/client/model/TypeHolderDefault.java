@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import android.os.Parcelable;
 import android.os.Parcel;
 
@@ -71,7 +69,7 @@ public class TypeHolderDefault implements Parcelable {
 
   public static final String SERIALIZED_NAME_ARRAY_ITEM = "array_item";
   @SerializedName(SERIALIZED_NAME_ARRAY_ITEM)
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   public TypeHolderDefault() {
   }
@@ -164,7 +162,7 @@ public class TypeHolderDefault implements Parcelable {
   }
 
 
-  public TypeHolderDefault arrayItem(List<Integer> arrayItem) {
+  public TypeHolderDefault arrayItem(java.util.List<Integer> arrayItem) {
     
     this.arrayItem = arrayItem;
     return this;
@@ -172,7 +170,7 @@ public class TypeHolderDefault implements Parcelable {
 
   public TypeHolderDefault addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
     this.arrayItem.add(arrayItemItem);
     return this;
@@ -184,12 +182,12 @@ public class TypeHolderDefault implements Parcelable {
   **/
   @javax.annotation.Nonnull
 
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 
@@ -254,7 +252,7 @@ public class TypeHolderDefault implements Parcelable {
     numberItem = (BigDecimal)in.readValue(BigDecimal.class.getClassLoader());
     integerItem = (Integer)in.readValue(null);
     boolItem = (Boolean)in.readValue(null);
-    arrayItem = (List<Integer>)in.readValue(null);
+    arrayItem = (java.util.List<Integer>)in.readValue(null);
   }
 
   public int describeContents() {

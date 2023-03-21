@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import java.util.Map;
 import org.openapitools.model.OrderDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -5,7 +5,6 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 
 
 
@@ -23,7 +22,7 @@ public class FormatTest   {
     private File binary;
     private LocalDate date;
     private OffsetDateTime dateTime;
-    private UUID uuid;
+    private java.util.UUID uuid;
     private String password;
     private String patternWithDigits;
     private String patternWithDigitsAndDelimiter;
@@ -68,7 +67,7 @@ public class FormatTest   {
         File binary, 
         LocalDate date, 
         OffsetDateTime dateTime, 
-        UUID uuid, 
+        java.util.UUID uuid, 
         String password, 
         String patternWithDigits, 
         String patternWithDigitsAndDelimiter
@@ -251,11 +250,11 @@ public class FormatTest   {
      * Get uuid
      * @return uuid
      */
-    public UUID getUuid() {
+    public java.util.UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(UUID uuid) {
+    public void setUuid(java.util.UUID uuid) {
         this.uuid = uuid;
     }
 

@@ -3,7 +3,6 @@ package org.openapitools.api;
 import springfox.documentation.annotations.ApiIgnore;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
-import java.util.Set;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -75,7 +74,7 @@ public interface PetApiDelegate {
      *         or Invalid status value (status code 400)
      * @see PetApi#findPetsByStatus
      */
-    default Mono<ResponseEntity<Flux<Pet>>> findPetsByStatus(List<String> status,
+    default Mono<ResponseEntity<Flux<Pet>>> findPetsByStatus(java.util.List<String> status,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -106,7 +105,7 @@ public interface PetApiDelegate {
      * @see PetApi#findPetsByTags
      */
     @Deprecated
-    default Mono<ResponseEntity<Flux<Pet>>> findPetsByTags(Set<String> tags,
+    default Mono<ResponseEntity<Flux<Pet>>> findPetsByTags(java.util.Set<String> tags,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);

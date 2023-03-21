@@ -160,7 +160,7 @@ No authorization required
 
 ## getInventory
 
-> CompletableFuture<Map<String, Integer>> getInventory()
+> CompletableFuture<java.util.Map<String, Integer>> getInventory()
 
 Returns pet inventories by status
 
@@ -191,7 +191,7 @@ public class Example {
 
         StoreApi apiInstance = new StoreApi(defaultClient);
         try {
-            CompletableFuture<Map<String, Integer>> result = apiInstance.getInventory();
+            CompletableFuture<java.util.Map<String, Integer>> result = apiInstance.getInventory();
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling StoreApi#getInventory");
@@ -210,7 +210,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<**Map&lt;String, Integer&gt;**>
+CompletableFuture<**java.util.Map&lt;String, Integer&gt;**>
 
 
 ### Authorization
@@ -229,7 +229,7 @@ CompletableFuture<**Map&lt;String, Integer&gt;**>
 
 ## getInventoryWithHttpInfo
 
-> CompletableFuture<ApiResponse<Map<String, Integer>>> getInventory getInventoryWithHttpInfo()
+> CompletableFuture<ApiResponse<java.util.Map<String, Integer>>> getInventory getInventoryWithHttpInfo()
 
 Returns pet inventories by status
 
@@ -261,7 +261,7 @@ public class Example {
 
         StoreApi apiInstance = new StoreApi(defaultClient);
         try {
-            CompletableFuture<ApiResponse<Map<String, Integer>>> response = apiInstance.getInventoryWithHttpInfo();
+            CompletableFuture<ApiResponse<java.util.Map<String, Integer>>> response = apiInstance.getInventoryWithHttpInfo();
             System.out.println("Status code: " + response.get().getStatusCode());
             System.out.println("Response headers: " + response.get().getHeaders());
             System.out.println("Response body: " + response.get().getData());
@@ -289,7 +289,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<ApiResponse<**Map&lt;String, Integer&gt;**>>
+CompletableFuture<ApiResponse<**java.util.Map&lt;String, Integer&gt;**>>
 
 
 ### Authorization

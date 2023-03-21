@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.Map;
 import apimodels.Order;
 
 import play.mvc.Http;
@@ -18,9 +17,9 @@ public class StoreApiControllerImp extends StoreApiControllerImpInterface {
     }
 
     @Override
-    public Map<String, Integer> getInventory(Http.Request request) throws Exception {
+    public Map<String, java.util.Map<String, Integer>> getInventory(Http.Request request) throws Exception {
         //Do your magic!!!
-        return new HashMap<String, Integer>();
+        return new HashMap<String, java.util.Map<String, Integer>>();
     }
 
     @Override

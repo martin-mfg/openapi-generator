@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -69,7 +67,7 @@ public class XmlItem {
 
   public static final String SERIALIZED_NAME_WRAPPED_ARRAY = "wrapped_array";
   @SerializedName(SERIALIZED_NAME_WRAPPED_ARRAY)
-  private List<Integer> wrappedArray;
+  private java.util.List<Integer> wrappedArray;
 
   public static final String SERIALIZED_NAME_NAME_STRING = "name_string";
   @SerializedName(SERIALIZED_NAME_NAME_STRING)
@@ -89,11 +87,11 @@ public class XmlItem {
 
   public static final String SERIALIZED_NAME_NAME_ARRAY = "name_array";
   @SerializedName(SERIALIZED_NAME_NAME_ARRAY)
-  private List<Integer> nameArray;
+  private java.util.List<Integer> nameArray;
 
   public static final String SERIALIZED_NAME_NAME_WRAPPED_ARRAY = "name_wrapped_array";
   @SerializedName(SERIALIZED_NAME_NAME_WRAPPED_ARRAY)
-  private List<Integer> nameWrappedArray;
+  private java.util.List<Integer> nameWrappedArray;
 
   public static final String SERIALIZED_NAME_PREFIX_STRING = "prefix_string";
   @SerializedName(SERIALIZED_NAME_PREFIX_STRING)
@@ -113,11 +111,11 @@ public class XmlItem {
 
   public static final String SERIALIZED_NAME_PREFIX_ARRAY = "prefix_array";
   @SerializedName(SERIALIZED_NAME_PREFIX_ARRAY)
-  private List<Integer> prefixArray;
+  private java.util.List<Integer> prefixArray;
 
   public static final String SERIALIZED_NAME_PREFIX_WRAPPED_ARRAY = "prefix_wrapped_array";
   @SerializedName(SERIALIZED_NAME_PREFIX_WRAPPED_ARRAY)
-  private List<Integer> prefixWrappedArray;
+  private java.util.List<Integer> prefixWrappedArray;
 
   public static final String SERIALIZED_NAME_NAMESPACE_STRING = "namespace_string";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_STRING)
@@ -137,11 +135,11 @@ public class XmlItem {
 
   public static final String SERIALIZED_NAME_NAMESPACE_ARRAY = "namespace_array";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_ARRAY)
-  private List<Integer> namespaceArray;
+  private java.util.List<Integer> namespaceArray;
 
   public static final String SERIALIZED_NAME_NAMESPACE_WRAPPED_ARRAY = "namespace_wrapped_array";
   @SerializedName(SERIALIZED_NAME_NAMESPACE_WRAPPED_ARRAY)
-  private List<Integer> namespaceWrappedArray;
+  private java.util.List<Integer> namespaceWrappedArray;
 
   public static final String SERIALIZED_NAME_PREFIX_NS_STRING = "prefix_ns_string";
   @SerializedName(SERIALIZED_NAME_PREFIX_NS_STRING)
@@ -161,11 +159,11 @@ public class XmlItem {
 
   public static final String SERIALIZED_NAME_PREFIX_NS_ARRAY = "prefix_ns_array";
   @SerializedName(SERIALIZED_NAME_PREFIX_NS_ARRAY)
-  private List<Integer> prefixNsArray;
+  private java.util.List<Integer> prefixNsArray;
 
   public static final String SERIALIZED_NAME_PREFIX_NS_WRAPPED_ARRAY = "prefix_ns_wrapped_array";
   @SerializedName(SERIALIZED_NAME_PREFIX_NS_WRAPPED_ARRAY)
-  private List<Integer> prefixNsWrappedArray;
+  private java.util.List<Integer> prefixNsWrappedArray;
 
   public XmlItem() {
   }
@@ -258,7 +256,7 @@ public class XmlItem {
   }
 
 
-  public XmlItem wrappedArray(List<Integer> wrappedArray) {
+  public XmlItem wrappedArray(java.util.List<Integer> wrappedArray) {
     
     this.wrappedArray = wrappedArray;
     return this;
@@ -278,12 +276,12 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getWrappedArray() {
+  public java.util.List<Integer> getWrappedArray() {
     return wrappedArray;
   }
 
 
-  public void setWrappedArray(List<Integer> wrappedArray) {
+  public void setWrappedArray(java.util.List<Integer> wrappedArray) {
     this.wrappedArray = wrappedArray;
   }
 
@@ -376,7 +374,7 @@ public class XmlItem {
   }
 
 
-  public XmlItem nameArray(List<Integer> nameArray) {
+  public XmlItem nameArray(java.util.List<Integer> nameArray) {
     
     this.nameArray = nameArray;
     return this;
@@ -396,17 +394,17 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getNameArray() {
+  public java.util.List<Integer> getNameArray() {
     return nameArray;
   }
 
 
-  public void setNameArray(List<Integer> nameArray) {
+  public void setNameArray(java.util.List<Integer> nameArray) {
     this.nameArray = nameArray;
   }
 
 
-  public XmlItem nameWrappedArray(List<Integer> nameWrappedArray) {
+  public XmlItem nameWrappedArray(java.util.List<Integer> nameWrappedArray) {
     
     this.nameWrappedArray = nameWrappedArray;
     return this;
@@ -426,12 +424,12 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getNameWrappedArray() {
+  public java.util.List<Integer> getNameWrappedArray() {
     return nameWrappedArray;
   }
 
 
-  public void setNameWrappedArray(List<Integer> nameWrappedArray) {
+  public void setNameWrappedArray(java.util.List<Integer> nameWrappedArray) {
     this.nameWrappedArray = nameWrappedArray;
   }
 
@@ -524,7 +522,7 @@ public class XmlItem {
   }
 
 
-  public XmlItem prefixArray(List<Integer> prefixArray) {
+  public XmlItem prefixArray(java.util.List<Integer> prefixArray) {
     
     this.prefixArray = prefixArray;
     return this;
@@ -544,17 +542,17 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getPrefixArray() {
+  public java.util.List<Integer> getPrefixArray() {
     return prefixArray;
   }
 
 
-  public void setPrefixArray(List<Integer> prefixArray) {
+  public void setPrefixArray(java.util.List<Integer> prefixArray) {
     this.prefixArray = prefixArray;
   }
 
 
-  public XmlItem prefixWrappedArray(List<Integer> prefixWrappedArray) {
+  public XmlItem prefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
     
     this.prefixWrappedArray = prefixWrappedArray;
     return this;
@@ -574,12 +572,12 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getPrefixWrappedArray() {
+  public java.util.List<Integer> getPrefixWrappedArray() {
     return prefixWrappedArray;
   }
 
 
-  public void setPrefixWrappedArray(List<Integer> prefixWrappedArray) {
+  public void setPrefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
     this.prefixWrappedArray = prefixWrappedArray;
   }
 
@@ -672,7 +670,7 @@ public class XmlItem {
   }
 
 
-  public XmlItem namespaceArray(List<Integer> namespaceArray) {
+  public XmlItem namespaceArray(java.util.List<Integer> namespaceArray) {
     
     this.namespaceArray = namespaceArray;
     return this;
@@ -692,17 +690,17 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getNamespaceArray() {
+  public java.util.List<Integer> getNamespaceArray() {
     return namespaceArray;
   }
 
 
-  public void setNamespaceArray(List<Integer> namespaceArray) {
+  public void setNamespaceArray(java.util.List<Integer> namespaceArray) {
     this.namespaceArray = namespaceArray;
   }
 
 
-  public XmlItem namespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+  public XmlItem namespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
     
     this.namespaceWrappedArray = namespaceWrappedArray;
     return this;
@@ -722,12 +720,12 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getNamespaceWrappedArray() {
+  public java.util.List<Integer> getNamespaceWrappedArray() {
     return namespaceWrappedArray;
   }
 
 
-  public void setNamespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+  public void setNamespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
     this.namespaceWrappedArray = namespaceWrappedArray;
   }
 
@@ -820,7 +818,7 @@ public class XmlItem {
   }
 
 
-  public XmlItem prefixNsArray(List<Integer> prefixNsArray) {
+  public XmlItem prefixNsArray(java.util.List<Integer> prefixNsArray) {
     
     this.prefixNsArray = prefixNsArray;
     return this;
@@ -840,17 +838,17 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getPrefixNsArray() {
+  public java.util.List<Integer> getPrefixNsArray() {
     return prefixNsArray;
   }
 
 
-  public void setPrefixNsArray(List<Integer> prefixNsArray) {
+  public void setPrefixNsArray(java.util.List<Integer> prefixNsArray) {
     this.prefixNsArray = prefixNsArray;
   }
 
 
-  public XmlItem prefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+  public XmlItem prefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
     
     this.prefixNsWrappedArray = prefixNsWrappedArray;
     return this;
@@ -870,12 +868,12 @@ public class XmlItem {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getPrefixNsWrappedArray() {
+  public java.util.List<Integer> getPrefixNsWrappedArray() {
     return prefixNsWrappedArray;
   }
 
 
-  public void setPrefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+  public void setPrefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
     this.prefixNsWrappedArray = prefixNsWrappedArray;
   }
 

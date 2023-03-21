@@ -2,11 +2,9 @@ package org.openapitools.api;
 
 import java.math.BigDecimal;
 import org.openapitools.model.Client;
-import java.util.Date;
 import java.io.File;
 import org.openapitools.model.FileSchemaTestClass;
 import org.joda.time.LocalDate;
-import java.util.Map;
 import org.openapitools.model.OuterComposite;
 import org.openapitools.model.User;
 import org.openapitools.model.XmlItem;
@@ -128,7 +126,7 @@ public interface FakeApi  {
     @ApiResponses(value = { 
         @ApiResponse(code = 400, message = "Invalid username supplied"),
         @ApiResponse(code = 404, message = "User not found") })
-    public void testEndpointParameters(@Multipart(value = "number")  BigDecimal number, @Multipart(value = "double")  Double _double, @Multipart(value = "pattern_without_delimiter")  String patternWithoutDelimiter, @Multipart(value = "byte")  byte[] _byte, @Multipart(value = "integer", required = false)  Integer integer, @Multipart(value = "int32", required = false)  Integer int32, @Multipart(value = "int64", required = false)  Long int64, @Multipart(value = "float", required = false)  Float _float, @Multipart(value = "string", required = false)  String string,  @Multipart(value = "binary" , required = false) Attachment binaryDetail, @Multipart(value = "date", required = false)  LocalDate date, @Multipart(value = "dateTime", required = false)  Date dateTime, @Multipart(value = "password", required = false)  String password, @Multipart(value = "callback", required = false)  String paramCallback);
+    public void testEndpointParameters(@Multipart(value = "number")  BigDecimal number, @Multipart(value = "double")  Double _double, @Multipart(value = "pattern_without_delimiter")  String patternWithoutDelimiter, @Multipart(value = "byte")  byte[] _byte, @Multipart(value = "integer", required = false)  Integer integer, @Multipart(value = "int32", required = false)  Integer int32, @Multipart(value = "int64", required = false)  Long int64, @Multipart(value = "float", required = false)  Float _float, @Multipart(value = "string", required = false)  String string,  @Multipart(value = "binary" , required = false) Attachment binaryDetail, @Multipart(value = "date", required = false)  LocalDate date, @Multipart(value = "dateTime", required = false)  java.util.Date dateTime, @Multipart(value = "password", required = false)  String password, @Multipart(value = "callback", required = false)  String paramCallback);
 
     /**
      * To test enum parameters
@@ -146,7 +144,7 @@ public interface FakeApi  {
     @ApiResponses(value = { 
         @ApiResponse(code = 400, message = "Invalid request"),
         @ApiResponse(code = 404, message = "Not found") })
-    public void testEnumParameters(@HeaderParam("enum_header_string_array")  List<String> enumHeaderStringArray, @QueryParam("enum_query_string_array") List<String> enumQueryStringArray, @QueryParam("enum_query_string") @DefaultValue("-efg")String enumQueryString, @QueryParam("enum_query_integer") Integer enumQueryInteger, @QueryParam("enum_query_double") Double enumQueryDouble, @Multipart(value = "enum_form_string_array", required = false)  List<String> enumFormStringArray, @Multipart(value = "enum_form_string", required = false)  String enumFormString);
+    public void testEnumParameters(@HeaderParam("enum_header_string_array")  java.util.List<String> enumHeaderStringArray, @QueryParam("enum_query_string_array") java.util.List<String> enumQueryStringArray, @QueryParam("enum_query_string") @DefaultValue("-efg")String enumQueryString, @QueryParam("enum_query_integer") Integer enumQueryInteger, @QueryParam("enum_query_double") Double enumQueryDouble, @Multipart(value = "enum_form_string_array", required = false)  java.util.List<String> enumFormStringArray, @Multipart(value = "enum_form_string", required = false)  String enumFormString);
 
     /**
      * Fake endpoint to test group parameters (optional)
@@ -171,7 +169,7 @@ public interface FakeApi  {
     @ApiOperation(value = "test inline additionalProperties", tags={ "fake" })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "successful operation") })
-    public void testInlineAdditionalProperties(@Valid @NotNull Map<String, String> param);
+    public void testInlineAdditionalProperties(@Valid @NotNull java.util.Map<String, String> param);
 
     /**
      * test json serialization of form data
@@ -190,5 +188,5 @@ public interface FakeApi  {
     @ApiOperation(value = "", tags={ "fake" })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Success") })
-    public void testQueryParameterCollectionFormat(@QueryParam("pipe") @NotNull List<String> pipe, @QueryParam("ioutil") @NotNull List<String> ioutil, @QueryParam("http") @NotNull List<String> http, @QueryParam("url") @NotNull List<String> url, @QueryParam("context") @NotNull List<String> context);
+    public void testQueryParameterCollectionFormat(@QueryParam("pipe") @NotNull java.util.List<String> pipe, @QueryParam("ioutil") @NotNull java.util.List<String> ioutil, @QueryParam("http") @NotNull java.util.List<String> http, @QueryParam("url") @NotNull java.util.List<String> url, @QueryParam("context") @NotNull java.util.List<String> context);
 }

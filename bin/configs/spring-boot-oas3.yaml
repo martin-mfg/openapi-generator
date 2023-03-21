@@ -9,3 +9,4 @@ additionalProperties:
   snapshotVersion: "true"
   hideGenerationTimestamp: "true"
   requestMappingMode: api_interface
+  fullJavaUtil: true

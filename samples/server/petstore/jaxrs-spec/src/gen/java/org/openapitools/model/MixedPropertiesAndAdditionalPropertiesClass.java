@@ -2,10 +2,6 @@ package org.openapitools.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.model.Animal;
 import java.io.Serializable;
 import javax.validation.constraints.*;
@@ -23,9 +19,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonTypeName("MixedPropertiesAndAdditionalPropertiesClass")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")
 public class MixedPropertiesAndAdditionalPropertiesClass  implements Serializable {
-  private @Valid UUID uuid;
-  private @Valid Date dateTime;
-  private @Valid Map<String, Animal> map = new HashMap<>();
+  private @Valid java.util.UUID uuid;
+  private @Valid java.util.Date dateTime;
+  private @Valid java.util.Map<String, Animal> map = new java.util.HashMap<>();
 
   protected MixedPropertiesAndAdditionalPropertiesClass(MixedPropertiesAndAdditionalPropertiesClassBuilder<?, ?> b) {
     this.uuid = b.uuid;
@@ -38,7 +34,7 @@ public class MixedPropertiesAndAdditionalPropertiesClass  implements Serializabl
 
   /**
    **/
-  public MixedPropertiesAndAdditionalPropertiesClass uuid(UUID uuid) {
+  public MixedPropertiesAndAdditionalPropertiesClass uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -46,18 +42,18 @@ public class MixedPropertiesAndAdditionalPropertiesClass  implements Serializabl
   
   @ApiModelProperty(value = "")
   @JsonProperty("uuid")
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
   @JsonProperty("uuid")
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
   /**
    **/
-  public MixedPropertiesAndAdditionalPropertiesClass dateTime(Date dateTime) {
+  public MixedPropertiesAndAdditionalPropertiesClass dateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
     return this;
   }
@@ -65,18 +61,18 @@ public class MixedPropertiesAndAdditionalPropertiesClass  implements Serializabl
   
   @ApiModelProperty(value = "")
   @JsonProperty("dateTime")
-  public Date getDateTime() {
+  public java.util.Date getDateTime() {
     return dateTime;
   }
 
   @JsonProperty("dateTime")
-  public void setDateTime(Date dateTime) {
+  public void setDateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
   }
 
   /**
    **/
-  public MixedPropertiesAndAdditionalPropertiesClass map(Map<String, Animal> map) {
+  public MixedPropertiesAndAdditionalPropertiesClass map(java.util.Map<String, Animal> map) {
     this.map = map;
     return this;
   }
@@ -84,18 +80,18 @@ public class MixedPropertiesAndAdditionalPropertiesClass  implements Serializabl
   
   @ApiModelProperty(value = "")
   @JsonProperty("map")
-  public Map<String, Animal> getMap() {
+  public java.util.Map<String, Animal> getMap() {
     return map;
   }
 
   @JsonProperty("map")
-  public void setMap(Map<String, Animal> map) {
+  public void setMap(java.util.Map<String, Animal> map) {
     this.map = map;
   }
 
   public MixedPropertiesAndAdditionalPropertiesClass putMapItem(String key, Animal mapItem) {
     if (this.map == null) {
-      this.map = new HashMap<>();
+      this.map = new java.util.HashMap<>();
     }
 
     this.map.put(key, mapItem);
@@ -171,22 +167,22 @@ public class MixedPropertiesAndAdditionalPropertiesClass  implements Serializabl
   }
 
   public static abstract class MixedPropertiesAndAdditionalPropertiesClassBuilder<C extends MixedPropertiesAndAdditionalPropertiesClass, B extends MixedPropertiesAndAdditionalPropertiesClassBuilder<C, B>>  {
-    private UUID uuid;
-    private Date dateTime;
-    private Map<String, Animal> map = new HashMap<>();
+    private java.util.UUID uuid;
+    private java.util.Date dateTime;
+    private java.util.Map<String, Animal> map = new java.util.HashMap<>();
     protected abstract B self();
 
     public abstract C build();
 
-    public B uuid(UUID uuid) {
+    public B uuid(java.util.UUID uuid) {
       this.uuid = uuid;
       return self();
     }
-    public B dateTime(Date dateTime) {
+    public B dateTime(java.util.Date dateTime) {
       this.dateTime = dateTime;
       return self();
     }
-    public B map(Map<String, Animal> map) {
+    public B map(java.util.Map<String, Animal> map) {
       this.map = map;
       return self();
     }

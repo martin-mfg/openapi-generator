@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.model.Category;
 import org.openapitools.model.Tag;
 import javax.validation.constraints.*;
@@ -27,9 +25,9 @@ public class Pet   {
 
   private String name;
 
-  private List<String> photoUrls = new ArrayList<>();
+  private java.util.List<String> photoUrls = new java.util.ArrayList<>();
 
-  private List<Tag> tags;
+  private java.util.List<Tag> tags;
 
 
 public enum StatusEnum {
@@ -121,7 +119,7 @@ public enum StatusEnum {
 
   /**
    **/
-  public Pet photoUrls(List<String> photoUrls) {
+  public Pet photoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
@@ -130,16 +128,16 @@ public enum StatusEnum {
   @ApiModelProperty(required = true, value = "")
   @JsonProperty("photoUrls")
   @NotNull
-  public List<String> getPhotoUrls() {
+  public java.util.List<String> getPhotoUrls() {
     return photoUrls;
   }
-  public void setPhotoUrls(List<String> photoUrls) {
+  public void setPhotoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
   public Pet addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new ArrayList<>();
+      this.photoUrls = new java.util.ArrayList<>();
     }
     this.photoUrls.add(photoUrlsItem);
     return this;
@@ -148,7 +146,7 @@ public enum StatusEnum {
 
   /**
    **/
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     this.tags = tags;
     return this;
   }
@@ -156,10 +154,10 @@ public enum StatusEnum {
   
   @ApiModelProperty(value = "")
   @JsonProperty("tags")
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 

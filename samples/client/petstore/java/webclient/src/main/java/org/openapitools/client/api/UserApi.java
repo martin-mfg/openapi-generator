@@ -5,12 +5,6 @@ import org.openapitools.client.ApiClient;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -123,7 +117,7 @@ public class UserApi {
      * @param user List of user object
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec createUsersWithArrayInputRequestCreation(List<User> user) throws WebClientResponseException {
+    private ResponseSpec createUsersWithArrayInputRequestCreation(java.util.List<User> user) throws WebClientResponseException {
         Object postBody = user;
         // verify the required parameter 'user' is set
         if (user == null) {
@@ -157,7 +151,7 @@ public class UserApi {
      * @param user List of user object
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Void> createUsersWithArrayInput(List<User> user) throws WebClientResponseException {
+    public Mono<Void> createUsersWithArrayInput(java.util.List<User> user) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return createUsersWithArrayInputRequestCreation(user).bodyToMono(localVarReturnType);
     }
@@ -169,7 +163,7 @@ public class UserApi {
      * @param user List of user object
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Void>> createUsersWithArrayInputWithHttpInfo(List<User> user) throws WebClientResponseException {
+    public Mono<ResponseEntity<Void>> createUsersWithArrayInputWithHttpInfo(java.util.List<User> user) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return createUsersWithArrayInputRequestCreation(user).toEntity(localVarReturnType);
     }
@@ -182,7 +176,7 @@ public class UserApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec createUsersWithArrayInputWithResponseSpec(List<User> user) throws WebClientResponseException {
+    public ResponseSpec createUsersWithArrayInputWithResponseSpec(java.util.List<User> user) throws WebClientResponseException {
         return createUsersWithArrayInputRequestCreation(user);
     }
     /**
@@ -192,7 +186,7 @@ public class UserApi {
      * @param user List of user object
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec createUsersWithListInputRequestCreation(List<User> user) throws WebClientResponseException {
+    private ResponseSpec createUsersWithListInputRequestCreation(java.util.List<User> user) throws WebClientResponseException {
         Object postBody = user;
         // verify the required parameter 'user' is set
         if (user == null) {
@@ -226,7 +220,7 @@ public class UserApi {
      * @param user List of user object
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Void> createUsersWithListInput(List<User> user) throws WebClientResponseException {
+    public Mono<Void> createUsersWithListInput(java.util.List<User> user) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return createUsersWithListInputRequestCreation(user).bodyToMono(localVarReturnType);
     }
@@ -238,7 +232,7 @@ public class UserApi {
      * @param user List of user object
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Void>> createUsersWithListInputWithHttpInfo(List<User> user) throws WebClientResponseException {
+    public Mono<ResponseEntity<Void>> createUsersWithListInputWithHttpInfo(java.util.List<User> user) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return createUsersWithListInputRequestCreation(user).toEntity(localVarReturnType);
     }
@@ -251,7 +245,7 @@ public class UserApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec createUsersWithListInputWithResponseSpec(List<User> user) throws WebClientResponseException {
+    public ResponseSpec createUsersWithListInputWithResponseSpec(java.util.List<User> user) throws WebClientResponseException {
         return createUsersWithListInputRequestCreation(user);
     }
     /**

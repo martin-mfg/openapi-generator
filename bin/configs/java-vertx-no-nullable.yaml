@@ -7,3 +7,4 @@ additionalProperties:
   artifactId: petstore-vertx-no-nullable
   hideGenerationTimestamp: "true"
   openApiNullable: "false"
+  fullJavaUtil: true

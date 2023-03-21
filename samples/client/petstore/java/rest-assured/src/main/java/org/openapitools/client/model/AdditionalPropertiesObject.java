@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 import org.hibernate.validator.constraints.*;
@@ -31,7 +29,7 @@ import org.hibernate.validator.constraints.*;
  * AdditionalPropertiesObject
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class AdditionalPropertiesObject extends HashMap<String, Map> {
+public class AdditionalPropertiesObject extends java.util.HashMap<String, java.util.Map> {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;

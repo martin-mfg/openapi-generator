@@ -7,3 +7,4 @@ additionalProperties:
   documentationProvider: springfox
   artifactId: petstore-spring-cloud
   hideGenerationTimestamp: "true"
+  fullJavaUtil: true

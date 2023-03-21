@@ -7,3 +7,4 @@ additionalProperties:
   hideGenerationTimestamp: "true"
   generateNonSpringApplication: "true"
   serverPort: "8082"
+  fullJavaUtil: true

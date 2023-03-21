@@ -1,8 +1,6 @@
 package apimodels;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
@@ -33,7 +31,7 @@ public class XmlItem   {
 
   @JsonProperty("wrapped_array")
   
-  private List<Integer> wrappedArray = null;
+  private java.util.List<Integer> wrappedArray = null;
 
   @JsonProperty("name_string")
   
@@ -54,11 +52,11 @@ public class XmlItem   {
 
   @JsonProperty("name_array")
   
-  private List<Integer> nameArray = null;
+  private java.util.List<Integer> nameArray = null;
 
   @JsonProperty("name_wrapped_array")
   
-  private List<Integer> nameWrappedArray = null;
+  private java.util.List<Integer> nameWrappedArray = null;
 
   @JsonProperty("prefix_string")
   
@@ -79,11 +77,11 @@ public class XmlItem   {
 
   @JsonProperty("prefix_array")
   
-  private List<Integer> prefixArray = null;
+  private java.util.List<Integer> prefixArray = null;
 
   @JsonProperty("prefix_wrapped_array")
   
-  private List<Integer> prefixWrappedArray = null;
+  private java.util.List<Integer> prefixWrappedArray = null;
 
   @JsonProperty("namespace_string")
   
@@ -104,11 +102,11 @@ public class XmlItem   {
 
   @JsonProperty("namespace_array")
   
-  private List<Integer> namespaceArray = null;
+  private java.util.List<Integer> namespaceArray = null;
 
   @JsonProperty("namespace_wrapped_array")
   
-  private List<Integer> namespaceWrappedArray = null;
+  private java.util.List<Integer> namespaceWrappedArray = null;
 
   @JsonProperty("prefix_ns_string")
   
@@ -129,11 +127,11 @@ public class XmlItem   {
 
   @JsonProperty("prefix_ns_array")
   
-  private List<Integer> prefixNsArray = null;
+  private java.util.List<Integer> prefixNsArray = null;
 
   @JsonProperty("prefix_ns_wrapped_array")
   
-  private List<Integer> prefixNsWrappedArray = null;
+  private java.util.List<Integer> prefixNsWrappedArray = null;
 
   public XmlItem attributeString(String attributeString) {
     this.attributeString = attributeString;
@@ -203,7 +201,7 @@ public class XmlItem   {
     this.attributeBoolean = attributeBoolean;
   }
 
-  public XmlItem wrappedArray(List<Integer> wrappedArray) {
+  public XmlItem wrappedArray(java.util.List<Integer> wrappedArray) {
     this.wrappedArray = wrappedArray;
     return this;
   }
@@ -220,11 +218,11 @@ public class XmlItem   {
    * Get wrappedArray
    * @return wrappedArray
   **/
-  public List<Integer> getWrappedArray() {
+  public java.util.List<Integer> getWrappedArray() {
     return wrappedArray;
   }
 
-  public void setWrappedArray(List<Integer> wrappedArray) {
+  public void setWrappedArray(java.util.List<Integer> wrappedArray) {
     this.wrappedArray = wrappedArray;
   }
 
@@ -296,7 +294,7 @@ public class XmlItem   {
     this.nameBoolean = nameBoolean;
   }
 
-  public XmlItem nameArray(List<Integer> nameArray) {
+  public XmlItem nameArray(java.util.List<Integer> nameArray) {
     this.nameArray = nameArray;
     return this;
   }
@@ -313,15 +311,15 @@ public class XmlItem   {
    * Get nameArray
    * @return nameArray
   **/
-  public List<Integer> getNameArray() {
+  public java.util.List<Integer> getNameArray() {
     return nameArray;
   }
 
-  public void setNameArray(List<Integer> nameArray) {
+  public void setNameArray(java.util.List<Integer> nameArray) {
     this.nameArray = nameArray;
   }
 
-  public XmlItem nameWrappedArray(List<Integer> nameWrappedArray) {
+  public XmlItem nameWrappedArray(java.util.List<Integer> nameWrappedArray) {
     this.nameWrappedArray = nameWrappedArray;
     return this;
   }
@@ -338,11 +336,11 @@ public class XmlItem   {
    * Get nameWrappedArray
    * @return nameWrappedArray
   **/
-  public List<Integer> getNameWrappedArray() {
+  public java.util.List<Integer> getNameWrappedArray() {
     return nameWrappedArray;
   }
 
-  public void setNameWrappedArray(List<Integer> nameWrappedArray) {
+  public void setNameWrappedArray(java.util.List<Integer> nameWrappedArray) {
     this.nameWrappedArray = nameWrappedArray;
   }
 
@@ -414,7 +412,7 @@ public class XmlItem   {
     this.prefixBoolean = prefixBoolean;
   }
 
-  public XmlItem prefixArray(List<Integer> prefixArray) {
+  public XmlItem prefixArray(java.util.List<Integer> prefixArray) {
     this.prefixArray = prefixArray;
     return this;
   }
@@ -431,15 +429,15 @@ public class XmlItem   {
    * Get prefixArray
    * @return prefixArray
   **/
-  public List<Integer> getPrefixArray() {
+  public java.util.List<Integer> getPrefixArray() {
     return prefixArray;
   }
 
-  public void setPrefixArray(List<Integer> prefixArray) {
+  public void setPrefixArray(java.util.List<Integer> prefixArray) {
     this.prefixArray = prefixArray;
   }
 
-  public XmlItem prefixWrappedArray(List<Integer> prefixWrappedArray) {
+  public XmlItem prefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
     this.prefixWrappedArray = prefixWrappedArray;
     return this;
   }
@@ -456,11 +454,11 @@ public class XmlItem   {
    * Get prefixWrappedArray
    * @return prefixWrappedArray
   **/
-  public List<Integer> getPrefixWrappedArray() {
+  public java.util.List<Integer> getPrefixWrappedArray() {
     return prefixWrappedArray;
   }
 
-  public void setPrefixWrappedArray(List<Integer> prefixWrappedArray) {
+  public void setPrefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
     this.prefixWrappedArray = prefixWrappedArray;
   }
 
@@ -532,7 +530,7 @@ public class XmlItem   {
     this.namespaceBoolean = namespaceBoolean;
   }
 
-  public XmlItem namespaceArray(List<Integer> namespaceArray) {
+  public XmlItem namespaceArray(java.util.List<Integer> namespaceArray) {
     this.namespaceArray = namespaceArray;
     return this;
   }
@@ -549,15 +547,15 @@ public class XmlItem   {
    * Get namespaceArray
    * @return namespaceArray
   **/
-  public List<Integer> getNamespaceArray() {
+  public java.util.List<Integer> getNamespaceArray() {
     return namespaceArray;
   }
 
-  public void setNamespaceArray(List<Integer> namespaceArray) {
+  public void setNamespaceArray(java.util.List<Integer> namespaceArray) {
     this.namespaceArray = namespaceArray;
   }
 
-  public XmlItem namespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+  public XmlItem namespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
     this.namespaceWrappedArray = namespaceWrappedArray;
     return this;
   }
@@ -574,11 +572,11 @@ public class XmlItem   {
    * Get namespaceWrappedArray
    * @return namespaceWrappedArray
   **/
-  public List<Integer> getNamespaceWrappedArray() {
+  public java.util.List<Integer> getNamespaceWrappedArray() {
     return namespaceWrappedArray;
   }
 
-  public void setNamespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+  public void setNamespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
     this.namespaceWrappedArray = namespaceWrappedArray;
   }
 
@@ -650,7 +648,7 @@ public class XmlItem   {
     this.prefixNsBoolean = prefixNsBoolean;
   }
 
-  public XmlItem prefixNsArray(List<Integer> prefixNsArray) {
+  public XmlItem prefixNsArray(java.util.List<Integer> prefixNsArray) {
     this.prefixNsArray = prefixNsArray;
     return this;
   }
@@ -667,15 +665,15 @@ public class XmlItem   {
    * Get prefixNsArray
    * @return prefixNsArray
   **/
-  public List<Integer> getPrefixNsArray() {
+  public java.util.List<Integer> getPrefixNsArray() {
     return prefixNsArray;
   }
 
-  public void setPrefixNsArray(List<Integer> prefixNsArray) {
+  public void setPrefixNsArray(java.util.List<Integer> prefixNsArray) {
     this.prefixNsArray = prefixNsArray;
   }
 
-  public XmlItem prefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+  public XmlItem prefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
     this.prefixNsWrappedArray = prefixNsWrappedArray;
     return this;
   }
@@ -692,11 +690,11 @@ public class XmlItem   {
    * Get prefixNsWrappedArray
    * @return prefixNsWrappedArray
   **/
-  public List<Integer> getPrefixNsWrappedArray() {
+  public java.util.List<Integer> getPrefixNsWrappedArray() {
     return prefixNsWrappedArray;
   }
 
-  public void setPrefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+  public void setPrefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
     this.prefixNsWrappedArray = prefixNsWrappedArray;
   }
 

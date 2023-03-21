@@ -24,11 +24,11 @@ public class PetApiImpl implements PetApi {
         return Future.failedFuture(new HttpException(501));
     }
 
-    public Future<ApiResponse<List<Pet>>> findPetsByStatus(List<String> status) {
+    public Future<ApiResponse<java.util.List<Pet>>> findPetsByStatus(java.util.List<String> status) {
         return Future.failedFuture(new HttpException(501));
     }
 
-    public Future<ApiResponse<List<Pet>>> findPetsByTags(List<String> tags) {
+    public Future<ApiResponse<java.util.List<Pet>>> findPetsByTags(java.util.List<String> tags) {
         return Future.failedFuture(new HttpException(501));
     }
 

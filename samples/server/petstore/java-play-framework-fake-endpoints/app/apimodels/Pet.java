@@ -2,11 +2,6 @@ package apimodels;
 
 import apimodels.Category;
 import apimodels.Tag;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
@@ -35,12 +30,12 @@ public class Pet   {
   @JsonProperty("photoUrls")
   @NotNull
 
-  private Set<String> photoUrls = new LinkedHashSet<>();
+  private java.util.Set<String> photoUrls = new java.util.LinkedHashSet<>();
 
   @JsonProperty("tags")
   @Valid
 
-  private List<Tag> tags = null;
+  private java.util.List<Tag> tags = null;
 
   /**
    * pet status in the store
@@ -130,14 +125,14 @@ public class Pet   {
     this.name = name;
   }
 
-  public Pet photoUrls(Set<String> photoUrls) {
+  public Pet photoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
 
   public Pet addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new LinkedHashSet<>();
+      this.photoUrls = new java.util.LinkedHashSet<>();
     }
     this.photoUrls.add(photoUrlsItem);
     return this;
@@ -147,16 +142,15 @@ public class Pet   {
    * Get photoUrls
    * @return photoUrls
   **/
-  public Set<String> getPhotoUrls() {
+  public java.util.Set<String> getPhotoUrls() {
     return photoUrls;
   }
 
-  @JsonDeserialize(as = LinkedHashSet.class)
-  public void setPhotoUrls(Set<String> photoUrls) {
+  public void setPhotoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     this.tags = tags;
     return this;
   }
@@ -173,11 +167,11 @@ public class Pet   {
    * Get tags
    * @return tags
   **/
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 

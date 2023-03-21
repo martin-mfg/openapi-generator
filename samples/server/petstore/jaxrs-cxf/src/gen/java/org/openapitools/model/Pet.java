@@ -2,11 +2,6 @@ package org.openapitools.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import org.openapitools.model.Category;
 import org.openapitools.model.Tag;
 import javax.validation.constraints.*;
@@ -30,11 +25,11 @@ public class Pet  {
   private String name;
 
   @ApiModelProperty(required = true, value = "")
-  private Set<String> photoUrls = new LinkedHashSet<>();
+  private java.util.Set<String> photoUrls = new java.util.LinkedHashSet<>();
 
   @ApiModelProperty(value = "")
   @Valid
-  private List<Tag> tags;
+  private java.util.List<Tag> tags;
 
 public enum StatusEnum {
 
@@ -134,16 +129,15 @@ AVAILABLE(String.valueOf("available")), PENDING(String.valueOf("pending")), SOLD
   **/
   @JsonProperty("photoUrls")
   @NotNull
-  public Set<String> getPhotoUrls() {
+  public java.util.Set<String> getPhotoUrls() {
     return photoUrls;
   }
 
-  @JsonDeserialize(as = LinkedHashSet.class)
-  public void setPhotoUrls(Set<String> photoUrls) {
+  public void setPhotoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
-  public Pet photoUrls(Set<String> photoUrls) {
+  public Pet photoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
@@ -158,15 +152,15 @@ AVAILABLE(String.valueOf("available")), PENDING(String.valueOf("pending")), SOLD
    * @return tags
   **/
   @JsonProperty("tags")
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     this.tags = tags;
     return this;
   }

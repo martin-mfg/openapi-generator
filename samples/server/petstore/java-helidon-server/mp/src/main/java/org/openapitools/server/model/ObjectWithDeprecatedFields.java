@@ -13,8 +13,6 @@
 package org.openapitools.server.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.server.model.DeprecatedObject;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
@@ -33,7 +31,7 @@ public class ObjectWithDeprecatedFields  {
 
   private DeprecatedObject deprecatedRef;
 
-  private List<String> bars = null;
+  private java.util.List<String> bars = null;
 
  /**
    * Get uuid
@@ -105,18 +103,18 @@ public class ObjectWithDeprecatedFields  {
    * @deprecated
   **/
   @Deprecated
-  public List<String> getBars() {
+  public java.util.List<String> getBars() {
     return bars;
   }
 
   /**
     * Set bars
   **/
-  public void setBars(List<String> bars) {
+  public void setBars(java.util.List<String> bars) {
     this.bars = bars;
   }
 
-  public ObjectWithDeprecatedFields bars(List<String> bars) {
+  public ObjectWithDeprecatedFields bars(java.util.List<String> bars) {
     this.bars = bars;
     return this;
   }

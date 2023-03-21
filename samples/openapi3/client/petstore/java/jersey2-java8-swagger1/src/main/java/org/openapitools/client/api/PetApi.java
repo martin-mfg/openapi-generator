@@ -12,12 +12,6 @@ import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PetApi {
   private ApiClient apiClient;
@@ -132,7 +126,7 @@ public class PetApi {
             .replaceAll("\\{petId}", apiClient.escapeString(petId.toString()));
 
     // Header parameters
-    Map<String, String> localVarHeaderParams = new LinkedHashMap<>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.LinkedHashMap<>();
     if (apiKey != null) {
       localVarHeaderParams.put("api_key", apiClient.parameterToString(apiKey));
     }
@@ -148,7 +142,7 @@ public class PetApi {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return List&lt;Pet&gt;
+   * @return java.util.List&lt;Pet&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -157,7 +151,7 @@ public class PetApi {
        <tr><td> 400 </td><td> Invalid status value </td><td>  -  </td></tr>
      </table>
    */
-  public List<Pet> findPetsByStatus(List<String> status) throws ApiException {
+  public java.util.List<Pet> findPetsByStatus(java.util.List<String> status) throws ApiException {
     return findPetsByStatusWithHttpInfo(status).getData();
   }
 
@@ -165,7 +159,7 @@ public class PetApi {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return ApiResponse&lt;List&lt;Pet&gt;&gt;
+   * @return ApiResponse&lt;java.util.List&lt;Pet&gt;&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -174,21 +168,21 @@ public class PetApi {
        <tr><td> 400 </td><td> Invalid status value </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<List<Pet>> findPetsByStatusWithHttpInfo(List<String> status) throws ApiException {
+  public ApiResponse<java.util.List<Pet>> findPetsByStatusWithHttpInfo(java.util.List<String> status) throws ApiException {
     // Check required parameters
     if (status == null) {
       throw new ApiException(400, "Missing the required parameter 'status' when calling findPetsByStatus");
     }
 
     // Query parameters
-    List<Pair> localVarQueryParams = new ArrayList<>(
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>(
             apiClient.parameterToPairs("csv", "status", status)
     );
 
     String localVarAccept = apiClient.selectHeaderAccept("application/xml", "application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
     String[] localVarAuthNames = new String[] {"petstore_auth"};
-    GenericType<List<Pet>> localVarReturnType = new GenericType<List<Pet>>() {};
+    GenericType<java.util.List<Pet>> localVarReturnType = new GenericType<java.util.List<Pet>>() {};
     return apiClient.invokeAPI("PetApi.findPetsByStatus", "/pet/findByStatus", "GET", localVarQueryParams, null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);
@@ -197,7 +191,7 @@ public class PetApi {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return List&lt;Pet&gt;
+   * @return java.util.List&lt;Pet&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -208,7 +202,7 @@ public class PetApi {
    * @deprecated
    */
   @Deprecated
-  public List<Pet> findPetsByTags(List<String> tags) throws ApiException {
+  public java.util.List<Pet> findPetsByTags(java.util.List<String> tags) throws ApiException {
     return findPetsByTagsWithHttpInfo(tags).getData();
   }
 
@@ -216,7 +210,7 @@ public class PetApi {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return ApiResponse&lt;List&lt;Pet&gt;&gt;
+   * @return ApiResponse&lt;java.util.List&lt;Pet&gt;&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -227,21 +221,21 @@ public class PetApi {
    * @deprecated
    */
   @Deprecated
-  public ApiResponse<List<Pet>> findPetsByTagsWithHttpInfo(List<String> tags) throws ApiException {
+  public ApiResponse<java.util.List<Pet>> findPetsByTagsWithHttpInfo(java.util.List<String> tags) throws ApiException {
     // Check required parameters
     if (tags == null) {
       throw new ApiException(400, "Missing the required parameter 'tags' when calling findPetsByTags");
     }
 
     // Query parameters
-    List<Pair> localVarQueryParams = new ArrayList<>(
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>(
             apiClient.parameterToPairs("csv", "tags", tags)
     );
 
     String localVarAccept = apiClient.selectHeaderAccept("application/xml", "application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
     String[] localVarAuthNames = new String[] {"petstore_auth"};
-    GenericType<List<Pet>> localVarReturnType = new GenericType<List<Pet>>() {};
+    GenericType<java.util.List<Pet>> localVarReturnType = new GenericType<java.util.List<Pet>>() {};
     return apiClient.invokeAPI("PetApi.findPetsByTags", "/pet/findByTags", "GET", localVarQueryParams, null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);
@@ -390,7 +384,7 @@ public class PetApi {
             .replaceAll("\\{petId}", apiClient.escapeString(petId.toString()));
 
     // Form parameters
-    Map<String, Object> localVarFormParams = new LinkedHashMap<>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.LinkedHashMap<>();
     if (name != null) {
       localVarFormParams.put("name", name);
     }
@@ -448,7 +442,7 @@ public class PetApi {
             .replaceAll("\\{petId}", apiClient.escapeString(petId.toString()));
 
     // Form parameters
-    Map<String, Object> localVarFormParams = new LinkedHashMap<>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.LinkedHashMap<>();
     if (additionalMetadata != null) {
       localVarFormParams.put("additionalMetadata", additionalMetadata);
     }

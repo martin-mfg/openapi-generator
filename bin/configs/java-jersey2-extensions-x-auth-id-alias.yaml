@@ -6,3 +6,4 @@ templateDir: modules/openapi-generator/src/main/resources/Java
 additionalProperties:
   artifactId: openapi3-extensions-x-auth-id-alias-jersey2-java8
   hideGenerationTimestamp: true
+  fullJavaUtil: true

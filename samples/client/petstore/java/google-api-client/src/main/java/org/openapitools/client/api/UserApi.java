@@ -134,7 +134,7 @@ public class UserApi {
     * @param body List of user object
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void createUsersWithArrayInput(List<User> body) throws IOException {
+    public void createUsersWithArrayInput(java.util.List<User> body) throws IOException {
         createUsersWithArrayInputForHttpResponse(body);
     }
 
@@ -145,11 +145,11 @@ public class UserApi {
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void createUsersWithArrayInput(List<User> body, Map<String, Object> params) throws IOException {
+    public void createUsersWithArrayInput(java.util.List<User> body, Map<String, Object> params) throws IOException {
         createUsersWithArrayInputForHttpResponse(body, params);
     }
 
-    public HttpResponse createUsersWithArrayInputForHttpResponse(List<User> body) throws IOException {
+    public HttpResponse createUsersWithArrayInputForHttpResponse(java.util.List<User> body) throws IOException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new IllegalArgumentException("Missing the required parameter 'body' when calling createUsersWithArrayInput");
@@ -179,7 +179,7 @@ public class UserApi {
               return apiClient.getHttpRequestFactory().buildRequest(HttpMethods.POST, genericUrl, content).execute();
       }
 
-    public HttpResponse createUsersWithArrayInputForHttpResponse(List<User> body, Map<String, Object> params) throws IOException {
+    public HttpResponse createUsersWithArrayInputForHttpResponse(java.util.List<User> body, Map<String, Object> params) throws IOException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new IllegalArgumentException("Missing the required parameter 'body' when calling createUsersWithArrayInput");
@@ -218,7 +218,7 @@ public class UserApi {
     * @param body List of user object
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void createUsersWithListInput(List<User> body) throws IOException {
+    public void createUsersWithListInput(java.util.List<User> body) throws IOException {
         createUsersWithListInputForHttpResponse(body);
     }
 
@@ -229,11 +229,11 @@ public class UserApi {
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public void createUsersWithListInput(List<User> body, Map<String, Object> params) throws IOException {
+    public void createUsersWithListInput(java.util.List<User> body, Map<String, Object> params) throws IOException {
         createUsersWithListInputForHttpResponse(body, params);
     }
 
-    public HttpResponse createUsersWithListInputForHttpResponse(List<User> body) throws IOException {
+    public HttpResponse createUsersWithListInputForHttpResponse(java.util.List<User> body) throws IOException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new IllegalArgumentException("Missing the required parameter 'body' when calling createUsersWithListInput");
@@ -263,7 +263,7 @@ public class UserApi {
               return apiClient.getHttpRequestFactory().buildRequest(HttpMethods.POST, genericUrl, content).execute();
       }
 
-    public HttpResponse createUsersWithListInputForHttpResponse(List<User> body, Map<String, Object> params) throws IOException {
+    public HttpResponse createUsersWithListInputForHttpResponse(java.util.List<User> body, Map<String, Object> params) throws IOException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new IllegalArgumentException("Missing the required parameter 'body' when calling createUsersWithListInput");

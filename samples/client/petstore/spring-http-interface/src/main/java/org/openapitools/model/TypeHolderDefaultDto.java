@@ -6,8 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
@@ -33,7 +31,7 @@ public class TypeHolderDefaultDto {
   private Boolean boolItem = true;
 
   
-  private List<Integer> arrayItem = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+  private java.util.List<Integer> arrayItem = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
 
   public TypeHolderDefaultDto stringItem(String stringItem) {
     this.stringItem = stringItem;
@@ -111,7 +109,7 @@ public class TypeHolderDefaultDto {
     this.boolItem = boolItem;
   }
 
-  public TypeHolderDefaultDto arrayItem(List<Integer> arrayItem) {
+  public TypeHolderDefaultDto arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
@@ -130,11 +128,11 @@ public class TypeHolderDefaultDto {
   */
   @NotNull
   @JsonProperty("array_item")
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

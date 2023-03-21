@@ -7,8 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.model.ReadOnlyFirstDto;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
@@ -28,15 +26,15 @@ import javax.annotation.Generated;
 public class ArrayTestDto {
 
   @Valid
-  private List<String> arrayOfString;
+  private java.util.List<String> arrayOfString;
 
   @Valid
-  private List<List<Long>> arrayArrayOfInteger;
+  private java.util.List<java.util.List<Long>> arrayArrayOfInteger;
 
   @Valid
-  private List<List<ReadOnlyFirstDto>> arrayArrayOfModel;
+  private java.util.List<java.util.List<ReadOnlyFirstDto>> arrayArrayOfModel;
 
-  public ArrayTestDto arrayOfString(List<String> arrayOfString) {
+  public ArrayTestDto arrayOfString(java.util.List<String> arrayOfString) {
     this.arrayOfString = arrayOfString;
     return this;
   }
@@ -56,20 +54,20 @@ public class ArrayTestDto {
   
   @ApiModelProperty(value = "")
   @JsonProperty("array_of_string")
-  public List<String> getArrayOfString() {
+  public java.util.List<String> getArrayOfString() {
     return arrayOfString;
   }
 
-  public void setArrayOfString(List<String> arrayOfString) {
+  public void setArrayOfString(java.util.List<String> arrayOfString) {
     this.arrayOfString = arrayOfString;
   }
 
-  public ArrayTestDto arrayArrayOfInteger(List<List<Long>> arrayArrayOfInteger) {
+  public ArrayTestDto arrayArrayOfInteger(java.util.List<java.util.List<Long>> arrayArrayOfInteger) {
     this.arrayArrayOfInteger = arrayArrayOfInteger;
     return this;
   }
 
-  public ArrayTestDto addArrayArrayOfIntegerItem(List<Long> arrayArrayOfIntegerItem) {
+  public ArrayTestDto addArrayArrayOfIntegerItem(java.util.List<Long> arrayArrayOfIntegerItem) {
     if (this.arrayArrayOfInteger == null) {
       this.arrayArrayOfInteger = new ArrayList<>();
     }
@@ -84,20 +82,20 @@ public class ArrayTestDto {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("array_array_of_integer")
-  public List<List<Long>> getArrayArrayOfInteger() {
+  public java.util.List<java.util.List<Long>> getArrayArrayOfInteger() {
     return arrayArrayOfInteger;
   }
 
-  public void setArrayArrayOfInteger(List<List<Long>> arrayArrayOfInteger) {
+  public void setArrayArrayOfInteger(java.util.List<java.util.List<Long>> arrayArrayOfInteger) {
     this.arrayArrayOfInteger = arrayArrayOfInteger;
   }
 
-  public ArrayTestDto arrayArrayOfModel(List<List<ReadOnlyFirstDto>> arrayArrayOfModel) {
+  public ArrayTestDto arrayArrayOfModel(java.util.List<java.util.List<ReadOnlyFirstDto>> arrayArrayOfModel) {
     this.arrayArrayOfModel = arrayArrayOfModel;
     return this;
   }
 
-  public ArrayTestDto addArrayArrayOfModelItem(List<@Valid ReadOnlyFirstDto> arrayArrayOfModelItem) {
+  public ArrayTestDto addArrayArrayOfModelItem(java.util.List<@Valid ReadOnlyFirstDto> arrayArrayOfModelItem) {
     if (this.arrayArrayOfModel == null) {
       this.arrayArrayOfModel = new ArrayList<>();
     }
@@ -112,11 +110,11 @@ public class ArrayTestDto {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("array_array_of_model")
-  public List<List<ReadOnlyFirstDto>> getArrayArrayOfModel() {
+  public java.util.List<java.util.List<ReadOnlyFirstDto>> getArrayArrayOfModel() {
     return arrayArrayOfModel;
   }
 
-  public void setArrayArrayOfModel(List<List<ReadOnlyFirstDto>> arrayArrayOfModel) {
+  public void setArrayArrayOfModel(java.util.List<java.util.List<ReadOnlyFirstDto>> arrayArrayOfModel) {
     this.arrayArrayOfModel = arrayArrayOfModel;
   }
 

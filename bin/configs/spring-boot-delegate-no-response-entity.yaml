@@ -9,3 +9,4 @@ additionalProperties:
   java8: true
   delegatePattern: "true"
   useResponseEntity: "false"
+  fullJavaUtil: true

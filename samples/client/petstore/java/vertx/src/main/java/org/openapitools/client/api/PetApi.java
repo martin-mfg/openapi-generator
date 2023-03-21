@@ -4,7 +4,6 @@ import org.openapitools.client.ApiClient;
 import io.vertx.core.file.AsyncFile;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
 import io.vertx.core.json.JsonObject;
@@ -21,15 +20,15 @@ public interface PetApi {
 
     void deletePet(Long petId, String apiKey, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
-    void findPetsByStatus(List<String> status, Handler<AsyncResult<List<Pet>>> handler);
+    void findPetsByStatus(java.util.List<String> status, Handler<AsyncResult<java.util.List<Pet>>> handler);
 
-    void findPetsByStatus(List<String> status, ApiClient.AuthInfo authInfo, Handler<AsyncResult<List<Pet>>> handler);
-
-    @Deprecated
-    void findPetsByTags(Set<String> tags, Handler<AsyncResult<Set<Pet>>> handler);
+    void findPetsByStatus(java.util.List<String> status, ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.List<Pet>>> handler);
 
     @Deprecated
-    void findPetsByTags(Set<String> tags, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Set<Pet>>> handler);
+    void findPetsByTags(java.util.Set<String> tags, Handler<AsyncResult<java.util.Set<Pet>>> handler);
+
+    @Deprecated
+    void findPetsByTags(java.util.Set<String> tags, ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.Set<Pet>>> handler);
 
     void getPetById(Long petId, Handler<AsyncResult<Pet>> handler);
 

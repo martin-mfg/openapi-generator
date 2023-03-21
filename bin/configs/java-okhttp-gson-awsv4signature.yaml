@@ -9,3 +9,4 @@ additionalProperties:
   useOneOfDiscriminatorLookup: "true"
   disallowAdditionalPropertiesIfNotPresent: false
   withAWSV4Signature: true
+  fullJavaUtil: true

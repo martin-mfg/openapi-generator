@@ -8,7 +8,6 @@ import com.sun.jersey.multipart.FormDataParam;
 import java.io.File;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
-import java.util.Set;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;
@@ -27,9 +26,9 @@ public abstract class PetApiService {
       throws NotFoundException;
       public abstract Response deletePet(Long petId,String apiKey,SecurityContext securityContext)
       throws NotFoundException;
-      public abstract Response findPetsByStatus( @NotNull List<String> status,SecurityContext securityContext)
+      public abstract Response findPetsByStatus( @NotNull java.util.List<String> status,SecurityContext securityContext)
       throws NotFoundException;
-      public abstract Response findPetsByTags( @NotNull Set<String> tags,SecurityContext securityContext)
+      public abstract Response findPetsByTags( @NotNull java.util.Set<String> tags,SecurityContext securityContext)
       throws NotFoundException;
       public abstract Response getPetById(Long petId,SecurityContext securityContext)
       throws NotFoundException;

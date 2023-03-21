@@ -3,7 +3,6 @@ package org.openapitools.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
-import java.util.Date;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
@@ -28,7 +27,7 @@ public class Order  {
   private Integer quantity;
 
   @ApiModelProperty(value = "")
-  private Date shipDate;
+  private java.util.Date shipDate;
 
 public enum StatusEnum {
 
@@ -129,15 +128,15 @@ PLACED(String.valueOf("placed")), APPROVED(String.valueOf("approved")), DELIVERE
    * @return shipDate
   **/
   @JsonProperty("shipDate")
-  public Date getShipDate() {
+  public java.util.Date getShipDate() {
     return shipDate;
   }
 
-  public void setShipDate(Date shipDate) {
+  public void setShipDate(java.util.Date shipDate) {
     this.shipDate = shipDate;
   }
 
-  public Order shipDate(Date shipDate) {
+  public Order shipDate(java.util.Date shipDate) {
     this.shipDate = shipDate;
     return this;
   }

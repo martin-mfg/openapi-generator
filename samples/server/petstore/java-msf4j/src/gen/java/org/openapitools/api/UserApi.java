@@ -7,8 +7,6 @@ import org.openapitools.api.factories.UserApiServiceFactory;
 import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
-import java.util.Date;
-import java.util.List;
 import org.openapitools.model.User;
 
 import java.util.List;
@@ -51,7 +49,7 @@ public class UserApi  {
     @io.swagger.annotations.ApiOperation(value = "Creates list of users with given input array", notes = "", response = Void.class, tags={ "user", })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = Void.class) })
-    public Response createUsersWithArrayInput(@ApiParam(value = "List of user object" ,required=true) List<User> body
+    public Response createUsersWithArrayInput(@ApiParam(value = "List of user object" ,required=true) java.util.List<User> body
 )
     throws NotFoundException {
         return delegate.createUsersWithArrayInput(body);
@@ -63,7 +61,7 @@ public class UserApi  {
     @io.swagger.annotations.ApiOperation(value = "Creates list of users with given input array", notes = "", response = Void.class, tags={ "user", })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = Void.class) })
-    public Response createUsersWithListInput(@ApiParam(value = "List of user object" ,required=true) List<User> body
+    public Response createUsersWithListInput(@ApiParam(value = "List of user object" ,required=true) java.util.List<User> body
 )
     throws NotFoundException {
         return delegate.createUsersWithListInput(body);

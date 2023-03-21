@@ -1,16 +1,14 @@
 package org.openapitools.server.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.server.model.ReadOnlyFirst;
 
 
 
 public class ArrayTest   {
 
-    private List<String> arrayOfString;
-    private List<List<Long>> arrayArrayOfInteger;
-    private List<List<ReadOnlyFirst>> arrayArrayOfModel;
+    private java.util.List<String> arrayOfString;
+    private java.util.List<java.util.List<Long>> arrayArrayOfInteger;
+    private java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel;
 
     /**
      * Default constructor.
@@ -27,9 +25,9 @@ public class ArrayTest   {
      * @param arrayArrayOfModel arrayArrayOfModel
      */
     public ArrayTest(
-        List<String> arrayOfString, 
-        List<List<Long>> arrayArrayOfInteger, 
-        List<List<ReadOnlyFirst>> arrayArrayOfModel
+        java.util.List<String> arrayOfString, 
+        java.util.List<java.util.List<Long>> arrayArrayOfInteger, 
+        java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel
     ) {
         this.arrayOfString = arrayOfString;
         this.arrayArrayOfInteger = arrayArrayOfInteger;
@@ -42,11 +40,11 @@ public class ArrayTest   {
      * Get arrayOfString
      * @return arrayOfString
      */
-    public List<String> getArrayOfString() {
+    public java.util.List<String> getArrayOfString() {
         return arrayOfString;
     }
 
-    public void setArrayOfString(List<String> arrayOfString) {
+    public void setArrayOfString(java.util.List<String> arrayOfString) {
         this.arrayOfString = arrayOfString;
     }
 
@@ -54,11 +52,11 @@ public class ArrayTest   {
      * Get arrayArrayOfInteger
      * @return arrayArrayOfInteger
      */
-    public List<List<Long>> getArrayArrayOfInteger() {
+    public java.util.List<java.util.List<Long>> getArrayArrayOfInteger() {
         return arrayArrayOfInteger;
     }
 
-    public void setArrayArrayOfInteger(List<List<Long>> arrayArrayOfInteger) {
+    public void setArrayArrayOfInteger(java.util.List<java.util.List<Long>> arrayArrayOfInteger) {
         this.arrayArrayOfInteger = arrayArrayOfInteger;
     }
 
@@ -66,11 +64,11 @@ public class ArrayTest   {
      * Get arrayArrayOfModel
      * @return arrayArrayOfModel
      */
-    public List<List<ReadOnlyFirst>> getArrayArrayOfModel() {
+    public java.util.List<java.util.List<ReadOnlyFirst>> getArrayArrayOfModel() {
         return arrayArrayOfModel;
     }
 
-    public void setArrayArrayOfModel(List<List<ReadOnlyFirst>> arrayArrayOfModel) {
+    public void setArrayArrayOfModel(java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel) {
         this.arrayArrayOfModel = arrayArrayOfModel;
     }
 

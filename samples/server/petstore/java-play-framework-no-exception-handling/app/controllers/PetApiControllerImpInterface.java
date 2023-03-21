@@ -52,15 +52,15 @@ public abstract class PetApiControllerImpInterface {
 
     public abstract void deletePet(Http.Request request, Long petId, String apiKey) ;
 
-    public Result findPetsByStatusHttp(Http.Request request, @NotNull List<String> status)  {
+    public Result findPetsByStatusHttp(Http.Request request, @NotNull java.util.List<String> status)  {
         if (!securityAPIUtils.isRequestTokenValid(request, "petstore_auth")) {
             return unauthorized();
         }
 
-        List<Pet> obj = findPetsByStatus(request, status);
+        array<java.util.List<Pet>> obj = findPetsByStatus(request, status);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
-            for (Pet curItem : obj) {
+            for (java.util.List<Pet> curItem : obj) {
                 OpenAPIUtils.validate(curItem);
             }
         }
@@ -71,17 +71,17 @@ public abstract class PetApiControllerImpInterface {
 
     }
 
-    public abstract List<Pet> findPetsByStatus(Http.Request request, @NotNull List<String> status) ;
+    public abstract array<java.util.List<Pet>> findPetsByStatus(Http.Request request, @NotNull java.util.List<String> status) ;
 
-    public Result findPetsByTagsHttp(Http.Request request, @NotNull List<String> tags)  {
+    public Result findPetsByTagsHttp(Http.Request request, @NotNull java.util.List<String> tags)  {
         if (!securityAPIUtils.isRequestTokenValid(request, "petstore_auth")) {
             return unauthorized();
         }
 
-        List<Pet> obj = findPetsByTags(request, tags);
+        array<java.util.List<Pet>> obj = findPetsByTags(request, tags);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
-            for (Pet curItem : obj) {
+            for (java.util.List<Pet> curItem : obj) {
                 OpenAPIUtils.validate(curItem);
             }
         }
@@ -92,7 +92,7 @@ public abstract class PetApiControllerImpInterface {
 
     }
 
-    public abstract List<Pet> findPetsByTags(Http.Request request, @NotNull List<String> tags) ;
+    public abstract array<java.util.List<Pet>> findPetsByTags(Http.Request request, @NotNull java.util.List<String> tags) ;
 
     public Result getPetByIdHttp(Http.Request request, Long petId)  {
         Pet obj = getPetById(request, petId);

@@ -10,12 +10,6 @@ import javax.ws.rs.core.GenericType;
 
 import org.openapitools.client.model.Order;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StoreApi {
   private ApiClient apiClient;
@@ -94,7 +88,7 @@ public class StoreApi {
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return Map&lt;String, Integer&gt;
+   * @return java.util.Map&lt;String, Integer&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -102,14 +96,14 @@ public class StoreApi {
        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
    */
-  public Map<String, Integer> getInventory() throws ApiException {
+  public java.util.Map<String, Integer> getInventory() throws ApiException {
     return getInventoryWithHttpInfo().getData();
   }
 
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return ApiResponse&lt;Map&lt;String, Integer&gt;&gt;
+   * @return ApiResponse&lt;java.util.Map&lt;String, Integer&gt;&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -117,11 +111,11 @@ public class StoreApi {
        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<Map<String, Integer>> getInventoryWithHttpInfo() throws ApiException {
+  public ApiResponse<java.util.Map<String, Integer>> getInventoryWithHttpInfo() throws ApiException {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
     String[] localVarAuthNames = new String[] {"api_key"};
-    GenericType<Map<String, Integer>> localVarReturnType = new GenericType<Map<String, Integer>>() {};
+    GenericType<java.util.Map<String, Integer>> localVarReturnType = new GenericType<java.util.Map<String, Integer>>() {};
     return apiClient.invokeAPI("StoreApi.getInventory", "/store/inventory", "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);

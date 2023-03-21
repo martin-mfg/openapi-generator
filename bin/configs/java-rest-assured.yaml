@@ -9,3 +9,4 @@ additionalProperties:
   booleanGetterPrefix: is
   artifactId: petstore-rest-assured
   hideGenerationTimestamp: "true"
+  fullJavaUtil: true

@@ -8,7 +8,6 @@ package org.openapitools.api;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 import org.openapitools.model.ResponseObjectWithDifferentFieldNames;
-import java.util.Set;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.service.annotation.*;
@@ -80,7 +79,7 @@ public interface PetApi {
         accept = "application/json"
     )
     Mono<ResponseEntity<Flux<Pet>>> findPetsByStatus(
-         @RequestParam(value = "status", required = true) List<String> status
+         @RequestParam(value = "status", required = true) java.util.List<String> status
     );
 
 
@@ -100,7 +99,7 @@ public interface PetApi {
         accept = "application/json"
     )
     Mono<ResponseEntity<Flux<Pet>>> findPetsByTags(
-         @RequestParam(value = "tags", required = true) Set<String> tags
+         @RequestParam(value = "tags", required = true) java.util.Set<String> tags
     );
 
 

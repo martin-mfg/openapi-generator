@@ -4,13 +4,8 @@ import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.util.NoSuchElementException;
@@ -32,16 +27,16 @@ import javax.annotation.Generated;
 public class ObjectWithUniqueItems {
 
   @Valid
-  private JsonNullable<Set<String>> nullSet = JsonNullable.undefined();
+  private JsonNullable<java.util.Set<String>> nullSet = JsonNullable.undefined();
 
   @Valid
-  private Set<String> notNullSet;
+  private java.util.Set<String> notNullSet;
 
   @Valid
-  private JsonNullable<List<String>> nullList = JsonNullable.undefined();
+  private JsonNullable<java.util.List<String>> nullList = JsonNullable.undefined();
 
   @Valid
-  private List<String> notNullList;
+  private java.util.List<String> notNullList;
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private OffsetDateTime notNullDateField;
@@ -49,7 +44,7 @@ public class ObjectWithUniqueItems {
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private OffsetDateTime nullDateField;
 
-  public ObjectWithUniqueItems nullSet(Set<String> nullSet) {
+  public ObjectWithUniqueItems nullSet(java.util.Set<String> nullSet) {
     this.nullSet = JsonNullable.of(nullSet);
     return this;
   }
@@ -69,15 +64,15 @@ public class ObjectWithUniqueItems {
   
   @Schema(name = "nullSet", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("nullSet")
-  public JsonNullable<Set<String>> getNullSet() {
+  public JsonNullable<java.util.Set<String>> getNullSet() {
     return nullSet;
   }
 
-  public void setNullSet(JsonNullable<Set<String>> nullSet) {
+  public void setNullSet(JsonNullable<java.util.Set<String>> nullSet) {
     this.nullSet = nullSet;
   }
 
-  public ObjectWithUniqueItems notNullSet(Set<String> notNullSet) {
+  public ObjectWithUniqueItems notNullSet(java.util.Set<String> notNullSet) {
     this.notNullSet = notNullSet;
     return this;
   }
@@ -97,16 +92,15 @@ public class ObjectWithUniqueItems {
   
   @Schema(name = "notNullSet", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("notNullSet")
-  public Set<String> getNotNullSet() {
+  public java.util.Set<String> getNotNullSet() {
     return notNullSet;
   }
 
-  @JsonDeserialize(as = LinkedHashSet.class)
-  public void setNotNullSet(Set<String> notNullSet) {
+  public void setNotNullSet(java.util.Set<String> notNullSet) {
     this.notNullSet = notNullSet;
   }
 
-  public ObjectWithUniqueItems nullList(List<String> nullList) {
+  public ObjectWithUniqueItems nullList(java.util.List<String> nullList) {
     this.nullList = JsonNullable.of(nullList);
     return this;
   }
@@ -126,15 +120,15 @@ public class ObjectWithUniqueItems {
   
   @Schema(name = "nullList", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("nullList")
-  public JsonNullable<List<String>> getNullList() {
+  public JsonNullable<java.util.List<String>> getNullList() {
     return nullList;
   }
 
-  public void setNullList(JsonNullable<List<String>> nullList) {
+  public void setNullList(JsonNullable<java.util.List<String>> nullList) {
     this.nullList = nullList;
   }
 
-  public ObjectWithUniqueItems notNullList(List<String> notNullList) {
+  public ObjectWithUniqueItems notNullList(java.util.List<String> notNullList) {
     this.notNullList = notNullList;
     return this;
   }
@@ -154,11 +148,11 @@ public class ObjectWithUniqueItems {
   
   @Schema(name = "notNullList", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("notNullList")
-  public List<String> getNotNullList() {
+  public java.util.List<String> getNotNullList() {
     return notNullList;
   }
 
-  public void setNotNullList(List<String> notNullList) {
+  public void setNotNullList(java.util.List<String> notNullList) {
     this.notNullList = notNullList;
   }
 

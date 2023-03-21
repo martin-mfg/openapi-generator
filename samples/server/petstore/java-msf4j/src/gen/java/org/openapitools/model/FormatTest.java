@@ -8,8 +8,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.File;
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.UUID;
+import org.openapitools.model.Date;
 
 /**
  * FormatTest
@@ -47,10 +46,10 @@ public class FormatTest   {
   private Date date;
 
   @JsonProperty("dateTime")
-  private Date dateTime;
+  private java.util.Date dateTime;
 
   @JsonProperty("uuid")
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   @JsonProperty("password")
   private String password;
@@ -248,7 +247,7 @@ public class FormatTest   {
     this.date = date;
   }
 
-  public FormatTest dateTime(Date dateTime) {
+  public FormatTest dateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
     return this;
   }
@@ -258,15 +257,15 @@ public class FormatTest   {
    * @return dateTime
   **/
   @ApiModelProperty(value = "")
-  public Date getDateTime() {
+  public java.util.Date getDateTime() {
     return dateTime;
   }
 
-  public void setDateTime(Date dateTime) {
+  public void setDateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
   }
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -276,11 +275,11 @@ public class FormatTest   {
    * @return uuid
   **/
   @ApiModelProperty(example = "72f98069-206d-4f12-9f12-3d1e525a8e84", value = "")
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 

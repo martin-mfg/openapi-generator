@@ -10,3 +10,4 @@ additionalProperties:
   useAuth: "false"
   generateControllerAsAbstract: "false"
   generateOperationsToReturnNotImplemented: "true"
+  fullJavaUtil: true

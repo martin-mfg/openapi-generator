@@ -8,10 +8,9 @@ import org.wso2.msf4j.formparam.FileInfo;
 
 import java.math.BigDecimal;
 import org.openapitools.model.Client;
-import java.util.Date;
+import org.openapitools.model.Date;
 import java.io.File;
 import org.openapitools.model.FileSchemaTestClass;
-import java.util.Map;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.OuterComposite;
 import org.openapitools.model.User;
@@ -55,17 +54,17 @@ public abstract class FakeApiService {
  ,String string
  ,InputStream binaryInputStream, FileInfo binaryDetail
  ,Date date
- ,Date dateTime
+ ,java.util.Date dateTime
  ,String password
  ,String paramCallback
  ) throws NotFoundException;
-    public abstract Response testEnumParameters(List<String> enumHeaderStringArray
+    public abstract Response testEnumParameters(java.util.List<String> enumHeaderStringArray
  ,String enumHeaderString
- ,List<String> enumQueryStringArray
+ ,java.util.List<String> enumQueryStringArray
  ,String enumQueryString
  ,Integer enumQueryInteger
  ,Double enumQueryDouble
- ,List<String> enumFormStringArray
+ ,java.util.List<String> enumFormStringArray
  ,String enumFormString
  ) throws NotFoundException;
     public abstract Response testGroupParameters(Integer requiredStringGroup
@@ -75,16 +74,16 @@ public abstract class FakeApiService {
  ,Boolean booleanGroup
  ,Long int64Group
  ) throws NotFoundException;
-    public abstract Response testInlineAdditionalProperties(Map<String, String> param
+    public abstract Response testInlineAdditionalProperties(java.util.Map<String, String> param
  ) throws NotFoundException;
     public abstract Response testJsonFormData(String param
  ,String param2
  ) throws NotFoundException;
-    public abstract Response testQueryParameterCollectionFormat(List<String> pipe
- ,List<String> ioutil
- ,List<String> http
- ,List<String> url
- ,List<String> context
+    public abstract Response testQueryParameterCollectionFormat(java.util.List<String> pipe
+ ,java.util.List<String> ioutil
+ ,java.util.List<String> http
+ ,java.util.List<String> url
+ ,java.util.List<String> context
  ) throws NotFoundException;
     public abstract Response uploadFileWithRequiredFile(Long petId
  ,InputStream requiredFileInputStream, FileInfo requiredFileDetail

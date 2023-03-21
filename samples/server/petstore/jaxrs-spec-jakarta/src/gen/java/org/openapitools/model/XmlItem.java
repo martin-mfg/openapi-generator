@@ -3,8 +3,6 @@ package org.openapitools.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.io.Serializable;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
@@ -25,31 +23,31 @@ public class XmlItem  implements Serializable {
   private @Valid BigDecimal attributeNumber;
   private @Valid Integer attributeInteger;
   private @Valid Boolean attributeBoolean;
-  private @Valid List<Integer> wrappedArray;
+  private @Valid java.util.List<Integer> wrappedArray;
   private @Valid String nameString;
   private @Valid BigDecimal nameNumber;
   private @Valid Integer nameInteger;
   private @Valid Boolean nameBoolean;
-  private @Valid List<Integer> nameArray;
-  private @Valid List<Integer> nameWrappedArray;
+  private @Valid java.util.List<Integer> nameArray;
+  private @Valid java.util.List<Integer> nameWrappedArray;
   private @Valid String prefixString;
   private @Valid BigDecimal prefixNumber;
   private @Valid Integer prefixInteger;
   private @Valid Boolean prefixBoolean;
-  private @Valid List<Integer> prefixArray;
-  private @Valid List<Integer> prefixWrappedArray;
+  private @Valid java.util.List<Integer> prefixArray;
+  private @Valid java.util.List<Integer> prefixWrappedArray;
   private @Valid String namespaceString;
   private @Valid BigDecimal namespaceNumber;
   private @Valid Integer namespaceInteger;
   private @Valid Boolean namespaceBoolean;
-  private @Valid List<Integer> namespaceArray;
-  private @Valid List<Integer> namespaceWrappedArray;
+  private @Valid java.util.List<Integer> namespaceArray;
+  private @Valid java.util.List<Integer> namespaceWrappedArray;
   private @Valid String prefixNsString;
   private @Valid BigDecimal prefixNsNumber;
   private @Valid Integer prefixNsInteger;
   private @Valid Boolean prefixNsBoolean;
-  private @Valid List<Integer> prefixNsArray;
-  private @Valid List<Integer> prefixNsWrappedArray;
+  private @Valid java.util.List<Integer> prefixNsArray;
+  private @Valid java.util.List<Integer> prefixNsWrappedArray;
 
   protected XmlItem(XmlItemBuilder<?, ?> b) {
     this.attributeString = b.attributeString;
@@ -164,7 +162,7 @@ public class XmlItem  implements Serializable {
 
   /**
    **/
-  public XmlItem wrappedArray(List<Integer> wrappedArray) {
+  public XmlItem wrappedArray(java.util.List<Integer> wrappedArray) {
     this.wrappedArray = wrappedArray;
     return this;
   }
@@ -172,12 +170,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("wrapped_array")
-  public List<Integer> getWrappedArray() {
+  public java.util.List<Integer> getWrappedArray() {
     return wrappedArray;
   }
 
   @JsonProperty("wrapped_array")
-  public void setWrappedArray(List<Integer> wrappedArray) {
+  public void setWrappedArray(java.util.List<Integer> wrappedArray) {
     this.wrappedArray = wrappedArray;
   }
 
@@ -275,7 +273,7 @@ public class XmlItem  implements Serializable {
 
   /**
    **/
-  public XmlItem nameArray(List<Integer> nameArray) {
+  public XmlItem nameArray(java.util.List<Integer> nameArray) {
     this.nameArray = nameArray;
     return this;
   }
@@ -283,12 +281,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("name_array")
-  public List<Integer> getNameArray() {
+  public java.util.List<Integer> getNameArray() {
     return nameArray;
   }
 
   @JsonProperty("name_array")
-  public void setNameArray(List<Integer> nameArray) {
+  public void setNameArray(java.util.List<Integer> nameArray) {
     this.nameArray = nameArray;
   }
 
@@ -310,7 +308,7 @@ public class XmlItem  implements Serializable {
   }
   /**
    **/
-  public XmlItem nameWrappedArray(List<Integer> nameWrappedArray) {
+  public XmlItem nameWrappedArray(java.util.List<Integer> nameWrappedArray) {
     this.nameWrappedArray = nameWrappedArray;
     return this;
   }
@@ -318,12 +316,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("name_wrapped_array")
-  public List<Integer> getNameWrappedArray() {
+  public java.util.List<Integer> getNameWrappedArray() {
     return nameWrappedArray;
   }
 
   @JsonProperty("name_wrapped_array")
-  public void setNameWrappedArray(List<Integer> nameWrappedArray) {
+  public void setNameWrappedArray(java.util.List<Integer> nameWrappedArray) {
     this.nameWrappedArray = nameWrappedArray;
   }
 
@@ -421,7 +419,7 @@ public class XmlItem  implements Serializable {
 
   /**
    **/
-  public XmlItem prefixArray(List<Integer> prefixArray) {
+  public XmlItem prefixArray(java.util.List<Integer> prefixArray) {
     this.prefixArray = prefixArray;
     return this;
   }
@@ -429,12 +427,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("prefix_array")
-  public List<Integer> getPrefixArray() {
+  public java.util.List<Integer> getPrefixArray() {
     return prefixArray;
   }
 
   @JsonProperty("prefix_array")
-  public void setPrefixArray(List<Integer> prefixArray) {
+  public void setPrefixArray(java.util.List<Integer> prefixArray) {
     this.prefixArray = prefixArray;
   }
 
@@ -456,7 +454,7 @@ public class XmlItem  implements Serializable {
   }
   /**
    **/
-  public XmlItem prefixWrappedArray(List<Integer> prefixWrappedArray) {
+  public XmlItem prefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
     this.prefixWrappedArray = prefixWrappedArray;
     return this;
   }
@@ -464,12 +462,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("prefix_wrapped_array")
-  public List<Integer> getPrefixWrappedArray() {
+  public java.util.List<Integer> getPrefixWrappedArray() {
     return prefixWrappedArray;
   }
 
   @JsonProperty("prefix_wrapped_array")
-  public void setPrefixWrappedArray(List<Integer> prefixWrappedArray) {
+  public void setPrefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
     this.prefixWrappedArray = prefixWrappedArray;
   }
 
@@ -567,7 +565,7 @@ public class XmlItem  implements Serializable {
 
   /**
    **/
-  public XmlItem namespaceArray(List<Integer> namespaceArray) {
+  public XmlItem namespaceArray(java.util.List<Integer> namespaceArray) {
     this.namespaceArray = namespaceArray;
     return this;
   }
@@ -575,12 +573,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("namespace_array")
-  public List<Integer> getNamespaceArray() {
+  public java.util.List<Integer> getNamespaceArray() {
     return namespaceArray;
   }
 
   @JsonProperty("namespace_array")
-  public void setNamespaceArray(List<Integer> namespaceArray) {
+  public void setNamespaceArray(java.util.List<Integer> namespaceArray) {
     this.namespaceArray = namespaceArray;
   }
 
@@ -602,7 +600,7 @@ public class XmlItem  implements Serializable {
   }
   /**
    **/
-  public XmlItem namespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+  public XmlItem namespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
     this.namespaceWrappedArray = namespaceWrappedArray;
     return this;
   }
@@ -610,12 +608,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("namespace_wrapped_array")
-  public List<Integer> getNamespaceWrappedArray() {
+  public java.util.List<Integer> getNamespaceWrappedArray() {
     return namespaceWrappedArray;
   }
 
   @JsonProperty("namespace_wrapped_array")
-  public void setNamespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+  public void setNamespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
     this.namespaceWrappedArray = namespaceWrappedArray;
   }
 
@@ -713,7 +711,7 @@ public class XmlItem  implements Serializable {
 
   /**
    **/
-  public XmlItem prefixNsArray(List<Integer> prefixNsArray) {
+  public XmlItem prefixNsArray(java.util.List<Integer> prefixNsArray) {
     this.prefixNsArray = prefixNsArray;
     return this;
   }
@@ -721,12 +719,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("prefix_ns_array")
-  public List<Integer> getPrefixNsArray() {
+  public java.util.List<Integer> getPrefixNsArray() {
     return prefixNsArray;
   }
 
   @JsonProperty("prefix_ns_array")
-  public void setPrefixNsArray(List<Integer> prefixNsArray) {
+  public void setPrefixNsArray(java.util.List<Integer> prefixNsArray) {
     this.prefixNsArray = prefixNsArray;
   }
 
@@ -748,7 +746,7 @@ public class XmlItem  implements Serializable {
   }
   /**
    **/
-  public XmlItem prefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+  public XmlItem prefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
     this.prefixNsWrappedArray = prefixNsWrappedArray;
     return this;
   }
@@ -756,12 +754,12 @@ public class XmlItem  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("prefix_ns_wrapped_array")
-  public List<Integer> getPrefixNsWrappedArray() {
+  public java.util.List<Integer> getPrefixNsWrappedArray() {
     return prefixNsWrappedArray;
   }
 
   @JsonProperty("prefix_ns_wrapped_array")
-  public void setPrefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+  public void setPrefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
     this.prefixNsWrappedArray = prefixNsWrappedArray;
   }
 
@@ -899,31 +897,31 @@ public class XmlItem  implements Serializable {
     private BigDecimal attributeNumber;
     private Integer attributeInteger;
     private Boolean attributeBoolean;
-    private List<Integer> wrappedArray;
+    private java.util.List<Integer> wrappedArray;
     private String nameString;
     private BigDecimal nameNumber;
     private Integer nameInteger;
     private Boolean nameBoolean;
-    private List<Integer> nameArray;
-    private List<Integer> nameWrappedArray;
+    private java.util.List<Integer> nameArray;
+    private java.util.List<Integer> nameWrappedArray;
     private String prefixString;
     private BigDecimal prefixNumber;
     private Integer prefixInteger;
     private Boolean prefixBoolean;
-    private List<Integer> prefixArray;
-    private List<Integer> prefixWrappedArray;
+    private java.util.List<Integer> prefixArray;
+    private java.util.List<Integer> prefixWrappedArray;
     private String namespaceString;
     private BigDecimal namespaceNumber;
     private Integer namespaceInteger;
     private Boolean namespaceBoolean;
-    private List<Integer> namespaceArray;
-    private List<Integer> namespaceWrappedArray;
+    private java.util.List<Integer> namespaceArray;
+    private java.util.List<Integer> namespaceWrappedArray;
     private String prefixNsString;
     private BigDecimal prefixNsNumber;
     private Integer prefixNsInteger;
     private Boolean prefixNsBoolean;
-    private List<Integer> prefixNsArray;
-    private List<Integer> prefixNsWrappedArray;
+    private java.util.List<Integer> prefixNsArray;
+    private java.util.List<Integer> prefixNsWrappedArray;
     protected abstract B self();
 
     public abstract C build();
@@ -944,7 +942,7 @@ public class XmlItem  implements Serializable {
       this.attributeBoolean = attributeBoolean;
       return self();
     }
-    public B wrappedArray(List<Integer> wrappedArray) {
+    public B wrappedArray(java.util.List<Integer> wrappedArray) {
       this.wrappedArray = wrappedArray;
       return self();
     }
@@ -964,11 +962,11 @@ public class XmlItem  implements Serializable {
       this.nameBoolean = nameBoolean;
       return self();
     }
-    public B nameArray(List<Integer> nameArray) {
+    public B nameArray(java.util.List<Integer> nameArray) {
       this.nameArray = nameArray;
       return self();
     }
-    public B nameWrappedArray(List<Integer> nameWrappedArray) {
+    public B nameWrappedArray(java.util.List<Integer> nameWrappedArray) {
       this.nameWrappedArray = nameWrappedArray;
       return self();
     }
@@ -988,11 +986,11 @@ public class XmlItem  implements Serializable {
       this.prefixBoolean = prefixBoolean;
       return self();
     }
-    public B prefixArray(List<Integer> prefixArray) {
+    public B prefixArray(java.util.List<Integer> prefixArray) {
       this.prefixArray = prefixArray;
       return self();
     }
-    public B prefixWrappedArray(List<Integer> prefixWrappedArray) {
+    public B prefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
       this.prefixWrappedArray = prefixWrappedArray;
       return self();
     }
@@ -1012,11 +1010,11 @@ public class XmlItem  implements Serializable {
       this.namespaceBoolean = namespaceBoolean;
       return self();
     }
-    public B namespaceArray(List<Integer> namespaceArray) {
+    public B namespaceArray(java.util.List<Integer> namespaceArray) {
       this.namespaceArray = namespaceArray;
       return self();
     }
-    public B namespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+    public B namespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
       this.namespaceWrappedArray = namespaceWrappedArray;
       return self();
     }
@@ -1036,11 +1034,11 @@ public class XmlItem  implements Serializable {
       this.prefixNsBoolean = prefixNsBoolean;
       return self();
     }
-    public B prefixNsArray(List<Integer> prefixNsArray) {
+    public B prefixNsArray(java.util.List<Integer> prefixNsArray) {
       this.prefixNsArray = prefixNsArray;
       return self();
     }
-    public B prefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+    public B prefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
       this.prefixNsWrappedArray = prefixNsWrappedArray;
       return self();
     }

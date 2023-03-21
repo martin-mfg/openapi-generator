@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -40,7 +38,7 @@ public class FileSchemaTestClass {
   private File file;
 
   public static final String JSON_PROPERTY_FILES = "files";
-  private List<File> files;
+  private java.util.List<File> files;
 
   public FileSchemaTestClass() {
   }
@@ -71,7 +69,7 @@ public class FileSchemaTestClass {
   }
 
 
-  public FileSchemaTestClass files(List<File> files) {
+  public FileSchemaTestClass files(java.util.List<File> files) {
     
     this.files = files;
     return this;
@@ -93,14 +91,14 @@ public class FileSchemaTestClass {
   @JsonProperty(JSON_PROPERTY_FILES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<File> getFiles() {
+  public java.util.List<File> getFiles() {
     return files;
   }
 
 
   @JsonProperty(JSON_PROPERTY_FILES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFiles(List<File> files) {
+  public void setFiles(java.util.List<File> files) {
     this.files = files;
   }
 

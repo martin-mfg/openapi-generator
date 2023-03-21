@@ -5,7 +5,6 @@ import org.openapitools.client.ApiClient;
 import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.google.api.client.http.EmptyContent;
@@ -213,12 +212,12 @@ public class PetApi {
     * <p><b>200</b> - successful operation
     * <p><b>400</b> - Invalid status value
     * @param status Status values that need to be considered for filter
-    * @return List&lt;Pet&gt;
+    * @return java.util.List&lt;Pet&gt;
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public List<Pet> findPetsByStatus(List<String> status) throws IOException {
+    public java.util.List<Pet> findPetsByStatus(java.util.List<String> status) throws IOException {
         HttpResponse response = findPetsByStatusForHttpResponse(status);
-        TypeReference<List<Pet>> typeRef = new TypeReference<List<Pet>>() {};
+        TypeReference<java.util.List<Pet>> typeRef = new TypeReference<java.util.List<Pet>>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 
@@ -229,16 +228,16 @@ public class PetApi {
     * <p><b>400</b> - Invalid status value
     * @param status Status values that need to be considered for filter
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
-    * @return List&lt;Pet&gt;
+    * @return java.util.List&lt;Pet&gt;
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public List<Pet> findPetsByStatus(List<String> status, Map<String, Object> params) throws IOException {
+    public java.util.List<Pet> findPetsByStatus(java.util.List<String> status, Map<String, Object> params) throws IOException {
         HttpResponse response = findPetsByStatusForHttpResponse(status, params);
-        TypeReference<List<Pet>> typeRef = new TypeReference<List<Pet>>() {};
+        TypeReference<java.util.List<Pet>> typeRef = new TypeReference<java.util.List<Pet>>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 
-    public HttpResponse findPetsByStatusForHttpResponse(List<String> status) throws IOException {
+    public HttpResponse findPetsByStatusForHttpResponse(java.util.List<String> status) throws IOException {
         // verify the required parameter 'status' is set
         if (status == null) {
             throw new IllegalArgumentException("Missing the required parameter 'status' when calling findPetsByStatus");
@@ -263,7 +262,7 @@ public class PetApi {
         return apiClient.getHttpRequestFactory().buildRequest(HttpMethods.GET, genericUrl, content).execute();
     }
 
-    public HttpResponse findPetsByStatusForHttpResponse(List<String> status, Map<String, Object> params) throws IOException {
+    public HttpResponse findPetsByStatusForHttpResponse(java.util.List<String> status, Map<String, Object> params) throws IOException {
         // verify the required parameter 'status' is set
         if (status == null) {
             throw new IllegalArgumentException("Missing the required parameter 'status' when calling findPetsByStatus");
@@ -304,15 +303,15 @@ public class PetApi {
     * <p><b>200</b> - successful operation
     * <p><b>400</b> - Invalid tag value
     * @param tags Tags to filter by
-    * @return Set&lt;Pet&gt;
+    * @return java.util.Set&lt;Pet&gt;
     * @throws IOException if an error occurs while attempting to invoke the API
     * @deprecated
 
     **/
     @Deprecated
-    public Set<Pet> findPetsByTags(Set<String> tags) throws IOException {
+    public java.util.Set<Pet> findPetsByTags(java.util.Set<String> tags) throws IOException {
         HttpResponse response = findPetsByTagsForHttpResponse(tags);
-        TypeReference<Set<Pet>> typeRef = new TypeReference<Set<Pet>>() {};
+        TypeReference<java.util.Set<Pet>> typeRef = new TypeReference<java.util.Set<Pet>>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 
@@ -323,20 +322,20 @@ public class PetApi {
     * <p><b>400</b> - Invalid tag value
     * @param tags Tags to filter by
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
-    * @return Set&lt;Pet&gt;
+    * @return java.util.Set&lt;Pet&gt;
     * @throws IOException if an error occurs while attempting to invoke the API
     * @deprecated
 
     **/
     @Deprecated
-    public Set<Pet> findPetsByTags(Set<String> tags, Map<String, Object> params) throws IOException {
+    public java.util.Set<Pet> findPetsByTags(java.util.Set<String> tags, Map<String, Object> params) throws IOException {
         HttpResponse response = findPetsByTagsForHttpResponse(tags, params);
-        TypeReference<Set<Pet>> typeRef = new TypeReference<Set<Pet>>() {};
+        TypeReference<java.util.Set<Pet>> typeRef = new TypeReference<java.util.Set<Pet>>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 
     @Deprecated
-    public HttpResponse findPetsByTagsForHttpResponse(Set<String> tags) throws IOException {
+    public HttpResponse findPetsByTagsForHttpResponse(java.util.Set<String> tags) throws IOException {
         // verify the required parameter 'tags' is set
         if (tags == null) {
             throw new IllegalArgumentException("Missing the required parameter 'tags' when calling findPetsByTags");
@@ -362,7 +361,7 @@ public class PetApi {
     }
 
     @Deprecated
-    public HttpResponse findPetsByTagsForHttpResponse(Set<String> tags, Map<String, Object> params) throws IOException {
+    public HttpResponse findPetsByTagsForHttpResponse(java.util.Set<String> tags, Map<String, Object> params) throws IOException {
         // verify the required parameter 'tags' is set
         if (tags == null) {
             throw new IllegalArgumentException("Missing the required parameter 'tags' when calling findPetsByTags");

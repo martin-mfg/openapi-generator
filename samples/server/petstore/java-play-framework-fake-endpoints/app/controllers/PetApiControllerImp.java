@@ -3,7 +3,6 @@ package controllers;
 import java.io.InputStream;
 import apimodels.ModelApiResponse;
 import apimodels.Pet;
-import java.util.Set;
 
 import play.mvc.Http;
 import java.util.List;
@@ -26,15 +25,15 @@ public class PetApiControllerImp extends PetApiControllerImpInterface {
     }
 
     @Override
-    public List<Pet> findPetsByStatus(Http.Request request, @NotNull List<String> status) throws Exception {
+    public array<java.util.List<Pet>> findPetsByStatus(Http.Request request, @NotNull java.util.List<String> status) throws Exception {
         //Do your magic!!!
-        return new ArrayList<Pet>();
+        return new ArrayList<java.util.List<Pet>>();
     }
 
     @Override
-    public Set<Pet> findPetsByTags(Http.Request request, @NotNull Set<String> tags) throws Exception {
+    public set<java.util.Set<Pet>> findPetsByTags(Http.Request request, @NotNull java.util.Set<String> tags) throws Exception {
         //Do your magic!!!
-        return new LinkedHashSet<Pet>();
+        return new LinkedHashSet<java.util.Set<Pet>>();
     }
 
     @Override

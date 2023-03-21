@@ -504,7 +504,7 @@ public class FakeApi {
     * @param enumFormString Form parameter enum test (string) (optional, default to -efg)
     * @param resultHandler Asynchronous result handler
     */
-    public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, Handler<AsyncResult<Void>> resultHandler) {
+    public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, Handler<AsyncResult<Void>> resultHandler) {
         delegate.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, resultHandler);
     }
 
@@ -522,7 +522,7 @@ public class FakeApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         delegate.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, authInfo, resultHandler);
     }
 
@@ -539,7 +539,7 @@ public class FakeApi {
     * @param enumFormString Form parameter enum test (string) (optional, default to -efg)
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxTestEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) {
+    public Single<Void> rxTestEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, fut)
         ));
@@ -559,7 +559,7 @@ public class FakeApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxTestEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, ApiClient.AuthInfo authInfo) {
+    public Single<Void> rxTestEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, authInfo, fut)
         ));
@@ -635,7 +635,7 @@ public class FakeApi {
     * @param param request body (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void testInlineAdditionalProperties(Map<String, String> param, Handler<AsyncResult<Void>> resultHandler) {
+    public void testInlineAdditionalProperties(java.util.Map<String, String> param, Handler<AsyncResult<Void>> resultHandler) {
         delegate.testInlineAdditionalProperties(param, resultHandler);
     }
 
@@ -646,7 +646,7 @@ public class FakeApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void testInlineAdditionalProperties(Map<String, String> param, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void testInlineAdditionalProperties(java.util.Map<String, String> param, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         delegate.testInlineAdditionalProperties(param, authInfo, resultHandler);
     }
 
@@ -656,7 +656,7 @@ public class FakeApi {
     * @param param request body (required)
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxTestInlineAdditionalProperties(Map<String, String> param) {
+    public Single<Void> rxTestInlineAdditionalProperties(java.util.Map<String, String> param) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.testInlineAdditionalProperties(param, fut)
         ));
@@ -669,7 +669,7 @@ public class FakeApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxTestInlineAdditionalProperties(Map<String, String> param, ApiClient.AuthInfo authInfo) {
+    public Single<Void> rxTestInlineAdditionalProperties(java.util.Map<String, String> param, ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.testInlineAdditionalProperties(param, authInfo, fut)
         ));
@@ -733,7 +733,7 @@ public class FakeApi {
     * @param context  (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, Handler<AsyncResult<Void>> resultHandler) {
+    public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, Handler<AsyncResult<Void>> resultHandler) {
         delegate.testQueryParameterCollectionFormat(pipe, ioutil, http, url, context, resultHandler);
     }
 
@@ -748,7 +748,7 @@ public class FakeApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         delegate.testQueryParameterCollectionFormat(pipe, ioutil, http, url, context, authInfo, resultHandler);
     }
 
@@ -762,7 +762,7 @@ public class FakeApi {
     * @param context  (required)
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxTestQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) {
+    public Single<Void> rxTestQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.testQueryParameterCollectionFormat(pipe, ioutil, http, url, context, fut)
         ));
@@ -779,7 +779,7 @@ public class FakeApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxTestQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, ApiClient.AuthInfo authInfo) {
+    public Single<Void> rxTestQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.testQueryParameterCollectionFormat(pipe, ioutil, http, url, context, authInfo, fut)
         ));

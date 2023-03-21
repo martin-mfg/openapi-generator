@@ -11,3 +11,4 @@ additionalProperties:
   skipDefaultInterface: true
   singleContentTypes: "true"
   hideGenerationTimestamp: "true"
+  fullJavaUtil: true

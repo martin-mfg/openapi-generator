@@ -93,7 +93,7 @@ public class StoreApiImpl implements StoreApi {
     * Returns a map of status codes to quantities
     * @param resultHandler Asynchronous result handler
     */
-    public void getInventory(Handler<AsyncResult<Map<String, Integer>>> resultHandler) {
+    public void getInventory(Handler<AsyncResult<java.util.Map<String, Integer>>> resultHandler) {
         getInventory(null, resultHandler);
     }
 
@@ -103,7 +103,7 @@ public class StoreApiImpl implements StoreApi {
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void getInventory(ApiClient.AuthInfo authInfo, Handler<AsyncResult<Map<String, Integer>>> resultHandler) {
+    public void getInventory(ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.Map<String, Integer>>> resultHandler) {
         Object localVarBody = null;
         
         // create path and map variables
@@ -125,7 +125,7 @@ public class StoreApiImpl implements StoreApi {
         String[] localVarAccepts = { "application/json" };
         String[] localVarContentTypes = {  };
         String[] localVarAuthNames = new String[] { "api_key" };
-        TypeReference<Map<String, Integer>> localVarReturnType = new TypeReference<Map<String, Integer>>() {};
+        TypeReference<java.util.Map<String, Integer>> localVarReturnType = new TypeReference<java.util.Map<String, Integer>>() {};
         apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccepts, localVarContentTypes, localVarAuthNames, authInfo, localVarReturnType, resultHandler);
     }
     /**

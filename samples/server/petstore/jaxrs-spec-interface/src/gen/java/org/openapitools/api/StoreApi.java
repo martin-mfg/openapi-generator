@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import java.util.Map;
 import org.openapitools.model.Order;
 
 import javax.ws.rs.*;
@@ -35,8 +34,8 @@ public interface StoreApi {
         @Authorization(value = "api_key")
          }, tags={ "store" })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = Map.class, responseContainer = "Map") })
-    Map<String, Integer> getInventory();
+        @ApiResponse(code = 200, message = "successful operation", response = java.util.Map.class, responseContainer = "Map") })
+    java.util.Map<String, Integer> getInventory();
 
     @GET
     @Path("/order/{order_id}")

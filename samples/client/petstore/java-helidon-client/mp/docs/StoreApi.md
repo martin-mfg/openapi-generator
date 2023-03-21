@@ -49,7 +49,7 @@ No authorization required
 
 ## getInventory
 
-> Map&lt;String, Integer&gt; getInventory()
+> java.util.Map&lt;String, Integer&gt; getInventory()
 
 Returns pet inventories by status
 
@@ -61,7 +61,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Map&lt;String, Integer&gt;**
+**java.util.Map&lt;String, Integer&gt;**
 
 ### Authorization
 

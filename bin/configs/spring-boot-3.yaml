@@ -10,3 +10,4 @@ additionalProperties:
   useSpringBoot3: true
   useBeanValidation: true
   hideGenerationTimestamp: "true"
+  fullJavaUtil: true

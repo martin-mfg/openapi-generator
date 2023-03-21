@@ -8,8 +8,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -100,7 +98,7 @@ public class EnumArraysDto {
   }
 
   @Valid
-  private List<ArrayEnumEnum> arrayEnum;
+  private java.util.List<ArrayEnumEnum> arrayEnum;
 
   public EnumArraysDto justSymbol(JustSymbolEnum justSymbol) {
     this.justSymbol = justSymbol;
@@ -122,7 +120,7 @@ public class EnumArraysDto {
     this.justSymbol = justSymbol;
   }
 
-  public EnumArraysDto arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public EnumArraysDto arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
     return this;
   }
@@ -142,11 +140,11 @@ public class EnumArraysDto {
   
   @ApiModelProperty(value = "")
   @JsonProperty("array_enum")
-  public List<ArrayEnumEnum> getArrayEnum() {
+  public java.util.List<ArrayEnumEnum> getArrayEnum() {
     return arrayEnum;
   }
 
-  public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
   }
 

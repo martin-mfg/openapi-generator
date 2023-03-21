@@ -12,8 +12,6 @@
 
 package org.openapitools.server.model;
 
-import java.util.HashMap;
-import java.util.Map;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
 
@@ -25,26 +23,26 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class AdditionalPropertiesClass  {
   
-  private Map<String, String> mapProperty = null;
+  private java.util.Map<String, String> mapProperty = null;
 
-  private Map<String, Map<String, String>> mapOfMapProperty = null;
+  private java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty = null;
 
  /**
    * Get mapProperty
    * @return mapProperty
   **/
-  public Map<String, String> getMapProperty() {
+  public java.util.Map<String, String> getMapProperty() {
     return mapProperty;
   }
 
   /**
     * Set mapProperty
   **/
-  public void setMapProperty(Map<String, String> mapProperty) {
+  public void setMapProperty(java.util.Map<String, String> mapProperty) {
     this.mapProperty = mapProperty;
   }
 
-  public AdditionalPropertiesClass mapProperty(Map<String, String> mapProperty) {
+  public AdditionalPropertiesClass mapProperty(java.util.Map<String, String> mapProperty) {
     this.mapProperty = mapProperty;
     return this;
   }
@@ -58,23 +56,23 @@ public class AdditionalPropertiesClass  {
    * Get mapOfMapProperty
    * @return mapOfMapProperty
   **/
-  public Map<String, Map<String, String>> getMapOfMapProperty() {
+  public java.util.Map<String, java.util.Map<String, String>> getMapOfMapProperty() {
     return mapOfMapProperty;
   }
 
   /**
     * Set mapOfMapProperty
   **/
-  public void setMapOfMapProperty(Map<String, Map<String, String>> mapOfMapProperty) {
+  public void setMapOfMapProperty(java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty) {
     this.mapOfMapProperty = mapOfMapProperty;
   }
 
-  public AdditionalPropertiesClass mapOfMapProperty(Map<String, Map<String, String>> mapOfMapProperty) {
+  public AdditionalPropertiesClass mapOfMapProperty(java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty) {
     this.mapOfMapProperty = mapOfMapProperty;
     return this;
   }
 
-  public AdditionalPropertiesClass putMapOfMapPropertyItem(String key, Map<String, String> mapOfMapPropertyItem) {
+  public AdditionalPropertiesClass putMapOfMapPropertyItem(String key, java.util.Map<String, String> mapOfMapPropertyItem) {
     this.mapOfMapProperty.put(key, mapOfMapPropertyItem);
     return this;
   }

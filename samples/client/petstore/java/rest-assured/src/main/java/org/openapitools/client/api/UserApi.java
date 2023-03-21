@@ -17,21 +17,6 @@ import com.google.gson.reflect.TypeToken;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-
-import java.lang.reflect.Type;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 import org.openapitools.client.JSON;
 import static io.restassured.http.Method.*;
 
@@ -205,10 +190,10 @@ public class UserApi {
         }
 
          /**
-         * @param body (List&lt;User&gt;) List of user object (required)
+         * @param body (java.util.List&lt;User&gt;) List of user object (required)
          * @return operation
          */
-        public CreateUsersWithArrayInputOper body(List<User> body) {
+        public CreateUsersWithArrayInputOper body(java.util.List<User> body) {
             reqSpec.setBody(body);
             return this;
         }
@@ -266,10 +251,10 @@ public class UserApi {
         }
 
          /**
-         * @param body (List&lt;User&gt;) List of user object (required)
+         * @param body (java.util.List&lt;User&gt;) List of user object (required)
          * @return operation
          */
-        public CreateUsersWithListInputOper body(List<User> body) {
+        public CreateUsersWithListInputOper body(java.util.List<User> body) {
             reqSpec.setBody(body);
             return this;
         }

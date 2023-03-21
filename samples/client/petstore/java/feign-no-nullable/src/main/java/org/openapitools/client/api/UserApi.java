@@ -7,10 +7,6 @@ import org.openapitools.client.model.ApiResponse;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import feign.*;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -54,7 +50,7 @@ public interface UserApi extends ApiClient.Api {
     "Content-Type: */*",
     "Accept: application/json",
   })
-  void createUsersWithArrayInput(List<User> body);
+  void createUsersWithArrayInput(java.util.List<User> body);
 
   /**
    * Creates list of users with given input array
@@ -67,7 +63,7 @@ public interface UserApi extends ApiClient.Api {
     "Content-Type: */*",
     "Accept: application/json",
   })
-  ApiResponse<Void> createUsersWithArrayInputWithHttpInfo(List<User> body);
+  ApiResponse<Void> createUsersWithArrayInputWithHttpInfo(java.util.List<User> body);
 
 
 
@@ -81,7 +77,7 @@ public interface UserApi extends ApiClient.Api {
     "Content-Type: */*",
     "Accept: application/json",
   })
-  void createUsersWithListInput(List<User> body);
+  void createUsersWithListInput(java.util.List<User> body);
 
   /**
    * Creates list of users with given input array
@@ -94,7 +90,7 @@ public interface UserApi extends ApiClient.Api {
     "Content-Type: */*",
     "Accept: application/json",
   })
-  ApiResponse<Void> createUsersWithListInputWithHttpInfo(List<User> body);
+  ApiResponse<Void> createUsersWithListInputWithHttpInfo(java.util.List<User> body);
 
 
 

@@ -7,9 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.model.Animal;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.time.OffsetDateTime;
@@ -27,15 +24,15 @@ import javax.annotation.Generated;
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class MixedPropertiesAndAdditionalPropertiesClass {
 
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private OffsetDateTime dateTime;
 
   @Valid
-  private Map<String, Animal> map = new HashMap<>();
+  private java.util.Map<String, Animal> map = new java.util.HashMap<>();
 
-  public MixedPropertiesAndAdditionalPropertiesClass uuid(UUID uuid) {
+  public MixedPropertiesAndAdditionalPropertiesClass uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -47,11 +44,11 @@ public class MixedPropertiesAndAdditionalPropertiesClass {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("uuid")
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
@@ -75,14 +72,14 @@ public class MixedPropertiesAndAdditionalPropertiesClass {
     this.dateTime = dateTime;
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClass map(Map<String, Animal> map) {
+  public MixedPropertiesAndAdditionalPropertiesClass map(java.util.Map<String, Animal> map) {
     this.map = map;
     return this;
   }
 
   public MixedPropertiesAndAdditionalPropertiesClass putMapItem(String key, Animal mapItem) {
     if (this.map == null) {
-      this.map = new HashMap<>();
+      this.map = new java.util.HashMap<>();
     }
     this.map.put(key, mapItem);
     return this;
@@ -95,11 +92,11 @@ public class MixedPropertiesAndAdditionalPropertiesClass {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("map")
-  public Map<String, Animal> getMap() {
+  public java.util.Map<String, Animal> getMap() {
     return map;
   }
 
-  public void setMap(Map<String, Animal> map) {
+  public void setMap(java.util.Map<String, Animal> map) {
     this.map = map;
   }
 

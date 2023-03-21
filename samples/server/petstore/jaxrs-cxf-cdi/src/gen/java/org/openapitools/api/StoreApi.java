@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import java.util.Map;
 import org.openapitools.model.Order;
 import org.openapitools.api.StoreApiService;
 
@@ -57,7 +56,7 @@ public class StoreApi  {
         @Authorization(value = "api_key")
          }, tags={ "store" })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = Map.class, responseContainer = "Map") })
+        @ApiResponse(code = 200, message = "successful operation", response = java.util.Map.class, responseContainer = "Map") })
     public Response getInventory() {
         return delegate.getInventory(securityContext);
     }

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.HashMap;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -35,15 +33,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdditionalPropertiesClass {
   public static final String JSON_PROPERTY_MAP_PROPERTY = "map_property";
-  private Map<String, String> mapProperty = new HashMap<>();
+  private java.util.Map<String, String> mapProperty = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_MAP_OF_MAP_PROPERTY = "map_of_map_property";
-  private Map<String, Map<String, String>> mapOfMapProperty = new HashMap<>();
+  private java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty = new java.util.HashMap<>();
 
   public AdditionalPropertiesClass() {
   }
 
-  public AdditionalPropertiesClass mapProperty(Map<String, String> mapProperty) {
+  public AdditionalPropertiesClass mapProperty(java.util.Map<String, String> mapProperty) {
     
     this.mapProperty = mapProperty;
     return this;
@@ -51,7 +49,7 @@ public class AdditionalPropertiesClass {
 
   public AdditionalPropertiesClass putMapPropertyItem(String key, String mapPropertyItem) {
     if (this.mapProperty == null) {
-      this.mapProperty = new HashMap<>();
+      this.mapProperty = new java.util.HashMap<>();
     }
     this.mapProperty.put(key, mapPropertyItem);
     return this;
@@ -65,27 +63,27 @@ public class AdditionalPropertiesClass {
   @JsonProperty(JSON_PROPERTY_MAP_PROPERTY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Map<String, String> getMapProperty() {
+  public java.util.Map<String, String> getMapProperty() {
     return mapProperty;
   }
 
 
   @JsonProperty(JSON_PROPERTY_MAP_PROPERTY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMapProperty(Map<String, String> mapProperty) {
+  public void setMapProperty(java.util.Map<String, String> mapProperty) {
     this.mapProperty = mapProperty;
   }
 
 
-  public AdditionalPropertiesClass mapOfMapProperty(Map<String, Map<String, String>> mapOfMapProperty) {
+  public AdditionalPropertiesClass mapOfMapProperty(java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty) {
     
     this.mapOfMapProperty = mapOfMapProperty;
     return this;
   }
 
-  public AdditionalPropertiesClass putMapOfMapPropertyItem(String key, Map<String, String> mapOfMapPropertyItem) {
+  public AdditionalPropertiesClass putMapOfMapPropertyItem(String key, java.util.Map<String, String> mapOfMapPropertyItem) {
     if (this.mapOfMapProperty == null) {
-      this.mapOfMapProperty = new HashMap<>();
+      this.mapOfMapProperty = new java.util.HashMap<>();
     }
     this.mapOfMapProperty.put(key, mapOfMapPropertyItem);
     return this;
@@ -99,14 +97,14 @@ public class AdditionalPropertiesClass {
   @JsonProperty(JSON_PROPERTY_MAP_OF_MAP_PROPERTY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Map<String, Map<String, String>> getMapOfMapProperty() {
+  public java.util.Map<String, java.util.Map<String, String>> getMapOfMapProperty() {
     return mapOfMapProperty;
   }
 
 
   @JsonProperty(JSON_PROPERTY_MAP_OF_MAP_PROPERTY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMapOfMapProperty(Map<String, Map<String, String>> mapOfMapProperty) {
+  public void setMapOfMapProperty(java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty) {
     this.mapOfMapProperty = mapOfMapProperty;
   }
 

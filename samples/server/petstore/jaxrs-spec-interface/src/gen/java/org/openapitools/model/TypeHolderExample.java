@@ -3,8 +3,6 @@ package org.openapitools.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.io.Serializable;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -26,7 +24,7 @@ public class TypeHolderExample  implements Serializable {
   private @Valid Float floatItem;
   private @Valid Integer integerItem;
   private @Valid Boolean boolItem;
-  private @Valid List<Integer> arrayItem = new ArrayList<>();
+  private @Valid java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   /**
    **/
@@ -130,7 +128,7 @@ public class TypeHolderExample  implements Serializable {
 
   /**
    **/
-  public TypeHolderExample arrayItem(List<Integer> arrayItem) {
+  public TypeHolderExample arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
@@ -139,18 +137,18 @@ public class TypeHolderExample  implements Serializable {
   @ApiModelProperty(example = "[0, 1, 2, 3]", required = true, value = "")
   @JsonProperty("array_item")
   @NotNull
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
   @JsonProperty("array_item")
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 
   public TypeHolderExample addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
 
     this.arrayItem.add(arrayItemItem);

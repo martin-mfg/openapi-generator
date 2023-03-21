@@ -68,7 +68,7 @@ public interface PetApi  {
     @GET
     @Path("/findByStatus")
     @Produces({ "application/xml", "application/json" })
-    List<Pet> findPetsByStatus(@QueryParam("status") List<String> status) throws ApiException, ProcessingException;
+    java.util.List<Pet> findPetsByStatus(@QueryParam("status") java.util.List<String> status) throws ApiException, ProcessingException;
 
     /**
      * Finds Pets by tags
@@ -81,7 +81,7 @@ public interface PetApi  {
     @GET
     @Path("/findByTags")
     @Produces({ "application/xml", "application/json" })
-    List<Pet> findPetsByTags(@QueryParam("tags") List<String> tags) throws ApiException, ProcessingException;
+    java.util.List<Pet> findPetsByTags(@QueryParam("tags") java.util.List<String> tags) throws ApiException, ProcessingException;
 
     /**
      * Find pet by ID

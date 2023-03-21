@@ -19,11 +19,11 @@ public class UserApiImpl implements UserApi {
         return Future.failedFuture(new HttpException(501));
     }
 
-    public Future<ApiResponse<Void>> createUsersWithArrayInput(List<User> user) {
+    public Future<ApiResponse<Void>> createUsersWithArrayInput(java.util.List<User> user) {
         return Future.failedFuture(new HttpException(501));
     }
 
-    public Future<ApiResponse<Void>> createUsersWithListInput(List<User> user) {
+    public Future<ApiResponse<Void>> createUsersWithListInput(java.util.List<User> user) {
         return Future.failedFuture(new HttpException(501));
     }
 

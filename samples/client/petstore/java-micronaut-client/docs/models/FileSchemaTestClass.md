@@ -9,7 +9,7 @@ The class is defined in **[FileSchemaTestClass.java](../../src/main/java/org/ope
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_file** | [`ModelFile`](ModelFile.md) |  |  [optional property]
-**files** | [`List&lt;ModelFile&gt;`](ModelFile.md) |  |  [optional property]
+**files** | [`java.util.List&lt;ModelFile&gt;`](ModelFile.md) |  |  [optional property]
 
 
 

@@ -54,24 +54,24 @@ public interface FakeApi {
 
     void testEndpointParameters(BigDecimal number, Double _double, String patternWithoutDelimiter, byte[] _byte, Integer integer, Integer int32, Long int64, Float _float, String string, AsyncFile binary, LocalDate date, OffsetDateTime dateTime, String password, String paramCallback, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
-    void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, Handler<AsyncResult<Void>> handler);
+    void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, Handler<AsyncResult<Void>> handler);
 
-    void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
+    void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
     void testGroupParameters(Integer requiredStringGroup, Boolean requiredBooleanGroup, Long requiredInt64Group, Integer stringGroup, Boolean booleanGroup, Long int64Group, Handler<AsyncResult<Void>> handler);
 
     void testGroupParameters(Integer requiredStringGroup, Boolean requiredBooleanGroup, Long requiredInt64Group, Integer stringGroup, Boolean booleanGroup, Long int64Group, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
-    void testInlineAdditionalProperties(Map<String, String> param, Handler<AsyncResult<Void>> handler);
+    void testInlineAdditionalProperties(java.util.Map<String, String> param, Handler<AsyncResult<Void>> handler);
 
-    void testInlineAdditionalProperties(Map<String, String> param, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
+    void testInlineAdditionalProperties(java.util.Map<String, String> param, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
     void testJsonFormData(String param, String param2, Handler<AsyncResult<Void>> handler);
 
     void testJsonFormData(String param, String param2, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
-    void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, Handler<AsyncResult<Void>> handler);
+    void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, Handler<AsyncResult<Void>> handler);
 
-    void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
+    void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
 }

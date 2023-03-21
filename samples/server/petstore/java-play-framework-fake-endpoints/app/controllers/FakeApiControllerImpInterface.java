@@ -5,7 +5,6 @@ import apimodels.Client;
 import apimodels.FileSchemaTestClass;
 import java.io.InputStream;
 import java.time.LocalDate;
-import java.util.Map;
 import java.time.OffsetDateTime;
 import apimodels.OuterComposite;
 import apimodels.User;
@@ -132,13 +131,13 @@ public abstract class FakeApiControllerImpInterface {
 
     public abstract void testEndpointParameters(Http.Request request, BigDecimal number, Double _double, String patternWithoutDelimiter, byte[] _byte, Integer integer, Integer int32, Long int64, Float _float, String string, Http.MultipartFormData.FilePart<TemporaryFile> binary, LocalDate date, OffsetDateTime dateTime, String password, String paramCallback) throws Exception;
 
-    public Result testEnumParametersHttp(Http.Request request, List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws Exception {
+    public Result testEnumParametersHttp(Http.Request request, java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws Exception {
         testEnumParameters(request, enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
         return ok();
 
     }
 
-    public abstract void testEnumParameters(Http.Request request, List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws Exception;
+    public abstract void testEnumParameters(Http.Request request, java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws Exception;
 
     public Result testGroupParametersHttp(Http.Request request, @NotNull Integer requiredStringGroup, Boolean requiredBooleanGroup, @NotNull Long requiredInt64Group, Integer stringGroup, Boolean booleanGroup, Long int64Group) throws Exception {
         testGroupParameters(request, requiredStringGroup, requiredBooleanGroup, requiredInt64Group, stringGroup, booleanGroup, int64Group);
@@ -148,13 +147,13 @@ public abstract class FakeApiControllerImpInterface {
 
     public abstract void testGroupParameters(Http.Request request, @NotNull Integer requiredStringGroup, Boolean requiredBooleanGroup, @NotNull Long requiredInt64Group, Integer stringGroup, Boolean booleanGroup, Long int64Group) throws Exception;
 
-    public Result testInlineAdditionalPropertiesHttp(Http.Request request, Map<String, String> param) throws Exception {
+    public Result testInlineAdditionalPropertiesHttp(Http.Request request, java.util.Map<String, String> param) throws Exception {
         testInlineAdditionalProperties(request, param);
         return ok();
 
     }
 
-    public abstract void testInlineAdditionalProperties(Http.Request request, Map<String, String> param) throws Exception;
+    public abstract void testInlineAdditionalProperties(Http.Request request, java.util.Map<String, String> param) throws Exception;
 
     public Result testJsonFormDataHttp(Http.Request request, String param, String param2) throws Exception {
         testJsonFormData(request, param, param2);
@@ -164,12 +163,12 @@ public abstract class FakeApiControllerImpInterface {
 
     public abstract void testJsonFormData(Http.Request request, String param, String param2) throws Exception;
 
-    public Result testQueryParameterCollectionFormatHttp(Http.Request request, @NotNull List<String> pipe, @NotNull List<String> ioutil, @NotNull List<String> http, @NotNull List<String> url, @NotNull List<String> context) throws Exception {
+    public Result testQueryParameterCollectionFormatHttp(Http.Request request, @NotNull java.util.List<String> pipe, @NotNull java.util.List<String> ioutil, @NotNull java.util.List<String> http, @NotNull java.util.List<String> url, @NotNull java.util.List<String> context) throws Exception {
         testQueryParameterCollectionFormat(request, pipe, ioutil, http, url, context);
         return ok();
 
     }
 
-    public abstract void testQueryParameterCollectionFormat(Http.Request request, @NotNull List<String> pipe, @NotNull List<String> ioutil, @NotNull List<String> http, @NotNull List<String> url, @NotNull List<String> context) throws Exception;
+    public abstract void testQueryParameterCollectionFormat(Http.Request request, @NotNull java.util.List<String> pipe, @NotNull java.util.List<String> ioutil, @NotNull java.util.List<String> http, @NotNull java.util.List<String> url, @NotNull java.util.List<String> context) throws Exception;
 
 }

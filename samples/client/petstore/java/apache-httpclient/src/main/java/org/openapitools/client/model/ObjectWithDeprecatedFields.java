@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.DeprecatedObject;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -51,7 +49,7 @@ public class ObjectWithDeprecatedFields {
   private DeprecatedObject deprecatedRef;
 
   public static final String JSON_PROPERTY_BARS = "bars";
-  private List<String> bars;
+  private java.util.List<String> bars;
 
   public ObjectWithDeprecatedFields() {
   }
@@ -138,7 +136,7 @@ public class ObjectWithDeprecatedFields {
   }
 
 
-  public ObjectWithDeprecatedFields bars(List<String> bars) {
+  public ObjectWithDeprecatedFields bars(java.util.List<String> bars) {
     
     this.bars = bars;
     return this;
@@ -162,14 +160,14 @@ public class ObjectWithDeprecatedFields {
   @JsonProperty(JSON_PROPERTY_BARS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<String> getBars() {
+  public java.util.List<String> getBars() {
     return bars;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BARS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBars(List<String> bars) {
+  public void setBars(java.util.List<String> bars) {
     this.bars = bars;
   }
 

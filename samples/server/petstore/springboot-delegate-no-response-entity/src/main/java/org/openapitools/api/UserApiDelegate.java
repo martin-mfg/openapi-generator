@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 import org.springframework.http.HttpStatus;
@@ -45,7 +44,7 @@ public interface UserApiDelegate {
      * @return successful operation (status code 200)
      * @see UserApi#createUsersWithArrayInput
      */
-    default Void createUsersWithArrayInput(List<User> user) {
+    default Void createUsersWithArrayInput(java.util.List<User> user) {
         throw new IllegalArgumentException("Not implemented");
 
     }
@@ -58,7 +57,7 @@ public interface UserApiDelegate {
      * @return successful operation (status code 200)
      * @see UserApi#createUsersWithListInput
      */
-    default Void createUsersWithListInput(List<User> user) {
+    default Void createUsersWithListInput(java.util.List<User> user) {
         throw new IllegalArgumentException("Not implemented");
 
     }

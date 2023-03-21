@@ -1,6 +1,5 @@
 package org.openapitools.virtualan.api;
 
-import java.util.Map;
 import org.openapitools.virtualan.model.Order;
 
 

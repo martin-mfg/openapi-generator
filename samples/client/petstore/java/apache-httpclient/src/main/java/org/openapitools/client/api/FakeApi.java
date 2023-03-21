@@ -34,12 +34,6 @@ import org.openapitools.client.model.Pet;
 import org.openapitools.client.model.User;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringJoiner;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FakeApi {
@@ -87,13 +81,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/health";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -163,13 +157,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/http-signature-test";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPair("query_1", query1));
     if (header1 != null)
@@ -234,13 +228,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/outer/boolean";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -303,13 +297,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/outer/composite";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -372,13 +366,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/outer/number";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -441,13 +435,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/outer/string";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -515,13 +509,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/property/enum-int";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -587,13 +581,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/body-with-binary";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -658,13 +652,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/body-with-file-schema";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -736,13 +730,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake/body-with-query-params";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
     
@@ -810,13 +804,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -923,13 +917,13 @@ public class FakeApi {
     // create path and map variables
     String localVarPath = "/fake";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -1007,7 +1001,7 @@ if (paramCallback != null)
    * @param enumFormString Form parameter enum test (string) (optional, default to -efg)
    * @throws ApiException if fails to make API call
    */
-  public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<EnumClass> enumQueryModelArray, List<String> enumFormStringArray, String enumFormString) throws ApiException {
+  public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<EnumClass> enumQueryModelArray, java.util.List<String> enumFormStringArray, String enumFormString) throws ApiException {
     this.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumQueryModelArray, enumFormStringArray, enumFormString, Collections.emptyMap());
   }
 
@@ -1027,19 +1021,19 @@ if (paramCallback != null)
    * @param additionalHeaders additionalHeaders for this call
    * @throws ApiException if fails to make API call
    */
-  public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<EnumClass> enumQueryModelArray, List<String> enumFormStringArray, String enumFormString, Map<String, String> additionalHeaders) throws ApiException {
+  public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<EnumClass> enumQueryModelArray, java.util.List<String> enumFormStringArray, String enumFormString, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
     String localVarPath = "/fake";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "enum_query_string_array", enumQueryStringArray));
     localVarQueryParams.addAll(apiClient.parameterToPair("enum_query_string", enumQueryString));
@@ -1137,13 +1131,13 @@ if (enumFormString != null)
     // create path and map variables
     String localVarPath = "/fake";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPair("required_string_group", requiredStringGroup));
     localVarQueryParams.addAll(apiClient.parameterToPair("required_int64_group", requiredInt64Group));
@@ -1193,7 +1187,7 @@ if (booleanGroup != null)
    * @param requestBody request body (required)
    * @throws ApiException if fails to make API call
    */
-  public void testInlineAdditionalProperties(Map<String, String> requestBody) throws ApiException {
+  public void testInlineAdditionalProperties(java.util.Map<String, String> requestBody) throws ApiException {
     this.testInlineAdditionalProperties(requestBody, Collections.emptyMap());
   }
 
@@ -1205,7 +1199,7 @@ if (booleanGroup != null)
    * @param additionalHeaders additionalHeaders for this call
    * @throws ApiException if fails to make API call
    */
-  public void testInlineAdditionalProperties(Map<String, String> requestBody, Map<String, String> additionalHeaders) throws ApiException {
+  public void testInlineAdditionalProperties(java.util.Map<String, String> requestBody, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = requestBody;
     
     // verify the required parameter 'requestBody' is set
@@ -1216,13 +1210,13 @@ if (booleanGroup != null)
     // create path and map variables
     String localVarPath = "/fake/inline-additionalProperties";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -1294,13 +1288,13 @@ if (booleanGroup != null)
     // create path and map variables
     String localVarPath = "/fake/jsonFormData";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -1352,7 +1346,7 @@ if (param2 != null)
    * @param language  (optional
    * @throws ApiException if fails to make API call
    */
-  public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, String allowEmpty, Map<String, String> language) throws ApiException {
+  public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, String allowEmpty, java.util.Map<String, String> language) throws ApiException {
     this.testQueryParameterCollectionFormat(pipe, ioutil, http, url, context, allowEmpty, language, Collections.emptyMap());
   }
 
@@ -1370,7 +1364,7 @@ if (param2 != null)
    * @param additionalHeaders additionalHeaders for this call
    * @throws ApiException if fails to make API call
    */
-  public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, String allowEmpty, Map<String, String> language, Map<String, String> additionalHeaders) throws ApiException {
+  public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, String allowEmpty, java.util.Map<String, String> language, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'pipe' is set
@@ -1406,13 +1400,13 @@ if (param2 != null)
     // create path and map variables
     String localVarPath = "/fake/test-query-parameters";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("pipes", "pipe", pipe));
     localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "ioutil", ioutil));

@@ -3,8 +3,6 @@ package org.openapitools.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.model.Category;
 import org.openapitools.model.Tag;
 import javax.validation.constraints.*;
@@ -32,11 +30,11 @@ public class Pet  {
   private String name;
 
   @ApiModelProperty(required = true, value = "")
-  private List<String> photoUrls = new ArrayList<>();
+  private java.util.List<String> photoUrls = new java.util.ArrayList<>();
 
   @ApiModelProperty(value = "")
   @Valid
-  private List<Tag> tags;
+  private java.util.List<Tag> tags;
 
 public enum StatusEnum {
 
@@ -136,15 +134,15 @@ AVAILABLE(String.valueOf("available")), PENDING(String.valueOf("pending")), SOLD
   **/
   @JsonProperty("photoUrls")
   @NotNull
-  public List<String> getPhotoUrls() {
+  public java.util.List<String> getPhotoUrls() {
     return photoUrls;
   }
 
-  public void setPhotoUrls(List<String> photoUrls) {
+  public void setPhotoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
-  public Pet photoUrls(List<String> photoUrls) {
+  public Pet photoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
@@ -159,15 +157,15 @@ AVAILABLE(String.valueOf("available")), PENDING(String.valueOf("pending")), SOLD
    * @return tags
   **/
   @JsonProperty("tags")
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     this.tags = tags;
     return this;
   }

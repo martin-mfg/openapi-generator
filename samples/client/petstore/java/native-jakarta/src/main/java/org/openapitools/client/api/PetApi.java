@@ -45,22 +45,16 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PetApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public PetApi() {
     this(new ApiClient());
@@ -250,11 +244,11 @@ public class PetApi {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return List&lt;Pet&gt;
+   * @return java.util.List&lt;Pet&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<Pet> findPetsByStatus(List<String> status) throws ApiException {
-    ApiResponse<List<Pet>> localVarResponse = findPetsByStatusWithHttpInfo(status);
+  public java.util.List<Pet> findPetsByStatus(java.util.List<String> status) throws ApiException {
+    ApiResponse<java.util.List<Pet>> localVarResponse = findPetsByStatusWithHttpInfo(status);
     return localVarResponse.getData();
   }
 
@@ -262,10 +256,10 @@ public class PetApi {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return ApiResponse&lt;List&lt;Pet&gt;&gt;
+   * @return ApiResponse&lt;java.util.List&lt;Pet&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<List<Pet>> findPetsByStatusWithHttpInfo(List<String> status) throws ApiException {
+  public ApiResponse<java.util.List<Pet>> findPetsByStatusWithHttpInfo(java.util.List<String> status) throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = findPetsByStatusRequestBuilder(status);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -278,10 +272,10 @@ public class PetApi {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("findPetsByStatus", localVarResponse);
         }
-        return new ApiResponse<List<Pet>>(
+        return new ApiResponse<java.util.List<Pet>>(
           localVarResponse.statusCode(),
           localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<List<Pet>>() {}) // closes the InputStream
+          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<java.util.List<Pet>>() {}) // closes the InputStream
         );
       } finally {
       }
@@ -294,7 +288,7 @@ public class PetApi {
     }
   }
 
-  private HttpRequest.Builder findPetsByStatusRequestBuilder(List<String> status) throws ApiException {
+  private HttpRequest.Builder findPetsByStatusRequestBuilder(java.util.List<String> status) throws ApiException {
     // verify the required parameter 'status' is set
     if (status == null) {
       throw new ApiException(400, "Missing the required parameter 'status' when calling findPetsByStatus");
@@ -304,14 +298,14 @@ public class PetApi {
 
     String localVarPath = "/pet/findByStatus";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "status";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("csv", "status", status));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -336,13 +330,13 @@ public class PetApi {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return List&lt;Pet&gt;
+   * @return java.util.List&lt;Pet&gt;
    * @throws ApiException if fails to make API call
    * @deprecated
    */
   @Deprecated
-  public List<Pet> findPetsByTags(List<String> tags) throws ApiException {
-    ApiResponse<List<Pet>> localVarResponse = findPetsByTagsWithHttpInfo(tags);
+  public java.util.List<Pet> findPetsByTags(java.util.List<String> tags) throws ApiException {
+    ApiResponse<java.util.List<Pet>> localVarResponse = findPetsByTagsWithHttpInfo(tags);
     return localVarResponse.getData();
   }
 
@@ -350,12 +344,12 @@ public class PetApi {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return ApiResponse&lt;List&lt;Pet&gt;&gt;
+   * @return ApiResponse&lt;java.util.List&lt;Pet&gt;&gt;
    * @throws ApiException if fails to make API call
    * @deprecated
    */
   @Deprecated
-  public ApiResponse<List<Pet>> findPetsByTagsWithHttpInfo(List<String> tags) throws ApiException {
+  public ApiResponse<java.util.List<Pet>> findPetsByTagsWithHttpInfo(java.util.List<String> tags) throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = findPetsByTagsRequestBuilder(tags);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -368,10 +362,10 @@ public class PetApi {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("findPetsByTags", localVarResponse);
         }
-        return new ApiResponse<List<Pet>>(
+        return new ApiResponse<java.util.List<Pet>>(
           localVarResponse.statusCode(),
           localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<List<Pet>>() {}) // closes the InputStream
+          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<java.util.List<Pet>>() {}) // closes the InputStream
         );
       } finally {
       }
@@ -384,7 +378,7 @@ public class PetApi {
     }
   }
 
-  private HttpRequest.Builder findPetsByTagsRequestBuilder(List<String> tags) throws ApiException {
+  private HttpRequest.Builder findPetsByTagsRequestBuilder(java.util.List<String> tags) throws ApiException {
     // verify the required parameter 'tags' is set
     if (tags == null) {
       throw new ApiException(400, "Missing the required parameter 'tags' when calling findPetsByTags");
@@ -394,14 +388,14 @@ public class PetApi {
 
     String localVarPath = "/pet/findByTags";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "tags";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("csv", "tags", tags));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());

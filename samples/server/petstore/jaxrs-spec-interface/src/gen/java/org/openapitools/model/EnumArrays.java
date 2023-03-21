@@ -2,8 +2,6 @@ package org.openapitools.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.io.Serializable;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -115,7 +113,7 @@ public class EnumArrays  implements Serializable {
     }
 }
 
-  private @Valid List<ArrayEnumEnum> arrayEnum;
+  private @Valid java.util.List<ArrayEnumEnum> arrayEnum;
 
   /**
    **/
@@ -138,7 +136,7 @@ public class EnumArrays  implements Serializable {
 
   /**
    **/
-  public EnumArrays arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public EnumArrays arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
     return this;
   }
@@ -146,12 +144,12 @@ public class EnumArrays  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("array_enum")
-  public List<ArrayEnumEnum> getArrayEnum() {
+  public java.util.List<ArrayEnumEnum> getArrayEnum() {
     return arrayEnum;
   }
 
   @JsonProperty("array_enum")
-  public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
   }
 

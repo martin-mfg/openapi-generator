@@ -23,8 +23,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.openapitools.client.JSON;
 
@@ -54,7 +52,7 @@ public class TypeHolderDefault {
   private Boolean boolItem = true;
 
   public static final String JSON_PROPERTY_ARRAY_ITEM = "array_item";
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   public TypeHolderDefault() { 
   }
@@ -159,14 +157,14 @@ public class TypeHolderDefault {
   }
 
 
-  public TypeHolderDefault arrayItem(List<Integer> arrayItem) {
+  public TypeHolderDefault arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
 
   public TypeHolderDefault addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
     this.arrayItem.add(arrayItemItem);
     return this;
@@ -180,14 +178,14 @@ public class TypeHolderDefault {
   @JsonProperty(JSON_PROPERTY_ARRAY_ITEM)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_ITEM)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

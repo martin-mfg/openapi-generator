@@ -32,10 +32,6 @@ import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.ws.rs.core.GenericType;
 
 public class PetApi {
@@ -94,11 +90,11 @@ public class PetApi {
         // create path and map variables
         String localVarPath = "/pet";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "application/xml",
@@ -254,11 +250,11 @@ public class PetApi {
         String localVarPath = "/pet/{petId}"
             .replace("{" + "petId" + "}", localVarApiClient.escapeString(petId.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (apiKey != null) {
             localVarHeaderParams.put("api_key", localVarApiClient.parameterToString(apiKey));
@@ -396,7 +392,7 @@ public class PetApi {
     public APIdeletePetRequest deletePet(Long petId) {
         return new APIdeletePetRequest(petId);
     }
-    private okhttp3.Call findPetsByStatusCall(List<String> status, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call findPetsByStatusCall(java.util.List<String> status, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -415,11 +411,11 @@ public class PetApi {
         // create path and map variables
         String localVarPath = "/pet/findByStatus";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (status != null) {
             localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "status", status));
@@ -446,7 +442,7 @@ public class PetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call findPetsByStatusValidateBeforeCall(List<String> status, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call findPetsByStatusValidateBeforeCall(java.util.List<String> status, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'status' is set
         if (status == null) {
             throw new ApiException("Missing the required parameter 'status' when calling findPetsByStatus(Async)");
@@ -457,24 +453,24 @@ public class PetApi {
     }
 
 
-    private ApiResponse<List<Pet>> findPetsByStatusWithHttpInfo(List<String> status) throws ApiException {
+    private ApiResponse<java.util.List<Pet>> findPetsByStatusWithHttpInfo(java.util.List<String> status) throws ApiException {
         okhttp3.Call localVarCall = findPetsByStatusValidateBeforeCall(status, null);
-        Type localVarReturnType = new TypeToken<List<Pet>>(){}.getType();
+        Type localVarReturnType = new TypeToken<java.util.List<Pet>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
-    private okhttp3.Call findPetsByStatusAsync(List<String> status, final ApiCallback<List<Pet>> _callback) throws ApiException {
+    private okhttp3.Call findPetsByStatusAsync(java.util.List<String> status, final ApiCallback<java.util.List<Pet>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = findPetsByStatusValidateBeforeCall(status, _callback);
-        Type localVarReturnType = new TypeToken<List<Pet>>(){}.getType();
+        Type localVarReturnType = new TypeToken<java.util.List<Pet>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
 
     public class APIfindPetsByStatusRequest {
-        private final List<String> status;
+        private final java.util.List<String> status;
 
-        private APIfindPetsByStatusRequest(List<String> status) {
+        private APIfindPetsByStatusRequest(java.util.List<String> status) {
             this.status = status;
         }
 
@@ -496,7 +492,7 @@ public class PetApi {
 
         /**
          * Execute findPetsByStatus request
-         * @return List&lt;Pet&gt;
+         * @return java.util.List&lt;Pet&gt;
          * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
          * @http.response.details
          <table summary="Response Details" border="1">
@@ -505,14 +501,14 @@ public class PetApi {
             <tr><td> 400 </td><td> Invalid status value </td><td>  -  </td></tr>
          </table>
          */
-        public List<Pet> execute() throws ApiException {
-            ApiResponse<List<Pet>> localVarResp = findPetsByStatusWithHttpInfo(status);
+        public java.util.List<Pet> execute() throws ApiException {
+            ApiResponse<java.util.List<Pet>> localVarResp = findPetsByStatusWithHttpInfo(status);
             return localVarResp.getData();
         }
 
         /**
          * Execute findPetsByStatus request with HTTP info returned
-         * @return ApiResponse&lt;List&lt;Pet&gt;&gt;
+         * @return ApiResponse&lt;java.util.List&lt;Pet&gt;&gt;
          * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
          * @http.response.details
          <table summary="Response Details" border="1">
@@ -521,7 +517,7 @@ public class PetApi {
             <tr><td> 400 </td><td> Invalid status value </td><td>  -  </td></tr>
          </table>
          */
-        public ApiResponse<List<Pet>> executeWithHttpInfo() throws ApiException {
+        public ApiResponse<java.util.List<Pet>> executeWithHttpInfo() throws ApiException {
             return findPetsByStatusWithHttpInfo(status);
         }
 
@@ -537,7 +533,7 @@ public class PetApi {
             <tr><td> 400 </td><td> Invalid status value </td><td>  -  </td></tr>
          </table>
          */
-        public okhttp3.Call executeAsync(final ApiCallback<List<Pet>> _callback) throws ApiException {
+        public okhttp3.Call executeAsync(final ApiCallback<java.util.List<Pet>> _callback) throws ApiException {
             return findPetsByStatusAsync(status, _callback);
         }
     }
@@ -554,10 +550,10 @@ public class PetApi {
         <tr><td> 400 </td><td> Invalid status value </td><td>  -  </td></tr>
      </table>
      */
-    public APIfindPetsByStatusRequest findPetsByStatus(List<String> status) {
+    public APIfindPetsByStatusRequest findPetsByStatus(java.util.List<String> status) {
         return new APIfindPetsByStatusRequest(status);
     }
-    private okhttp3.Call findPetsByTagsCall(List<String> tags, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call findPetsByTagsCall(java.util.List<String> tags, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -576,11 +572,11 @@ public class PetApi {
         // create path and map variables
         String localVarPath = "/pet/findByTags";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (tags != null) {
             localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "tags", tags));
@@ -608,7 +604,7 @@ public class PetApi {
 
     @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call findPetsByTagsValidateBeforeCall(List<String> tags, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call findPetsByTagsValidateBeforeCall(java.util.List<String> tags, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tags' is set
         if (tags == null) {
             throw new ApiException("Missing the required parameter 'tags' when calling findPetsByTags(Async)");
@@ -619,24 +615,24 @@ public class PetApi {
     }
 
 
-    private ApiResponse<List<Pet>> findPetsByTagsWithHttpInfo(List<String> tags) throws ApiException {
+    private ApiResponse<java.util.List<Pet>> findPetsByTagsWithHttpInfo(java.util.List<String> tags) throws ApiException {
         okhttp3.Call localVarCall = findPetsByTagsValidateBeforeCall(tags, null);
-        Type localVarReturnType = new TypeToken<List<Pet>>(){}.getType();
+        Type localVarReturnType = new TypeToken<java.util.List<Pet>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
-    private okhttp3.Call findPetsByTagsAsync(List<String> tags, final ApiCallback<List<Pet>> _callback) throws ApiException {
+    private okhttp3.Call findPetsByTagsAsync(java.util.List<String> tags, final ApiCallback<java.util.List<Pet>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = findPetsByTagsValidateBeforeCall(tags, _callback);
-        Type localVarReturnType = new TypeToken<List<Pet>>(){}.getType();
+        Type localVarReturnType = new TypeToken<java.util.List<Pet>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
 
     public class APIfindPetsByTagsRequest {
-        private final List<String> tags;
+        private final java.util.List<String> tags;
 
-        private APIfindPetsByTagsRequest(List<String> tags) {
+        private APIfindPetsByTagsRequest(java.util.List<String> tags) {
             this.tags = tags;
         }
 
@@ -660,7 +656,7 @@ public class PetApi {
 
         /**
          * Execute findPetsByTags request
-         * @return List&lt;Pet&gt;
+         * @return java.util.List&lt;Pet&gt;
          * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
          * @http.response.details
          <table summary="Response Details" border="1">
@@ -671,14 +667,14 @@ public class PetApi {
          * @deprecated
          */
         @Deprecated
-        public List<Pet> execute() throws ApiException {
-            ApiResponse<List<Pet>> localVarResp = findPetsByTagsWithHttpInfo(tags);
+        public java.util.List<Pet> execute() throws ApiException {
+            ApiResponse<java.util.List<Pet>> localVarResp = findPetsByTagsWithHttpInfo(tags);
             return localVarResp.getData();
         }
 
         /**
          * Execute findPetsByTags request with HTTP info returned
-         * @return ApiResponse&lt;List&lt;Pet&gt;&gt;
+         * @return ApiResponse&lt;java.util.List&lt;Pet&gt;&gt;
          * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
          * @http.response.details
          <table summary="Response Details" border="1">
@@ -689,7 +685,7 @@ public class PetApi {
          * @deprecated
          */
         @Deprecated
-        public ApiResponse<List<Pet>> executeWithHttpInfo() throws ApiException {
+        public ApiResponse<java.util.List<Pet>> executeWithHttpInfo() throws ApiException {
             return findPetsByTagsWithHttpInfo(tags);
         }
 
@@ -707,7 +703,7 @@ public class PetApi {
          * @deprecated
          */
         @Deprecated
-        public okhttp3.Call executeAsync(final ApiCallback<List<Pet>> _callback) throws ApiException {
+        public okhttp3.Call executeAsync(final ApiCallback<java.util.List<Pet>> _callback) throws ApiException {
             return findPetsByTagsAsync(tags, _callback);
         }
     }
@@ -726,7 +722,7 @@ public class PetApi {
      * @deprecated
      */
     @Deprecated
-    public APIfindPetsByTagsRequest findPetsByTags(List<String> tags) {
+    public APIfindPetsByTagsRequest findPetsByTags(java.util.List<String> tags) {
         return new APIfindPetsByTagsRequest(tags);
     }
     private okhttp3.Call getPetByIdCall(Long petId, final ApiCallback _callback) throws ApiException {
@@ -749,11 +745,11 @@ public class PetApi {
         String localVarPath = "/pet/{petId}"
             .replace("{" + "petId" + "}", localVarApiClient.escapeString(petId.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "application/xml",
@@ -911,11 +907,11 @@ public class PetApi {
         // create path and map variables
         String localVarPath = "/pet";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "application/xml",
@@ -1095,11 +1091,11 @@ public class PetApi {
         String localVarPath = "/pet/{petId}"
             .replace("{" + "petId" + "}", localVarApiClient.escapeString(petId.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (name != null) {
             localVarFormParams.put("name", name);
@@ -1216,11 +1212,11 @@ public class PetApi {
         String localVarPath = "/pet/{petId}/uploadImage"
             .replace("{" + "petId" + "}", localVarApiClient.escapeString(petId.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (additionalMetadata != null) {
             localVarFormParams.put("additionalMetadata", additionalMetadata);

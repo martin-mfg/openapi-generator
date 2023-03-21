@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 import android.os.Parcelable;
 import android.os.Parcel;
 
@@ -101,7 +100,7 @@ public class FormatTest implements Parcelable {
 
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
@@ -366,7 +365,7 @@ public class FormatTest implements Parcelable {
   }
 
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     
     this.uuid = uuid;
     return this;
@@ -378,12 +377,12 @@ public class FormatTest implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
@@ -526,7 +525,7 @@ public class FormatTest implements Parcelable {
     binary = (File)in.readValue(File.class.getClassLoader());
     date = (LocalDate)in.readValue(LocalDate.class.getClassLoader());
     dateTime = (OffsetDateTime)in.readValue(OffsetDateTime.class.getClassLoader());
-    uuid = (UUID)in.readValue(UUID.class.getClassLoader());
+    uuid = (java.util.UUID)in.readValue(java.util.UUID.class.getClassLoader());
     password = (String)in.readValue(null);
     bigDecimal = (BigDecimal)in.readValue(BigDecimal.class.getClassLoader());
   }

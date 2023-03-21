@@ -7,3 +7,4 @@ additionalProperties:
   artifactId: petstore-vertx
   hideGenerationTimestamp: "true"
   dateLibrary: java8
+  fullJavaUtil: true

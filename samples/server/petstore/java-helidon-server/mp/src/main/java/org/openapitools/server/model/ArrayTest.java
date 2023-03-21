@@ -12,8 +12,6 @@
 
 package org.openapitools.server.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.server.model.ReadOnlyFirst;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
@@ -26,28 +24,28 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class ArrayTest  {
   
-  private List<String> arrayOfString = null;
+  private java.util.List<String> arrayOfString = null;
 
-  private List<List<Long>> arrayArrayOfInteger = null;
+  private java.util.List<java.util.List<Long>> arrayArrayOfInteger = null;
 
-  private List<List<ReadOnlyFirst>> arrayArrayOfModel = null;
+  private java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel = null;
 
  /**
    * Get arrayOfString
    * @return arrayOfString
   **/
- @Size(min=0,max=3)  public List<String> getArrayOfString() {
+ @Size(min=0,max=3)  public java.util.List<String> getArrayOfString() {
     return arrayOfString;
   }
 
   /**
     * Set arrayOfString
   **/
-  public void setArrayOfString(List<String> arrayOfString) {
+  public void setArrayOfString(java.util.List<String> arrayOfString) {
     this.arrayOfString = arrayOfString;
   }
 
-  public ArrayTest arrayOfString(List<String> arrayOfString) {
+  public ArrayTest arrayOfString(java.util.List<String> arrayOfString) {
     this.arrayOfString = arrayOfString;
     return this;
   }
@@ -61,23 +59,23 @@ public class ArrayTest  {
    * Get arrayArrayOfInteger
    * @return arrayArrayOfInteger
   **/
-  public List<List<Long>> getArrayArrayOfInteger() {
+  public java.util.List<java.util.List<Long>> getArrayArrayOfInteger() {
     return arrayArrayOfInteger;
   }
 
   /**
     * Set arrayArrayOfInteger
   **/
-  public void setArrayArrayOfInteger(List<List<Long>> arrayArrayOfInteger) {
+  public void setArrayArrayOfInteger(java.util.List<java.util.List<Long>> arrayArrayOfInteger) {
     this.arrayArrayOfInteger = arrayArrayOfInteger;
   }
 
-  public ArrayTest arrayArrayOfInteger(List<List<Long>> arrayArrayOfInteger) {
+  public ArrayTest arrayArrayOfInteger(java.util.List<java.util.List<Long>> arrayArrayOfInteger) {
     this.arrayArrayOfInteger = arrayArrayOfInteger;
     return this;
   }
 
-  public ArrayTest addArrayArrayOfIntegerItem(List<Long> arrayArrayOfIntegerItem) {
+  public ArrayTest addArrayArrayOfIntegerItem(java.util.List<Long> arrayArrayOfIntegerItem) {
     this.arrayArrayOfInteger.add(arrayArrayOfIntegerItem);
     return this;
   }
@@ -86,23 +84,23 @@ public class ArrayTest  {
    * Get arrayArrayOfModel
    * @return arrayArrayOfModel
   **/
-  public List<List<ReadOnlyFirst>> getArrayArrayOfModel() {
+  public java.util.List<java.util.List<ReadOnlyFirst>> getArrayArrayOfModel() {
     return arrayArrayOfModel;
   }
 
   /**
     * Set arrayArrayOfModel
   **/
-  public void setArrayArrayOfModel(List<List<ReadOnlyFirst>> arrayArrayOfModel) {
+  public void setArrayArrayOfModel(java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel) {
     this.arrayArrayOfModel = arrayArrayOfModel;
   }
 
-  public ArrayTest arrayArrayOfModel(List<List<ReadOnlyFirst>> arrayArrayOfModel) {
+  public ArrayTest arrayArrayOfModel(java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel) {
     this.arrayArrayOfModel = arrayArrayOfModel;
     return this;
   }
 
-  public ArrayTest addArrayArrayOfModelItem(List<ReadOnlyFirst> arrayArrayOfModelItem) {
+  public ArrayTest addArrayArrayOfModelItem(java.util.List<ReadOnlyFirst> arrayArrayOfModelItem) {
     this.arrayArrayOfModel.add(arrayArrayOfModelItem);
     return this;
   }

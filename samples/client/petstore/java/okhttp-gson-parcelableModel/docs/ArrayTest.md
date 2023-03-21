@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**arrayOfString** | **List&lt;String&gt;** |  |  [optional] |
-|**arrayArrayOfInteger** | **List&lt;List&lt;Long&gt;&gt;** |  |  [optional] |
-|**arrayArrayOfModel** | **List&lt;List&lt;ReadOnlyFirst&gt;&gt;** |  |  [optional] |
+|**arrayOfString** | **java.util.List&lt;String&gt;** |  |  [optional] |
+|**arrayArrayOfInteger** | **java.util.List&lt;java.util.List&lt;Long&gt;&gt;** |  |  [optional] |
+|**arrayArrayOfModel** | **java.util.List&lt;java.util.List&lt;ReadOnlyFirst&gt;&gt;** |  |  [optional] |
 
 
 ## Implemented Interfaces

@@ -1,14 +1,12 @@
 package org.openapitools.server.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 
 
 public class ArrayOfArrayOfNumberOnly   {
 
-    private List<List<BigDecimal>> arrayArrayNumber;
+    private java.util.List<java.util.List<BigDecimal>> arrayArrayNumber;
 
     /**
      * Default constructor.
@@ -23,7 +21,7 @@ public class ArrayOfArrayOfNumberOnly   {
      * @param arrayArrayNumber arrayArrayNumber
      */
     public ArrayOfArrayOfNumberOnly(
-        List<List<BigDecimal>> arrayArrayNumber
+        java.util.List<java.util.List<BigDecimal>> arrayArrayNumber
     ) {
         this.arrayArrayNumber = arrayArrayNumber;
     }
@@ -34,11 +32,11 @@ public class ArrayOfArrayOfNumberOnly   {
      * Get arrayArrayNumber
      * @return arrayArrayNumber
      */
-    public List<List<BigDecimal>> getArrayArrayNumber() {
+    public java.util.List<java.util.List<BigDecimal>> getArrayArrayNumber() {
         return arrayArrayNumber;
     }
 
-    public void setArrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+    public void setArrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
         this.arrayArrayNumber = arrayArrayNumber;
     }
 

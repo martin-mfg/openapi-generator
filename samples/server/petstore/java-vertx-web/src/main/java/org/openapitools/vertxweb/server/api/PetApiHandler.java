@@ -97,7 +97,7 @@ public class PetApiHandler {
         // Param extraction
         RequestParameters requestParameters = routingContext.get(ValidationHandler.REQUEST_CONTEXT_KEY);
 
-        List<String> status = requestParameters.queryParameter("status") != null ? DatabindCodec.mapper().convertValue(requestParameters.queryParameter("status").get(), new TypeReference<List<String>>(){}) : null;
+        java.util.List<String> status = requestParameters.queryParameter("status") != null ? DatabindCodec.mapper().convertValue(requestParameters.queryParameter("status").get(), new TypeReference<java.util.List<String>>(){}) : null;
 
         logger.debug("Parameter status is {}", status);
 
@@ -119,7 +119,7 @@ public class PetApiHandler {
         // Param extraction
         RequestParameters requestParameters = routingContext.get(ValidationHandler.REQUEST_CONTEXT_KEY);
 
-        List<String> tags = requestParameters.queryParameter("tags") != null ? DatabindCodec.mapper().convertValue(requestParameters.queryParameter("tags").get(), new TypeReference<List<String>>(){}) : null;
+        java.util.List<String> tags = requestParameters.queryParameter("tags") != null ? DatabindCodec.mapper().convertValue(requestParameters.queryParameter("tags").get(), new TypeReference<java.util.List<String>>(){}) : null;
 
         logger.debug("Parameter tags is {}", tags);
 

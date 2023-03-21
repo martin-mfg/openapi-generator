@@ -19,9 +19,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -46,35 +43,35 @@ import javax.validation.Valid;
 public class AdditionalPropertiesClass   {
   public static final String JSON_PROPERTY_MAP_STRING = "map_string";
   @JsonProperty(JSON_PROPERTY_MAP_STRING)
-  private Map<String, String> mapString = new HashMap<>();
+  private java.util.Map<String, String> mapString = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_MAP_NUMBER = "map_number";
   @JsonProperty(JSON_PROPERTY_MAP_NUMBER)
-  private Map<String, BigDecimal> mapNumber = new HashMap<>();
+  private java.util.Map<String, BigDecimal> mapNumber = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_MAP_INTEGER = "map_integer";
   @JsonProperty(JSON_PROPERTY_MAP_INTEGER)
-  private Map<String, Integer> mapInteger = new HashMap<>();
+  private java.util.Map<String, Integer> mapInteger = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_MAP_BOOLEAN = "map_boolean";
   @JsonProperty(JSON_PROPERTY_MAP_BOOLEAN)
-  private Map<String, Boolean> mapBoolean = new HashMap<>();
+  private java.util.Map<String, Boolean> mapBoolean = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_MAP_ARRAY_INTEGER = "map_array_integer";
   @JsonProperty(JSON_PROPERTY_MAP_ARRAY_INTEGER)
-  private Map<String, List<Integer>> mapArrayInteger = new HashMap<>();
+  private java.util.Map<String, java.util.List<Integer>> mapArrayInteger = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_MAP_ARRAY_ANYTYPE = "map_array_anytype";
   @JsonProperty(JSON_PROPERTY_MAP_ARRAY_ANYTYPE)
-  private Map<String, List<Object>> mapArrayAnytype = new HashMap<>();
+  private java.util.Map<String, java.util.List<Object>> mapArrayAnytype = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_MAP_MAP_STRING = "map_map_string";
   @JsonProperty(JSON_PROPERTY_MAP_MAP_STRING)
-  private Map<String, Map<String, String>> mapMapString = new HashMap<>();
+  private java.util.Map<String, java.util.Map<String, String>> mapMapString = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_MAP_MAP_ANYTYPE = "map_map_anytype";
   @JsonProperty(JSON_PROPERTY_MAP_MAP_ANYTYPE)
-  private Map<String, Map<String, Object>> mapMapAnytype = new HashMap<>();
+  private java.util.Map<String, java.util.Map<String, Object>> mapMapAnytype = new java.util.HashMap<>();
 
   public static final String JSON_PROPERTY_ANYTYPE1 = "anytype_1";
   @JsonProperty(JSON_PROPERTY_ANYTYPE1)
@@ -88,14 +85,14 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(JSON_PROPERTY_ANYTYPE3)
   private Object anytype3;
 
-  public AdditionalPropertiesClass mapString(Map<String, String> mapString) {
+  public AdditionalPropertiesClass mapString(java.util.Map<String, String> mapString) {
     this.mapString = mapString;
     return this;
   }
 
   public AdditionalPropertiesClass putMapStringItem(String key, String mapStringItem) {
     if (this.mapString == null) {
-      this.mapString = new HashMap<>();
+      this.mapString = new java.util.HashMap<>();
     }
     this.mapString.put(key, mapStringItem);
     return this;
@@ -108,22 +105,22 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(value = "map_string")
   @ApiModelProperty(value = "")
   
-  public Map<String, String> getMapString() {
+  public java.util.Map<String, String> getMapString() {
     return mapString;
   }
 
-  public void setMapString(Map<String, String> mapString) {
+  public void setMapString(java.util.Map<String, String> mapString) {
     this.mapString = mapString;
   }
 
-  public AdditionalPropertiesClass mapNumber(Map<String, BigDecimal> mapNumber) {
+  public AdditionalPropertiesClass mapNumber(java.util.Map<String, BigDecimal> mapNumber) {
     this.mapNumber = mapNumber;
     return this;
   }
 
   public AdditionalPropertiesClass putMapNumberItem(String key, BigDecimal mapNumberItem) {
     if (this.mapNumber == null) {
-      this.mapNumber = new HashMap<>();
+      this.mapNumber = new java.util.HashMap<>();
     }
     this.mapNumber.put(key, mapNumberItem);
     return this;
@@ -136,22 +133,22 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(value = "map_number")
   @ApiModelProperty(value = "")
   @Valid 
-  public Map<String, BigDecimal> getMapNumber() {
+  public java.util.Map<String, BigDecimal> getMapNumber() {
     return mapNumber;
   }
 
-  public void setMapNumber(Map<String, BigDecimal> mapNumber) {
+  public void setMapNumber(java.util.Map<String, BigDecimal> mapNumber) {
     this.mapNumber = mapNumber;
   }
 
-  public AdditionalPropertiesClass mapInteger(Map<String, Integer> mapInteger) {
+  public AdditionalPropertiesClass mapInteger(java.util.Map<String, Integer> mapInteger) {
     this.mapInteger = mapInteger;
     return this;
   }
 
   public AdditionalPropertiesClass putMapIntegerItem(String key, Integer mapIntegerItem) {
     if (this.mapInteger == null) {
-      this.mapInteger = new HashMap<>();
+      this.mapInteger = new java.util.HashMap<>();
     }
     this.mapInteger.put(key, mapIntegerItem);
     return this;
@@ -164,22 +161,22 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(value = "map_integer")
   @ApiModelProperty(value = "")
   
-  public Map<String, Integer> getMapInteger() {
+  public java.util.Map<String, Integer> getMapInteger() {
     return mapInteger;
   }
 
-  public void setMapInteger(Map<String, Integer> mapInteger) {
+  public void setMapInteger(java.util.Map<String, Integer> mapInteger) {
     this.mapInteger = mapInteger;
   }
 
-  public AdditionalPropertiesClass mapBoolean(Map<String, Boolean> mapBoolean) {
+  public AdditionalPropertiesClass mapBoolean(java.util.Map<String, Boolean> mapBoolean) {
     this.mapBoolean = mapBoolean;
     return this;
   }
 
   public AdditionalPropertiesClass putMapBooleanItem(String key, Boolean mapBooleanItem) {
     if (this.mapBoolean == null) {
-      this.mapBoolean = new HashMap<>();
+      this.mapBoolean = new java.util.HashMap<>();
     }
     this.mapBoolean.put(key, mapBooleanItem);
     return this;
@@ -192,22 +189,22 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(value = "map_boolean")
   @ApiModelProperty(value = "")
   
-  public Map<String, Boolean> getMapBoolean() {
+  public java.util.Map<String, Boolean> getMapBoolean() {
     return mapBoolean;
   }
 
-  public void setMapBoolean(Map<String, Boolean> mapBoolean) {
+  public void setMapBoolean(java.util.Map<String, Boolean> mapBoolean) {
     this.mapBoolean = mapBoolean;
   }
 
-  public AdditionalPropertiesClass mapArrayInteger(Map<String, List<Integer>> mapArrayInteger) {
+  public AdditionalPropertiesClass mapArrayInteger(java.util.Map<String, java.util.List<Integer>> mapArrayInteger) {
     this.mapArrayInteger = mapArrayInteger;
     return this;
   }
 
-  public AdditionalPropertiesClass putMapArrayIntegerItem(String key, List<Integer> mapArrayIntegerItem) {
+  public AdditionalPropertiesClass putMapArrayIntegerItem(String key, java.util.List<Integer> mapArrayIntegerItem) {
     if (this.mapArrayInteger == null) {
-      this.mapArrayInteger = new HashMap<>();
+      this.mapArrayInteger = new java.util.HashMap<>();
     }
     this.mapArrayInteger.put(key, mapArrayIntegerItem);
     return this;
@@ -220,22 +217,22 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(value = "map_array_integer")
   @ApiModelProperty(value = "")
   @Valid 
-  public Map<String, List<Integer>> getMapArrayInteger() {
+  public java.util.Map<String, java.util.List<Integer>> getMapArrayInteger() {
     return mapArrayInteger;
   }
 
-  public void setMapArrayInteger(Map<String, List<Integer>> mapArrayInteger) {
+  public void setMapArrayInteger(java.util.Map<String, java.util.List<Integer>> mapArrayInteger) {
     this.mapArrayInteger = mapArrayInteger;
   }
 
-  public AdditionalPropertiesClass mapArrayAnytype(Map<String, List<Object>> mapArrayAnytype) {
+  public AdditionalPropertiesClass mapArrayAnytype(java.util.Map<String, java.util.List<Object>> mapArrayAnytype) {
     this.mapArrayAnytype = mapArrayAnytype;
     return this;
   }
 
-  public AdditionalPropertiesClass putMapArrayAnytypeItem(String key, List<Object> mapArrayAnytypeItem) {
+  public AdditionalPropertiesClass putMapArrayAnytypeItem(String key, java.util.List<Object> mapArrayAnytypeItem) {
     if (this.mapArrayAnytype == null) {
-      this.mapArrayAnytype = new HashMap<>();
+      this.mapArrayAnytype = new java.util.HashMap<>();
     }
     this.mapArrayAnytype.put(key, mapArrayAnytypeItem);
     return this;
@@ -248,22 +245,22 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(value = "map_array_anytype")
   @ApiModelProperty(value = "")
   @Valid 
-  public Map<String, List<Object>> getMapArrayAnytype() {
+  public java.util.Map<String, java.util.List<Object>> getMapArrayAnytype() {
     return mapArrayAnytype;
   }
 
-  public void setMapArrayAnytype(Map<String, List<Object>> mapArrayAnytype) {
+  public void setMapArrayAnytype(java.util.Map<String, java.util.List<Object>> mapArrayAnytype) {
     this.mapArrayAnytype = mapArrayAnytype;
   }
 
-  public AdditionalPropertiesClass mapMapString(Map<String, Map<String, String>> mapMapString) {
+  public AdditionalPropertiesClass mapMapString(java.util.Map<String, java.util.Map<String, String>> mapMapString) {
     this.mapMapString = mapMapString;
     return this;
   }
 
-  public AdditionalPropertiesClass putMapMapStringItem(String key, Map<String, String> mapMapStringItem) {
+  public AdditionalPropertiesClass putMapMapStringItem(String key, java.util.Map<String, String> mapMapStringItem) {
     if (this.mapMapString == null) {
-      this.mapMapString = new HashMap<>();
+      this.mapMapString = new java.util.HashMap<>();
     }
     this.mapMapString.put(key, mapMapStringItem);
     return this;
@@ -276,22 +273,22 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(value = "map_map_string")
   @ApiModelProperty(value = "")
   @Valid 
-  public Map<String, Map<String, String>> getMapMapString() {
+  public java.util.Map<String, java.util.Map<String, String>> getMapMapString() {
     return mapMapString;
   }
 
-  public void setMapMapString(Map<String, Map<String, String>> mapMapString) {
+  public void setMapMapString(java.util.Map<String, java.util.Map<String, String>> mapMapString) {
     this.mapMapString = mapMapString;
   }
 
-  public AdditionalPropertiesClass mapMapAnytype(Map<String, Map<String, Object>> mapMapAnytype) {
+  public AdditionalPropertiesClass mapMapAnytype(java.util.Map<String, java.util.Map<String, Object>> mapMapAnytype) {
     this.mapMapAnytype = mapMapAnytype;
     return this;
   }
 
-  public AdditionalPropertiesClass putMapMapAnytypeItem(String key, Map<String, Object> mapMapAnytypeItem) {
+  public AdditionalPropertiesClass putMapMapAnytypeItem(String key, java.util.Map<String, Object> mapMapAnytypeItem) {
     if (this.mapMapAnytype == null) {
-      this.mapMapAnytype = new HashMap<>();
+      this.mapMapAnytype = new java.util.HashMap<>();
     }
     this.mapMapAnytype.put(key, mapMapAnytypeItem);
     return this;
@@ -304,11 +301,11 @@ public class AdditionalPropertiesClass   {
   @JsonProperty(value = "map_map_anytype")
   @ApiModelProperty(value = "")
   @Valid 
-  public Map<String, Map<String, Object>> getMapMapAnytype() {
+  public java.util.Map<String, java.util.Map<String, Object>> getMapMapAnytype() {
     return mapMapAnytype;
   }
 
-  public void setMapMapAnytype(Map<String, Map<String, Object>> mapMapAnytype) {
+  public void setMapMapAnytype(java.util.Map<String, java.util.Map<String, Object>> mapMapAnytype) {
     this.mapMapAnytype = mapMapAnytype;
   }
 

@@ -5,10 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.model.Animal;
 
 /**
@@ -17,15 +13,15 @@ import org.openapitools.model.Animal;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen")
 public class MixedPropertiesAndAdditionalPropertiesClass   {
   @JsonProperty("uuid")
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   @JsonProperty("dateTime")
-  private Date dateTime;
+  private java.util.Date dateTime;
 
   @JsonProperty("map")
-  private Map<String, Animal> map = null;
+  private java.util.Map<String, Animal> map = null;
 
-  public MixedPropertiesAndAdditionalPropertiesClass uuid(UUID uuid) {
+  public MixedPropertiesAndAdditionalPropertiesClass uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -35,15 +31,15 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
    * @return uuid
   **/
   @ApiModelProperty(value = "")
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClass dateTime(Date dateTime) {
+  public MixedPropertiesAndAdditionalPropertiesClass dateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
     return this;
   }
@@ -53,22 +49,22 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
    * @return dateTime
   **/
   @ApiModelProperty(value = "")
-  public Date getDateTime() {
+  public java.util.Date getDateTime() {
     return dateTime;
   }
 
-  public void setDateTime(Date dateTime) {
+  public void setDateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClass map(Map<String, Animal> map) {
+  public MixedPropertiesAndAdditionalPropertiesClass map(java.util.Map<String, Animal> map) {
     this.map = map;
     return this;
   }
 
   public MixedPropertiesAndAdditionalPropertiesClass putMapItem(String key, Animal mapItem) {
     if (this.map == null) {
-      this.map = new HashMap<>();
+      this.map = new java.util.HashMap<>();
     }
     this.map.put(key, mapItem);
     return this;
@@ -79,11 +75,11 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
    * @return map
   **/
   @ApiModelProperty(value = "")
-  public Map<String, Animal> getMap() {
+  public java.util.Map<String, Animal> getMap() {
     return map;
   }
 
-  public void setMap(Map<String, Animal> map) {
+  public void setMap(java.util.Map<String, Animal> map) {
     this.map = map;
   }
 

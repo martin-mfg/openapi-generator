@@ -742,7 +742,7 @@ No authorization required
 
 ## getArrayOfEnums
 
-> CompletableFuture<List<OuterEnum>> getArrayOfEnums()
+> CompletableFuture<java.util.List<OuterEnum>> getArrayOfEnums()
 
 Array of Enums
 
@@ -764,7 +764,7 @@ public class Example {
 
         FakeApi apiInstance = new FakeApi(defaultClient);
         try {
-            CompletableFuture<List<OuterEnum>> result = apiInstance.getArrayOfEnums();
+            CompletableFuture<java.util.List<OuterEnum>> result = apiInstance.getArrayOfEnums();
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling FakeApi#getArrayOfEnums");
@@ -783,7 +783,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<[**List&lt;OuterEnum&gt;**](OuterEnum.md)>
+CompletableFuture<[**java.util.List&lt;OuterEnum&gt;**](OuterEnum.md)>
 
 
 ### Authorization
@@ -802,7 +802,7 @@ No authorization required
 
 ## getArrayOfEnumsWithHttpInfo
 
-> CompletableFuture<ApiResponse<List<OuterEnum>>> getArrayOfEnums getArrayOfEnumsWithHttpInfo()
+> CompletableFuture<ApiResponse<java.util.List<OuterEnum>>> getArrayOfEnums getArrayOfEnumsWithHttpInfo()
 
 Array of Enums
 
@@ -825,7 +825,7 @@ public class Example {
 
         FakeApi apiInstance = new FakeApi(defaultClient);
         try {
-            CompletableFuture<ApiResponse<List<OuterEnum>>> response = apiInstance.getArrayOfEnumsWithHttpInfo();
+            CompletableFuture<ApiResponse<java.util.List<OuterEnum>>> response = apiInstance.getArrayOfEnumsWithHttpInfo();
             System.out.println("Status code: " + response.get().getStatusCode());
             System.out.println("Response headers: " + response.get().getHeaders());
             System.out.println("Response body: " + response.get().getData());
@@ -853,7 +853,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<ApiResponse<[**List&lt;OuterEnum&gt;**](OuterEnum.md)>>
+CompletableFuture<ApiResponse<[**java.util.List&lt;OuterEnum&gt;**](OuterEnum.md)>>
 
 
 ### Authorization
@@ -1528,13 +1528,13 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        List<String> enumHeaderStringArray = Arrays.asList("$"); // List<String> | Header parameter enum test (string array)
+        java.util.List<String> enumHeaderStringArray = Arrays.asList("$"); // java.util.List<String> | Header parameter enum test (string array)
         String enumHeaderString = "_abc"; // String | Header parameter enum test (string)
-        List<String> enumQueryStringArray = Arrays.asList("$"); // List<String> | Query parameter enum test (string array)
+        java.util.List<String> enumQueryStringArray = Arrays.asList("$"); // java.util.List<String> | Query parameter enum test (string array)
         String enumQueryString = "_abc"; // String | Query parameter enum test (string)
         Integer enumQueryInteger = 1; // Integer | Query parameter enum test (double)
         Double enumQueryDouble = 1.1D; // Double | Query parameter enum test (double)
-        List<String> enumFormStringArray = Arrays.asList("$"); // List<String> | Form parameter enum test (string array)
+        java.util.List<String> enumFormStringArray = Arrays.asList("$"); // java.util.List<String> | Form parameter enum test (string array)
         String enumFormString = "_abc"; // String | Form parameter enum test (string)
         try {
             CompletableFuture<Void> result = apiInstance.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
@@ -1554,13 +1554,13 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **enumHeaderStringArray** | [**List&lt;String&gt;**](String.md)| Header parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumHeaderStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Header parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumHeaderString** | **String**| Header parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
-| **enumQueryStringArray** | [**List&lt;String&gt;**](String.md)| Query parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumQueryStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Query parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumQueryString** | **String**| Query parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
 | **enumQueryInteger** | **Integer**| Query parameter enum test (double) | [optional] [enum: 1, -2] |
 | **enumQueryDouble** | **Double**| Query parameter enum test (double) | [optional] [enum: 1.1, -1.2] |
-| **enumFormStringArray** | [**List&lt;String&gt;**](String.md)| Form parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumFormStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Form parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumFormString** | **String**| Form parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
 
 ### Return type
@@ -1609,13 +1609,13 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        List<String> enumHeaderStringArray = Arrays.asList("$"); // List<String> | Header parameter enum test (string array)
+        java.util.List<String> enumHeaderStringArray = Arrays.asList("$"); // java.util.List<String> | Header parameter enum test (string array)
         String enumHeaderString = "_abc"; // String | Header parameter enum test (string)
-        List<String> enumQueryStringArray = Arrays.asList("$"); // List<String> | Query parameter enum test (string array)
+        java.util.List<String> enumQueryStringArray = Arrays.asList("$"); // java.util.List<String> | Query parameter enum test (string array)
         String enumQueryString = "_abc"; // String | Query parameter enum test (string)
         Integer enumQueryInteger = 1; // Integer | Query parameter enum test (double)
         Double enumQueryDouble = 1.1D; // Double | Query parameter enum test (double)
-        List<String> enumFormStringArray = Arrays.asList("$"); // List<String> | Form parameter enum test (string array)
+        java.util.List<String> enumFormStringArray = Arrays.asList("$"); // java.util.List<String> | Form parameter enum test (string array)
         String enumFormString = "_abc"; // String | Form parameter enum test (string)
         try {
             CompletableFuture<ApiResponse<Void>> response = apiInstance.testEnumParametersWithHttpInfo(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
@@ -1644,13 +1644,13 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **enumHeaderStringArray** | [**List&lt;String&gt;**](String.md)| Header parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumHeaderStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Header parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumHeaderString** | **String**| Header parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
-| **enumQueryStringArray** | [**List&lt;String&gt;**](String.md)| Query parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumQueryStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Query parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumQueryString** | **String**| Query parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
 | **enumQueryInteger** | **Integer**| Query parameter enum test (double) | [optional] [enum: 1, -2] |
 | **enumQueryDouble** | **Double**| Query parameter enum test (double) | [optional] [enum: 1.1, -1.2] |
-| **enumFormStringArray** | [**List&lt;String&gt;**](String.md)| Form parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumFormStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Form parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumFormString** | **String**| Form parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
 
 ### Return type
@@ -1891,7 +1891,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        Map<String, String> requestBody = new HashMap(); // Map<String, String> | request body
+        java.util.Map<String, String> requestBody = new HashMap(); // java.util.Map<String, String> | request body
         try {
             CompletableFuture<Void> result = apiInstance.testInlineAdditionalProperties(requestBody);
         } catch (ApiException e) {
@@ -1910,7 +1910,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **requestBody** | [**Map&lt;String, String&gt;**](String.md)| request body | |
+| **requestBody** | [**java.util.Map&lt;String, String&gt;**](String.md)| request body | |
 
 ### Return type
 
@@ -1957,7 +1957,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        Map<String, String> requestBody = new HashMap(); // Map<String, String> | request body
+        java.util.Map<String, String> requestBody = new HashMap(); // java.util.Map<String, String> | request body
         try {
             CompletableFuture<ApiResponse<Void>> response = apiInstance.testInlineAdditionalPropertiesWithHttpInfo(requestBody);
             System.out.println("Status code: " + response.get().getStatusCode());
@@ -1985,7 +1985,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **requestBody** | [**Map&lt;String, String&gt;**](String.md)| request body | |
+| **requestBody** | [**java.util.Map&lt;String, String&gt;**](String.md)| request body | |
 
 ### Return type
 
@@ -2177,11 +2177,11 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        List<String> pipe = Arrays.asList(); // List<String> | 
-        List<String> ioutil = Arrays.asList(); // List<String> | 
-        List<String> http = Arrays.asList(); // List<String> | 
-        List<String> url = Arrays.asList(); // List<String> | 
-        List<String> context = Arrays.asList(); // List<String> | 
+        java.util.List<String> pipe = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> ioutil = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> http = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> url = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> context = Arrays.asList(); // java.util.List<String> | 
         try {
             CompletableFuture<Void> result = apiInstance.testQueryParameterCollectionFormat(pipe, ioutil, http, url, context);
         } catch (ApiException e) {
@@ -2200,11 +2200,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pipe** | [**List&lt;String&gt;**](String.md)|  | |
-| **ioutil** | [**List&lt;String&gt;**](String.md)|  | |
-| **http** | [**List&lt;String&gt;**](String.md)|  | |
-| **url** | [**List&lt;String&gt;**](String.md)|  | |
-| **context** | [**List&lt;String&gt;**](String.md)|  | |
+| **pipe** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **ioutil** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **http** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **url** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **context** | [**java.util.List&lt;String&gt;**](String.md)|  | |
 
 ### Return type
 
@@ -2251,11 +2251,11 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        List<String> pipe = Arrays.asList(); // List<String> | 
-        List<String> ioutil = Arrays.asList(); // List<String> | 
-        List<String> http = Arrays.asList(); // List<String> | 
-        List<String> url = Arrays.asList(); // List<String> | 
-        List<String> context = Arrays.asList(); // List<String> | 
+        java.util.List<String> pipe = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> ioutil = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> http = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> url = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> context = Arrays.asList(); // java.util.List<String> | 
         try {
             CompletableFuture<ApiResponse<Void>> response = apiInstance.testQueryParameterCollectionFormatWithHttpInfo(pipe, ioutil, http, url, context);
             System.out.println("Status code: " + response.get().getStatusCode());
@@ -2283,11 +2283,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pipe** | [**List&lt;String&gt;**](String.md)|  | |
-| **ioutil** | [**List&lt;String&gt;**](String.md)|  | |
-| **http** | [**List&lt;String&gt;**](String.md)|  | |
-| **url** | [**List&lt;String&gt;**](String.md)|  | |
-| **context** | [**List&lt;String&gt;**](String.md)|  | |
+| **pipe** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **ioutil** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **http** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **url** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **context** | [**java.util.List&lt;String&gt;**](String.md)|  | |
 
 ### Return type
 

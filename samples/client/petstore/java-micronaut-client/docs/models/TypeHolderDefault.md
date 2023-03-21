@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **numberItem** | `BigDecimal` |  | 
 **integerItem** | `Integer` |  | 
 **boolItem** | `Boolean` |  | 
-**arrayItem** | `List&lt;Integer&gt;` |  | 
+**arrayItem** | `java.util.List&lt;Integer&gt;` |  | 
 
 
 

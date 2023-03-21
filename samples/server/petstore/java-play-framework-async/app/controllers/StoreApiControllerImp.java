@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.Map;
 import apimodels.Order;
 
 import play.mvc.Http;
@@ -21,10 +20,10 @@ public class StoreApiControllerImp extends StoreApiControllerImpInterface {
     }
 
     @Override
-    public CompletionStage<Map<String, Integer>> getInventory(Http.Request request) throws Exception {
+    public CompletionStage<Map<String, java.util.Map<String, Integer>>> getInventory(Http.Request request) throws Exception {
         //Do your magic!!!
         return CompletableFuture.supplyAsync(() -> {
-           return new HashMap<String, Integer>();
+           return new HashMap<String, java.util.Map<String, Integer>>();
         });
     }
 

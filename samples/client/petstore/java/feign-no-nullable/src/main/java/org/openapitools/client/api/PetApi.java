@@ -7,12 +7,7 @@ import org.openapitools.client.model.ApiResponse;
 import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import feign.*;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -79,13 +74,13 @@ public interface PetApi extends ApiClient.Api {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return List&lt;Pet&gt;
+   * @return java.util.List&lt;Pet&gt;
    */
   @RequestLine("GET /pet/findByStatus?status={status}")
   @Headers({
     "Accept: application/json",
   })
-  List<Pet> findPetsByStatus(@Param("status") List<String> status);
+  java.util.List<Pet> findPetsByStatus(@Param("status") java.util.List<String> status);
 
   /**
    * Finds Pets by status
@@ -98,7 +93,7 @@ public interface PetApi extends ApiClient.Api {
   @Headers({
     "Accept: application/json",
   })
-  ApiResponse<List<Pet>> findPetsByStatusWithHttpInfo(@Param("status") List<String> status);
+  ApiResponse<java.util.List<Pet>> findPetsByStatusWithHttpInfo(@Param("status") java.util.List<String> status);
 
 
   /**
@@ -114,13 +109,13 @@ public interface PetApi extends ApiClient.Api {
    *   <ul>
    *   <li>status - Status values that need to be considered for filter (required)</li>
    *   </ul>
-   * @return List&lt;Pet&gt;
+   * @return java.util.List&lt;Pet&gt;
    */
   @RequestLine("GET /pet/findByStatus?status={status}")
   @Headers({
   "Accept: application/json",
   })
-  List<Pet> findPetsByStatus(@QueryMap(encoded=true) FindPetsByStatusQueryParams queryParams);
+  java.util.List<Pet> findPetsByStatus(@QueryMap(encoded=true) FindPetsByStatusQueryParams queryParams);
 
   /**
   * Finds Pets by status
@@ -132,13 +127,13 @@ public interface PetApi extends ApiClient.Api {
       *   <ul>
           *   <li>status - Status values that need to be considered for filter (required)</li>
       *   </ul>
-          * @return List&lt;Pet&gt;
+          * @return java.util.List&lt;Pet&gt;
       */
       @RequestLine("GET /pet/findByStatus?status={status}")
       @Headers({
     "Accept: application/json",
       })
-   ApiResponse<List<Pet>> findPetsByStatusWithHttpInfo(@QueryMap(encoded=true) FindPetsByStatusQueryParams queryParams);
+   ApiResponse<java.util.List<Pet>> findPetsByStatusWithHttpInfo(@QueryMap(encoded=true) FindPetsByStatusQueryParams queryParams);
 
 
    /**
@@ -146,7 +141,7 @@ public interface PetApi extends ApiClient.Api {
    * <code>findPetsByStatus</code> method in a fluent style.
    */
   public static class FindPetsByStatusQueryParams extends HashMap<String, Object> {
-    public FindPetsByStatusQueryParams status(final List<String> value) {
+    public FindPetsByStatusQueryParams status(final java.util.List<String> value) {
       put("status", EncodingUtils.encodeCollection(value, "csv"));
       return this;
     }
@@ -156,7 +151,7 @@ public interface PetApi extends ApiClient.Api {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return Set&lt;Pet&gt;
+   * @return java.util.Set&lt;Pet&gt;
    * @deprecated
    */
   @Deprecated
@@ -164,7 +159,7 @@ public interface PetApi extends ApiClient.Api {
   @Headers({
     "Accept: application/json",
   })
-  Set<Pet> findPetsByTags(@Param("tags") Set<String> tags);
+  java.util.Set<Pet> findPetsByTags(@Param("tags") java.util.Set<String> tags);
 
   /**
    * Finds Pets by tags
@@ -179,7 +174,7 @@ public interface PetApi extends ApiClient.Api {
   @Headers({
     "Accept: application/json",
   })
-  ApiResponse<Set<Pet>> findPetsByTagsWithHttpInfo(@Param("tags") Set<String> tags);
+  ApiResponse<java.util.Set<Pet>> findPetsByTagsWithHttpInfo(@Param("tags") java.util.Set<String> tags);
 
 
   /**
@@ -195,7 +190,7 @@ public interface PetApi extends ApiClient.Api {
    *   <ul>
    *   <li>tags - Tags to filter by (required)</li>
    *   </ul>
-   * @return Set&lt;Pet&gt;
+   * @return java.util.Set&lt;Pet&gt;
    * @deprecated
    */
   @Deprecated
@@ -203,7 +198,7 @@ public interface PetApi extends ApiClient.Api {
   @Headers({
   "Accept: application/json",
   })
-  Set<Pet> findPetsByTags(@QueryMap(encoded=true) FindPetsByTagsQueryParams queryParams);
+  java.util.Set<Pet> findPetsByTags(@QueryMap(encoded=true) FindPetsByTagsQueryParams queryParams);
 
   /**
   * Finds Pets by tags
@@ -215,7 +210,7 @@ public interface PetApi extends ApiClient.Api {
       *   <ul>
           *   <li>tags - Tags to filter by (required)</li>
       *   </ul>
-          * @return Set&lt;Pet&gt;
+          * @return java.util.Set&lt;Pet&gt;
           * @deprecated
       */
           @Deprecated
@@ -223,7 +218,7 @@ public interface PetApi extends ApiClient.Api {
       @Headers({
     "Accept: application/json",
       })
-   ApiResponse<Set<Pet>> findPetsByTagsWithHttpInfo(@QueryMap(encoded=true) FindPetsByTagsQueryParams queryParams);
+   ApiResponse<java.util.Set<Pet>> findPetsByTagsWithHttpInfo(@QueryMap(encoded=true) FindPetsByTagsQueryParams queryParams);
 
 
    /**
@@ -231,7 +226,7 @@ public interface PetApi extends ApiClient.Api {
    * <code>findPetsByTags</code> method in a fluent style.
    */
   public static class FindPetsByTagsQueryParams extends HashMap<String, Object> {
-    public FindPetsByTagsQueryParams tags(final Set<String> value) {
+    public FindPetsByTagsQueryParams tags(final java.util.Set<String> value) {
       put("tags", EncodingUtils.encodeCollection(value, "csv"));
       return this;
     }

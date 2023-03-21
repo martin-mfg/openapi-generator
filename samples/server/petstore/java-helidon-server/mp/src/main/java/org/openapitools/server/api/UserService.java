@@ -12,7 +12,6 @@
 
 package org.openapitools.server.api;
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.server.model.User;
 
@@ -35,12 +34,12 @@ public interface UserService {
     @POST
     @Path("/createWithArray")
     @Consumes({ "application/json" })
-    void createUsersWithArrayInput(@Valid @NotNull List<User> user);
+    void createUsersWithArrayInput(@Valid @NotNull java.util.List<User> user);
 
     @POST
     @Path("/createWithList")
     @Consumes({ "application/json" })
-    void createUsersWithListInput(@Valid @NotNull List<User> user);
+    void createUsersWithListInput(@Valid @NotNull java.util.List<User> user);
 
     @DELETE
     @Path("/{username}")

@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.DeprecatedObject;
 
 import com.google.gson.Gson;
@@ -66,7 +64,7 @@ public class ObjectWithDeprecatedFields {
 
   public static final String SERIALIZED_NAME_BARS = "bars";
   @SerializedName(SERIALIZED_NAME_BARS)
-  private List<String> bars;
+  private java.util.List<String> bars;
 
   public ObjectWithDeprecatedFields() {
   }
@@ -141,7 +139,7 @@ public class ObjectWithDeprecatedFields {
   }
 
 
-  public ObjectWithDeprecatedFields bars(List<String> bars) {
+  public ObjectWithDeprecatedFields bars(java.util.List<String> bars) {
     
     this.bars = bars;
     return this;
@@ -163,12 +161,12 @@ public class ObjectWithDeprecatedFields {
   @Deprecated
   @javax.annotation.Nullable
 
-  public List<String> getBars() {
+  public java.util.List<String> getBars() {
     return bars;
   }
 
 
-  public void setBars(List<String> bars) {
+  public void setBars(java.util.List<String> bars) {
     this.bars = bars;
   }
 

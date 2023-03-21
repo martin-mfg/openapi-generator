@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**justSymbol** | [**JustSymbolEnum**](#JustSymbolEnum) |  |  [optional] |
-|**arrayEnum** | [**List&lt;ArrayEnumEnum&gt;**](#List&lt;ArrayEnumEnum&gt;) |  |  [optional] |
+|**arrayEnum** | [**java.util.List&lt;ArrayEnumEnum&gt;**](#java.util.List&lt;ArrayEnumEnum&gt;) |  |  [optional] |
 
 
 
@@ -21,7 +21,7 @@
 
 
 
-## Enum: List&lt;ArrayEnumEnum&gt;
+## Enum: java.util.List&lt;ArrayEnumEnum&gt;
 
 | Name | Value |
 |---- | -----|

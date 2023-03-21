@@ -10,7 +10,7 @@
 |**uuid** | **String** |  |  [optional] |
 |**id** | **BigDecimal** |  |  [optional] |
 |**deprecatedRef** | [**DeprecatedObject**](DeprecatedObject.md) |  |  [optional] |
-|**bars** | **List&lt;String&gt;** |  |  [optional] |
+|**bars** | **java.util.List&lt;String&gt;** |  |  [optional] |
 
 
 

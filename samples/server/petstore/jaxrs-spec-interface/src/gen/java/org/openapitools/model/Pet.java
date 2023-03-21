@@ -1,12 +1,7 @@
 package org.openapitools.model;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import org.openapitools.model.Category;
 import org.openapitools.model.Tag;
 import java.io.Serializable;
@@ -28,8 +23,8 @@ public class Pet  implements Serializable {
   private @Valid Long id;
   private @Valid Category category;
   private @Valid String name;
-  private @Valid Set<String> photoUrls = new LinkedHashSet<>();
-  private @Valid List<Tag> tags;
+  private @Valid java.util.Set<String> photoUrls = new java.util.LinkedHashSet<>();
+  private @Valid java.util.List<Tag> tags;
   public enum StatusEnum {
 
     AVAILABLE(String.valueOf("available")), PENDING(String.valueOf("pending")), SOLD(String.valueOf("sold"));
@@ -139,7 +134,7 @@ public class Pet  implements Serializable {
 
   /**
    **/
-  public Pet photoUrls(Set<String> photoUrls) {
+  public Pet photoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
@@ -148,19 +143,18 @@ public class Pet  implements Serializable {
   @ApiModelProperty(required = true, value = "")
   @JsonProperty("photoUrls")
   @NotNull
-  public Set<String> getPhotoUrls() {
+  public java.util.Set<String> getPhotoUrls() {
     return photoUrls;
   }
 
   @JsonProperty("photoUrls")
-  @JsonDeserialize(as = LinkedHashSet.class)
-  public void setPhotoUrls(Set<String> photoUrls) {
+  public void setPhotoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
   public Pet addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new LinkedHashSet<>();
+      this.photoUrls = new java.util.LinkedHashSet<>();
     }
 
     this.photoUrls.add(photoUrlsItem);
@@ -176,7 +170,7 @@ public class Pet  implements Serializable {
   }
   /**
    **/
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     this.tags = tags;
     return this;
   }
@@ -184,12 +178,12 @@ public class Pet  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("tags")
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
   @JsonProperty("tags")
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 

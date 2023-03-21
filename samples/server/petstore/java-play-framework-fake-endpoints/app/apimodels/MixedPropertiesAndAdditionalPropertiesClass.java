@@ -2,9 +2,6 @@ package apimodels;
 
 import apimodels.Animal;
 import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
@@ -19,7 +16,7 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
   @JsonProperty("uuid")
   @Valid
 
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   @JsonProperty("dateTime")
   @Valid
@@ -29,9 +26,9 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
   @JsonProperty("map")
   @Valid
 
-  private Map<String, Animal> map = null;
+  private java.util.Map<String, Animal> map = null;
 
-  public MixedPropertiesAndAdditionalPropertiesClass uuid(UUID uuid) {
+  public MixedPropertiesAndAdditionalPropertiesClass uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -40,11 +37,11 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
    * Get uuid
    * @return uuid
   **/
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
@@ -65,14 +62,14 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
     this.dateTime = dateTime;
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClass map(Map<String, Animal> map) {
+  public MixedPropertiesAndAdditionalPropertiesClass map(java.util.Map<String, Animal> map) {
     this.map = map;
     return this;
   }
 
   public MixedPropertiesAndAdditionalPropertiesClass putMapItem(String key, Animal mapItem) {
     if (this.map == null) {
-      this.map = new HashMap<>();
+      this.map = new java.util.HashMap<>();
     }
     this.map.put(key, mapItem);
     return this;
@@ -82,11 +79,11 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
    * Get map
    * @return map
   **/
-  public Map<String, Animal> getMap() {
+  public java.util.Map<String, Animal> getMap() {
     return map;
   }
 
-  public void setMap(Map<String, Animal> map) {
+  public void setMap(java.util.Map<String, Animal> map) {
     this.map = map;
   }
 

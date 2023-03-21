@@ -4,7 +4,6 @@ import org.openapitools.api.*;
 
 import org.glassfish.jersey.media.multipart.FormDataBodyPart;
 
-import java.util.Map;
 import org.openapitools.model.Order;
 
 import java.util.List;

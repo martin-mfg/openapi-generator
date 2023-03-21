@@ -5,7 +5,6 @@ import java.io.InputStream;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
@@ -83,7 +82,7 @@ public class FormatTest   {
   @JsonProperty("uuid")
   @Valid
 
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   @JsonProperty("password")
   @NotNull
@@ -293,7 +292,7 @@ public class FormatTest   {
     this.dateTime = dateTime;
   }
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -302,11 +301,11 @@ public class FormatTest   {
    * Get uuid
    * @return uuid
   **/
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 

@@ -26,11 +26,11 @@ public class PetApiServiceImpl implements PetApi {
       // do some magic!
       return Response.ok().build();
   }
-      public Response findPetsByStatus(List<String> status,SecurityContext securityContext) {
+      public Response findPetsByStatus(java.util.List<String> status,SecurityContext securityContext) {
       // do some magic!
       return Response.ok().build();
   }
-      public Response findPetsByTags(List<String> tags,SecurityContext securityContext) {
+      public Response findPetsByTags(java.util.List<String> tags,SecurityContext securityContext) {
       // do some magic!
       return Response.ok().build();
   }

@@ -58,7 +58,7 @@ public class PetApiController extends Controller {
             throw new IllegalArgumentException("'status' parameter is required");
         }
         List<String> statusList = OpenAPIUtils.parametersToList("csv", statusArray);
-        List<String> status = new ArrayList<>();
+        java.util.List<String> status = new ArrayList<>();
         for (String curParam : statusList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation

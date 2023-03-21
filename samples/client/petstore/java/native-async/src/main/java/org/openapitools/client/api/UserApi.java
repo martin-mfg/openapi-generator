@@ -44,12 +44,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -58,10 +52,10 @@ public class UserApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public UserApi() {
     this(new ApiClient());
@@ -179,7 +173,7 @@ public class UserApi {
    * @return CompletableFuture&lt;Void&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<Void> createUsersWithArrayInput(List<User> user) throws ApiException {
+  public CompletableFuture<Void> createUsersWithArrayInput(java.util.List<User> user) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = createUsersWithArrayInputRequestBuilder(user);
       return memberVarHttpClient.sendAsync(
@@ -203,7 +197,7 @@ public class UserApi {
    * @return CompletableFuture&lt;ApiResponse&lt;Void&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<Void>> createUsersWithArrayInputWithHttpInfo(List<User> user) throws ApiException {
+  public CompletableFuture<ApiResponse<Void>> createUsersWithArrayInputWithHttpInfo(java.util.List<User> user) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = createUsersWithArrayInputRequestBuilder(user);
       return memberVarHttpClient.sendAsync(
@@ -226,7 +220,7 @@ public class UserApi {
     }
   }
 
-  private HttpRequest.Builder createUsersWithArrayInputRequestBuilder(List<User> user) throws ApiException {
+  private HttpRequest.Builder createUsersWithArrayInputRequestBuilder(java.util.List<User> user) throws ApiException {
     // verify the required parameter 'user' is set
     if (user == null) {
       throw new ApiException(400, "Missing the required parameter 'user' when calling createUsersWithArrayInput");
@@ -262,7 +256,7 @@ public class UserApi {
    * @return CompletableFuture&lt;Void&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<Void> createUsersWithListInput(List<User> user) throws ApiException {
+  public CompletableFuture<Void> createUsersWithListInput(java.util.List<User> user) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = createUsersWithListInputRequestBuilder(user);
       return memberVarHttpClient.sendAsync(
@@ -286,7 +280,7 @@ public class UserApi {
    * @return CompletableFuture&lt;ApiResponse&lt;Void&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<Void>> createUsersWithListInputWithHttpInfo(List<User> user) throws ApiException {
+  public CompletableFuture<ApiResponse<Void>> createUsersWithListInputWithHttpInfo(java.util.List<User> user) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = createUsersWithListInputRequestBuilder(user);
       return memberVarHttpClient.sendAsync(
@@ -309,7 +303,7 @@ public class UserApi {
     }
   }
 
-  private HttpRequest.Builder createUsersWithListInputRequestBuilder(List<User> user) throws ApiException {
+  private HttpRequest.Builder createUsersWithListInputRequestBuilder(java.util.List<User> user) throws ApiException {
     // verify the required parameter 'user' is set
     if (user == null) {
       throw new ApiException(400, "Missing the required parameter 'user' when calling createUsersWithListInput");
@@ -594,8 +588,8 @@ public class UserApi {
 
     String localVarPath = "/user/login";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "username";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("username", username));
@@ -603,7 +597,7 @@ public class UserApi {
     localVarQueryParams.addAll(ApiClient.parameterToPairs("password", password));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());

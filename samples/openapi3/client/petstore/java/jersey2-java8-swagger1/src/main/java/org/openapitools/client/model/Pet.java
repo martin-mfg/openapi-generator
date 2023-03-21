@@ -24,8 +24,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.Category;
 import org.openapitools.client.model.Tag;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -56,10 +54,10 @@ public class Pet {
   private String name;
 
   public static final String JSON_PROPERTY_PHOTO_URLS = "photoUrls";
-  private List<String> photoUrls = new ArrayList<>();
+  private java.util.List<String> photoUrls = new java.util.ArrayList<>();
 
   public static final String JSON_PROPERTY_TAGS = "tags";
-  private List<Tag> tags;
+  private java.util.List<Tag> tags;
 
   /**
    * pet status in the store
@@ -182,14 +180,14 @@ public class Pet {
   }
 
 
-  public Pet photoUrls(List<String> photoUrls) {
+  public Pet photoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
 
   public Pet addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new ArrayList<>();
+      this.photoUrls = new java.util.ArrayList<>();
     }
     this.photoUrls.add(photoUrlsItem);
     return this;
@@ -204,19 +202,19 @@ public class Pet {
   @JsonProperty(JSON_PROPERTY_PHOTO_URLS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<String> getPhotoUrls() {
+  public java.util.List<String> getPhotoUrls() {
     return photoUrls;
   }
 
 
   @JsonProperty(JSON_PROPERTY_PHOTO_URLS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setPhotoUrls(List<String> photoUrls) {
+  public void setPhotoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
 
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     this.tags = tags;
     return this;
   }
@@ -238,14 +236,14 @@ public class Pet {
   @JsonProperty(JSON_PROPERTY_TAGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
 
   @JsonProperty(JSON_PROPERTY_TAGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 

@@ -6,10 +6,6 @@ import org.openapitools.client.model.ApiResponse;
 
 import org.openapitools.client.model.FooGetDefaultResponse;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import feign.*;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")

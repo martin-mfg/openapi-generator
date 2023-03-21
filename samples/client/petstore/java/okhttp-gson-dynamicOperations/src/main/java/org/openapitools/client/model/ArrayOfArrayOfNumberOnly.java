@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,18 +51,18 @@ import org.openapitools.client.JSON;
 public class ArrayOfArrayOfNumberOnly {
   public static final String SERIALIZED_NAME_ARRAY_ARRAY_NUMBER = "ArrayArrayNumber";
   @SerializedName(SERIALIZED_NAME_ARRAY_ARRAY_NUMBER)
-  private List<List<BigDecimal>> arrayArrayNumber;
+  private java.util.List<java.util.List<BigDecimal>> arrayArrayNumber;
 
   public ArrayOfArrayOfNumberOnly() {
   }
 
-  public ArrayOfArrayOfNumberOnly arrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public ArrayOfArrayOfNumberOnly arrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     
     this.arrayArrayNumber = arrayArrayNumber;
     return this;
   }
 
-  public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(List<BigDecimal> arrayArrayNumberItem) {
+  public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(java.util.List<BigDecimal> arrayArrayNumberItem) {
     if (this.arrayArrayNumber == null) {
       this.arrayArrayNumber = new ArrayList<>();
     }
@@ -78,12 +76,12 @@ public class ArrayOfArrayOfNumberOnly {
   **/
   @javax.annotation.Nullable
 
-  public List<List<BigDecimal>> getArrayArrayNumber() {
+  public java.util.List<java.util.List<BigDecimal>> getArrayArrayNumber() {
     return arrayArrayNumber;
   }
 
 
-  public void setArrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public void setArrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     this.arrayArrayNumber = arrayArrayNumber;
   }
 

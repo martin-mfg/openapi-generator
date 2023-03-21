@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.io.UnsupportedEncodingException;
@@ -38,12 +36,12 @@ import java.util.StringJoiner;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<String> values;
+  private java.util.List<String> values;
 
   public TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter() {
   }
 
-  public TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter values(List<String> values) {
+  public TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter values(java.util.List<String> values) {
     
     this.values = values;
     return this;
@@ -65,14 +63,14 @@ public class TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter {
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<String> getValues() {
+  public java.util.List<String> getValues() {
     return values;
   }
 
 
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValues(List<String> values) {
+  public void setValues(java.util.List<String> values) {
     this.values = values;
   }
 

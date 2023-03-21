@@ -30,12 +30,12 @@ public class PetApiServiceImpl implements PetApiService {
       return Response.ok().entity("magic!").build();
   }
       @Override
-      public Response findPetsByStatus(List<String> status, SecurityContext securityContext) {
+      public Response findPetsByStatus(java.util.List<String> status, SecurityContext securityContext) {
       // do some magic!
       return Response.ok().entity("magic!").build();
   }
       @Override
-      public Response findPetsByTags(List<String> tags, SecurityContext securityContext) {
+      public Response findPetsByTags(java.util.List<String> tags, SecurityContext securityContext) {
       // do some magic!
       return Response.ok().entity("magic!").build();
   }

@@ -18,9 +18,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.client.model.Animal;
 
 
@@ -28,28 +25,28 @@ import org.openapitools.client.model.Animal;
 
 public class MixedPropertiesAndAdditionalPropertiesClass  {
   
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   private OffsetDateTime dateTime;
 
-  private Map<String, Animal> map = null;
+  private java.util.Map<String, Animal> map = null;
 
  /**
    * Get uuid
    * @return uuid
   **/
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
   /**
     * Set uuid
   **/
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClass uuid(UUID uuid) {
+  public MixedPropertiesAndAdditionalPropertiesClass uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -78,18 +75,18 @@ public class MixedPropertiesAndAdditionalPropertiesClass  {
    * Get map
    * @return map
   **/
-  public Map<String, Animal> getMap() {
+  public java.util.Map<String, Animal> getMap() {
     return map;
   }
 
   /**
     * Set map
   **/
-  public void setMap(Map<String, Animal> map) {
+  public void setMap(java.util.Map<String, Animal> map) {
     this.map = map;
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClass map(Map<String, Animal> map) {
+  public MixedPropertiesAndAdditionalPropertiesClass map(java.util.Map<String, Animal> map) {
     this.map = map;
     return this;
   }

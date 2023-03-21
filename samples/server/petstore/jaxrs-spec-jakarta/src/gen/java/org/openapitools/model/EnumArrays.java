@@ -2,8 +2,6 @@ package org.openapitools.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.io.Serializable;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
@@ -115,7 +113,7 @@ public class EnumArrays  implements Serializable {
     }
 }
 
-  private @Valid List<ArrayEnumEnum> arrayEnum;
+  private @Valid java.util.List<ArrayEnumEnum> arrayEnum;
 
   protected EnumArrays(EnumArraysBuilder<?, ?> b) {
     this.justSymbol = b.justSymbol;
@@ -146,7 +144,7 @@ public class EnumArrays  implements Serializable {
 
   /**
    **/
-  public EnumArrays arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public EnumArrays arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
     return this;
   }
@@ -154,12 +152,12 @@ public class EnumArrays  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("array_enum")
-  public List<ArrayEnumEnum> getArrayEnum() {
+  public java.util.List<ArrayEnumEnum> getArrayEnum() {
     return arrayEnum;
   }
 
   @JsonProperty("array_enum")
-  public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
   }
 
@@ -240,7 +238,7 @@ public class EnumArrays  implements Serializable {
 
   public static abstract class EnumArraysBuilder<C extends EnumArrays, B extends EnumArraysBuilder<C, B>>  {
     private JustSymbolEnum justSymbol;
-    private List<ArrayEnumEnum> arrayEnum;
+    private java.util.List<ArrayEnumEnum> arrayEnum;
     protected abstract B self();
 
     public abstract C build();
@@ -249,7 +247,7 @@ public class EnumArrays  implements Serializable {
       this.justSymbol = justSymbol;
       return self();
     }
-    public B arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+    public B arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
       this.arrayEnum = arrayEnum;
       return self();
     }

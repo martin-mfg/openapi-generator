@@ -8,8 +8,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -36,11 +34,11 @@ public class TypeHolderDefaultDto {
   private Boolean boolItem = true;
 
   @Valid
-  private List<Integer> arrayItem = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+  private java.util.List<Integer> arrayItem = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
 
   /**
    * Default constructor
-   * @deprecated Use {@link TypeHolderDefaultDto#TypeHolderDefaultDto(String, BigDecimal, Integer, Boolean, List<Integer>)}
+   * @deprecated Use {@link TypeHolderDefaultDto#TypeHolderDefaultDto(String, BigDecimal, Integer, Boolean, java.util.List<Integer>)}
    */
   @Deprecated
   public TypeHolderDefaultDto() {
@@ -50,7 +48,7 @@ public class TypeHolderDefaultDto {
   /**
    * Constructor with only required parameters
    */
-  public TypeHolderDefaultDto(String stringItem, BigDecimal numberItem, Integer integerItem, Boolean boolItem, List<Integer> arrayItem) {
+  public TypeHolderDefaultDto(String stringItem, BigDecimal numberItem, Integer integerItem, Boolean boolItem, java.util.List<Integer> arrayItem) {
     this.stringItem = stringItem;
     this.numberItem = numberItem;
     this.integerItem = integerItem;
@@ -138,7 +136,7 @@ public class TypeHolderDefaultDto {
     this.boolItem = boolItem;
   }
 
-  public TypeHolderDefaultDto arrayItem(List<Integer> arrayItem) {
+  public TypeHolderDefaultDto arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
@@ -158,11 +156,11 @@ public class TypeHolderDefaultDto {
   @NotNull 
   @ApiModelProperty(required = true, value = "")
   @JsonProperty("array_item")
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

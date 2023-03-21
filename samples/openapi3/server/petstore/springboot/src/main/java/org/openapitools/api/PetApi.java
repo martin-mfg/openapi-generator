@@ -158,7 +158,7 @@ public interface PetApi {
         produces = { "application/xml", "application/json" }
     )
     default ResponseEntity<List<Pet>> findPetsByStatus(
-        @NotNull @Parameter(name = "status", description = "Status values that need to be considered for filter", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "status", required = true) List<String> status
+        @NotNull @Parameter(name = "status", description = "Status values that need to be considered for filter", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "status", required = true) java.util.List<String> status
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
@@ -211,7 +211,7 @@ public interface PetApi {
         produces = { "application/xml", "application/json" }
     )
     default ResponseEntity<List<Pet>> findPetsByTags(
-        @NotNull @Parameter(name = "tags", description = "Tags to filter by", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "tags", required = true) List<String> tags
+        @NotNull @Parameter(name = "tags", description = "Tags to filter by", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "tags", required = true) java.util.List<String> tags
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {

@@ -3,7 +3,6 @@ package controllers;
 import java.io.InputStream;
 import apimodels.ModelApiResponse;
 import apimodels.Pet;
-import java.util.Set;
 
 import com.typesafe.config.Config;
 import play.mvc.Controller;
@@ -73,7 +72,7 @@ public class PetApiController extends Controller {
             throw new IllegalArgumentException("'status' parameter is required");
         }
         List<String> statusList = OpenAPIUtils.parametersToList("csv", statusArray);
-        List<String> status = new ArrayList<>();
+        java.util.List<String> status = new ArrayList<>();
         for (String curParam : statusList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -90,7 +89,7 @@ public class PetApiController extends Controller {
             throw new IllegalArgumentException("'tags' parameter is required");
         }
         List<String> tagsList = OpenAPIUtils.parametersToList("csv", tagsArray);
-        Set<String> tags = new LinkedHashSet<>();
+        java.util.Set<String> tags = new LinkedHashSet<>();
         for (String curParam : tagsList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation

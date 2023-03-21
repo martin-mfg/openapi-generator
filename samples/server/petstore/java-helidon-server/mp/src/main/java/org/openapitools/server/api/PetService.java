@@ -15,7 +15,6 @@ package org.openapitools.server.api;
 import java.io.File;
 import org.openapitools.server.model.ModelApiResponse;
 import org.openapitools.server.model.Pet;
-import java.util.Set;
 
 import jakarta.ws.rs.*;
 
@@ -41,12 +40,12 @@ public interface PetService {
     @GET
     @Path("/pet/findByStatus")
     @Produces({ "application/xml", "application/json" })
-    List<Pet> findPetsByStatus(@QueryParam("status") @NotNull List<String> status);
+    List<Pet> findPetsByStatus(@QueryParam("status") @NotNull java.util.List<String> status);
 
     @GET
     @Path("/pet/findByTags")
     @Produces({ "application/xml", "application/json" })
-    Set<Pet> findPetsByTags(@QueryParam("tags") @NotNull Set<String> tags);
+    Set<Pet> findPetsByTags(@QueryParam("tags") @NotNull java.util.Set<String> tags);
 
     @GET
     @Path("/pet/{petId}")

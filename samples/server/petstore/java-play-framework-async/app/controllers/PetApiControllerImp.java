@@ -27,18 +27,18 @@ public class PetApiControllerImp extends PetApiControllerImpInterface {
     }
 
     @Override
-    public CompletionStage<List<Pet>> findPetsByStatus(Http.Request request, @NotNull List<String> status) throws Exception {
+    public CompletionStage<array<java.util.List<Pet>>> findPetsByStatus(Http.Request request, @NotNull java.util.List<String> status) throws Exception {
         //Do your magic!!!
         return CompletableFuture.supplyAsync(() -> {
-           return new ArrayList<Pet>();
+           return new ArrayList<java.util.List<Pet>>();
         });
     }
 
     @Override
-    public CompletionStage<List<Pet>> findPetsByTags(Http.Request request, @NotNull List<String> tags) throws Exception {
+    public CompletionStage<array<java.util.List<Pet>>> findPetsByTags(Http.Request request, @NotNull java.util.List<String> tags) throws Exception {
         //Do your magic!!!
         return CompletableFuture.supplyAsync(() -> {
-           return new ArrayList<Pet>();
+           return new ArrayList<java.util.List<Pet>>();
         });
     }
 

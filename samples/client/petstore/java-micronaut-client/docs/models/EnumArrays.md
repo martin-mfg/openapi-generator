@@ -9,7 +9,7 @@ The class is defined in **[EnumArrays.java](../../src/main/java/org/openapitools
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **justSymbol** | [**JustSymbolEnum**](#JustSymbolEnum) |  |  [optional property]
-**arrayEnum** | [**List&lt;ArrayEnumEnum&gt;**](#List&lt;ArrayEnumEnum&gt;) |  |  [optional property]
+**arrayEnum** | [**java.util.List&lt;ArrayEnumEnum&gt;**](#java.util.List&lt;ArrayEnumEnum&gt;) |  |  [optional property]
 
 ## JustSymbolEnum
 
@@ -18,7 +18,7 @@ Name | Value
 GREATER_THAN_OR_EQUAL_TO | `">="`
 DOLLAR | `"$"`
 
-## List&lt;ArrayEnumEnum&gt;
+## java.util.List&lt;ArrayEnumEnum&gt;
 
 Name | Value
 ---- | -----

@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**values** | **List&lt;String&gt;** |  |  [optional] |
+|**values** | **java.util.List&lt;String&gt;** |  |  [optional] |
 
 
 

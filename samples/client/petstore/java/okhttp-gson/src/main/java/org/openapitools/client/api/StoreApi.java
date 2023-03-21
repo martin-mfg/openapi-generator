@@ -30,10 +30,6 @@ import java.io.IOException;
 import org.openapitools.client.model.Order;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.ws.rs.core.GenericType;
 
 public class StoreApi {
@@ -106,11 +102,11 @@ public class StoreApi {
         String localVarPath = "/store/order/{order_id}"
             .replace("{" + "order_id" + "}", localVarApiClient.escapeString(orderId.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -225,11 +221,11 @@ public class StoreApi {
         // create path and map variables
         String localVarPath = "/store/inventory";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "application/json"
@@ -259,7 +255,7 @@ public class StoreApi {
     /**
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
-     * @return Map&lt;String, Integer&gt;
+     * @return java.util.Map&lt;String, Integer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -267,15 +263,15 @@ public class StoreApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public Map<String, Integer> getInventory() throws ApiException {
-        ApiResponse<Map<String, Integer>> localVarResp = getInventoryWithHttpInfo();
+    public java.util.Map<String, Integer> getInventory() throws ApiException {
+        ApiResponse<java.util.Map<String, Integer>> localVarResp = getInventoryWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
-     * @return ApiResponse&lt;Map&lt;String, Integer&gt;&gt;
+     * @return ApiResponse&lt;java.util.Map&lt;String, Integer&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -283,9 +279,9 @@ public class StoreApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Map<String, Integer>> getInventoryWithHttpInfo() throws ApiException {
+    public ApiResponse<java.util.Map<String, Integer>> getInventoryWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getInventoryValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<Map<String, Integer>>(){}.getType();
+        Type localVarReturnType = new TypeToken<java.util.Map<String, Integer>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -301,10 +297,10 @@ public class StoreApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInventoryAsync(final ApiCallback<Map<String, Integer>> _callback) throws ApiException {
+    public okhttp3.Call getInventoryAsync(final ApiCallback<java.util.Map<String, Integer>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getInventoryValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<Map<String, Integer>>(){}.getType();
+        Type localVarReturnType = new TypeToken<java.util.Map<String, Integer>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -342,11 +338,11 @@ public class StoreApi {
         String localVarPath = "/store/order/{order_id}"
             .replace("{" + "order_id" + "}", localVarApiClient.escapeString(orderId.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "application/xml",
@@ -472,11 +468,11 @@ public class StoreApi {
         // create path and map variables
         String localVarPath = "/store/order";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "application/xml",

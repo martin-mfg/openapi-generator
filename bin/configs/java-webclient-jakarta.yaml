@@ -7,3 +7,4 @@ additionalProperties:
   artifactId: petstore-webclient
   hideGenerationTimestamp: "true"
   useJakartaEe: true
+  fullJavaUtil: true

@@ -69,15 +69,15 @@ public abstract class PetApiControllerImpInterface {
 
     public abstract void deletePet(Http.Request request, Long petId, String apiKey) throws Exception;
 
-    public CompletionStage<Result> findPetsByStatusHttp(Http.Request request, @NotNull List<String> status) throws Exception {
+    public CompletionStage<Result> findPetsByStatusHttp(Http.Request request, @NotNull java.util.List<String> status) throws Exception {
         if (!securityAPIUtils.isRequestTokenValid(request, "petstore_auth")) {
             return CompletableFuture.supplyAsync(play.mvc.Results::unauthorized);
         }
 
-        CompletionStage<List<Pet>> stage = findPetsByStatus(request, status).thenApply(obj -> { 
+        CompletionStage<array<java.util.List<Pet>>> stage = findPetsByStatus(request, status).thenApply(obj -> { 
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
-            for (Pet curItem : obj) {
+            for (java.util.List<Pet> curItem : obj) {
                 OpenAPIUtils.validate(curItem);
             }
         }
@@ -92,17 +92,17 @@ return stage.thenApply(obj -> {
 
     }
 
-    public abstract CompletionStage<List<Pet>> findPetsByStatus(Http.Request request, @NotNull List<String> status) throws Exception;
+    public abstract CompletionStage<array<java.util.List<Pet>>> findPetsByStatus(Http.Request request, @NotNull java.util.List<String> status) throws Exception;
 
-    public CompletionStage<Result> findPetsByTagsHttp(Http.Request request, @NotNull List<String> tags) throws Exception {
+    public CompletionStage<Result> findPetsByTagsHttp(Http.Request request, @NotNull java.util.List<String> tags) throws Exception {
         if (!securityAPIUtils.isRequestTokenValid(request, "petstore_auth")) {
             return CompletableFuture.supplyAsync(play.mvc.Results::unauthorized);
         }
 
-        CompletionStage<List<Pet>> stage = findPetsByTags(request, tags).thenApply(obj -> { 
+        CompletionStage<array<java.util.List<Pet>>> stage = findPetsByTags(request, tags).thenApply(obj -> { 
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
-            for (Pet curItem : obj) {
+            for (java.util.List<Pet> curItem : obj) {
                 OpenAPIUtils.validate(curItem);
             }
         }
@@ -117,7 +117,7 @@ return stage.thenApply(obj -> {
 
     }
 
-    public abstract CompletionStage<List<Pet>> findPetsByTags(Http.Request request, @NotNull List<String> tags) throws Exception;
+    public abstract CompletionStage<array<java.util.List<Pet>>> findPetsByTags(Http.Request request, @NotNull java.util.List<String> tags) throws Exception;
 
     public CompletionStage<Result> getPetByIdHttp(Http.Request request, Long petId) throws Exception {
         CompletionStage<Pet> stage = getPetById(request, petId).thenApply(obj -> { 

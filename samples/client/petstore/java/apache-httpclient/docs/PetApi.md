@@ -162,7 +162,7 @@ null (empty response body)
 
 ## findPetsByStatus
 
-> List&lt;Pet&gt; findPetsByStatus(status)
+> java.util.List&lt;Pet&gt; findPetsByStatus(status)
 
 Finds Pets by status
 
@@ -189,9 +189,9 @@ public class Example {
         petstore_auth.setAccessToken("YOUR ACCESS TOKEN");
 
         PetApi apiInstance = new PetApi(defaultClient);
-        List<String> status = Arrays.asList("available"); // List<String> | Status values that need to be considered for filter
+        java.util.List<String> status = Arrays.asList("available"); // java.util.List<String> | Status values that need to be considered for filter
         try {
-            List<Pet> result = apiInstance.findPetsByStatus(status);
+            java.util.List<Pet> result = apiInstance.findPetsByStatus(status);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PetApi#findPetsByStatus");
@@ -209,11 +209,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **status** | [**List&lt;String&gt;**](String.md)| Status values that need to be considered for filter | [enum: available, pending, sold] |
+| **status** | [**java.util.List&lt;String&gt;**](String.md)| Status values that need to be considered for filter | [enum: available, pending, sold] |
 
 ### Return type
 
-[**List&lt;Pet&gt;**](Pet.md)
+[**java.util.List&lt;Pet&gt;**](Pet.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ public class Example {
 
 ## findPetsByTags
 
-> Set&lt;Pet&gt; findPetsByTags(tags)
+> java.util.Set&lt;Pet&gt; findPetsByTags(tags)
 
 Finds Pets by tags
 
@@ -261,9 +261,9 @@ public class Example {
         petstore_auth.setAccessToken("YOUR ACCESS TOKEN");
 
         PetApi apiInstance = new PetApi(defaultClient);
-        Set<String> tags = Arrays.asList(); // Set<String> | Tags to filter by
+        java.util.Set<String> tags = Arrays.asList(); // java.util.Set<String> | Tags to filter by
         try {
-            Set<Pet> result = apiInstance.findPetsByTags(tags);
+            java.util.Set<Pet> result = apiInstance.findPetsByTags(tags);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PetApi#findPetsByTags");
@@ -281,11 +281,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tags** | [**Set&lt;String&gt;**](String.md)| Tags to filter by | |
+| **tags** | [**java.util.Set&lt;String&gt;**](String.md)| Tags to filter by | |
 
 ### Return type
 
-[**Set&lt;Pet&gt;**](Pet.md)
+[**java.util.Set&lt;Pet&gt;**](Pet.md)
 
 ### Authorization
 

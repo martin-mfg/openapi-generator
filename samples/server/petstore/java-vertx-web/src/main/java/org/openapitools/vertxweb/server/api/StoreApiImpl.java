@@ -18,7 +18,7 @@ public class StoreApiImpl implements StoreApi {
         return Future.failedFuture(new HttpException(501));
     }
 
-    public Future<ApiResponse<Map<String, Integer>>> getInventory() {
+    public Future<ApiResponse<java.util.Map<String, Integer>>> getInventory() {
         return Future.failedFuture(new HttpException(501));
     }
 

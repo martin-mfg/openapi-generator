@@ -6,8 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
@@ -35,7 +33,7 @@ public class TypeHolderExampleDto {
   private Boolean boolItem;
 
   
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   public TypeHolderExampleDto stringItem(String stringItem) {
     this.stringItem = stringItem;
@@ -132,14 +130,14 @@ public class TypeHolderExampleDto {
     this.boolItem = boolItem;
   }
 
-  public TypeHolderExampleDto arrayItem(List<Integer> arrayItem) {
+  public TypeHolderExampleDto arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
 
   public TypeHolderExampleDto addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
     this.arrayItem.add(arrayItemItem);
     return this;
@@ -151,11 +149,11 @@ public class TypeHolderExampleDto {
   */
   @NotNull
   @JsonProperty("array_item")
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

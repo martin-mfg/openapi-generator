@@ -18,32 +18,30 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 
 
 
 public class ArrayOfNumberOnly  {
   
-  private List<BigDecimal> arrayNumber = null;
+  private java.util.List<BigDecimal> arrayNumber = null;
 
  /**
    * Get arrayNumber
    * @return arrayNumber
   **/
-  public List<BigDecimal> getArrayNumber() {
+  public java.util.List<BigDecimal> getArrayNumber() {
     return arrayNumber;
   }
 
   /**
     * Set arrayNumber
   **/
-  public void setArrayNumber(List<BigDecimal> arrayNumber) {
+  public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
   }
 
-  public ArrayOfNumberOnly arrayNumber(List<BigDecimal> arrayNumber) {
+  public ArrayOfNumberOnly arrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
     return this;
   }

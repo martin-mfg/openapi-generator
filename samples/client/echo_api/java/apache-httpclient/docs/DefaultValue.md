@@ -8,18 +8,18 @@ to test the default value of properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**arrayStringEnumRefDefault** | **List&lt;StringEnumRef&gt;** |  |  [optional] |
-|**arrayStringEnumDefault** | [**List&lt;ArrayStringEnumDefaultEnum&gt;**](#List&lt;ArrayStringEnumDefaultEnum&gt;) |  |  [optional] |
-|**arrayStringDefault** | **List&lt;String&gt;** |  |  [optional] |
-|**arrayIntegerDefault** | **List&lt;Integer&gt;** |  |  [optional] |
-|**arrayString** | **List&lt;String&gt;** |  |  [optional] |
-|**arrayStringNullable** | **List&lt;String&gt;** |  |  [optional] |
-|**arrayStringExtensionNullable** | **List&lt;String&gt;** |  |  [optional] |
+|**arrayStringEnumRefDefault** | **java.util.List&lt;StringEnumRef&gt;** |  |  [optional] |
+|**arrayStringEnumDefault** | [**java.util.List&lt;ArrayStringEnumDefaultEnum&gt;**](#java.util.List&lt;ArrayStringEnumDefaultEnum&gt;) |  |  [optional] |
+|**arrayStringDefault** | **java.util.List&lt;String&gt;** |  |  [optional] |
+|**arrayIntegerDefault** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
+|**arrayString** | **java.util.List&lt;String&gt;** |  |  [optional] |
+|**arrayStringNullable** | **java.util.List&lt;String&gt;** |  |  [optional] |
+|**arrayStringExtensionNullable** | **java.util.List&lt;String&gt;** |  |  [optional] |
 |**stringNullable** | **String** |  |  [optional] |
 
 
 
-## Enum: List&lt;ArrayStringEnumDefaultEnum&gt;
+## Enum: java.util.List&lt;ArrayStringEnumDefaultEnum&gt;
 
 | Name | Value |
 |---- | -----|

@@ -8,7 +8,7 @@ The class is defined in **[ArrayOfNumberOnly.java](../../src/main/java/org/opena
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**arrayNumber** | `List&lt;BigDecimal&gt;` |  |  [optional property]
+**arrayNumber** | `java.util.List&lt;BigDecimal&gt;` |  |  [optional property]
 
 
 

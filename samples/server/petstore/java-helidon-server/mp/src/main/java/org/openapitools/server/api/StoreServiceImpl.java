@@ -12,7 +12,6 @@
 
 package org.openapitools.server.api;
 
-import java.util.Map;
 import org.openapitools.server.model.Order;
 
 import jakarta.ws.rs.*;
@@ -37,7 +36,7 @@ public class StoreServiceImpl implements StoreService {
     @Path("/inventory")
     @Produces({ "application/json" })
     public Map<String, Integer> getInventory() {
-        Map<String, Integer> result = java.util.Collections.emptyMap(); // Replace with correct business logic.
+        java.util.Map<String, Integer> result = java.util.Collections.emptyMap(); // Replace with correct business logic.
         return result;
     }
 

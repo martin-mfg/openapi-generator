@@ -19,7 +19,6 @@ import java.io.File;
 import org.openapitools.server.model.FileSchemaTestClass;
 import org.openapitools.server.model.HealthCheckResult;
 import java.time.LocalDate;
-import java.util.Map;
 import java.time.OffsetDateTime;
 import org.openapitools.server.model.OuterComposite;
 import org.openapitools.server.model.OuterObjectWithEnumProperty;
@@ -131,7 +130,7 @@ public class FakeServiceImpl implements FakeService {
 
     @GET
     @Consumes({ "application/x-www-form-urlencoded" })
-    public void testEnumParameters(@HeaderParam("enum_header_string_array")  List<String> enumHeaderStringArray,@HeaderParam("enum_header_string")  @DefaultValue("-efg") String enumHeaderString,@QueryParam("enum_query_string_array") List<String> enumQueryStringArray,@QueryParam("enum_query_string") @DefaultValue("-efg") String enumQueryString,@QueryParam("enum_query_integer") Integer enumQueryInteger,@QueryParam("enum_query_double") Double enumQueryDouble,@QueryParam("enum_query_model_array") List<EnumClass> enumQueryModelArray,@FormParam(value = "enum_form_string_array")  List<String> enumFormStringArray,@FormParam(value = "enum_form_string")  String enumFormString) {
+    public void testEnumParameters(@HeaderParam("enum_header_string_array")  java.util.List<String> enumHeaderStringArray,@HeaderParam("enum_header_string")  @DefaultValue("-efg") String enumHeaderString,@QueryParam("enum_query_string_array") java.util.List<String> enumQueryStringArray,@QueryParam("enum_query_string") @DefaultValue("-efg") String enumQueryString,@QueryParam("enum_query_integer") Integer enumQueryInteger,@QueryParam("enum_query_double") Double enumQueryDouble,@QueryParam("enum_query_model_array") java.util.List<EnumClass> enumQueryModelArray,@FormParam(value = "enum_form_string_array")  java.util.List<String> enumFormStringArray,@FormParam(value = "enum_form_string")  String enumFormString) {
     }
 
     @DELETE
@@ -141,7 +140,7 @@ public class FakeServiceImpl implements FakeService {
     @POST
     @Path("/inline-additionalProperties")
     @Consumes({ "application/json" })
-    public void testInlineAdditionalProperties(@Valid @NotNull Map<String, String> requestBody) {
+    public void testInlineAdditionalProperties(@Valid @NotNull java.util.Map<String, String> requestBody) {
     }
 
     @GET
@@ -152,6 +151,6 @@ public class FakeServiceImpl implements FakeService {
 
     @PUT
     @Path("/test-query-parameters")
-    public void testQueryParameterCollectionFormat(@QueryParam("pipe") @NotNull List<String> pipe,@QueryParam("ioutil") @NotNull List<String> ioutil,@QueryParam("http") @NotNull List<String> http,@QueryParam("url") @NotNull List<String> url,@QueryParam("context") @NotNull List<String> context,@QueryParam("allowEmpty") @NotNull String allowEmpty,@QueryParam("language") Map<String, String> language) {
+    public void testQueryParameterCollectionFormat(@QueryParam("pipe") @NotNull java.util.List<String> pipe,@QueryParam("ioutil") @NotNull java.util.List<String> ioutil,@QueryParam("http") @NotNull java.util.List<String> http,@QueryParam("url") @NotNull java.util.List<String> url,@QueryParam("context") @NotNull java.util.List<String> context,@QueryParam("allowEmpty") @NotNull String allowEmpty,@QueryParam("language") java.util.Map<String, String> language) {
     }
 }

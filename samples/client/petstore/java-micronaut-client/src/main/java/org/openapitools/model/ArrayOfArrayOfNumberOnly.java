@@ -15,8 +15,6 @@ package org.openapitools.model;
 import java.util.Objects;
 import java.util.Arrays;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.*;
 
 import javax.validation.constraints.*;
@@ -35,16 +33,16 @@ import javax.annotation.Generated;
 @Introspected
 public class ArrayOfArrayOfNumberOnly {
     public static final String JSON_PROPERTY_ARRAY_ARRAY_NUMBER = "ArrayArrayNumber";
-    private List<List<BigDecimal>> arrayArrayNumber = null;
+    private java.util.List<java.util.List<BigDecimal>> arrayArrayNumber = null;
 
     public ArrayOfArrayOfNumberOnly() {
     }
-    public ArrayOfArrayOfNumberOnly arrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+    public ArrayOfArrayOfNumberOnly arrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
         this.arrayArrayNumber = arrayArrayNumber;
         return this;
     }
 
-    public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(List<BigDecimal> arrayArrayNumberItem) {
+    public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(java.util.List<BigDecimal> arrayArrayNumberItem) {
         if (this.arrayArrayNumber == null) {
             this.arrayArrayNumber = new ArrayList<>();
         }
@@ -59,13 +57,13 @@ public class ArrayOfArrayOfNumberOnly {
     @Nullable
     @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_NUMBER)
     @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-    public List<List<BigDecimal>> getArrayArrayNumber() {
+    public java.util.List<java.util.List<BigDecimal>> getArrayArrayNumber() {
         return arrayArrayNumber;
     }
 
     @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_NUMBER)
     @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-    public void setArrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+    public void setArrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
         this.arrayArrayNumber = arrayArrayNumber;
     }
 

@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter
@@ -31,12 +29,12 @@ import java.util.List;
 public class TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter {
   public static final String SERIALIZED_NAME_VALUES = "values";
   @SerializedName(SERIALIZED_NAME_VALUES)
-  private List<String> values;
+  private java.util.List<String> values;
 
   public TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter() {
   }
 
-  public TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter values(List<String> values) {
+  public TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter values(java.util.List<String> values) {
     
     this.values = values;
     return this;
@@ -56,12 +54,12 @@ public class TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter {
   **/
   @javax.annotation.Nullable
 
-  public List<String> getValues() {
+  public java.util.List<String> getValues() {
     return values;
   }
 
 
-  public void setValues(List<String> values) {
+  public void setValues(java.util.List<String> values) {
     this.values = values;
   }
 

@@ -6,8 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
@@ -22,7 +20,7 @@ import jakarta.annotation.Generated;
 
 @JsonTypeName("AdditionalPropertiesNumber")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
-public class AdditionalPropertiesNumberDto extends HashMap<String, BigDecimal> {
+public class AdditionalPropertiesNumberDto extends java.util.HashMap<String, BigDecimal> {
 
   private String name;
 

@@ -6,7 +6,6 @@ import org.openapitools.model.Client;
 import java.io.File;
 import org.openapitools.model.FileSchemaTestClass;
 import java.time.LocalDate;
-import java.util.Map;
 import org.openapitools.model.ModelApiResponse;
 import java.time.OffsetDateTime;
 import org.openapitools.model.OuterComposite;
@@ -71,7 +70,7 @@ public class FakeApiServiceImpl extends FakeApiService {
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, SecurityContext securityContext) throws NotFoundException {
+    public Response testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
@@ -81,7 +80,7 @@ public class FakeApiServiceImpl extends FakeApiService {
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response testInlineAdditionalProperties(Map<String, String> param, SecurityContext securityContext) throws NotFoundException {
+    public Response testInlineAdditionalProperties(java.util.Map<String, String> param, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
@@ -91,7 +90,7 @@ public class FakeApiServiceImpl extends FakeApiService {
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response testQueryParameterCollectionFormat( @NotNull List<String> pipe,  @NotNull List<String> ioutil,  @NotNull List<String> http,  @NotNull List<String> url,  @NotNull List<String> context, SecurityContext securityContext) throws NotFoundException {
+    public Response testQueryParameterCollectionFormat( @NotNull java.util.List<String> pipe,  @NotNull java.util.List<String> ioutil,  @NotNull java.util.List<String> http,  @NotNull java.util.List<String> url,  @NotNull java.util.List<String> context, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }

@@ -9,10 +9,9 @@ import io.swagger.jaxrs.*;
 
 import java.math.BigDecimal;
 import org.openapitools.model.Client;
-import java.util.Date;
+import org.openapitools.model.Date;
 import java.io.File;
 import org.openapitools.model.FileSchemaTestClass;
-import java.util.Map;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.OuterComposite;
 import org.openapitools.model.User;
@@ -160,7 +159,7 @@ public class FakeApi  {
             @FormDataParam("binary") InputStream binaryInputStream,
             @FormDataParam("binary") FileInfo binaryDetail
 ,@ApiParam(value = "None")  @FormParam("date")  Date date
-,@ApiParam(value = "None")  @FormParam("dateTime")  Date dateTime
+,@ApiParam(value = "None")  @FormParam("dateTime")  java.util.Date dateTime
 ,@ApiParam(value = "None")  @FormParam("password")  String password
 ,@ApiParam(value = "None")  @FormParam("callback")  String paramCallback
 )
@@ -176,13 +175,13 @@ public class FakeApi  {
         @io.swagger.annotations.ApiResponse(code = 400, message = "Invalid request", response = Void.class),
         
         @io.swagger.annotations.ApiResponse(code = 404, message = "Not found", response = Void.class) })
-    public Response testEnumParameters(@ApiParam(value = "Header parameter enum test (string array)" , allowableValues=">, $")@HeaderParam("enum_header_string_array") List<String> enumHeaderStringArray
+    public Response testEnumParameters(@ApiParam(value = "Header parameter enum test (string array)" , allowableValues=">, $")@HeaderParam("enum_header_string_array") java.util.List<String> enumHeaderStringArray
 ,@ApiParam(value = "Header parameter enum test (string)" , allowableValues="_abc, -efg, (xyz)", defaultValue="-efg")@HeaderParam("enum_header_string") String enumHeaderString
-,@ApiParam(value = "Query parameter enum test (string array)", allowableValues=">, $") @QueryParam("enum_query_string_array") List<String> enumQueryStringArray
+,@ApiParam(value = "Query parameter enum test (string array)", allowableValues=">, $") @QueryParam("enum_query_string_array") java.util.List<String> enumQueryStringArray
 ,@ApiParam(value = "Query parameter enum test (string)", allowableValues="_abc, -efg, (xyz)", defaultValue="-efg") @DefaultValue("-efg") @QueryParam("enum_query_string") String enumQueryString
 ,@ApiParam(value = "Query parameter enum test (double)", allowableValues="1, -2") @QueryParam("enum_query_integer") Integer enumQueryInteger
 ,@ApiParam(value = "Query parameter enum test (double)", allowableValues="1.1, -1.2") @QueryParam("enum_query_double") Double enumQueryDouble
-,@ApiParam(value = "Form parameter enum test (string array)", allowableValues=">, $", defaultValue="$")  @DefaultValue("$") @FormParam("enum_form_string_array")  List<String> enumFormStringArray
+,@ApiParam(value = "Form parameter enum test (string array)", allowableValues=">, $", defaultValue="$")  @DefaultValue("$") @FormParam("enum_form_string_array")  java.util.List<String> enumFormStringArray
 ,@ApiParam(value = "Form parameter enum test (string)", allowableValues="_abc, -efg, (xyz)", defaultValue="-efg")  @DefaultValue("-efg") @FormParam("enum_form_string")  String enumFormString
 )
     throws NotFoundException {
@@ -212,7 +211,7 @@ public class FakeApi  {
     @io.swagger.annotations.ApiOperation(value = "test inline additionalProperties", notes = "", response = Void.class, tags={ "fake", })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = Void.class) })
-    public Response testInlineAdditionalProperties(@ApiParam(value = "request body" ,required=true) Map<String, String> param
+    public Response testInlineAdditionalProperties(@ApiParam(value = "request body" ,required=true) java.util.Map<String, String> param
 )
     throws NotFoundException {
         return delegate.testInlineAdditionalProperties(param);
@@ -237,11 +236,11 @@ public class FakeApi  {
     @io.swagger.annotations.ApiOperation(value = "", notes = "To test the collection format in query parameters", response = Void.class, tags={ "fake", })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "Success", response = Void.class) })
-    public Response testQueryParameterCollectionFormat(@ApiParam(value = "",required=true) @QueryParam("pipe") List<String> pipe
-,@ApiParam(value = "",required=true) @QueryParam("ioutil") List<String> ioutil
-,@ApiParam(value = "",required=true) @QueryParam("http") List<String> http
-,@ApiParam(value = "",required=true) @QueryParam("url") List<String> url
-,@ApiParam(value = "",required=true) @QueryParam("context") List<String> context
+    public Response testQueryParameterCollectionFormat(@ApiParam(value = "",required=true) @QueryParam("pipe") java.util.List<String> pipe
+,@ApiParam(value = "",required=true) @QueryParam("ioutil") java.util.List<String> ioutil
+,@ApiParam(value = "",required=true) @QueryParam("http") java.util.List<String> http
+,@ApiParam(value = "",required=true) @QueryParam("url") java.util.List<String> url
+,@ApiParam(value = "",required=true) @QueryParam("context") java.util.List<String> context
 )
     throws NotFoundException {
         return delegate.testQueryParameterCollectionFormat(pipe,ioutil,http,url,context);

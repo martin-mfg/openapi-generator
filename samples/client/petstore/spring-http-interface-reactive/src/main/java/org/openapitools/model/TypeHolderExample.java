@@ -5,8 +5,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
@@ -33,11 +31,11 @@ public class TypeHolderExample {
   private Boolean boolItem;
 
   
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   /**
    * Default constructor
-   * @deprecated Use {@link TypeHolderExample#TypeHolderExample(String, BigDecimal, Float, Integer, Boolean, List<Integer>)}
+   * @deprecated Use {@link TypeHolderExample#TypeHolderExample(String, BigDecimal, Float, Integer, Boolean, java.util.List<Integer>)}
    */
   @Deprecated
   public TypeHolderExample() {
@@ -47,7 +45,7 @@ public class TypeHolderExample {
   /**
    * Constructor with only required parameters
    */
-  public TypeHolderExample(String stringItem, BigDecimal numberItem, Float floatItem, Integer integerItem, Boolean boolItem, List<Integer> arrayItem) {
+  public TypeHolderExample(String stringItem, BigDecimal numberItem, Float floatItem, Integer integerItem, Boolean boolItem, java.util.List<Integer> arrayItem) {
     this.stringItem = stringItem;
     this.numberItem = numberItem;
     this.floatItem = floatItem;
@@ -151,14 +149,14 @@ public class TypeHolderExample {
     this.boolItem = boolItem;
   }
 
-  public TypeHolderExample arrayItem(List<Integer> arrayItem) {
+  public TypeHolderExample arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
 
   public TypeHolderExample addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
     this.arrayItem.add(arrayItemItem);
     return this;
@@ -170,11 +168,11 @@ public class TypeHolderExample {
   */
   @NotNull
   @JsonProperty("array_item")
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

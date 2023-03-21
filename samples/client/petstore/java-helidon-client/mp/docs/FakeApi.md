@@ -465,14 +465,14 @@ To test enum parameters
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **enumHeaderStringArray** | [**List&lt;String&gt;**](String.md)| Header parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumHeaderStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Header parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumHeaderString** | **String**| Header parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
-| **enumQueryStringArray** | [**List&lt;String&gt;**](String.md)| Query parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumQueryStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Query parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumQueryString** | **String**| Query parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
 | **enumQueryInteger** | **Integer**| Query parameter enum test (double) | [optional] [enum: 1, -2] |
 | **enumQueryDouble** | **Double**| Query parameter enum test (double) | [optional] [enum: 1.1, -1.2] |
-| **enumQueryModelArray** | [**List&lt;EnumClass&gt;**](EnumClass.md)|  | [optional] |
-| **enumFormStringArray** | [**List&lt;String&gt;**](String.md)| Form parameter enum test (string array) | [optional] [enum: >, $] |
+| **enumQueryModelArray** | [**java.util.List&lt;EnumClass&gt;**](EnumClass.md)|  | [optional] |
+| **enumFormStringArray** | [**java.util.List&lt;String&gt;**](String.md)| Form parameter enum test (string array) | [optional] [enum: >, $] |
 | **enumFormString** | **String**| Form parameter enum test (string) | [optional] [default to -efg] [enum: _abc, -efg, (xyz)] |
 
 ### Return type
@@ -549,7 +549,7 @@ test inline additionalProperties
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **requestBody** | [**Map&lt;String, String&gt;**](String.md)| request body | |
+| **requestBody** | [**java.util.Map&lt;String, String&gt;**](String.md)| request body | |
 
 ### Return type
 
@@ -620,13 +620,13 @@ To test the collection format in query parameters
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pipe** | [**List&lt;String&gt;**](String.md)|  | |
-| **ioutil** | [**List&lt;String&gt;**](String.md)|  | |
-| **http** | [**List&lt;String&gt;**](String.md)|  | |
-| **url** | [**List&lt;String&gt;**](String.md)|  | |
-| **context** | [**List&lt;String&gt;**](String.md)|  | |
+| **pipe** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **ioutil** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **http** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **url** | [**java.util.List&lt;String&gt;**](String.md)|  | |
+| **context** | [**java.util.List&lt;String&gt;**](String.md)|  | |
 | **allowEmpty** | **String**|  | |
-| **language** | [**Map&lt;String, String&gt;**](String.md)|  | [optional] |
+| **language** | [**java.util.Map&lt;String, String&gt;**](String.md)|  | [optional] |
 
 ### Return type
 

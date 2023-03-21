@@ -23,12 +23,6 @@ import org.openapitools.client.Pair;
 import org.openapitools.client.model.Order;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringJoiner;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StoreApi {
@@ -82,13 +76,13 @@ public class StoreApi {
     String localVarPath = "/store/order/{order_id}"
       .replaceAll("\\{" + "order_id" + "\\}", apiClient.escapeString(orderId.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -127,10 +121,10 @@ public class StoreApi {
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return Map&lt;String, Integer&gt;
+   * @return java.util.Map&lt;String, Integer&gt;
    * @throws ApiException if fails to make API call
    */
-  public Map<String, Integer> getInventory() throws ApiException {
+  public java.util.Map<String, Integer> getInventory() throws ApiException {
     return this.getInventory(Collections.emptyMap());
   }
 
@@ -139,22 +133,22 @@ public class StoreApi {
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
    * @param additionalHeaders additionalHeaders for this call
-   * @return Map&lt;String, Integer&gt;
+   * @return java.util.Map&lt;String, Integer&gt;
    * @throws ApiException if fails to make API call
    */
-  public Map<String, Integer> getInventory(Map<String, String> additionalHeaders) throws ApiException {
+  public java.util.Map<String, Integer> getInventory(Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
     String localVarPath = "/store/inventory";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -173,7 +167,7 @@ public class StoreApi {
 
     String[] localVarAuthNames = new String[] { "api_key" };
 
-    TypeReference<Map<String, Integer>> localVarReturnType = new TypeReference<Map<String, Integer>>() {};
+    TypeReference<java.util.Map<String, Integer>> localVarReturnType = new TypeReference<java.util.Map<String, Integer>>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "GET",
@@ -223,13 +217,13 @@ public class StoreApi {
     String localVarPath = "/store/order/{order_id}"
       .replaceAll("\\{" + "order_id" + "\\}", apiClient.escapeString(orderId.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -297,13 +291,13 @@ public class StoreApi {
     // create path and map variables
     String localVarPath = "/store/order";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);

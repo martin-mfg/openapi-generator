@@ -10,3 +10,4 @@ additionalProperties:
   java8: "true"
   artifactId: petstore-spring-cloud
   hideGenerationTimestamp: "true"
+  fullJavaUtil: true

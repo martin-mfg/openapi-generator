@@ -17,23 +17,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-
-import java.lang.reflect.Type;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 import org.openapitools.client.JSON;
 import static io.restassured.http.Method.*;
 
@@ -259,7 +243,7 @@ public class PetApi {
      * Multiple status values can be provided with comma separated strings
      *
      * @see #statusQuery Status values that need to be considered for filter (required)
-     * return List&lt;Pet&gt;
+     * return java.util.List&lt;Pet&gt;
      */
     public static class FindPetsByStatusOper implements Oper {
 
@@ -289,17 +273,17 @@ public class PetApi {
         /**
          * GET /pet/findByStatus
          * @param handler handler
-         * @return List&lt;Pet&gt;
+         * @return java.util.List&lt;Pet&gt;
          */
-        public List<Pet> executeAs(Function<Response, Response> handler) {
-            Type type = new TypeToken<List<Pet>>(){}.getType();
+        public java.util.List<Pet> executeAs(Function<Response, Response> handler) {
+            Type type = new TypeToken<java.util.List<Pet>>(){}.getType();
             return execute(handler).as(type);
         }
 
         public static final String STATUS_QUERY = "status";
 
         /**
-         * @param status (List&lt;String&gt;) Status values that need to be considered for filter (required)
+         * @param status (java.util.List&lt;String&gt;) Status values that need to be considered for filter (required)
          * @return operation
          */
         public FindPetsByStatusOper statusQuery(Object... status) {
@@ -332,7 +316,7 @@ public class PetApi {
      * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
      *
      * @see #tagsQuery Tags to filter by (required)
-     * return Set&lt;Pet&gt;
+     * return java.util.Set&lt;Pet&gt;
      * @deprecated
      */
     @Deprecated
@@ -364,17 +348,17 @@ public class PetApi {
         /**
          * GET /pet/findByTags
          * @param handler handler
-         * @return Set&lt;Pet&gt;
+         * @return java.util.Set&lt;Pet&gt;
          */
-        public Set<Pet> executeAs(Function<Response, Response> handler) {
-            Type type = new TypeToken<Set<Pet>>(){}.getType();
+        public java.util.Set<Pet> executeAs(Function<Response, Response> handler) {
+            Type type = new TypeToken<java.util.Set<Pet>>(){}.getType();
             return execute(handler).as(type);
         }
 
         public static final String TAGS_QUERY = "tags";
 
         /**
-         * @param tags (Set&lt;String&gt;) Tags to filter by (required)
+         * @param tags (java.util.Set&lt;String&gt;) Tags to filter by (required)
          * @return operation
          */
         public FindPetsByTagsOper tagsQuery(Object... tags) {

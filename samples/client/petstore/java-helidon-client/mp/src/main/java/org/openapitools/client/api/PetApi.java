@@ -26,9 +26,10 @@ import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import java.io.File;
+import org.openapitools.client.model.List;
+import org.openapitools.client.model.Map;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 
 /**
  * OpenAPI Petstore
@@ -64,7 +65,7 @@ public interface PetApi  {
     @GET
     @Path("/pet/findByStatus")
     @Produces({ "application/xml", "application/json" })
-    List<Pet> findPetsByStatus(@QueryParam("status") List<String> status) throws ApiException, ProcessingException;
+    java.util.List<Pet> findPetsByStatus(@QueryParam("status") java.util.List<String> status) throws ApiException, ProcessingException;
 
     /**
      * Finds Pets by tags
@@ -75,7 +76,7 @@ public interface PetApi  {
     @GET
     @Path("/pet/findByTags")
     @Produces({ "application/xml", "application/json" })
-    Set<Pet> findPetsByTags(@QueryParam("tags") Set<String> tags) throws ApiException, ProcessingException;
+    java.util.Set<Pet> findPetsByTags(@QueryParam("tags") java.util.Set<String> tags) throws ApiException, ProcessingException;
 
     /**
      * Find pet by ID

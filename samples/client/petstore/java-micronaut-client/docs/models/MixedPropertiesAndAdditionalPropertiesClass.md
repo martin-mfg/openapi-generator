@@ -8,7 +8,7 @@ The class is defined in **[MixedPropertiesAndAdditionalPropertiesClass.java](../
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | `UUID` |  |  [optional property]
+**uuid** | `java.util.UUID` |  |  [optional property]
 **dateTime** | `OffsetDateTime` |  |  [optional property]
 **map** | [`Map&lt;String, Animal&gt;`](Animal.md) |  |  [optional property]
 

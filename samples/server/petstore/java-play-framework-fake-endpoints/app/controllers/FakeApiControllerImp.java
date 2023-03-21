@@ -5,7 +5,6 @@ import apimodels.Client;
 import apimodels.FileSchemaTestClass;
 import java.io.InputStream;
 import java.time.LocalDate;
-import java.util.Map;
 import java.time.OffsetDateTime;
 import apimodels.OuterComposite;
 import apimodels.User;
@@ -72,7 +71,7 @@ public class FakeApiControllerImp extends FakeApiControllerImpInterface {
     }
 
     @Override
-    public void testEnumParameters(Http.Request request, List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws Exception {
+    public void testEnumParameters(Http.Request request, java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws Exception {
         //Do your magic!!!
     }
 
@@ -82,7 +81,7 @@ public class FakeApiControllerImp extends FakeApiControllerImpInterface {
     }
 
     @Override
-    public void testInlineAdditionalProperties(Http.Request request, Map<String, String> param) throws Exception {
+    public void testInlineAdditionalProperties(Http.Request request, java.util.Map<String, String> param) throws Exception {
         //Do your magic!!!
     }
 
@@ -92,7 +91,7 @@ public class FakeApiControllerImp extends FakeApiControllerImpInterface {
     }
 
     @Override
-    public void testQueryParameterCollectionFormat(Http.Request request, @NotNull List<String> pipe, @NotNull List<String> ioutil, @NotNull List<String> http, @NotNull List<String> url, @NotNull List<String> context) throws Exception {
+    public void testQueryParameterCollectionFormat(Http.Request request, @NotNull java.util.List<String> pipe, @NotNull java.util.List<String> ioutil, @NotNull java.util.List<String> http, @NotNull java.util.List<String> url, @NotNull java.util.List<String> context) throws Exception {
         //Do your magic!!!
     }
 

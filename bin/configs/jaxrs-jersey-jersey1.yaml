@@ -7,3 +7,4 @@ additionalProperties:
   artifactId: jaxrs-jersey1-server
   hideGenerationTimestamp: "true"
   serverPort: "8082"
+  fullJavaUtil: true

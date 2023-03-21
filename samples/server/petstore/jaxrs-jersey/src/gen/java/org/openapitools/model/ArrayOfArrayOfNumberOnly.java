@@ -19,8 +19,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -35,14 +33,14 @@ import javax.validation.Valid;
 public class ArrayOfArrayOfNumberOnly   {
   public static final String JSON_PROPERTY_ARRAY_ARRAY_NUMBER = "ArrayArrayNumber";
   @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_NUMBER)
-  private List<List<BigDecimal>> arrayArrayNumber;
+  private java.util.List<java.util.List<BigDecimal>> arrayArrayNumber;
 
-  public ArrayOfArrayOfNumberOnly arrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public ArrayOfArrayOfNumberOnly arrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     this.arrayArrayNumber = arrayArrayNumber;
     return this;
   }
 
-  public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(List<BigDecimal> arrayArrayNumberItem) {
+  public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(java.util.List<BigDecimal> arrayArrayNumberItem) {
     if (this.arrayArrayNumber == null) {
       this.arrayArrayNumber = new ArrayList<>();
     }
@@ -57,11 +55,11 @@ public class ArrayOfArrayOfNumberOnly   {
   @JsonProperty(value = "ArrayArrayNumber")
   @ApiModelProperty(value = "")
   @Valid 
-  public List<List<BigDecimal>> getArrayArrayNumber() {
+  public java.util.List<java.util.List<BigDecimal>> getArrayArrayNumber() {
     return arrayArrayNumber;
   }
 
-  public void setArrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public void setArrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     this.arrayArrayNumber = arrayArrayNumber;
   }
 

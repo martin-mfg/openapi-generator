@@ -6,14 +6,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * AdditionalPropertiesNumber
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen")
-public class AdditionalPropertiesNumber extends HashMap<String, BigDecimal>  {
+public class AdditionalPropertiesNumber extends java.util.HashMap<String, BigDecimal>  {
   @JsonProperty("name")
   private String name;
 

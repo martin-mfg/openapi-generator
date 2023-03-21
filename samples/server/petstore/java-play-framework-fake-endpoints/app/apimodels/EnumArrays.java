@@ -1,7 +1,5 @@
 package apimodels;
 
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
@@ -81,7 +79,7 @@ public class EnumArrays   {
 
   @JsonProperty("array_enum")
   
-  private List<ArrayEnumEnum> arrayEnum = null;
+  private java.util.List<ArrayEnumEnum> arrayEnum = null;
 
   public EnumArrays justSymbol(JustSymbolEnum justSymbol) {
     this.justSymbol = justSymbol;
@@ -100,7 +98,7 @@ public class EnumArrays   {
     this.justSymbol = justSymbol;
   }
 
-  public EnumArrays arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public EnumArrays arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
     return this;
   }
@@ -117,11 +115,11 @@ public class EnumArrays   {
    * Get arrayEnum
    * @return arrayEnum
   **/
-  public List<ArrayEnumEnum> getArrayEnum() {
+  public java.util.List<ArrayEnumEnum> getArrayEnum() {
     return arrayEnum;
   }
 
-  public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
   }
 

@@ -17,11 +17,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import org.openapitools.client.model.Category;
 import org.openapitools.client.model.Tag;
 
@@ -36,9 +31,9 @@ public class Pet  {
 
   private String name;
 
-  private Set<String> photoUrls = new LinkedHashSet<>();
+  private java.util.Set<String> photoUrls = new java.util.LinkedHashSet<>();
 
-  private List<Tag> tags = null;
+  private java.util.List<Tag> tags = null;
 
 public enum StatusEnum {
 
@@ -130,19 +125,18 @@ public enum StatusEnum {
    * Get photoUrls
    * @return photoUrls
   **/
-  public Set<String> getPhotoUrls() {
+  public java.util.Set<String> getPhotoUrls() {
     return photoUrls;
   }
 
   /**
     * Set photoUrls
   **/
-    @JsonDeserialize(as = LinkedHashSet.class)
-  public void setPhotoUrls(Set<String> photoUrls) {
+  public void setPhotoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
-  public Pet photoUrls(Set<String> photoUrls) {
+  public Pet photoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
@@ -156,18 +150,18 @@ public enum StatusEnum {
    * Get tags
    * @return tags
   **/
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
   /**
     * Set tags
   **/
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     this.tags = tags;
     return this;
   }

@@ -38,11 +38,11 @@ public abstract class PetApiControllerImpInterface {
 
     public abstract void addPet(Http.Request request, Pet body) throws Exception;
 
-    public Result findPetsByStatusHttp(Http.Request request, @NotNull List<String> status) throws Exception {
-        List<Pet> obj = findPetsByStatus(request, status);
+    public Result findPetsByStatusHttp(Http.Request request, @NotNull java.util.List<String> status) throws Exception {
+        array<java.util.List<Pet>> obj = findPetsByStatus(request, status);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
-            for (Pet curItem : obj) {
+            for (java.util.List<Pet> curItem : obj) {
                 OpenAPIUtils.validate(curItem);
             }
         }
@@ -53,7 +53,7 @@ public abstract class PetApiControllerImpInterface {
 
     }
 
-    public abstract List<Pet> findPetsByStatus(Http.Request request, @NotNull List<String> status) throws Exception;
+    public abstract array<java.util.List<Pet>> findPetsByStatus(Http.Request request, @NotNull java.util.List<String> status) throws Exception;
 
     public Result updatePetHttp(Http.Request request, Pet body) throws Exception {
         updatePet(request, body);

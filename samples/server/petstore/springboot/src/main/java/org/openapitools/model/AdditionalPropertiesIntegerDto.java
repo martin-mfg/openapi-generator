@@ -7,8 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -24,7 +22,7 @@ import javax.annotation.Generated;
 
 @JsonTypeName("AdditionalPropertiesInteger")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
-public class AdditionalPropertiesIntegerDto extends HashMap<String, Integer> {
+public class AdditionalPropertiesIntegerDto extends java.util.HashMap<String, Integer> {
 
   private String name;
 

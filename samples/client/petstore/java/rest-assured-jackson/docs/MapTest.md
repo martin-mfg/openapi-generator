@@ -7,14 +7,14 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mapMapOfString** | **Map&lt;String, Map&lt;String, String&gt;&gt;** |  |  [optional] |
-|**mapOfEnumString** | [**Map&lt;String, InnerEnum&gt;**](#Map&lt;String, InnerEnum&gt;) |  |  [optional] |
+|**mapMapOfString** | **Map&lt;String, java.util.Map&lt;String, String&gt;&gt;** |  |  [optional] |
+|**mapOfEnumString** | [**java.util.Map&lt;String, InnerEnum&gt;**](#java.util.Map&lt;String, InnerEnum&gt;) |  |  [optional] |
 |**directMap** | **Map&lt;String, Boolean&gt;** |  |  [optional] |
 |**indirectMap** | **Map&lt;String, Boolean&gt;** |  |  [optional] |
 
 
 
-## Enum: Map&lt;String, InnerEnum&gt;
+## Enum: java.util.Map&lt;String, InnerEnum&gt;
 
 | Name | Value |
 |---- | -----|

@@ -44,22 +44,16 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UserApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public UserApi() {
     this(new ApiClient());
@@ -174,7 +168,7 @@ public class UserApi {
    * @param user List of user object (required)
    * @throws ApiException if fails to make API call
    */
-  public void createUsersWithArrayInput(List<User> user) throws ApiException {
+  public void createUsersWithArrayInput(java.util.List<User> user) throws ApiException {
     createUsersWithArrayInputWithHttpInfo(user);
   }
 
@@ -185,7 +179,7 @@ public class UserApi {
    * @return ApiResponse&lt;Void&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Void> createUsersWithArrayInputWithHttpInfo(List<User> user) throws ApiException {
+  public ApiResponse<Void> createUsersWithArrayInputWithHttpInfo(java.util.List<User> user) throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = createUsersWithArrayInputRequestBuilder(user);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -219,7 +213,7 @@ public class UserApi {
     }
   }
 
-  private HttpRequest.Builder createUsersWithArrayInputRequestBuilder(List<User> user) throws ApiException {
+  private HttpRequest.Builder createUsersWithArrayInputRequestBuilder(java.util.List<User> user) throws ApiException {
     // verify the required parameter 'user' is set
     if (user == null) {
       throw new ApiException(400, "Missing the required parameter 'user' when calling createUsersWithArrayInput");
@@ -254,7 +248,7 @@ public class UserApi {
    * @param user List of user object (required)
    * @throws ApiException if fails to make API call
    */
-  public void createUsersWithListInput(List<User> user) throws ApiException {
+  public void createUsersWithListInput(java.util.List<User> user) throws ApiException {
     createUsersWithListInputWithHttpInfo(user);
   }
 
@@ -265,7 +259,7 @@ public class UserApi {
    * @return ApiResponse&lt;Void&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Void> createUsersWithListInputWithHttpInfo(List<User> user) throws ApiException {
+  public ApiResponse<Void> createUsersWithListInputWithHttpInfo(java.util.List<User> user) throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = createUsersWithListInputRequestBuilder(user);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -299,7 +293,7 @@ public class UserApi {
     }
   }
 
-  private HttpRequest.Builder createUsersWithListInputRequestBuilder(List<User> user) throws ApiException {
+  private HttpRequest.Builder createUsersWithListInputRequestBuilder(java.util.List<User> user) throws ApiException {
     // verify the required parameter 'user' is set
     if (user == null) {
       throw new ApiException(400, "Missing the required parameter 'user' when calling createUsersWithListInput");
@@ -539,8 +533,8 @@ public class UserApi {
 
     String localVarPath = "/user/login";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "username";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("username", username));
@@ -548,7 +542,7 @@ public class UserApi {
     localVarQueryParams.addAll(ApiClient.parameterToPairs("password", password));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());

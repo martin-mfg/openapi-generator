@@ -15,22 +15,6 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.model.Client;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.common.mapper.TypeRef;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-
-import java.lang.reflect.Type;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 import static io.restassured.http.Method.*;
 
 public class AnotherFakeApi {

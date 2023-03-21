@@ -6,8 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * ArrayOfNumberOnly
@@ -15,9 +13,9 @@ import java.util.List;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen")
 public class ArrayOfNumberOnly   {
   @JsonProperty("ArrayNumber")
-  private List<BigDecimal> arrayNumber = null;
+  private java.util.List<BigDecimal> arrayNumber = null;
 
-  public ArrayOfNumberOnly arrayNumber(List<BigDecimal> arrayNumber) {
+  public ArrayOfNumberOnly arrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
     return this;
   }
@@ -35,11 +33,11 @@ public class ArrayOfNumberOnly   {
    * @return arrayNumber
   **/
   @ApiModelProperty(value = "")
-  public List<BigDecimal> getArrayNumber() {
+  public java.util.List<BigDecimal> getArrayNumber() {
     return arrayNumber;
   }
 
-  public void setArrayNumber(List<BigDecimal> arrayNumber) {
+  public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
   }
 

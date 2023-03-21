@@ -28,12 +28,6 @@ import org.openapitools.client.model.TestQueryStyleDeepObjectExplodeTrueObjectAl
 import org.openapitools.client.model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringJoiner;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueryApi {
@@ -87,13 +81,13 @@ public class QueryApi {
     // create path and map variables
     String localVarPath = "/query/datetime/date/string";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPair("datetime_query", datetimeQuery));
     localVarQueryParams.addAll(apiClient.parameterToPair("date_query", dateQuery));
@@ -163,13 +157,13 @@ public class QueryApi {
     // create path and map variables
     String localVarPath = "/query/integer/boolean/string";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPair("integer_query", integerQuery));
     localVarQueryParams.addAll(apiClient.parameterToPair("boolean_query", booleanQuery));
@@ -235,13 +229,13 @@ public class QueryApi {
     // create path and map variables
     String localVarPath = "/query/style_deepObject/explode_true/object";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParameterBaseName = "query_object";
     localVarQueryStringJoiner.add(queryObject.toUrlQueryString("query_object"));
@@ -306,13 +300,13 @@ public class QueryApi {
     // create path and map variables
     String localVarPath = "/query/style_deepObject/explode_true/object/allOf";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParameterBaseName = "query_object";
     localVarQueryStringJoiner.add(queryObject.toUrlQueryString("query_object"));
@@ -377,13 +371,13 @@ public class QueryApi {
     // create path and map variables
     String localVarPath = "/query/style_form/explode_true/array_string";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPairs("multi", "values", queryObject.getValues()));
     
@@ -447,13 +441,13 @@ public class QueryApi {
     // create path and map variables
     String localVarPath = "/query/style_form/explode_true/object";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPair("id", queryObject.getId()));
     localVarQueryParams.addAll(apiClient.parameterToPair("name", queryObject.getName()));
@@ -522,13 +516,13 @@ public class QueryApi {
     // create path and map variables
     String localVarPath = "/query/style_form/explode_true/object/allOf";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryStringJoiner.add(queryObject.toUrlQueryString());
     

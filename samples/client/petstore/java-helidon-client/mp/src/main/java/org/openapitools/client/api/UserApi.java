@@ -25,6 +25,8 @@ import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
+import org.openapitools.client.model.List;
+import org.openapitools.client.model.Map;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 
@@ -54,7 +56,7 @@ public interface UserApi  {
     @POST
     @Path("/createWithArray")
     @Consumes({ "application/json" })
-    void createUsersWithArrayInput(List<User> user) throws ApiException, ProcessingException;
+    void createUsersWithArrayInput(java.util.List<User> user) throws ApiException, ProcessingException;
 
     /**
      * Creates list of users with given input array
@@ -63,7 +65,7 @@ public interface UserApi  {
     @POST
     @Path("/createWithList")
     @Consumes({ "application/json" })
-    void createUsersWithListInput(List<User> user) throws ApiException, ProcessingException;
+    void createUsersWithListInput(java.util.List<User> user) throws ApiException, ProcessingException;
 
     /**
      * Delete user

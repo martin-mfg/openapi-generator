@@ -17,8 +17,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.ModelFile;
 
 
@@ -28,7 +26,7 @@ public class FileSchemaTestClass  {
   
   private ModelFile _file;
 
-  private List<ModelFile> files = null;
+  private java.util.List<ModelFile> files = null;
 
  /**
    * Get _file
@@ -54,18 +52,18 @@ public class FileSchemaTestClass  {
    * Get files
    * @return files
   **/
-  public List<ModelFile> getFiles() {
+  public java.util.List<ModelFile> getFiles() {
     return files;
   }
 
   /**
     * Set files
   **/
-  public void setFiles(List<ModelFile> files) {
+  public void setFiles(java.util.List<ModelFile> files) {
     this.files = files;
   }
 
-  public FileSchemaTestClass files(List<ModelFile> files) {
+  public FileSchemaTestClass files(java.util.List<ModelFile> files) {
     this.files = files;
     return this;
   }

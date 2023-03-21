@@ -5,10 +5,6 @@ import org.openapitools.client.EncodingUtils;
 import org.openapitools.client.model.ApiResponse;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import feign.*;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")

@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,12 +51,12 @@ import org.openapitools.client.JSON;
 public class ArrayOfNumberOnly {
   public static final String SERIALIZED_NAME_ARRAY_NUMBER = "ArrayNumber";
   @SerializedName(SERIALIZED_NAME_ARRAY_NUMBER)
-  private List<BigDecimal> arrayNumber;
+  private java.util.List<BigDecimal> arrayNumber;
 
   public ArrayOfNumberOnly() {
   }
 
-  public ArrayOfNumberOnly arrayNumber(List<BigDecimal> arrayNumber) {
+  public ArrayOfNumberOnly arrayNumber(java.util.List<BigDecimal> arrayNumber) {
     
     this.arrayNumber = arrayNumber;
     return this;
@@ -78,12 +76,12 @@ public class ArrayOfNumberOnly {
   **/
   @javax.annotation.Nullable
 
-  public List<BigDecimal> getArrayNumber() {
+  public java.util.List<BigDecimal> getArrayNumber() {
     return arrayNumber;
   }
 
 
-  public void setArrayNumber(List<BigDecimal> arrayNumber) {
+  public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
   }
 

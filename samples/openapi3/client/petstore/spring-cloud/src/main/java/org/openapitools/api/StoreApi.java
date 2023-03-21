@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import java.util.Map;
 import org.openapitools.model.Order;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
@@ -78,7 +77,7 @@ public interface StoreApi {
         tags = { "store" },
         responses = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = {
-                @Content(mediaType = "application/json", schema = @Schema(implementation = Map.class))
+                @Content(mediaType = "application/json", schema = @Schema(implementation = java.util.Map.class))
             })
         },
         security = {

@@ -59,7 +59,7 @@ public interface StoreApi  {
     @GET
     @Path("/inventory")
     @Produces({ "application/json" })
-    Map<String, Integer> getInventory() throws ApiException, ProcessingException;
+    java.util.Map<String, Integer> getInventory() throws ApiException, ProcessingException;
 
     /**
      * Find purchase order by ID

@@ -24,12 +24,6 @@ import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringJoiner;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UserApi {
@@ -82,13 +76,13 @@ public class UserApi {
     // create path and map variables
     String localVarPath = "/user";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -130,7 +124,7 @@ public class UserApi {
    * @param user List of user object (required)
    * @throws ApiException if fails to make API call
    */
-  public void createUsersWithArrayInput(List<User> user) throws ApiException {
+  public void createUsersWithArrayInput(java.util.List<User> user) throws ApiException {
     this.createUsersWithArrayInput(user, Collections.emptyMap());
   }
 
@@ -142,7 +136,7 @@ public class UserApi {
    * @param additionalHeaders additionalHeaders for this call
    * @throws ApiException if fails to make API call
    */
-  public void createUsersWithArrayInput(List<User> user, Map<String, String> additionalHeaders) throws ApiException {
+  public void createUsersWithArrayInput(java.util.List<User> user, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = user;
     
     // verify the required parameter 'user' is set
@@ -153,13 +147,13 @@ public class UserApi {
     // create path and map variables
     String localVarPath = "/user/createWithArray";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -201,7 +195,7 @@ public class UserApi {
    * @param user List of user object (required)
    * @throws ApiException if fails to make API call
    */
-  public void createUsersWithListInput(List<User> user) throws ApiException {
+  public void createUsersWithListInput(java.util.List<User> user) throws ApiException {
     this.createUsersWithListInput(user, Collections.emptyMap());
   }
 
@@ -213,7 +207,7 @@ public class UserApi {
    * @param additionalHeaders additionalHeaders for this call
    * @throws ApiException if fails to make API call
    */
-  public void createUsersWithListInput(List<User> user, Map<String, String> additionalHeaders) throws ApiException {
+  public void createUsersWithListInput(java.util.List<User> user, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = user;
     
     // verify the required parameter 'user' is set
@@ -224,13 +218,13 @@ public class UserApi {
     // create path and map variables
     String localVarPath = "/user/createWithList";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -296,13 +290,13 @@ public class UserApi {
     String localVarPath = "/user/{username}"
       .replaceAll("\\{" + "username" + "\\}", apiClient.escapeString(username.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -370,13 +364,13 @@ public class UserApi {
     String localVarPath = "/user/{username}"
       .replaceAll("\\{" + "username" + "\\}", apiClient.escapeString(username.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -451,13 +445,13 @@ public class UserApi {
     // create path and map variables
     String localVarPath = "/user/login";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPair("username", username));
     localVarQueryParams.addAll(apiClient.parameterToPair("password", password));
@@ -518,13 +512,13 @@ public class UserApi {
     // create path and map variables
     String localVarPath = "/user/logout";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -597,13 +591,13 @@ public class UserApi {
     String localVarPath = "/user/{username}"
       .replaceAll("\\{" + "username" + "\\}", apiClient.escapeString(username.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);

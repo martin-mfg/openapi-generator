@@ -8,7 +8,6 @@ import org.openapitools.server.model.FileSchemaTestClass;
 import io.helidon.webserver.Handler;
 import org.openapitools.server.model.HealthCheckResult;
 import java.time.LocalDate;
-import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.OffsetDateTime;
 import org.openapitools.server.model.OuterComposite;

@@ -23,7 +23,6 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.io.Serializable;
 import javax.validation.constraints.*;
@@ -96,7 +95,7 @@ public class FormatTest  implements Serializable {
 
   public static final String JSON_PROPERTY_UUID = "uuid";
   @JsonProperty(JSON_PROPERTY_UUID)
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   public static final String JSON_PROPERTY_PASSWORD = "password";
   @JsonProperty(JSON_PROPERTY_PASSWORD)
@@ -336,7 +335,7 @@ public class FormatTest  implements Serializable {
     this.dateTime = dateTime;
   }
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -348,11 +347,11 @@ public class FormatTest  implements Serializable {
   @JsonProperty(value = "uuid")
   @ApiModelProperty(example = "72f98069-206d-4f12-9f12-3d1e525a8e84", value = "")
   
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 

@@ -7,7 +7,6 @@ import org.openapitools.api.factories.StoreApiServiceFactory;
 import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
-import java.util.Map;
 import org.openapitools.model.Order;
 
 import java.util.Map;
@@ -56,7 +55,7 @@ public class StoreApi  {
         @io.swagger.annotations.Authorization(value = "api_key")
     }, tags={ "store" })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = Map.class, responseContainer = "Map") })
+        @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = java.util.Map.class, responseContainer = "Map") })
     public Response getInventory(
         @Context SecurityContext securityContext)
     throws NotFoundException {

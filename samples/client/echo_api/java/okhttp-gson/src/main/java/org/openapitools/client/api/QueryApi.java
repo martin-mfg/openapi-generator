@@ -35,10 +35,6 @@ import org.openapitools.client.model.TestQueryStyleDeepObjectExplodeTrueObjectAl
 import org.openapitools.client.model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.ws.rs.core.GenericType;
 
 public class QueryApi {
@@ -111,11 +107,11 @@ public class QueryApi {
         // create path and map variables
         String localVarPath = "/query/datetime/date/string";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (datetimeQuery != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("datetime_query", datetimeQuery));
@@ -248,11 +244,11 @@ public class QueryApi {
         // create path and map variables
         String localVarPath = "/query/integer/boolean/string";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (integerQuery != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("integer_query", integerQuery));
@@ -383,11 +379,11 @@ public class QueryApi {
         // create path and map variables
         String localVarPath = "/query/style_deepObject/explode_true/object";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (queryObject != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("query_object", queryObject));
@@ -504,11 +500,11 @@ public class QueryApi {
         // create path and map variables
         String localVarPath = "/query/style_deepObject/explode_true/object/allOf";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (queryObject != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("query_object", queryObject));
@@ -625,11 +621,11 @@ public class QueryApi {
         // create path and map variables
         String localVarPath = "/query/style_form/explode_true/array_string";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (queryObject != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("query_object", queryObject));
@@ -746,11 +742,11 @@ public class QueryApi {
         // create path and map variables
         String localVarPath = "/query/style_form/explode_true/object";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (queryObject != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("query_object", queryObject));
@@ -867,11 +863,11 @@ public class QueryApi {
         // create path and map variables
         String localVarPath = "/query/style_form/explode_true/object/allOf";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (queryObject != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("query_object", queryObject));

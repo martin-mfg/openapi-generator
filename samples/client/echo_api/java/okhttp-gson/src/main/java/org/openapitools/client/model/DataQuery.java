@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.Query;
 
 import com.google.gson.Gson;

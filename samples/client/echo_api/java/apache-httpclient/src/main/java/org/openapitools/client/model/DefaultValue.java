@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.StringEnumRef;
 import org.openapitools.jackson.nullable.JsonNullable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -49,7 +47,7 @@ import java.util.StringJoiner;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DefaultValue {
   public static final String JSON_PROPERTY_ARRAY_STRING_ENUM_REF_DEFAULT = "array_string_enum_ref_default";
-  private List<StringEnumRef> arrayStringEnumRefDefault = new ArrayList<>(Arrays.asList(StringEnumRef.SUCCESS, StringEnumRef.FAILURE));
+  private java.util.List<StringEnumRef> arrayStringEnumRefDefault = new ArrayList<>(Arrays.asList(StringEnumRef.SUCCESS, StringEnumRef.FAILURE));
 
   /**
    * Gets or Sets arrayStringEnumDefault
@@ -89,22 +87,22 @@ public class DefaultValue {
   }
 
   public static final String JSON_PROPERTY_ARRAY_STRING_ENUM_DEFAULT = "array_string_enum_default";
-  private List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault = new ArrayList<>(Arrays.asList(ArrayStringEnumDefaultEnum.SUCCESS, ArrayStringEnumDefaultEnum.FAILURE));
+  private java.util.List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault = new ArrayList<>(Arrays.asList(ArrayStringEnumDefaultEnum.SUCCESS, ArrayStringEnumDefaultEnum.FAILURE));
 
   public static final String JSON_PROPERTY_ARRAY_STRING_DEFAULT = "array_string_default";
-  private List<String> arrayStringDefault = new ArrayList<>(Arrays.asList("failure", "skipped"));
+  private java.util.List<String> arrayStringDefault = new ArrayList<>(Arrays.asList("failure", "skipped"));
 
   public static final String JSON_PROPERTY_ARRAY_INTEGER_DEFAULT = "array_integer_default";
-  private List<Integer> arrayIntegerDefault = new ArrayList<>(Arrays.asList(1, 3));
+  private java.util.List<Integer> arrayIntegerDefault = new ArrayList<>(Arrays.asList(1, 3));
 
   public static final String JSON_PROPERTY_ARRAY_STRING = "array_string";
-  private List<String> arrayString;
+  private java.util.List<String> arrayString;
 
   public static final String JSON_PROPERTY_ARRAY_STRING_NULLABLE = "array_string_nullable";
-  private JsonNullable<List<String>> arrayStringNullable = JsonNullable.<List<String>>undefined();
+  private JsonNullable<java.util.List<String>> arrayStringNullable = JsonNullable.<java.util.List<String>>undefined();
 
   public static final String JSON_PROPERTY_ARRAY_STRING_EXTENSION_NULLABLE = "array_string_extension_nullable";
-  private JsonNullable<List<String>> arrayStringExtensionNullable = JsonNullable.<List<String>>undefined();
+  private JsonNullable<java.util.List<String>> arrayStringExtensionNullable = JsonNullable.<java.util.List<String>>undefined();
 
   public static final String JSON_PROPERTY_STRING_NULLABLE = "string_nullable";
   private JsonNullable<String> stringNullable = JsonNullable.<String>undefined();
@@ -112,7 +110,7 @@ public class DefaultValue {
   public DefaultValue() {
   }
 
-  public DefaultValue arrayStringEnumRefDefault(List<StringEnumRef> arrayStringEnumRefDefault) {
+  public DefaultValue arrayStringEnumRefDefault(java.util.List<StringEnumRef> arrayStringEnumRefDefault) {
     
     this.arrayStringEnumRefDefault = arrayStringEnumRefDefault;
     return this;
@@ -134,19 +132,19 @@ public class DefaultValue {
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_ENUM_REF_DEFAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<StringEnumRef> getArrayStringEnumRefDefault() {
+  public java.util.List<StringEnumRef> getArrayStringEnumRefDefault() {
     return arrayStringEnumRefDefault;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_ENUM_REF_DEFAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayStringEnumRefDefault(List<StringEnumRef> arrayStringEnumRefDefault) {
+  public void setArrayStringEnumRefDefault(java.util.List<StringEnumRef> arrayStringEnumRefDefault) {
     this.arrayStringEnumRefDefault = arrayStringEnumRefDefault;
   }
 
 
-  public DefaultValue arrayStringEnumDefault(List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault) {
+  public DefaultValue arrayStringEnumDefault(java.util.List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault) {
     
     this.arrayStringEnumDefault = arrayStringEnumDefault;
     return this;
@@ -168,19 +166,19 @@ public class DefaultValue {
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_ENUM_DEFAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<ArrayStringEnumDefaultEnum> getArrayStringEnumDefault() {
+  public java.util.List<ArrayStringEnumDefaultEnum> getArrayStringEnumDefault() {
     return arrayStringEnumDefault;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_ENUM_DEFAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayStringEnumDefault(List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault) {
+  public void setArrayStringEnumDefault(java.util.List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault) {
     this.arrayStringEnumDefault = arrayStringEnumDefault;
   }
 
 
-  public DefaultValue arrayStringDefault(List<String> arrayStringDefault) {
+  public DefaultValue arrayStringDefault(java.util.List<String> arrayStringDefault) {
     
     this.arrayStringDefault = arrayStringDefault;
     return this;
@@ -202,19 +200,19 @@ public class DefaultValue {
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_DEFAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<String> getArrayStringDefault() {
+  public java.util.List<String> getArrayStringDefault() {
     return arrayStringDefault;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_DEFAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayStringDefault(List<String> arrayStringDefault) {
+  public void setArrayStringDefault(java.util.List<String> arrayStringDefault) {
     this.arrayStringDefault = arrayStringDefault;
   }
 
 
-  public DefaultValue arrayIntegerDefault(List<Integer> arrayIntegerDefault) {
+  public DefaultValue arrayIntegerDefault(java.util.List<Integer> arrayIntegerDefault) {
     
     this.arrayIntegerDefault = arrayIntegerDefault;
     return this;
@@ -236,19 +234,19 @@ public class DefaultValue {
   @JsonProperty(JSON_PROPERTY_ARRAY_INTEGER_DEFAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<Integer> getArrayIntegerDefault() {
+  public java.util.List<Integer> getArrayIntegerDefault() {
     return arrayIntegerDefault;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_INTEGER_DEFAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayIntegerDefault(List<Integer> arrayIntegerDefault) {
+  public void setArrayIntegerDefault(java.util.List<Integer> arrayIntegerDefault) {
     this.arrayIntegerDefault = arrayIntegerDefault;
   }
 
 
-  public DefaultValue arrayString(List<String> arrayString) {
+  public DefaultValue arrayString(java.util.List<String> arrayString) {
     
     this.arrayString = arrayString;
     return this;
@@ -270,27 +268,27 @@ public class DefaultValue {
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<String> getArrayString() {
+  public java.util.List<String> getArrayString() {
     return arrayString;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayString(List<String> arrayString) {
+  public void setArrayString(java.util.List<String> arrayString) {
     this.arrayString = arrayString;
   }
 
 
-  public DefaultValue arrayStringNullable(List<String> arrayStringNullable) {
-    this.arrayStringNullable = JsonNullable.<List<String>>of(arrayStringNullable);
+  public DefaultValue arrayStringNullable(java.util.List<String> arrayStringNullable) {
+    this.arrayStringNullable = JsonNullable.<java.util.List<String>>of(arrayStringNullable);
     
     return this;
   }
 
   public DefaultValue addArrayStringNullableItem(String arrayStringNullableItem) {
     if (this.arrayStringNullable == null || !this.arrayStringNullable.isPresent()) {
-      this.arrayStringNullable = JsonNullable.<List<String>>of(new ArrayList<>());
+      this.arrayStringNullable = JsonNullable.<java.util.List<String>>of(new ArrayList<>());
     }
     try {
       this.arrayStringNullable.get().add(arrayStringNullableItem);
@@ -307,36 +305,36 @@ public class DefaultValue {
   @javax.annotation.Nullable
   @JsonIgnore
 
-  public List<String> getArrayStringNullable() {
+  public java.util.List<String> getArrayStringNullable() {
         return arrayStringNullable.orElse(null);
   }
 
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_NULLABLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public JsonNullable<List<String>> getArrayStringNullable_JsonNullable() {
+  public JsonNullable<java.util.List<String>> getArrayStringNullable_JsonNullable() {
     return arrayStringNullable;
   }
   
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_NULLABLE)
-  public void setArrayStringNullable_JsonNullable(JsonNullable<List<String>> arrayStringNullable) {
+  public void setArrayStringNullable_JsonNullable(JsonNullable<java.util.List<String>> arrayStringNullable) {
     this.arrayStringNullable = arrayStringNullable;
   }
 
-  public void setArrayStringNullable(List<String> arrayStringNullable) {
-    this.arrayStringNullable = JsonNullable.<List<String>>of(arrayStringNullable);
+  public void setArrayStringNullable(java.util.List<String> arrayStringNullable) {
+    this.arrayStringNullable = JsonNullable.<java.util.List<String>>of(arrayStringNullable);
   }
 
 
-  public DefaultValue arrayStringExtensionNullable(List<String> arrayStringExtensionNullable) {
-    this.arrayStringExtensionNullable = JsonNullable.<List<String>>of(arrayStringExtensionNullable);
+  public DefaultValue arrayStringExtensionNullable(java.util.List<String> arrayStringExtensionNullable) {
+    this.arrayStringExtensionNullable = JsonNullable.<java.util.List<String>>of(arrayStringExtensionNullable);
     
     return this;
   }
 
   public DefaultValue addArrayStringExtensionNullableItem(String arrayStringExtensionNullableItem) {
     if (this.arrayStringExtensionNullable == null || !this.arrayStringExtensionNullable.isPresent()) {
-      this.arrayStringExtensionNullable = JsonNullable.<List<String>>of(new ArrayList<>());
+      this.arrayStringExtensionNullable = JsonNullable.<java.util.List<String>>of(new ArrayList<>());
     }
     try {
       this.arrayStringExtensionNullable.get().add(arrayStringExtensionNullableItem);
@@ -353,24 +351,24 @@ public class DefaultValue {
   @javax.annotation.Nullable
   @JsonIgnore
 
-  public List<String> getArrayStringExtensionNullable() {
+  public java.util.List<String> getArrayStringExtensionNullable() {
         return arrayStringExtensionNullable.orElse(null);
   }
 
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_EXTENSION_NULLABLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public JsonNullable<List<String>> getArrayStringExtensionNullable_JsonNullable() {
+  public JsonNullable<java.util.List<String>> getArrayStringExtensionNullable_JsonNullable() {
     return arrayStringExtensionNullable;
   }
   
   @JsonProperty(JSON_PROPERTY_ARRAY_STRING_EXTENSION_NULLABLE)
-  public void setArrayStringExtensionNullable_JsonNullable(JsonNullable<List<String>> arrayStringExtensionNullable) {
+  public void setArrayStringExtensionNullable_JsonNullable(JsonNullable<java.util.List<String>> arrayStringExtensionNullable) {
     this.arrayStringExtensionNullable = arrayStringExtensionNullable;
   }
 
-  public void setArrayStringExtensionNullable(List<String> arrayStringExtensionNullable) {
-    this.arrayStringExtensionNullable = JsonNullable.<List<String>>of(arrayStringExtensionNullable);
+  public void setArrayStringExtensionNullable(java.util.List<String> arrayStringExtensionNullable) {
+    this.arrayStringExtensionNullable = JsonNullable.<java.util.List<String>>of(arrayStringExtensionNullable);
   }
 
 

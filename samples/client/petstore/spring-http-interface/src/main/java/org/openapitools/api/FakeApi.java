@@ -10,7 +10,6 @@ import org.openapitools.model.ClientDto;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.model.FileSchemaTestClassDto;
 import java.time.LocalDate;
-import java.util.Map;
 import java.time.OffsetDateTime;
 import org.openapitools.model.OuterCompositeDto;
 import org.openapitools.model.UserDto;
@@ -241,13 +240,13 @@ public interface FakeApi {
         contentType = "application/x-www-form-urlencoded"
     )
     ResponseEntity<Void> testEnumParameters(
-         @RequestHeader(value = "enum_header_string_array", required = false) List<String> enumHeaderStringArray,
+         @RequestHeader(value = "enum_header_string_array", required = false) java.util.List<String> enumHeaderStringArray,
          @RequestHeader(value = "enum_header_string", required = false, defaultValue = "-efg") String enumHeaderString,
-         @RequestParam(value = "enum_query_string_array", required = false) List<String> enumQueryStringArray,
+         @RequestParam(value = "enum_query_string_array", required = false) java.util.List<String> enumQueryStringArray,
          @RequestParam(value = "enum_query_string", required = false, defaultValue = "-efg") String enumQueryString,
          @RequestParam(value = "enum_query_integer", required = false) Integer enumQueryInteger,
          @RequestParam(value = "enum_query_double", required = false) Double enumQueryDouble,
-         @RequestPart(value = "enum_form_string_array", required = false) List<String> enumFormStringArray,
+         @RequestPart(value = "enum_form_string_array", required = false) java.util.List<String> enumFormStringArray,
          @RequestParam(value = "enum_form_string", required = false) String enumFormString
     );
 
@@ -293,7 +292,7 @@ public interface FakeApi {
         contentType = "application/json"
     )
     ResponseEntity<Void> testInlineAdditionalProperties(
-         @RequestBody Map<String, String> requestBody
+         @RequestBody java.util.Map<String, String> requestBody
     );
 
 
@@ -333,10 +332,10 @@ public interface FakeApi {
         accept = "application/json"
     )
     ResponseEntity<Void> testQueryParameterCollectionFormat(
-         @RequestParam(value = "pipe", required = true) List<String> pipe,
-         @RequestParam(value = "http", required = true) List<String> http,
-         @RequestParam(value = "url", required = true) List<String> url,
-         @RequestParam(value = "context", required = true) List<String> context
+         @RequestParam(value = "pipe", required = true) java.util.List<String> pipe,
+         @RequestParam(value = "http", required = true) java.util.List<String> http,
+         @RequestParam(value = "url", required = true) java.util.List<String> url,
+         @RequestParam(value = "context", required = true) java.util.List<String> context
     );
 
 }

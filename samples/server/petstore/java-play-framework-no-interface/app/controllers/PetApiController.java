@@ -87,7 +87,7 @@ public class PetApiController extends Controller {
             throw new IllegalArgumentException("'status' parameter is required");
         }
         List<String> statusList = OpenAPIUtils.parametersToList("csv", statusArray);
-        List<String> status = new ArrayList<>();
+        java.util.List<String> status = new ArrayList<>();
         for (String curParam : statusList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -98,10 +98,10 @@ public class PetApiController extends Controller {
             return unauthorized();
         }
 
-        List<Pet> obj = imp.findPetsByStatus(request, status);
+        array<java.util.List<Pet>> obj = imp.findPetsByStatus(request, status);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
-            for (Pet curItem : obj) {
+            for (java.util.List<Pet> curItem : obj) {
                 OpenAPIUtils.validate(curItem);
             }
         }
@@ -119,7 +119,7 @@ public class PetApiController extends Controller {
             throw new IllegalArgumentException("'tags' parameter is required");
         }
         List<String> tagsList = OpenAPIUtils.parametersToList("csv", tagsArray);
-        List<String> tags = new ArrayList<>();
+        java.util.List<String> tags = new ArrayList<>();
         for (String curParam : tagsList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -130,10 +130,10 @@ public class PetApiController extends Controller {
             return unauthorized();
         }
 
-        List<Pet> obj = imp.findPetsByTags(request, tags);
+        array<java.util.List<Pet>> obj = imp.findPetsByTags(request, tags);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
-            for (Pet curItem : obj) {
+            for (java.util.List<Pet> curItem : obj) {
                 OpenAPIUtils.validate(curItem);
             }
         }

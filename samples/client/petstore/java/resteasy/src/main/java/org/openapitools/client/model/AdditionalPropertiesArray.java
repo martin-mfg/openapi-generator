@@ -20,9 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -33,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdditionalPropertiesArray.JSON_PROPERTY_NAME
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class AdditionalPropertiesArray extends HashMap<String, List> {
+public class AdditionalPropertiesArray extends java.util.HashMap<String, java.util.List> {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 

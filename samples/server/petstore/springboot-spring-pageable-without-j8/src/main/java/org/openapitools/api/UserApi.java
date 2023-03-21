@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 import io.swagger.annotations.*;
@@ -81,7 +80,7 @@ public interface UserApi {
         value = "/user/createWithArray"
     )
     default ResponseEntity<Void> createUsersWithArrayInput(
-        @ApiParam(value = "List of user object", required = true) @Valid @RequestBody List<User> body
+        @ApiParam(value = "List of user object", required = true) @Valid @RequestBody java.util.List<User> body
     ) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
@@ -108,7 +107,7 @@ public interface UserApi {
         value = "/user/createWithList"
     )
     default ResponseEntity<Void> createUsersWithListInput(
-        @ApiParam(value = "List of user object", required = true) @Valid @RequestBody List<User> body
+        @ApiParam(value = "List of user object", required = true) @Valid @RequestBody java.util.List<User> body
     ) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 

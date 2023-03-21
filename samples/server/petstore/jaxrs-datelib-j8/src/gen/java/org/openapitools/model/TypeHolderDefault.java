@@ -19,8 +19,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.io.Serializable;
 import javax.validation.constraints.*;
@@ -56,7 +54,7 @@ public class TypeHolderDefault  implements Serializable {
 
   public static final String JSON_PROPERTY_ARRAY_ITEM = "array_item";
   @JsonProperty(JSON_PROPERTY_ARRAY_ITEM)
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   public TypeHolderDefault stringItem(String stringItem) {
     this.stringItem = stringItem;
@@ -138,14 +136,14 @@ public class TypeHolderDefault  implements Serializable {
     this.boolItem = boolItem;
   }
 
-  public TypeHolderDefault arrayItem(List<Integer> arrayItem) {
+  public TypeHolderDefault arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
 
   public TypeHolderDefault addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
     this.arrayItem.add(arrayItemItem);
     return this;
@@ -158,11 +156,11 @@ public class TypeHolderDefault  implements Serializable {
   @JsonProperty(value = "array_item")
   @ApiModelProperty(required = true, value = "")
   @NotNull 
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

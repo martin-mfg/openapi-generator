@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.ModelFile;
 
 import com.google.gson.Gson;
@@ -57,7 +55,7 @@ public class FileSchemaTestClass {
 
   public static final String SERIALIZED_NAME_FILES = "files";
   @SerializedName(SERIALIZED_NAME_FILES)
-  private List<ModelFile> files;
+  private java.util.List<ModelFile> files;
 
   public FileSchemaTestClass() {
   }
@@ -84,7 +82,7 @@ public class FileSchemaTestClass {
   }
 
 
-  public FileSchemaTestClass files(List<ModelFile> files) {
+  public FileSchemaTestClass files(java.util.List<ModelFile> files) {
     
     this.files = files;
     return this;
@@ -104,12 +102,12 @@ public class FileSchemaTestClass {
   **/
   @javax.annotation.Nullable
 
-  public List<ModelFile> getFiles() {
+  public java.util.List<ModelFile> getFiles() {
     return files;
   }
 
 
-  public void setFiles(List<ModelFile> files) {
+  public void setFiles(java.util.List<ModelFile> files) {
     this.files = files;
   }
 

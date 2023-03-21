@@ -37,22 +37,16 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AnotherFakeApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public AnotherFakeApi() {
     this(new ApiClient());

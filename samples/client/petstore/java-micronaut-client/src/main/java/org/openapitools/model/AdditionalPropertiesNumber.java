@@ -15,8 +15,6 @@ package org.openapitools.model;
 import java.util.Objects;
 import java.util.Arrays;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.*;
 
 import javax.validation.constraints.*;
@@ -33,7 +31,7 @@ import javax.annotation.Generated;
 @JsonTypeName("AdditionalPropertiesNumber")
 @Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen")
 @Introspected
-public class AdditionalPropertiesNumber extends HashMap<String, BigDecimal> {
+public class AdditionalPropertiesNumber extends java.util.HashMap<String, BigDecimal> {
     public static final String JSON_PROPERTY_NAME = "name";
     private String name;
 

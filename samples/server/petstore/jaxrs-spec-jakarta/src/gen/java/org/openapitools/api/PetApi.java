@@ -3,7 +3,6 @@ package org.openapitools.api;
 import java.io.File;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
-import java.util.Set;
 
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
@@ -66,7 +65,7 @@ public class PetApi {
         @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "Invalid status value", response = Void.class)
     })
-    public Response findPetsByStatus(@QueryParam("status") @NotNull  @ApiParam("Status values that need to be considered for filter")  List<String> status) {
+    public Response findPetsByStatus(@QueryParam("status") @NotNull  @ApiParam("Status values that need to be considered for filter")  java.util.List<String> status) {
         return Response.ok().entity("magic!").build();
     }
 
@@ -82,7 +81,7 @@ public class PetApi {
         @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "Set"),
         @ApiResponse(code = 400, message = "Invalid tag value", response = Void.class)
     })
-    public Response findPetsByTags(@QueryParam("tags") @NotNull  @ApiParam("Tags to filter by")  Set<String> tags) {
+    public Response findPetsByTags(@QueryParam("tags") @NotNull  @ApiParam("Tags to filter by")  java.util.Set<String> tags) {
         return Response.ok().entity("magic!").build();
     }
 

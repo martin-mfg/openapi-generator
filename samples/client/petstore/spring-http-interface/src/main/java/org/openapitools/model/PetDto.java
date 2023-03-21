@@ -6,11 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import org.openapitools.model.CategoryDto;
 import org.openapitools.model.TagDto;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -36,10 +31,10 @@ public class PetDto {
   private String name;
 
   
-  private Set<String> photoUrls = new LinkedHashSet<>();
+  private java.util.Set<String> photoUrls = new java.util.LinkedHashSet<>();
 
   
-  private List<TagDto> tags;
+  private java.util.List<TagDto> tags;
 
   /**
    * pet status in the store
@@ -137,14 +132,14 @@ public class PetDto {
     this.name = name;
   }
 
-  public PetDto photoUrls(Set<String> photoUrls) {
+  public PetDto photoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
 
   public PetDto addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new LinkedHashSet<>();
+      this.photoUrls = new java.util.LinkedHashSet<>();
     }
     this.photoUrls.add(photoUrlsItem);
     return this;
@@ -156,16 +151,15 @@ public class PetDto {
   */
   @NotNull
   @JsonProperty("photoUrls")
-  public Set<String> getPhotoUrls() {
+  public java.util.Set<String> getPhotoUrls() {
     return photoUrls;
   }
 
-  @JsonDeserialize(as = LinkedHashSet.class)
-  public void setPhotoUrls(Set<String> photoUrls) {
+  public void setPhotoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
-  public PetDto tags(List<TagDto> tags) {
+  public PetDto tags(java.util.List<TagDto> tags) {
     this.tags = tags;
     return this;
   }
@@ -184,11 +178,11 @@ public class PetDto {
   */
   
   @JsonProperty("tags")
-  public List<TagDto> getTags() {
+  public java.util.List<TagDto> getTags() {
     return tags;
   }
 
-  public void setTags(List<TagDto> tags) {
+  public void setTags(java.util.List<TagDto> tags) {
     this.tags = tags;
   }
 

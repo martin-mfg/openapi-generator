@@ -6,10 +6,6 @@ import org.openapitools.client.model.ApiResponse;
 
 import org.openapitools.client.model.Order;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import feign.*;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -44,13 +40,13 @@ public interface StoreApi extends ApiClient.Api {
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return Map&lt;String, Integer&gt;
+   * @return java.util.Map&lt;String, Integer&gt;
    */
   @RequestLine("GET /store/inventory")
   @Headers({
     "Accept: application/json",
   })
-  Map<String, Integer> getInventory();
+  java.util.Map<String, Integer> getInventory();
 
   /**
    * Returns pet inventories by status
@@ -62,7 +58,7 @@ public interface StoreApi extends ApiClient.Api {
   @Headers({
     "Accept: application/json",
   })
-  ApiResponse<Map<String, Integer>> getInventoryWithHttpInfo();
+  ApiResponse<java.util.Map<String, Integer>> getInventoryWithHttpInfo();
 
 
 

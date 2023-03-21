@@ -15,14 +15,6 @@ package org.openapitools.client;
 
 import org.openapitools.client.api.*;
 
-import io.restassured.builder.RequestSpecBuilder;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
-
-import static io.restassured.config.ObjectMapperConfig.objectMapperConfig;
-import static io.restassured.config.RestAssuredConfig.config;
-import static org.openapitools.client.JacksonObjectMapper.jackson;
-
 
 public class ApiClient {
     public static final String BASE_URI = "http://petstore.swagger.io:80/v2";

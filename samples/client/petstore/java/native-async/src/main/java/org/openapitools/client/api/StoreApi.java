@@ -43,12 +43,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -57,10 +51,10 @@ public class StoreApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public StoreApi() {
     this(new ApiClient());
@@ -169,10 +163,10 @@ public class StoreApi {
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return CompletableFuture&lt;Map&lt;String, Integer&gt;&gt;
+   * @return CompletableFuture&lt;java.util.Map&lt;String, Integer&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<Map<String, Integer>> getInventory() throws ApiException {
+  public CompletableFuture<java.util.Map<String, Integer>> getInventory() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = getInventoryRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -184,7 +178,7 @@ public class StoreApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<Map<String, Integer>>() {})
+                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<java.util.Map<String, Integer>>() {})
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -199,10 +193,10 @@ public class StoreApi {
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return CompletableFuture&lt;ApiResponse&lt;Map&lt;String, Integer&gt;&gt;&gt;
+   * @return CompletableFuture&lt;ApiResponse&lt;java.util.Map&lt;String, Integer&gt;&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<Map<String, Integer>>> getInventoryWithHttpInfo() throws ApiException {
+  public CompletableFuture<ApiResponse<java.util.Map<String, Integer>>> getInventoryWithHttpInfo() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = getInventoryRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -217,10 +211,10 @@ public class StoreApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  new ApiResponse<Map<String, Integer>>(
+                  new ApiResponse<java.util.Map<String, Integer>>(
                       localVarResponse.statusCode(),
                       localVarResponse.headers().map(),
-                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<Map<String, Integer>>() {}))
+                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<java.util.Map<String, Integer>>() {}))
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));

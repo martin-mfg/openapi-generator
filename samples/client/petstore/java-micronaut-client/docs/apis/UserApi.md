@@ -77,7 +77,7 @@ Creates list of users with given input array
 ### Parameters
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **_body** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **_body** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 
 
@@ -99,7 +99,7 @@ Creates list of users with given input array
 ### Parameters
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **_body** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **_body** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 
 

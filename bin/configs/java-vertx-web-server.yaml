@@ -5,3 +5,4 @@ templateDir: modules/openapi-generator/src/main/resources/JavaVertXWebServer
 additionalProperties:
   hideGenerationTimestamp: "true"
   artifactId: java-vertx-web-server
+  fullJavaUtil: true

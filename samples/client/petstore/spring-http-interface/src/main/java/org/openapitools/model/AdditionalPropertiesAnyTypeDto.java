@@ -5,8 +5,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import java.util.HashMap;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
@@ -21,7 +19,7 @@ import jakarta.annotation.Generated;
 
 @JsonTypeName("AdditionalPropertiesAnyType")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
-public class AdditionalPropertiesAnyTypeDto extends HashMap<String, Object> {
+public class AdditionalPropertiesAnyTypeDto extends java.util.HashMap<String, Object> {
 
   private String name;
 

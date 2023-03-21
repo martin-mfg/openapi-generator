@@ -31,12 +31,12 @@ public class PetApiServiceImpl implements PetApiService {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
   }
-      public Response findPetsByStatus(List<String> status,SecurityContext securityContext)
+      public Response findPetsByStatus(java.util.List<String> status,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
   }
-      public Response findPetsByTags(List<String> tags,SecurityContext securityContext)
+      public Response findPetsByTags(java.util.List<String> tags,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();

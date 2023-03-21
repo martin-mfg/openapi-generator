@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.ArrayOfInlineAllOfArrayAllofDogPropertyInner;
 
 import com.google.gson.Gson;
@@ -61,7 +59,7 @@ public class ArrayOfInlineAllOf {
 
   public static final String SERIALIZED_NAME_ARRAY_ALLOF_DOG_PROPERTY = "array_allof_dog_property";
   @SerializedName(SERIALIZED_NAME_ARRAY_ALLOF_DOG_PROPERTY)
-  private List<ArrayOfInlineAllOfArrayAllofDogPropertyInner> arrayAllofDogProperty;
+  private java.util.List<ArrayOfInlineAllOfArrayAllofDogPropertyInner> arrayAllofDogProperty;
 
   public ArrayOfInlineAllOf() {
   }
@@ -110,7 +108,7 @@ public class ArrayOfInlineAllOf {
   }
 
 
-  public ArrayOfInlineAllOf arrayAllofDogProperty(List<ArrayOfInlineAllOfArrayAllofDogPropertyInner> arrayAllofDogProperty) {
+  public ArrayOfInlineAllOf arrayAllofDogProperty(java.util.List<ArrayOfInlineAllOfArrayAllofDogPropertyInner> arrayAllofDogProperty) {
     
     this.arrayAllofDogProperty = arrayAllofDogProperty;
     return this;
@@ -130,12 +128,12 @@ public class ArrayOfInlineAllOf {
   **/
   @javax.annotation.Nullable
 
-  public List<ArrayOfInlineAllOfArrayAllofDogPropertyInner> getArrayAllofDogProperty() {
+  public java.util.List<ArrayOfInlineAllOfArrayAllofDogPropertyInner> getArrayAllofDogProperty() {
     return arrayAllofDogProperty;
   }
 
 
-  public void setArrayAllofDogProperty(List<ArrayOfInlineAllOfArrayAllofDogPropertyInner> arrayAllofDogProperty) {
+  public void setArrayAllofDogProperty(java.util.List<ArrayOfInlineAllOfArrayAllofDogPropertyInner> arrayAllofDogProperty) {
     this.arrayAllofDogProperty = arrayAllofDogProperty;
   }
 

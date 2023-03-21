@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.Category;
 import org.openapitools.client.model.Tag;
 
@@ -66,11 +64,11 @@ public class PetWithRequiredTags {
 
   public static final String SERIALIZED_NAME_PHOTO_URLS = "photoUrls";
   @SerializedName(SERIALIZED_NAME_PHOTO_URLS)
-  private List<String> photoUrls = new ArrayList<>();
+  private java.util.List<String> photoUrls = new java.util.ArrayList<>();
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
-  private List<Tag> tags = new ArrayList<>();
+  private java.util.List<Tag> tags = new java.util.ArrayList<>();
 
   /**
    * pet status in the store
@@ -194,7 +192,7 @@ public class PetWithRequiredTags {
   }
 
 
-  public PetWithRequiredTags photoUrls(List<String> photoUrls) {
+  public PetWithRequiredTags photoUrls(java.util.List<String> photoUrls) {
     
     this.photoUrls = photoUrls;
     return this;
@@ -202,7 +200,7 @@ public class PetWithRequiredTags {
 
   public PetWithRequiredTags addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new ArrayList<>();
+      this.photoUrls = new java.util.ArrayList<>();
     }
     this.photoUrls.add(photoUrlsItem);
     return this;
@@ -214,17 +212,17 @@ public class PetWithRequiredTags {
   **/
   @javax.annotation.Nonnull
 
-  public List<String> getPhotoUrls() {
+  public java.util.List<String> getPhotoUrls() {
     return photoUrls;
   }
 
 
-  public void setPhotoUrls(List<String> photoUrls) {
+  public void setPhotoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
 
-  public PetWithRequiredTags tags(List<Tag> tags) {
+  public PetWithRequiredTags tags(java.util.List<Tag> tags) {
     
     this.tags = tags;
     return this;
@@ -232,7 +230,7 @@ public class PetWithRequiredTags {
 
   public PetWithRequiredTags addTagsItem(Tag tagsItem) {
     if (this.tags == null) {
-      this.tags = new ArrayList<>();
+      this.tags = new java.util.ArrayList<>();
     }
     this.tags.add(tagsItem);
     return this;
@@ -244,12 +242,12 @@ public class PetWithRequiredTags {
   **/
   @javax.annotation.Nonnull
 
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
 
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 

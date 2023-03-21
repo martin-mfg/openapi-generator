@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
@@ -71,7 +69,7 @@ public class TypeHolderExample {
   // items.name=arrayItem items.baseName=arrayItem items.xmlName= items.xmlNamespace=
   // items.example= items.type=Integer
   @XmlElement(name = "arrayItem")
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   public TypeHolderExample() {
   }
@@ -216,7 +214,7 @@ public class TypeHolderExample {
   }
 
 
-  public TypeHolderExample arrayItem(List<Integer> arrayItem) {
+  public TypeHolderExample arrayItem(java.util.List<Integer> arrayItem) {
     
     this.arrayItem = arrayItem;
     return this;
@@ -224,7 +222,7 @@ public class TypeHolderExample {
 
   public TypeHolderExample addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
     this.arrayItem.add(arrayItemItem);
     return this;
@@ -238,14 +236,14 @@ public class TypeHolderExample {
   @JsonProperty(JSON_PROPERTY_ARRAY_ITEM)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_ITEM)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

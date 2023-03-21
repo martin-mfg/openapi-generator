@@ -26,8 +26,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.Query;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 

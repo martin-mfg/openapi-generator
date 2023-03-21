@@ -63,7 +63,7 @@ Creates list of users with given input array
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **user** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 ### Return type
 
@@ -98,7 +98,7 @@ Creates list of users with given input array
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **user** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 ### Return type
 

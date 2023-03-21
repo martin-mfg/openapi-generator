@@ -4,9 +4,6 @@ import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
@@ -20,7 +17,7 @@ import jakarta.annotation.Generated;
  */
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
-public class AdditionalPropertiesArray extends HashMap<String, List> {
+public class AdditionalPropertiesArray extends java.util.HashMap<String, java.util.List> {
 
   private String name;
 

@@ -2,8 +2,6 @@ package org.openapitools.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 import java.io.Serializable;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -19,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 @JsonTypeName("AdditionalPropertiesAnyType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")
-public class AdditionalPropertiesAnyType extends HashMap<String, Object> implements Serializable {
+public class AdditionalPropertiesAnyType extends java.util.HashMap<String, Object> implements Serializable {
   private @Valid String name;
 
   /**

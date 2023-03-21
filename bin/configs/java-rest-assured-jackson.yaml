@@ -12,3 +12,4 @@ additionalProperties:
   booleanGetterPrefix: is
   artifactId: petstore-rest-assured-jackson
   hideGenerationTimestamp: "true"
+  fullJavaUtil: true

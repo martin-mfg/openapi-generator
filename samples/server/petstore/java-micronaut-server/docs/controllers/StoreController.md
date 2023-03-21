@@ -35,7 +35,7 @@ Name | Type | Description  | Notes
 <a name="getInventory"></a>
 # **getInventory**
 ```java
-Mono<Map<String, Integer>> StoreController.getInventory()
+Mono<java.util.Map<String, Integer>> StoreController.getInventory()
 ```
 
 Returns pet inventories by status
@@ -44,7 +44,7 @@ Returns a map of status codes to quantities
 
 
 ### Return type
-`Map&lt;String, Integer&gt;`
+`java.util.Map&lt;String, Integer&gt;`
 
 ### Authorization
 * **api_key**

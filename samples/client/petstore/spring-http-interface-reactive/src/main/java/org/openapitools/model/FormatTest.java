@@ -9,7 +9,6 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.Arrays;
-import java.util.UUID;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
@@ -51,7 +50,7 @@ public class FormatTest {
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private OffsetDateTime dateTime;
 
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   private String password;
 
@@ -295,7 +294,7 @@ public class FormatTest {
     this.dateTime = dateTime;
   }
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -306,11 +305,11 @@ public class FormatTest {
   */
   
   @JsonProperty("uuid")
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 

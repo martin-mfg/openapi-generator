@@ -22,10 +22,6 @@ import io.micronaut.http.multipart.CompletedFileUpload;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 import javax.annotation.Generated;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.Operation;
@@ -113,7 +109,7 @@ public class PetController {
      * Multiple status values can be provided with comma separated strings
      *
      * @param status Status values that need to be considered for filter (required)
-     * @return List&lt;Pet&gt;
+     * @return java.util.List&lt;Pet&gt;
      */
     @Operation(
         operationId = "findPetsByStatus",
@@ -134,8 +130,8 @@ public class PetController {
     )
     @Get(uri="/pet/findByStatus")
     @Produces(value = {"application/xml", "application/json"})
-    public Mono<List<Pet>> findPetsByStatus(
-        @QueryValue(value="status") @NotNull List<String> status
+    public Mono<java.util.List<Pet>> findPetsByStatus(
+        @QueryValue(value="status") @NotNull java.util.List<String> status
     ) {
         // TODO implement findPetsByStatus();
         return Mono.error(new HttpStatusException(HttpStatus.NOT_IMPLEMENTED, null));
@@ -147,7 +143,7 @@ public class PetController {
      * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
      *
      * @param tags Tags to filter by (required)
-     * @return List&lt;Pet&gt;
+     * @return java.util.List&lt;Pet&gt;
      */
     @Operation(
         operationId = "findPetsByTags",
@@ -168,8 +164,8 @@ public class PetController {
     )
     @Get(uri="/pet/findByTags")
     @Produces(value = {"application/xml", "application/json"})
-    public Mono<List<Pet>> findPetsByTags(
-        @QueryValue(value="tags") @NotNull List<String> tags
+    public Mono<java.util.List<Pet>> findPetsByTags(
+        @QueryValue(value="tags") @NotNull java.util.List<String> tags
     ) {
         // TODO implement findPetsByTags();
         return Mono.error(new HttpStatusException(HttpStatus.NOT_IMPLEMENTED, null));

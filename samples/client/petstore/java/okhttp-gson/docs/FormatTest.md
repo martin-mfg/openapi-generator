@@ -19,8 +19,8 @@
 |**binary** | **File** |  |  [optional] |
 |**date** | **LocalDate** |  |  |
 |**dateTime** | **OffsetDateTime** |  |  [optional] |
-|**uuid** | **UUID** |  |  [optional] |
-|**uuidWithDefault** | **UUID** |  |  [optional] |
+|**uuid** | **java.util.UUID** |  |  [optional] |
+|**uuidWithDefault** | **java.util.UUID** |  |  [optional] |
 |**password** | **String** |  |  |
 |**patternWithDigits** | **String** | A string that is a 10 digit number. Can have leading zeros. |  [optional] |
 |**patternWithDigitsAndDelimiter** | **String** | A string starting with &#39;image_&#39; (case insensitive) and one to three digits following i.e. Image_01. |  [optional] |

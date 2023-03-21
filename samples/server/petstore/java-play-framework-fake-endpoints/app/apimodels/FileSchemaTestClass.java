@@ -1,8 +1,6 @@
 package apimodels;
 
 import apimodels.ModelFile;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
@@ -22,7 +20,7 @@ public class FileSchemaTestClass   {
   @JsonProperty("files")
   @Valid
 
-  private List<ModelFile> files = null;
+  private java.util.List<ModelFile> files = null;
 
   public FileSchemaTestClass _file(ModelFile _file) {
     this._file = _file;
@@ -41,7 +39,7 @@ public class FileSchemaTestClass   {
     this._file = _file;
   }
 
-  public FileSchemaTestClass files(List<ModelFile> files) {
+  public FileSchemaTestClass files(java.util.List<ModelFile> files) {
     this.files = files;
     return this;
   }
@@ -58,11 +56,11 @@ public class FileSchemaTestClass   {
    * Get files
    * @return files
   **/
-  public List<ModelFile> getFiles() {
+  public java.util.List<ModelFile> getFiles() {
     return files;
   }
 
-  public void setFiles(List<ModelFile> files) {
+  public void setFiles(java.util.List<ModelFile> files) {
     this.files = files;
   }
 

@@ -2,8 +2,6 @@ package org.openapitools.server.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 
 
 
@@ -84,7 +82,7 @@ public class EnumArrays   {
     }
 
 
-    private List<ArrayEnumEnum> arrayEnum;
+    private java.util.List<ArrayEnumEnum> arrayEnum;
 
     /**
      * Default constructor.
@@ -101,7 +99,7 @@ public class EnumArrays   {
      */
     public EnumArrays(
         JustSymbolEnum justSymbol, 
-        List<ArrayEnumEnum> arrayEnum
+        java.util.List<ArrayEnumEnum> arrayEnum
     ) {
         this.justSymbol = justSymbol;
         this.arrayEnum = arrayEnum;
@@ -125,11 +123,11 @@ public class EnumArrays   {
      * Get arrayEnum
      * @return arrayEnum
      */
-    public List<ArrayEnumEnum> getArrayEnum() {
+    public java.util.List<ArrayEnumEnum> getArrayEnum() {
         return arrayEnum;
     }
 
-    public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+    public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
         this.arrayEnum = arrayEnum;
     }
 

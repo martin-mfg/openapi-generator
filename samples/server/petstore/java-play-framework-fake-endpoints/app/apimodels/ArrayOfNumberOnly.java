@@ -1,8 +1,6 @@
 package apimodels;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
@@ -17,9 +15,9 @@ public class ArrayOfNumberOnly   {
   @JsonProperty("ArrayNumber")
   @Valid
 
-  private List<BigDecimal> arrayNumber = null;
+  private java.util.List<BigDecimal> arrayNumber = null;
 
-  public ArrayOfNumberOnly arrayNumber(List<BigDecimal> arrayNumber) {
+  public ArrayOfNumberOnly arrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
     return this;
   }
@@ -36,11 +34,11 @@ public class ArrayOfNumberOnly   {
    * Get arrayNumber
    * @return arrayNumber
   **/
-  public List<BigDecimal> getArrayNumber() {
+  public java.util.List<BigDecimal> getArrayNumber() {
     return arrayNumber;
   }
 
-  public void setArrayNumber(List<BigDecimal> arrayNumber) {
+  public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
   }
 

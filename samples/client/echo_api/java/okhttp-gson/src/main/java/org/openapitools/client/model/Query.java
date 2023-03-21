@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -105,7 +103,7 @@ public class Query {
 
   public static final String SERIALIZED_NAME_OUTCOMES = "outcomes";
   @SerializedName(SERIALIZED_NAME_OUTCOMES)
-  private List<OutcomesEnum> outcomes = new ArrayList<>(Arrays.asList(OutcomesEnum.SUCCESS, OutcomesEnum.FAILURE));
+  private java.util.List<OutcomesEnum> outcomes = new ArrayList<>(Arrays.asList(OutcomesEnum.SUCCESS, OutcomesEnum.FAILURE));
 
   public Query() {
   }
@@ -132,7 +130,7 @@ public class Query {
   }
 
 
-  public Query outcomes(List<OutcomesEnum> outcomes) {
+  public Query outcomes(java.util.List<OutcomesEnum> outcomes) {
     
     this.outcomes = outcomes;
     return this;
@@ -152,12 +150,12 @@ public class Query {
   **/
   @javax.annotation.Nullable
 
-  public List<OutcomesEnum> getOutcomes() {
+  public java.util.List<OutcomesEnum> getOutcomes() {
     return outcomes;
   }
 
 
-  public void setOutcomes(List<OutcomesEnum> outcomes) {
+  public void setOutcomes(java.util.List<OutcomesEnum> outcomes) {
     this.outcomes = outcomes;
   }
 

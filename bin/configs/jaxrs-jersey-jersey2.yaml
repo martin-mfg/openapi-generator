@@ -6,3 +6,4 @@ additionalProperties:
   artifactId: jaxrs-jersey-petstore-server
   hideGenerationTimestamp: "true"
   serverPort: "8082"
+  fullJavaUtil: true

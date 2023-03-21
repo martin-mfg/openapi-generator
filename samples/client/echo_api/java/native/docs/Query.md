@@ -8,11 +8,11 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Query |  [optional] |
-|**outcomes** | [**List&lt;OutcomesEnum&gt;**](#List&lt;OutcomesEnum&gt;) |  |  [optional] |
+|**outcomes** | [**java.util.List&lt;OutcomesEnum&gt;**](#java.util.List&lt;OutcomesEnum&gt;) |  |  [optional] |
 
 
 
-## Enum: List&lt;OutcomesEnum&gt;
+## Enum: java.util.List&lt;OutcomesEnum&gt;
 
 | Name | Value |
 |---- | -----|

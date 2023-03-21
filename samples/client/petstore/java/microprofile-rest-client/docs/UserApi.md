@@ -103,7 +103,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io/v2");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        List<User> body = Arrays.asList(); // List<User> | List of user object
+        java.util.List<User> body = Arrays.asList(); // java.util.List<User> | List of user object
         try {
             void result = apiInstance.createUsersWithArrayInput(body);
             System.out.println(result);
@@ -123,7 +123,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **body** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 ### Return type
 
@@ -167,7 +167,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io/v2");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        List<User> body = Arrays.asList(); // List<User> | List of user object
+        java.util.List<User> body = Arrays.asList(); // java.util.List<User> | List of user object
         try {
             void result = apiInstance.createUsersWithListInput(body);
             System.out.println(result);
@@ -187,7 +187,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **body** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 ### Return type
 

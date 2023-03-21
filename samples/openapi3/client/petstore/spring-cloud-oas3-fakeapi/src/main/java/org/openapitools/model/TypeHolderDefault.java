@@ -5,8 +5,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -33,7 +31,7 @@ public class TypeHolderDefault {
   private Boolean boolItem = true;
 
   @Valid
-  private List<Integer> arrayItem = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
+  private java.util.List<Integer> arrayItem = new ArrayList<>(Arrays.asList(0, 1, 2, 3));
 
   public TypeHolderDefault stringItem(String stringItem) {
     this.stringItem = stringItem;
@@ -115,7 +113,7 @@ public class TypeHolderDefault {
     this.boolItem = boolItem;
   }
 
-  public TypeHolderDefault arrayItem(List<Integer> arrayItem) {
+  public TypeHolderDefault arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
@@ -135,11 +133,11 @@ public class TypeHolderDefault {
   @NotNull 
   @Schema(name = "array_item", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("array_item")
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

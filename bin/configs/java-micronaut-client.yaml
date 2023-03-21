@@ -9,3 +9,4 @@ additionalProperties:
   test: "spock"
   requiredPropertiesInConstructor: "false"
   visitable: "true"
+  fullJavaUtil: true

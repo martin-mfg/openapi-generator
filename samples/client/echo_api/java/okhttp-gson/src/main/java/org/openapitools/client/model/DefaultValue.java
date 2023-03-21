@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.StringEnumRef;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -54,7 +52,7 @@ import org.openapitools.client.JSON;
 public class DefaultValue {
   public static final String SERIALIZED_NAME_ARRAY_STRING_ENUM_REF_DEFAULT = "array_string_enum_ref_default";
   @SerializedName(SERIALIZED_NAME_ARRAY_STRING_ENUM_REF_DEFAULT)
-  private List<StringEnumRef> arrayStringEnumRefDefault = new ArrayList<>(Arrays.asList(StringEnumRef.SUCCESS, StringEnumRef.FAILURE));
+  private java.util.List<StringEnumRef> arrayStringEnumRefDefault = new ArrayList<>(Arrays.asList(StringEnumRef.SUCCESS, StringEnumRef.FAILURE));
 
   /**
    * Gets or Sets arrayStringEnumDefault
@@ -107,27 +105,27 @@ public class DefaultValue {
 
   public static final String SERIALIZED_NAME_ARRAY_STRING_ENUM_DEFAULT = "array_string_enum_default";
   @SerializedName(SERIALIZED_NAME_ARRAY_STRING_ENUM_DEFAULT)
-  private List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault = new ArrayList<>(Arrays.asList(ArrayStringEnumDefaultEnum.SUCCESS, ArrayStringEnumDefaultEnum.FAILURE));
+  private java.util.List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault = new ArrayList<>(Arrays.asList(ArrayStringEnumDefaultEnum.SUCCESS, ArrayStringEnumDefaultEnum.FAILURE));
 
   public static final String SERIALIZED_NAME_ARRAY_STRING_DEFAULT = "array_string_default";
   @SerializedName(SERIALIZED_NAME_ARRAY_STRING_DEFAULT)
-  private List<String> arrayStringDefault = new ArrayList<>(Arrays.asList("failure", "skipped"));
+  private java.util.List<String> arrayStringDefault = new ArrayList<>(Arrays.asList("failure", "skipped"));
 
   public static final String SERIALIZED_NAME_ARRAY_INTEGER_DEFAULT = "array_integer_default";
   @SerializedName(SERIALIZED_NAME_ARRAY_INTEGER_DEFAULT)
-  private List<Integer> arrayIntegerDefault = new ArrayList<>(Arrays.asList(1, 3));
+  private java.util.List<Integer> arrayIntegerDefault = new ArrayList<>(Arrays.asList(1, 3));
 
   public static final String SERIALIZED_NAME_ARRAY_STRING = "array_string";
   @SerializedName(SERIALIZED_NAME_ARRAY_STRING)
-  private List<String> arrayString;
+  private java.util.List<String> arrayString;
 
   public static final String SERIALIZED_NAME_ARRAY_STRING_NULLABLE = "array_string_nullable";
   @SerializedName(SERIALIZED_NAME_ARRAY_STRING_NULLABLE)
-  private List<String> arrayStringNullable;
+  private java.util.List<String> arrayStringNullable;
 
   public static final String SERIALIZED_NAME_ARRAY_STRING_EXTENSION_NULLABLE = "array_string_extension_nullable";
   @SerializedName(SERIALIZED_NAME_ARRAY_STRING_EXTENSION_NULLABLE)
-  private List<String> arrayStringExtensionNullable;
+  private java.util.List<String> arrayStringExtensionNullable;
 
   public static final String SERIALIZED_NAME_STRING_NULLABLE = "string_nullable";
   @SerializedName(SERIALIZED_NAME_STRING_NULLABLE)
@@ -136,7 +134,7 @@ public class DefaultValue {
   public DefaultValue() {
   }
 
-  public DefaultValue arrayStringEnumRefDefault(List<StringEnumRef> arrayStringEnumRefDefault) {
+  public DefaultValue arrayStringEnumRefDefault(java.util.List<StringEnumRef> arrayStringEnumRefDefault) {
     
     this.arrayStringEnumRefDefault = arrayStringEnumRefDefault;
     return this;
@@ -156,17 +154,17 @@ public class DefaultValue {
   **/
   @javax.annotation.Nullable
 
-  public List<StringEnumRef> getArrayStringEnumRefDefault() {
+  public java.util.List<StringEnumRef> getArrayStringEnumRefDefault() {
     return arrayStringEnumRefDefault;
   }
 
 
-  public void setArrayStringEnumRefDefault(List<StringEnumRef> arrayStringEnumRefDefault) {
+  public void setArrayStringEnumRefDefault(java.util.List<StringEnumRef> arrayStringEnumRefDefault) {
     this.arrayStringEnumRefDefault = arrayStringEnumRefDefault;
   }
 
 
-  public DefaultValue arrayStringEnumDefault(List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault) {
+  public DefaultValue arrayStringEnumDefault(java.util.List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault) {
     
     this.arrayStringEnumDefault = arrayStringEnumDefault;
     return this;
@@ -186,17 +184,17 @@ public class DefaultValue {
   **/
   @javax.annotation.Nullable
 
-  public List<ArrayStringEnumDefaultEnum> getArrayStringEnumDefault() {
+  public java.util.List<ArrayStringEnumDefaultEnum> getArrayStringEnumDefault() {
     return arrayStringEnumDefault;
   }
 
 
-  public void setArrayStringEnumDefault(List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault) {
+  public void setArrayStringEnumDefault(java.util.List<ArrayStringEnumDefaultEnum> arrayStringEnumDefault) {
     this.arrayStringEnumDefault = arrayStringEnumDefault;
   }
 
 
-  public DefaultValue arrayStringDefault(List<String> arrayStringDefault) {
+  public DefaultValue arrayStringDefault(java.util.List<String> arrayStringDefault) {
     
     this.arrayStringDefault = arrayStringDefault;
     return this;
@@ -216,17 +214,17 @@ public class DefaultValue {
   **/
   @javax.annotation.Nullable
 
-  public List<String> getArrayStringDefault() {
+  public java.util.List<String> getArrayStringDefault() {
     return arrayStringDefault;
   }
 
 
-  public void setArrayStringDefault(List<String> arrayStringDefault) {
+  public void setArrayStringDefault(java.util.List<String> arrayStringDefault) {
     this.arrayStringDefault = arrayStringDefault;
   }
 
 
-  public DefaultValue arrayIntegerDefault(List<Integer> arrayIntegerDefault) {
+  public DefaultValue arrayIntegerDefault(java.util.List<Integer> arrayIntegerDefault) {
     
     this.arrayIntegerDefault = arrayIntegerDefault;
     return this;
@@ -246,17 +244,17 @@ public class DefaultValue {
   **/
   @javax.annotation.Nullable
 
-  public List<Integer> getArrayIntegerDefault() {
+  public java.util.List<Integer> getArrayIntegerDefault() {
     return arrayIntegerDefault;
   }
 
 
-  public void setArrayIntegerDefault(List<Integer> arrayIntegerDefault) {
+  public void setArrayIntegerDefault(java.util.List<Integer> arrayIntegerDefault) {
     this.arrayIntegerDefault = arrayIntegerDefault;
   }
 
 
-  public DefaultValue arrayString(List<String> arrayString) {
+  public DefaultValue arrayString(java.util.List<String> arrayString) {
     
     this.arrayString = arrayString;
     return this;
@@ -276,17 +274,17 @@ public class DefaultValue {
   **/
   @javax.annotation.Nullable
 
-  public List<String> getArrayString() {
+  public java.util.List<String> getArrayString() {
     return arrayString;
   }
 
 
-  public void setArrayString(List<String> arrayString) {
+  public void setArrayString(java.util.List<String> arrayString) {
     this.arrayString = arrayString;
   }
 
 
-  public DefaultValue arrayStringNullable(List<String> arrayStringNullable) {
+  public DefaultValue arrayStringNullable(java.util.List<String> arrayStringNullable) {
     
     this.arrayStringNullable = arrayStringNullable;
     return this;
@@ -306,17 +304,17 @@ public class DefaultValue {
   **/
   @javax.annotation.Nullable
 
-  public List<String> getArrayStringNullable() {
+  public java.util.List<String> getArrayStringNullable() {
     return arrayStringNullable;
   }
 
 
-  public void setArrayStringNullable(List<String> arrayStringNullable) {
+  public void setArrayStringNullable(java.util.List<String> arrayStringNullable) {
     this.arrayStringNullable = arrayStringNullable;
   }
 
 
-  public DefaultValue arrayStringExtensionNullable(List<String> arrayStringExtensionNullable) {
+  public DefaultValue arrayStringExtensionNullable(java.util.List<String> arrayStringExtensionNullable) {
     
     this.arrayStringExtensionNullable = arrayStringExtensionNullable;
     return this;
@@ -336,12 +334,12 @@ public class DefaultValue {
   **/
   @javax.annotation.Nullable
 
-  public List<String> getArrayStringExtensionNullable() {
+  public java.util.List<String> getArrayStringExtensionNullable() {
     return arrayStringExtensionNullable;
   }
 
 
-  public void setArrayStringExtensionNullable(List<String> arrayStringExtensionNullable) {
+  public void setArrayStringExtensionNullable(java.util.List<String> arrayStringExtensionNullable) {
     this.arrayStringExtensionNullable = arrayStringExtensionNullable;
   }
 

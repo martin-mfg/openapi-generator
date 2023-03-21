@@ -63,7 +63,7 @@ public interface PetApiDelegate {
      *         or Invalid status value (status code 400)
      * @see PetApi#findPetsByStatus
      */
-    default ResponseEntity<List<Pet>> findPetsByStatus(List<String> status, final Pageable pageable) {
+    default ResponseEntity<List<Pet>> findPetsByStatus(java.util.List<String> status, final Pageable pageable) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -93,7 +93,7 @@ public interface PetApiDelegate {
      * @see PetApi#findPetsByTags
      */
     @Deprecated
-    default ResponseEntity<List<Pet>> findPetsByTags(List<String> tags, final Pageable pageable) {
+    default ResponseEntity<List<Pet>> findPetsByTags(java.util.List<String> tags, final Pageable pageable) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {

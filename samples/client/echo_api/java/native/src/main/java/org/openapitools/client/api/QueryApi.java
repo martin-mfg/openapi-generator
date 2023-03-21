@@ -48,22 +48,16 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueryApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public QueryApi() {
     this(new ApiClient());
@@ -158,8 +152,8 @@ public class QueryApi {
 
     String localVarPath = "/query/datetime/date/string";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "datetime_query";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("datetime_query", datetimeQuery));
@@ -169,7 +163,7 @@ public class QueryApi {
     localVarQueryParams.addAll(ApiClient.parameterToPairs("string_query", stringQuery));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -256,8 +250,8 @@ public class QueryApi {
 
     String localVarPath = "/query/integer/boolean/string";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "integer_query";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("integer_query", integerQuery));
@@ -267,7 +261,7 @@ public class QueryApi {
     localVarQueryParams.addAll(ApiClient.parameterToPairs("string_query", stringQuery));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -350,8 +344,8 @@ public class QueryApi {
 
     String localVarPath = "/query/style_deepObject/explode_true/object";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "query_object";
     if (queryObject != null) {
@@ -359,7 +353,7 @@ public class QueryApi {
     }
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -442,8 +436,8 @@ public class QueryApi {
 
     String localVarPath = "/query/style_deepObject/explode_true/object/allOf";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "query_object";
     if (queryObject != null) {
@@ -451,7 +445,7 @@ public class QueryApi {
     }
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -534,14 +528,14 @@ public class QueryApi {
 
     String localVarPath = "/query/style_form/explode_true/array_string";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "query_object";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("multi", "values", queryObject.getValues()));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -624,8 +618,8 @@ public class QueryApi {
 
     String localVarPath = "/query/style_form/explode_true/object";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "query_object";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("id", queryObject.getId()));
@@ -636,7 +630,7 @@ public class QueryApi {
     localVarQueryParams.addAll(ApiClient.parameterToPairs("status", queryObject.getStatus()));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -719,14 +713,14 @@ public class QueryApi {
 
     String localVarPath = "/query/style_form/explode_true/object/allOf";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "query_object";
     localVarQueryStringJoiner.add(queryObject.toUrlQueryString());
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());

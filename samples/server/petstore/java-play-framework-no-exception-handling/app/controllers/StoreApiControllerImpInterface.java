@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.Map;
 import apimodels.Order;
 
 import com.google.inject.Inject;
@@ -36,14 +35,14 @@ public abstract class StoreApiControllerImpInterface {
     public abstract void deleteOrder(Http.Request request, String orderId) ;
 
     public Result getInventoryHttp(Http.Request request)  {
-        Map<String, Integer> obj = getInventory(request);
+        Map<String, java.util.Map<String, Integer>> obj = getInventory(request);
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);
 
     }
 
-    public abstract Map<String, Integer> getInventory(Http.Request request) ;
+    public abstract Map<String, java.util.Map<String, Integer>> getInventory(Http.Request request) ;
 
     public Result getOrderByIdHttp(Http.Request request,  @Min(1) @Max(5)Long orderId)  {
         Order obj = getOrderById(request, orderId);

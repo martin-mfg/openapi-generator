@@ -23,22 +23,6 @@ import org.openapitools.client.model.OuterComposite;
 import org.openapitools.client.model.User;
 import org.openapitools.client.model.XmlItem;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.common.mapper.TypeRef;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-
-import java.lang.reflect.Type;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 import static io.restassured.http.Method.*;
 
 public class FakeApi {
@@ -963,7 +947,7 @@ public class FakeApi {
         public static final String ENUM_HEADER_STRING_ARRAY_HEADER = "enum_header_string_array";
 
         /**
-         * @param enumHeaderStringArray (List&lt;String&gt;) Header parameter enum test (string array) (optional)
+         * @param enumHeaderStringArray (java.util.List&lt;String&gt;) Header parameter enum test (string array) (optional)
          * @return operation
          */
         public TestEnumParametersOper enumHeaderStringArrayHeader(String enumHeaderStringArray) {
@@ -985,7 +969,7 @@ public class FakeApi {
         public static final String ENUM_QUERY_STRING_ARRAY_QUERY = "enum_query_string_array";
 
         /**
-         * @param enumQueryStringArray (List&lt;String&gt;) Query parameter enum test (string array) (optional)
+         * @param enumQueryStringArray (java.util.List&lt;String&gt;) Query parameter enum test (string array) (optional)
          * @return operation
          */
         public TestEnumParametersOper enumQueryStringArrayQuery(Object... enumQueryStringArray) {
@@ -1029,7 +1013,7 @@ public class FakeApi {
          public static final String ENUM_FORM_STRING_ARRAY_FORM = "enum_form_string_array";
 
          /**
-         * @param enumFormStringArray (List&lt;String&gt;) Form parameter enum test (string array) (optional, default to $)
+         * @param enumFormStringArray (java.util.List&lt;String&gt;) Form parameter enum test (string array) (optional, default to $)
          * @return operation
          */
          public TestEnumParametersOper enumFormStringArrayForm(Object... enumFormStringArray) {
@@ -1223,10 +1207,10 @@ public class FakeApi {
         }
 
          /**
-         * @param param (Map&lt;String, String&gt;) request body (required)
+         * @param param (java.util.Map&lt;String, String&gt;) request body (required)
          * @return operation
          */
-        public TestInlineAdditionalPropertiesOper body(Map<String, String> param) {
+        public TestInlineAdditionalPropertiesOper body(java.util.Map<String, String> param) {
             reqSpec.setBody(param);
             return this;
         }
@@ -1364,7 +1348,7 @@ public class FakeApi {
         public static final String PIPE_QUERY = "pipe";
 
         /**
-         * @param pipe (List&lt;String&gt;)  (required)
+         * @param pipe (java.util.List&lt;String&gt;)  (required)
          * @return operation
          */
         public TestQueryParameterCollectionFormatOper pipeQuery(Object... pipe) {
@@ -1375,7 +1359,7 @@ public class FakeApi {
         public static final String IOUTIL_QUERY = "ioutil";
 
         /**
-         * @param ioutil (List&lt;String&gt;)  (required)
+         * @param ioutil (java.util.List&lt;String&gt;)  (required)
          * @return operation
          */
         public TestQueryParameterCollectionFormatOper ioutilQuery(Object... ioutil) {
@@ -1386,7 +1370,7 @@ public class FakeApi {
         public static final String HTTP_QUERY = "http";
 
         /**
-         * @param http (List&lt;String&gt;)  (required)
+         * @param http (java.util.List&lt;String&gt;)  (required)
          * @return operation
          */
         public TestQueryParameterCollectionFormatOper httpQuery(Object... http) {
@@ -1397,7 +1381,7 @@ public class FakeApi {
         public static final String URL_QUERY = "url";
 
         /**
-         * @param url (List&lt;String&gt;)  (required)
+         * @param url (java.util.List&lt;String&gt;)  (required)
          * @return operation
          */
         public TestQueryParameterCollectionFormatOper urlQuery(Object... url) {
@@ -1408,7 +1392,7 @@ public class FakeApi {
         public static final String CONTEXT_QUERY = "context";
 
         /**
-         * @param context (List&lt;String&gt;)  (required)
+         * @param context (java.util.List&lt;String&gt;)  (required)
          * @return operation
          */
         public TestQueryParameterCollectionFormatOper contextQuery(Object... context) {

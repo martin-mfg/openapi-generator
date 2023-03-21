@@ -10,3 +10,4 @@ additionalProperties:
   test: "spock"
   useAuth: "false"
   fullProject: "true"
+  fullJavaUtil: true

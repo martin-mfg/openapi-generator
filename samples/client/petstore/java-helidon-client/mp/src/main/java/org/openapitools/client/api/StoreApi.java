@@ -25,6 +25,8 @@ import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
+import org.openapitools.client.model.List;
+import org.openapitools.client.model.Map;
 import org.openapitools.client.model.Order;
 
 /**
@@ -52,7 +54,7 @@ public interface StoreApi  {
     @GET
     @Path("/inventory")
     @Produces({ "application/json" })
-    Map<String, Integer> getInventory() throws ApiException, ProcessingException;
+    java.util.Map<String, Integer> getInventory() throws ApiException, ProcessingException;
 
     /**
      * Find purchase order by ID

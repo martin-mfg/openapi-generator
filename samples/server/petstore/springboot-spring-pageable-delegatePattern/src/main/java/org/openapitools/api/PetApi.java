@@ -133,7 +133,7 @@ public interface PetApi {
         produces = { "application/xml", "application/json" }
     )
     default ResponseEntity<List<Pet>> findPetsByStatus(
-        @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) List<String> status,
+        @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) java.util.List<String> status,
         @ApiIgnore final Pageable pageable
     ) {
         return getDelegate().findPetsByStatus(status, pageable);
@@ -174,7 +174,7 @@ public interface PetApi {
         produces = { "application/xml", "application/json" }
     )
     default ResponseEntity<List<Pet>> findPetsByTags(
-        @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) List<String> tags,
+        @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) java.util.List<String> tags,
         @ApiIgnore final Pageable pageable
     ) {
         return getDelegate().findPetsByTags(tags, pageable);

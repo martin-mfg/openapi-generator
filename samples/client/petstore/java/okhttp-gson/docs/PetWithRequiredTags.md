@@ -10,8 +10,8 @@
 |**id** | **Long** |  |  [optional] |
 |**category** | [**Category**](Category.md) |  |  [optional] |
 |**name** | **String** |  |  |
-|**photoUrls** | **List&lt;String&gt;** |  |  |
-|**tags** | [**List&lt;Tag&gt;**](Tag.md) |  |  |
+|**photoUrls** | **java.util.List&lt;String&gt;** |  |  |
+|**tags** | [**java.util.List&lt;Tag&gt;**](Tag.md) |  |  |
 |**status** | [**StatusEnum**](#StatusEnum) | pet status in the store |  [optional] |
 
 

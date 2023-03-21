@@ -8,3 +8,4 @@ additionalProperties:
   artifactId: petstore-spring-cloud
   hideGenerationTimestamp: "true"
   useFeignClientUrl: "false"
+  fullJavaUtil: true

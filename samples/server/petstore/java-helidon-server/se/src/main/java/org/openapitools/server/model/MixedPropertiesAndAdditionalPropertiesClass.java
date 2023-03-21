@@ -1,18 +1,15 @@
 package org.openapitools.server.model;
 
 import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.server.model.Animal;
 
 
 
 public class MixedPropertiesAndAdditionalPropertiesClass   {
 
-    private UUID uuid;
+    private java.util.UUID uuid;
     private OffsetDateTime dateTime;
-    private Map<String, Animal> map = new HashMap<>();
+    private java.util.Map<String, Animal> map = new java.util.HashMap<>();
 
     /**
      * Default constructor.
@@ -29,9 +26,9 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
      * @param map map
      */
     public MixedPropertiesAndAdditionalPropertiesClass(
-        UUID uuid, 
+        java.util.UUID uuid, 
         OffsetDateTime dateTime, 
-        Map<String, Animal> map
+        java.util.Map<String, Animal> map
     ) {
         this.uuid = uuid;
         this.dateTime = dateTime;
@@ -44,11 +41,11 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
      * Get uuid
      * @return uuid
      */
-    public UUID getUuid() {
+    public java.util.UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(UUID uuid) {
+    public void setUuid(java.util.UUID uuid) {
         this.uuid = uuid;
     }
 
@@ -68,11 +65,11 @@ public class MixedPropertiesAndAdditionalPropertiesClass   {
      * Get map
      * @return map
      */
-    public Map<String, Animal> getMap() {
+    public java.util.Map<String, Animal> getMap() {
         return map;
     }
 
-    public void setMap(Map<String, Animal> map) {
+    public void setMap(java.util.Map<String, Animal> map) {
         this.map = map;
     }
 

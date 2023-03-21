@@ -6,8 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * TypeHolderExample
@@ -30,7 +28,7 @@ public class TypeHolderExample   {
   private Boolean boolItem;
 
   @JsonProperty("array_item")
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   public TypeHolderExample stringItem(String stringItem) {
     this.stringItem = stringItem;
@@ -122,7 +120,7 @@ public class TypeHolderExample   {
     this.boolItem = boolItem;
   }
 
-  public TypeHolderExample arrayItem(List<Integer> arrayItem) {
+  public TypeHolderExample arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
@@ -137,11 +135,11 @@ public class TypeHolderExample   {
    * @return arrayItem
   **/
   @ApiModelProperty(example = "[0, 1, 2, 3]", required = true, value = "")
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

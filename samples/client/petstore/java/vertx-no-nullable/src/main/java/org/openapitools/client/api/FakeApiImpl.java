@@ -536,7 +536,7 @@ if (paramCallback != null) localVarFormParams.put("callback", paramCallback);
         * @param enumFormString Form parameter enum test (string) (optional, default to -efg)
     * @param resultHandler Asynchronous result handler
     */
-    public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, Handler<AsyncResult<Void>> resultHandler) {
+    public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, Handler<AsyncResult<Void>> resultHandler) {
         testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, null, resultHandler);
     }
 
@@ -554,7 +554,7 @@ if (paramCallback != null) localVarFormParams.put("callback", paramCallback);
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         Object localVarBody = null;
         
         // create path and map variables
@@ -673,7 +673,7 @@ if (booleanGroup != null)
         * @param param request body (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void testInlineAdditionalProperties(Map<String, String> param, Handler<AsyncResult<Void>> resultHandler) {
+    public void testInlineAdditionalProperties(java.util.Map<String, String> param, Handler<AsyncResult<Void>> resultHandler) {
         testInlineAdditionalProperties(param, null, resultHandler);
     }
 
@@ -684,7 +684,7 @@ if (booleanGroup != null)
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void testInlineAdditionalProperties(Map<String, String> param, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void testInlineAdditionalProperties(java.util.Map<String, String> param, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         Object localVarBody = param;
         
         // verify the required parameter 'param' is set
@@ -783,7 +783,7 @@ if (param2 != null) localVarFormParams.put("param2", param2);
         * @param context  (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, Handler<AsyncResult<Void>> resultHandler) {
+    public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, Handler<AsyncResult<Void>> resultHandler) {
         testQueryParameterCollectionFormat(pipe, ioutil, http, url, context, null, resultHandler);
     }
 
@@ -798,7 +798,7 @@ if (param2 != null) localVarFormParams.put("param2", param2);
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         Object localVarBody = null;
         
         // verify the required parameter 'pipe' is set

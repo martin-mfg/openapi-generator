@@ -5,8 +5,6 @@ import org.openapitools.model.*;
 
 import com.sun.jersey.multipart.FormDataParam;
 
-import java.util.Date;
-import java.util.List;
 import org.openapitools.model.User;
 
 import java.util.List;
@@ -24,9 +22,9 @@ import javax.validation.constraints.*;
 public abstract class UserApiService {
       public abstract Response createUser(User body,SecurityContext securityContext)
       throws NotFoundException;
-      public abstract Response createUsersWithArrayInput(List<User> body,SecurityContext securityContext)
+      public abstract Response createUsersWithArrayInput(java.util.List<User> body,SecurityContext securityContext)
       throws NotFoundException;
-      public abstract Response createUsersWithListInput(List<User> body,SecurityContext securityContext)
+      public abstract Response createUsersWithListInput(java.util.List<User> body,SecurityContext securityContext)
       throws NotFoundException;
       public abstract Response deleteUser(String username,SecurityContext securityContext)
       throws NotFoundException;

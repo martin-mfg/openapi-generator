@@ -2,11 +2,6 @@ package org.openapitools.server.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import org.openapitools.server.model.Category;
 import org.openapitools.server.model.Tag;
 
@@ -17,8 +12,8 @@ public class Pet   {
     private Long id;
     private Category category;
     private String name;
-    private Set<String> photoUrls = new LinkedHashSet<>();
-    private List<Tag> tags;
+    private java.util.Set<String> photoUrls = new java.util.LinkedHashSet<>();
+    private java.util.List<Tag> tags;
 
     /**
     * pet status in the store
@@ -80,8 +75,8 @@ public class Pet   {
         Long id, 
         Category category, 
         String name, 
-        Set<String> photoUrls, 
-        List<Tag> tags, 
+        java.util.Set<String> photoUrls, 
+        java.util.List<Tag> tags, 
         StatusEnum status
     ) {
         this.id = id;
@@ -134,11 +129,11 @@ public class Pet   {
      * Get photoUrls
      * @return photoUrls
      */
-    public Set<String> getPhotoUrls() {
+    public java.util.Set<String> getPhotoUrls() {
         return photoUrls;
     }
 
-    public void setPhotoUrls(Set<String> photoUrls) {
+    public void setPhotoUrls(java.util.Set<String> photoUrls) {
         this.photoUrls = photoUrls;
     }
 
@@ -146,11 +141,11 @@ public class Pet   {
      * Get tags
      * @return tags
      */
-    public List<Tag> getTags() {
+    public java.util.List<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(List<Tag> tags) {
+    public void setTags(java.util.List<Tag> tags) {
         this.tags = tags;
     }
 

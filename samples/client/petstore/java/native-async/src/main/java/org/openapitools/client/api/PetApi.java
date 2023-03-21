@@ -45,12 +45,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -59,10 +53,10 @@ public class PetApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public PetApi() {
     this(new ApiClient());
@@ -260,10 +254,10 @@ public class PetApi {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return CompletableFuture&lt;List&lt;Pet&gt;&gt;
+   * @return CompletableFuture&lt;java.util.List&lt;Pet&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<List<Pet>> findPetsByStatus(List<String> status) throws ApiException {
+  public CompletableFuture<java.util.List<Pet>> findPetsByStatus(java.util.List<String> status) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = findPetsByStatusRequestBuilder(status);
       return memberVarHttpClient.sendAsync(
@@ -275,7 +269,7 @@ public class PetApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<List<Pet>>() {})
+                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<java.util.List<Pet>>() {})
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -291,10 +285,10 @@ public class PetApi {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return CompletableFuture&lt;ApiResponse&lt;List&lt;Pet&gt;&gt;&gt;
+   * @return CompletableFuture&lt;ApiResponse&lt;java.util.List&lt;Pet&gt;&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<List<Pet>>> findPetsByStatusWithHttpInfo(List<String> status) throws ApiException {
+  public CompletableFuture<ApiResponse<java.util.List<Pet>>> findPetsByStatusWithHttpInfo(java.util.List<String> status) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = findPetsByStatusRequestBuilder(status);
       return memberVarHttpClient.sendAsync(
@@ -309,10 +303,10 @@ public class PetApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  new ApiResponse<List<Pet>>(
+                  new ApiResponse<java.util.List<Pet>>(
                       localVarResponse.statusCode(),
                       localVarResponse.headers().map(),
-                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<List<Pet>>() {}))
+                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<java.util.List<Pet>>() {}))
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -325,7 +319,7 @@ public class PetApi {
     }
   }
 
-  private HttpRequest.Builder findPetsByStatusRequestBuilder(List<String> status) throws ApiException {
+  private HttpRequest.Builder findPetsByStatusRequestBuilder(java.util.List<String> status) throws ApiException {
     // verify the required parameter 'status' is set
     if (status == null) {
       throw new ApiException(400, "Missing the required parameter 'status' when calling findPetsByStatus");
@@ -335,14 +329,14 @@ public class PetApi {
 
     String localVarPath = "/pet/findByStatus";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "status";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("csv", "status", status));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -367,12 +361,12 @@ public class PetApi {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return CompletableFuture&lt;List&lt;Pet&gt;&gt;
+   * @return CompletableFuture&lt;java.util.List&lt;Pet&gt;&gt;
    * @throws ApiException if fails to make API call
    * @deprecated
    */
   @Deprecated
-  public CompletableFuture<List<Pet>> findPetsByTags(List<String> tags) throws ApiException {
+  public CompletableFuture<java.util.List<Pet>> findPetsByTags(java.util.List<String> tags) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = findPetsByTagsRequestBuilder(tags);
       return memberVarHttpClient.sendAsync(
@@ -384,7 +378,7 @@ public class PetApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<List<Pet>>() {})
+                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<java.util.List<Pet>>() {})
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -400,12 +394,12 @@ public class PetApi {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return CompletableFuture&lt;ApiResponse&lt;List&lt;Pet&gt;&gt;&gt;
+   * @return CompletableFuture&lt;ApiResponse&lt;java.util.List&lt;Pet&gt;&gt;&gt;
    * @throws ApiException if fails to make API call
    * @deprecated
    */
   @Deprecated
-  public CompletableFuture<ApiResponse<List<Pet>>> findPetsByTagsWithHttpInfo(List<String> tags) throws ApiException {
+  public CompletableFuture<ApiResponse<java.util.List<Pet>>> findPetsByTagsWithHttpInfo(java.util.List<String> tags) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = findPetsByTagsRequestBuilder(tags);
       return memberVarHttpClient.sendAsync(
@@ -420,10 +414,10 @@ public class PetApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  new ApiResponse<List<Pet>>(
+                  new ApiResponse<java.util.List<Pet>>(
                       localVarResponse.statusCode(),
                       localVarResponse.headers().map(),
-                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<List<Pet>>() {}))
+                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<java.util.List<Pet>>() {}))
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -436,7 +430,7 @@ public class PetApi {
     }
   }
 
-  private HttpRequest.Builder findPetsByTagsRequestBuilder(List<String> tags) throws ApiException {
+  private HttpRequest.Builder findPetsByTagsRequestBuilder(java.util.List<String> tags) throws ApiException {
     // verify the required parameter 'tags' is set
     if (tags == null) {
       throw new ApiException(400, "Missing the required parameter 'tags' when calling findPetsByTags");
@@ -446,14 +440,14 @@ public class PetApi {
 
     String localVarPath = "/pet/findByTags";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "tags";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("csv", "tags", tags));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());

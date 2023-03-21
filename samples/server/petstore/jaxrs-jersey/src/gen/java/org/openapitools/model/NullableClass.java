@@ -19,11 +19,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.openapitools.model.Date;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -46,7 +42,7 @@ import javax.validation.Valid;
   NullableClass.JSON_PROPERTY_OBJECT_ITEMS_NULLABLE
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen")
-public class NullableClass extends HashMap<String, Object>  {
+public class NullableClass extends java.util.HashMap<String, Object>  {
   public static final String JSON_PROPERTY_INTEGER_PROP = "integer_prop";
   @JsonProperty(JSON_PROPERTY_INTEGER_PROP)
   private Integer integerProp;
@@ -69,31 +65,31 @@ public class NullableClass extends HashMap<String, Object>  {
 
   public static final String JSON_PROPERTY_DATETIME_PROP = "datetime_prop";
   @JsonProperty(JSON_PROPERTY_DATETIME_PROP)
-  private Date datetimeProp;
+  private java.util.Date datetimeProp;
 
   public static final String JSON_PROPERTY_ARRAY_NULLABLE_PROP = "array_nullable_prop";
   @JsonProperty(JSON_PROPERTY_ARRAY_NULLABLE_PROP)
-  private List<Object> arrayNullableProp;
+  private java.util.List<Object> arrayNullableProp;
 
   public static final String JSON_PROPERTY_ARRAY_AND_ITEMS_NULLABLE_PROP = "array_and_items_nullable_prop";
   @JsonProperty(JSON_PROPERTY_ARRAY_AND_ITEMS_NULLABLE_PROP)
-  private List<Object> arrayAndItemsNullableProp;
+  private java.util.List<Object> arrayAndItemsNullableProp;
 
   public static final String JSON_PROPERTY_ARRAY_ITEMS_NULLABLE = "array_items_nullable";
   @JsonProperty(JSON_PROPERTY_ARRAY_ITEMS_NULLABLE)
-  private List<Object> arrayItemsNullable;
+  private java.util.List<Object> arrayItemsNullable;
 
   public static final String JSON_PROPERTY_OBJECT_NULLABLE_PROP = "object_nullable_prop";
   @JsonProperty(JSON_PROPERTY_OBJECT_NULLABLE_PROP)
-  private Map<String, Object> objectNullableProp;
+  private java.util.Map<String, Object> objectNullableProp;
 
   public static final String JSON_PROPERTY_OBJECT_AND_ITEMS_NULLABLE_PROP = "object_and_items_nullable_prop";
   @JsonProperty(JSON_PROPERTY_OBJECT_AND_ITEMS_NULLABLE_PROP)
-  private Map<String, Object> objectAndItemsNullableProp;
+  private java.util.Map<String, Object> objectAndItemsNullableProp;
 
   public static final String JSON_PROPERTY_OBJECT_ITEMS_NULLABLE = "object_items_nullable";
   @JsonProperty(JSON_PROPERTY_OBJECT_ITEMS_NULLABLE)
-  private Map<String, Object> objectItemsNullable = new HashMap<>();
+  private java.util.Map<String, Object> objectItemsNullable = new java.util.HashMap<>();
 
   public NullableClass integerProp(Integer integerProp) {
     this.integerProp = integerProp;
@@ -195,7 +191,7 @@ public class NullableClass extends HashMap<String, Object>  {
     this.dateProp = dateProp;
   }
 
-  public NullableClass datetimeProp(Date datetimeProp) {
+  public NullableClass datetimeProp(java.util.Date datetimeProp) {
     this.datetimeProp = datetimeProp;
     return this;
   }
@@ -207,15 +203,15 @@ public class NullableClass extends HashMap<String, Object>  {
   @JsonProperty(value = "datetime_prop")
   @ApiModelProperty(value = "")
   
-  public Date getDatetimeProp() {
+  public java.util.Date getDatetimeProp() {
     return datetimeProp;
   }
 
-  public void setDatetimeProp(Date datetimeProp) {
+  public void setDatetimeProp(java.util.Date datetimeProp) {
     this.datetimeProp = datetimeProp;
   }
 
-  public NullableClass arrayNullableProp(List<Object> arrayNullableProp) {
+  public NullableClass arrayNullableProp(java.util.List<Object> arrayNullableProp) {
     this.arrayNullableProp = arrayNullableProp;
     return this;
   }
@@ -235,15 +231,15 @@ public class NullableClass extends HashMap<String, Object>  {
   @JsonProperty(value = "array_nullable_prop")
   @ApiModelProperty(value = "")
   
-  public List<Object> getArrayNullableProp() {
+  public java.util.List<Object> getArrayNullableProp() {
     return arrayNullableProp;
   }
 
-  public void setArrayNullableProp(List<Object> arrayNullableProp) {
+  public void setArrayNullableProp(java.util.List<Object> arrayNullableProp) {
     this.arrayNullableProp = arrayNullableProp;
   }
 
-  public NullableClass arrayAndItemsNullableProp(List<Object> arrayAndItemsNullableProp) {
+  public NullableClass arrayAndItemsNullableProp(java.util.List<Object> arrayAndItemsNullableProp) {
     this.arrayAndItemsNullableProp = arrayAndItemsNullableProp;
     return this;
   }
@@ -263,15 +259,15 @@ public class NullableClass extends HashMap<String, Object>  {
   @JsonProperty(value = "array_and_items_nullable_prop")
   @ApiModelProperty(value = "")
   
-  public List<Object> getArrayAndItemsNullableProp() {
+  public java.util.List<Object> getArrayAndItemsNullableProp() {
     return arrayAndItemsNullableProp;
   }
 
-  public void setArrayAndItemsNullableProp(List<Object> arrayAndItemsNullableProp) {
+  public void setArrayAndItemsNullableProp(java.util.List<Object> arrayAndItemsNullableProp) {
     this.arrayAndItemsNullableProp = arrayAndItemsNullableProp;
   }
 
-  public NullableClass arrayItemsNullable(List<Object> arrayItemsNullable) {
+  public NullableClass arrayItemsNullable(java.util.List<Object> arrayItemsNullable) {
     this.arrayItemsNullable = arrayItemsNullable;
     return this;
   }
@@ -291,15 +287,15 @@ public class NullableClass extends HashMap<String, Object>  {
   @JsonProperty(value = "array_items_nullable")
   @ApiModelProperty(value = "")
   
-  public List<Object> getArrayItemsNullable() {
+  public java.util.List<Object> getArrayItemsNullable() {
     return arrayItemsNullable;
   }
 
-  public void setArrayItemsNullable(List<Object> arrayItemsNullable) {
+  public void setArrayItemsNullable(java.util.List<Object> arrayItemsNullable) {
     this.arrayItemsNullable = arrayItemsNullable;
   }
 
-  public NullableClass objectNullableProp(Map<String, Object> objectNullableProp) {
+  public NullableClass objectNullableProp(java.util.Map<String, Object> objectNullableProp) {
     this.objectNullableProp = objectNullableProp;
     return this;
   }
@@ -319,15 +315,15 @@ public class NullableClass extends HashMap<String, Object>  {
   @JsonProperty(value = "object_nullable_prop")
   @ApiModelProperty(value = "")
   
-  public Map<String, Object> getObjectNullableProp() {
+  public java.util.Map<String, Object> getObjectNullableProp() {
     return objectNullableProp;
   }
 
-  public void setObjectNullableProp(Map<String, Object> objectNullableProp) {
+  public void setObjectNullableProp(java.util.Map<String, Object> objectNullableProp) {
     this.objectNullableProp = objectNullableProp;
   }
 
-  public NullableClass objectAndItemsNullableProp(Map<String, Object> objectAndItemsNullableProp) {
+  public NullableClass objectAndItemsNullableProp(java.util.Map<String, Object> objectAndItemsNullableProp) {
     this.objectAndItemsNullableProp = objectAndItemsNullableProp;
     return this;
   }
@@ -347,22 +343,22 @@ public class NullableClass extends HashMap<String, Object>  {
   @JsonProperty(value = "object_and_items_nullable_prop")
   @ApiModelProperty(value = "")
   
-  public Map<String, Object> getObjectAndItemsNullableProp() {
+  public java.util.Map<String, Object> getObjectAndItemsNullableProp() {
     return objectAndItemsNullableProp;
   }
 
-  public void setObjectAndItemsNullableProp(Map<String, Object> objectAndItemsNullableProp) {
+  public void setObjectAndItemsNullableProp(java.util.Map<String, Object> objectAndItemsNullableProp) {
     this.objectAndItemsNullableProp = objectAndItemsNullableProp;
   }
 
-  public NullableClass objectItemsNullable(Map<String, Object> objectItemsNullable) {
+  public NullableClass objectItemsNullable(java.util.Map<String, Object> objectItemsNullable) {
     this.objectItemsNullable = objectItemsNullable;
     return this;
   }
 
   public NullableClass putObjectItemsNullableItem(String key, Object objectItemsNullableItem) {
     if (this.objectItemsNullable == null) {
-      this.objectItemsNullable = new HashMap<>();
+      this.objectItemsNullable = new java.util.HashMap<>();
     }
     this.objectItemsNullable.put(key, objectItemsNullableItem);
     return this;
@@ -375,11 +371,11 @@ public class NullableClass extends HashMap<String, Object>  {
   @JsonProperty(value = "object_items_nullable")
   @ApiModelProperty(value = "")
   
-  public Map<String, Object> getObjectItemsNullable() {
+  public java.util.Map<String, Object> getObjectItemsNullable() {
     return objectItemsNullable;
   }
 
-  public void setObjectItemsNullable(Map<String, Object> objectItemsNullable) {
+  public void setObjectItemsNullable(java.util.Map<String, Object> objectItemsNullable) {
     this.objectItemsNullable = objectItemsNullable;
   }
 

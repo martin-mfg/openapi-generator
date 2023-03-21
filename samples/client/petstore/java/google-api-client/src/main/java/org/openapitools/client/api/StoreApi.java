@@ -123,12 +123,12 @@ public class StoreApi {
     * Returns pet inventories by status
     * Returns a map of status codes to quantities
     * <p><b>200</b> - successful operation
-    * @return Map&lt;String, Integer&gt;
+    * @return java.util.Map&lt;String, Integer&gt;
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public Map<String, Integer> getInventory() throws IOException {
+    public java.util.Map<String, Integer> getInventory() throws IOException {
         HttpResponse response = getInventoryForHttpResponse();
-        TypeReference<Map<String, Integer>> typeRef = new TypeReference<Map<String, Integer>>() {};
+        TypeReference<java.util.Map<String, Integer>> typeRef = new TypeReference<java.util.Map<String, Integer>>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 
@@ -137,12 +137,12 @@ public class StoreApi {
     * Returns a map of status codes to quantities
     * <p><b>200</b> - successful operation
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
-    * @return Map&lt;String, Integer&gt;
+    * @return java.util.Map&lt;String, Integer&gt;
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public Map<String, Integer> getInventory(Map<String, Object> params) throws IOException {
+    public java.util.Map<String, Integer> getInventory(Map<String, Object> params) throws IOException {
         HttpResponse response = getInventoryForHttpResponse(params);
-        TypeReference<Map<String, Integer>> typeRef = new TypeReference<Map<String, Integer>>() {};
+        TypeReference<java.util.Map<String, Integer>> typeRef = new TypeReference<java.util.Map<String, Integer>>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 

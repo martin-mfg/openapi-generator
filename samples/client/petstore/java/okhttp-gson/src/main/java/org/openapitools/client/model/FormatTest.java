@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -103,11 +102,11 @@ public class FormatTest {
 
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   public static final String SERIALIZED_NAME_UUID_WITH_DEFAULT = "uuid_with_default";
   @SerializedName(SERIALIZED_NAME_UUID_WITH_DEFAULT)
-  private UUID uuidWithDefault = UUID.fromString("11111111-206d-4f12-9f12-3d1e525a8e84");
+  private java.util.UUID uuidWithDefault = UUID.fromString("11111111-206d-4f12-9f12-3d1e525a8e84");
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
@@ -398,7 +397,7 @@ public class FormatTest {
   }
 
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     
     this.uuid = uuid;
     return this;
@@ -410,17 +409,17 @@ public class FormatTest {
   **/
   @javax.annotation.Nullable
 
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
 
-  public FormatTest uuidWithDefault(UUID uuidWithDefault) {
+  public FormatTest uuidWithDefault(java.util.UUID uuidWithDefault) {
     
     this.uuidWithDefault = uuidWithDefault;
     return this;
@@ -432,12 +431,12 @@ public class FormatTest {
   **/
   @javax.annotation.Nullable
 
-  public UUID getUuidWithDefault() {
+  public java.util.UUID getUuidWithDefault() {
     return uuidWithDefault;
   }
 
 
-  public void setUuidWithDefault(UUID uuidWithDefault) {
+  public void setUuidWithDefault(java.util.UUID uuidWithDefault) {
     this.uuidWithDefault = uuidWithDefault;
   }
 

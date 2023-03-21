@@ -344,7 +344,7 @@ No authorization required
 
 ## getArrayOfEnums
 
-> List&lt;OuterEnum&gt; getArrayOfEnums()
+> java.util.List&lt;OuterEnum&gt; getArrayOfEnums()
 
 Array of Enums
 
@@ -365,7 +365,7 @@ public class Example {
 
         FakeApi apiInstance = new FakeApi(defaultClient);
         try {
-            List<OuterEnum> result = apiInstance.getArrayOfEnums();
+            java.util.List<OuterEnum> result = apiInstance.getArrayOfEnums();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling FakeApi#getArrayOfEnums");
@@ -384,7 +384,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;OuterEnum&gt;**](OuterEnum.md)
+[**java.util.List&lt;OuterEnum&gt;**](OuterEnum.md)
 
 ### Authorization
 
@@ -723,13 +723,13 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        List<String> enumHeaderStringArray = Arrays.asList("$"); // List<String> | Header parameter enum test (string array)
+        java.util.List<String> enumHeaderStringArray = Arrays.asList("$"); // java.util.List<String> | Header parameter enum test (string array)
         String enumHeaderString = "_abc"; // String | Header parameter enum test (string)
-        List<String> enumQueryStringArray = Arrays.asList("$"); // List<String> | Query parameter enum test (string array)
+        java.util.List<String> enumQueryStringArray = Arrays.asList("$"); // java.util.List<String> | Query parameter enum test (string array)
         String enumQueryString = "_abc"; // String | Query parameter enum test (string)
         Integer enumQueryInteger = 1; // Integer | Query parameter enum test (double)
         Double enumQueryDouble = 1.1D; // Double | Query parameter enum test (double)
-        List<String> enumFormStringArray = Arrays.asList("$"); // List<String> | Form parameter enum test (string array)
+        java.util.List<String> enumFormStringArray = Arrays.asList("$"); // java.util.List<String> | Form parameter enum test (string array)
         String enumFormString = "_abc"; // String | Form parameter enum test (string)
         try {
             apiInstance.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
@@ -888,7 +888,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        Map<String, String> requestBody = new HashMap(); // Map<String, String> | request body
+        java.util.Map<String, String> requestBody = new HashMap(); // java.util.Map<String, String> | request body
         try {
             apiInstance.testInlineAdditionalProperties(requestBody);
         } catch (ApiException e) {
@@ -1018,11 +1018,11 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         FakeApi apiInstance = new FakeApi(defaultClient);
-        List<String> pipe = Arrays.asList(); // List<String> | 
-        List<String> ioutil = Arrays.asList(); // List<String> | 
-        List<String> http = Arrays.asList(); // List<String> | 
-        List<String> url = Arrays.asList(); // List<String> | 
-        List<String> context = Arrays.asList(); // List<String> | 
+        java.util.List<String> pipe = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> ioutil = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> http = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> url = Arrays.asList(); // java.util.List<String> | 
+        java.util.List<String> context = Arrays.asList(); // java.util.List<String> | 
         try {
             apiInstance.testQueryParameterCollectionFormat(pipe, ioutil, http, url, context);
         } catch (ApiException e) {

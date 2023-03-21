@@ -9,7 +9,6 @@ import org.openapitools.model.Client;
 import java.io.File;
 import org.openapitools.model.FileSchemaTestClass;
 import java.time.LocalDate;
-import java.util.Map;
 import org.openapitools.model.ModelApiResponse;
 import java.time.OffsetDateTime;
 import org.openapitools.model.OuterComposite;
@@ -35,10 +34,10 @@ public abstract class FakeApiService {
     public abstract Response testBodyWithQueryParams( @NotNull String query,User body,SecurityContext securityContext) throws NotFoundException;
     public abstract Response testClientModel(Client body,SecurityContext securityContext) throws NotFoundException;
     public abstract Response testEndpointParameters(BigDecimal number,Double _double,String patternWithoutDelimiter,byte[] _byte,Integer integer,Integer int32,Long int64,Float _float,String string,FormDataBodyPart binaryBodypart,LocalDate date,OffsetDateTime dateTime,String password,String paramCallback,SecurityContext securityContext) throws NotFoundException;
-    public abstract Response testEnumParameters(List<String> enumHeaderStringArray,String enumHeaderString,List<String> enumQueryStringArray,String enumQueryString,Integer enumQueryInteger,Double enumQueryDouble,List<String> enumFormStringArray,String enumFormString,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response testEnumParameters(java.util.List<String> enumHeaderStringArray,String enumHeaderString,java.util.List<String> enumQueryStringArray,String enumQueryString,Integer enumQueryInteger,Double enumQueryDouble,java.util.List<String> enumFormStringArray,String enumFormString,SecurityContext securityContext) throws NotFoundException;
     public abstract Response testGroupParameters( @NotNull Integer requiredStringGroup, @NotNull Boolean requiredBooleanGroup, @NotNull Long requiredInt64Group,Integer stringGroup,Boolean booleanGroup,Long int64Group,SecurityContext securityContext) throws NotFoundException;
-    public abstract Response testInlineAdditionalProperties(Map<String, String> param,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response testInlineAdditionalProperties(java.util.Map<String, String> param,SecurityContext securityContext) throws NotFoundException;
     public abstract Response testJsonFormData(String param,String param2,SecurityContext securityContext) throws NotFoundException;
-    public abstract Response testQueryParameterCollectionFormat( @NotNull List<String> pipe, @NotNull List<String> ioutil, @NotNull List<String> http, @NotNull List<String> url, @NotNull List<String> context,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response testQueryParameterCollectionFormat( @NotNull java.util.List<String> pipe, @NotNull java.util.List<String> ioutil, @NotNull java.util.List<String> http, @NotNull java.util.List<String> url, @NotNull java.util.List<String> context,SecurityContext securityContext) throws NotFoundException;
     public abstract Response uploadFileWithRequiredFile(Long petId,FormDataBodyPart requiredFileBodypart,String additionalMetadata,SecurityContext securityContext) throws NotFoundException;
 }

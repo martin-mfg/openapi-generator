@@ -15,7 +15,6 @@ package org.openapitools.server.api;
 import java.io.File;
 import org.openapitools.server.model.ModelApiResponse;
 import org.openapitools.server.model.Pet;
-import java.util.Set;
 
 import jakarta.ws.rs.*;
 
@@ -44,16 +43,16 @@ public class PetServiceImpl implements PetService {
     @GET
     @Path("/pet/findByStatus")
     @Produces({ "application/xml", "application/json" })
-    public List<Pet> findPetsByStatus(@QueryParam("status") @NotNull List<String> status) {
-        List<Pet> result = java.util.Collections.emptyList(); // Replace with correct business logic.
+    public List<Pet> findPetsByStatus(@QueryParam("status") @NotNull java.util.List<String> status) {
+        java.util.List<Pet> result = java.util.Collections.emptyList(); // Replace with correct business logic.
         return result;
     }
 
     @GET
     @Path("/pet/findByTags")
     @Produces({ "application/xml", "application/json" })
-    public Set<Pet> findPetsByTags(@QueryParam("tags") @NotNull Set<String> tags) {
-        Set<Pet> result = java.util.Collections.emptySet(); // Replace with correct business logic.
+    public Set<Pet> findPetsByTags(@QueryParam("tags") @NotNull java.util.Set<String> tags) {
+        java.util.Set<Pet> result = java.util.Collections.emptySet(); // Replace with correct business logic.
         return result;
     }
 

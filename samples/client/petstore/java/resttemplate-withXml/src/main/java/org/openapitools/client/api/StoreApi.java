@@ -4,12 +4,7 @@ import org.openapitools.client.ApiClient;
 
 import org.openapitools.client.model.Order;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -97,10 +92,10 @@ public class StoreApi {
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
      * <p><b>200</b> - successful operation
-     * @return Map&lt;String, Integer&gt;
+     * @return java.util.Map&lt;String, Integer&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Map<String, Integer> getInventory() throws RestClientException {
+    public java.util.Map<String, Integer> getInventory() throws RestClientException {
         return getInventoryWithHttpInfo().getBody();
     }
 
@@ -108,10 +103,10 @@ public class StoreApi {
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
      * <p><b>200</b> - successful operation
-     * @return ResponseEntity&lt;Map&lt;String, Integer&gt;&gt;
+     * @return ResponseEntity&lt;java.util.Map&lt;String, Integer&gt;&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Map<String, Integer>> getInventoryWithHttpInfo() throws RestClientException {
+    public ResponseEntity<java.util.Map<String, Integer>> getInventoryWithHttpInfo() throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -129,7 +124,7 @@ public class StoreApi {
 
         String[] localVarAuthNames = new String[] { "api_key" };
 
-        ParameterizedTypeReference<Map<String, Integer>> localReturnType = new ParameterizedTypeReference<Map<String, Integer>>() {};
+        ParameterizedTypeReference<java.util.Map<String, Integer>> localReturnType = new ParameterizedTypeReference<java.util.Map<String, Integer>>() {};
         return apiClient.invokeAPI("/store/inventory", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**

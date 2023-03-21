@@ -74,7 +74,7 @@ No authorization required
 
 <a name="getInventory"></a>
 # **getInventory**
-> Map&lt;String, Integer&gt; getInventory()
+> java.util.Map&lt;String, Integer&gt; getInventory()
 
 Returns pet inventories by status
 
@@ -103,7 +103,7 @@ public class Example {
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     try {
-      Map<String, Integer> result = apiInstance.getInventory();
+      java.util.Map<String, Integer> result = apiInstance.getInventory();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#getInventory");
@@ -121,7 +121,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Map&lt;String, Integer&gt;**
+**java.util.Map&lt;String, Integer&gt;**
 
 ### Authorization
 

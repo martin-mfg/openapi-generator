@@ -25,15 +25,15 @@ public class PetApiControllerImp extends PetApiControllerImpInterface {
     }
 
     @Override
-    public List<Pet> findPetsByStatus(Http.Request request, @NotNull List<String> status)  {
+    public array<java.util.List<Pet>> findPetsByStatus(Http.Request request, @NotNull java.util.List<String> status)  {
         //Do your magic!!!
-        return new ArrayList<Pet>();
+        return new ArrayList<java.util.List<Pet>>();
     }
 
     @Override
-    public List<Pet> findPetsByTags(Http.Request request, @NotNull List<String> tags)  {
+    public array<java.util.List<Pet>> findPetsByTags(Http.Request request, @NotNull java.util.List<String> tags)  {
         //Do your magic!!!
-        return new ArrayList<Pet>();
+        return new ArrayList<java.util.List<Pet>>();
     }
 
     @Override

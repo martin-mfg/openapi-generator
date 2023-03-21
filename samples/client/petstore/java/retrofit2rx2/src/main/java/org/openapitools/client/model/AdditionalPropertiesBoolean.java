@@ -21,14 +21,12 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * AdditionalPropertiesBoolean
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class AdditionalPropertiesBoolean extends HashMap<String, Boolean> {
+public class AdditionalPropertiesBoolean extends java.util.HashMap<String, Boolean> {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;

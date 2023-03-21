@@ -22,8 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 import org.hibernate.validator.constraints.*;
@@ -32,7 +30,7 @@ import org.hibernate.validator.constraints.*;
  * AdditionalPropertiesNumber
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class AdditionalPropertiesNumber extends HashMap<String, BigDecimal> {
+public class AdditionalPropertiesNumber extends java.util.HashMap<String, BigDecimal> {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;

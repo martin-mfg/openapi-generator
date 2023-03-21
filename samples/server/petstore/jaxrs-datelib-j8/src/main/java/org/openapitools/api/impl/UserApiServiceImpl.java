@@ -1,7 +1,6 @@
 package org.openapitools.api.impl;
 
 import org.openapitools.api.*;
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 
@@ -23,12 +22,12 @@ public class UserApiServiceImpl extends UserApiService {
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response createUsersWithArrayInput(List<User> body, SecurityContext securityContext) throws NotFoundException {
+    public Response createUsersWithArrayInput(java.util.List<User> body, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response createUsersWithListInput(List<User> body, SecurityContext securityContext) throws NotFoundException {
+    public Response createUsersWithListInput(java.util.List<User> body, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }

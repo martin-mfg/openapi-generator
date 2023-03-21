@@ -73,7 +73,7 @@ public class UserApiHandler {
         RequestParameters requestParameters = routingContext.get(ValidationHandler.REQUEST_CONTEXT_KEY);
 
         RequestParameter body = requestParameters.body();
-        List<User> user = body != null ? DatabindCodec.mapper().convertValue(body.get(), new TypeReference<List<User>>(){}) : null;
+        java.util.List<User> user = body != null ? DatabindCodec.mapper().convertValue(body.get(), new TypeReference<java.util.List<User>>(){}) : null;
 
         logger.debug("Parameter user is {}", user);
 
@@ -96,7 +96,7 @@ public class UserApiHandler {
         RequestParameters requestParameters = routingContext.get(ValidationHandler.REQUEST_CONTEXT_KEY);
 
         RequestParameter body = requestParameters.body();
-        List<User> user = body != null ? DatabindCodec.mapper().convertValue(body.get(), new TypeReference<List<User>>(){}) : null;
+        java.util.List<User> user = body != null ? DatabindCodec.mapper().convertValue(body.get(), new TypeReference<java.util.List<User>>(){}) : null;
 
         logger.debug("Parameter user is {}", user);
 

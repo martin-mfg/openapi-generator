@@ -19,8 +19,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.model.DeprecatedObject;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import javax.validation.constraints.*;
@@ -51,7 +49,7 @@ public class ObjectWithDeprecatedFields   {
 
   public static final String JSON_PROPERTY_BARS = "bars";
   @JsonProperty(JSON_PROPERTY_BARS)
-  private List<String> bars;
+  private java.util.List<String> bars;
 
   public ObjectWithDeprecatedFields uuid(String uuid) {
     this.uuid = uuid;
@@ -113,7 +111,7 @@ public class ObjectWithDeprecatedFields   {
     this.deprecatedRef = deprecatedRef;
   }
 
-  public ObjectWithDeprecatedFields bars(List<String> bars) {
+  public ObjectWithDeprecatedFields bars(java.util.List<String> bars) {
     this.bars = bars;
     return this;
   }
@@ -133,11 +131,11 @@ public class ObjectWithDeprecatedFields   {
   @JsonProperty(value = "bars")
   @ApiModelProperty(value = "")
   
-  public List<String> getBars() {
+  public java.util.List<String> getBars() {
     return bars;
   }
 
-  public void setBars(List<String> bars) {
+  public void setBars(java.util.List<String> bars) {
     this.bars = bars;
   }
 

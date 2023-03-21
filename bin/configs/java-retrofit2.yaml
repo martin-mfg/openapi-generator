@@ -6,3 +6,4 @@ templateDir: modules/openapi-generator/src/main/resources/Java
 additionalProperties:
   artifactId: petstore-retrofit2
   hideGenerationTimestamp: "true"
+  fullJavaUtil: true

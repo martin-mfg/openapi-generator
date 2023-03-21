@@ -5,13 +5,6 @@ import org.openapitools.client.ApiClient;
 import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.LinkedMultiValueMap;
@@ -207,10 +200,10 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid status value
      * @param status Status values that need to be considered for filter
-     * @return List&lt;Pet&gt;
+     * @return java.util.List&lt;Pet&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec findPetsByStatusRequestCreation(List<String> status) throws WebClientResponseException {
+    private ResponseSpec findPetsByStatusRequestCreation(java.util.List<String> status) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'status' is set
         if (status == null) {
@@ -245,10 +238,10 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid status value
      * @param status Status values that need to be considered for filter
-     * @return List&lt;Pet&gt;
+     * @return java.util.List&lt;Pet&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public List<Pet> findPetsByStatus(List<String> status) throws WebClientResponseException {
+    public List<Pet> findPetsByStatus(java.util.List<String> status) throws WebClientResponseException {
         ParameterizedTypeReference<Pet> localVarReturnType = new ParameterizedTypeReference<Pet>() {};
         return findPetsByStatusRequestCreation(status).bodyToFlux(localVarReturnType).collectList().block();
     }
@@ -259,10 +252,10 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid status value
      * @param status Status values that need to be considered for filter
-     * @return ResponseEntity&lt;List&lt;Pet&gt;&gt;
+     * @return ResponseEntity&lt;java.util.List&lt;Pet&gt;&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<List<Pet>> findPetsByStatusWithHttpInfo(List<String> status) throws WebClientResponseException {
+    public ResponseEntity<List<Pet>> findPetsByStatusWithHttpInfo(java.util.List<String> status) throws WebClientResponseException {
         ParameterizedTypeReference<Pet> localVarReturnType = new ParameterizedTypeReference<Pet>() {};
         return findPetsByStatusRequestCreation(status).toEntityList(localVarReturnType).block();
     }
@@ -276,7 +269,7 @@ public class PetApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec findPetsByStatusWithResponseSpec(List<String> status) throws WebClientResponseException {
+    public ResponseSpec findPetsByStatusWithResponseSpec(java.util.List<String> status) throws WebClientResponseException {
         return findPetsByStatusRequestCreation(status);
     }
     /**
@@ -285,12 +278,12 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid tag value
      * @param tags Tags to filter by
-     * @return Set&lt;Pet&gt;
+     * @return java.util.Set&lt;Pet&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      * @deprecated
      */
     @Deprecated
-    private ResponseSpec findPetsByTagsRequestCreation(Set<String> tags) throws WebClientResponseException {
+    private ResponseSpec findPetsByTagsRequestCreation(java.util.Set<String> tags) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'tags' is set
         if (tags == null) {
@@ -325,10 +318,10 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid tag value
      * @param tags Tags to filter by
-     * @return Set&lt;Pet&gt;
+     * @return java.util.Set&lt;Pet&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Set<Pet> findPetsByTags(Set<String> tags) throws WebClientResponseException {
+    public Set<Pet> findPetsByTags(java.util.Set<String> tags) throws WebClientResponseException {
         ParameterizedTypeReference<Pet> localVarReturnType = new ParameterizedTypeReference<Pet>() {};
         return findPetsByTagsRequestCreation(tags).bodyToFlux(localVarReturnType).collect(Collectors.toSet()).block();
     }
@@ -339,10 +332,10 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid tag value
      * @param tags Tags to filter by
-     * @return ResponseEntity&lt;Set&lt;Pet&gt;&gt;
+     * @return ResponseEntity&lt;java.util.Set&lt;Pet&gt;&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<List<Pet>> findPetsByTagsWithHttpInfo(Set<String> tags) throws WebClientResponseException {
+    public ResponseEntity<List<Pet>> findPetsByTagsWithHttpInfo(java.util.Set<String> tags) throws WebClientResponseException {
         ParameterizedTypeReference<Pet> localVarReturnType = new ParameterizedTypeReference<Pet>() {};
         return findPetsByTagsRequestCreation(tags).toEntityList(localVarReturnType).block();
     }
@@ -356,7 +349,7 @@ public class PetApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec findPetsByTagsWithResponseSpec(Set<String> tags) throws WebClientResponseException {
+    public ResponseSpec findPetsByTagsWithResponseSpec(java.util.Set<String> tags) throws WebClientResponseException {
         return findPetsByTagsRequestCreation(tags);
     }
     /**

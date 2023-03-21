@@ -135,7 +135,7 @@ public interface PetApi {
     )
     @ResponseStatus(HttpStatus.OK)
     default List<Pet> findPetsByStatus(
-        @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) List<String> status
+        @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) java.util.List<String> status
     ) {
         return getDelegate().findPetsByStatus(status);
     }
@@ -175,7 +175,7 @@ public interface PetApi {
     )
     @ResponseStatus(HttpStatus.OK)
     default List<Pet> findPetsByTags(
-        @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) List<String> tags
+        @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) java.util.List<String> tags
     ) {
         return getDelegate().findPetsByTags(tags);
     }

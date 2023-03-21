@@ -19,10 +19,6 @@ import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
 import org.openapitools.model.ModelClient;
 import javax.annotation.Generated;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;

@@ -67,7 +67,7 @@ public interface PetApi  {
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "Invalid status value") })
-    public List<Pet> findPetsByStatus(@QueryParam("status") @NotNull List<String> status);
+    public java.util.List<Pet> findPetsByStatus(@QueryParam("status") @NotNull java.util.List<String> status);
 
     /**
      * Finds Pets by tags
@@ -82,7 +82,7 @@ public interface PetApi  {
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "Invalid tag value") })
-    public List<Pet> findPetsByTags(@QueryParam("tags") @NotNull List<String> tags);
+    public java.util.List<Pet> findPetsByTags(@QueryParam("tags") @NotNull java.util.List<String> tags);
 
     /**
      * Find pet by ID

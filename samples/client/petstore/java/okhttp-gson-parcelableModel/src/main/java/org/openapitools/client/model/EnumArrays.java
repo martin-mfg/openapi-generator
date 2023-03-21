@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import android.os.Parcelable;
 import android.os.Parcel;
 
@@ -152,7 +150,7 @@ public class EnumArrays implements Parcelable {
 
   public static final String SERIALIZED_NAME_ARRAY_ENUM = "array_enum";
   @SerializedName(SERIALIZED_NAME_ARRAY_ENUM)
-  private List<ArrayEnumEnum> arrayEnum;
+  private java.util.List<ArrayEnumEnum> arrayEnum;
 
   public EnumArrays() {
   }
@@ -179,7 +177,7 @@ public class EnumArrays implements Parcelable {
   }
 
 
-  public EnumArrays arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public EnumArrays arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     
     this.arrayEnum = arrayEnum;
     return this;
@@ -199,12 +197,12 @@ public class EnumArrays implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public List<ArrayEnumEnum> getArrayEnum() {
+  public java.util.List<ArrayEnumEnum> getArrayEnum() {
     return arrayEnum;
   }
 
 
-  public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
   }
 
@@ -257,7 +255,7 @@ public class EnumArrays implements Parcelable {
 
   EnumArrays(Parcel in) {
     justSymbol = (JustSymbolEnum)in.readValue(null);
-    arrayEnum = (List<ArrayEnumEnum>)in.readValue(null);
+    arrayEnum = (java.util.List<ArrayEnumEnum>)in.readValue(null);
   }
 
   public int describeContents() {

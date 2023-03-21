@@ -3,7 +3,6 @@ package org.openapitools.api.impl;
 import org.openapitools.api.*;
 import org.openapitools.model.*;
 
-import java.util.Map;
 import org.openapitools.model.Order;
 
 import java.util.List;

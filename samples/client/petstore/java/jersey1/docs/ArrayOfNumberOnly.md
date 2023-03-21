@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**arrayNumber** | **List&lt;BigDecimal&gt;** |  |  [optional] |
+|**arrayNumber** | **java.util.List&lt;BigDecimal&gt;** |  |  [optional] |
 
 
 

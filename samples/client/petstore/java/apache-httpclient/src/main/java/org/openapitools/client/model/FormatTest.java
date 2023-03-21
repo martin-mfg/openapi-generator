@@ -24,7 +24,6 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.io.UnsupportedEncodingException;
@@ -92,7 +91,7 @@ public class FormatTest {
   private OffsetDateTime dateTime;
 
   public static final String JSON_PROPERTY_UUID = "uuid";
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   public static final String JSON_PROPERTY_PASSWORD = "password";
   private String password;
@@ -428,7 +427,7 @@ public class FormatTest {
   }
 
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     
     this.uuid = uuid;
     return this;
@@ -442,14 +441,14 @@ public class FormatTest {
   @JsonProperty(JSON_PROPERTY_UUID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
 
   @JsonProperty(JSON_PROPERTY_UUID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 

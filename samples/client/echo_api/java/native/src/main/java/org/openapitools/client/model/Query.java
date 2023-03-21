@@ -25,8 +25,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
@@ -80,7 +78,7 @@ public class Query {
   }
 
   public static final String JSON_PROPERTY_OUTCOMES = "outcomes";
-  private List<OutcomesEnum> outcomes = new ArrayList<>(Arrays.asList(OutcomesEnum.SUCCESS, OutcomesEnum.FAILURE));
+  private java.util.List<OutcomesEnum> outcomes = new ArrayList<>(Arrays.asList(OutcomesEnum.SUCCESS, OutcomesEnum.FAILURE));
 
   public Query() { 
   }
@@ -110,7 +108,7 @@ public class Query {
   }
 
 
-  public Query outcomes(List<OutcomesEnum> outcomes) {
+  public Query outcomes(java.util.List<OutcomesEnum> outcomes) {
     this.outcomes = outcomes;
     return this;
   }
@@ -131,14 +129,14 @@ public class Query {
   @JsonProperty(JSON_PROPERTY_OUTCOMES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<OutcomesEnum> getOutcomes() {
+  public java.util.List<OutcomesEnum> getOutcomes() {
     return outcomes;
   }
 
 
   @JsonProperty(JSON_PROPERTY_OUTCOMES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOutcomes(List<OutcomesEnum> outcomes) {
+  public void setOutcomes(java.util.List<OutcomesEnum> outcomes) {
     this.outcomes = outcomes;
   }
 

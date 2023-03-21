@@ -4,7 +4,6 @@ import org.openapitools.api.*;
 import org.openapitools.model.*;
 
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 
@@ -21,11 +20,11 @@ public class UserApiServiceImpl implements UserApi {
       // do some magic!
       return Response.ok().build();
   }
-      public Response createUsersWithArrayInput(List<User> body,SecurityContext securityContext) {
+      public Response createUsersWithArrayInput(java.util.List<User> body,SecurityContext securityContext) {
       // do some magic!
       return Response.ok().build();
   }
-      public Response createUsersWithListInput(List<User> body,SecurityContext securityContext) {
+      public Response createUsersWithListInput(java.util.List<User> body,SecurityContext securityContext) {
       // do some magic!
       return Response.ok().build();
   }

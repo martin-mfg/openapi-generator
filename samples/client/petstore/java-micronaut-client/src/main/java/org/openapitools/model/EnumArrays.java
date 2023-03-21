@@ -14,8 +14,6 @@ package org.openapitools.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.*;
 
 import javax.validation.constraints.*;
@@ -104,7 +102,7 @@ public class EnumArrays {
         }
     }
     public static final String JSON_PROPERTY_ARRAY_ENUM = "array_enum";
-    private List<ArrayEnumEnum> arrayEnum = null;
+    private java.util.List<ArrayEnumEnum> arrayEnum = null;
 
     public EnumArrays() {
     }
@@ -130,7 +128,7 @@ public class EnumArrays {
         this.justSymbol = justSymbol;
     }
 
-    public EnumArrays arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+    public EnumArrays arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
         this.arrayEnum = arrayEnum;
         return this;
     }
@@ -150,13 +148,13 @@ public class EnumArrays {
     @Nullable
     @JsonProperty(JSON_PROPERTY_ARRAY_ENUM)
     @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-    public List<ArrayEnumEnum> getArrayEnum() {
+    public java.util.List<ArrayEnumEnum> getArrayEnum() {
         return arrayEnum;
     }
 
     @JsonProperty(JSON_PROPERTY_ARRAY_ENUM)
     @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-    public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+    public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
         this.arrayEnum = arrayEnum;
     }
 

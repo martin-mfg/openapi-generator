@@ -5,7 +5,6 @@ import org.openapitools.virtualan.model.Client;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.virtualan.model.FileSchemaTestClass;
 import java.time.LocalDate;
-import java.util.Map;
 import org.openapitools.virtualan.model.ModelApiResponse;
 import java.time.OffsetDateTime;
 import org.openapitools.virtualan.model.OuterComposite;

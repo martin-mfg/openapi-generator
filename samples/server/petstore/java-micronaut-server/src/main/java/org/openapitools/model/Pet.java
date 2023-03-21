@@ -14,8 +14,6 @@ package org.openapitools.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.model.Category;
 import org.openapitools.model.Tag;
 import com.fasterxml.jackson.annotation.*;
@@ -52,10 +50,10 @@ public class Pet {
     private String name;
 
     public static final String JSON_PROPERTY_PHOTO_URLS = "photoUrls";
-    private List<String> photoUrls = new ArrayList<>();
+    private java.util.List<String> photoUrls = new java.util.ArrayList<>();
 
     public static final String JSON_PROPERTY_TAGS = "tags";
-    private List<Tag> tags = null;
+    private java.util.List<Tag> tags = null;
 
     /**
      * pet status in the store
@@ -94,7 +92,7 @@ public class Pet {
     public static final String JSON_PROPERTY_STATUS = "status";
     private StatusEnum status;
 
-    public Pet(String name, List<String> photoUrls) {
+    public Pet(String name, java.util.List<String> photoUrls) {
         this.name = name;
         this.photoUrls = photoUrls;
     }
@@ -169,7 +167,7 @@ public class Pet {
         this.name = name;
     }
 
-    public Pet photoUrls(List<String> photoUrls) {
+    public Pet photoUrls(java.util.List<String> photoUrls) {
         this.photoUrls = photoUrls;
         return this;
     }
@@ -187,17 +185,17 @@ public class Pet {
     @Schema(name = "photoUrls", requiredMode = Schema.RequiredMode.REQUIRED)
     @JsonProperty(JSON_PROPERTY_PHOTO_URLS)
     @JsonInclude(value = JsonInclude.Include.ALWAYS)
-    public List<String> getPhotoUrls() {
+    public java.util.List<String> getPhotoUrls() {
         return photoUrls;
     }
 
     @JsonProperty(JSON_PROPERTY_PHOTO_URLS)
     @JsonInclude(value = JsonInclude.Include.ALWAYS)
-    public void setPhotoUrls(List<String> photoUrls) {
+    public void setPhotoUrls(java.util.List<String> photoUrls) {
         this.photoUrls = photoUrls;
     }
 
-    public Pet tags(List<Tag> tags) {
+    public Pet tags(java.util.List<Tag> tags) {
         this.tags = tags;
         return this;
     }
@@ -218,13 +216,13 @@ public class Pet {
     @Schema(name = "tags", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
     @JsonProperty(JSON_PROPERTY_TAGS)
     @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-    public List<Tag> getTags() {
+    public java.util.List<Tag> getTags() {
         return tags;
     }
 
     @JsonProperty(JSON_PROPERTY_TAGS)
     @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-    public void setTags(List<Tag> tags) {
+    public void setTags(java.util.List<Tag> tags) {
         this.tags = tags;
     }
 

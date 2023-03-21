@@ -5,13 +5,8 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import org.openapitools.model.Category;
 import org.openapitools.model.Tag;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -37,10 +32,10 @@ public class Pet {
   private String name;
 
   @Valid
-  private Set<String> photoUrls = new LinkedHashSet<>();
+  private java.util.Set<String> photoUrls = new java.util.LinkedHashSet<>();
 
   @Valid
-  private List<@Valid Tag> tags;
+  private java.util.List<@Valid Tag> tags;
 
   /**
    * pet status in the store
@@ -83,7 +78,7 @@ public class Pet {
 
   /**
    * Default constructor
-   * @deprecated Use {@link Pet#Pet(String, Set<String>)}
+   * @deprecated Use {@link Pet#Pet(String, java.util.Set<String>)}
    */
   @Deprecated
   public Pet() {
@@ -93,7 +88,7 @@ public class Pet {
   /**
    * Constructor with only required parameters
    */
-  public Pet(String name, Set<String> photoUrls) {
+  public Pet(String name, java.util.Set<String> photoUrls) {
     this.name = name;
     this.photoUrls = photoUrls;
   }
@@ -158,14 +153,14 @@ public class Pet {
     this.name = name;
   }
 
-  public Pet photoUrls(Set<String> photoUrls) {
+  public Pet photoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
 
   public Pet addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new LinkedHashSet<>();
+      this.photoUrls = new java.util.LinkedHashSet<>();
     }
     this.photoUrls.add(photoUrlsItem);
     return this;
@@ -178,16 +173,15 @@ public class Pet {
   @NotNull 
   @ApiModelProperty(required = true, value = "")
   @JsonProperty("photoUrls")
-  public Set<String> getPhotoUrls() {
+  public java.util.Set<String> getPhotoUrls() {
     return photoUrls;
   }
 
-  @JsonDeserialize(as = LinkedHashSet.class)
-  public void setPhotoUrls(Set<String> photoUrls) {
+  public void setPhotoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
-  public Pet tags(List<@Valid Tag> tags) {
+  public Pet tags(java.util.List<@Valid Tag> tags) {
     this.tags = tags;
     return this;
   }
@@ -207,11 +201,11 @@ public class Pet {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("tags")
-  public List<@Valid Tag> getTags() {
+  public java.util.List<@Valid Tag> getTags() {
     return tags;
   }
 
-  public void setTags(List<@Valid Tag> tags) {
+  public void setTags(java.util.List<@Valid Tag> tags) {
     this.tags = tags;
   }
 

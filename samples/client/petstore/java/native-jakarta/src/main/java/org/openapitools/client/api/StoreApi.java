@@ -43,22 +43,16 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StoreApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public StoreApi() {
     this(new ApiClient());
@@ -165,21 +159,21 @@ public class StoreApi {
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return Map&lt;String, Integer&gt;
+   * @return java.util.Map&lt;String, Integer&gt;
    * @throws ApiException if fails to make API call
    */
-  public Map<String, Integer> getInventory() throws ApiException {
-    ApiResponse<Map<String, Integer>> localVarResponse = getInventoryWithHttpInfo();
+  public java.util.Map<String, Integer> getInventory() throws ApiException {
+    ApiResponse<java.util.Map<String, Integer>> localVarResponse = getInventoryWithHttpInfo();
     return localVarResponse.getData();
   }
 
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return ApiResponse&lt;Map&lt;String, Integer&gt;&gt;
+   * @return ApiResponse&lt;java.util.Map&lt;String, Integer&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Map<String, Integer>> getInventoryWithHttpInfo() throws ApiException {
+  public ApiResponse<java.util.Map<String, Integer>> getInventoryWithHttpInfo() throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = getInventoryRequestBuilder();
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -192,10 +186,10 @@ public class StoreApi {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("getInventory", localVarResponse);
         }
-        return new ApiResponse<Map<String, Integer>>(
+        return new ApiResponse<java.util.Map<String, Integer>>(
           localVarResponse.statusCode(),
           localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<Map<String, Integer>>() {}) // closes the InputStream
+          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<java.util.Map<String, Integer>>() {}) // closes the InputStream
         );
       } finally {
       }

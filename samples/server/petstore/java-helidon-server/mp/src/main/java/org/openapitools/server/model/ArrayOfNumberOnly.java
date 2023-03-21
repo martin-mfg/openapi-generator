@@ -13,8 +13,6 @@
 package org.openapitools.server.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
 
@@ -26,24 +24,24 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class ArrayOfNumberOnly  {
   
-  private List<BigDecimal> arrayNumber = null;
+  private java.util.List<BigDecimal> arrayNumber = null;
 
  /**
    * Get arrayNumber
    * @return arrayNumber
   **/
-  public List<BigDecimal> getArrayNumber() {
+  public java.util.List<BigDecimal> getArrayNumber() {
     return arrayNumber;
   }
 
   /**
     * Set arrayNumber
   **/
-  public void setArrayNumber(List<BigDecimal> arrayNumber) {
+  public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
   }
 
-  public ArrayOfNumberOnly arrayNumber(List<BigDecimal> arrayNumber) {
+  public ArrayOfNumberOnly arrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
     return this;
   }

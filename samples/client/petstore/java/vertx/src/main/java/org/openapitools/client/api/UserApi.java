@@ -15,13 +15,13 @@ public interface UserApi {
 
     void createUser(User body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
-    void createUsersWithArrayInput(List<User> body, Handler<AsyncResult<Void>> handler);
+    void createUsersWithArrayInput(java.util.List<User> body, Handler<AsyncResult<Void>> handler);
 
-    void createUsersWithArrayInput(List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
+    void createUsersWithArrayInput(java.util.List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
-    void createUsersWithListInput(List<User> body, Handler<AsyncResult<Void>> handler);
+    void createUsersWithListInput(java.util.List<User> body, Handler<AsyncResult<Void>> handler);
 
-    void createUsersWithListInput(List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
+    void createUsersWithListInput(java.util.List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
     void deleteUser(String username, Handler<AsyncResult<Void>> handler);
 

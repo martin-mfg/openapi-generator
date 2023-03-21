@@ -23,9 +23,9 @@ public interface PetApiService {
       throws NotFoundException;
       Response deletePet(Long petId,SecurityContext securityContext)
       throws NotFoundException;
-      Response findPetsByStatus(List<String> status,SecurityContext securityContext)
+      Response findPetsByStatus(java.util.List<String> status,SecurityContext securityContext)
       throws NotFoundException;
-      Response findPetsByTags(List<String> tags,SecurityContext securityContext)
+      Response findPetsByTags(java.util.List<String> tags,SecurityContext securityContext)
       throws NotFoundException;
       Response getPetById(Long petId,SecurityContext securityContext)
       throws NotFoundException;

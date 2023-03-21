@@ -1,7 +1,5 @@
 package org.openapitools.server.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.server.model.ModelFile;
 
 
@@ -9,7 +7,7 @@ import org.openapitools.server.model.ModelFile;
 public class FileSchemaTestClass   {
 
     private ModelFile _file;
-    private List<ModelFile> files;
+    private java.util.List<ModelFile> files;
 
     /**
      * Default constructor.
@@ -26,7 +24,7 @@ public class FileSchemaTestClass   {
      */
     public FileSchemaTestClass(
         ModelFile _file, 
-        List<ModelFile> files
+        java.util.List<ModelFile> files
     ) {
         this._file = _file;
         this.files = files;
@@ -50,11 +48,11 @@ public class FileSchemaTestClass   {
      * Get files
      * @return files
      */
-    public List<ModelFile> getFiles() {
+    public java.util.List<ModelFile> getFiles() {
         return files;
     }
 
-    public void setFiles(List<ModelFile> files) {
+    public void setFiles(java.util.List<ModelFile> files) {
         this.files = files;
     }
 

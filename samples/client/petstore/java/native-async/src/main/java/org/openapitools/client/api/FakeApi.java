@@ -52,12 +52,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import java.util.ArrayList;
-import java.util.StringJoiner;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -66,10 +60,10 @@ public class FakeApi {
   private final HttpClient memberVarHttpClient;
   private final ObjectMapper memberVarObjectMapper;
   private final String memberVarBaseUri;
-  private final Consumer<HttpRequest.Builder> memberVarInterceptor;
+  private final java.util.function.Consumer<HttpRequest.Builder> memberVarInterceptor;
   private final Duration memberVarReadTimeout;
-  private final Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
-  private final Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<InputStream>> memberVarResponseInterceptor;
+  private final java.util.function.Consumer<HttpResponse<String>> memberVarAsyncResponseInterceptor;
 
   public FakeApi() {
     this(new ApiClient());
@@ -557,10 +551,10 @@ public class FakeApi {
   /**
    * Array of Enums
    * 
-   * @return CompletableFuture&lt;List&lt;OuterEnum&gt;&gt;
+   * @return CompletableFuture&lt;java.util.List&lt;OuterEnum&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<List<OuterEnum>> getArrayOfEnums() throws ApiException {
+  public CompletableFuture<java.util.List<OuterEnum>> getArrayOfEnums() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = getArrayOfEnumsRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -572,7 +566,7 @@ public class FakeApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<List<OuterEnum>>() {})
+                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<java.util.List<OuterEnum>>() {})
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -587,10 +581,10 @@ public class FakeApi {
   /**
    * Array of Enums
    * 
-   * @return CompletableFuture&lt;ApiResponse&lt;List&lt;OuterEnum&gt;&gt;&gt;
+   * @return CompletableFuture&lt;ApiResponse&lt;java.util.List&lt;OuterEnum&gt;&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<List<OuterEnum>>> getArrayOfEnumsWithHttpInfo() throws ApiException {
+  public CompletableFuture<ApiResponse<java.util.List<OuterEnum>>> getArrayOfEnumsWithHttpInfo() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = getArrayOfEnumsRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -605,10 +599,10 @@ public class FakeApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  new ApiResponse<List<OuterEnum>>(
+                  new ApiResponse<java.util.List<OuterEnum>>(
                       localVarResponse.statusCode(),
                       localVarResponse.headers().map(),
-                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<List<OuterEnum>>() {}))
+                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<java.util.List<OuterEnum>>() {}))
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -793,14 +787,14 @@ public class FakeApi {
 
     String localVarPath = "/fake/body-with-query-params";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "query";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("query", query));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -1079,7 +1073,7 @@ public class FakeApi {
    * @return CompletableFuture&lt;Void&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<Void> testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws ApiException {
+  public CompletableFuture<Void> testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = testEnumParametersRequestBuilder(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
       return memberVarHttpClient.sendAsync(
@@ -1110,7 +1104,7 @@ public class FakeApi {
    * @return CompletableFuture&lt;ApiResponse&lt;Void&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<Void>> testEnumParametersWithHttpInfo(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws ApiException {
+  public CompletableFuture<ApiResponse<Void>> testEnumParametersWithHttpInfo(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = testEnumParametersRequestBuilder(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
       return memberVarHttpClient.sendAsync(
@@ -1133,14 +1127,14 @@ public class FakeApi {
     }
   }
 
-  private HttpRequest.Builder testEnumParametersRequestBuilder(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws ApiException {
+  private HttpRequest.Builder testEnumParametersRequestBuilder(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
     String localVarPath = "/fake";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "enum_query_string_array";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("multi", "enum_query_string_array", enumQueryStringArray));
@@ -1152,7 +1146,7 @@ public class FakeApi {
     localVarQueryParams.addAll(ApiClient.parameterToPairs("enum_query_double", enumQueryDouble));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -1310,8 +1304,8 @@ public class FakeApi {
 
     String localVarPath = "/fake";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "required_string_group";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("required_string_group", requiredStringGroup));
@@ -1323,7 +1317,7 @@ public class FakeApi {
     localVarQueryParams.addAll(ApiClient.parameterToPairs("int64_group", int64Group));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());
@@ -1434,7 +1428,7 @@ public class FakeApi {
    * @return CompletableFuture&lt;Void&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<Void> testInlineAdditionalProperties(Map<String, String> requestBody) throws ApiException {
+  public CompletableFuture<Void> testInlineAdditionalProperties(java.util.Map<String, String> requestBody) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = testInlineAdditionalPropertiesRequestBuilder(requestBody);
       return memberVarHttpClient.sendAsync(
@@ -1458,7 +1452,7 @@ public class FakeApi {
    * @return CompletableFuture&lt;ApiResponse&lt;Void&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<Void>> testInlineAdditionalPropertiesWithHttpInfo(Map<String, String> requestBody) throws ApiException {
+  public CompletableFuture<ApiResponse<Void>> testInlineAdditionalPropertiesWithHttpInfo(java.util.Map<String, String> requestBody) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = testInlineAdditionalPropertiesRequestBuilder(requestBody);
       return memberVarHttpClient.sendAsync(
@@ -1481,7 +1475,7 @@ public class FakeApi {
     }
   }
 
-  private HttpRequest.Builder testInlineAdditionalPropertiesRequestBuilder(Map<String, String> requestBody) throws ApiException {
+  private HttpRequest.Builder testInlineAdditionalPropertiesRequestBuilder(java.util.Map<String, String> requestBody) throws ApiException {
     // verify the required parameter 'requestBody' is set
     if (requestBody == null) {
       throw new ApiException(400, "Missing the required parameter 'requestBody' when calling testInlineAdditionalProperties");
@@ -1617,7 +1611,7 @@ public class FakeApi {
    * @return CompletableFuture&lt;Void&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<Void> testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws ApiException {
+  public CompletableFuture<Void> testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = testQueryParameterCollectionFormatRequestBuilder(pipe, ioutil, http, url, context);
       return memberVarHttpClient.sendAsync(
@@ -1645,7 +1639,7 @@ public class FakeApi {
    * @return CompletableFuture&lt;ApiResponse&lt;Void&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<Void>> testQueryParameterCollectionFormatWithHttpInfo(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws ApiException {
+  public CompletableFuture<ApiResponse<Void>> testQueryParameterCollectionFormatWithHttpInfo(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = testQueryParameterCollectionFormatRequestBuilder(pipe, ioutil, http, url, context);
       return memberVarHttpClient.sendAsync(
@@ -1668,7 +1662,7 @@ public class FakeApi {
     }
   }
 
-  private HttpRequest.Builder testQueryParameterCollectionFormatRequestBuilder(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws ApiException {
+  private HttpRequest.Builder testQueryParameterCollectionFormatRequestBuilder(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws ApiException {
     // verify the required parameter 'pipe' is set
     if (pipe == null) {
       throw new ApiException(400, "Missing the required parameter 'pipe' when calling testQueryParameterCollectionFormat");
@@ -1694,8 +1688,8 @@ public class FakeApi {
 
     String localVarPath = "/fake/test-query-parameters";
 
-    List<Pair> localVarQueryParams = new ArrayList<>();
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<>();
+    java.util.StringJoiner localVarQueryStringJoiner = new java.util.StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "pipe";
     localVarQueryParams.addAll(ApiClient.parameterToPairs("multi", "pipe", pipe));
@@ -1709,7 +1703,7 @@ public class FakeApi {
     localVarQueryParams.addAll(ApiClient.parameterToPairs("multi", "context", context));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
-      StringJoiner queryJoiner = new StringJoiner("&");
+      java.util.StringJoiner queryJoiner = new java.util.StringJoiner("&");
       localVarQueryParams.forEach(p -> queryJoiner.add(p.getName() + '=' + p.getValue()));
       if (localVarQueryStringJoiner.length() != 0) {
         queryJoiner.add(localVarQueryStringJoiner.toString());

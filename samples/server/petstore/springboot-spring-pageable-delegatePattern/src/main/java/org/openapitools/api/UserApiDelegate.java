@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 import org.springframework.http.HttpStatus;
@@ -45,7 +44,7 @@ public interface UserApiDelegate {
      * @return successful operation (status code 200)
      * @see UserApi#createUsersWithArrayInput
      */
-    default ResponseEntity<Void> createUsersWithArrayInput(List<User> body) {
+    default ResponseEntity<Void> createUsersWithArrayInput(java.util.List<User> body) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
@@ -57,7 +56,7 @@ public interface UserApiDelegate {
      * @return successful operation (status code 200)
      * @see UserApi#createUsersWithListInput
      */
-    default ResponseEntity<Void> createUsersWithListInput(List<User> body) {
+    default ResponseEntity<Void> createUsersWithListInput(java.util.List<User> body) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

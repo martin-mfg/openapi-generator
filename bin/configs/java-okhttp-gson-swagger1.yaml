@@ -9,4 +9,4 @@ additionalProperties:
   useOneOfDiscriminatorLookup: "true"
   disallowAdditionalPropertiesIfNotPresent: false
   annotationLibrary: "swagger1"
-
+  fullJavaUtil: true

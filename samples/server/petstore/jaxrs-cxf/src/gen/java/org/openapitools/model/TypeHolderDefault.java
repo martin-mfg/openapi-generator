@@ -1,8 +1,6 @@
 package org.openapitools.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
@@ -27,7 +25,7 @@ public class TypeHolderDefault  {
   private Boolean boolItem = true;
 
   @ApiModelProperty(required = true, value = "")
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
  /**
    * Get stringItem
    * @return stringItem
@@ -110,15 +108,15 @@ public class TypeHolderDefault  {
   **/
   @JsonProperty("array_item")
   @NotNull
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 
-  public TypeHolderDefault arrayItem(List<Integer> arrayItem) {
+  public TypeHolderDefault arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }

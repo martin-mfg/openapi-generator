@@ -317,7 +317,7 @@ ApiResponse<Void>
 
 ## findPetsByStatus
 
-> List<Pet> findPetsByStatus(status)
+> java.util.List<Pet> findPetsByStatus(status)
 
 Finds Pets by status
 
@@ -345,9 +345,9 @@ public class Example {
 
 
         PetApi apiInstance = new PetApi(defaultClient);
-        List<String> status = Arrays.asList("available"); // List<String> | Status values that need to be considered for filter
+        java.util.List<String> status = Arrays.asList("available"); // java.util.List<String> | Status values that need to be considered for filter
         try {
-            List<Pet> result = apiInstance.findPetsByStatus(status);
+            java.util.List<Pet> result = apiInstance.findPetsByStatus(status);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PetApi#findPetsByStatus");
@@ -365,11 +365,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **status** | [**List&lt;String&gt;**](String.md)| Status values that need to be considered for filter | [enum: available, pending, sold] |
+| **status** | [**java.util.List&lt;String&gt;**](String.md)| Status values that need to be considered for filter | [enum: available, pending, sold] |
 
 ### Return type
 
-[**List&lt;Pet&gt;**](Pet.md)
+[**java.util.List&lt;Pet&gt;**](Pet.md)
 
 
 ### Authorization
@@ -389,7 +389,7 @@ public class Example {
 
 ## findPetsByStatusWithHttpInfo
 
-> ApiResponse<List<Pet>> findPetsByStatus findPetsByStatusWithHttpInfo(status)
+> ApiResponse<java.util.List<Pet>> findPetsByStatus findPetsByStatusWithHttpInfo(status)
 
 Finds Pets by status
 
@@ -418,9 +418,9 @@ public class Example {
 
 
         PetApi apiInstance = new PetApi(defaultClient);
-        List<String> status = Arrays.asList("available"); // List<String> | Status values that need to be considered for filter
+        java.util.List<String> status = Arrays.asList("available"); // java.util.List<String> | Status values that need to be considered for filter
         try {
-            ApiResponse<List<Pet>> response = apiInstance.findPetsByStatusWithHttpInfo(status);
+            ApiResponse<java.util.List<Pet>> response = apiInstance.findPetsByStatusWithHttpInfo(status);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -440,11 +440,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **status** | [**List&lt;String&gt;**](String.md)| Status values that need to be considered for filter | [enum: available, pending, sold] |
+| **status** | [**java.util.List&lt;String&gt;**](String.md)| Status values that need to be considered for filter | [enum: available, pending, sold] |
 
 ### Return type
 
-ApiResponse<[**List&lt;Pet&gt;**](Pet.md)>
+ApiResponse<[**java.util.List&lt;Pet&gt;**](Pet.md)>
 
 
 ### Authorization
@@ -465,7 +465,7 @@ ApiResponse<[**List&lt;Pet&gt;**](Pet.md)>
 
 ## findPetsByTags
 
-> List<Pet> findPetsByTags(tags)
+> java.util.List<Pet> findPetsByTags(tags)
 
 Finds Pets by tags
 
@@ -493,9 +493,9 @@ public class Example {
 
 
         PetApi apiInstance = new PetApi(defaultClient);
-        List<String> tags = Arrays.asList(); // List<String> | Tags to filter by
+        java.util.List<String> tags = Arrays.asList(); // java.util.List<String> | Tags to filter by
         try {
-            List<Pet> result = apiInstance.findPetsByTags(tags);
+            java.util.List<Pet> result = apiInstance.findPetsByTags(tags);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling PetApi#findPetsByTags");
@@ -513,11 +513,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tags** | [**List&lt;String&gt;**](String.md)| Tags to filter by | |
+| **tags** | [**java.util.List&lt;String&gt;**](String.md)| Tags to filter by | |
 
 ### Return type
 
-[**List&lt;Pet&gt;**](Pet.md)
+[**java.util.List&lt;Pet&gt;**](Pet.md)
 
 
 ### Authorization
@@ -537,7 +537,7 @@ public class Example {
 
 ## findPetsByTagsWithHttpInfo
 
-> ApiResponse<List<Pet>> findPetsByTags findPetsByTagsWithHttpInfo(tags)
+> ApiResponse<java.util.List<Pet>> findPetsByTags findPetsByTagsWithHttpInfo(tags)
 
 Finds Pets by tags
 
@@ -566,9 +566,9 @@ public class Example {
 
 
         PetApi apiInstance = new PetApi(defaultClient);
-        List<String> tags = Arrays.asList(); // List<String> | Tags to filter by
+        java.util.List<String> tags = Arrays.asList(); // java.util.List<String> | Tags to filter by
         try {
-            ApiResponse<List<Pet>> response = apiInstance.findPetsByTagsWithHttpInfo(tags);
+            ApiResponse<java.util.List<Pet>> response = apiInstance.findPetsByTagsWithHttpInfo(tags);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -588,11 +588,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **tags** | [**List&lt;String&gt;**](String.md)| Tags to filter by | |
+| **tags** | [**java.util.List&lt;String&gt;**](String.md)| Tags to filter by | |
 
 ### Return type
 
-ApiResponse<[**List&lt;Pet&gt;**](Pet.md)>
+ApiResponse<[**java.util.List&lt;Pet&gt;**](Pet.md)>
 
 
 ### Authorization

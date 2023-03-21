@@ -8,7 +8,7 @@ The class is defined in **[ArrayOfArrayOfNumberOnly.java](../../src/main/java/or
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**arrayArrayNumber** | `List&lt;List&lt;BigDecimal&gt;&gt;` |  |  [optional property]
+**arrayArrayNumber** | `java.util.List&lt;java.util.List&lt;BigDecimal&gt;&gt;` |  |  [optional property]
 
 
 

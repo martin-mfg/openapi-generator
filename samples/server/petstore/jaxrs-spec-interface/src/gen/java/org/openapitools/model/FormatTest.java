@@ -6,8 +6,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.File;
 import java.math.BigDecimal;
 import java.util.Arrays;
-import java.util.Date;
-import java.util.UUID;
 import org.joda.time.LocalDate;
 import java.io.Serializable;
 import javax.validation.constraints.*;
@@ -35,8 +33,8 @@ public class FormatTest  implements Serializable {
   private @Valid byte[] _byte;
   private @Valid File binary;
   private @Valid LocalDate date;
-  private @Valid Date dateTime;
-  private @Valid UUID uuid;
+  private @Valid java.util.Date dateTime;
+  private @Valid java.util.UUID uuid;
   private @Valid String password;
   private @Valid BigDecimal bigDecimal;
 
@@ -245,7 +243,7 @@ public class FormatTest  implements Serializable {
 
   /**
    **/
-  public FormatTest dateTime(Date dateTime) {
+  public FormatTest dateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
     return this;
   }
@@ -253,18 +251,18 @@ public class FormatTest  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("dateTime")
-  public Date getDateTime() {
+  public java.util.Date getDateTime() {
     return dateTime;
   }
 
   @JsonProperty("dateTime")
-  public void setDateTime(Date dateTime) {
+  public void setDateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
   }
 
   /**
    **/
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -272,12 +270,12 @@ public class FormatTest  implements Serializable {
   
   @ApiModelProperty(example = "72f98069-206d-4f12-9f12-3d1e525a8e84", value = "")
   @JsonProperty("uuid")
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
   @JsonProperty("uuid")
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 

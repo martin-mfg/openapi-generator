@@ -11,31 +11,31 @@
 |**attributeNumber** | **BigDecimal** |  |  [optional] |
 |**attributeInteger** | **Integer** |  |  [optional] |
 |**attributeBoolean** | **Boolean** |  |  [optional] |
-|**wrappedArray** | **List&lt;Integer&gt;** |  |  [optional] |
+|**wrappedArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
 |**nameString** | **String** |  |  [optional] |
 |**nameNumber** | **BigDecimal** |  |  [optional] |
 |**nameInteger** | **Integer** |  |  [optional] |
 |**nameBoolean** | **Boolean** |  |  [optional] |
-|**nameArray** | **List&lt;Integer&gt;** |  |  [optional] |
-|**nameWrappedArray** | **List&lt;Integer&gt;** |  |  [optional] |
+|**nameArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
+|**nameWrappedArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
 |**prefixString** | **String** |  |  [optional] |
 |**prefixNumber** | **BigDecimal** |  |  [optional] |
 |**prefixInteger** | **Integer** |  |  [optional] |
 |**prefixBoolean** | **Boolean** |  |  [optional] |
-|**prefixArray** | **List&lt;Integer&gt;** |  |  [optional] |
-|**prefixWrappedArray** | **List&lt;Integer&gt;** |  |  [optional] |
+|**prefixArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
+|**prefixWrappedArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
 |**namespaceString** | **String** |  |  [optional] |
 |**namespaceNumber** | **BigDecimal** |  |  [optional] |
 |**namespaceInteger** | **Integer** |  |  [optional] |
 |**namespaceBoolean** | **Boolean** |  |  [optional] |
-|**namespaceArray** | **List&lt;Integer&gt;** |  |  [optional] |
-|**namespaceWrappedArray** | **List&lt;Integer&gt;** |  |  [optional] |
+|**namespaceArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
+|**namespaceWrappedArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
 |**prefixNsString** | **String** |  |  [optional] |
 |**prefixNsNumber** | **BigDecimal** |  |  [optional] |
 |**prefixNsInteger** | **Integer** |  |  [optional] |
 |**prefixNsBoolean** | **Boolean** |  |  [optional] |
-|**prefixNsArray** | **List&lt;Integer&gt;** |  |  [optional] |
-|**prefixNsWrappedArray** | **List&lt;Integer&gt;** |  |  [optional] |
+|**prefixNsArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
+|**prefixNsWrappedArray** | **java.util.List&lt;Integer&gt;** |  |  [optional] |
 
 
 ## Implemented Interfaces

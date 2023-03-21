@@ -6,7 +6,6 @@ import org.openapitools.model.ClientDto;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.model.FileSchemaTestClassDto;
 import java.time.LocalDate;
-import java.util.Map;
 import java.time.OffsetDateTime;
 import org.openapitools.model.OuterCompositeDto;
 import org.openapitools.model.ResponseObjectWithDifferentFieldNamesDto;

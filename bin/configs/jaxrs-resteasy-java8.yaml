@@ -6,3 +6,4 @@ additionalProperties:
   artifactId: jaxrs-resteasy-java8-server
   hideGenerationTimestamp: "true"
   dateLibrary: java8
+  fullJavaUtil: true

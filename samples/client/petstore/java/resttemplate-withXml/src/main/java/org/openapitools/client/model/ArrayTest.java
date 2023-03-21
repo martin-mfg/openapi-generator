@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.ReadOnlyFirst;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -48,26 +46,26 @@ public class ArrayTest {
   // items.name=arrayOfString items.baseName=arrayOfString items.xmlName= items.xmlNamespace=
   // items.example= items.type=String
   @XmlElement(name = "arrayOfString")
-  private List<String> arrayOfString;
+  private java.util.List<String> arrayOfString;
 
   public static final String JSON_PROPERTY_ARRAY_ARRAY_OF_INTEGER = "array_array_of_integer";
   // Is a container wrapped=false
   // items.name=arrayArrayOfInteger items.baseName=arrayArrayOfInteger items.xmlName= items.xmlNamespace=
-  // items.example= items.type=List&lt;Long&gt;
+  // items.example= items.type=java.util.List&lt;Long&gt;
   @XmlElement(name = "arrayArrayOfInteger")
-  private List<List<Long>> arrayArrayOfInteger;
+  private java.util.List<java.util.List<Long>> arrayArrayOfInteger;
 
   public static final String JSON_PROPERTY_ARRAY_ARRAY_OF_MODEL = "array_array_of_model";
   // Is a container wrapped=false
   // items.name=arrayArrayOfModel items.baseName=arrayArrayOfModel items.xmlName= items.xmlNamespace=
-  // items.example= items.type=List&lt;ReadOnlyFirst&gt;
+  // items.example= items.type=java.util.List&lt;ReadOnlyFirst&gt;
   @XmlElement(name = "arrayArrayOfModel")
-  private List<List<ReadOnlyFirst>> arrayArrayOfModel;
+  private java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel;
 
   public ArrayTest() {
   }
 
-  public ArrayTest arrayOfString(List<String> arrayOfString) {
+  public ArrayTest arrayOfString(java.util.List<String> arrayOfString) {
     
     this.arrayOfString = arrayOfString;
     return this;
@@ -89,25 +87,25 @@ public class ArrayTest {
   @JsonProperty(JSON_PROPERTY_ARRAY_OF_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<String> getArrayOfString() {
+  public java.util.List<String> getArrayOfString() {
     return arrayOfString;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_OF_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayOfString(List<String> arrayOfString) {
+  public void setArrayOfString(java.util.List<String> arrayOfString) {
     this.arrayOfString = arrayOfString;
   }
 
 
-  public ArrayTest arrayArrayOfInteger(List<List<Long>> arrayArrayOfInteger) {
+  public ArrayTest arrayArrayOfInteger(java.util.List<java.util.List<Long>> arrayArrayOfInteger) {
     
     this.arrayArrayOfInteger = arrayArrayOfInteger;
     return this;
   }
 
-  public ArrayTest addArrayArrayOfIntegerItem(List<Long> arrayArrayOfIntegerItem) {
+  public ArrayTest addArrayArrayOfIntegerItem(java.util.List<Long> arrayArrayOfIntegerItem) {
     if (this.arrayArrayOfInteger == null) {
       this.arrayArrayOfInteger = new ArrayList<>();
     }
@@ -123,25 +121,25 @@ public class ArrayTest {
   @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_OF_INTEGER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<List<Long>> getArrayArrayOfInteger() {
+  public java.util.List<java.util.List<Long>> getArrayArrayOfInteger() {
     return arrayArrayOfInteger;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_OF_INTEGER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayArrayOfInteger(List<List<Long>> arrayArrayOfInteger) {
+  public void setArrayArrayOfInteger(java.util.List<java.util.List<Long>> arrayArrayOfInteger) {
     this.arrayArrayOfInteger = arrayArrayOfInteger;
   }
 
 
-  public ArrayTest arrayArrayOfModel(List<List<ReadOnlyFirst>> arrayArrayOfModel) {
+  public ArrayTest arrayArrayOfModel(java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel) {
     
     this.arrayArrayOfModel = arrayArrayOfModel;
     return this;
   }
 
-  public ArrayTest addArrayArrayOfModelItem(List<ReadOnlyFirst> arrayArrayOfModelItem) {
+  public ArrayTest addArrayArrayOfModelItem(java.util.List<ReadOnlyFirst> arrayArrayOfModelItem) {
     if (this.arrayArrayOfModel == null) {
       this.arrayArrayOfModel = new ArrayList<>();
     }
@@ -157,14 +155,14 @@ public class ArrayTest {
   @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_OF_MODEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<List<ReadOnlyFirst>> getArrayArrayOfModel() {
+  public java.util.List<java.util.List<ReadOnlyFirst>> getArrayArrayOfModel() {
     return arrayArrayOfModel;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_OF_MODEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayArrayOfModel(List<List<ReadOnlyFirst>> arrayArrayOfModel) {
+  public void setArrayArrayOfModel(java.util.List<java.util.List<ReadOnlyFirst>> arrayArrayOfModel) {
     this.arrayArrayOfModel = arrayArrayOfModel;
   }
 

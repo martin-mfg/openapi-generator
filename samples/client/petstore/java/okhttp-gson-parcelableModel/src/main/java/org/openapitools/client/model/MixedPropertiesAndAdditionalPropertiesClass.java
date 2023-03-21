@@ -22,9 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.client.model.Animal;
 import android.os.Parcelable;
 import android.os.Parcel;
@@ -57,7 +54,7 @@ import org.openapitools.client.JSON;
 public class MixedPropertiesAndAdditionalPropertiesClass implements Parcelable {
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   public static final String SERIALIZED_NAME_DATE_TIME = "dateTime";
   @SerializedName(SERIALIZED_NAME_DATE_TIME)
@@ -65,12 +62,12 @@ public class MixedPropertiesAndAdditionalPropertiesClass implements Parcelable {
 
   public static final String SERIALIZED_NAME_MAP = "map";
   @SerializedName(SERIALIZED_NAME_MAP)
-  private Map<String, Animal> map = new HashMap<>();
+  private java.util.Map<String, Animal> map = new java.util.HashMap<>();
 
   public MixedPropertiesAndAdditionalPropertiesClass() {
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClass uuid(UUID uuid) {
+  public MixedPropertiesAndAdditionalPropertiesClass uuid(java.util.UUID uuid) {
     
     this.uuid = uuid;
     return this;
@@ -82,12 +79,12 @@ public class MixedPropertiesAndAdditionalPropertiesClass implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
@@ -114,7 +111,7 @@ public class MixedPropertiesAndAdditionalPropertiesClass implements Parcelable {
   }
 
 
-  public MixedPropertiesAndAdditionalPropertiesClass map(Map<String, Animal> map) {
+  public MixedPropertiesAndAdditionalPropertiesClass map(java.util.Map<String, Animal> map) {
     
     this.map = map;
     return this;
@@ -122,7 +119,7 @@ public class MixedPropertiesAndAdditionalPropertiesClass implements Parcelable {
 
   public MixedPropertiesAndAdditionalPropertiesClass putMapItem(String key, Animal mapItem) {
     if (this.map == null) {
-      this.map = new HashMap<>();
+      this.map = new java.util.HashMap<>();
     }
     this.map.put(key, mapItem);
     return this;
@@ -134,12 +131,12 @@ public class MixedPropertiesAndAdditionalPropertiesClass implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, Animal> getMap() {
+  public java.util.Map<String, Animal> getMap() {
     return map;
   }
 
 
-  public void setMap(Map<String, Animal> map) {
+  public void setMap(java.util.Map<String, Animal> map) {
     this.map = map;
   }
 
@@ -194,9 +191,9 @@ public class MixedPropertiesAndAdditionalPropertiesClass implements Parcelable {
   }
 
   MixedPropertiesAndAdditionalPropertiesClass(Parcel in) {
-    uuid = (UUID)in.readValue(UUID.class.getClassLoader());
+    uuid = (java.util.UUID)in.readValue(java.util.UUID.class.getClassLoader());
     dateTime = (OffsetDateTime)in.readValue(OffsetDateTime.class.getClassLoader());
-    map = (Map<String, Animal>)in.readValue(Animal.class.getClassLoader());
+    map = (java.util.Map<String, Animal>)in.readValue(Animal.class.getClassLoader());
   }
 
   public int describeContents() {

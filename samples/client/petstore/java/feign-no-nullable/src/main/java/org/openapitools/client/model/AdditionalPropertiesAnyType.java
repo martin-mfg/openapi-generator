@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.HashMap;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -33,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 })
 @javax.annotation.concurrent.Immutable
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class AdditionalPropertiesAnyType extends HashMap<String, Object> {
+public class AdditionalPropertiesAnyType extends java.util.HashMap<String, Object> {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 

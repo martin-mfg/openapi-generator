@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import java.util.Map;
 import org.openapitools.model.OrderDto;
 
 

@@ -4,12 +4,6 @@ import org.openapitools.client.ApiClient;
 
 import org.openapitools.client.model.ByteArrayObject;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -50,7 +44,7 @@ public class DefaultApi {
      * 
      * 
      * <p><b>200</b> - 
-     * @return List&lt;ByteArrayObject&gt;
+     * @return java.util.List&lt;ByteArrayObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
     private ResponseSpec nullableArrayTestGetRequestCreation() throws WebClientResponseException {
@@ -80,7 +74,7 @@ public class DefaultApi {
      * 
      * 
      * <p><b>200</b> - 
-     * @return List&lt;ByteArrayObject&gt;
+     * @return java.util.List&lt;ByteArrayObject&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
     public Flux<ByteArrayObject> nullableArrayTestGet() throws WebClientResponseException {
@@ -92,7 +86,7 @@ public class DefaultApi {
      * 
      * 
      * <p><b>200</b> - 
-     * @return ResponseEntity&lt;List&lt;ByteArrayObject&gt;&gt;
+     * @return ResponseEntity&lt;java.util.List&lt;ByteArrayObject&gt;&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
     public Mono<ResponseEntity<List<ByteArrayObject>>> nullableArrayTestGetWithHttpInfo() throws WebClientResponseException {

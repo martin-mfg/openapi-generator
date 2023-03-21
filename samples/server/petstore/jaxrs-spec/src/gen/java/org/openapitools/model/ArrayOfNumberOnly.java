@@ -3,8 +3,6 @@ package org.openapitools.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.io.Serializable;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -21,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonTypeName("ArrayOfNumberOnly")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")
 public class ArrayOfNumberOnly  implements Serializable {
-  private @Valid List<BigDecimal> arrayNumber;
+  private @Valid java.util.List<BigDecimal> arrayNumber;
 
   protected ArrayOfNumberOnly(ArrayOfNumberOnlyBuilder<?, ?> b) {
     this.arrayNumber = b.arrayNumber;
@@ -32,7 +30,7 @@ public class ArrayOfNumberOnly  implements Serializable {
 
   /**
    **/
-  public ArrayOfNumberOnly arrayNumber(List<BigDecimal> arrayNumber) {
+  public ArrayOfNumberOnly arrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
     return this;
   }
@@ -40,12 +38,12 @@ public class ArrayOfNumberOnly  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("ArrayNumber")
-  public List<BigDecimal> getArrayNumber() {
+  public java.util.List<BigDecimal> getArrayNumber() {
     return arrayNumber;
   }
 
   @JsonProperty("ArrayNumber")
-  public void setArrayNumber(List<BigDecimal> arrayNumber) {
+  public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
   }
 
@@ -123,12 +121,12 @@ public class ArrayOfNumberOnly  implements Serializable {
   }
 
   public static abstract class ArrayOfNumberOnlyBuilder<C extends ArrayOfNumberOnly, B extends ArrayOfNumberOnlyBuilder<C, B>>  {
-    private List<BigDecimal> arrayNumber;
+    private java.util.List<BigDecimal> arrayNumber;
     protected abstract B self();
 
     public abstract C build();
 
-    public B arrayNumber(List<BigDecimal> arrayNumber) {
+    public B arrayNumber(java.util.List<BigDecimal> arrayNumber) {
       this.arrayNumber = arrayNumber;
       return self();
     }

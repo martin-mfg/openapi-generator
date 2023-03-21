@@ -1,7 +1,5 @@
 package org.openapitools.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.model.ModelFile;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -19,7 +17,7 @@ public class FileSchemaTestClass  {
 
   @ApiModelProperty(value = "")
   @Valid
-  private List<ModelFile> files;
+  private java.util.List<ModelFile> files;
  /**
    * Get _file
    * @return _file
@@ -43,15 +41,15 @@ public class FileSchemaTestClass  {
    * @return files
   **/
   @JsonProperty("files")
-  public List<ModelFile> getFiles() {
+  public java.util.List<ModelFile> getFiles() {
     return files;
   }
 
-  public void setFiles(List<ModelFile> files) {
+  public void setFiles(java.util.List<ModelFile> files) {
     this.files = files;
   }
 
-  public FileSchemaTestClass files(List<ModelFile> files) {
+  public FileSchemaTestClass files(java.util.List<ModelFile> files) {
     this.files = files;
     return this;
   }

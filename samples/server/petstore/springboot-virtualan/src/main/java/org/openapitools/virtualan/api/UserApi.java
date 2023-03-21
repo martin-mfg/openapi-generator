@@ -5,7 +5,6 @@
  */
 package org.openapitools.virtualan.api;
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.virtualan.model.User;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
@@ -99,7 +98,7 @@ public interface UserApi {
         consumes = { "application/json" }
     )
     default ResponseEntity<Void> createUsersWithArrayInput(
-        @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody List<User> user
+        @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody java.util.List<User> user
     ) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
@@ -129,7 +128,7 @@ public interface UserApi {
         consumes = { "application/json" }
     )
     default ResponseEntity<Void> createUsersWithListInput(
-        @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody List<User> user
+        @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody java.util.List<User> user
     ) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 

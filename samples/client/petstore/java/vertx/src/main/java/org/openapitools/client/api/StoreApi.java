@@ -14,9 +14,9 @@ public interface StoreApi {
 
     void deleteOrder(String orderId, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
-    void getInventory(Handler<AsyncResult<Map<String, Integer>>> handler);
+    void getInventory(Handler<AsyncResult<java.util.Map<String, Integer>>> handler);
 
-    void getInventory(ApiClient.AuthInfo authInfo, Handler<AsyncResult<Map<String, Integer>>> handler);
+    void getInventory(ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.Map<String, Integer>>> handler);
 
     void getOrderById(Long orderId, Handler<AsyncResult<Order>> handler);
 

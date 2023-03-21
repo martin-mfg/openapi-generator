@@ -13,13 +13,7 @@ import okhttp3.MultipartBody;
 import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public interface PetApi {
   /**
@@ -52,10 +46,10 @@ public interface PetApi {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return Observable&lt;List&lt;Pet&gt;&gt;
+   * @return Observable&lt;java.util.List&lt;Pet&gt;&gt;
    */
   @GET("pet/findByStatus")
-  Observable<List<Pet>> findPetsByStatus(
+  Observable<java.util.List<Pet>> findPetsByStatus(
     @retrofit2.http.Query("status") CSVParams status
   );
 
@@ -63,12 +57,12 @@ public interface PetApi {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return Observable&lt;Set&lt;Pet&gt;&gt;
+   * @return Observable&lt;java.util.Set&lt;Pet&gt;&gt;
    * @deprecated
    */
   @Deprecated
   @GET("pet/findByTags")
-  Observable<Set<Pet>> findPetsByTags(
+  Observable<java.util.Set<Pet>> findPetsByTags(
     @retrofit2.http.Query("tags") CSVParams tags
   );
 

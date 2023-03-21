@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.Map;
 import apimodels.Order;
 
 import com.typesafe.config.Config;
@@ -49,7 +48,7 @@ public class StoreApiController extends Controller {
 
     @ApiAction
     public Result getInventory(Http.Request request) throws Exception {
-                Map<String, Integer> obj = imp.getInventory(request);
+                Map<String, java.util.Map<String, Integer>> obj = imp.getInventory(request);
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);

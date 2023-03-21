@@ -11,11 +11,6 @@ import okhttp3.MultipartBody;
 
 import org.openapitools.client.model.Client;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public interface FakeClassnameTags123Api {
   /**

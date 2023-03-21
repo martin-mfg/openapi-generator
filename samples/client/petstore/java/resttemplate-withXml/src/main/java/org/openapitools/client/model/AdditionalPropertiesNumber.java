@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
@@ -40,7 +38,7 @@ import io.github.threetenjaxb.core.*;
 @XmlRootElement(name = "AdditionalPropertiesNumber")
 @XmlAccessorType(XmlAccessType.FIELD)
 @JacksonXmlRootElement(localName = "AdditionalPropertiesNumber")
-public class AdditionalPropertiesNumber extends HashMap<String, BigDecimal> {
+public class AdditionalPropertiesNumber extends java.util.HashMap<String, BigDecimal> {
   public static final String JSON_PROPERTY_NAME = "name";
   @XmlElement(name = "name")
   private String name;

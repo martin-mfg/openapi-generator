@@ -7,3 +7,4 @@ additionalProperties:
   artifactId: petstore-helidon-server-se
   hideGenerationTimestamp: "true"
   fullProject: "true"
+  fullJavaUtil: true

@@ -4,8 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.vertxweb.server.model.Category;
 import org.openapitools.vertxweb.server.model.Tag;
 
@@ -18,8 +16,8 @@ public class Pet   {
   private Long id;
   private Category category;
   private String name;
-  private List<String> photoUrls = new ArrayList<>();
-  private List<Tag> tags;
+  private java.util.List<String> photoUrls = new java.util.ArrayList<>();
+  private java.util.List<Tag> tags;
 
 
   public enum StatusEnum {
@@ -46,7 +44,7 @@ public class Pet   {
 
   }
 
-  public Pet (Long id, Category category, String name, List<String> photoUrls, List<Tag> tags, StatusEnum status) {
+  public Pet (Long id, Category category, String name, java.util.List<String> photoUrls, java.util.List<Tag> tags, StatusEnum status) {
     this.id = id;
     this.category = category;
     this.name = name;
@@ -84,19 +82,19 @@ public class Pet   {
 
     
   @JsonProperty("photoUrls")
-  public List<String> getPhotoUrls() {
+  public java.util.List<String> getPhotoUrls() {
     return photoUrls;
   }
-  public void setPhotoUrls(List<String> photoUrls) {
+  public void setPhotoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
     
   @JsonProperty("tags")
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 

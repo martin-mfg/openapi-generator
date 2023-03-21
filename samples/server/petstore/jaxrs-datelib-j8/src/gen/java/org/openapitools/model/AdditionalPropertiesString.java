@@ -18,8 +18,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.io.Serializable;
 import javax.validation.constraints.*;
@@ -32,7 +30,7 @@ import javax.validation.Valid;
   AdditionalPropertiesString.JSON_PROPERTY_NAME
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen")
-public class AdditionalPropertiesString extends HashMap<String, String> implements Serializable {
+public class AdditionalPropertiesString extends java.util.HashMap<String, String> implements Serializable {
   public static final String JSON_PROPERTY_NAME = "name";
   @JsonProperty(JSON_PROPERTY_NAME)
   private String name;

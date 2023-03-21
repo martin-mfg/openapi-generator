@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## nullableArrayTestGet
 
-> List&lt;ByteArrayObject&gt; nullableArrayTestGet()
+> java.util.List&lt;ByteArrayObject&gt; nullableArrayTestGet()
 
 
 
@@ -33,7 +33,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            List<ByteArrayObject> result = apiInstance.nullableArrayTestGet();
+            java.util.List<ByteArrayObject> result = apiInstance.nullableArrayTestGet();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#nullableArrayTestGet");
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;ByteArrayObject&gt;**](ByteArrayObject.md)
+[**java.util.List&lt;ByteArrayObject&gt;**](ByteArrayObject.md)
 
 ### Authorization
 

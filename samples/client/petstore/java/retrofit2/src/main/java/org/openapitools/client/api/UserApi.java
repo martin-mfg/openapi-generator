@@ -12,11 +12,6 @@ import okhttp3.MultipartBody;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public interface UserApi {
   /**
@@ -38,7 +33,7 @@ public interface UserApi {
    */
   @POST("user/createWithArray")
   Call<Void> createUsersWithArrayInput(
-    @retrofit2.http.Body List<User> body
+    @retrofit2.http.Body java.util.List<User> body
   );
 
   /**
@@ -49,7 +44,7 @@ public interface UserApi {
    */
   @POST("user/createWithList")
   Call<Void> createUsersWithListInput(
-    @retrofit2.http.Body List<User> body
+    @retrofit2.http.Body java.util.List<User> body
   );
 
   /**

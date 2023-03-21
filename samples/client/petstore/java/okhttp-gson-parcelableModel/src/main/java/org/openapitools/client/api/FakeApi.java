@@ -38,10 +38,6 @@ import org.openapitools.client.model.User;
 import org.openapitools.client.model.XmlItem;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.ws.rs.core.GenericType;
 
 public class FakeApi {
@@ -112,11 +108,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/create_xml_item";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -235,11 +231,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/outer/boolean";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "*/*"
@@ -352,11 +348,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/outer/composite";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "*/*"
@@ -469,11 +465,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/outer/number";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "*/*"
@@ -586,11 +582,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/outer/string";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "*/*"
@@ -703,11 +699,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/body-with-file-schema";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -822,11 +818,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/body-with-query-params";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (query != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("query", query));
@@ -952,11 +948,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "application/json"
@@ -1089,11 +1085,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (integer != null) {
             localVarFormParams.put("integer", integer);
@@ -1309,7 +1305,7 @@ public class FakeApi {
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testEnumParametersCall(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call testEnumParametersCall(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1328,11 +1324,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (enumFormStringArray != null) {
             localVarFormParams.put("enum_form_string_array", enumFormStringArray);
@@ -1386,7 +1382,7 @@ public class FakeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call testEnumParametersValidateBeforeCall(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call testEnumParametersValidateBeforeCall(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, final ApiCallback _callback) throws ApiException {
         return testEnumParametersCall(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, _callback);
 
     }
@@ -1410,7 +1406,7 @@ public class FakeApi {
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
      </table>
      */
-    public void testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws ApiException {
+    public void testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws ApiException {
         testEnumParametersWithHttpInfo(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
     }
 
@@ -1434,7 +1430,7 @@ public class FakeApi {
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> testEnumParametersWithHttpInfo(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString) throws ApiException {
+    public ApiResponse<Void> testEnumParametersWithHttpInfo(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString) throws ApiException {
         okhttp3.Call localVarCall = testEnumParametersValidateBeforeCall(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -1460,7 +1456,7 @@ public class FakeApi {
         <tr><td> 404 </td><td> Not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testEnumParametersAsync(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<String> enumFormStringArray, String enumFormString, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call testEnumParametersAsync(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<String> enumFormStringArray, String enumFormString, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = testEnumParametersValidateBeforeCall(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
@@ -1485,11 +1481,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (requiredStringGroup != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("required_string_group", requiredStringGroup));
@@ -1697,7 +1693,7 @@ public class FakeApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testInlineAdditionalPropertiesCall(Map<String, String> param, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call testInlineAdditionalPropertiesCall(java.util.Map<String, String> param, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1716,11 +1712,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/inline-additionalProperties";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -1742,7 +1738,7 @@ public class FakeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call testInlineAdditionalPropertiesValidateBeforeCall(Map<String, String> param, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call testInlineAdditionalPropertiesValidateBeforeCall(java.util.Map<String, String> param, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'param' is set
         if (param == null) {
             throw new ApiException("Missing the required parameter 'param' when calling testInlineAdditionalProperties(Async)");
@@ -1763,7 +1759,7 @@ public class FakeApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public void testInlineAdditionalProperties(Map<String, String> param) throws ApiException {
+    public void testInlineAdditionalProperties(java.util.Map<String, String> param) throws ApiException {
         testInlineAdditionalPropertiesWithHttpInfo(param);
     }
 
@@ -1779,7 +1775,7 @@ public class FakeApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> testInlineAdditionalPropertiesWithHttpInfo(Map<String, String> param) throws ApiException {
+    public ApiResponse<Void> testInlineAdditionalPropertiesWithHttpInfo(java.util.Map<String, String> param) throws ApiException {
         okhttp3.Call localVarCall = testInlineAdditionalPropertiesValidateBeforeCall(param, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -1797,7 +1793,7 @@ public class FakeApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testInlineAdditionalPropertiesAsync(Map<String, String> param, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call testInlineAdditionalPropertiesAsync(java.util.Map<String, String> param, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = testInlineAdditionalPropertiesValidateBeforeCall(param, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
@@ -1835,11 +1831,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/jsonFormData";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (param != null) {
             localVarFormParams.put("param", param);
@@ -1954,7 +1950,7 @@ public class FakeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testQueryParameterCollectionFormatCall(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call testQueryParameterCollectionFormatCall(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1973,11 +1969,11 @@ public class FakeApi {
         // create path and map variables
         String localVarPath = "/fake/test-query-parameters";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (pipe != null) {
             localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "pipe", pipe));
@@ -2018,7 +2014,7 @@ public class FakeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call testQueryParameterCollectionFormatValidateBeforeCall(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call testQueryParameterCollectionFormatValidateBeforeCall(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pipe' is set
         if (pipe == null) {
             throw new ApiException("Missing the required parameter 'pipe' when calling testQueryParameterCollectionFormat(Async)");
@@ -2063,7 +2059,7 @@ public class FakeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public void testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws ApiException {
+    public void testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws ApiException {
         testQueryParameterCollectionFormatWithHttpInfo(pipe, ioutil, http, url, context);
     }
 
@@ -2083,7 +2079,7 @@ public class FakeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> testQueryParameterCollectionFormatWithHttpInfo(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context) throws ApiException {
+    public ApiResponse<Void> testQueryParameterCollectionFormatWithHttpInfo(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context) throws ApiException {
         okhttp3.Call localVarCall = testQueryParameterCollectionFormatValidateBeforeCall(pipe, ioutil, http, url, context, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -2105,7 +2101,7 @@ public class FakeApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testQueryParameterCollectionFormatAsync(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call testQueryParameterCollectionFormatAsync(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = testQueryParameterCollectionFormatValidateBeforeCall(pipe, ioutil, http, url, context, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.HashMap;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
@@ -39,7 +37,7 @@ import io.github.threetenjaxb.core.*;
 @XmlRootElement(name = "AdditionalPropertiesBoolean")
 @XmlAccessorType(XmlAccessType.FIELD)
 @JacksonXmlRootElement(localName = "AdditionalPropertiesBoolean")
-public class AdditionalPropertiesBoolean extends HashMap<String, Boolean> {
+public class AdditionalPropertiesBoolean extends java.util.HashMap<String, Boolean> {
   public static final String JSON_PROPERTY_NAME = "name";
   @XmlElement(name = "name")
   private String name;

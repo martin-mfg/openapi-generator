@@ -12,7 +12,6 @@
 
 package org.openapitools.server.api;
 
-import java.util.Map;
 import org.openapitools.server.model.Order;
 
 import jakarta.ws.rs.*;

@@ -2,8 +2,6 @@ package org.openapitools.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.HashMap;
-import java.util.Map;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
@@ -16,7 +14,7 @@ public class MapTest  {
   
   @ApiModelProperty(value = "")
   @Valid
-  private Map<String, Map<String, String>> mapMapOfString = new HashMap<>();
+  private java.util.Map<String, java.util.Map<String, String>> mapMapOfString = new java.util.HashMap<>();
 
 public enum InnerEnum {
 
@@ -51,32 +49,32 @@ UPPER(String.valueOf("UPPER")), LOWER(String.valueOf("lower"));
 }
 
   @ApiModelProperty(value = "")
-  private Map<String, InnerEnum> mapOfEnumString = new HashMap<>();
+  private java.util.Map<String, InnerEnum> mapOfEnumString = new java.util.HashMap<>();
 
   @ApiModelProperty(value = "")
-  private Map<String, Boolean> directMap = new HashMap<>();
+  private java.util.Map<String, Boolean> directMap = new java.util.HashMap<>();
 
   @ApiModelProperty(value = "")
-  private Map<String, Boolean> indirectMap = new HashMap<>();
+  private java.util.Map<String, Boolean> indirectMap = new java.util.HashMap<>();
  /**
    * Get mapMapOfString
    * @return mapMapOfString
   **/
   @JsonProperty("map_map_of_string")
-  public Map<String, Map<String, String>> getMapMapOfString() {
+  public java.util.Map<String, java.util.Map<String, String>> getMapMapOfString() {
     return mapMapOfString;
   }
 
-  public void setMapMapOfString(Map<String, Map<String, String>> mapMapOfString) {
+  public void setMapMapOfString(java.util.Map<String, java.util.Map<String, String>> mapMapOfString) {
     this.mapMapOfString = mapMapOfString;
   }
 
-  public MapTest mapMapOfString(Map<String, Map<String, String>> mapMapOfString) {
+  public MapTest mapMapOfString(java.util.Map<String, java.util.Map<String, String>> mapMapOfString) {
     this.mapMapOfString = mapMapOfString;
     return this;
   }
 
-  public MapTest putMapMapOfStringItem(String key, Map<String, String> mapMapOfStringItem) {
+  public MapTest putMapMapOfStringItem(String key, java.util.Map<String, String> mapMapOfStringItem) {
     this.mapMapOfString.put(key, mapMapOfStringItem);
     return this;
   }
@@ -86,15 +84,15 @@ UPPER(String.valueOf("UPPER")), LOWER(String.valueOf("lower"));
    * @return mapOfEnumString
   **/
   @JsonProperty("map_of_enum_string")
-  public Map<String, InnerEnum> getMapOfEnumString() {
+  public java.util.Map<String, InnerEnum> getMapOfEnumString() {
     return mapOfEnumString;
   }
 
-  public void setMapOfEnumString(Map<String, InnerEnum> mapOfEnumString) {
+  public void setMapOfEnumString(java.util.Map<String, InnerEnum> mapOfEnumString) {
     this.mapOfEnumString = mapOfEnumString;
   }
 
-  public MapTest mapOfEnumString(Map<String, InnerEnum> mapOfEnumString) {
+  public MapTest mapOfEnumString(java.util.Map<String, InnerEnum> mapOfEnumString) {
     this.mapOfEnumString = mapOfEnumString;
     return this;
   }
@@ -109,15 +107,15 @@ UPPER(String.valueOf("UPPER")), LOWER(String.valueOf("lower"));
    * @return directMap
   **/
   @JsonProperty("direct_map")
-  public Map<String, Boolean> getDirectMap() {
+  public java.util.Map<String, Boolean> getDirectMap() {
     return directMap;
   }
 
-  public void setDirectMap(Map<String, Boolean> directMap) {
+  public void setDirectMap(java.util.Map<String, Boolean> directMap) {
     this.directMap = directMap;
   }
 
-  public MapTest directMap(Map<String, Boolean> directMap) {
+  public MapTest directMap(java.util.Map<String, Boolean> directMap) {
     this.directMap = directMap;
     return this;
   }
@@ -132,15 +130,15 @@ UPPER(String.valueOf("UPPER")), LOWER(String.valueOf("lower"));
    * @return indirectMap
   **/
   @JsonProperty("indirect_map")
-  public Map<String, Boolean> getIndirectMap() {
+  public java.util.Map<String, Boolean> getIndirectMap() {
     return indirectMap;
   }
 
-  public void setIndirectMap(Map<String, Boolean> indirectMap) {
+  public void setIndirectMap(java.util.Map<String, Boolean> indirectMap) {
     this.indirectMap = indirectMap;
   }
 
-  public MapTest indirectMap(Map<String, Boolean> indirectMap) {
+  public MapTest indirectMap(java.util.Map<String, Boolean> indirectMap) {
     this.indirectMap = indirectMap;
     return this;
   }

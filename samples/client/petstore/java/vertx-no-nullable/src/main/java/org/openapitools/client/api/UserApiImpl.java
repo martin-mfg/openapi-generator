@@ -95,7 +95,7 @@ public class UserApiImpl implements UserApi {
         * @param body List of user object (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void createUsersWithArrayInput(List<User> body, Handler<AsyncResult<Void>> resultHandler) {
+    public void createUsersWithArrayInput(java.util.List<User> body, Handler<AsyncResult<Void>> resultHandler) {
         createUsersWithArrayInput(body, null, resultHandler);
     }
 
@@ -106,7 +106,7 @@ public class UserApiImpl implements UserApi {
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void createUsersWithArrayInput(List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void createUsersWithArrayInput(java.util.List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         Object localVarBody = body;
         
         // verify the required parameter 'body' is set
@@ -143,7 +143,7 @@ public class UserApiImpl implements UserApi {
         * @param body List of user object (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void createUsersWithListInput(List<User> body, Handler<AsyncResult<Void>> resultHandler) {
+    public void createUsersWithListInput(java.util.List<User> body, Handler<AsyncResult<Void>> resultHandler) {
         createUsersWithListInput(body, null, resultHandler);
     }
 
@@ -154,7 +154,7 @@ public class UserApiImpl implements UserApi {
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void createUsersWithListInput(List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void createUsersWithListInput(java.util.List<User> body, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         Object localVarBody = body;
         
         // verify the required parameter 'body' is set

@@ -5,7 +5,6 @@ import apimodels.Client;
 import apimodels.FileSchemaTestClass;
 import java.io.InputStream;
 import java.time.LocalDate;
-import java.util.Map;
 import java.time.OffsetDateTime;
 import apimodels.OuterComposite;
 import apimodels.User;
@@ -274,7 +273,7 @@ public class FakeApiController extends Controller {
     public Result testEnumParameters(Http.Request request) throws Exception {
         String[] enumQueryStringArrayArray = request.queryString().get("enum_query_string_array");
         List<String> enumQueryStringArrayList = OpenAPIUtils.parametersToList("csv", enumQueryStringArrayArray);
-        List<String> enumQueryStringArray = new ArrayList<>();
+        java.util.List<String> enumQueryStringArray = new ArrayList<>();
         for (String curParam : enumQueryStringArrayList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -304,7 +303,7 @@ public class FakeApiController extends Controller {
         }
         String[] enumFormStringArrayArray = request.body().asMultipartFormData().asFormUrlEncoded().get("enum_form_string_array");
         List<String> enumFormStringArrayList = OpenAPIUtils.parametersToList("csv", enumFormStringArrayArray);
-        List<String> enumFormStringArray = new ArrayList<>();
+        java.util.List<String> enumFormStringArray = new ArrayList<>();
         for (String curParam : enumFormStringArrayList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -320,7 +319,7 @@ public class FakeApiController extends Controller {
         }
         String[] enumHeaderStringArrayArray = request.getHeaders().getAll("enum_header_string_array").toArray(new String[0]);
         List<String> enumHeaderStringArrayList = OpenAPIUtils.parametersToList("csv", enumHeaderStringArrayArray);
-        List<String> enumHeaderStringArray = new ArrayList<>();
+        java.util.List<String> enumHeaderStringArray = new ArrayList<>();
         for (String curParam : enumHeaderStringArrayList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -387,9 +386,9 @@ public class FakeApiController extends Controller {
     @ApiAction
     public Result testInlineAdditionalProperties(Http.Request request) throws Exception {
         JsonNode nodeparam = request.body().asJson();
-        Map<String, String> param;
+        java.util.Map<String, String> param;
         if (nodeparam != null) {
-            param = mapper.readValue(nodeparam.toString(), new TypeReference<Map<String, String>>(){});
+            param = mapper.readValue(nodeparam.toString(), new TypeReference<java.util.Map<String, String>>(){});
             if (configuration.getBoolean("useInputBeanValidation")) {
                 for (Map.Entry<String, String> entry : param.entrySet()) {
                     OpenAPIUtils.validate(entry.getValue());
@@ -427,7 +426,7 @@ public class FakeApiController extends Controller {
             throw new IllegalArgumentException("'pipe' parameter is required");
         }
         List<String> pipeList = OpenAPIUtils.parametersToList("csv", pipeArray);
-        List<String> pipe = new ArrayList<>();
+        java.util.List<String> pipe = new ArrayList<>();
         for (String curParam : pipeList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -439,7 +438,7 @@ public class FakeApiController extends Controller {
             throw new IllegalArgumentException("'ioutil' parameter is required");
         }
         List<String> ioutilList = OpenAPIUtils.parametersToList("csv", ioutilArray);
-        List<String> ioutil = new ArrayList<>();
+        java.util.List<String> ioutil = new ArrayList<>();
         for (String curParam : ioutilList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -451,7 +450,7 @@ public class FakeApiController extends Controller {
             throw new IllegalArgumentException("'http' parameter is required");
         }
         List<String> httpList = OpenAPIUtils.parametersToList("ssv", httpArray);
-        List<String> http = new ArrayList<>();
+        java.util.List<String> http = new ArrayList<>();
         for (String curParam : httpList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -463,7 +462,7 @@ public class FakeApiController extends Controller {
             throw new IllegalArgumentException("'url' parameter is required");
         }
         List<String> urlList = OpenAPIUtils.parametersToList("csv", urlArray);
-        List<String> url = new ArrayList<>();
+        java.util.List<String> url = new ArrayList<>();
         for (String curParam : urlList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation
@@ -475,7 +474,7 @@ public class FakeApiController extends Controller {
             throw new IllegalArgumentException("'context' parameter is required");
         }
         List<String> contextList = OpenAPIUtils.parametersToList("multi", contextArray);
-        List<String> context = new ArrayList<>();
+        java.util.List<String> context = new ArrayList<>();
         for (String curParam : contextList) {
             if (!curParam.isEmpty()) {
                 //noinspection UseBulkOperation

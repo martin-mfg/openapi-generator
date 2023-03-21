@@ -3,15 +3,11 @@ package org.openapitools.server.model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 
 
-public class NullableClass extends HashMap<String, Object>  {
+public class NullableClass extends java.util.HashMap<String, Object>  {
 
     private Integer integerProp;
     private BigDecimal numberProp;
@@ -19,12 +15,12 @@ public class NullableClass extends HashMap<String, Object>  {
     private String stringProp;
     private LocalDate dateProp;
     private OffsetDateTime datetimeProp;
-    private List<Object> arrayNullableProp;
-    private List<Object> arrayAndItemsNullableProp;
-    private List<Object> arrayItemsNullable;
-    private Map<String, Object> objectNullableProp;
-    private Map<String, Object> objectAndItemsNullableProp;
-    private Map<String, Object> objectItemsNullable = new HashMap<>();
+    private java.util.List<Object> arrayNullableProp;
+    private java.util.List<Object> arrayAndItemsNullableProp;
+    private java.util.List<Object> arrayItemsNullable;
+    private java.util.Map<String, Object> objectNullableProp;
+    private java.util.Map<String, Object> objectAndItemsNullableProp;
+    private java.util.Map<String, Object> objectItemsNullable = new java.util.HashMap<>();
 
     /**
      * Default constructor.
@@ -56,12 +52,12 @@ public class NullableClass extends HashMap<String, Object>  {
         String stringProp, 
         LocalDate dateProp, 
         OffsetDateTime datetimeProp, 
-        List<Object> arrayNullableProp, 
-        List<Object> arrayAndItemsNullableProp, 
-        List<Object> arrayItemsNullable, 
-        Map<String, Object> objectNullableProp, 
-        Map<String, Object> objectAndItemsNullableProp, 
-        Map<String, Object> objectItemsNullable
+        java.util.List<Object> arrayNullableProp, 
+        java.util.List<Object> arrayAndItemsNullableProp, 
+        java.util.List<Object> arrayItemsNullable, 
+        java.util.Map<String, Object> objectNullableProp, 
+        java.util.Map<String, Object> objectAndItemsNullableProp, 
+        java.util.Map<String, Object> objectItemsNullable
     ) {
         this.integerProp = integerProp;
         this.numberProp = numberProp;
@@ -155,11 +151,11 @@ public class NullableClass extends HashMap<String, Object>  {
      * Get arrayNullableProp
      * @return arrayNullableProp
      */
-    public List<Object> getArrayNullableProp() {
+    public java.util.List<Object> getArrayNullableProp() {
         return arrayNullableProp;
     }
 
-    public void setArrayNullableProp(List<Object> arrayNullableProp) {
+    public void setArrayNullableProp(java.util.List<Object> arrayNullableProp) {
         this.arrayNullableProp = arrayNullableProp;
     }
 
@@ -167,11 +163,11 @@ public class NullableClass extends HashMap<String, Object>  {
      * Get arrayAndItemsNullableProp
      * @return arrayAndItemsNullableProp
      */
-    public List<Object> getArrayAndItemsNullableProp() {
+    public java.util.List<Object> getArrayAndItemsNullableProp() {
         return arrayAndItemsNullableProp;
     }
 
-    public void setArrayAndItemsNullableProp(List<Object> arrayAndItemsNullableProp) {
+    public void setArrayAndItemsNullableProp(java.util.List<Object> arrayAndItemsNullableProp) {
         this.arrayAndItemsNullableProp = arrayAndItemsNullableProp;
     }
 
@@ -179,11 +175,11 @@ public class NullableClass extends HashMap<String, Object>  {
      * Get arrayItemsNullable
      * @return arrayItemsNullable
      */
-    public List<Object> getArrayItemsNullable() {
+    public java.util.List<Object> getArrayItemsNullable() {
         return arrayItemsNullable;
     }
 
-    public void setArrayItemsNullable(List<Object> arrayItemsNullable) {
+    public void setArrayItemsNullable(java.util.List<Object> arrayItemsNullable) {
         this.arrayItemsNullable = arrayItemsNullable;
     }
 
@@ -191,11 +187,11 @@ public class NullableClass extends HashMap<String, Object>  {
      * Get objectNullableProp
      * @return objectNullableProp
      */
-    public Map<String, Object> getObjectNullableProp() {
+    public java.util.Map<String, Object> getObjectNullableProp() {
         return objectNullableProp;
     }
 
-    public void setObjectNullableProp(Map<String, Object> objectNullableProp) {
+    public void setObjectNullableProp(java.util.Map<String, Object> objectNullableProp) {
         this.objectNullableProp = objectNullableProp;
     }
 
@@ -203,11 +199,11 @@ public class NullableClass extends HashMap<String, Object>  {
      * Get objectAndItemsNullableProp
      * @return objectAndItemsNullableProp
      */
-    public Map<String, Object> getObjectAndItemsNullableProp() {
+    public java.util.Map<String, Object> getObjectAndItemsNullableProp() {
         return objectAndItemsNullableProp;
     }
 
-    public void setObjectAndItemsNullableProp(Map<String, Object> objectAndItemsNullableProp) {
+    public void setObjectAndItemsNullableProp(java.util.Map<String, Object> objectAndItemsNullableProp) {
         this.objectAndItemsNullableProp = objectAndItemsNullableProp;
     }
 
@@ -215,11 +211,11 @@ public class NullableClass extends HashMap<String, Object>  {
      * Get objectItemsNullable
      * @return objectItemsNullable
      */
-    public Map<String, Object> getObjectItemsNullable() {
+    public java.util.Map<String, Object> getObjectItemsNullable() {
         return objectItemsNullable;
     }
 
-    public void setObjectItemsNullable(Map<String, Object> objectItemsNullable) {
+    public void setObjectItemsNullable(java.util.Map<String, Object> objectItemsNullable) {
         this.objectItemsNullable = objectItemsNullable;
     }
 

@@ -8,3 +8,4 @@ additionalProperties:
   documentationProvider: springdoc
   artifactId: spring-cloud-spring-pageable
   hideGenerationTimestamp: 'true'
+  fullJavaUtil: true

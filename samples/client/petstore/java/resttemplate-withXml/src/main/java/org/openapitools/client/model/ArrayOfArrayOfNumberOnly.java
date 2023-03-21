@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
@@ -44,20 +42,20 @@ public class ArrayOfArrayOfNumberOnly {
   public static final String JSON_PROPERTY_ARRAY_ARRAY_NUMBER = "ArrayArrayNumber";
   // Is a container wrapped=false
   // items.name=arrayArrayNumber items.baseName=arrayArrayNumber items.xmlName= items.xmlNamespace=
-  // items.example= items.type=List&lt;BigDecimal&gt;
+  // items.example= items.type=java.util.List&lt;BigDecimal&gt;
   @XmlElement(name = "arrayArrayNumber")
-  private List<List<BigDecimal>> arrayArrayNumber;
+  private java.util.List<java.util.List<BigDecimal>> arrayArrayNumber;
 
   public ArrayOfArrayOfNumberOnly() {
   }
 
-  public ArrayOfArrayOfNumberOnly arrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public ArrayOfArrayOfNumberOnly arrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     
     this.arrayArrayNumber = arrayArrayNumber;
     return this;
   }
 
-  public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(List<BigDecimal> arrayArrayNumberItem) {
+  public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(java.util.List<BigDecimal> arrayArrayNumberItem) {
     if (this.arrayArrayNumber == null) {
       this.arrayArrayNumber = new ArrayList<>();
     }
@@ -73,14 +71,14 @@ public class ArrayOfArrayOfNumberOnly {
   @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<List<BigDecimal>> getArrayArrayNumber() {
+  public java.util.List<java.util.List<BigDecimal>> getArrayArrayNumber() {
     return arrayArrayNumber;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_ARRAY_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public void setArrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     this.arrayArrayNumber = arrayArrayNumber;
   }
 

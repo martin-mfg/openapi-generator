@@ -5,7 +5,6 @@ import org.openapitools.model.Client;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.model.FileSchemaTestClass;
 import java.time.LocalDate;
-import java.util.Map;
 import org.openapitools.model.ModelApiResponse;
 import java.time.OffsetDateTime;
 import org.openapitools.model.OuterComposite;
@@ -234,13 +233,13 @@ public interface FakeApiDelegate {
      *         or Not found (status code 404)
      * @see FakeApi#testEnumParameters
      */
-    default ResponseEntity<Void> testEnumParameters(List<String> enumHeaderStringArray,
+    default ResponseEntity<Void> testEnumParameters(java.util.List<String> enumHeaderStringArray,
         String enumHeaderString,
-        List<String> enumQueryStringArray,
+        java.util.List<String> enumQueryStringArray,
         String enumQueryString,
         Integer enumQueryInteger,
         Double enumQueryDouble,
-        List<String> enumFormStringArray,
+        java.util.List<String> enumFormStringArray,
         String enumFormString) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
@@ -277,7 +276,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#testInlineAdditionalProperties
      */
-    default ResponseEntity<Void> testInlineAdditionalProperties(Map<String, String> requestBody) {
+    default ResponseEntity<Void> testInlineAdditionalProperties(java.util.Map<String, String> requestBody) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
@@ -308,10 +307,10 @@ public interface FakeApiDelegate {
      * @return Success (status code 200)
      * @see FakeApi#testQueryParameterCollectionFormat
      */
-    default ResponseEntity<Void> testQueryParameterCollectionFormat(List<String> pipe,
-        List<String> http,
-        List<String> url,
-        List<String> context) {
+    default ResponseEntity<Void> testQueryParameterCollectionFormat(java.util.List<String> pipe,
+        java.util.List<String> http,
+        java.util.List<String> url,
+        java.util.List<String> context) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

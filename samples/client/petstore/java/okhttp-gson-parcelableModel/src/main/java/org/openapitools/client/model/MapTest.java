@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import android.os.Parcelable;
 import android.os.Parcel;
 
@@ -54,7 +52,7 @@ import org.openapitools.client.JSON;
 public class MapTest implements Parcelable {
   public static final String SERIALIZED_NAME_MAP_MAP_OF_STRING = "map_map_of_string";
   @SerializedName(SERIALIZED_NAME_MAP_MAP_OF_STRING)
-  private Map<String, Map<String, String>> mapMapOfString = new HashMap<>();
+  private java.util.Map<String, java.util.Map<String, String>> mapMapOfString = new java.util.HashMap<>();
 
   /**
    * Gets or Sets inner
@@ -105,28 +103,28 @@ public class MapTest implements Parcelable {
 
   public static final String SERIALIZED_NAME_MAP_OF_ENUM_STRING = "map_of_enum_string";
   @SerializedName(SERIALIZED_NAME_MAP_OF_ENUM_STRING)
-  private Map<String, InnerEnum> mapOfEnumString = new HashMap<>();
+  private java.util.Map<String, InnerEnum> mapOfEnumString = new java.util.HashMap<>();
 
   public static final String SERIALIZED_NAME_DIRECT_MAP = "direct_map";
   @SerializedName(SERIALIZED_NAME_DIRECT_MAP)
-  private Map<String, Boolean> directMap = new HashMap<>();
+  private java.util.Map<String, Boolean> directMap = new java.util.HashMap<>();
 
   public static final String SERIALIZED_NAME_INDIRECT_MAP = "indirect_map";
   @SerializedName(SERIALIZED_NAME_INDIRECT_MAP)
-  private Map<String, Boolean> indirectMap = new HashMap<>();
+  private java.util.Map<String, Boolean> indirectMap = new java.util.HashMap<>();
 
   public MapTest() {
   }
 
-  public MapTest mapMapOfString(Map<String, Map<String, String>> mapMapOfString) {
+  public MapTest mapMapOfString(java.util.Map<String, java.util.Map<String, String>> mapMapOfString) {
     
     this.mapMapOfString = mapMapOfString;
     return this;
   }
 
-  public MapTest putMapMapOfStringItem(String key, Map<String, String> mapMapOfStringItem) {
+  public MapTest putMapMapOfStringItem(String key, java.util.Map<String, String> mapMapOfStringItem) {
     if (this.mapMapOfString == null) {
-      this.mapMapOfString = new HashMap<>();
+      this.mapMapOfString = new java.util.HashMap<>();
     }
     this.mapMapOfString.put(key, mapMapOfStringItem);
     return this;
@@ -138,17 +136,17 @@ public class MapTest implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, Map<String, String>> getMapMapOfString() {
+  public java.util.Map<String, java.util.Map<String, String>> getMapMapOfString() {
     return mapMapOfString;
   }
 
 
-  public void setMapMapOfString(Map<String, Map<String, String>> mapMapOfString) {
+  public void setMapMapOfString(java.util.Map<String, java.util.Map<String, String>> mapMapOfString) {
     this.mapMapOfString = mapMapOfString;
   }
 
 
-  public MapTest mapOfEnumString(Map<String, InnerEnum> mapOfEnumString) {
+  public MapTest mapOfEnumString(java.util.Map<String, InnerEnum> mapOfEnumString) {
     
     this.mapOfEnumString = mapOfEnumString;
     return this;
@@ -156,7 +154,7 @@ public class MapTest implements Parcelable {
 
   public MapTest putMapOfEnumStringItem(String key, InnerEnum mapOfEnumStringItem) {
     if (this.mapOfEnumString == null) {
-      this.mapOfEnumString = new HashMap<>();
+      this.mapOfEnumString = new java.util.HashMap<>();
     }
     this.mapOfEnumString.put(key, mapOfEnumStringItem);
     return this;
@@ -168,17 +166,17 @@ public class MapTest implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, InnerEnum> getMapOfEnumString() {
+  public java.util.Map<String, InnerEnum> getMapOfEnumString() {
     return mapOfEnumString;
   }
 
 
-  public void setMapOfEnumString(Map<String, InnerEnum> mapOfEnumString) {
+  public void setMapOfEnumString(java.util.Map<String, InnerEnum> mapOfEnumString) {
     this.mapOfEnumString = mapOfEnumString;
   }
 
 
-  public MapTest directMap(Map<String, Boolean> directMap) {
+  public MapTest directMap(java.util.Map<String, Boolean> directMap) {
     
     this.directMap = directMap;
     return this;
@@ -186,7 +184,7 @@ public class MapTest implements Parcelable {
 
   public MapTest putDirectMapItem(String key, Boolean directMapItem) {
     if (this.directMap == null) {
-      this.directMap = new HashMap<>();
+      this.directMap = new java.util.HashMap<>();
     }
     this.directMap.put(key, directMapItem);
     return this;
@@ -198,17 +196,17 @@ public class MapTest implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, Boolean> getDirectMap() {
+  public java.util.Map<String, Boolean> getDirectMap() {
     return directMap;
   }
 
 
-  public void setDirectMap(Map<String, Boolean> directMap) {
+  public void setDirectMap(java.util.Map<String, Boolean> directMap) {
     this.directMap = directMap;
   }
 
 
-  public MapTest indirectMap(Map<String, Boolean> indirectMap) {
+  public MapTest indirectMap(java.util.Map<String, Boolean> indirectMap) {
     
     this.indirectMap = indirectMap;
     return this;
@@ -216,7 +214,7 @@ public class MapTest implements Parcelable {
 
   public MapTest putIndirectMapItem(String key, Boolean indirectMapItem) {
     if (this.indirectMap == null) {
-      this.indirectMap = new HashMap<>();
+      this.indirectMap = new java.util.HashMap<>();
     }
     this.indirectMap.put(key, indirectMapItem);
     return this;
@@ -228,12 +226,12 @@ public class MapTest implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public Map<String, Boolean> getIndirectMap() {
+  public java.util.Map<String, Boolean> getIndirectMap() {
     return indirectMap;
   }
 
 
-  public void setIndirectMap(Map<String, Boolean> indirectMap) {
+  public void setIndirectMap(java.util.Map<String, Boolean> indirectMap) {
     this.indirectMap = indirectMap;
   }
 
@@ -291,10 +289,10 @@ public class MapTest implements Parcelable {
   }
 
   MapTest(Parcel in) {
-    mapMapOfString = (Map<String, Map<String, String>>)in.readValue(Map.class.getClassLoader());
-    mapOfEnumString = (Map<String, InnerEnum>)in.readValue(null);
-    directMap = (Map<String, Boolean>)in.readValue(null);
-    indirectMap = (Map<String, Boolean>)in.readValue(null);
+    mapMapOfString = (java.util.Map<String, java.util.Map<String, String>>)in.readValue(java.util.Map.class.getClassLoader());
+    mapOfEnumString = (java.util.Map<String, InnerEnum>)in.readValue(null);
+    directMap = (java.util.Map<String, Boolean>)in.readValue(null);
+    indirectMap = (java.util.Map<String, Boolean>)in.readValue(null);
   }
 
   public int describeContents() {

@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 <a name="findPetsByStatus"></a>
 # **findPetsByStatus**
 ```java
-Mono<List<Pet>> PetController.findPetsByStatus(status)
+Mono<java.util.List<Pet>> PetController.findPetsByStatus(status)
 ```
 
 Finds Pets by status
@@ -77,10 +77,10 @@ Multiple status values can be provided with comma separated strings
 ### Parameters
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**status** | [**List&lt;String&gt;**](../../docs/models/String.md) | Status values that need to be considered for filter | [enum: `available`, `pending`, `sold`]
+**status** | [**java.util.List&lt;String&gt;**](../../docs/models/String.md) | Status values that need to be considered for filter | [enum: `available`, `pending`, `sold`]
 
 ### Return type
-[**List&lt;Pet&gt;**](../../docs/models/Pet.md)
+[**java.util.List&lt;Pet&gt;**](../../docs/models/Pet.md)
 
 ### Authorization
 * **petstore_auth**, scopes: `read:pets`
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 <a name="findPetsByTags"></a>
 # **findPetsByTags**
 ```java
-Mono<List<Pet>> PetController.findPetsByTags(tags)
+Mono<java.util.List<Pet>> PetController.findPetsByTags(tags)
 ```
 
 Finds Pets by tags
@@ -102,10 +102,10 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 ### Parameters
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-**tags** | [**List&lt;String&gt;**](../../docs/models/String.md) | Tags to filter by |
+**tags** | [**java.util.List&lt;String&gt;**](../../docs/models/String.md) | Tags to filter by |
 
 ### Return type
-[**List&lt;Pet&gt;**](../../docs/models/Pet.md)
+[**java.util.List&lt;Pet&gt;**](../../docs/models/Pet.md)
 
 ### Authorization
 * **petstore_auth**, scopes: `read:pets`

@@ -6,3 +6,4 @@ additionalProperties:
   hideGenerationTimestamp: "true"
   serverPort: "8082"
   implicitHeadersRegex: (api_key|enum_header_string)
+  fullJavaUtil: true

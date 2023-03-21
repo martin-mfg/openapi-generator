@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 import javax.validation.constraints.*;
 import io.swagger.annotations.*;
 
@@ -17,7 +16,7 @@ public class Order   {
   private Long id;
   private Long petId;
   private Integer quantity;
-  private Date shipDate;
+  private java.util.Date shipDate;
 
   /**
    * Order Status
@@ -85,10 +84,10 @@ public class Order   {
   
   @ApiModelProperty(value = "")
   @JsonProperty("shipDate")
-  public Date getShipDate() {
+  public java.util.Date getShipDate() {
     return shipDate;
   }
-  public void setShipDate(Date shipDate) {
+  public void setShipDate(java.util.Date shipDate) {
     this.shipDate = shipDate;
   }
 

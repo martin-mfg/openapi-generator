@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import apimodels.User;
 
@@ -20,12 +19,12 @@ public class UserApiControllerImp extends UserApiControllerImpInterface {
     }
 
     @Override
-    public void createUsersWithArrayInput(Http.Request request, List<User> body)  {
+    public void createUsersWithArrayInput(Http.Request request, java.util.List<User> body)  {
         //Do your magic!!!
     }
 
     @Override
-    public void createUsersWithListInput(Http.Request request, List<User> body)  {
+    public void createUsersWithListInput(Http.Request request, java.util.List<User> body)  {
         //Do your magic!!!
     }
 

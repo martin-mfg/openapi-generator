@@ -6,13 +6,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import org.openapitools.model.CategoryDto;
 import org.openapitools.model.TagDto;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -39,10 +34,10 @@ public class PetDto {
   private String name;
 
   @Valid
-  private Set<String> photoUrls = new LinkedHashSet<>();
+  private java.util.Set<String> photoUrls = new java.util.LinkedHashSet<>();
 
   @Valid
-  private List<@Valid TagDto> tags;
+  private java.util.List<@Valid TagDto> tags;
 
   /**
    * pet status in the store
@@ -85,7 +80,7 @@ public class PetDto {
 
   /**
    * Default constructor
-   * @deprecated Use {@link PetDto#PetDto(String, Set<String>)}
+   * @deprecated Use {@link PetDto#PetDto(String, java.util.Set<String>)}
    */
   @Deprecated
   public PetDto() {
@@ -95,7 +90,7 @@ public class PetDto {
   /**
    * Constructor with only required parameters
    */
-  public PetDto(String name, Set<String> photoUrls) {
+  public PetDto(String name, java.util.Set<String> photoUrls) {
     this.name = name;
     this.photoUrls = photoUrls;
   }
@@ -160,14 +155,14 @@ public class PetDto {
     this.name = name;
   }
 
-  public PetDto photoUrls(Set<String> photoUrls) {
+  public PetDto photoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
 
   public PetDto addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new LinkedHashSet<>();
+      this.photoUrls = new java.util.LinkedHashSet<>();
     }
     this.photoUrls.add(photoUrlsItem);
     return this;
@@ -180,16 +175,15 @@ public class PetDto {
   @NotNull 
   @ApiModelProperty(required = true, value = "")
   @JsonProperty("photoUrls")
-  public Set<String> getPhotoUrls() {
+  public java.util.Set<String> getPhotoUrls() {
     return photoUrls;
   }
 
-  @JsonDeserialize(as = LinkedHashSet.class)
-  public void setPhotoUrls(Set<String> photoUrls) {
+  public void setPhotoUrls(java.util.Set<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
-  public PetDto tags(List<@Valid TagDto> tags) {
+  public PetDto tags(java.util.List<@Valid TagDto> tags) {
     this.tags = tags;
     return this;
   }
@@ -209,11 +203,11 @@ public class PetDto {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("tags")
-  public List<@Valid TagDto> getTags() {
+  public java.util.List<@Valid TagDto> getTags() {
     return tags;
   }
 
-  public void setTags(List<@Valid TagDto> tags) {
+  public void setTags(java.util.List<@Valid TagDto> tags) {
     this.tags = tags;
   }
 

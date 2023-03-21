@@ -10,12 +10,6 @@ import javax.ws.rs.core.GenericType;
 
 import org.openapitools.client.model.FooGetDefaultResponse;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DefaultApi {
   private ApiClient apiClient;

@@ -7,7 +7,6 @@ package org.openapitools.api;
 
 import org.openapitools.model.ApiResponseDto;
 import org.openapitools.model.PetDto;
-import java.util.Set;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -140,7 +139,7 @@ public interface PetApi {
         produces = { "application/xml", "application/json" }
     )
     default ResponseEntity<List<PetDto>> findPetsByStatus(
-        @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) List<String> status
+        @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) java.util.List<String> status
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
@@ -195,7 +194,7 @@ public interface PetApi {
         produces = { "application/xml", "application/json" }
     )
     default ResponseEntity<Set<PetDto>> findPetsByTags(
-        @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) Set<String> tags
+        @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) java.util.Set<String> tags
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {

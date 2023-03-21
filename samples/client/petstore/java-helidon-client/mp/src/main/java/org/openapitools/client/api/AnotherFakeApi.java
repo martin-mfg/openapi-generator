@@ -26,6 +26,8 @@ import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import org.openapitools.client.model.Client;
+import org.openapitools.client.model.List;
+import org.openapitools.client.model.Map;
 
 /**
  * OpenAPI Petstore

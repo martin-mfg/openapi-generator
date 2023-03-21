@@ -20,11 +20,6 @@ import org.openapitools.client.model.OuterComposite;
 import org.openapitools.client.model.User;
 import org.openapitools.client.model.XmlItem;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public interface FakeApi {
   /**
@@ -169,7 +164,7 @@ public interface FakeApi {
   @retrofit2.http.FormUrlEncoded
   @GET("fake")
   Completable testEnumParameters(
-    @retrofit2.http.Header("enum_header_string_array") List<String> enumHeaderStringArray, @retrofit2.http.Header("enum_header_string") String enumHeaderString, @retrofit2.http.Query("enum_query_string_array") CSVParams enumQueryStringArray, @retrofit2.http.Query("enum_query_string") String enumQueryString, @retrofit2.http.Query("enum_query_integer") Integer enumQueryInteger, @retrofit2.http.Query("enum_query_double") Double enumQueryDouble, @retrofit2.http.Field("enum_form_string_array") List<String> enumFormStringArray, @retrofit2.http.Field("enum_form_string") String enumFormString
+    @retrofit2.http.Header("enum_header_string_array") java.util.List<String> enumHeaderStringArray, @retrofit2.http.Header("enum_header_string") String enumHeaderString, @retrofit2.http.Query("enum_query_string_array") CSVParams enumQueryStringArray, @retrofit2.http.Query("enum_query_string") String enumQueryString, @retrofit2.http.Query("enum_query_integer") Integer enumQueryInteger, @retrofit2.http.Query("enum_query_double") Double enumQueryDouble, @retrofit2.http.Field("enum_form_string_array") java.util.List<String> enumFormStringArray, @retrofit2.http.Field("enum_form_string") String enumFormString
   );
 
   /**
@@ -199,7 +194,7 @@ public interface FakeApi {
   })
   @POST("fake/inline-additionalProperties")
   Completable testInlineAdditionalProperties(
-    @retrofit2.http.Body Map<String, String> param
+    @retrofit2.http.Body java.util.Map<String, String> param
   );
 
   /**
@@ -227,7 +222,7 @@ public interface FakeApi {
    */
   @PUT("fake/test-query-parameters")
   Completable testQueryParameterCollectionFormat(
-    @retrofit2.http.Query("pipe") CSVParams pipe, @retrofit2.http.Query("ioutil") CSVParams ioutil, @retrofit2.http.Query("http") SSVParams http, @retrofit2.http.Query("url") CSVParams url, @retrofit2.http.Query("context") List<String> context
+    @retrofit2.http.Query("pipe") CSVParams pipe, @retrofit2.http.Query("ioutil") CSVParams ioutil, @retrofit2.http.Query("http") SSVParams http, @retrofit2.http.Query("url") CSVParams url, @retrofit2.http.Query("context") java.util.List<String> context
   );
 
 }

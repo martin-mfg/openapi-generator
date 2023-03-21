@@ -1,14 +1,12 @@
 package org.openapitools.server.model;
 
-import java.util.HashMap;
-import java.util.Map;
 
 
 
 public class AdditionalPropertiesClass   {
 
-    private Map<String, String> mapProperty = new HashMap<>();
-    private Map<String, Map<String, String>> mapOfMapProperty = new HashMap<>();
+    private java.util.Map<String, String> mapProperty = new java.util.HashMap<>();
+    private java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty = new java.util.HashMap<>();
 
     /**
      * Default constructor.
@@ -24,8 +22,8 @@ public class AdditionalPropertiesClass   {
      * @param mapOfMapProperty mapOfMapProperty
      */
     public AdditionalPropertiesClass(
-        Map<String, String> mapProperty, 
-        Map<String, Map<String, String>> mapOfMapProperty
+        java.util.Map<String, String> mapProperty, 
+        java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty
     ) {
         this.mapProperty = mapProperty;
         this.mapOfMapProperty = mapOfMapProperty;
@@ -37,11 +35,11 @@ public class AdditionalPropertiesClass   {
      * Get mapProperty
      * @return mapProperty
      */
-    public Map<String, String> getMapProperty() {
+    public java.util.Map<String, String> getMapProperty() {
         return mapProperty;
     }
 
-    public void setMapProperty(Map<String, String> mapProperty) {
+    public void setMapProperty(java.util.Map<String, String> mapProperty) {
         this.mapProperty = mapProperty;
     }
 
@@ -49,11 +47,11 @@ public class AdditionalPropertiesClass   {
      * Get mapOfMapProperty
      * @return mapOfMapProperty
      */
-    public Map<String, Map<String, String>> getMapOfMapProperty() {
+    public java.util.Map<String, java.util.Map<String, String>> getMapOfMapProperty() {
         return mapOfMapProperty;
     }
 
-    public void setMapOfMapProperty(Map<String, Map<String, String>> mapOfMapProperty) {
+    public void setMapOfMapProperty(java.util.Map<String, java.util.Map<String, String>> mapOfMapProperty) {
         this.mapOfMapProperty = mapOfMapProperty;
     }
 

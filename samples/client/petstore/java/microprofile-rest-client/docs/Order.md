@@ -11,7 +11,7 @@ An order for a pets from the pet store
 |**id** | **Long** |  |  [optional] |
 |**petId** | **Long** |  |  [optional] |
 |**quantity** | **Integer** |  |  [optional] |
-|**shipDate** | **Date** |  |  [optional] |
+|**shipDate** | **java.util.Date** |  |  [optional] |
 |**status** | [**StatusEnum**](#StatusEnum) | Order Status |  [optional] |
 |**complete** | **Boolean** |  |  [optional] |
 

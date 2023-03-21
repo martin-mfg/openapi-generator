@@ -3,12 +3,11 @@ package org.openapitools.api.impl;
 import org.openapitools.api.*;
 import java.math.BigDecimal;
 import org.openapitools.model.Client;
-import java.util.Date;
+import org.openapitools.model.Date;
 import org.openapitools.model.EnumClass;
 import java.io.File;
 import org.openapitools.model.FileSchemaTestClass;
 import org.openapitools.model.HealthCheckResult;
-import java.util.Map;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.OuterComposite;
 import org.openapitools.model.OuterObjectWithEnumProperty;
@@ -83,12 +82,12 @@ public class FakeApiServiceImpl extends FakeApiService {
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response testEndpointParameters(BigDecimal number, Double _double, String patternWithoutDelimiter, byte[] _byte, Integer integer, Integer int32, Long int64, Float _float, String string, FormDataBodyPart binaryBodypart, Date date, Date dateTime, String password, String paramCallback, SecurityContext securityContext) throws NotFoundException {
+    public Response testEndpointParameters(BigDecimal number, Double _double, String patternWithoutDelimiter, byte[] _byte, Integer integer, Integer int32, Long int64, Float _float, String string, FormDataBodyPart binaryBodypart, Date date, java.util.Date dateTime, String password, String paramCallback, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<EnumClass> enumQueryModelArray, List<String> enumFormStringArray, String enumFormString, SecurityContext securityContext) throws NotFoundException {
+    public Response testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<EnumClass> enumQueryModelArray, java.util.List<String> enumFormStringArray, String enumFormString, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
@@ -98,7 +97,7 @@ public class FakeApiServiceImpl extends FakeApiService {
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response testInlineAdditionalProperties(Map<String, String> requestBody, SecurityContext securityContext) throws NotFoundException {
+    public Response testInlineAdditionalProperties(java.util.Map<String, String> requestBody, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
@@ -108,7 +107,7 @@ public class FakeApiServiceImpl extends FakeApiService {
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }
     @Override
-    public Response testQueryParameterCollectionFormat( @NotNull List<String> pipe,  @NotNull List<String> ioutil,  @NotNull List<String> http,  @NotNull List<String> url,  @NotNull List<String> context,  @NotNull String allowEmpty, Map<String, String> language, SecurityContext securityContext) throws NotFoundException {
+    public Response testQueryParameterCollectionFormat( @NotNull java.util.List<String> pipe,  @NotNull java.util.List<String> ioutil,  @NotNull java.util.List<String> http,  @NotNull java.util.List<String> url,  @NotNull java.util.List<String> context,  @NotNull String allowEmpty, java.util.Map<String, String> language, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }

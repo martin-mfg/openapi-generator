@@ -4,12 +4,6 @@ import org.openapitools.client.ApiClient;
 
 import org.openapitools.client.model.Order;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -123,7 +117,7 @@ public class StoreApi {
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
      * <p><b>200</b> - successful operation
-     * @return Map&lt;String, Integer&gt;
+     * @return java.util.Map&lt;String, Integer&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
     private ResponseSpec getInventoryRequestCreation() throws WebClientResponseException {
@@ -145,7 +139,7 @@ public class StoreApi {
 
         String[] localVarAuthNames = new String[] { "api_key" };
 
-        ParameterizedTypeReference<Map<String, Integer>> localVarReturnType = new ParameterizedTypeReference<Map<String, Integer>>() {};
+        ParameterizedTypeReference<java.util.Map<String, Integer>> localVarReturnType = new ParameterizedTypeReference<java.util.Map<String, Integer>>() {};
         return apiClient.invokeAPI("/store/inventory", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     }
 
@@ -153,11 +147,11 @@ public class StoreApi {
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
      * <p><b>200</b> - successful operation
-     * @return Map&lt;String, Integer&gt;
+     * @return java.util.Map&lt;String, Integer&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Map<String, Integer>> getInventory() throws WebClientResponseException {
-        ParameterizedTypeReference<Map<String, Integer>> localVarReturnType = new ParameterizedTypeReference<Map<String, Integer>>() {};
+    public Mono<java.util.Map<String, Integer>> getInventory() throws WebClientResponseException {
+        ParameterizedTypeReference<java.util.Map<String, Integer>> localVarReturnType = new ParameterizedTypeReference<java.util.Map<String, Integer>>() {};
         return getInventoryRequestCreation().bodyToMono(localVarReturnType);
     }
 
@@ -165,11 +159,11 @@ public class StoreApi {
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
      * <p><b>200</b> - successful operation
-     * @return ResponseEntity&lt;Map&lt;String, Integer&gt;&gt;
+     * @return ResponseEntity&lt;java.util.Map&lt;String, Integer&gt;&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Map<String, Integer>>> getInventoryWithHttpInfo() throws WebClientResponseException {
-        ParameterizedTypeReference<Map<String, Integer>> localVarReturnType = new ParameterizedTypeReference<Map<String, Integer>>() {};
+    public Mono<ResponseEntity<java.util.Map<String, Integer>>> getInventoryWithHttpInfo() throws WebClientResponseException {
+        ParameterizedTypeReference<java.util.Map<String, Integer>> localVarReturnType = new ParameterizedTypeReference<java.util.Map<String, Integer>>() {};
         return getInventoryRequestCreation().toEntity(localVarReturnType);
     }
 

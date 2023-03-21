@@ -23,15 +23,8 @@ import org.openapitools.client.Pair;
 import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringJoiner;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PetApi {
@@ -84,13 +77,13 @@ public class PetApi {
     // create path and map variables
     String localVarPath = "/pet";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -158,13 +151,13 @@ public class PetApi {
     String localVarPath = "/pet/{petId}"
       .replaceAll("\\{" + "petId" + "\\}", apiClient.escapeString(petId.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (apiKey != null)
       localVarHeaderParams.put("api_key", apiClient.parameterToString(apiKey));
@@ -206,10 +199,10 @@ public class PetApi {
    * Finds Pets by status
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
-   * @return List&lt;Pet&gt;
+   * @return java.util.List&lt;Pet&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<Pet> findPetsByStatus(List<String> status) throws ApiException {
+  public java.util.List<Pet> findPetsByStatus(java.util.List<String> status) throws ApiException {
     return this.findPetsByStatus(status, Collections.emptyMap());
   }
 
@@ -219,10 +212,10 @@ public class PetApi {
    * Multiple status values can be provided with comma separated strings
    * @param status Status values that need to be considered for filter (required)
    * @param additionalHeaders additionalHeaders for this call
-   * @return List&lt;Pet&gt;
+   * @return java.util.List&lt;Pet&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<Pet> findPetsByStatus(List<String> status, Map<String, String> additionalHeaders) throws ApiException {
+  public java.util.List<Pet> findPetsByStatus(java.util.List<String> status, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'status' is set
@@ -233,13 +226,13 @@ public class PetApi {
     // create path and map variables
     String localVarPath = "/pet/findByStatus";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "status", status));
     
@@ -259,7 +252,7 @@ public class PetApi {
 
     String[] localVarAuthNames = new String[] { "petstore_auth" };
 
-    TypeReference<List<Pet>> localVarReturnType = new TypeReference<List<Pet>>() {};
+    TypeReference<java.util.List<Pet>> localVarReturnType = new TypeReference<java.util.List<Pet>>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "GET",
@@ -281,12 +274,12 @@ public class PetApi {
    * Finds Pets by tags
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
-   * @return Set&lt;Pet&gt;
+   * @return java.util.Set&lt;Pet&gt;
    * @throws ApiException if fails to make API call
    * @deprecated
    */
   @Deprecated
-  public Set<Pet> findPetsByTags(Set<String> tags) throws ApiException {
+  public java.util.Set<Pet> findPetsByTags(java.util.Set<String> tags) throws ApiException {
     return this.findPetsByTags(tags, Collections.emptyMap());
   }
 
@@ -296,12 +289,12 @@ public class PetApi {
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    * @param tags Tags to filter by (required)
    * @param additionalHeaders additionalHeaders for this call
-   * @return Set&lt;Pet&gt;
+   * @return java.util.Set&lt;Pet&gt;
    * @throws ApiException if fails to make API call
    * @deprecated
    */
   @Deprecated
-  public Set<Pet> findPetsByTags(Set<String> tags, Map<String, String> additionalHeaders) throws ApiException {
+  public java.util.Set<Pet> findPetsByTags(java.util.Set<String> tags, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'tags' is set
@@ -312,13 +305,13 @@ public class PetApi {
     // create path and map variables
     String localVarPath = "/pet/findByTags";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "tags", tags));
     
@@ -338,7 +331,7 @@ public class PetApi {
 
     String[] localVarAuthNames = new String[] { "petstore_auth" };
 
-    TypeReference<Set<Pet>> localVarReturnType = new TypeReference<Set<Pet>>() {};
+    TypeReference<java.util.Set<Pet>> localVarReturnType = new TypeReference<java.util.Set<Pet>>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "GET",
@@ -388,13 +381,13 @@ public class PetApi {
     String localVarPath = "/pet/{petId}"
       .replaceAll("\\{" + "petId" + "\\}", apiClient.escapeString(petId.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -460,13 +453,13 @@ public class PetApi {
     // create path and map variables
     String localVarPath = "/pet";
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -536,13 +529,13 @@ public class PetApi {
     String localVarPath = "/pet/{petId}"
       .replaceAll("\\{" + "petId" + "\\}", apiClient.escapeString(petId.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -618,13 +611,13 @@ if (status != null)
     String localVarPath = "/pet/{petId}/uploadImage"
       .replaceAll("\\{" + "petId" + "\\}", apiClient.escapeString(petId.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);
@@ -706,13 +699,13 @@ if (_file != null)
     String localVarPath = "/fake/{petId}/uploadImageWithRequiredFile"
       .replaceAll("\\{" + "petId" + "\\}", apiClient.escapeString(petId.toString()));
 
-    StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
+    java.util.StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
     localVarHeaderParams.putAll(additionalHeaders);

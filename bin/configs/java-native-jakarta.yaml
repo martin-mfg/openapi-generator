@@ -7,3 +7,4 @@ additionalProperties:
   artifactId: petstore-native-jakarta
   hideGenerationTimestamp: "true"
   useJakartaEe: "true"
+  fullJavaUtil: true

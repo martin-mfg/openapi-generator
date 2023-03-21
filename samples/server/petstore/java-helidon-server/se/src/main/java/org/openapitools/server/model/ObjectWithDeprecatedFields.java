@@ -1,8 +1,6 @@
 package org.openapitools.server.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.server.model.DeprecatedObject;
 
 
@@ -12,7 +10,7 @@ public class ObjectWithDeprecatedFields   {
     private String uuid;
     private BigDecimal id;
     private DeprecatedObject deprecatedRef;
-    private List<String> bars;
+    private java.util.List<String> bars;
 
     /**
      * Default constructor.
@@ -33,7 +31,7 @@ public class ObjectWithDeprecatedFields   {
         String uuid, 
         BigDecimal id, 
         DeprecatedObject deprecatedRef, 
-        List<String> bars
+        java.util.List<String> bars
     ) {
         this.uuid = uuid;
         this.id = id;
@@ -83,11 +81,11 @@ public class ObjectWithDeprecatedFields   {
      * Get bars
      * @return bars
      */
-    public List<String> getBars() {
+    public java.util.List<String> getBars() {
         return bars;
     }
 
-    public void setBars(List<String> bars) {
+    public void setBars(java.util.List<String> bars) {
         this.bars = bars;
     }
 

@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.time.OffsetDateTime;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.client.model.Animal;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -39,18 +36,18 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MixedPropertiesAndAdditionalPropertiesClass {
   public static final String JSON_PROPERTY_UUID = "uuid";
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   public static final String JSON_PROPERTY_DATE_TIME = "dateTime";
   private OffsetDateTime dateTime;
 
   public static final String JSON_PROPERTY_MAP = "map";
-  private Map<String, Animal> map;
+  private java.util.Map<String, Animal> map;
 
   public MixedPropertiesAndAdditionalPropertiesClass() {
   }
 
-  public MixedPropertiesAndAdditionalPropertiesClass uuid(UUID uuid) {
+  public MixedPropertiesAndAdditionalPropertiesClass uuid(java.util.UUID uuid) {
     
     this.uuid = uuid;
     return this;
@@ -64,14 +61,14 @@ public class MixedPropertiesAndAdditionalPropertiesClass {
   @JsonProperty(JSON_PROPERTY_UUID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
 
   @JsonProperty(JSON_PROPERTY_UUID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
@@ -102,7 +99,7 @@ public class MixedPropertiesAndAdditionalPropertiesClass {
   }
 
 
-  public MixedPropertiesAndAdditionalPropertiesClass map(Map<String, Animal> map) {
+  public MixedPropertiesAndAdditionalPropertiesClass map(java.util.Map<String, Animal> map) {
     
     this.map = map;
     return this;
@@ -124,14 +121,14 @@ public class MixedPropertiesAndAdditionalPropertiesClass {
   @JsonProperty(JSON_PROPERTY_MAP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Map<String, Animal> getMap() {
+  public java.util.Map<String, Animal> getMap() {
     return map;
   }
 
 
   @JsonProperty(JSON_PROPERTY_MAP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMap(Map<String, Animal> map) {
+  public void setMap(java.util.Map<String, Animal> map) {
     this.map = map;
   }
 

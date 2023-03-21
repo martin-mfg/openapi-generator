@@ -5,7 +5,6 @@ import org.openapitools.model.*;
 
 import org.apache.cxf.jaxrs.ext.multipart.Attachment;
 
-import java.util.List;
 import org.openapitools.model.User;
 
 import java.util.List;
@@ -25,12 +24,12 @@ public class UserApiServiceImpl implements UserApiService {
       return Response.ok().entity("magic!").build();
   }
       @Override
-      public Response createUsersWithArrayInput(List<User> user, SecurityContext securityContext) {
+      public Response createUsersWithArrayInput(java.util.List<User> user, SecurityContext securityContext) {
       // do some magic!
       return Response.ok().entity("magic!").build();
   }
       @Override
-      public Response createUsersWithListInput(List<User> user, SecurityContext securityContext) {
+      public Response createUsersWithListInput(java.util.List<User> user, SecurityContext securityContext) {
       // do some magic!
       return Response.ok().entity("magic!").build();
   }

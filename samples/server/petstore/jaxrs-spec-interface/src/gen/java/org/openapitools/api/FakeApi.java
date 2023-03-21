@@ -2,11 +2,9 @@ package org.openapitools.api;
 
 import java.math.BigDecimal;
 import org.openapitools.model.Client;
-import java.util.Date;
 import java.io.File;
 import org.openapitools.model.FileSchemaTestClass;
 import org.joda.time.LocalDate;
-import java.util.Map;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.OuterComposite;
 import org.openapitools.model.User;
@@ -101,7 +99,7 @@ public interface FakeApi {
     @ApiResponses(value = { 
         @ApiResponse(code = 400, message = "Invalid username supplied", response = Void.class),
         @ApiResponse(code = 404, message = "User not found", response = Void.class) })
-    void testEndpointParameters(@FormParam(value = "number")  BigDecimal number,@FormParam(value = "double")  Double _double,@FormParam(value = "pattern_without_delimiter")  String patternWithoutDelimiter,@FormParam(value = "byte")  byte[] _byte,@FormParam(value = "integer")  Integer integer,@FormParam(value = "int32")  Integer int32,@FormParam(value = "int64")  Long int64,@FormParam(value = "float")  Float _float,@FormParam(value = "string")  String string, @FormParam(value = "binary") InputStream binaryInputStream,@FormParam(value = "date")  LocalDate date,@FormParam(value = "dateTime")  Date dateTime,@FormParam(value = "password")  String password,@FormParam(value = "callback")  String paramCallback);
+    void testEndpointParameters(@FormParam(value = "number")  BigDecimal number,@FormParam(value = "double")  Double _double,@FormParam(value = "pattern_without_delimiter")  String patternWithoutDelimiter,@FormParam(value = "byte")  byte[] _byte,@FormParam(value = "integer")  Integer integer,@FormParam(value = "int32")  Integer int32,@FormParam(value = "int64")  Long int64,@FormParam(value = "float")  Float _float,@FormParam(value = "string")  String string, @FormParam(value = "binary") InputStream binaryInputStream,@FormParam(value = "date")  LocalDate date,@FormParam(value = "dateTime")  java.util.Date dateTime,@FormParam(value = "password")  String password,@FormParam(value = "callback")  String paramCallback);
 
     @GET
     @Consumes({ "application/x-www-form-urlencoded" })
@@ -112,7 +110,7 @@ public interface FakeApi {
     @ApiResponses(value = { 
         @ApiResponse(code = 400, message = "Invalid request", response = Void.class),
         @ApiResponse(code = 404, message = "Not found", response = Void.class) })
-    void testEnumParameters(@HeaderParam("enum_header_string_array")   @ApiParam("Header parameter enum test (string array)") List<String> enumHeaderStringArray,@QueryParam("enum_query_string_array")  @ApiParam("Query parameter enum test (string array)")  List<String> enumQueryStringArray,@QueryParam("enum_query_string") @DefaultValue("-efg")  @ApiParam("Query parameter enum test (string)")  String enumQueryString,@QueryParam("enum_query_integer")  @ApiParam("Query parameter enum test (double)")  Integer enumQueryInteger,@QueryParam("enum_query_double")  @ApiParam("Query parameter enum test (double)")  Double enumQueryDouble,@FormParam(value = "enum_form_string_array")  List<String> enumFormStringArray,@FormParam(value = "enum_form_string")  String enumFormString);
+    void testEnumParameters(@HeaderParam("enum_header_string_array")   @ApiParam("Header parameter enum test (string array)") java.util.List<String> enumHeaderStringArray,@QueryParam("enum_query_string_array")  @ApiParam("Query parameter enum test (string array)")  java.util.List<String> enumQueryStringArray,@QueryParam("enum_query_string") @DefaultValue("-efg")  @ApiParam("Query parameter enum test (string)")  String enumQueryString,@QueryParam("enum_query_integer")  @ApiParam("Query parameter enum test (double)")  Integer enumQueryInteger,@QueryParam("enum_query_double")  @ApiParam("Query parameter enum test (double)")  Double enumQueryDouble,@FormParam(value = "enum_form_string_array")  java.util.List<String> enumFormStringArray,@FormParam(value = "enum_form_string")  String enumFormString);
 
     @DELETE
     @ApiOperation(value = "Fake endpoint to test group parameters (optional)", notes = "Fake endpoint to test group parameters (optional)", tags={ "fake" })
@@ -126,7 +124,7 @@ public interface FakeApi {
     @ApiOperation(value = "test inline additionalProperties", notes = "", tags={ "fake" })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "successful operation", response = Void.class) })
-    void testInlineAdditionalProperties(@Valid @NotNull Map<String, String> param);
+    void testInlineAdditionalProperties(@Valid @NotNull java.util.Map<String, String> param);
 
     @GET
     @Path("/jsonFormData")
@@ -141,7 +139,7 @@ public interface FakeApi {
     @ApiOperation(value = "", notes = "To test the collection format in query parameters", tags={ "fake" })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Success", response = Void.class) })
-    void testQueryParameterCollectionFormat(@QueryParam("pipe") @NotNull   List<String> pipe,@QueryParam("ioutil") @NotNull   List<String> ioutil,@QueryParam("http") @NotNull   List<String> http,@QueryParam("url") @NotNull   List<String> url,@QueryParam("context") @NotNull   List<String> context);
+    void testQueryParameterCollectionFormat(@QueryParam("pipe") @NotNull   java.util.List<String> pipe,@QueryParam("ioutil") @NotNull   java.util.List<String> ioutil,@QueryParam("http") @NotNull   java.util.List<String> http,@QueryParam("url") @NotNull   java.util.List<String> url,@QueryParam("context") @NotNull   java.util.List<String> context);
 
     @POST
     @Path("/{petId}/uploadImageWithRequiredFile")

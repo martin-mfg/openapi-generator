@@ -7,3 +7,4 @@ additionalProperties:
   useRxJava3: "true"
   artifactId: petstore-retrofit2-rx3
   hideGenerationTimestamp: "true"
+  fullJavaUtil: true

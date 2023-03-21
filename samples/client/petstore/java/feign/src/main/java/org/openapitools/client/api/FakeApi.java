@@ -17,10 +17,6 @@ import org.openapitools.client.model.OuterObjectWithEnumProperty;
 import org.openapitools.client.model.Pet;
 import org.openapitools.client.model.User;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import feign.*;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -524,7 +520,7 @@ public interface FakeApi extends ApiClient.Api {
     
     "enum_header_string: {enumHeaderString}"
   })
-  void testEnumParameters(@Param("enumHeaderStringArray") List<String> enumHeaderStringArray, @Param("enumHeaderString") String enumHeaderString, @Param("enumQueryStringArray") List<String> enumQueryStringArray, @Param("enumQueryString") String enumQueryString, @Param("enumQueryInteger") Integer enumQueryInteger, @Param("enumQueryDouble") Double enumQueryDouble, @Param("enumQueryModelArray") List<EnumClass> enumQueryModelArray, @Param("enum_form_string_array") List<String> enumFormStringArray, @Param("enum_form_string") String enumFormString);
+  void testEnumParameters(@Param("enumHeaderStringArray") java.util.List<String> enumHeaderStringArray, @Param("enumHeaderString") String enumHeaderString, @Param("enumQueryStringArray") java.util.List<String> enumQueryStringArray, @Param("enumQueryString") String enumQueryString, @Param("enumQueryInteger") Integer enumQueryInteger, @Param("enumQueryDouble") Double enumQueryDouble, @Param("enumQueryModelArray") java.util.List<EnumClass> enumQueryModelArray, @Param("enum_form_string_array") java.util.List<String> enumFormStringArray, @Param("enum_form_string") String enumFormString);
 
   /**
    * To test enum parameters
@@ -548,7 +544,7 @@ public interface FakeApi extends ApiClient.Api {
     
     "enum_header_string: {enumHeaderString}"
   })
-  ApiResponse<Void> testEnumParametersWithHttpInfo(@Param("enumHeaderStringArray") List<String> enumHeaderStringArray, @Param("enumHeaderString") String enumHeaderString, @Param("enumQueryStringArray") List<String> enumQueryStringArray, @Param("enumQueryString") String enumQueryString, @Param("enumQueryInteger") Integer enumQueryInteger, @Param("enumQueryDouble") Double enumQueryDouble, @Param("enumQueryModelArray") List<EnumClass> enumQueryModelArray, @Param("enum_form_string_array") List<String> enumFormStringArray, @Param("enum_form_string") String enumFormString);
+  ApiResponse<Void> testEnumParametersWithHttpInfo(@Param("enumHeaderStringArray") java.util.List<String> enumHeaderStringArray, @Param("enumHeaderString") String enumHeaderString, @Param("enumQueryStringArray") java.util.List<String> enumQueryStringArray, @Param("enumQueryString") String enumQueryString, @Param("enumQueryInteger") Integer enumQueryInteger, @Param("enumQueryDouble") Double enumQueryDouble, @Param("enumQueryModelArray") java.util.List<EnumClass> enumQueryModelArray, @Param("enum_form_string_array") java.util.List<String> enumFormStringArray, @Param("enum_form_string") String enumFormString);
 
 
   /**
@@ -581,7 +577,7 @@ public interface FakeApi extends ApiClient.Api {
       
       "enum_header_string: {enumHeaderString}"
   })
-  void testEnumParameters(@Param("enumHeaderStringArray") List<String> enumHeaderStringArray, @Param("enumHeaderString") String enumHeaderString, @Param("enum_form_string_array") List<String> enumFormStringArray, @Param("enum_form_string") String enumFormString, @QueryMap(encoded=true) TestEnumParametersQueryParams queryParams);
+  void testEnumParameters(@Param("enumHeaderStringArray") java.util.List<String> enumHeaderStringArray, @Param("enumHeaderString") String enumHeaderString, @Param("enum_form_string_array") java.util.List<String> enumFormStringArray, @Param("enum_form_string") String enumFormString, @QueryMap(encoded=true) TestEnumParametersQueryParams queryParams);
 
   /**
   * To test enum parameters
@@ -610,7 +606,7 @@ public interface FakeApi extends ApiClient.Api {
       
           "enum_header_string: {enumHeaderString}"
       })
-   ApiResponse<Void> testEnumParametersWithHttpInfo(@Param("enumHeaderStringArray") List<String> enumHeaderStringArray, @Param("enumHeaderString") String enumHeaderString, @Param("enum_form_string_array") List<String> enumFormStringArray, @Param("enum_form_string") String enumFormString, @QueryMap(encoded=true) TestEnumParametersQueryParams queryParams);
+   ApiResponse<Void> testEnumParametersWithHttpInfo(@Param("enumHeaderStringArray") java.util.List<String> enumHeaderStringArray, @Param("enumHeaderString") String enumHeaderString, @Param("enum_form_string_array") java.util.List<String> enumFormStringArray, @Param("enum_form_string") String enumFormString, @QueryMap(encoded=true) TestEnumParametersQueryParams queryParams);
 
 
    /**
@@ -618,7 +614,7 @@ public interface FakeApi extends ApiClient.Api {
    * <code>testEnumParameters</code> method in a fluent style.
    */
   public static class TestEnumParametersQueryParams extends HashMap<String, Object> {
-    public TestEnumParametersQueryParams enumQueryStringArray(final List<String> value) {
+    public TestEnumParametersQueryParams enumQueryStringArray(final java.util.List<String> value) {
       put("enum_query_string_array", EncodingUtils.encodeCollection(value, "multi"));
       return this;
     }
@@ -634,7 +630,7 @@ public interface FakeApi extends ApiClient.Api {
       put("enum_query_double", EncodingUtils.encode(value));
       return this;
     }
-    public TestEnumParametersQueryParams enumQueryModelArray(final List<EnumClass> value) {
+    public TestEnumParametersQueryParams enumQueryModelArray(final java.util.List<EnumClass> value) {
       put("enum_query_model_array", EncodingUtils.encodeCollection(value, "multi"));
       return this;
     }
@@ -767,7 +763,7 @@ public interface FakeApi extends ApiClient.Api {
     "Content-Type: application/json",
     "Accept: application/json",
   })
-  void testInlineAdditionalProperties(Map<String, String> requestBody);
+  void testInlineAdditionalProperties(java.util.Map<String, String> requestBody);
 
   /**
    * test inline additionalProperties
@@ -780,7 +776,7 @@ public interface FakeApi extends ApiClient.Api {
     "Content-Type: application/json",
     "Accept: application/json",
   })
-  ApiResponse<Void> testInlineAdditionalPropertiesWithHttpInfo(Map<String, String> requestBody);
+  ApiResponse<Void> testInlineAdditionalPropertiesWithHttpInfo(java.util.Map<String, String> requestBody);
 
 
 
@@ -828,7 +824,7 @@ public interface FakeApi extends ApiClient.Api {
   @Headers({
     "Accept: application/json",
   })
-  void testQueryParameterCollectionFormat(@Param("pipe") List<String> pipe, @Param("ioutil") List<String> ioutil, @Param("http") List<String> http, @Param("url") List<String> url, @Param("context") List<String> context, @Param("allowEmpty") String allowEmpty, @Param("language") Map<String, String> language);
+  void testQueryParameterCollectionFormat(@Param("pipe") java.util.List<String> pipe, @Param("ioutil") java.util.List<String> ioutil, @Param("http") java.util.List<String> http, @Param("url") java.util.List<String> url, @Param("context") java.util.List<String> context, @Param("allowEmpty") String allowEmpty, @Param("language") java.util.Map<String, String> language);
 
   /**
    * 
@@ -846,7 +842,7 @@ public interface FakeApi extends ApiClient.Api {
   @Headers({
     "Accept: application/json",
   })
-  ApiResponse<Void> testQueryParameterCollectionFormatWithHttpInfo(@Param("pipe") List<String> pipe, @Param("ioutil") List<String> ioutil, @Param("http") List<String> http, @Param("url") List<String> url, @Param("context") List<String> context, @Param("allowEmpty") String allowEmpty, @Param("language") Map<String, String> language);
+  ApiResponse<Void> testQueryParameterCollectionFormatWithHttpInfo(@Param("pipe") java.util.List<String> pipe, @Param("ioutil") java.util.List<String> ioutil, @Param("http") java.util.List<String> http, @Param("url") java.util.List<String> url, @Param("context") java.util.List<String> context, @Param("allowEmpty") String allowEmpty, @Param("language") java.util.Map<String, String> language);
 
 
   /**
@@ -904,27 +900,27 @@ public interface FakeApi extends ApiClient.Api {
    * <code>testQueryParameterCollectionFormat</code> method in a fluent style.
    */
   public static class TestQueryParameterCollectionFormatQueryParams extends HashMap<String, Object> {
-    public TestQueryParameterCollectionFormatQueryParams pipe(final List<String> value) {
+    public TestQueryParameterCollectionFormatQueryParams pipe(final java.util.List<String> value) {
       put("pipe", EncodingUtils.encodeCollection(value, "pipes"));
       return this;
     }
-    public TestQueryParameterCollectionFormatQueryParams ioutil(final List<String> value) {
+    public TestQueryParameterCollectionFormatQueryParams ioutil(final java.util.List<String> value) {
       put("ioutil", EncodingUtils.encodeCollection(value, "csv"));
       return this;
     }
-    public TestQueryParameterCollectionFormatQueryParams http(final List<String> value) {
+    public TestQueryParameterCollectionFormatQueryParams http(final java.util.List<String> value) {
       put("http", EncodingUtils.encodeCollection(value, "ssv"));
       return this;
     }
-    public TestQueryParameterCollectionFormatQueryParams url(final List<String> value) {
+    public TestQueryParameterCollectionFormatQueryParams url(final java.util.List<String> value) {
       put("url", EncodingUtils.encodeCollection(value, "csv"));
       return this;
     }
-    public TestQueryParameterCollectionFormatQueryParams context(final List<String> value) {
+    public TestQueryParameterCollectionFormatQueryParams context(final java.util.List<String> value) {
       put("context", EncodingUtils.encodeCollection(value, "multi"));
       return this;
     }
-    public TestQueryParameterCollectionFormatQueryParams language(final Map<String, String> value) {
+    public TestQueryParameterCollectionFormatQueryParams language(final java.util.Map<String, String> value) {
       put("language", EncodingUtils.encode(value));
       return this;
     }

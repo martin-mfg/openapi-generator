@@ -6,8 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
@@ -33,7 +31,7 @@ public class XmlItemDto {
   private Boolean attributeBoolean;
 
   
-  private List<Integer> wrappedArray;
+  private java.util.List<Integer> wrappedArray;
 
   private String nameString;
 
@@ -44,10 +42,10 @@ public class XmlItemDto {
   private Boolean nameBoolean;
 
   
-  private List<Integer> nameArray;
+  private java.util.List<Integer> nameArray;
 
   
-  private List<Integer> nameWrappedArray;
+  private java.util.List<Integer> nameWrappedArray;
 
   private String prefixString;
 
@@ -58,10 +56,10 @@ public class XmlItemDto {
   private Boolean prefixBoolean;
 
   
-  private List<Integer> prefixArray;
+  private java.util.List<Integer> prefixArray;
 
   
-  private List<Integer> prefixWrappedArray;
+  private java.util.List<Integer> prefixWrappedArray;
 
   private String namespaceString;
 
@@ -72,10 +70,10 @@ public class XmlItemDto {
   private Boolean namespaceBoolean;
 
   
-  private List<Integer> namespaceArray;
+  private java.util.List<Integer> namespaceArray;
 
   
-  private List<Integer> namespaceWrappedArray;
+  private java.util.List<Integer> namespaceWrappedArray;
 
   private String prefixNsString;
 
@@ -86,10 +84,10 @@ public class XmlItemDto {
   private Boolean prefixNsBoolean;
 
   
-  private List<Integer> prefixNsArray;
+  private java.util.List<Integer> prefixNsArray;
 
   
-  private List<Integer> prefixNsWrappedArray;
+  private java.util.List<Integer> prefixNsWrappedArray;
 
   public XmlItemDto attributeString(String attributeString) {
     this.attributeString = attributeString;
@@ -167,7 +165,7 @@ public class XmlItemDto {
     this.attributeBoolean = attributeBoolean;
   }
 
-  public XmlItemDto wrappedArray(List<Integer> wrappedArray) {
+  public XmlItemDto wrappedArray(java.util.List<Integer> wrappedArray) {
     this.wrappedArray = wrappedArray;
     return this;
   }
@@ -186,11 +184,11 @@ public class XmlItemDto {
   */
   
   @JsonProperty("wrapped_array")
-  public List<Integer> getWrappedArray() {
+  public java.util.List<Integer> getWrappedArray() {
     return wrappedArray;
   }
 
-  public void setWrappedArray(List<Integer> wrappedArray) {
+  public void setWrappedArray(java.util.List<Integer> wrappedArray) {
     this.wrappedArray = wrappedArray;
   }
 
@@ -270,7 +268,7 @@ public class XmlItemDto {
     this.nameBoolean = nameBoolean;
   }
 
-  public XmlItemDto nameArray(List<Integer> nameArray) {
+  public XmlItemDto nameArray(java.util.List<Integer> nameArray) {
     this.nameArray = nameArray;
     return this;
   }
@@ -289,15 +287,15 @@ public class XmlItemDto {
   */
   
   @JsonProperty("name_array")
-  public List<Integer> getNameArray() {
+  public java.util.List<Integer> getNameArray() {
     return nameArray;
   }
 
-  public void setNameArray(List<Integer> nameArray) {
+  public void setNameArray(java.util.List<Integer> nameArray) {
     this.nameArray = nameArray;
   }
 
-  public XmlItemDto nameWrappedArray(List<Integer> nameWrappedArray) {
+  public XmlItemDto nameWrappedArray(java.util.List<Integer> nameWrappedArray) {
     this.nameWrappedArray = nameWrappedArray;
     return this;
   }
@@ -316,11 +314,11 @@ public class XmlItemDto {
   */
   
   @JsonProperty("name_wrapped_array")
-  public List<Integer> getNameWrappedArray() {
+  public java.util.List<Integer> getNameWrappedArray() {
     return nameWrappedArray;
   }
 
-  public void setNameWrappedArray(List<Integer> nameWrappedArray) {
+  public void setNameWrappedArray(java.util.List<Integer> nameWrappedArray) {
     this.nameWrappedArray = nameWrappedArray;
   }
 
@@ -400,7 +398,7 @@ public class XmlItemDto {
     this.prefixBoolean = prefixBoolean;
   }
 
-  public XmlItemDto prefixArray(List<Integer> prefixArray) {
+  public XmlItemDto prefixArray(java.util.List<Integer> prefixArray) {
     this.prefixArray = prefixArray;
     return this;
   }
@@ -419,15 +417,15 @@ public class XmlItemDto {
   */
   
   @JsonProperty("prefix_array")
-  public List<Integer> getPrefixArray() {
+  public java.util.List<Integer> getPrefixArray() {
     return prefixArray;
   }
 
-  public void setPrefixArray(List<Integer> prefixArray) {
+  public void setPrefixArray(java.util.List<Integer> prefixArray) {
     this.prefixArray = prefixArray;
   }
 
-  public XmlItemDto prefixWrappedArray(List<Integer> prefixWrappedArray) {
+  public XmlItemDto prefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
     this.prefixWrappedArray = prefixWrappedArray;
     return this;
   }
@@ -446,11 +444,11 @@ public class XmlItemDto {
   */
   
   @JsonProperty("prefix_wrapped_array")
-  public List<Integer> getPrefixWrappedArray() {
+  public java.util.List<Integer> getPrefixWrappedArray() {
     return prefixWrappedArray;
   }
 
-  public void setPrefixWrappedArray(List<Integer> prefixWrappedArray) {
+  public void setPrefixWrappedArray(java.util.List<Integer> prefixWrappedArray) {
     this.prefixWrappedArray = prefixWrappedArray;
   }
 
@@ -530,7 +528,7 @@ public class XmlItemDto {
     this.namespaceBoolean = namespaceBoolean;
   }
 
-  public XmlItemDto namespaceArray(List<Integer> namespaceArray) {
+  public XmlItemDto namespaceArray(java.util.List<Integer> namespaceArray) {
     this.namespaceArray = namespaceArray;
     return this;
   }
@@ -549,15 +547,15 @@ public class XmlItemDto {
   */
   
   @JsonProperty("namespace_array")
-  public List<Integer> getNamespaceArray() {
+  public java.util.List<Integer> getNamespaceArray() {
     return namespaceArray;
   }
 
-  public void setNamespaceArray(List<Integer> namespaceArray) {
+  public void setNamespaceArray(java.util.List<Integer> namespaceArray) {
     this.namespaceArray = namespaceArray;
   }
 
-  public XmlItemDto namespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+  public XmlItemDto namespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
     this.namespaceWrappedArray = namespaceWrappedArray;
     return this;
   }
@@ -576,11 +574,11 @@ public class XmlItemDto {
   */
   
   @JsonProperty("namespace_wrapped_array")
-  public List<Integer> getNamespaceWrappedArray() {
+  public java.util.List<Integer> getNamespaceWrappedArray() {
     return namespaceWrappedArray;
   }
 
-  public void setNamespaceWrappedArray(List<Integer> namespaceWrappedArray) {
+  public void setNamespaceWrappedArray(java.util.List<Integer> namespaceWrappedArray) {
     this.namespaceWrappedArray = namespaceWrappedArray;
   }
 
@@ -660,7 +658,7 @@ public class XmlItemDto {
     this.prefixNsBoolean = prefixNsBoolean;
   }
 
-  public XmlItemDto prefixNsArray(List<Integer> prefixNsArray) {
+  public XmlItemDto prefixNsArray(java.util.List<Integer> prefixNsArray) {
     this.prefixNsArray = prefixNsArray;
     return this;
   }
@@ -679,15 +677,15 @@ public class XmlItemDto {
   */
   
   @JsonProperty("prefix_ns_array")
-  public List<Integer> getPrefixNsArray() {
+  public java.util.List<Integer> getPrefixNsArray() {
     return prefixNsArray;
   }
 
-  public void setPrefixNsArray(List<Integer> prefixNsArray) {
+  public void setPrefixNsArray(java.util.List<Integer> prefixNsArray) {
     this.prefixNsArray = prefixNsArray;
   }
 
-  public XmlItemDto prefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+  public XmlItemDto prefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
     this.prefixNsWrappedArray = prefixNsWrappedArray;
     return this;
   }
@@ -706,11 +704,11 @@ public class XmlItemDto {
   */
   
   @JsonProperty("prefix_ns_wrapped_array")
-  public List<Integer> getPrefixNsWrappedArray() {
+  public java.util.List<Integer> getPrefixNsWrappedArray() {
     return prefixNsWrappedArray;
   }
 
-  public void setPrefixNsWrappedArray(List<Integer> prefixNsWrappedArray) {
+  public void setPrefixNsWrappedArray(java.util.List<Integer> prefixNsWrappedArray) {
     this.prefixNsWrappedArray = prefixNsWrappedArray;
   }
 

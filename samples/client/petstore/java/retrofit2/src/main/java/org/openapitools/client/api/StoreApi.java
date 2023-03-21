@@ -11,11 +11,6 @@ import okhttp3.MultipartBody;
 
 import org.openapitools.client.model.Order;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public interface StoreApi {
   /**
@@ -32,10 +27,10 @@ public interface StoreApi {
   /**
    * Returns pet inventories by status
    * Returns a map of status codes to quantities
-   * @return Call&lt;Map&lt;String, Integer&gt;&gt;
+   * @return Call&lt;java.util.Map&lt;String, Integer&gt;&gt;
    */
   @GET("store/inventory")
-  Call<Map<String, Integer>> getInventory();
+  Call<java.util.Map<String, Integer>> getInventory();
     
 
   /**

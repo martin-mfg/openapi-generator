@@ -1,7 +1,5 @@
 package apimodels;
 
-import java.util.HashMap;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
@@ -12,7 +10,7 @@ import javax.validation.constraints.*;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen")
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
-public class AdditionalPropertiesBoolean extends HashMap<String, Boolean>  {
+public class AdditionalPropertiesBoolean extends java.util.HashMap<String, Boolean>  {
   @JsonProperty("name")
   
   private String name;

@@ -15,22 +15,6 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.model.Order;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.common.mapper.TypeRef;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-
-import java.lang.reflect.Type;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 import static io.restassured.http.Method.*;
 
 public class StoreApi {
@@ -155,7 +139,7 @@ public class StoreApi {
      * Returns pet inventories by status
      * Returns a map of status codes to quantities
      *
-     * return Map&lt;String, Integer&gt;
+     * return java.util.Map&lt;String, Integer&gt;
      */
     public static class GetInventoryOper implements Oper {
 
@@ -185,10 +169,10 @@ public class StoreApi {
         /**
          * GET /store/inventory
          * @param handler handler
-         * @return Map&lt;String, Integer&gt;
+         * @return java.util.Map&lt;String, Integer&gt;
          */
-        public Map<String, Integer> executeAs(Function<Response, Response> handler) {
-            TypeRef<Map<String, Integer>> type = new TypeRef<Map<String, Integer>>(){};
+        public java.util.Map<String, Integer> executeAs(Function<Response, Response> handler) {
+            TypeRef<java.util.Map<String, Integer>> type = new TypeRef<java.util.Map<String, Integer>>(){};
             return execute(handler).as(type);
         }
 

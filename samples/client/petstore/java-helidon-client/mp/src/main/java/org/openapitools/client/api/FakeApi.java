@@ -31,7 +31,9 @@ import org.openapitools.client.model.EnumClass;
 import java.io.File;
 import org.openapitools.client.model.FileSchemaTestClass;
 import org.openapitools.client.model.HealthCheckResult;
+import org.openapitools.client.model.List;
 import java.time.LocalDate;
+import org.openapitools.client.model.Map;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.OuterComposite;
 import org.openapitools.client.model.OuterObjectWithEnumProperty;
@@ -135,7 +137,7 @@ public interface FakeApi  {
     @GET
     
     @Consumes({ "application/x-www-form-urlencoded" })
-    void testEnumParameters(@HeaderParam("enum_header_string_array") List<String> enumHeaderStringArray, @HeaderParam("enum_header_string") String enumHeaderString, @QueryParam("enum_query_string_array") List<String> enumQueryStringArray, @QueryParam("enum_query_string") @DefaultValue("-efg") String enumQueryString, @QueryParam("enum_query_integer") Integer enumQueryInteger, @QueryParam("enum_query_double") Double enumQueryDouble, @QueryParam("enum_query_model_array") List<EnumClass> enumQueryModelArray, @FormParam("enum_form_string_array") List<String> enumFormStringArray, @FormParam("enum_form_string") String enumFormString) throws ApiException, ProcessingException;
+    void testEnumParameters(@HeaderParam("enum_header_string_array") java.util.List<String> enumHeaderStringArray, @HeaderParam("enum_header_string") String enumHeaderString, @QueryParam("enum_query_string_array") java.util.List<String> enumQueryStringArray, @QueryParam("enum_query_string") @DefaultValue("-efg") String enumQueryString, @QueryParam("enum_query_integer") Integer enumQueryInteger, @QueryParam("enum_query_double") Double enumQueryDouble, @QueryParam("enum_query_model_array") java.util.List<EnumClass> enumQueryModelArray, @FormParam("enum_form_string_array") java.util.List<String> enumFormStringArray, @FormParam("enum_form_string") String enumFormString) throws ApiException, ProcessingException;
 
     /**
      * Fake endpoint to test group parameters (optional)
@@ -152,7 +154,7 @@ public interface FakeApi  {
     @POST
     @Path("/inline-additionalProperties")
     @Consumes({ "application/json" })
-    void testInlineAdditionalProperties(Map<String, String> requestBody) throws ApiException, ProcessingException;
+    void testInlineAdditionalProperties(java.util.Map<String, String> requestBody) throws ApiException, ProcessingException;
 
     /**
      * test json serialization of form data
@@ -165,5 +167,5 @@ public interface FakeApi  {
 
     @PUT
     @Path("/test-query-parameters")
-    void testQueryParameterCollectionFormat(@QueryParam("pipe") List<String> pipe, @QueryParam("ioutil") List<String> ioutil, @QueryParam("http") List<String> http, @QueryParam("url") List<String> url, @QueryParam("context") List<String> context, @QueryParam("allowEmpty") String allowEmpty, @QueryParam("language") Map<String, String> language) throws ApiException, ProcessingException;
+    void testQueryParameterCollectionFormat(@QueryParam("pipe") java.util.List<String> pipe, @QueryParam("ioutil") java.util.List<String> ioutil, @QueryParam("http") java.util.List<String> http, @QueryParam("url") java.util.List<String> url, @QueryParam("context") java.util.List<String> context, @QueryParam("allowEmpty") String allowEmpty, @QueryParam("language") java.util.Map<String, String> language) throws ApiException, ProcessingException;
 }

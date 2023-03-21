@@ -15,8 +15,6 @@ package org.openapitools.model;
 import java.util.Objects;
 import java.util.Arrays;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.*;
 
 import javax.validation.constraints.*;
@@ -35,11 +33,11 @@ import javax.annotation.Generated;
 @Introspected
 public class ArrayOfNumberOnly {
     public static final String JSON_PROPERTY_ARRAY_NUMBER = "ArrayNumber";
-    private List<BigDecimal> arrayNumber = null;
+    private java.util.List<BigDecimal> arrayNumber = null;
 
     public ArrayOfNumberOnly() {
     }
-    public ArrayOfNumberOnly arrayNumber(List<BigDecimal> arrayNumber) {
+    public ArrayOfNumberOnly arrayNumber(java.util.List<BigDecimal> arrayNumber) {
         this.arrayNumber = arrayNumber;
         return this;
     }
@@ -59,13 +57,13 @@ public class ArrayOfNumberOnly {
     @Nullable
     @JsonProperty(JSON_PROPERTY_ARRAY_NUMBER)
     @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-    public List<BigDecimal> getArrayNumber() {
+    public java.util.List<BigDecimal> getArrayNumber() {
         return arrayNumber;
     }
 
     @JsonProperty(JSON_PROPERTY_ARRAY_NUMBER)
     @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-    public void setArrayNumber(List<BigDecimal> arrayNumber) {
+    public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
         this.arrayNumber = arrayNumber;
     }
 

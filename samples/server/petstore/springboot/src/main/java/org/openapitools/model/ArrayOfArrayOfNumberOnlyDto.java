@@ -8,8 +8,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -28,14 +26,14 @@ import javax.annotation.Generated;
 public class ArrayOfArrayOfNumberOnlyDto {
 
   @Valid
-  private List<List<BigDecimal>> arrayArrayNumber;
+  private java.util.List<java.util.List<BigDecimal>> arrayArrayNumber;
 
-  public ArrayOfArrayOfNumberOnlyDto arrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public ArrayOfArrayOfNumberOnlyDto arrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     this.arrayArrayNumber = arrayArrayNumber;
     return this;
   }
 
-  public ArrayOfArrayOfNumberOnlyDto addArrayArrayNumberItem(List<BigDecimal> arrayArrayNumberItem) {
+  public ArrayOfArrayOfNumberOnlyDto addArrayArrayNumberItem(java.util.List<BigDecimal> arrayArrayNumberItem) {
     if (this.arrayArrayNumber == null) {
       this.arrayArrayNumber = new ArrayList<>();
     }
@@ -50,11 +48,11 @@ public class ArrayOfArrayOfNumberOnlyDto {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("ArrayArrayNumber")
-  public List<List<BigDecimal>> getArrayArrayNumber() {
+  public java.util.List<java.util.List<BigDecimal>> getArrayArrayNumber() {
     return arrayArrayNumber;
   }
 
-  public void setArrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public void setArrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     this.arrayArrayNumber = arrayArrayNumber;
   }
 

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
@@ -128,7 +126,7 @@ public class EnumArrays {
   // items.name=arrayEnum items.baseName=arrayEnum items.xmlName= items.xmlNamespace=
   // items.example= items.type=String
   @XmlElement(name = "arrayEnum")
-  private List<ArrayEnumEnum> arrayEnum;
+  private java.util.List<ArrayEnumEnum> arrayEnum;
 
   public EnumArrays() {
   }
@@ -161,7 +159,7 @@ public class EnumArrays {
   }
 
 
-  public EnumArrays arrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public EnumArrays arrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     
     this.arrayEnum = arrayEnum;
     return this;
@@ -183,14 +181,14 @@ public class EnumArrays {
   @JsonProperty(JSON_PROPERTY_ARRAY_ENUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<ArrayEnumEnum> getArrayEnum() {
+  public java.util.List<ArrayEnumEnum> getArrayEnum() {
     return arrayEnum;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_ENUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayEnum(List<ArrayEnumEnum> arrayEnum) {
+  public void setArrayEnum(java.util.List<ArrayEnumEnum> arrayEnum) {
     this.arrayEnum = arrayEnum;
   }
 

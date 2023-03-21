@@ -5,14 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * AdditionalPropertiesObject
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen")
-public class AdditionalPropertiesObject extends HashMap<String, Map>  {
+public class AdditionalPropertiesObject extends java.util.HashMap<String, java.util.Map>  {
   @JsonProperty("name")
   private String name;
 

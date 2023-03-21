@@ -10,7 +10,6 @@ import org.openapitools.model.Client;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.openapitools.model.FileSchemaTestClass;
 import java.time.LocalDate;
-import java.util.Map;
 import org.openapitools.model.ModelApiResponse;
 import java.time.OffsetDateTime;
 import org.openapitools.model.OuterComposite;
@@ -358,13 +357,13 @@ public interface FakeApi {
         consumes = { "application/x-www-form-urlencoded" }
     )
     default ResponseEntity<Void> testEnumParameters(
-        @ApiParam(value = "Header parameter enum test (string array)", allowableValues = ">, $") @RequestHeader(value = "enum_header_string_array", required = false) List<String> enumHeaderStringArray,
+        @ApiParam(value = "Header parameter enum test (string array)", allowableValues = ">, $") @RequestHeader(value = "enum_header_string_array", required = false) java.util.List<String> enumHeaderStringArray,
         @ApiParam(value = "Header parameter enum test (string)", allowableValues = "_abc, -efg, (xyz)", defaultValue = "-efg") @RequestHeader(value = "enum_header_string", required = false, defaultValue = "-efg") String enumHeaderString,
-        @ApiParam(value = "Query parameter enum test (string array)", allowableValues = ">, $") @Valid @RequestParam(value = "enum_query_string_array", required = false) List<String> enumQueryStringArray,
+        @ApiParam(value = "Query parameter enum test (string array)", allowableValues = ">, $") @Valid @RequestParam(value = "enum_query_string_array", required = false) java.util.List<String> enumQueryStringArray,
         @ApiParam(value = "Query parameter enum test (string)", allowableValues = "_abc, -efg, (xyz)", defaultValue = "-efg") @Valid @RequestParam(value = "enum_query_string", required = false, defaultValue = "-efg") String enumQueryString,
         @ApiParam(value = "Query parameter enum test (double)", allowableValues = "1, -2") @Valid @RequestParam(value = "enum_query_integer", required = false) Integer enumQueryInteger,
         @ApiParam(value = "Query parameter enum test (double)", allowableValues = "1.1, -1.2") @Valid @RequestParam(value = "enum_query_double", required = false) Double enumQueryDouble,
-        @ApiParam(value = "Form parameter enum test (string array)", allowableValues = ">, $", defaultValue = "$") @Valid @RequestPart(value = "enum_form_string_array", required = false) List<String> enumFormStringArray,
+        @ApiParam(value = "Form parameter enum test (string array)", allowableValues = ">, $", defaultValue = "$") @Valid @RequestPart(value = "enum_form_string_array", required = false) java.util.List<String> enumFormStringArray,
         @ApiParam(value = "Form parameter enum test (string)", allowableValues = "_abc, -efg, (xyz)", defaultValue = "-efg") @Valid @RequestParam(value = "enum_form_string", required = false) String enumFormString
     ) {
         return getDelegate().testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
@@ -429,7 +428,7 @@ public interface FakeApi {
         consumes = { "application/json" }
     )
     default ResponseEntity<Void> testInlineAdditionalProperties(
-        @ApiParam(value = "request body", required = true) @Valid @RequestBody Map<String, String> param
+        @ApiParam(value = "request body", required = true) @Valid @RequestBody java.util.Map<String, String> param
     ) {
         return getDelegate().testInlineAdditionalProperties(param);
     }
@@ -489,11 +488,11 @@ public interface FakeApi {
         value = "/fake/test-query-parameters"
     )
     default ResponseEntity<Void> testQueryParameterCollectionFormat(
-        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "pipe", required = true) List<String> pipe,
-        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "ioutil", required = true) List<String> ioutil,
-        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "http", required = true) List<String> http,
-        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "url", required = true) List<String> url,
-        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "context", required = true) List<String> context
+        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "pipe", required = true) java.util.List<String> pipe,
+        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "ioutil", required = true) java.util.List<String> ioutil,
+        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "http", required = true) java.util.List<String> http,
+        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "url", required = true) java.util.List<String> url,
+        @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "context", required = true) java.util.List<String> context
     ) {
         return getDelegate().testQueryParameterCollectionFormat(pipe, ioutil, http, url, context);
     }

@@ -17,7 +17,6 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
 
@@ -53,7 +52,7 @@ public class FormatTest  {
 
   private OffsetDateTime dateTime;
 
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   private String password;
 
@@ -324,18 +323,18 @@ public class FormatTest  {
    * Get uuid
    * @return uuid
   **/
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
   /**
     * Set uuid
   **/
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }

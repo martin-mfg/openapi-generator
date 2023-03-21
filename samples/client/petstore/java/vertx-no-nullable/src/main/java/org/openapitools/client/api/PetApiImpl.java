@@ -3,7 +3,6 @@ package org.openapitools.client.api;
 import io.vertx.core.file.AsyncFile;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
@@ -149,7 +148,7 @@ public class PetApiImpl implements PetApi {
         * @param status Status values that need to be considered for filter (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void findPetsByStatus(List<String> status, Handler<AsyncResult<List<Pet>>> resultHandler) {
+    public void findPetsByStatus(java.util.List<String> status, Handler<AsyncResult<java.util.List<Pet>>> resultHandler) {
         findPetsByStatus(status, null, resultHandler);
     }
 
@@ -160,7 +159,7 @@ public class PetApiImpl implements PetApi {
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void findPetsByStatus(List<String> status, ApiClient.AuthInfo authInfo, Handler<AsyncResult<List<Pet>>> resultHandler) {
+    public void findPetsByStatus(java.util.List<String> status, ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.List<Pet>>> resultHandler) {
         Object localVarBody = null;
         
         // verify the required parameter 'status' is set
@@ -189,7 +188,7 @@ public class PetApiImpl implements PetApi {
         String[] localVarAccepts = { "application/xml", "application/json" };
         String[] localVarContentTypes = {  };
         String[] localVarAuthNames = new String[] { "petstore_auth" };
-        TypeReference<List<Pet>> localVarReturnType = new TypeReference<List<Pet>>() {};
+        TypeReference<java.util.List<Pet>> localVarReturnType = new TypeReference<java.util.List<Pet>>() {};
         apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccepts, localVarContentTypes, localVarAuthNames, authInfo, localVarReturnType, resultHandler);
     }
     /**
@@ -198,7 +197,7 @@ public class PetApiImpl implements PetApi {
         * @param tags Tags to filter by (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void findPetsByTags(Set<String> tags, Handler<AsyncResult<Set<Pet>>> resultHandler) {
+    public void findPetsByTags(java.util.Set<String> tags, Handler<AsyncResult<java.util.Set<Pet>>> resultHandler) {
         findPetsByTags(tags, null, resultHandler);
     }
 
@@ -209,7 +208,7 @@ public class PetApiImpl implements PetApi {
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void findPetsByTags(Set<String> tags, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Set<Pet>>> resultHandler) {
+    public void findPetsByTags(java.util.Set<String> tags, ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.Set<Pet>>> resultHandler) {
         Object localVarBody = null;
         
         // verify the required parameter 'tags' is set
@@ -238,7 +237,7 @@ public class PetApiImpl implements PetApi {
         String[] localVarAccepts = { "application/xml", "application/json" };
         String[] localVarContentTypes = {  };
         String[] localVarAuthNames = new String[] { "petstore_auth" };
-        TypeReference<Set<Pet>> localVarReturnType = new TypeReference<Set<Pet>>() {};
+        TypeReference<java.util.Set<Pet>> localVarReturnType = new TypeReference<java.util.Set<Pet>>() {};
         apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccepts, localVarContentTypes, localVarAuthNames, authInfo, localVarReturnType, resultHandler);
     }
     /**

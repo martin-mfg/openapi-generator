@@ -16,3 +16,4 @@ additionalProperties:
   camelRestClientRequestValidation: true
   camelSecurityDefinitions: true
   implicitHeaders: true
+  fullJavaUtil: true

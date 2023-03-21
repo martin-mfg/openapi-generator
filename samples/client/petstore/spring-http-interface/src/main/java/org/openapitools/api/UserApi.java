@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.UserDto;
 import org.springframework.http.ResponseEntity;
@@ -54,7 +53,7 @@ public interface UserApi {
         contentType = "application/json"
     )
     ResponseEntity<Void> createUsersWithArrayInput(
-         @RequestBody List<UserDto> userDto
+         @RequestBody java.util.List<UserDto> userDto
     );
 
 
@@ -72,7 +71,7 @@ public interface UserApi {
         contentType = "application/json"
     )
     ResponseEntity<Void> createUsersWithListInput(
-         @RequestBody List<UserDto> userDto
+         @RequestBody java.util.List<UserDto> userDto
     );
 
 

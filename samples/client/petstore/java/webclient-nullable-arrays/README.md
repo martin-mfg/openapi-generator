@@ -92,7 +92,7 @@ public class DefaultApiExample {
         
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            List<ByteArrayObject> result = apiInstance.nullableArrayTestGet();
+            java.util.List<ByteArrayObject> result = apiInstance.nullableArrayTestGet();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#nullableArrayTestGet");

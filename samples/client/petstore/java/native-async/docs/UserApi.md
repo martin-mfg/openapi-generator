@@ -189,7 +189,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        List<User> user = Arrays.asList(); // List<User> | List of user object
+        java.util.List<User> user = Arrays.asList(); // java.util.List<User> | List of user object
         try {
             CompletableFuture<Void> result = apiInstance.createUsersWithArrayInput(user);
         } catch (ApiException e) {
@@ -208,7 +208,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **user** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 ### Return type
 
@@ -255,7 +255,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        List<User> user = Arrays.asList(); // List<User> | List of user object
+        java.util.List<User> user = Arrays.asList(); // java.util.List<User> | List of user object
         try {
             CompletableFuture<ApiResponse<Void>> response = apiInstance.createUsersWithArrayInputWithHttpInfo(user);
             System.out.println("Status code: " + response.get().getStatusCode());
@@ -283,7 +283,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **user** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 ### Return type
 
@@ -330,7 +330,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        List<User> user = Arrays.asList(); // List<User> | List of user object
+        java.util.List<User> user = Arrays.asList(); // java.util.List<User> | List of user object
         try {
             CompletableFuture<Void> result = apiInstance.createUsersWithListInput(user);
         } catch (ApiException e) {
@@ -349,7 +349,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **user** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 ### Return type
 
@@ -396,7 +396,7 @@ public class Example {
         defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        List<User> user = Arrays.asList(); // List<User> | List of user object
+        java.util.List<User> user = Arrays.asList(); // java.util.List<User> | List of user object
         try {
             CompletableFuture<ApiResponse<Void>> response = apiInstance.createUsersWithListInputWithHttpInfo(user);
             System.out.println("Status code: " + response.get().getStatusCode());
@@ -424,7 +424,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**List&lt;User&gt;**](User.md)| List of user object | |
+| **user** | [**java.util.List&lt;User&gt;**](User.md)| List of user object | |
 
 ### Return type
 

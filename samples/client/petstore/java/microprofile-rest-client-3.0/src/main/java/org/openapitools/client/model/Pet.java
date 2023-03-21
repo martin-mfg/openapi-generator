@@ -12,8 +12,6 @@
 
 package org.openapitools.client.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.Category;
 import org.openapitools.client.model.Tag;
 
@@ -44,10 +42,10 @@ public class Pet  {
   private String name;
 
   @JsonbProperty("photoUrls")
-  private List<String> photoUrls = new ArrayList<>();
+  private java.util.List<String> photoUrls = new java.util.ArrayList<>();
 
   @JsonbProperty("tags")
-  private List<Tag> tags = null;
+  private java.util.List<Tag> tags = null;
 
   @JsonbTypeSerializer(StatusEnum.Serializer.class)
   @JsonbTypeDeserializer(StatusEnum.Deserializer.class)
@@ -161,18 +159,18 @@ public class Pet  {
    * Get photoUrls
    * @return photoUrls
   **/
-  public List<String> getPhotoUrls() {
+  public java.util.List<String> getPhotoUrls() {
     return photoUrls;
   }
 
   /**
     * Set photoUrls
   **/
-  public void setPhotoUrls(List<String> photoUrls) {
+  public void setPhotoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
-  public Pet photoUrls(List<String> photoUrls) {
+  public Pet photoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
     return this;
   }
@@ -186,18 +184,18 @@ public class Pet  {
    * Get tags
    * @return tags
   **/
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
   /**
     * Set tags
   **/
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     this.tags = tags;
     return this;
   }

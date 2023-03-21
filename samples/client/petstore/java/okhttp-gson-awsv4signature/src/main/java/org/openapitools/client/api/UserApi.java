@@ -31,10 +31,6 @@ import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.ws.rs.core.GenericType;
 
 public class UserApi {
@@ -105,11 +101,11 @@ public class UserApi {
         // create path and map variables
         String localVarPath = "/user";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -204,7 +200,7 @@ public class UserApi {
         <tr><td> 0 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createUsersWithArrayInputCall(List<User> user, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createUsersWithArrayInputCall(java.util.List<User> user, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -223,11 +219,11 @@ public class UserApi {
         // create path and map variables
         String localVarPath = "/user/createWithArray";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -249,7 +245,7 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createUsersWithArrayInputValidateBeforeCall(List<User> user, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createUsersWithArrayInputValidateBeforeCall(java.util.List<User> user, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'user' is set
         if (user == null) {
             throw new ApiException("Missing the required parameter 'user' when calling createUsersWithArrayInput(Async)");
@@ -270,7 +266,7 @@ public class UserApi {
         <tr><td> 0 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public void createUsersWithArrayInput(List<User> user) throws ApiException {
+    public void createUsersWithArrayInput(java.util.List<User> user) throws ApiException {
         createUsersWithArrayInputWithHttpInfo(user);
     }
 
@@ -286,7 +282,7 @@ public class UserApi {
         <tr><td> 0 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> createUsersWithArrayInputWithHttpInfo(List<User> user) throws ApiException {
+    public ApiResponse<Void> createUsersWithArrayInputWithHttpInfo(java.util.List<User> user) throws ApiException {
         okhttp3.Call localVarCall = createUsersWithArrayInputValidateBeforeCall(user, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -304,7 +300,7 @@ public class UserApi {
         <tr><td> 0 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createUsersWithArrayInputAsync(List<User> user, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call createUsersWithArrayInputAsync(java.util.List<User> user, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = createUsersWithArrayInputValidateBeforeCall(user, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
@@ -322,7 +318,7 @@ public class UserApi {
         <tr><td> 0 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createUsersWithListInputCall(List<User> user, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createUsersWithListInputCall(java.util.List<User> user, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -341,11 +337,11 @@ public class UserApi {
         // create path and map variables
         String localVarPath = "/user/createWithList";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -367,7 +363,7 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createUsersWithListInputValidateBeforeCall(List<User> user, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createUsersWithListInputValidateBeforeCall(java.util.List<User> user, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'user' is set
         if (user == null) {
             throw new ApiException("Missing the required parameter 'user' when calling createUsersWithListInput(Async)");
@@ -388,7 +384,7 @@ public class UserApi {
         <tr><td> 0 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public void createUsersWithListInput(List<User> user) throws ApiException {
+    public void createUsersWithListInput(java.util.List<User> user) throws ApiException {
         createUsersWithListInputWithHttpInfo(user);
     }
 
@@ -404,7 +400,7 @@ public class UserApi {
         <tr><td> 0 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> createUsersWithListInputWithHttpInfo(List<User> user) throws ApiException {
+    public ApiResponse<Void> createUsersWithListInputWithHttpInfo(java.util.List<User> user) throws ApiException {
         okhttp3.Call localVarCall = createUsersWithListInputValidateBeforeCall(user, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -422,7 +418,7 @@ public class UserApi {
         <tr><td> 0 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createUsersWithListInputAsync(List<User> user, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call createUsersWithListInputAsync(java.util.List<User> user, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = createUsersWithListInputValidateBeforeCall(user, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
@@ -461,11 +457,11 @@ public class UserApi {
         String localVarPath = "/user/{username}"
             .replace("{" + "username" + "}", localVarApiClient.escapeString(username.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -584,11 +580,11 @@ public class UserApi {
         String localVarPath = "/user/{username}"
             .replace("{" + "username" + "}", localVarApiClient.escapeString(username.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
             "application/xml",
@@ -715,11 +711,11 @@ public class UserApi {
         // create path and map variables
         String localVarPath = "/user/login";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         if (username != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("username", username));
@@ -856,11 +852,11 @@ public class UserApi {
         // create path and map variables
         String localVarPath = "/user/logout";
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };
@@ -968,11 +964,11 @@ public class UserApi {
         String localVarPath = "/user/{username}"
             .replace("{" + "username" + "}", localVarApiClient.escapeString(username.toString()));
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+        java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+        java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, String> localVarCookieParams = new java.util.HashMap<String, String>();
+        java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
         final String[] localVarAccepts = {
         };

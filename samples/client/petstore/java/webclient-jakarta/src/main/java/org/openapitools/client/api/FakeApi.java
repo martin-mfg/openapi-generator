@@ -15,12 +15,6 @@ import org.openapitools.client.model.OuterObjectWithEnumProperty;
 import org.openapitools.client.model.Pet;
 import org.openapitools.client.model.User;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -1029,7 +1023,7 @@ public class FakeApi {
      * @param enumFormString Form parameter enum test (string)
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec testEnumParametersRequestCreation(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<EnumClass> enumQueryModelArray, List<String> enumFormStringArray, String enumFormString) throws WebClientResponseException {
+    private ResponseSpec testEnumParametersRequestCreation(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<EnumClass> enumQueryModelArray, java.util.List<String> enumFormStringArray, String enumFormString) throws WebClientResponseException {
         Object postBody = null;
         // create path and map variables
         final Map<String, Object> pathParams = new HashMap<String, Object>();
@@ -1083,7 +1077,7 @@ public class FakeApi {
      * @param enumFormString Form parameter enum test (string)
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Void> testEnumParameters(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<EnumClass> enumQueryModelArray, List<String> enumFormStringArray, String enumFormString) throws WebClientResponseException {
+    public Mono<Void> testEnumParameters(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<EnumClass> enumQueryModelArray, java.util.List<String> enumFormStringArray, String enumFormString) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return testEnumParametersRequestCreation(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumQueryModelArray, enumFormStringArray, enumFormString).bodyToMono(localVarReturnType);
     }
@@ -1104,7 +1098,7 @@ public class FakeApi {
      * @param enumFormString Form parameter enum test (string)
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Void>> testEnumParametersWithHttpInfo(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<EnumClass> enumQueryModelArray, List<String> enumFormStringArray, String enumFormString) throws WebClientResponseException {
+    public Mono<ResponseEntity<Void>> testEnumParametersWithHttpInfo(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<EnumClass> enumQueryModelArray, java.util.List<String> enumFormStringArray, String enumFormString) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return testEnumParametersRequestCreation(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumQueryModelArray, enumFormStringArray, enumFormString).toEntity(localVarReturnType);
     }
@@ -1126,7 +1120,7 @@ public class FakeApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec testEnumParametersWithResponseSpec(List<String> enumHeaderStringArray, String enumHeaderString, List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, List<EnumClass> enumQueryModelArray, List<String> enumFormStringArray, String enumFormString) throws WebClientResponseException {
+    public ResponseSpec testEnumParametersWithResponseSpec(java.util.List<String> enumHeaderStringArray, String enumHeaderString, java.util.List<String> enumQueryStringArray, String enumQueryString, Integer enumQueryInteger, Double enumQueryDouble, java.util.List<EnumClass> enumQueryModelArray, java.util.List<String> enumFormStringArray, String enumFormString) throws WebClientResponseException {
         return testEnumParametersRequestCreation(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumQueryModelArray, enumFormStringArray, enumFormString);
     }
     /**
@@ -1240,7 +1234,7 @@ public class FakeApi {
      * @param requestBody request body
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec testInlineAdditionalPropertiesRequestCreation(Map<String, String> requestBody) throws WebClientResponseException {
+    private ResponseSpec testInlineAdditionalPropertiesRequestCreation(java.util.Map<String, String> requestBody) throws WebClientResponseException {
         Object postBody = requestBody;
         // verify the required parameter 'requestBody' is set
         if (requestBody == null) {
@@ -1274,7 +1268,7 @@ public class FakeApi {
      * @param requestBody request body
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Void> testInlineAdditionalProperties(Map<String, String> requestBody) throws WebClientResponseException {
+    public Mono<Void> testInlineAdditionalProperties(java.util.Map<String, String> requestBody) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return testInlineAdditionalPropertiesRequestCreation(requestBody).bodyToMono(localVarReturnType);
     }
@@ -1286,7 +1280,7 @@ public class FakeApi {
      * @param requestBody request body
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Void>> testInlineAdditionalPropertiesWithHttpInfo(Map<String, String> requestBody) throws WebClientResponseException {
+    public Mono<ResponseEntity<Void>> testInlineAdditionalPropertiesWithHttpInfo(java.util.Map<String, String> requestBody) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return testInlineAdditionalPropertiesRequestCreation(requestBody).toEntity(localVarReturnType);
     }
@@ -1299,7 +1293,7 @@ public class FakeApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec testInlineAdditionalPropertiesWithResponseSpec(Map<String, String> requestBody) throws WebClientResponseException {
+    public ResponseSpec testInlineAdditionalPropertiesWithResponseSpec(java.util.Map<String, String> requestBody) throws WebClientResponseException {
         return testInlineAdditionalPropertiesRequestCreation(requestBody);
     }
     /**
@@ -1397,7 +1391,7 @@ public class FakeApi {
      * @param language The language parameter
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec testQueryParameterCollectionFormatRequestCreation(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, String allowEmpty, Map<String, String> language) throws WebClientResponseException {
+    private ResponseSpec testQueryParameterCollectionFormatRequestCreation(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, String allowEmpty, java.util.Map<String, String> language) throws WebClientResponseException {
         Object postBody = null;
         // verify the required parameter 'pipe' is set
         if (pipe == null) {
@@ -1463,7 +1457,7 @@ public class FakeApi {
      * @param language The language parameter
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Void> testQueryParameterCollectionFormat(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, String allowEmpty, Map<String, String> language) throws WebClientResponseException {
+    public Mono<Void> testQueryParameterCollectionFormat(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, String allowEmpty, java.util.Map<String, String> language) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return testQueryParameterCollectionFormatRequestCreation(pipe, ioutil, http, url, context, allowEmpty, language).bodyToMono(localVarReturnType);
     }
@@ -1481,7 +1475,7 @@ public class FakeApi {
      * @param language The language parameter
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Void>> testQueryParameterCollectionFormatWithHttpInfo(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, String allowEmpty, Map<String, String> language) throws WebClientResponseException {
+    public Mono<ResponseEntity<Void>> testQueryParameterCollectionFormatWithHttpInfo(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, String allowEmpty, java.util.Map<String, String> language) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
         return testQueryParameterCollectionFormatRequestCreation(pipe, ioutil, http, url, context, allowEmpty, language).toEntity(localVarReturnType);
     }
@@ -1500,7 +1494,7 @@ public class FakeApi {
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec testQueryParameterCollectionFormatWithResponseSpec(List<String> pipe, List<String> ioutil, List<String> http, List<String> url, List<String> context, String allowEmpty, Map<String, String> language) throws WebClientResponseException {
+    public ResponseSpec testQueryParameterCollectionFormatWithResponseSpec(java.util.List<String> pipe, java.util.List<String> ioutil, java.util.List<String> http, java.util.List<String> url, java.util.List<String> context, String allowEmpty, java.util.Map<String, String> language) throws WebClientResponseException {
         return testQueryParameterCollectionFormatRequestCreation(pipe, ioutil, http, url, context, allowEmpty, language);
     }
 }

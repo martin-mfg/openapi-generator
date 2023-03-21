@@ -29,8 +29,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.HashMap;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
@@ -42,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Zebra.JSON_PROPERTY_CLASS_NAME
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
-public class Zebra extends HashMap<String, Object> {
+public class Zebra extends java.util.HashMap<String, Object> {
   /**
    * Gets or Sets type
    */

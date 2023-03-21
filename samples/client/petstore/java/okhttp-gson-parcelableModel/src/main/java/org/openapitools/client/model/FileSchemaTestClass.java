@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.ModelFile;
 import android.os.Parcelable;
 import android.os.Parcel;
@@ -59,7 +57,7 @@ public class FileSchemaTestClass implements Parcelable {
 
   public static final String SERIALIZED_NAME_FILES = "files";
   @SerializedName(SERIALIZED_NAME_FILES)
-  private List<ModelFile> files;
+  private java.util.List<ModelFile> files;
 
   public FileSchemaTestClass() {
   }
@@ -86,7 +84,7 @@ public class FileSchemaTestClass implements Parcelable {
   }
 
 
-  public FileSchemaTestClass files(List<ModelFile> files) {
+  public FileSchemaTestClass files(java.util.List<ModelFile> files) {
     
     this.files = files;
     return this;
@@ -106,12 +104,12 @@ public class FileSchemaTestClass implements Parcelable {
   **/
   @javax.annotation.Nullable
 
-  public List<ModelFile> getFiles() {
+  public java.util.List<ModelFile> getFiles() {
     return files;
   }
 
 
-  public void setFiles(List<ModelFile> files) {
+  public void setFiles(java.util.List<ModelFile> files) {
     this.files = files;
   }
 
@@ -164,7 +162,7 @@ public class FileSchemaTestClass implements Parcelable {
 
   FileSchemaTestClass(Parcel in) {
     _file = (ModelFile)in.readValue(ModelFile.class.getClassLoader());
-    files = (List<ModelFile>)in.readValue(ModelFile.class.getClassLoader());
+    files = (java.util.List<ModelFile>)in.readValue(ModelFile.class.getClassLoader());
   }
 
   public int describeContents() {

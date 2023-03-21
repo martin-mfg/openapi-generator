@@ -21,8 +21,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.File;
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.UUID;
+import org.openapitools.model.Date;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -96,11 +95,11 @@ public class FormatTest   {
 
   public static final String JSON_PROPERTY_DATE_TIME = "dateTime";
   @JsonProperty(JSON_PROPERTY_DATE_TIME)
-  private Date dateTime;
+  private java.util.Date dateTime;
 
   public static final String JSON_PROPERTY_UUID = "uuid";
   @JsonProperty(JSON_PROPERTY_UUID)
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   public static final String JSON_PROPERTY_PASSWORD = "password";
   @JsonProperty(JSON_PROPERTY_PASSWORD)
@@ -344,7 +343,7 @@ public class FormatTest   {
     this.date = date;
   }
 
-  public FormatTest dateTime(Date dateTime) {
+  public FormatTest dateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
     return this;
   }
@@ -356,15 +355,15 @@ public class FormatTest   {
   @JsonProperty(value = "dateTime")
   @ApiModelProperty(value = "")
   
-  public Date getDateTime() {
+  public java.util.Date getDateTime() {
     return dateTime;
   }
 
-  public void setDateTime(Date dateTime) {
+  public void setDateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
   }
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -376,11 +375,11 @@ public class FormatTest   {
   @JsonProperty(value = "uuid")
   @ApiModelProperty(example = "72f98069-206d-4f12-9f12-3d1e525a8e84", value = "")
   
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 

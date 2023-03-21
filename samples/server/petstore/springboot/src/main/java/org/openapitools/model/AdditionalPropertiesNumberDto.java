@@ -8,8 +8,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -25,7 +23,7 @@ import javax.annotation.Generated;
 
 @JsonTypeName("AdditionalPropertiesNumber")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
-public class AdditionalPropertiesNumberDto extends HashMap<String, BigDecimal> {
+public class AdditionalPropertiesNumberDto extends java.util.HashMap<String, BigDecimal> {
 
   private String name;
 

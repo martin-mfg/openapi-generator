@@ -2,14 +2,12 @@ package org.openapitools.server.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.util.HashMap;
-import java.util.Map;
 
 
 
 public class MapTest   {
 
-    private Map<String, Map<String, String>> mapMapOfString = new HashMap<>();
+    private java.util.Map<String, java.util.Map<String, String>> mapMapOfString = new java.util.HashMap<>();
 
     /**
     * Gets or Sets inner
@@ -47,9 +45,9 @@ public class MapTest   {
     }
 
 
-    private Map<String, InnerEnum> mapOfEnumString = new HashMap<>();
-    private Map<String, Boolean> directMap = new HashMap<>();
-    private Map<String, Boolean> indirectMap = new HashMap<>();
+    private java.util.Map<String, InnerEnum> mapOfEnumString = new java.util.HashMap<>();
+    private java.util.Map<String, Boolean> directMap = new java.util.HashMap<>();
+    private java.util.Map<String, Boolean> indirectMap = new java.util.HashMap<>();
 
     /**
      * Default constructor.
@@ -67,10 +65,10 @@ public class MapTest   {
      * @param indirectMap indirectMap
      */
     public MapTest(
-        Map<String, Map<String, String>> mapMapOfString, 
-        Map<String, InnerEnum> mapOfEnumString, 
-        Map<String, Boolean> directMap, 
-        Map<String, Boolean> indirectMap
+        java.util.Map<String, java.util.Map<String, String>> mapMapOfString, 
+        java.util.Map<String, InnerEnum> mapOfEnumString, 
+        java.util.Map<String, Boolean> directMap, 
+        java.util.Map<String, Boolean> indirectMap
     ) {
         this.mapMapOfString = mapMapOfString;
         this.mapOfEnumString = mapOfEnumString;
@@ -84,11 +82,11 @@ public class MapTest   {
      * Get mapMapOfString
      * @return mapMapOfString
      */
-    public Map<String, Map<String, String>> getMapMapOfString() {
+    public java.util.Map<String, java.util.Map<String, String>> getMapMapOfString() {
         return mapMapOfString;
     }
 
-    public void setMapMapOfString(Map<String, Map<String, String>> mapMapOfString) {
+    public void setMapMapOfString(java.util.Map<String, java.util.Map<String, String>> mapMapOfString) {
         this.mapMapOfString = mapMapOfString;
     }
 
@@ -96,11 +94,11 @@ public class MapTest   {
      * Get mapOfEnumString
      * @return mapOfEnumString
      */
-    public Map<String, InnerEnum> getMapOfEnumString() {
+    public java.util.Map<String, InnerEnum> getMapOfEnumString() {
         return mapOfEnumString;
     }
 
-    public void setMapOfEnumString(Map<String, InnerEnum> mapOfEnumString) {
+    public void setMapOfEnumString(java.util.Map<String, InnerEnum> mapOfEnumString) {
         this.mapOfEnumString = mapOfEnumString;
     }
 
@@ -108,11 +106,11 @@ public class MapTest   {
      * Get directMap
      * @return directMap
      */
-    public Map<String, Boolean> getDirectMap() {
+    public java.util.Map<String, Boolean> getDirectMap() {
         return directMap;
     }
 
-    public void setDirectMap(Map<String, Boolean> directMap) {
+    public void setDirectMap(java.util.Map<String, Boolean> directMap) {
         this.directMap = directMap;
     }
 
@@ -120,11 +118,11 @@ public class MapTest   {
      * Get indirectMap
      * @return indirectMap
      */
-    public Map<String, Boolean> getIndirectMap() {
+    public java.util.Map<String, Boolean> getIndirectMap() {
         return indirectMap;
     }
 
-    public void setIndirectMap(Map<String, Boolean> indirectMap) {
+    public void setIndirectMap(java.util.Map<String, Boolean> indirectMap) {
         this.indirectMap = indirectMap;
     }
 

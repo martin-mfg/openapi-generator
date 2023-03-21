@@ -10,7 +10,6 @@ import io.swagger.jaxrs.*;
 import java.io.File;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
-import java.util.Set;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;
@@ -86,7 +85,7 @@ public class PetApi  {
         @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
         
         @io.swagger.annotations.ApiResponse(code = 400, message = "Invalid status value", response = Pet.class, responseContainer = "List") })
-    public Response findPetsByStatus(@ApiParam(value = "Status values that need to be considered for filter",required=true, allowableValues="available, pending, sold") @QueryParam("status") List<String> status
+    public Response findPetsByStatus(@ApiParam(value = "Status values that need to be considered for filter",required=true, allowableValues="available, pending, sold") @QueryParam("status") java.util.List<String> status
 )
     throws NotFoundException {
         return delegate.findPetsByStatus(status);
@@ -105,7 +104,7 @@ public class PetApi  {
         @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "Set"),
         
         @io.swagger.annotations.ApiResponse(code = 400, message = "Invalid tag value", response = Pet.class, responseContainer = "Set") })
-    public Response findPetsByTags(@ApiParam(value = "Tags to filter by",required=true) @QueryParam("tags") Set<String> tags
+    public Response findPetsByTags(@ApiParam(value = "Tags to filter by",required=true) @QueryParam("tags") java.util.Set<String> tags
 )
     throws NotFoundException {
         return delegate.findPetsByTags(tags);

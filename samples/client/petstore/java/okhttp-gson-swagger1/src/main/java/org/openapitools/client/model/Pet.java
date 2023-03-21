@@ -23,8 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.Category;
 import org.openapitools.client.model.Tag;
 
@@ -69,11 +67,11 @@ public class Pet {
 
   public static final String SERIALIZED_NAME_PHOTO_URLS = "photoUrls";
   @SerializedName(SERIALIZED_NAME_PHOTO_URLS)
-  private List<String> photoUrls = new ArrayList<>();
+  private java.util.List<String> photoUrls = new java.util.ArrayList<>();
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
-  private List<Tag> tags;
+  private java.util.List<Tag> tags;
 
   /**
    * pet status in the store
@@ -200,7 +198,7 @@ public class Pet {
   }
 
 
-  public Pet photoUrls(List<String> photoUrls) {
+  public Pet photoUrls(java.util.List<String> photoUrls) {
     
     this.photoUrls = photoUrls;
     return this;
@@ -208,7 +206,7 @@ public class Pet {
 
   public Pet addPhotoUrlsItem(String photoUrlsItem) {
     if (this.photoUrls == null) {
-      this.photoUrls = new ArrayList<>();
+      this.photoUrls = new java.util.ArrayList<>();
     }
     this.photoUrls.add(photoUrlsItem);
     return this;
@@ -221,17 +219,17 @@ public class Pet {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<String> getPhotoUrls() {
+  public java.util.List<String> getPhotoUrls() {
     return photoUrls;
   }
 
 
-  public void setPhotoUrls(List<String> photoUrls) {
+  public void setPhotoUrls(java.util.List<String> photoUrls) {
     this.photoUrls = photoUrls;
   }
 
 
-  public Pet tags(List<Tag> tags) {
+  public Pet tags(java.util.List<Tag> tags) {
     
     this.tags = tags;
     return this;
@@ -252,12 +250,12 @@ public class Pet {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Tag> getTags() {
+  public java.util.List<Tag> getTags() {
     return tags;
   }
 
 
-  public void setTags(List<Tag> tags) {
+  public void setTags(java.util.List<Tag> tags) {
     this.tags = tags;
   }
 

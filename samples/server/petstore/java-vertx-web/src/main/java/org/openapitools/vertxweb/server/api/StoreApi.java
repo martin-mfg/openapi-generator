@@ -12,7 +12,7 @@ import java.util.Map;
 
 public interface StoreApi  {
     Future<ApiResponse<Void>> deleteOrder(String orderId);
-    Future<ApiResponse<Map<String, Integer>>> getInventory();
+    Future<ApiResponse<java.util.Map<String, Integer>>> getInventory();
     Future<ApiResponse<Order>> getOrderById(Long orderId);
     Future<ApiResponse<Order>> placeOrder(Order order);
 }

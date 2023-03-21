@@ -12,7 +12,6 @@
 
 package org.openapitools.client.api;
 
-import java.util.Date;
 import org.openapitools.client.model.User;
 
 import java.io.InputStream;
@@ -61,7 +60,7 @@ public interface UserApi  {
     @POST
     @Path("/createWithArray")
     @Consumes({ "application/json" })
-    void createUsersWithArrayInput(List<User> user) throws ApiException, ProcessingException;
+    void createUsersWithArrayInput(java.util.List<User> user) throws ApiException, ProcessingException;
 
     /**
      * Creates list of users with given input array
@@ -72,7 +71,7 @@ public interface UserApi  {
     @POST
     @Path("/createWithList")
     @Consumes({ "application/json" })
-    void createUsersWithListInput(List<User> user) throws ApiException, ProcessingException;
+    void createUsersWithListInput(java.util.List<User> user) throws ApiException, ProcessingException;
 
     /**
      * Delete user

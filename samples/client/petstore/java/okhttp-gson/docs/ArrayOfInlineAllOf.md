@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** |  |  [optional] |
 |**name** | **String** |  |  |
-|**arrayAllofDogProperty** | [**List&lt;ArrayOfInlineAllOfArrayAllofDogPropertyInner&gt;**](ArrayOfInlineAllOfArrayAllofDogPropertyInner.md) |  |  [optional] |
+|**arrayAllofDogProperty** | [**java.util.List&lt;ArrayOfInlineAllOfArrayAllofDogPropertyInner&gt;**](ArrayOfInlineAllOfArrayAllofDogPropertyInner.md) |  |  [optional] |
 
 
 

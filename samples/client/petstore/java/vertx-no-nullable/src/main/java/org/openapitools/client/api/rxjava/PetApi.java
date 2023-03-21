@@ -3,7 +3,6 @@ package org.openapitools.client.api.rxjava;
 import io.vertx.core.file.AsyncFile;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 import org.openapitools.client.ApiClient;
 
 import java.util.*;
@@ -125,7 +124,7 @@ public class PetApi {
     * @param status Status values that need to be considered for filter (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void findPetsByStatus(List<String> status, Handler<AsyncResult<List<Pet>>> resultHandler) {
+    public void findPetsByStatus(java.util.List<String> status, Handler<AsyncResult<java.util.List<Pet>>> resultHandler) {
         delegate.findPetsByStatus(status, resultHandler);
     }
 
@@ -136,7 +135,7 @@ public class PetApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void findPetsByStatus(List<String> status, ApiClient.AuthInfo authInfo, Handler<AsyncResult<List<Pet>>> resultHandler) {
+    public void findPetsByStatus(java.util.List<String> status, ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.List<Pet>>> resultHandler) {
         delegate.findPetsByStatus(status, authInfo, resultHandler);
     }
 
@@ -146,7 +145,7 @@ public class PetApi {
     * @param status Status values that need to be considered for filter (required)
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<List<Pet>> rxFindPetsByStatus(List<String> status) {
+    public Single<java.util.List<Pet>> rxFindPetsByStatus(java.util.List<String> status) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.findPetsByStatus(status, fut)
         ));
@@ -159,7 +158,7 @@ public class PetApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<List<Pet>> rxFindPetsByStatus(List<String> status, ApiClient.AuthInfo authInfo) {
+    public Single<java.util.List<Pet>> rxFindPetsByStatus(java.util.List<String> status, ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.findPetsByStatus(status, authInfo, fut)
         ));
@@ -170,7 +169,7 @@ public class PetApi {
     * @param tags Tags to filter by (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void findPetsByTags(Set<String> tags, Handler<AsyncResult<Set<Pet>>> resultHandler) {
+    public void findPetsByTags(java.util.Set<String> tags, Handler<AsyncResult<java.util.Set<Pet>>> resultHandler) {
         delegate.findPetsByTags(tags, resultHandler);
     }
 
@@ -181,7 +180,7 @@ public class PetApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void findPetsByTags(Set<String> tags, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Set<Pet>>> resultHandler) {
+    public void findPetsByTags(java.util.Set<String> tags, ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.Set<Pet>>> resultHandler) {
         delegate.findPetsByTags(tags, authInfo, resultHandler);
     }
 
@@ -191,7 +190,7 @@ public class PetApi {
     * @param tags Tags to filter by (required)
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Set<Pet>> rxFindPetsByTags(Set<String> tags) {
+    public Single<java.util.Set<Pet>> rxFindPetsByTags(java.util.Set<String> tags) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.findPetsByTags(tags, fut)
         ));
@@ -204,7 +203,7 @@ public class PetApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Set<Pet>> rxFindPetsByTags(Set<String> tags, ApiClient.AuthInfo authInfo) {
+    public Single<java.util.Set<Pet>> rxFindPetsByTags(java.util.Set<String> tags, ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.findPetsByTags(tags, authInfo, fut)
         ));

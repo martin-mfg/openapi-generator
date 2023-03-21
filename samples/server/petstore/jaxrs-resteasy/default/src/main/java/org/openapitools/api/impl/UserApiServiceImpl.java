@@ -4,8 +4,6 @@ import org.openapitools.api.*;
 import org.openapitools.model.*;
 
 
-import java.util.Date;
-import java.util.List;
 import org.openapitools.model.User;
 
 import java.util.List;
@@ -25,12 +23,12 @@ public class UserApiServiceImpl implements UserApiService {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
   }
-      public Response createUsersWithArrayInput(List<User> body,SecurityContext securityContext)
+      public Response createUsersWithArrayInput(java.util.List<User> body,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
   }
-      public Response createUsersWithListInput(List<User> body,SecurityContext securityContext)
+      public Response createUsersWithListInput(java.util.List<User> body,SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();

@@ -24,7 +24,6 @@ import java.io.File;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
@@ -104,7 +103,7 @@ public class FormatTest {
 
   public static final String JSON_PROPERTY_UUID = "uuid";
   @XmlElement(name = "uuid")
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   public static final String JSON_PROPERTY_PASSWORD = "password";
   @XmlElement(name = "password")
@@ -435,7 +434,7 @@ public class FormatTest {
   }
 
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     
     this.uuid = uuid;
     return this;
@@ -450,7 +449,7 @@ public class FormatTest {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   @JacksonXmlProperty(localName = "uuid")
 
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
@@ -458,7 +457,7 @@ public class FormatTest {
   @JsonProperty(JSON_PROPERTY_UUID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   @JacksonXmlProperty(localName = "uuid")
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 

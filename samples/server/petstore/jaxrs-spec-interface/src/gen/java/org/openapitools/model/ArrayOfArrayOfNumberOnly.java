@@ -3,8 +3,6 @@ package org.openapitools.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.io.Serializable;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -21,11 +19,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonTypeName("ArrayOfArrayOfNumberOnly")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")
 public class ArrayOfArrayOfNumberOnly  implements Serializable {
-  private @Valid List<List<BigDecimal>> arrayArrayNumber;
+  private @Valid java.util.List<java.util.List<BigDecimal>> arrayArrayNumber;
 
   /**
    **/
-  public ArrayOfArrayOfNumberOnly arrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public ArrayOfArrayOfNumberOnly arrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     this.arrayArrayNumber = arrayArrayNumber;
     return this;
   }
@@ -33,16 +31,16 @@ public class ArrayOfArrayOfNumberOnly  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("ArrayArrayNumber")
-  public List<List<BigDecimal>> getArrayArrayNumber() {
+  public java.util.List<java.util.List<BigDecimal>> getArrayArrayNumber() {
     return arrayArrayNumber;
   }
 
   @JsonProperty("ArrayArrayNumber")
-  public void setArrayArrayNumber(List<List<BigDecimal>> arrayArrayNumber) {
+  public void setArrayArrayNumber(java.util.List<java.util.List<BigDecimal>> arrayArrayNumber) {
     this.arrayArrayNumber = arrayArrayNumber;
   }
 
-  public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(List<BigDecimal> arrayArrayNumberItem) {
+  public ArrayOfArrayOfNumberOnly addArrayArrayNumberItem(java.util.List<BigDecimal> arrayArrayNumberItem) {
     if (this.arrayArrayNumber == null) {
       this.arrayArrayNumber = new ArrayList<>();
     }
@@ -51,7 +49,7 @@ public class ArrayOfArrayOfNumberOnly  implements Serializable {
     return this;
   }
 
-  public ArrayOfArrayOfNumberOnly removeArrayArrayNumberItem(List<BigDecimal> arrayArrayNumberItem) {
+  public ArrayOfArrayOfNumberOnly removeArrayArrayNumberItem(java.util.List<BigDecimal> arrayArrayNumberItem) {
     if (arrayArrayNumberItem != null && this.arrayArrayNumber != null) {
       this.arrayArrayNumber.remove(arrayArrayNumberItem);
     }

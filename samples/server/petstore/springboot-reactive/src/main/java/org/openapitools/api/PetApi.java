@@ -8,7 +8,6 @@ package org.openapitools.api;
 import springfox.documentation.annotations.ApiIgnore;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
-import java.util.Set;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -141,7 +140,7 @@ public interface PetApi {
         produces = { "application/xml", "application/json" }
     )
     default Mono<ResponseEntity<Flux<Pet>>> findPetsByStatus(
-        @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) List<String> status,
+        @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) java.util.List<String> status,
         @ApiIgnore final ServerWebExchange exchange
     ) {
         return getDelegate().findPetsByStatus(status, exchange);
@@ -182,7 +181,7 @@ public interface PetApi {
         produces = { "application/xml", "application/json" }
     )
     default Mono<ResponseEntity<Flux<Pet>>> findPetsByTags(
-        @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) Set<String> tags,
+        @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) java.util.Set<String> tags,
         @ApiIgnore final ServerWebExchange exchange
     ) {
         return getDelegate().findPetsByTags(tags, exchange);

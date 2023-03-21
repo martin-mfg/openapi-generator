@@ -151,7 +151,7 @@ No authorization required
 
 ## getInventory
 
-> Map<String, Integer> getInventory()
+> java.util.Map<String, Integer> getInventory()
 
 Returns pet inventories by status
 
@@ -181,7 +181,7 @@ public class Example {
 
         StoreApi apiInstance = new StoreApi(defaultClient);
         try {
-            Map<String, Integer> result = apiInstance.getInventory();
+            java.util.Map<String, Integer> result = apiInstance.getInventory();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling StoreApi#getInventory");
@@ -200,7 +200,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Map&lt;String, Integer&gt;**
+**java.util.Map&lt;String, Integer&gt;**
 
 
 ### Authorization
@@ -219,7 +219,7 @@ This endpoint does not need any parameter.
 
 ## getInventoryWithHttpInfo
 
-> ApiResponse<Map<String, Integer>> getInventory getInventoryWithHttpInfo()
+> ApiResponse<java.util.Map<String, Integer>> getInventory getInventoryWithHttpInfo()
 
 Returns pet inventories by status
 
@@ -250,7 +250,7 @@ public class Example {
 
         StoreApi apiInstance = new StoreApi(defaultClient);
         try {
-            ApiResponse<Map<String, Integer>> response = apiInstance.getInventoryWithHttpInfo();
+            ApiResponse<java.util.Map<String, Integer>> response = apiInstance.getInventoryWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -271,7 +271,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiResponse<**Map&lt;String, Integer&gt;**>
+ApiResponse<**java.util.Map&lt;String, Integer&gt;**>
 
 
 ### Authorization

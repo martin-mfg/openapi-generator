@@ -72,7 +72,7 @@ public class StoreApi {
     * Returns a map of status codes to quantities
     * @param resultHandler Asynchronous result handler
     */
-    public void getInventory(Handler<AsyncResult<Map<String, Integer>>> resultHandler) {
+    public void getInventory(Handler<AsyncResult<java.util.Map<String, Integer>>> resultHandler) {
         delegate.getInventory(resultHandler);
     }
 
@@ -82,7 +82,7 @@ public class StoreApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void getInventory(ApiClient.AuthInfo authInfo, Handler<AsyncResult<Map<String, Integer>>> resultHandler) {
+    public void getInventory(ApiClient.AuthInfo authInfo, Handler<AsyncResult<java.util.Map<String, Integer>>> resultHandler) {
         delegate.getInventory(authInfo, resultHandler);
     }
 
@@ -91,7 +91,7 @@ public class StoreApi {
     * Returns a map of status codes to quantities
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Map<String, Integer>> rxGetInventory() {
+    public Single<java.util.Map<String, Integer>> rxGetInventory() {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.getInventory(fut)
         ));
@@ -103,7 +103,7 @@ public class StoreApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Map<String, Integer>> rxGetInventory(ApiClient.AuthInfo authInfo) {
+    public Single<java.util.Map<String, Integer>> rxGetInventory(ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.getInventory(authInfo, fut)
         ));

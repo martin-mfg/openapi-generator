@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import java.util.Map;
 import org.openapitools.model.Order;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
@@ -76,7 +75,7 @@ public interface StoreApi {
          }
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation", response = Map.class, responseContainer = "Map")
+        @ApiResponse(code = 200, message = "successful operation", response = java.util.Map.class, responseContainer = "Map")
     })
     @RequestMapping(
         method = RequestMethod.GET,

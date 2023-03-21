@@ -11,3 +11,4 @@ additionalProperties:
   requiredPropertiesInConstructor: "false"
   visitable: "true"
   fullProject: "true"
+  fullJavaUtil: true

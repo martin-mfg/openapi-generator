@@ -19,8 +19,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -60,7 +58,7 @@ public class TypeHolderExample   {
 
   public static final String JSON_PROPERTY_ARRAY_ITEM = "array_item";
   @JsonProperty(JSON_PROPERTY_ARRAY_ITEM)
-  private List<Integer> arrayItem = new ArrayList<>();
+  private java.util.List<Integer> arrayItem = new java.util.ArrayList<>();
 
   public TypeHolderExample stringItem(String stringItem) {
     this.stringItem = stringItem;
@@ -162,14 +160,14 @@ public class TypeHolderExample   {
     this.boolItem = boolItem;
   }
 
-  public TypeHolderExample arrayItem(List<Integer> arrayItem) {
+  public TypeHolderExample arrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
     return this;
   }
 
   public TypeHolderExample addArrayItemItem(Integer arrayItemItem) {
     if (this.arrayItem == null) {
-      this.arrayItem = new ArrayList<>();
+      this.arrayItem = new java.util.ArrayList<>();
     }
     this.arrayItem.add(arrayItemItem);
     return this;
@@ -182,11 +180,11 @@ public class TypeHolderExample   {
   @JsonProperty(value = "array_item")
   @ApiModelProperty(example = "[0, 1, 2, 3]", required = true, value = "")
   @NotNull 
-  public List<Integer> getArrayItem() {
+  public java.util.List<Integer> getArrayItem() {
     return arrayItem;
   }
 
-  public void setArrayItem(List<Integer> arrayItem) {
+  public void setArrayItem(java.util.List<Integer> arrayItem) {
     this.arrayItem = arrayItem;
   }
 

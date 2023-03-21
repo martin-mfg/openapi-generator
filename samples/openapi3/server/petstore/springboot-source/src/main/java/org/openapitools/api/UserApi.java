@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 import org.springframework.http.HttpStatus;
@@ -64,7 +63,7 @@ public interface UserApi {
         consumes = { "application/json" }
     )
     default ResponseEntity<Void> createUsersWithArrayInput(
-         @Valid @RequestBody List<User> user
+         @Valid @RequestBody java.util.List<User> user
     ) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
@@ -84,7 +83,7 @@ public interface UserApi {
         consumes = { "application/json" }
     )
     default ResponseEntity<Void> createUsersWithListInput(
-         @Valid @RequestBody List<User> user
+         @Valid @RequestBody java.util.List<User> user
     ) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 

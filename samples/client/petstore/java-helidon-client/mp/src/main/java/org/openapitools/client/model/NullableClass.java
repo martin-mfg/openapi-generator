@@ -20,10 +20,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -32,7 +28,7 @@ import java.util.NoSuchElementException;
 
 
 
-public class NullableClass extends HashMap<String, Object> {
+public class NullableClass extends java.util.HashMap<String, Object> {
   
   private Integer integerProp;
 
@@ -46,17 +42,17 @@ public class NullableClass extends HashMap<String, Object> {
 
   private OffsetDateTime datetimeProp;
 
-  private List<Object> arrayNullableProp = null;
+  private java.util.List<Object> arrayNullableProp = null;
 
-  private List<Object> arrayAndItemsNullableProp = null;
+  private java.util.List<Object> arrayAndItemsNullableProp = null;
 
-  private List<Object> arrayItemsNullable = null;
+  private java.util.List<Object> arrayItemsNullable = null;
 
-  private Map<String, Object> objectNullableProp = null;
+  private java.util.Map<String, Object> objectNullableProp = null;
 
-  private Map<String, Object> objectAndItemsNullableProp = null;
+  private java.util.Map<String, Object> objectAndItemsNullableProp = null;
 
-  private Map<String, Object> objectItemsNullable = null;
+  private java.util.Map<String, Object> objectItemsNullable = null;
 
  /**
    * Get integerProp
@@ -182,18 +178,18 @@ public class NullableClass extends HashMap<String, Object> {
    * Get arrayNullableProp
    * @return arrayNullableProp
   **/
-  public List<Object> getArrayNullableProp() {
+  public java.util.List<Object> getArrayNullableProp() {
     return arrayNullableProp;
   }
 
   /**
     * Set arrayNullableProp
   **/
-  public void setArrayNullableProp(List<Object> arrayNullableProp) {
+  public void setArrayNullableProp(java.util.List<Object> arrayNullableProp) {
     this.arrayNullableProp = arrayNullableProp;
   }
 
-  public NullableClass arrayNullableProp(List<Object> arrayNullableProp) {
+  public NullableClass arrayNullableProp(java.util.List<Object> arrayNullableProp) {
     this.arrayNullableProp = arrayNullableProp;
     return this;
   }
@@ -207,18 +203,18 @@ public class NullableClass extends HashMap<String, Object> {
    * Get arrayAndItemsNullableProp
    * @return arrayAndItemsNullableProp
   **/
-  public List<Object> getArrayAndItemsNullableProp() {
+  public java.util.List<Object> getArrayAndItemsNullableProp() {
     return arrayAndItemsNullableProp;
   }
 
   /**
     * Set arrayAndItemsNullableProp
   **/
-  public void setArrayAndItemsNullableProp(List<Object> arrayAndItemsNullableProp) {
+  public void setArrayAndItemsNullableProp(java.util.List<Object> arrayAndItemsNullableProp) {
     this.arrayAndItemsNullableProp = arrayAndItemsNullableProp;
   }
 
-  public NullableClass arrayAndItemsNullableProp(List<Object> arrayAndItemsNullableProp) {
+  public NullableClass arrayAndItemsNullableProp(java.util.List<Object> arrayAndItemsNullableProp) {
     this.arrayAndItemsNullableProp = arrayAndItemsNullableProp;
     return this;
   }
@@ -232,18 +228,18 @@ public class NullableClass extends HashMap<String, Object> {
    * Get arrayItemsNullable
    * @return arrayItemsNullable
   **/
-  public List<Object> getArrayItemsNullable() {
+  public java.util.List<Object> getArrayItemsNullable() {
     return arrayItemsNullable;
   }
 
   /**
     * Set arrayItemsNullable
   **/
-  public void setArrayItemsNullable(List<Object> arrayItemsNullable) {
+  public void setArrayItemsNullable(java.util.List<Object> arrayItemsNullable) {
     this.arrayItemsNullable = arrayItemsNullable;
   }
 
-  public NullableClass arrayItemsNullable(List<Object> arrayItemsNullable) {
+  public NullableClass arrayItemsNullable(java.util.List<Object> arrayItemsNullable) {
     this.arrayItemsNullable = arrayItemsNullable;
     return this;
   }
@@ -257,18 +253,18 @@ public class NullableClass extends HashMap<String, Object> {
    * Get objectNullableProp
    * @return objectNullableProp
   **/
-  public Map<String, Object> getObjectNullableProp() {
+  public java.util.Map<String, Object> getObjectNullableProp() {
     return objectNullableProp;
   }
 
   /**
     * Set objectNullableProp
   **/
-  public void setObjectNullableProp(Map<String, Object> objectNullableProp) {
+  public void setObjectNullableProp(java.util.Map<String, Object> objectNullableProp) {
     this.objectNullableProp = objectNullableProp;
   }
 
-  public NullableClass objectNullableProp(Map<String, Object> objectNullableProp) {
+  public NullableClass objectNullableProp(java.util.Map<String, Object> objectNullableProp) {
     this.objectNullableProp = objectNullableProp;
     return this;
   }
@@ -282,18 +278,18 @@ public class NullableClass extends HashMap<String, Object> {
    * Get objectAndItemsNullableProp
    * @return objectAndItemsNullableProp
   **/
-  public Map<String, Object> getObjectAndItemsNullableProp() {
+  public java.util.Map<String, Object> getObjectAndItemsNullableProp() {
     return objectAndItemsNullableProp;
   }
 
   /**
     * Set objectAndItemsNullableProp
   **/
-  public void setObjectAndItemsNullableProp(Map<String, Object> objectAndItemsNullableProp) {
+  public void setObjectAndItemsNullableProp(java.util.Map<String, Object> objectAndItemsNullableProp) {
     this.objectAndItemsNullableProp = objectAndItemsNullableProp;
   }
 
-  public NullableClass objectAndItemsNullableProp(Map<String, Object> objectAndItemsNullableProp) {
+  public NullableClass objectAndItemsNullableProp(java.util.Map<String, Object> objectAndItemsNullableProp) {
     this.objectAndItemsNullableProp = objectAndItemsNullableProp;
     return this;
   }
@@ -307,18 +303,18 @@ public class NullableClass extends HashMap<String, Object> {
    * Get objectItemsNullable
    * @return objectItemsNullable
   **/
-  public Map<String, Object> getObjectItemsNullable() {
+  public java.util.Map<String, Object> getObjectItemsNullable() {
     return objectItemsNullable;
   }
 
   /**
     * Set objectItemsNullable
   **/
-  public void setObjectItemsNullable(Map<String, Object> objectItemsNullable) {
+  public void setObjectItemsNullable(java.util.Map<String, Object> objectItemsNullable) {
     this.objectItemsNullable = objectItemsNullable;
   }
 
-  public NullableClass objectItemsNullable(Map<String, Object> objectItemsNullable) {
+  public NullableClass objectItemsNullable(java.util.Map<String, Object> objectItemsNullable) {
     this.objectItemsNullable = objectItemsNullable;
     return this;
   }

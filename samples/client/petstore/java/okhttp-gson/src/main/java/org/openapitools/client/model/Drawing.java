@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.Fruit;
 import org.openapitools.client.model.NullableShape;
 import org.openapitools.client.model.Shape;
@@ -69,7 +67,7 @@ public class Drawing {
 
   public static final String SERIALIZED_NAME_SHAPES = "shapes";
   @SerializedName(SERIALIZED_NAME_SHAPES)
-  private List<Shape> shapes;
+  private java.util.List<Shape> shapes;
 
   public Drawing() {
   }
@@ -140,7 +138,7 @@ public class Drawing {
   }
 
 
-  public Drawing shapes(List<Shape> shapes) {
+  public Drawing shapes(java.util.List<Shape> shapes) {
     
     this.shapes = shapes;
     return this;
@@ -160,12 +158,12 @@ public class Drawing {
   **/
   @javax.annotation.Nullable
 
-  public List<Shape> getShapes() {
+  public java.util.List<Shape> getShapes() {
     return shapes;
   }
 
 
-  public void setShapes(List<Shape> shapes) {
+  public void setShapes(java.util.List<Shape> shapes) {
     this.shapes = shapes;
   }
 

@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.dataformat.xml.annotation.*;
@@ -46,12 +44,12 @@ public class ArrayOfNumberOnly {
   // items.name=arrayNumber items.baseName=arrayNumber items.xmlName= items.xmlNamespace=
   // items.example= items.type=BigDecimal
   @XmlElement(name = "arrayNumber")
-  private List<BigDecimal> arrayNumber;
+  private java.util.List<BigDecimal> arrayNumber;
 
   public ArrayOfNumberOnly() {
   }
 
-  public ArrayOfNumberOnly arrayNumber(List<BigDecimal> arrayNumber) {
+  public ArrayOfNumberOnly arrayNumber(java.util.List<BigDecimal> arrayNumber) {
     
     this.arrayNumber = arrayNumber;
     return this;
@@ -73,14 +71,14 @@ public class ArrayOfNumberOnly {
   @JsonProperty(JSON_PROPERTY_ARRAY_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<BigDecimal> getArrayNumber() {
+  public java.util.List<BigDecimal> getArrayNumber() {
     return arrayNumber;
   }
 
 
   @JsonProperty(JSON_PROPERTY_ARRAY_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArrayNumber(List<BigDecimal> arrayNumber) {
+  public void setArrayNumber(java.util.List<BigDecimal> arrayNumber) {
     this.arrayNumber = arrayNumber;
   }
 

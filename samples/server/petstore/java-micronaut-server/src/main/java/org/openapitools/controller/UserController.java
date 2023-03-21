@@ -21,10 +21,6 @@ import io.micronaut.http.exceptions.HttpStatusException;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 import javax.annotation.Generated;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import io.swagger.v3.oas.annotations.Operation;
@@ -93,7 +89,7 @@ public class UserController {
     @Produces(value = {})
     @Consumes(value = {"application/json"})
     public Mono<Void> createUsersWithArrayInput(
-        @Body @NotNull List<User> user
+        @Body @NotNull java.util.List<User> user
     ) {
         // TODO implement createUsersWithArrayInput();
         return Mono.error(new HttpStatusException(HttpStatus.NOT_IMPLEMENTED, null));
@@ -123,7 +119,7 @@ public class UserController {
     @Produces(value = {})
     @Consumes(value = {"application/json"})
     public Mono<Void> createUsersWithListInput(
-        @Body @NotNull List<User> user
+        @Body @NotNull java.util.List<User> user
     ) {
         // TODO implement createUsersWithListInput();
         return Mono.error(new HttpStatusException(HttpStatus.NOT_IMPLEMENTED, null));

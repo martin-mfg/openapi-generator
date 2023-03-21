@@ -2,8 +2,6 @@ package org.openapitools.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
-import java.util.Map;
 import java.io.Serializable;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
@@ -20,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonTypeName("MapTest")
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")
 public class MapTest  implements Serializable {
-  private @Valid Map<String, Map<String, String>> mapMapOfString = new HashMap<>();
+  private @Valid java.util.Map<String, java.util.Map<String, String>> mapMapOfString = new java.util.HashMap<>();
   public enum InnerEnum {
 
     UPPER(String.valueOf("UPPER")), LOWER(String.valueOf("lower"));
@@ -68,9 +66,9 @@ public class MapTest  implements Serializable {
     }
 }
 
-  private @Valid Map<String, InnerEnum> mapOfEnumString = new HashMap<>();
-  private @Valid Map<String, Boolean> directMap = new HashMap<>();
-  private @Valid Map<String, Boolean> indirectMap = new HashMap<>();
+  private @Valid java.util.Map<String, InnerEnum> mapOfEnumString = new java.util.HashMap<>();
+  private @Valid java.util.Map<String, Boolean> directMap = new java.util.HashMap<>();
+  private @Valid java.util.Map<String, Boolean> indirectMap = new java.util.HashMap<>();
 
   protected MapTest(MapTestBuilder<?, ?> b) {
     this.mapMapOfString = b.mapMapOfString;
@@ -84,7 +82,7 @@ public class MapTest  implements Serializable {
 
   /**
    **/
-  public MapTest mapMapOfString(Map<String, Map<String, String>> mapMapOfString) {
+  public MapTest mapMapOfString(java.util.Map<String, java.util.Map<String, String>> mapMapOfString) {
     this.mapMapOfString = mapMapOfString;
     return this;
   }
@@ -92,25 +90,25 @@ public class MapTest  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("map_map_of_string")
-  public Map<String, Map<String, String>> getMapMapOfString() {
+  public java.util.Map<String, java.util.Map<String, String>> getMapMapOfString() {
     return mapMapOfString;
   }
 
   @JsonProperty("map_map_of_string")
-  public void setMapMapOfString(Map<String, Map<String, String>> mapMapOfString) {
+  public void setMapMapOfString(java.util.Map<String, java.util.Map<String, String>> mapMapOfString) {
     this.mapMapOfString = mapMapOfString;
   }
 
-  public MapTest putMapMapOfStringItem(String key, Map<String, String> mapMapOfStringItem) {
+  public MapTest putMapMapOfStringItem(String key, java.util.Map<String, String> mapMapOfStringItem) {
     if (this.mapMapOfString == null) {
-      this.mapMapOfString = new HashMap<>();
+      this.mapMapOfString = new java.util.HashMap<>();
     }
 
     this.mapMapOfString.put(key, mapMapOfStringItem);
     return this;
   }
 
-  public MapTest removeMapMapOfStringItem(Map<String, String> mapMapOfStringItem) {
+  public MapTest removeMapMapOfStringItem(java.util.Map<String, String> mapMapOfStringItem) {
     if (mapMapOfStringItem != null && this.mapMapOfString != null) {
       this.mapMapOfString.remove(mapMapOfStringItem);
     }
@@ -119,7 +117,7 @@ public class MapTest  implements Serializable {
   }
   /**
    **/
-  public MapTest mapOfEnumString(Map<String, InnerEnum> mapOfEnumString) {
+  public MapTest mapOfEnumString(java.util.Map<String, InnerEnum> mapOfEnumString) {
     this.mapOfEnumString = mapOfEnumString;
     return this;
   }
@@ -127,18 +125,18 @@ public class MapTest  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("map_of_enum_string")
-  public Map<String, InnerEnum> getMapOfEnumString() {
+  public java.util.Map<String, InnerEnum> getMapOfEnumString() {
     return mapOfEnumString;
   }
 
   @JsonProperty("map_of_enum_string")
-  public void setMapOfEnumString(Map<String, InnerEnum> mapOfEnumString) {
+  public void setMapOfEnumString(java.util.Map<String, InnerEnum> mapOfEnumString) {
     this.mapOfEnumString = mapOfEnumString;
   }
 
   public MapTest putMapOfEnumStringItem(String key, InnerEnum mapOfEnumStringItem) {
     if (this.mapOfEnumString == null) {
-      this.mapOfEnumString = new HashMap<>();
+      this.mapOfEnumString = new java.util.HashMap<>();
     }
 
     this.mapOfEnumString.put(key, mapOfEnumStringItem);
@@ -154,7 +152,7 @@ public class MapTest  implements Serializable {
   }
   /**
    **/
-  public MapTest directMap(Map<String, Boolean> directMap) {
+  public MapTest directMap(java.util.Map<String, Boolean> directMap) {
     this.directMap = directMap;
     return this;
   }
@@ -162,18 +160,18 @@ public class MapTest  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("direct_map")
-  public Map<String, Boolean> getDirectMap() {
+  public java.util.Map<String, Boolean> getDirectMap() {
     return directMap;
   }
 
   @JsonProperty("direct_map")
-  public void setDirectMap(Map<String, Boolean> directMap) {
+  public void setDirectMap(java.util.Map<String, Boolean> directMap) {
     this.directMap = directMap;
   }
 
   public MapTest putDirectMapItem(String key, Boolean directMapItem) {
     if (this.directMap == null) {
-      this.directMap = new HashMap<>();
+      this.directMap = new java.util.HashMap<>();
     }
 
     this.directMap.put(key, directMapItem);
@@ -189,7 +187,7 @@ public class MapTest  implements Serializable {
   }
   /**
    **/
-  public MapTest indirectMap(Map<String, Boolean> indirectMap) {
+  public MapTest indirectMap(java.util.Map<String, Boolean> indirectMap) {
     this.indirectMap = indirectMap;
     return this;
   }
@@ -197,18 +195,18 @@ public class MapTest  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("indirect_map")
-  public Map<String, Boolean> getIndirectMap() {
+  public java.util.Map<String, Boolean> getIndirectMap() {
     return indirectMap;
   }
 
   @JsonProperty("indirect_map")
-  public void setIndirectMap(Map<String, Boolean> indirectMap) {
+  public void setIndirectMap(java.util.Map<String, Boolean> indirectMap) {
     this.indirectMap = indirectMap;
   }
 
   public MapTest putIndirectMapItem(String key, Boolean indirectMapItem) {
     if (this.indirectMap == null) {
-      this.indirectMap = new HashMap<>();
+      this.indirectMap = new java.util.HashMap<>();
     }
 
     this.indirectMap.put(key, indirectMapItem);
@@ -286,27 +284,27 @@ public class MapTest  implements Serializable {
   }
 
   public static abstract class MapTestBuilder<C extends MapTest, B extends MapTestBuilder<C, B>>  {
-    private Map<String, Map<String, String>> mapMapOfString = new HashMap<>();
-    private Map<String, InnerEnum> mapOfEnumString = new HashMap<>();
-    private Map<String, Boolean> directMap = new HashMap<>();
-    private Map<String, Boolean> indirectMap = new HashMap<>();
+    private java.util.Map<String, java.util.Map<String, String>> mapMapOfString = new java.util.HashMap<>();
+    private java.util.Map<String, InnerEnum> mapOfEnumString = new java.util.HashMap<>();
+    private java.util.Map<String, Boolean> directMap = new java.util.HashMap<>();
+    private java.util.Map<String, Boolean> indirectMap = new java.util.HashMap<>();
     protected abstract B self();
 
     public abstract C build();
 
-    public B mapMapOfString(Map<String, Map<String, String>> mapMapOfString) {
+    public B mapMapOfString(java.util.Map<String, java.util.Map<String, String>> mapMapOfString) {
       this.mapMapOfString = mapMapOfString;
       return self();
     }
-    public B mapOfEnumString(Map<String, InnerEnum> mapOfEnumString) {
+    public B mapOfEnumString(java.util.Map<String, InnerEnum> mapOfEnumString) {
       this.mapOfEnumString = mapOfEnumString;
       return self();
     }
-    public B directMap(Map<String, Boolean> directMap) {
+    public B directMap(java.util.Map<String, Boolean> directMap) {
       this.directMap = directMap;
       return self();
     }
-    public B indirectMap(Map<String, Boolean> indirectMap) {
+    public B indirectMap(java.util.Map<String, Boolean> indirectMap) {
       this.indirectMap = indirectMap;
       return self();
     }

@@ -3,8 +3,6 @@ package org.openapitools.model;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.io.File;
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.UUID;
 import org.joda.time.LocalDate;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -48,10 +46,10 @@ public class FormatTest  {
   private LocalDate date;
 
   @ApiModelProperty(value = "")
-  private Date dateTime;
+  private java.util.Date dateTime;
 
   @ApiModelProperty(example = "72f98069-206d-4f12-9f12-3d1e525a8e84", value = "")
-  private UUID uuid;
+  private java.util.UUID uuid;
 
   @ApiModelProperty(required = true, value = "")
   private String password;
@@ -257,15 +255,15 @@ public class FormatTest  {
    * @return dateTime
   **/
   @JsonProperty("dateTime")
-  public Date getDateTime() {
+  public java.util.Date getDateTime() {
     return dateTime;
   }
 
-  public void setDateTime(Date dateTime) {
+  public void setDateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
   }
 
-  public FormatTest dateTime(Date dateTime) {
+  public FormatTest dateTime(java.util.Date dateTime) {
     this.dateTime = dateTime;
     return this;
   }
@@ -275,15 +273,15 @@ public class FormatTest  {
    * @return uuid
   **/
   @JsonProperty("uuid")
-  public UUID getUuid() {
+  public java.util.UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
+  public void setUuid(java.util.UUID uuid) {
     this.uuid = uuid;
   }
 
-  public FormatTest uuid(UUID uuid) {
+  public FormatTest uuid(java.util.UUID uuid) {
     this.uuid = uuid;
     return this;
   }

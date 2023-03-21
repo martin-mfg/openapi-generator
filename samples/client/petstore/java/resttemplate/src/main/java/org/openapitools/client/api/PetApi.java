@@ -5,14 +5,8 @@ import org.openapitools.client.ApiClient;
 import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -154,10 +148,10 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid status value
      * @param status Status values that need to be considered for filter (required)
-     * @return List&lt;Pet&gt;
+     * @return java.util.List&lt;Pet&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public List<Pet> findPetsByStatus(List<String> status) throws RestClientException {
+    public java.util.List<Pet> findPetsByStatus(java.util.List<String> status) throws RestClientException {
         return findPetsByStatusWithHttpInfo(status).getBody();
     }
 
@@ -167,10 +161,10 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid status value
      * @param status Status values that need to be considered for filter (required)
-     * @return ResponseEntity&lt;List&lt;Pet&gt;&gt;
+     * @return ResponseEntity&lt;java.util.List&lt;Pet&gt;&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<List<Pet>> findPetsByStatusWithHttpInfo(List<String> status) throws RestClientException {
+    public ResponseEntity<java.util.List<Pet>> findPetsByStatusWithHttpInfo(java.util.List<String> status) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'status' is set
@@ -195,7 +189,7 @@ public class PetApi {
 
         String[] localVarAuthNames = new String[] { "petstore_auth" };
 
-        ParameterizedTypeReference<List<Pet>> localReturnType = new ParameterizedTypeReference<List<Pet>>() {};
+        ParameterizedTypeReference<java.util.List<Pet>> localReturnType = new ParameterizedTypeReference<java.util.List<Pet>>() {};
         return apiClient.invokeAPI("/pet/findByStatus", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
@@ -204,12 +198,12 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid tag value
      * @param tags Tags to filter by (required)
-     * @return Set&lt;Pet&gt;
+     * @return java.util.Set&lt;Pet&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      * @deprecated
      */
     @Deprecated
-    public Set<Pet> findPetsByTags(Set<String> tags) throws RestClientException {
+    public java.util.Set<Pet> findPetsByTags(java.util.Set<String> tags) throws RestClientException {
         return findPetsByTagsWithHttpInfo(tags).getBody();
     }
 
@@ -219,12 +213,12 @@ public class PetApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid tag value
      * @param tags Tags to filter by (required)
-     * @return ResponseEntity&lt;Set&lt;Pet&gt;&gt;
+     * @return ResponseEntity&lt;java.util.Set&lt;Pet&gt;&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      * @deprecated
      */
     @Deprecated
-    public ResponseEntity<Set<Pet>> findPetsByTagsWithHttpInfo(Set<String> tags) throws RestClientException {
+    public ResponseEntity<java.util.Set<Pet>> findPetsByTagsWithHttpInfo(java.util.Set<String> tags) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'tags' is set
@@ -249,7 +243,7 @@ public class PetApi {
 
         String[] localVarAuthNames = new String[] { "petstore_auth" };
 
-        ParameterizedTypeReference<Set<Pet>> localReturnType = new ParameterizedTypeReference<Set<Pet>>() {};
+        ParameterizedTypeReference<java.util.Set<Pet>> localReturnType = new ParameterizedTypeReference<java.util.Set<Pet>>() {};
         return apiClient.invokeAPI("/pet/findByTags", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
