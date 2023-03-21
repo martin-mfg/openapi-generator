@@ -22,7 +22,7 @@ import io.virtualan.annotation.ApiVirtual;
 import io.virtualan.annotation.VirtualService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -68,10 +68,11 @@ public interface StoreApi {
         method = RequestMethod.DELETE,
         value = "/store/order/{order_id}"
     )
-    default ResponseEntity<Void> deleteOrder(
+    @ResponseStatus()
+    default Void deleteOrder(
         @Parameter(name = "order_id", description = "ID of the order that needs to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("order_id") String orderId
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -102,10 +103,11 @@ public interface StoreApi {
         value = "/store/inventory",
         produces = { "application/json" }
     )
-    default ResponseEntity<Map<String, Integer>> getInventory(
+    @ResponseStatus()
+    default Map<String, Integer> getInventory(
         
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -139,7 +141,8 @@ public interface StoreApi {
         value = "/store/order/{order_id}",
         produces = { "application/xml", "application/json" }
     )
-    default ResponseEntity<Order> getOrderById(
+    @ResponseStatus()
+    default Order getOrderById(
         @Min(1L) @Max(5L) @Parameter(name = "order_id", description = "ID of pet that needs to be fetched", required = true, in = ParameterIn.PATH) @PathVariable("order_id") Long orderId
     ) {
         getRequest().ifPresent(request -> {
@@ -156,7 +159,7 @@ public interface StoreApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -189,7 +192,8 @@ public interface StoreApi {
         produces = { "application/xml", "application/json" },
         consumes = { "application/json" }
     )
-    default ResponseEntity<Order> placeOrder(
+    @ResponseStatus()
+    default Order placeOrder(
         @Parameter(name = "Order", description = "order placed for purchasing the pet", required = true) @Valid @RequestBody Order order
     ) {
         getRequest().ifPresent(request -> {
@@ -206,7 +210,7 @@ public interface StoreApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

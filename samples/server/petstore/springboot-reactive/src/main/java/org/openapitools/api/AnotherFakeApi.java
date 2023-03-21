@@ -8,7 +8,7 @@ package org.openapitools.api;
 import springfox.documentation.annotations.ApiIgnore;
 import org.openapitools.model.Client;
 import io.swagger.annotations.*;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -55,7 +55,8 @@ public interface AnotherFakeApi {
         produces = { "application/json" },
         consumes = { "application/json" }
     )
-    default Mono<ResponseEntity<Client>> call123testSpecialTags(
+    @ResponseStatus()
+    default Mono<Client> call123testSpecialTags(
         @ApiParam(value = "client model", required = true) @Valid @RequestBody Mono<Client> client,
         @ApiIgnore final ServerWebExchange exchange
     ) {

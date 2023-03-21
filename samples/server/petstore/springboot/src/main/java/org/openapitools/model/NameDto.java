@@ -33,22 +33,6 @@ public class NameDto {
 
   private Integer _123Number;
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link NameDto#NameDto(Integer)}
-   */
-  @Deprecated
-  public NameDto() {
-    super();
-  }
-
-  /**
-   * Constructor with only required parameters
-   */
-  public NameDto(Integer name) {
-    this.name = name;
-  }
-
   public NameDto name(Integer name) {
     this.name = name;
     return this;

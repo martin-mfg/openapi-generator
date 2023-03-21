@@ -59,7 +59,7 @@ open class PetsAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func showPetById(petId: String, apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnyCodable?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func showPetById(petId: String, apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ data: PrefixAnyCodableSuffix?, _ error: Error?) -> Void)) -> RequestTask {
         return showPetByIdWithRequestBuilder(petId: petId).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -74,9 +74,9 @@ open class PetsAPI {
      Info for a specific pet
      - GET /pets/{petId}
      - parameter petId: (path) The id of the pet to retrieve 
-     - returns: RequestBuilder<AnyCodable> 
+     - returns: RequestBuilder<PrefixAnyCodableSuffix> 
      */
-    open class func showPetByIdWithRequestBuilder(petId: String) -> RequestBuilder<AnyCodable> {
+    open class func showPetByIdWithRequestBuilder(petId: String) -> RequestBuilder<PrefixAnyCodableSuffix> {
         var localVariablePath = "/pets/{petId}"
         let petIdPreEscape = "\(APIHelper.mapValueToPathItem(petId))"
         let petIdPostEscape = petIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -92,7 +92,7 @@ open class PetsAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<AnyCodable>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<PrefixAnyCodableSuffix>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: false)
     }

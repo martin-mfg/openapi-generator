@@ -118,7 +118,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// The format to use to serialize DateTime
         /// </summary>
-        public static string DateTimeFormat { get; set; } = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK";
+        public static string DateTimeFormat { get; set; } = "";
 
         /// <summary>
         /// A Json reader.

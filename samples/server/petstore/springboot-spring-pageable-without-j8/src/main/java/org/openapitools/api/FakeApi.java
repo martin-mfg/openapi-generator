@@ -19,7 +19,7 @@ import org.openapitools.model.XmlItem;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -62,10 +62,11 @@ public interface FakeApi {
         value = "/fake/create_xml_item",
         consumes = { "application/xml", "application/xml; charset=utf-8", "application/xml; charset=utf-16", "text/xml", "text/xml; charset=utf-8", "text/xml; charset=utf-16" }
     )
-    default ResponseEntity<Void> createXmlItem(
+    @ResponseStatus()
+    default Void createXmlItem(
         @ApiParam(value = "XmlItem Body", required = true) @Valid @RequestBody XmlItem xmlItem
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -92,10 +93,11 @@ public interface FakeApi {
         value = "/fake/outer/boolean",
         produces = { "*/*" }
     )
-    default ResponseEntity<Boolean> fakeOuterBooleanSerialize(
+    @ResponseStatus()
+    default Boolean fakeOuterBooleanSerialize(
         @ApiParam(value = "Input boolean as post body") @Valid @RequestBody(required = false) Boolean body
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -122,7 +124,8 @@ public interface FakeApi {
         value = "/fake/outer/composite",
         produces = { "*/*" }
     )
-    default ResponseEntity<OuterComposite> fakeOuterCompositeSerialize(
+    @ResponseStatus()
+    default OuterComposite fakeOuterCompositeSerialize(
         @ApiParam(value = "Input composite as post body") @Valid @RequestBody(required = false) OuterComposite body
     ) {
         getRequest().ifPresent(request -> {
@@ -134,7 +137,7 @@ public interface FakeApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -161,10 +164,11 @@ public interface FakeApi {
         value = "/fake/outer/number",
         produces = { "*/*" }
     )
-    default ResponseEntity<BigDecimal> fakeOuterNumberSerialize(
+    @ResponseStatus()
+    default BigDecimal fakeOuterNumberSerialize(
         @ApiParam(value = "Input number as post body") @Valid @RequestBody(required = false) BigDecimal body
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -191,10 +195,11 @@ public interface FakeApi {
         value = "/fake/outer/string",
         produces = { "*/*" }
     )
-    default ResponseEntity<String> fakeOuterStringSerialize(
+    @ResponseStatus()
+    default String fakeOuterStringSerialize(
         @ApiParam(value = "Input string as post body") @Valid @RequestBody(required = false) String body
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -220,10 +225,11 @@ public interface FakeApi {
         value = "/fake/body-with-file-schema",
         consumes = { "application/json" }
     )
-    default ResponseEntity<Void> testBodyWithFileSchema(
+    @ResponseStatus()
+    default Void testBodyWithFileSchema(
         @ApiParam(value = "", required = true) @Valid @RequestBody FileSchemaTestClass body
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -249,11 +255,12 @@ public interface FakeApi {
         value = "/fake/body-with-query-params",
         consumes = { "application/json" }
     )
-    default ResponseEntity<Void> testBodyWithQueryParams(
+    @ResponseStatus()
+    default Void testBodyWithQueryParams(
         @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "query", required = true) String query,
         @ApiParam(value = "", required = true) @Valid @RequestBody User body
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -281,7 +288,8 @@ public interface FakeApi {
         produces = { "application/json" },
         consumes = { "application/json" }
     )
-    default ResponseEntity<Client> testClientModel(
+    @ResponseStatus()
+    default Client testClientModel(
         @ApiParam(value = "client model", required = true) @Valid @RequestBody Client body
     ) {
         getRequest().ifPresent(request -> {
@@ -293,7 +301,7 @@ public interface FakeApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -337,7 +345,8 @@ public interface FakeApi {
         value = "/fake",
         consumes = { "application/x-www-form-urlencoded" }
     )
-    default ResponseEntity<Void> testEndpointParameters(
+    @ResponseStatus()
+    default Void testEndpointParameters(
         @ApiParam(value = "None", required = true) @Valid @RequestParam(value = "number", required = true) BigDecimal number,
         @ApiParam(value = "None", required = true) @Valid @RequestParam(value = "double", required = true) Double _double,
         @ApiParam(value = "None", required = true) @Valid @RequestParam(value = "pattern_without_delimiter", required = true) String patternWithoutDelimiter,
@@ -353,7 +362,7 @@ public interface FakeApi {
         @ApiParam(value = "None") @Valid @RequestParam(value = "password", required = false) String password,
         @ApiParam(value = "None") @Valid @RequestParam(value = "callback", required = false) String paramCallback
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -388,7 +397,8 @@ public interface FakeApi {
         value = "/fake",
         consumes = { "application/x-www-form-urlencoded" }
     )
-    default ResponseEntity<Void> testEnumParameters(
+    @ResponseStatus()
+    default Void testEnumParameters(
         @ApiParam(value = "Header parameter enum test (string array)", allowableValues = ">, $") @RequestHeader(value = "enum_header_string_array", required = false) List<String> enumHeaderStringArray,
         @ApiParam(value = "Header parameter enum test (string)", allowableValues = "_abc, -efg, (xyz)", defaultValue = "-efg") @RequestHeader(value = "enum_header_string", required = false, defaultValue = "-efg") String enumHeaderString,
         @ApiParam(value = "Query parameter enum test (string array)", allowableValues = ">, $") @Valid @RequestParam(value = "enum_query_string_array", required = false) List<String> enumQueryStringArray,
@@ -398,7 +408,7 @@ public interface FakeApi {
         @ApiParam(value = "Form parameter enum test (string array)", allowableValues = ">, $", defaultValue = "$") @Valid @RequestPart(value = "enum_form_string_array", required = false) List<String> enumFormStringArray,
         @ApiParam(value = "Form parameter enum test (string)", allowableValues = "_abc, -efg, (xyz)", defaultValue = "-efg") @Valid @RequestParam(value = "enum_form_string", required = false) String enumFormString
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -428,7 +438,8 @@ public interface FakeApi {
         method = RequestMethod.DELETE,
         value = "/fake"
     )
-    default ResponseEntity<Void> testGroupParameters(
+    @ResponseStatus()
+    default Void testGroupParameters(
         @NotNull @ApiParam(value = "Required String in group parameters", required = true) @Valid @RequestParam(value = "required_string_group", required = true) Integer requiredStringGroup,
         @NotNull @ApiParam(value = "Required Boolean in group parameters", required = true) @RequestHeader(value = "required_boolean_group", required = true) Boolean requiredBooleanGroup,
         @NotNull @ApiParam(value = "Required Integer in group parameters", required = true) @Valid @RequestParam(value = "required_int64_group", required = true) Long requiredInt64Group,
@@ -436,7 +447,7 @@ public interface FakeApi {
         @ApiParam(value = "Boolean in group parameters") @RequestHeader(value = "boolean_group", required = false) Boolean booleanGroup,
         @ApiParam(value = "Integer in group parameters") @Valid @RequestParam(value = "int64_group", required = false) Long int64Group
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -461,10 +472,11 @@ public interface FakeApi {
         value = "/fake/inline-additionalProperties",
         consumes = { "application/json" }
     )
-    default ResponseEntity<Void> testInlineAdditionalProperties(
+    @ResponseStatus()
+    default Void testInlineAdditionalProperties(
         @ApiParam(value = "request body", required = true) @Valid @RequestBody Map<String, String> param
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -490,11 +502,12 @@ public interface FakeApi {
         value = "/fake/jsonFormData",
         consumes = { "application/x-www-form-urlencoded" }
     )
-    default ResponseEntity<Void> testJsonFormData(
+    @ResponseStatus()
+    default Void testJsonFormData(
         @ApiParam(value = "field1", required = true) @Valid @RequestParam(value = "param", required = true) String param,
         @ApiParam(value = "field2", required = true) @Valid @RequestParam(value = "param2", required = true) String param2
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -523,14 +536,15 @@ public interface FakeApi {
         method = RequestMethod.PUT,
         value = "/fake/test-query-parameters"
     )
-    default ResponseEntity<Void> testQueryParameterCollectionFormat(
+    @ResponseStatus()
+    default Void testQueryParameterCollectionFormat(
         @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "pipe", required = true) List<String> pipe,
         @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "ioutil", required = true) List<String> ioutil,
         @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "http", required = true) List<String> http,
         @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "url", required = true) List<String> url,
         @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "context", required = true) List<String> context
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -565,7 +579,8 @@ public interface FakeApi {
         produces = { "application/json" },
         consumes = { "multipart/form-data" }
     )
-    default ResponseEntity<ModelApiResponse> uploadFileWithRequiredFile(
+    @ResponseStatus()
+    default ModelApiResponse uploadFileWithRequiredFile(
         @ApiParam(value = "ID of pet to update", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "file to upload", required = true) @RequestPart(value = "requiredFile", required = true) MultipartFile requiredFile,
         @ApiParam(value = "Additional data to pass to server") @Valid @RequestParam(value = "additionalMetadata", required = false) String additionalMetadata
@@ -579,7 +594,7 @@ public interface FakeApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

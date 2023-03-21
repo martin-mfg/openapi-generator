@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -61,7 +61,8 @@ public interface StoreApi {
         method = RequestMethod.DELETE,
         value = "/store/order/{orderId}"
     )
-    CompletableFuture<ResponseEntity<Void>> deleteOrder(
+    @ResponseStatus()
+    CompletableFuture<Void> deleteOrder(
         @Parameter(name = "orderId", description = "ID of the order that needs to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("orderId") String orderId
     );
 
@@ -91,7 +92,8 @@ public interface StoreApi {
         value = "/store/inventory",
         produces = "application/json"
     )
-    CompletableFuture<ResponseEntity<Map<String, Integer>>> getInventory(
+    @ResponseStatus()
+    CompletableFuture<Map<String, Integer>> getInventory(
         
     );
 
@@ -124,7 +126,8 @@ public interface StoreApi {
         value = "/store/order/{orderId}",
         produces = "application/json"
     )
-    CompletableFuture<ResponseEntity<Order>> getOrderById(
+    @ResponseStatus()
+    CompletableFuture<Order> getOrderById(
         @Min(1L) @Max(5L) @Parameter(name = "orderId", description = "ID of pet that needs to be fetched", required = true, in = ParameterIn.PATH) @PathVariable("orderId") Long orderId
     );
 
@@ -156,7 +159,8 @@ public interface StoreApi {
         produces = "application/json",
         consumes = "application/json"
     )
-    CompletableFuture<ResponseEntity<Order>> placeOrder(
+    @ResponseStatus()
+    CompletableFuture<Order> placeOrder(
         @Parameter(name = "Order", description = "order placed for purchasing the pet", required = true) @Valid @RequestBody Order order
     );
 

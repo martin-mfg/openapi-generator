@@ -3,7 +3,6 @@ package org.openapitools.api;
 import org.openapitools.model.ModelApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -32,7 +31,7 @@ public interface VersioningApiDelegate {
      * @return successful operation (status code 200)
      * @see VersioningApi#versioningHeaders
      */
-    default ResponseEntity<ModelApiResponse> versioningHeaders(String versionWithDefaultValue,
+    default ModelApiResponse versioningHeaders(String versionWithDefaultValue,
         String versionNoDefaultValue,
         Long petId) {
         getRequest().ifPresent(request -> {
@@ -44,7 +43,7 @@ public interface VersioningApiDelegate {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -59,7 +58,7 @@ public interface VersioningApiDelegate {
      * @return successful operation (status code 200)
      * @see VersioningApi#versioningMix
      */
-    default ResponseEntity<ModelApiResponse> versioningMix(String versionWithDefaultValueQuery,
+    default ModelApiResponse versioningMix(String versionWithDefaultValueQuery,
         String versionNoDefaultValueQuery,
         String versionWithDefaultValueHeader,
         String versionNoDefaultValueHeader,
@@ -73,7 +72,7 @@ public interface VersioningApiDelegate {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -86,7 +85,7 @@ public interface VersioningApiDelegate {
      * @return successful operation (status code 200)
      * @see VersioningApi#versioningQueryParams
      */
-    default ResponseEntity<ModelApiResponse> versioningQueryParams(String versionWithDefaultValue,
+    default ModelApiResponse versioningQueryParams(String versionWithDefaultValue,
         String versionNoDefaultValue,
         Long petId) {
         getRequest().ifPresent(request -> {
@@ -98,7 +97,7 @@ public interface VersioningApiDelegate {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

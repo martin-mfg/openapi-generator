@@ -9,7 +9,7 @@ import java.util.Map;
 import org.openapitools.model.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -42,10 +42,11 @@ public interface StoreApi {
         method = RequestMethod.DELETE,
         value = "/store/order/{orderId}"
     )
-    default ResponseEntity<Void> deleteOrder(
+    @ResponseStatus()
+    default Void deleteOrder(
          @PathVariable("orderId") String orderId
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -61,10 +62,11 @@ public interface StoreApi {
         value = "/store/inventory",
         produces = { "application/json" }
     )
-    default ResponseEntity<Map<String, Integer>> getInventory(
+    @ResponseStatus()
+    default Map<String, Integer> getInventory(
         
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -83,7 +85,8 @@ public interface StoreApi {
         value = "/store/order/{orderId}",
         produces = { "application/xml", "application/json" }
     )
-    default ResponseEntity<Order> getOrderById(
+    @ResponseStatus()
+    default Order getOrderById(
         @Min(1L) @Max(5L)  @PathVariable("orderId") Long orderId
     ) {
         getRequest().ifPresent(request -> {
@@ -100,7 +103,7 @@ public interface StoreApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -119,7 +122,8 @@ public interface StoreApi {
         produces = { "application/xml", "application/json" },
         consumes = { "application/json" }
     )
-    default ResponseEntity<Order> placeOrder(
+    @ResponseStatus()
+    default Order placeOrder(
          @Valid @RequestBody Order order
     ) {
         getRequest().ifPresent(request -> {
@@ -136,7 +140,7 @@ public interface StoreApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

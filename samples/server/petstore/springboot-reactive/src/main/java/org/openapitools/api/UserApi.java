@@ -10,7 +10,7 @@ import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 import io.swagger.annotations.*;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -55,7 +55,8 @@ public interface UserApi {
         value = "/user",
         consumes = { "application/json" }
     )
-    default Mono<ResponseEntity<Void>> createUser(
+    @ResponseStatus()
+    default Mono<Void> createUser(
         @ApiParam(value = "Created user object", required = true) @Valid @RequestBody Mono<User> user,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -84,7 +85,8 @@ public interface UserApi {
         value = "/user/createWithArray",
         consumes = { "application/json" }
     )
-    default Mono<ResponseEntity<Void>> createUsersWithArrayInput(
+    @ResponseStatus()
+    default Mono<Void> createUsersWithArrayInput(
         @ApiParam(value = "List of user object", required = true) @Valid @RequestBody Flux<User> user,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -113,7 +115,8 @@ public interface UserApi {
         value = "/user/createWithList",
         consumes = { "application/json" }
     )
-    default Mono<ResponseEntity<Void>> createUsersWithListInput(
+    @ResponseStatus()
+    default Mono<Void> createUsersWithListInput(
         @ApiParam(value = "List of user object", required = true) @Valid @RequestBody Flux<User> user,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -143,7 +146,8 @@ public interface UserApi {
         method = RequestMethod.DELETE,
         value = "/user/{username}"
     )
-    default Mono<ResponseEntity<Void>> deleteUser(
+    @ResponseStatus()
+    default Mono<Void> deleteUser(
         @ApiParam(value = "The name that needs to be deleted", required = true) @PathVariable("username") String username,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -177,7 +181,8 @@ public interface UserApi {
         value = "/user/{username}",
         produces = { "application/xml", "application/json" }
     )
-    default Mono<ResponseEntity<User>> getUserByName(
+    @ResponseStatus()
+    default Mono<User> getUserByName(
         @ApiParam(value = "The name that needs to be fetched. Use user1 for testing.", required = true) @PathVariable("username") String username,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -210,7 +215,8 @@ public interface UserApi {
         value = "/user/login",
         produces = { "application/xml", "application/json" }
     )
-    default Mono<ResponseEntity<String>> loginUser(
+    @ResponseStatus()
+    default Mono<String> loginUser(
         @NotNull @ApiParam(value = "The user name for login", required = true) @Valid @RequestParam(value = "username", required = true) String username,
         @NotNull @ApiParam(value = "The password for login in clear text", required = true) @Valid @RequestParam(value = "password", required = true) String password,
         @ApiIgnore final ServerWebExchange exchange
@@ -238,7 +244,8 @@ public interface UserApi {
         method = RequestMethod.GET,
         value = "/user/logout"
     )
-    default Mono<ResponseEntity<Void>> logoutUser(
+    @ResponseStatus()
+    default Mono<Void> logoutUser(
         @ApiIgnore final ServerWebExchange exchange
     ) {
         return getDelegate().logoutUser(exchange);
@@ -269,7 +276,8 @@ public interface UserApi {
         value = "/user/{username}",
         consumes = { "application/json" }
     )
-    default Mono<ResponseEntity<Void>> updateUser(
+    @ResponseStatus()
+    default Mono<Void> updateUser(
         @ApiParam(value = "name that need to be deleted", required = true) @PathVariable("username") String username,
         @ApiParam(value = "Updated user object", required = true) @Valid @RequestBody Mono<User> user,
         @ApiIgnore final ServerWebExchange exchange

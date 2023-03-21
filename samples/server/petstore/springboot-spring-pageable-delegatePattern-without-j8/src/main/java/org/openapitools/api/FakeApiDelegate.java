@@ -13,7 +13,6 @@ import org.openapitools.model.User;
 import org.openapitools.model.XmlItem;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -41,8 +40,8 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#createXmlItem
      */
-    default ResponseEntity<Void> createXmlItem(XmlItem xmlItem) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Void createXmlItem(XmlItem xmlItem) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -54,8 +53,8 @@ public interface FakeApiDelegate {
      * @return Output boolean (status code 200)
      * @see FakeApi#fakeOuterBooleanSerialize
      */
-    default ResponseEntity<Boolean> fakeOuterBooleanSerialize(Boolean body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Boolean fakeOuterBooleanSerialize(Boolean body) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -67,7 +66,7 @@ public interface FakeApiDelegate {
      * @return Output composite (status code 200)
      * @see FakeApi#fakeOuterCompositeSerialize
      */
-    default ResponseEntity<OuterComposite> fakeOuterCompositeSerialize(OuterComposite body) {
+    default OuterComposite fakeOuterCompositeSerialize(OuterComposite body) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
@@ -77,7 +76,7 @@ public interface FakeApiDelegate {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -89,8 +88,8 @@ public interface FakeApiDelegate {
      * @return Output number (status code 200)
      * @see FakeApi#fakeOuterNumberSerialize
      */
-    default ResponseEntity<BigDecimal> fakeOuterNumberSerialize(BigDecimal body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default BigDecimal fakeOuterNumberSerialize(BigDecimal body) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -102,8 +101,8 @@ public interface FakeApiDelegate {
      * @return Output string (status code 200)
      * @see FakeApi#fakeOuterStringSerialize
      */
-    default ResponseEntity<String> fakeOuterStringSerialize(String body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default String fakeOuterStringSerialize(String body) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -115,8 +114,8 @@ public interface FakeApiDelegate {
      * @return Success (status code 200)
      * @see FakeApi#testBodyWithFileSchema
      */
-    default ResponseEntity<Void> testBodyWithFileSchema(FileSchemaTestClass body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Void testBodyWithFileSchema(FileSchemaTestClass body) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -128,9 +127,9 @@ public interface FakeApiDelegate {
      * @return Success (status code 200)
      * @see FakeApi#testBodyWithQueryParams
      */
-    default ResponseEntity<Void> testBodyWithQueryParams(String query,
+    default Void testBodyWithQueryParams(String query,
         User body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -142,7 +141,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#testClientModel
      */
-    default ResponseEntity<Client> testClientModel(Client body) {
+    default Client testClientModel(Client body) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -152,7 +151,7 @@ public interface FakeApiDelegate {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -178,7 +177,7 @@ public interface FakeApiDelegate {
      *         or User not found (status code 404)
      * @see FakeApi#testEndpointParameters
      */
-    default ResponseEntity<Void> testEndpointParameters(BigDecimal number,
+    default Void testEndpointParameters(BigDecimal number,
         Double _double,
         String patternWithoutDelimiter,
         byte[] _byte,
@@ -192,7 +191,7 @@ public interface FakeApiDelegate {
         OffsetDateTime dateTime,
         String password,
         String paramCallback) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -212,7 +211,7 @@ public interface FakeApiDelegate {
      *         or Not found (status code 404)
      * @see FakeApi#testEnumParameters
      */
-    default ResponseEntity<Void> testEnumParameters(List<String> enumHeaderStringArray,
+    default Void testEnumParameters(List<String> enumHeaderStringArray,
         String enumHeaderString,
         List<String> enumQueryStringArray,
         String enumQueryString,
@@ -220,7 +219,7 @@ public interface FakeApiDelegate {
         Double enumQueryDouble,
         List<String> enumFormStringArray,
         String enumFormString) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -237,13 +236,13 @@ public interface FakeApiDelegate {
      * @return Something wrong (status code 400)
      * @see FakeApi#testGroupParameters
      */
-    default ResponseEntity<Void> testGroupParameters(Integer requiredStringGroup,
+    default Void testGroupParameters(Integer requiredStringGroup,
         Boolean requiredBooleanGroup,
         Long requiredInt64Group,
         Integer stringGroup,
         Boolean booleanGroup,
         Long int64Group) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -254,8 +253,8 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#testInlineAdditionalProperties
      */
-    default ResponseEntity<Void> testInlineAdditionalProperties(Map<String, String> param) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Void testInlineAdditionalProperties(Map<String, String> param) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -267,9 +266,9 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#testJsonFormData
      */
-    default ResponseEntity<Void> testJsonFormData(String param,
+    default Void testJsonFormData(String param,
         String param2) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -285,12 +284,12 @@ public interface FakeApiDelegate {
      * @return Success (status code 200)
      * @see FakeApi#testQueryParameterCollectionFormat
      */
-    default ResponseEntity<Void> testQueryParameterCollectionFormat(List<String> pipe,
+    default Void testQueryParameterCollectionFormat(List<String> pipe,
         List<String> ioutil,
         List<String> http,
         List<String> url,
         List<String> context) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -303,7 +302,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#uploadFileWithRequiredFile
      */
-    default ResponseEntity<ModelApiResponse> uploadFileWithRequiredFile(Long petId,
+    default ModelApiResponse uploadFileWithRequiredFile(Long petId,
         MultipartFile requiredFile,
         String additionalMetadata) {
         getRequest().ifPresent(request -> {
@@ -315,7 +314,7 @@ public interface FakeApiDelegate {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

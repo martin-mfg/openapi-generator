@@ -15,7 +15,6 @@ import org.openapitools.model.User;
 import org.openapitools.model.XmlItem;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ServerWebExchange;
@@ -47,7 +46,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#createXmlItem
      */
-    default Mono<ResponseEntity<Void>> createXmlItem(Mono<XmlItem> xmlItem,
+    default Mono<Void> createXmlItem(Mono<XmlItem> xmlItem,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -63,7 +62,7 @@ public interface FakeApiDelegate {
      * @return Output boolean (status code 200)
      * @see FakeApi#fakeOuterBooleanSerialize
      */
-    default Mono<ResponseEntity<Boolean>> fakeOuterBooleanSerialize(Mono<Boolean> body,
+    default Mono<Boolean> fakeOuterBooleanSerialize(Mono<Boolean> body,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -79,7 +78,7 @@ public interface FakeApiDelegate {
      * @return Output composite (status code 200)
      * @see FakeApi#fakeOuterCompositeSerialize
      */
-    default Mono<ResponseEntity<OuterComposite>> fakeOuterCompositeSerialize(Mono<OuterComposite> outerComposite,
+    default Mono<OuterComposite> fakeOuterCompositeSerialize(Mono<OuterComposite> outerComposite,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -102,7 +101,7 @@ public interface FakeApiDelegate {
      * @return Output number (status code 200)
      * @see FakeApi#fakeOuterNumberSerialize
      */
-    default Mono<ResponseEntity<BigDecimal>> fakeOuterNumberSerialize(Mono<BigDecimal> body,
+    default Mono<BigDecimal> fakeOuterNumberSerialize(Mono<BigDecimal> body,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -118,7 +117,7 @@ public interface FakeApiDelegate {
      * @return Output string (status code 200)
      * @see FakeApi#fakeOuterStringSerialize
      */
-    default Mono<ResponseEntity<String>> fakeOuterStringSerialize(Mono<String> body,
+    default Mono<String> fakeOuterStringSerialize(Mono<String> body,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -133,7 +132,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#responseObjectDifferentNames
      */
-    default Mono<ResponseEntity<ResponseObjectWithDifferentFieldNames>> responseObjectDifferentNames(Long petId,
+    default Mono<ResponseObjectWithDifferentFieldNames> responseObjectDifferentNames(Long petId,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -156,7 +155,7 @@ public interface FakeApiDelegate {
      * @return Success (status code 200)
      * @see FakeApi#testBodyWithFileSchema
      */
-    default Mono<ResponseEntity<Void>> testBodyWithFileSchema(Mono<FileSchemaTestClass> fileSchemaTestClass,
+    default Mono<Void> testBodyWithFileSchema(Mono<FileSchemaTestClass> fileSchemaTestClass,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -172,7 +171,7 @@ public interface FakeApiDelegate {
      * @return Success (status code 200)
      * @see FakeApi#testBodyWithQueryParams
      */
-    default Mono<ResponseEntity<Void>> testBodyWithQueryParams(String query,
+    default Mono<Void> testBodyWithQueryParams(String query,
         Mono<User> user,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
@@ -189,7 +188,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#testClientModel
      */
-    default Mono<ResponseEntity<Client>> testClientModel(Mono<Client> client,
+    default Mono<Client> testClientModel(Mono<Client> client,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -226,7 +225,7 @@ public interface FakeApiDelegate {
      *         or User not found (status code 404)
      * @see FakeApi#testEndpointParameters
      */
-    default Mono<ResponseEntity<Void>> testEndpointParameters(BigDecimal number,
+    default Mono<Void> testEndpointParameters(BigDecimal number,
         Double _double,
         String patternWithoutDelimiter,
         byte[] _byte,
@@ -263,7 +262,7 @@ public interface FakeApiDelegate {
      *         or Not found (status code 404)
      * @see FakeApi#testEnumParameters
      */
-    default Mono<ResponseEntity<Void>> testEnumParameters(List<String> enumHeaderStringArray,
+    default Mono<Void> testEnumParameters(List<String> enumHeaderStringArray,
         String enumHeaderString,
         List<String> enumQueryStringArray,
         String enumQueryString,
@@ -291,7 +290,7 @@ public interface FakeApiDelegate {
      * @return Something wrong (status code 400)
      * @see FakeApi#testGroupParameters
      */
-    default Mono<ResponseEntity<Void>> testGroupParameters(Integer requiredStringGroup,
+    default Mono<Void> testGroupParameters(Integer requiredStringGroup,
         Boolean requiredBooleanGroup,
         Long requiredInt64Group,
         Integer stringGroup,
@@ -312,7 +311,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#testInlineAdditionalProperties
      */
-    default Mono<ResponseEntity<Void>> testInlineAdditionalProperties(Mono<Map<String, String>> requestBody,
+    default Mono<Void> testInlineAdditionalProperties(Mono<Map<String, String>> requestBody,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
@@ -329,7 +328,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#testJsonFormData
      */
-    default Mono<ResponseEntity<Void>> testJsonFormData(String param,
+    default Mono<Void> testJsonFormData(String param,
         String param2,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
@@ -349,7 +348,7 @@ public interface FakeApiDelegate {
      * @return Success (status code 200)
      * @see FakeApi#testQueryParameterCollectionFormat
      */
-    default Mono<ResponseEntity<Void>> testQueryParameterCollectionFormat(List<String> pipe,
+    default Mono<Void> testQueryParameterCollectionFormat(List<String> pipe,
         List<String> http,
         List<String> url,
         List<String> context,
@@ -370,7 +369,7 @@ public interface FakeApiDelegate {
      * @return successful operation (status code 200)
      * @see FakeApi#uploadFileWithRequiredFile
      */
-    default Mono<ResponseEntity<ModelApiResponse>> uploadFileWithRequiredFile(Long petId,
+    default Mono<ModelApiResponse> uploadFileWithRequiredFile(Long petId,
         Flux<Part> requiredFile,
         String additionalMetadata,
         ServerWebExchange exchange) {

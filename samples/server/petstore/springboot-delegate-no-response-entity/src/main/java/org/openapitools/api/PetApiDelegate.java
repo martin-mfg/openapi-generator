@@ -4,6 +4,7 @@ import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -32,7 +33,7 @@ public interface PetApiDelegate {
      *         or Invalid input (status code 405)
      * @see PetApi#addPet
      */
-    default Pet addPet(Pet pet) {
+    default ResponseEntity<Pet> addPet(Pet pet) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -47,7 +48,7 @@ public interface PetApiDelegate {
                 }
             }
         });
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -60,9 +61,9 @@ public interface PetApiDelegate {
      * @return Invalid pet value (status code 400)
      * @see PetApi#deletePet
      */
-    default Void deletePet(Long petId,
+    default ResponseEntity<Void> deletePet(Long petId,
         String apiKey) {
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -75,7 +76,7 @@ public interface PetApiDelegate {
      *         or Invalid status value (status code 400)
      * @see PetApi#findPetsByStatus
      */
-    default List<Pet> findPetsByStatus(List<String> status) {
+    default ResponseEntity<List<Pet>> findPetsByStatus(List<String> status) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -90,7 +91,7 @@ public interface PetApiDelegate {
                 }
             }
         });
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -105,7 +106,7 @@ public interface PetApiDelegate {
      * @see PetApi#findPetsByTags
      */
     @Deprecated
-    default List<Pet> findPetsByTags(List<String> tags) {
+    default ResponseEntity<List<Pet>> findPetsByTags(List<String> tags) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -120,7 +121,7 @@ public interface PetApiDelegate {
                 }
             }
         });
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -134,7 +135,7 @@ public interface PetApiDelegate {
      *         or Pet not found (status code 404)
      * @see PetApi#getPetById
      */
-    default Pet getPetById(Long petId) {
+    default ResponseEntity<Pet> getPetById(Long petId) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -149,7 +150,7 @@ public interface PetApiDelegate {
                 }
             }
         });
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -166,7 +167,7 @@ public interface PetApiDelegate {
      * @see <a href="http://petstore.swagger.io/v2/doc/updatePet">Update an existing pet Documentation</a>
      * @see PetApi#updatePet
      */
-    default Pet updatePet(Pet pet) {
+    default ResponseEntity<Pet> updatePet(Pet pet) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -181,7 +182,7 @@ public interface PetApiDelegate {
                 }
             }
         });
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -195,10 +196,10 @@ public interface PetApiDelegate {
      * @return Invalid input (status code 405)
      * @see PetApi#updatePetWithForm
      */
-    default Void updatePetWithForm(Long petId,
+    default ResponseEntity<Void> updatePetWithForm(Long petId,
         String name,
         String status) {
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -212,7 +213,7 @@ public interface PetApiDelegate {
      * @return successful operation (status code 200)
      * @see PetApi#uploadFile
      */
-    default ModelApiResponse uploadFile(Long petId,
+    default ResponseEntity<ModelApiResponse> uploadFile(Long petId,
         String additionalMetadata,
         MultipartFile file) {
         getRequest().ifPresent(request -> {
@@ -224,7 +225,7 @@ public interface PetApiDelegate {
                 }
             }
         });
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 

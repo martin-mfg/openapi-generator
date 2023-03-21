@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import java.io.File;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 import org.openapitools.api.PetApiService;

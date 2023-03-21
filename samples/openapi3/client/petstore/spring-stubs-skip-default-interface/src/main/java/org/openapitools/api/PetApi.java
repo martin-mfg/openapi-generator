@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -68,7 +68,8 @@ public interface PetApi {
         produces = "application/json",
         consumes = "application/json"
     )
-    ResponseEntity<Pet> addPet(
+    @ResponseStatus()
+    Pet addPet(
         @Parameter(name = "Pet", description = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody Pet pet
     ) throws Exception;
 
@@ -97,7 +98,8 @@ public interface PetApi {
         method = RequestMethod.DELETE,
         value = "/pet/{petId}"
     )
-    ResponseEntity<Void> deletePet(
+    @ResponseStatus()
+    Void deletePet(
         @Parameter(name = "petId", description = "Pet id to delete", required = true, in = ParameterIn.PATH) @PathVariable("petId") Long petId,
         @Parameter(name = "api_key", description = "", in = ParameterIn.HEADER) @RequestHeader(value = "api_key", required = false) String apiKey
     ) throws Exception;
@@ -132,7 +134,8 @@ public interface PetApi {
         value = "/pet/findByStatus",
         produces = "application/json"
     )
-    ResponseEntity<List<Pet>> findPetsByStatus(
+    @ResponseStatus()
+    List<Pet> findPetsByStatus(
         @NotNull @Parameter(name = "status", description = "Status values that need to be considered for filter", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "status", required = true) List<String> status
     ) throws Exception;
 
@@ -168,7 +171,8 @@ public interface PetApi {
         value = "/pet/findByTags",
         produces = "application/json"
     )
-    ResponseEntity<List<Pet>> findPetsByTags(
+    @ResponseStatus()
+    List<Pet> findPetsByTags(
         @NotNull @Parameter(name = "tags", description = "Tags to filter by", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "tags", required = true) List<String> tags
     ) throws Exception;
 
@@ -204,7 +208,8 @@ public interface PetApi {
         value = "/pet/{petId}",
         produces = "application/json"
     )
-    ResponseEntity<Pet> getPetById(
+    @ResponseStatus()
+    Pet getPetById(
         @Parameter(name = "petId", description = "ID of pet to return", required = true, in = ParameterIn.PATH) @PathVariable("petId") Long petId
     ) throws Exception;
 
@@ -246,7 +251,8 @@ public interface PetApi {
         produces = "application/json",
         consumes = "application/json"
     )
-    ResponseEntity<Pet> updatePet(
+    @ResponseStatus()
+    Pet updatePet(
         @Parameter(name = "Pet", description = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody Pet pet
     ) throws Exception;
 
@@ -277,7 +283,8 @@ public interface PetApi {
         value = "/pet/{petId}",
         consumes = "application/x-www-form-urlencoded"
     )
-    ResponseEntity<Void> updatePetWithForm(
+    @ResponseStatus()
+    Void updatePetWithForm(
         @Parameter(name = "petId", description = "ID of pet that needs to be updated", required = true, in = ParameterIn.PATH) @PathVariable("petId") Long petId,
         @Parameter(name = "name", description = "Updated name of the pet") @Valid @RequestParam(value = "name", required = false) String name,
         @Parameter(name = "status", description = "Updated status of the pet") @Valid @RequestParam(value = "status", required = false) String status
@@ -313,7 +320,8 @@ public interface PetApi {
         produces = "application/json",
         consumes = "multipart/form-data"
     )
-    ResponseEntity<ModelApiResponse> uploadFile(
+    @ResponseStatus()
+    ModelApiResponse uploadFile(
         @Parameter(name = "petId", description = "ID of pet to update", required = true, in = ParameterIn.PATH) @PathVariable("petId") Long petId,
         @Parameter(name = "additionalMetadata", description = "Additional data to pass to server") @Valid @RequestParam(value = "additionalMetadata", required = false) String additionalMetadata,
         @Parameter(name = "file", description = "file to upload") @RequestPart(value = "file", required = false) MultipartFile file

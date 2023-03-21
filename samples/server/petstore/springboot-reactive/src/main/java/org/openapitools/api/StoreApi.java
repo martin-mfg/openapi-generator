@@ -9,7 +9,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import java.util.Map;
 import org.openapitools.model.Order;
 import io.swagger.annotations.*;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -55,7 +55,8 @@ public interface StoreApi {
         method = RequestMethod.DELETE,
         value = "/store/order/{order_id}"
     )
-    default Mono<ResponseEntity<Void>> deleteOrder(
+    @ResponseStatus()
+    default Mono<Void> deleteOrder(
         @ApiParam(value = "ID of the order that needs to be deleted", required = true) @PathVariable("order_id") String orderId,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -88,7 +89,8 @@ public interface StoreApi {
         value = "/store/inventory",
         produces = { "application/json" }
     )
-    default Mono<ResponseEntity<Map<String, Integer>>> getInventory(
+    @ResponseStatus()
+    default Mono<Map<String, Integer>> getInventory(
         @ApiIgnore final ServerWebExchange exchange
     ) {
         return getDelegate().getInventory(exchange);
@@ -121,7 +123,8 @@ public interface StoreApi {
         value = "/store/order/{order_id}",
         produces = { "application/xml", "application/json" }
     )
-    default Mono<ResponseEntity<Order>> getOrderById(
+    @ResponseStatus()
+    default Mono<Order> getOrderById(
         @Min(1L) @Max(5L) @ApiParam(value = "ID of pet that needs to be fetched", required = true) @PathVariable("order_id") Long orderId,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -154,7 +157,8 @@ public interface StoreApi {
         produces = { "application/xml", "application/json" },
         consumes = { "application/json" }
     )
-    default Mono<ResponseEntity<Order>> placeOrder(
+    @ResponseStatus()
+    default Mono<Order> placeOrder(
         @ApiParam(value = "order placed for purchasing the pet", required = true) @Valid @RequestBody Mono<Order> order,
         @ApiIgnore final ServerWebExchange exchange
     ) {

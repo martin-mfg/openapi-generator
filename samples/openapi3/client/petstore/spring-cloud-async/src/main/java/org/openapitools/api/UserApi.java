@@ -21,7 +21,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -64,7 +64,8 @@ public interface UserApi {
         value = "/user",
         consumes = "application/json"
     )
-    CompletableFuture<ResponseEntity<Void>> createUser(
+    @ResponseStatus()
+    CompletableFuture<Void> createUser(
         @Parameter(name = "User", description = "Created user object", required = true) @Valid @RequestBody User user
     );
 
@@ -93,7 +94,8 @@ public interface UserApi {
         value = "/user/createWithArray",
         consumes = "application/json"
     )
-    CompletableFuture<ResponseEntity<Void>> createUsersWithArrayInput(
+    @ResponseStatus()
+    CompletableFuture<Void> createUsersWithArrayInput(
         @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody List<User> user
     );
 
@@ -122,7 +124,8 @@ public interface UserApi {
         value = "/user/createWithList",
         consumes = "application/json"
     )
-    CompletableFuture<ResponseEntity<Void>> createUsersWithListInput(
+    @ResponseStatus()
+    CompletableFuture<Void> createUsersWithListInput(
         @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody List<User> user
     );
 
@@ -152,7 +155,8 @@ public interface UserApi {
         method = RequestMethod.DELETE,
         value = "/user/{username}"
     )
-    CompletableFuture<ResponseEntity<Void>> deleteUser(
+    @ResponseStatus()
+    CompletableFuture<Void> deleteUser(
         @Parameter(name = "username", description = "The name that needs to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("username") String username
     );
 
@@ -185,7 +189,8 @@ public interface UserApi {
         value = "/user/{username}",
         produces = "application/json"
     )
-    CompletableFuture<ResponseEntity<User>> getUserByName(
+    @ResponseStatus()
+    CompletableFuture<User> getUserByName(
         @Parameter(name = "username", description = "The name that needs to be fetched. Use user1 for testing.", required = true, in = ParameterIn.PATH) @PathVariable("username") String username
     );
 
@@ -217,7 +222,8 @@ public interface UserApi {
         value = "/user/login",
         produces = "application/json"
     )
-    CompletableFuture<ResponseEntity<String>> loginUser(
+    @ResponseStatus()
+    CompletableFuture<String> loginUser(
         @NotNull @Pattern(regexp = "^[a-zA-Z0-9]+[a-zA-Z0-9\\.\\-_]*[a-zA-Z0-9]+$") @Parameter(name = "username", description = "The user name for login", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "username", required = true) String username,
         @NotNull @Parameter(name = "password", description = "The password for login in clear text", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "password", required = true) String password
     );
@@ -245,7 +251,8 @@ public interface UserApi {
         method = RequestMethod.GET,
         value = "/user/logout"
     )
-    CompletableFuture<ResponseEntity<Void>> logoutUser(
+    @ResponseStatus()
+    CompletableFuture<Void> logoutUser(
         
     );
 
@@ -277,7 +284,8 @@ public interface UserApi {
         value = "/user/{username}",
         consumes = "application/json"
     )
-    CompletableFuture<ResponseEntity<Void>> updateUser(
+    @ResponseStatus()
+    CompletableFuture<Void> updateUser(
         @Parameter(name = "username", description = "name that need to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("username") String username,
         @Parameter(name = "User", description = "Updated user object", required = true) @Valid @RequestBody User user
     );

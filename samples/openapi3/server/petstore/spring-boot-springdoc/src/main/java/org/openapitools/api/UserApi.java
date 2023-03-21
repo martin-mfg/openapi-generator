@@ -21,7 +21,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -67,10 +67,11 @@ public interface UserApi {
         value = "/user",
         consumes = { "application/json" }
     )
-    default ResponseEntity<Void> createUser(
+    @ResponseStatus()
+    default Void createUser(
         @Parameter(name = "User", description = "Created user object", required = true) @Valid @RequestBody User user
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -99,10 +100,11 @@ public interface UserApi {
         value = "/user/createWithArray",
         consumes = { "application/json" }
     )
-    default ResponseEntity<Void> createUsersWithArrayInput(
+    @ResponseStatus()
+    default Void createUsersWithArrayInput(
         @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody List<User> user
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -131,10 +133,11 @@ public interface UserApi {
         value = "/user/createWithList",
         consumes = { "application/json" }
     )
-    default ResponseEntity<Void> createUsersWithListInput(
+    @ResponseStatus()
+    default Void createUsersWithListInput(
         @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody List<User> user
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -164,10 +167,11 @@ public interface UserApi {
         method = RequestMethod.DELETE,
         value = "/user/{username}"
     )
-    default ResponseEntity<Void> deleteUser(
+    @ResponseStatus()
+    default Void deleteUser(
         @Parameter(name = "username", description = "The name that needs to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("username") String username
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -200,7 +204,8 @@ public interface UserApi {
         value = "/user/{username}",
         produces = { "application/xml", "application/json" }
     )
-    default ResponseEntity<User> getUserByName(
+    @ResponseStatus()
+    default User getUserByName(
         @Parameter(name = "username", description = "The name that needs to be fetched. Use user1 for testing.", required = true, in = ParameterIn.PATH) @PathVariable("username") String username
     ) {
         getRequest().ifPresent(request -> {
@@ -217,7 +222,7 @@ public interface UserApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -249,11 +254,12 @@ public interface UserApi {
         value = "/user/login",
         produces = { "application/xml", "application/json" }
     )
-    default ResponseEntity<String> loginUser(
+    @ResponseStatus()
+    default String loginUser(
         @NotNull @Pattern(regexp = "^[a-zA-Z0-9]+[a-zA-Z0-9\\.\\-_]*[a-zA-Z0-9]+$") @Parameter(name = "username", description = "The user name for login", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "username", required = true) String username,
         @NotNull @Parameter(name = "password", description = "The password for login in clear text", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "password", required = true) String password
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -280,10 +286,11 @@ public interface UserApi {
         method = RequestMethod.GET,
         value = "/user/logout"
     )
-    default ResponseEntity<Void> logoutUser(
+    @ResponseStatus()
+    default Void logoutUser(
         
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -315,11 +322,12 @@ public interface UserApi {
         value = "/user/{username}",
         consumes = { "application/json" }
     )
-    default ResponseEntity<Void> updateUser(
+    @ResponseStatus()
+    default Void updateUser(
         @Parameter(name = "username", description = "name that need to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("username") String username,
         @Parameter(name = "User", description = "Updated user object", required = true) @Valid @RequestBody User user
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

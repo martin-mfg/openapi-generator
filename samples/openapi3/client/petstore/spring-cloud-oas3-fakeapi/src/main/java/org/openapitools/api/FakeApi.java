@@ -28,7 +28,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -67,7 +67,8 @@ public interface FakeApi {
         value = "/fake/create_xml_item",
         consumes = "application/xml"
     )
-    ResponseEntity<Void> createXmlItem(
+    @ResponseStatus()
+    Void createXmlItem(
         @Parameter(name = "XmlItem", description = "XmlItem Body", required = true) @Valid @RequestBody XmlItem xmlItem
     );
 
@@ -95,7 +96,8 @@ public interface FakeApi {
         produces = "*/*",
         consumes = "application/json"
     )
-    ResponseEntity<Boolean> fakeOuterBooleanSerialize(
+    @ResponseStatus()
+    Boolean fakeOuterBooleanSerialize(
         @Parameter(name = "body", description = "Input boolean as post body") @Valid @RequestBody(required = false) Boolean body
     );
 
@@ -123,7 +125,8 @@ public interface FakeApi {
         produces = "*/*",
         consumes = "application/json"
     )
-    ResponseEntity<OuterComposite> fakeOuterCompositeSerialize(
+    @ResponseStatus()
+    OuterComposite fakeOuterCompositeSerialize(
         @Parameter(name = "OuterComposite", description = "Input composite as post body") @Valid @RequestBody(required = false) OuterComposite outerComposite
     );
 
@@ -151,7 +154,8 @@ public interface FakeApi {
         produces = "*/*",
         consumes = "application/json"
     )
-    ResponseEntity<BigDecimal> fakeOuterNumberSerialize(
+    @ResponseStatus()
+    BigDecimal fakeOuterNumberSerialize(
         @Parameter(name = "body", description = "Input number as post body") @Valid @RequestBody(required = false) BigDecimal body
     );
 
@@ -179,7 +183,8 @@ public interface FakeApi {
         produces = "*/*",
         consumes = "application/json"
     )
-    ResponseEntity<String> fakeOuterStringSerialize(
+    @ResponseStatus()
+    String fakeOuterStringSerialize(
         @Parameter(name = "body", description = "Input string as post body") @Valid @RequestBody(required = false) String body
     );
 
@@ -204,7 +209,8 @@ public interface FakeApi {
         value = "/fake/body-with-file-schema",
         consumes = "application/json"
     )
-    ResponseEntity<Void> testBodyWithFileSchema(
+    @ResponseStatus()
+    Void testBodyWithFileSchema(
         @Parameter(name = "FileSchemaTestClass", description = "", required = true) @Valid @RequestBody FileSchemaTestClass fileSchemaTestClass
     );
 
@@ -228,7 +234,8 @@ public interface FakeApi {
         value = "/fake/body-with-query-params",
         consumes = "application/json"
     )
-    ResponseEntity<Void> testBodyWithQueryParams(
+    @ResponseStatus()
+    Void testBodyWithQueryParams(
         @NotNull @Parameter(name = "query", description = "", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "query", required = true) String query,
         @Parameter(name = "User", description = "", required = true) @Valid @RequestBody User user
     );
@@ -258,7 +265,8 @@ public interface FakeApi {
         produces = "application/json",
         consumes = "application/json"
     )
-    ResponseEntity<Client> testClientModel(
+    @ResponseStatus()
+    Client testClientModel(
         @Parameter(name = "Client", description = "client model", required = true) @Valid @RequestBody Client client
     );
 
@@ -302,7 +310,8 @@ public interface FakeApi {
         value = "/fake",
         consumes = "application/x-www-form-urlencoded"
     )
-    ResponseEntity<Void> testEndpointParameters(
+    @ResponseStatus()
+    Void testEndpointParameters(
         @Parameter(name = "number", description = "None", required = true) @Valid @RequestParam(value = "number", required = true) BigDecimal number,
         @Parameter(name = "double", description = "None", required = true) @Valid @RequestParam(value = "double", required = true) Double _double,
         @Parameter(name = "pattern_without_delimiter", description = "None", required = true) @Valid @RequestParam(value = "pattern_without_delimiter", required = true) String patternWithoutDelimiter,
@@ -350,7 +359,8 @@ public interface FakeApi {
         value = "/fake",
         consumes = "application/x-www-form-urlencoded"
     )
-    ResponseEntity<Void> testEnumParameters(
+    @ResponseStatus()
+    Void testEnumParameters(
         @Parameter(name = "enum_header_string_array", description = "Header parameter enum test (string array)", in = ParameterIn.HEADER) @RequestHeader(value = "enum_header_string_array", required = false) List<String> enumHeaderStringArray,
         @Parameter(name = "enum_header_string", description = "Header parameter enum test (string)", in = ParameterIn.HEADER) @RequestHeader(value = "enum_header_string", required = false, defaultValue = "-efg") String enumHeaderString,
         @Parameter(name = "enum_query_string_array", description = "Query parameter enum test (string array)", in = ParameterIn.QUERY) @Valid @RequestParam(value = "enum_query_string_array", required = false) List<String> enumQueryStringArray,
@@ -387,7 +397,8 @@ public interface FakeApi {
         method = RequestMethod.DELETE,
         value = "/fake"
     )
-    ResponseEntity<Void> testGroupParameters(
+    @ResponseStatus()
+    Void testGroupParameters(
         @NotNull @Parameter(name = "required_string_group", description = "Required String in group parameters", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "required_string_group", required = true) Integer requiredStringGroup,
         @NotNull @Parameter(name = "required_boolean_group", description = "Required Boolean in group parameters", required = true, in = ParameterIn.HEADER) @RequestHeader(value = "required_boolean_group", required = true) Boolean requiredBooleanGroup,
         @NotNull @Parameter(name = "required_int64_group", description = "Required Integer in group parameters", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "required_int64_group", required = true) Long requiredInt64Group,
@@ -418,7 +429,8 @@ public interface FakeApi {
         value = "/fake/inline-additionalProperties",
         consumes = "application/json"
     )
-    ResponseEntity<Void> testInlineAdditionalProperties(
+    @ResponseStatus()
+    Void testInlineAdditionalProperties(
         @Parameter(name = "request_body", description = "request body", required = true) @Valid @RequestBody Map<String, String> requestBody
     );
 
@@ -445,7 +457,8 @@ public interface FakeApi {
         value = "/fake/jsonFormData",
         consumes = "application/x-www-form-urlencoded"
     )
-    ResponseEntity<Void> testJsonFormData(
+    @ResponseStatus()
+    Void testJsonFormData(
         @Parameter(name = "param", description = "field1", required = true) @Valid @RequestParam(value = "param", required = true) String param,
         @Parameter(name = "param2", description = "field2", required = true) @Valid @RequestParam(value = "param2", required = true) String param2
     );
@@ -473,7 +486,8 @@ public interface FakeApi {
         method = RequestMethod.PUT,
         value = "/fake/test-query-parameters"
     )
-    ResponseEntity<Void> testQueryParameterCollectionFormat(
+    @ResponseStatus()
+    Void testQueryParameterCollectionFormat(
         @NotNull @Parameter(name = "pipe", description = "", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "pipe", required = true) List<String> pipe,
         @NotNull @Parameter(name = "http", description = "", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "http", required = true) List<String> http,
         @NotNull @Parameter(name = "url", description = "", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "url", required = true) List<String> url,

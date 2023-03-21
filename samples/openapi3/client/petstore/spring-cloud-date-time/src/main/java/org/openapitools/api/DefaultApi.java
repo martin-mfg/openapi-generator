@@ -21,7 +21,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -58,7 +58,8 @@ public interface DefaultApi {
         method = RequestMethod.GET,
         value = "/thingy/{date}"
     )
-    ResponseEntity<Void> get(
+    @ResponseStatus()
+    Void get(
         @Parameter(name = "date", description = "A date path parameter", required = true, in = ParameterIn.PATH) @PathVariable("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
         @NotNull @Parameter(name = "dateTime", description = "A date-time query parameter", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "dateTime", required = true, defaultValue = "1973-12-19T03:39:57-08:00") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) OffsetDateTime dateTime,
         @NotNull @Parameter(name = "X-Order-Date", description = "A date header parameter", required = true, in = ParameterIn.HEADER) @RequestHeader(value = "X-Order-Date", required = true, defaultValue = "1974-01-01") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate xOrderDate,
@@ -86,7 +87,8 @@ public interface DefaultApi {
         value = "/thingy/{date}",
         consumes = "application/x-www-form-urlencoded"
     )
-    ResponseEntity<Void> updatePetWithForm(
+    @ResponseStatus()
+    Void updatePetWithForm(
         @Parameter(name = "date", description = "A date path parameter", required = true, in = ParameterIn.PATH) @PathVariable("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date,
         @Parameter(name = "visitDate", description = "Updated last visit timestamp") @Valid @RequestParam(value = "visitDate", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) OffsetDateTime visitDate
     );

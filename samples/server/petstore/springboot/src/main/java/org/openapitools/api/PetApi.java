@@ -11,7 +11,7 @@ import java.util.Set;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -62,10 +62,11 @@ public interface PetApi {
         value = "/pet",
         consumes = { "application/json", "application/xml" }
     )
-    default ResponseEntity<Void> addPet(
+    @ResponseStatus()
+    default Void addPet(
         @ApiParam(value = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody PetDto petDto
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -99,11 +100,12 @@ public interface PetApi {
         method = RequestMethod.DELETE,
         value = "/pet/{petId}"
     )
-    default ResponseEntity<Void> deletePet(
+    @ResponseStatus()
+    default Void deletePet(
         @ApiParam(value = "Pet id to delete", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "") @RequestHeader(value = "api_key", required = false) String apiKey
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -139,7 +141,8 @@ public interface PetApi {
         value = "/pet/findByStatus",
         produces = { "application/xml", "application/json" }
     )
-    default ResponseEntity<List<PetDto>> findPetsByStatus(
+    @ResponseStatus()
+    default List<PetDto> findPetsByStatus(
         @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) List<String> status
     ) {
         getRequest().ifPresent(request -> {
@@ -156,7 +159,7 @@ public interface PetApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -194,7 +197,8 @@ public interface PetApi {
         value = "/pet/findByTags",
         produces = { "application/xml", "application/json" }
     )
-    default ResponseEntity<Set<PetDto>> findPetsByTags(
+    @ResponseStatus()
+    default Set<PetDto> findPetsByTags(
         @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) Set<String> tags
     ) {
         getRequest().ifPresent(request -> {
@@ -211,7 +215,7 @@ public interface PetApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -245,7 +249,8 @@ public interface PetApi {
         value = "/pet/{petId}",
         produces = { "application/xml", "application/json" }
     )
-    default ResponseEntity<PetDto> getPetById(
+    @ResponseStatus()
+    default PetDto getPetById(
         @ApiParam(value = "ID of pet to return", required = true) @PathVariable("petId") Long petId
     ) {
         getRequest().ifPresent(request -> {
@@ -262,7 +267,7 @@ public interface PetApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -300,10 +305,11 @@ public interface PetApi {
         value = "/pet",
         consumes = { "application/json", "application/xml" }
     )
-    default ResponseEntity<Void> updatePet(
+    @ResponseStatus()
+    default Void updatePet(
         @ApiParam(value = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody PetDto petDto
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -337,12 +343,13 @@ public interface PetApi {
         value = "/pet/{petId}",
         consumes = { "application/x-www-form-urlencoded" }
     )
-    default ResponseEntity<Void> updatePetWithForm(
+    @ResponseStatus()
+    default Void updatePetWithForm(
         @ApiParam(value = "ID of pet that needs to be updated", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "Updated name of the pet") @Valid @RequestParam(value = "name", required = false) String name,
         @ApiParam(value = "Updated status of the pet") @Valid @RequestParam(value = "status", required = false) String status
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -378,7 +385,8 @@ public interface PetApi {
         produces = { "application/json" },
         consumes = { "multipart/form-data" }
     )
-    default ResponseEntity<ApiResponseDto> uploadFile(
+    @ResponseStatus()
+    default ApiResponseDto uploadFile(
         @ApiParam(value = "ID of pet to update", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "Additional data to pass to server") @Valid @RequestParam(value = "additionalMetadata", required = false) String additionalMetadata,
         @ApiParam(value = "file to upload") @RequestPart(value = "file", required = false) MultipartFile file
@@ -392,7 +400,7 @@ public interface PetApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

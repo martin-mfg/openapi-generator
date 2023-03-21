@@ -117,7 +117,7 @@ namespace Org.OpenAPITools.Model
                     {
                         case "count":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                count = utf8JsonReader.GetDecimal();
+                                count = utf8JsonReader.GetInt32();
                             break;
                         default:
                             break;

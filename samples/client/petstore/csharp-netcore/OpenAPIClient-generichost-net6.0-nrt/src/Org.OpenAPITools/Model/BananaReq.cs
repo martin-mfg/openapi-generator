@@ -120,7 +120,7 @@ namespace Org.OpenAPITools.Model
                     {
                         case "lengthCm":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                lengthCm = utf8JsonReader.GetDecimal();
+                                lengthCm = utf8JsonReader.GetInt32();
                             break;
                         case "sweet":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)

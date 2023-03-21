@@ -30,9 +30,11 @@ import javax.annotation.Generated;
 @Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen")
 public class Tag {
 
+  @JsonProperty("id")
   @JacksonXmlProperty(localName = "id")
   private Long id;
 
+  @JsonProperty("name")
   @JacksonXmlProperty(localName = "name")
   private String name;
 
@@ -47,7 +49,6 @@ public class Tag {
   */
   
   @Schema(name = "id", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("id")
   public Long getId() {
     return id;
   }
@@ -67,7 +68,6 @@ public class Tag {
   */
   
   @Schema(name = "name", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("name")
   public String getName() {
     return name;
   }

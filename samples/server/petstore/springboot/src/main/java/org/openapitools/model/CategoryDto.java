@@ -28,22 +28,6 @@ public class CategoryDto {
 
   private String name = "default-name";
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link CategoryDto#CategoryDto(String)}
-   */
-  @Deprecated
-  public CategoryDto() {
-    super();
-  }
-
-  /**
-   * Constructor with only required parameters
-   */
-  public CategoryDto(String name) {
-    this.name = name;
-  }
-
   public CategoryDto id(Long id) {
     this.id = id;
     return this;

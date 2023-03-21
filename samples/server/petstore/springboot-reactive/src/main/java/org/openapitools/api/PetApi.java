@@ -10,7 +10,7 @@ import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 import java.util.Set;
 import io.swagger.annotations.*;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -63,7 +63,8 @@ public interface PetApi {
         value = "/pet",
         consumes = { "application/json", "application/xml" }
     )
-    default Mono<ResponseEntity<Void>> addPet(
+    @ResponseStatus()
+    default Mono<Void> addPet(
         @ApiParam(value = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody Mono<Pet> pet,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -100,7 +101,8 @@ public interface PetApi {
         method = RequestMethod.DELETE,
         value = "/pet/{petId}"
     )
-    default Mono<ResponseEntity<Void>> deletePet(
+    @ResponseStatus()
+    default Mono<Void> deletePet(
         @ApiParam(value = "Pet id to delete", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "") @RequestHeader(value = "api_key", required = false) String apiKey,
         @ApiIgnore final ServerWebExchange exchange
@@ -140,7 +142,8 @@ public interface PetApi {
         value = "/pet/findByStatus",
         produces = { "application/xml", "application/json" }
     )
-    default Mono<ResponseEntity<Flux<Pet>>> findPetsByStatus(
+    @ResponseStatus()
+    default Mono<Flux<Pet>> findPetsByStatus(
         @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) List<String> status,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -181,7 +184,8 @@ public interface PetApi {
         value = "/pet/findByTags",
         produces = { "application/xml", "application/json" }
     )
-    default Mono<ResponseEntity<Flux<Pet>>> findPetsByTags(
+    @ResponseStatus()
+    default Mono<Flux<Pet>> findPetsByTags(
         @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) Set<String> tags,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -218,7 +222,8 @@ public interface PetApi {
         value = "/pet/{petId}",
         produces = { "application/xml", "application/json" }
     )
-    default Mono<ResponseEntity<Pet>> getPetById(
+    @ResponseStatus()
+    default Mono<Pet> getPetById(
         @ApiParam(value = "ID of pet to return", required = true) @PathVariable("petId") Long petId,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -259,7 +264,8 @@ public interface PetApi {
         value = "/pet",
         consumes = { "application/json", "application/xml" }
     )
-    default Mono<ResponseEntity<Void>> updatePet(
+    @ResponseStatus()
+    default Mono<Void> updatePet(
         @ApiParam(value = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody Mono<Pet> pet,
         @ApiIgnore final ServerWebExchange exchange
     ) {
@@ -296,7 +302,8 @@ public interface PetApi {
         value = "/pet/{petId}",
         consumes = { "application/x-www-form-urlencoded" }
     )
-    default Mono<ResponseEntity<Void>> updatePetWithForm(
+    @ResponseStatus()
+    default Mono<Void> updatePetWithForm(
         @ApiParam(value = "ID of pet that needs to be updated", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "Updated name of the pet") @Valid @RequestParam(value = "name", required = false) String name,
         @ApiParam(value = "Updated status of the pet") @Valid @RequestParam(value = "status", required = false) String status,
@@ -337,7 +344,8 @@ public interface PetApi {
         produces = { "application/json" },
         consumes = { "multipart/form-data" }
     )
-    default Mono<ResponseEntity<ModelApiResponse>> uploadFile(
+    @ResponseStatus()
+    default Mono<ModelApiResponse> uploadFile(
         @ApiParam(value = "ID of pet to update", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "Additional data to pass to server") @Valid @RequestParam(value = "additionalMetadata", required = false) String additionalMetadata,
         @ApiParam(value = "file to upload") @RequestPart(value = "file", required = false) Flux<Part> file,

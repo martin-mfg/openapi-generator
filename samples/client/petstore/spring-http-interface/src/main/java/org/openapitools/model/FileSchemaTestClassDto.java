@@ -27,7 +27,7 @@ public class FileSchemaTestClassDto {
   private FileDto file;
 
   
-  private List<FileDto> files;
+  private List<FileDto> files = new ArrayList<>();
 
   public FileSchemaTestClassDto file(FileDto file) {
     this.file = file;

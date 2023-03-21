@@ -129,37 +129,7 @@ public class ApiClient extends JavaTimeFormatter {
   ));
   protected Integer serverIndex = 0;
   protected Map<String, String> serverVariables = null;
-  protected Map<String, List<ServerConfiguration>> operationServers;
-
-  {
-    Map<String, List<ServerConfiguration>> operationServers = new LinkedHashMap<>();
-    operationServers.put("PetApi.addPet", new ArrayList<>(Arrays.asList(
-            new ServerConfiguration(
-                    "http://petstore.swagger.io/v2",
-                    "No description provided",
-                    new LinkedHashMap<>()
-            ),
-            new ServerConfiguration(
-                    "http://path-server-test.petstore.local/v2",
-                    "No description provided",
-                    new LinkedHashMap<>()
-            )
-    )));
-    operationServers.put("PetApi.updatePet", new ArrayList<>(Arrays.asList(
-            new ServerConfiguration(
-                    "http://petstore.swagger.io/v2",
-                    "No description provided",
-                    new LinkedHashMap<>()
-            ),
-            new ServerConfiguration(
-                    "http://path-server-test.petstore.local/v2",
-                    "No description provided",
-                    new LinkedHashMap<>()
-            )
-    )));
-    this.operationServers = operationServers;
-  }
-
+  protected Map<String, List<ServerConfiguration>> operationServers = new LinkedHashMap<>();
   protected Map<String, Integer> operationServerIndex = new HashMap<>();
   protected Map<String, Map<String, String>> operationServerVariables = new HashMap<>();
   protected boolean debugging = false;

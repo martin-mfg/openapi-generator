@@ -42,7 +42,7 @@ public class PetDto {
   private Set<String> photoUrls = new LinkedHashSet<>();
 
   @Valid
-  private List<@Valid TagDto> tags;
+  private List<@Valid TagDto> tags = new ArrayList<>();
 
   /**
    * pet status in the store
@@ -82,23 +82,6 @@ public class PetDto {
   }
 
   private StatusEnum status;
-
-  /**
-   * Default constructor
-   * @deprecated Use {@link PetDto#PetDto(String, Set<String>)}
-   */
-  @Deprecated
-  public PetDto() {
-    super();
-  }
-
-  /**
-   * Constructor with only required parameters
-   */
-  public PetDto(String name, Set<String> photoUrls) {
-    this.name = name;
-    this.photoUrls = photoUrls;
-  }
 
   public PetDto id(Long id) {
     this.id = id;

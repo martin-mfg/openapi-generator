@@ -9,7 +9,7 @@ import org.openapitools.model.ModelApiResponse;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -55,7 +55,8 @@ public interface VersioningApi {
         produces = { "*/*" },
         headers = { "VersionWithDefaultValue=V1", "VersionNoDefaultValue" } 
     )
-    default ResponseEntity<ModelApiResponse> versioningHeaders(
+    @ResponseStatus()
+    default ModelApiResponse versioningHeaders(
         @NotNull @ApiParam(value = "", required = true, defaultValue = "V1") @RequestHeader(value = "VersionWithDefaultValue", required = true, defaultValue = "V1") String versionWithDefaultValue,
         @NotNull @ApiParam(value = "", required = true) @RequestHeader(value = "VersionNoDefaultValue", required = true) String versionNoDefaultValue,
         @ApiParam(value = "ID of pet to update", required = true) @PathVariable("petId") Long petId
@@ -69,7 +70,7 @@ public interface VersioningApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -101,7 +102,8 @@ public interface VersioningApi {
         headers = { "VersionWithDefaultValueHeader=V1", "VersionNoDefaultValueHeader" } ,
         params = { "VersionWithDefaultValueQuery=V1", "VersionNoDefaultValueQuery" } 
     )
-    default ResponseEntity<ModelApiResponse> versioningMix(
+    @ResponseStatus()
+    default ModelApiResponse versioningMix(
         @NotNull @ApiParam(value = "", required = true, defaultValue = "V1") @Valid @RequestParam(value = "VersionWithDefaultValueQuery", required = true, defaultValue = "V1") String versionWithDefaultValueQuery,
         @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "VersionNoDefaultValueQuery", required = true) String versionNoDefaultValueQuery,
         @NotNull @ApiParam(value = "", required = true, defaultValue = "V1") @RequestHeader(value = "VersionWithDefaultValueHeader", required = true, defaultValue = "V1") String versionWithDefaultValueHeader,
@@ -117,7 +119,7 @@ public interface VersioningApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -146,7 +148,8 @@ public interface VersioningApi {
         produces = { "*/*" },
         params = { "VersionWithDefaultValue=V1", "VersionNoDefaultValue" } 
     )
-    default ResponseEntity<ModelApiResponse> versioningQueryParams(
+    @ResponseStatus()
+    default ModelApiResponse versioningQueryParams(
         @NotNull @ApiParam(value = "", required = true, defaultValue = "V1") @Valid @RequestParam(value = "VersionWithDefaultValue", required = true, defaultValue = "V1") String versionWithDefaultValue,
         @NotNull @ApiParam(value = "", required = true) @Valid @RequestParam(value = "VersionNoDefaultValue", required = true) String versionNoDefaultValue,
         @ApiParam(value = "ID of pet to update", required = true) @PathVariable("petId") Long petId
@@ -160,7 +163,7 @@ public interface VersioningApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

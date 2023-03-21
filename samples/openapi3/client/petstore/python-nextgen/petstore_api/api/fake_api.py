@@ -23,7 +23,7 @@ from datetime import date, datetime
 
 from pydantic import Field, StrictBool, StrictFloat, StrictInt, StrictStr, confloat, conint, conlist, constr, validator
 
-from typing import Any, Dict, Optional
+from typing import Dict, Optional
 
 from petstore_api.models.client import Client
 from petstore_api.models.file_schema_test_class import FileSchemaTestClass
@@ -53,7 +53,7 @@ class FakeApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def fake_any_type_request_body(self, body : Optional[Dict[str, Any]] = None, **kwargs) -> None:  # noqa: E501
+    def fake_any_type_request_body(self, body : Optional[Dict[str, StrictStr]] = None, **kwargs) -> None:  # noqa: E501
         """test any type request body  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -83,7 +83,7 @@ class FakeApi(object):
         return self.fake_any_type_request_body_with_http_info(body, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def fake_any_type_request_body_with_http_info(self, body : Optional[Dict[str, Any]] = None, **kwargs):  # noqa: E501
+    def fake_any_type_request_body_with_http_info(self, body : Optional[Dict[str, StrictStr]] = None, **kwargs):  # noqa: E501
         """test any type request body  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an

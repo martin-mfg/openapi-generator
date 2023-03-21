@@ -8,7 +8,7 @@ package org.openapitools.api;
 import java.util.Map;
 import org.openapitools.model.Order;
 import io.swagger.annotations.*;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -50,8 +50,7 @@ public interface StoreApi {
         method = RequestMethod.DELETE,
         value = "/store/order/{orderId}"
     )
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    default Void deleteOrder(
+    default ResponseEntity<Void> deleteOrder(
         @ApiParam(value = "ID of the order that needs to be deleted", required = true) @PathVariable("orderId") String orderId
     ) {
         return getDelegate().deleteOrder(orderId);
@@ -83,8 +82,7 @@ public interface StoreApi {
         value = "/store/inventory",
         produces = { "application/json" }
     )
-    @ResponseStatus(HttpStatus.OK)
-    default Map<String, Integer> getInventory(
+    default ResponseEntity<Map<String, Integer>> getInventory(
         
     ) {
         return getDelegate().getInventory();
@@ -117,8 +115,7 @@ public interface StoreApi {
         value = "/store/order/{orderId}",
         produces = { "application/xml", "application/json" }
     )
-    @ResponseStatus(HttpStatus.OK)
-    default Order getOrderById(
+    default ResponseEntity<Order> getOrderById(
         @Min(1L) @Max(5L) @ApiParam(value = "ID of pet that needs to be fetched", required = true) @PathVariable("orderId") Long orderId
     ) {
         return getDelegate().getOrderById(orderId);
@@ -150,8 +147,7 @@ public interface StoreApi {
         produces = { "application/xml", "application/json" },
         consumes = { "application/json" }
     )
-    @ResponseStatus(HttpStatus.OK)
-    default Order placeOrder(
+    default ResponseEntity<Order> placeOrder(
         @ApiParam(value = "order placed for purchasing the pet", required = true) @Valid @RequestBody Order order
     ) {
         return getDelegate().placeOrder(order);

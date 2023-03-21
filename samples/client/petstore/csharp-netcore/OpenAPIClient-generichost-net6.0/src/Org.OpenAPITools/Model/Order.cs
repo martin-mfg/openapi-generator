@@ -191,7 +191,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// The format to use to serialize ShipDate
         /// </summary>
-        public static string ShipDateFormat { get; set; } = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK";
+        public static string ShipDateFormat { get; set; } = "";
 
         /// <summary>
         /// A Json reader.

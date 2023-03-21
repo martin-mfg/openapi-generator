@@ -53,7 +53,7 @@ No authorization required
 
 # **showPetById**
 ```swift
-    open class func showPetById(petId: String, completion: @escaping (_ data: AnyCodable?, _ error: Error?) -> Void)
+    open class func showPetById(petId: String, completion: @escaping (_ data: PrefixAnyCodableSuffix?, _ error: Error?) -> Void)
 ```
 
 Info for a specific pet
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**AnyCodable**
+[**PrefixAnyCodableSuffix**](PrefixAnyCodableSuffix.md)
 
 ### Authorization
 

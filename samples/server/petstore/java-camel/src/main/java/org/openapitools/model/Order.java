@@ -33,15 +33,19 @@ import javax.annotation.Generated;
 @Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen")
 public class Order {
 
+  @JsonProperty("id")
   @JacksonXmlProperty(localName = "id")
   private Long id;
 
+  @JsonProperty("petId")
   @JacksonXmlProperty(localName = "petId")
   private Long petId;
 
+  @JsonProperty("quantity")
   @JacksonXmlProperty(localName = "quantity")
   private Integer quantity;
 
+  @JsonProperty("shipDate")
   @JacksonXmlProperty(localName = "shipDate")
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private Date shipDate;
@@ -83,9 +87,11 @@ public class Order {
     }
   }
 
+  @JsonProperty("status")
   @JacksonXmlProperty(localName = "status")
   private StatusEnum status;
 
+  @JsonProperty("complete")
   @JacksonXmlProperty(localName = "complete")
   private Boolean complete = false;
 
@@ -100,7 +106,6 @@ public class Order {
   */
   
   @Schema(name = "id", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("id")
   public Long getId() {
     return id;
   }
@@ -120,7 +125,6 @@ public class Order {
   */
   
   @Schema(name = "petId", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("petId")
   public Long getPetId() {
     return petId;
   }
@@ -140,7 +144,6 @@ public class Order {
   */
   
   @Schema(name = "quantity", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("quantity")
   public Integer getQuantity() {
     return quantity;
   }
@@ -160,7 +163,6 @@ public class Order {
   */
   @Valid 
   @Schema(name = "shipDate", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("shipDate")
   public Date getShipDate() {
     return shipDate;
   }
@@ -180,7 +182,6 @@ public class Order {
   */
   
   @Schema(name = "status", description = "Order Status", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
   }
@@ -200,7 +201,6 @@ public class Order {
   */
   
   @Schema(name = "complete", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("complete")
   public Boolean getComplete() {
     return complete;
   }

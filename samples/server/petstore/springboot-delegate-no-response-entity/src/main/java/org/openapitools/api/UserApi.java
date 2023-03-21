@@ -9,7 +9,7 @@ import java.util.List;
 import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 import io.swagger.annotations.*;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -53,8 +53,7 @@ public interface UserApi {
         value = "/user",
         consumes = { "application/json" }
     )
-    @ResponseStatus(HttpStatus.OK)
-    default Void createUser(
+    default ResponseEntity<Void> createUser(
         @ApiParam(value = "Created user object", required = true) @Valid @RequestBody User user
     ) {
         return getDelegate().createUser(user);
@@ -85,8 +84,7 @@ public interface UserApi {
         value = "/user/createWithArray",
         consumes = { "application/json" }
     )
-    @ResponseStatus(HttpStatus.OK)
-    default Void createUsersWithArrayInput(
+    default ResponseEntity<Void> createUsersWithArrayInput(
         @ApiParam(value = "List of user object", required = true) @Valid @RequestBody List<User> user
     ) {
         return getDelegate().createUsersWithArrayInput(user);
@@ -117,8 +115,7 @@ public interface UserApi {
         value = "/user/createWithList",
         consumes = { "application/json" }
     )
-    @ResponseStatus(HttpStatus.OK)
-    default Void createUsersWithListInput(
+    default ResponseEntity<Void> createUsersWithListInput(
         @ApiParam(value = "List of user object", required = true) @Valid @RequestBody List<User> user
     ) {
         return getDelegate().createUsersWithListInput(user);
@@ -150,8 +147,7 @@ public interface UserApi {
         method = RequestMethod.DELETE,
         value = "/user/{username}"
     )
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    default Void deleteUser(
+    default ResponseEntity<Void> deleteUser(
         @ApiParam(value = "The name that needs to be deleted", required = true) @PathVariable("username") String username
     ) {
         return getDelegate().deleteUser(username);
@@ -184,8 +180,7 @@ public interface UserApi {
         value = "/user/{username}",
         produces = { "application/xml", "application/json" }
     )
-    @ResponseStatus(HttpStatus.OK)
-    default User getUserByName(
+    default ResponseEntity<User> getUserByName(
         @ApiParam(value = "The name that needs to be fetched. Use user1 for testing.", required = true) @PathVariable("username") String username
     ) {
         return getDelegate().getUserByName(username);
@@ -217,8 +212,7 @@ public interface UserApi {
         value = "/user/login",
         produces = { "application/xml", "application/json" }
     )
-    @ResponseStatus(HttpStatus.OK)
-    default String loginUser(
+    default ResponseEntity<String> loginUser(
         @NotNull @Pattern(regexp = "^[a-zA-Z0-9]+[a-zA-Z0-9\\.\\-_]*[a-zA-Z0-9]+$") @ApiParam(value = "The user name for login", required = true) @Valid @RequestParam(value = "username", required = true) String username,
         @NotNull @ApiParam(value = "The password for login in clear text", required = true) @Valid @RequestParam(value = "password", required = true) String password
     ) {
@@ -248,8 +242,7 @@ public interface UserApi {
         method = RequestMethod.GET,
         value = "/user/logout"
     )
-    @ResponseStatus(HttpStatus.OK)
-    default Void logoutUser(
+    default ResponseEntity<Void> logoutUser(
         
     ) {
         return getDelegate().logoutUser();
@@ -283,8 +276,7 @@ public interface UserApi {
         value = "/user/{username}",
         consumes = { "application/json" }
     )
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    default Void updateUser(
+    default ResponseEntity<Void> updateUser(
         @ApiParam(value = "name that need to be deleted", required = true) @PathVariable("username") String username,
         @ApiParam(value = "Updated user object", required = true) @Valid @RequestBody User user
     ) {

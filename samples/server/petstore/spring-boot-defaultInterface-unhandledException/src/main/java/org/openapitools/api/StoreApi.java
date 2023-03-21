@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -60,7 +60,8 @@ public interface StoreApi {
         method = RequestMethod.DELETE,
         value = "/store/order/{order_id}"
     )
-    ResponseEntity<Void> deleteOrder(
+    @ResponseStatus()
+    Void deleteOrder(
         @Parameter(name = "order_id", description = "ID of the order that needs to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("order_id") String orderId
     ) throws Exception;
 
@@ -90,7 +91,8 @@ public interface StoreApi {
         value = "/store/inventory",
         produces = { "application/json" }
     )
-    ResponseEntity<Map<String, Integer>> getInventory(
+    @ResponseStatus()
+    Map<String, Integer> getInventory(
         
     ) throws Exception;
 
@@ -123,7 +125,8 @@ public interface StoreApi {
         value = "/store/order/{order_id}",
         produces = { "application/xml", "application/json" }
     )
-    ResponseEntity<Order> getOrderById(
+    @ResponseStatus()
+    Order getOrderById(
         @Min(1L) @Max(5L) @Parameter(name = "order_id", description = "ID of pet that needs to be fetched", required = true, in = ParameterIn.PATH) @PathVariable("order_id") Long orderId
     ) throws Exception;
 
@@ -155,7 +158,8 @@ public interface StoreApi {
         produces = { "application/xml", "application/json" },
         consumes = { "application/json" }
     )
-    ResponseEntity<Order> placeOrder(
+    @ResponseStatus()
+    Order placeOrder(
         @Parameter(name = "Order", description = "order placed for purchasing the pet", required = true) @Valid @RequestBody Order order
     ) throws Exception;
 

@@ -38,6 +38,23 @@ public class ContainerDefaultValueDto {
   
   private JsonNullable<List<String>> nullableArrayWithDefault = JsonNullable.undefined();
 
+  /**
+   * Default constructor
+   * @deprecated Use {@link ContainerDefaultValueDto#ContainerDefaultValueDto(List<String>, List<String>)}
+   */
+  @Deprecated
+  public ContainerDefaultValueDto() {
+    super();
+  }
+
+  /**
+   * Constructor with only required parameters
+   */
+  public ContainerDefaultValueDto(List<String> nullableRequiredArray, List<String> requiredArray) {
+    this.nullableRequiredArray = JsonNullable.of(nullableRequiredArray);
+    this.requiredArray = requiredArray;
+  }
+
   public ContainerDefaultValueDto nullableArray(List<String> nullableArray) {
     this.nullableArray = JsonNullable.of(nullableArray);
     return this;

@@ -5,7 +5,6 @@ import java.time.OffsetDateTime;
 import org.openapitools.model.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -33,8 +32,8 @@ public interface UserApiDelegate {
      * @return successful operation (status code 200)
      * @see UserApi#createUser
      */
-    default ResponseEntity<Void> createUser(User body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Void createUser(User body) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -45,8 +44,8 @@ public interface UserApiDelegate {
      * @return successful operation (status code 200)
      * @see UserApi#createUsersWithArrayInput
      */
-    default ResponseEntity<Void> createUsersWithArrayInput(List<User> body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Void createUsersWithArrayInput(List<User> body) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -57,8 +56,8 @@ public interface UserApiDelegate {
      * @return successful operation (status code 200)
      * @see UserApi#createUsersWithListInput
      */
-    default ResponseEntity<Void> createUsersWithListInput(List<User> body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Void createUsersWithListInput(List<User> body) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -71,8 +70,8 @@ public interface UserApiDelegate {
      *         or User not found (status code 404)
      * @see UserApi#deleteUser
      */
-    default ResponseEntity<Void> deleteUser(String username) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Void deleteUser(String username) {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -85,7 +84,7 @@ public interface UserApiDelegate {
      *         or User not found (status code 404)
      * @see UserApi#getUserByName
      */
-    default ResponseEntity<User> getUserByName(String username) {
+    default User getUserByName(String username) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -100,7 +99,7 @@ public interface UserApiDelegate {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -113,9 +112,9 @@ public interface UserApiDelegate {
      *         or Invalid username/password supplied (status code 400)
      * @see UserApi#loginUser
      */
-    default ResponseEntity<String> loginUser(String username,
+    default String loginUser(String username,
         String password) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -125,8 +124,8 @@ public interface UserApiDelegate {
      * @return successful operation (status code 200)
      * @see UserApi#logoutUser
      */
-    default ResponseEntity<Void> logoutUser() {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    default Void logoutUser() {
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -140,9 +139,9 @@ public interface UserApiDelegate {
      *         or User not found (status code 404)
      * @see UserApi#updateUser
      */
-    default ResponseEntity<Void> updateUser(String username,
+    default Void updateUser(String username,
         User body) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

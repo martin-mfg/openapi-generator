@@ -4,6 +4,7 @@ import java.util.Map;
 import org.openapitools.model.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -32,8 +33,8 @@ public interface StoreApiDelegate {
      *         or Order not found (status code 404)
      * @see StoreApi#deleteOrder
      */
-    default Void deleteOrder(String orderId) {
-        throw new IllegalArgumentException("Not implemented");
+    default ResponseEntity<Void> deleteOrder(String orderId) {
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -44,8 +45,8 @@ public interface StoreApiDelegate {
      * @return successful operation (status code 200)
      * @see StoreApi#getInventory
      */
-    default Map<String, Integer> getInventory() {
-        throw new IllegalArgumentException("Not implemented");
+    default ResponseEntity<Map<String, Integer>> getInventory() {
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -59,7 +60,7 @@ public interface StoreApiDelegate {
      *         or Order not found (status code 404)
      * @see StoreApi#getOrderById
      */
-    default Order getOrderById(Long orderId) {
+    default ResponseEntity<Order> getOrderById(Long orderId) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -74,7 +75,7 @@ public interface StoreApiDelegate {
                 }
             }
         });
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 
@@ -87,7 +88,7 @@ public interface StoreApiDelegate {
      *         or Invalid Order (status code 400)
      * @see StoreApi#placeOrder
      */
-    default Order placeOrder(Order order) {
+    default ResponseEntity<Order> placeOrder(Order order) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
@@ -102,7 +103,7 @@ public interface StoreApiDelegate {
                 }
             }
         });
-        throw new IllegalArgumentException("Not implemented");
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }
 

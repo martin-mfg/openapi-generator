@@ -37,7 +37,7 @@ public class Pet {
   private List<String> photoUrls = new ArrayList<>();
 
   @Valid
-  private List<@Valid Tag> tags;
+  private List<@Valid Tag> tags = new ArrayList<>();
 
   /**
    * pet status in the store
@@ -77,23 +77,6 @@ public class Pet {
   }
 
   private StatusEnum status;
-
-  /**
-   * Default constructor
-   * @deprecated Use {@link Pet#Pet(String, List<String>)}
-   */
-  @Deprecated
-  public Pet() {
-    super();
-  }
-
-  /**
-   * Constructor with only required parameters
-   */
-  public Pet(String name, List<String> photoUrls) {
-    this.name = name;
-    this.photoUrls = photoUrls;
-  }
 
   public Pet id(Long id) {
     this.id = id;

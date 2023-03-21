@@ -10,7 +10,7 @@ import org.openapitools.model.Pet;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -59,7 +59,8 @@ public interface PetApi {
         produces = "application/json",
         consumes = "application/json"
     )
-    ResponseEntity<Pet> addPet(
+    @ResponseStatus()
+    Pet addPet(
         @ApiParam(value = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody Pet pet
     );
 
@@ -91,7 +92,8 @@ public interface PetApi {
         method = RequestMethod.DELETE,
         value = "/pet/{petId}"
     )
-    ResponseEntity<Void> deletePet(
+    @ResponseStatus()
+    Void deletePet(
         @ApiParam(value = "Pet id to delete", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "") @RequestHeader(value = "api_key", required = false) String apiKey
     );
@@ -127,7 +129,8 @@ public interface PetApi {
         value = "/pet/findByStatus",
         produces = "application/json"
     )
-    ResponseEntity<List<Pet>> findPetsByStatus(
+    @ResponseStatus()
+    List<Pet> findPetsByStatus(
         @NotNull @ApiParam(value = "Status values that need to be considered for filter", required = true, allowableValues = "available, pending, sold") @Valid @RequestParam(value = "status", required = true) List<String> status
     );
 
@@ -164,7 +167,8 @@ public interface PetApi {
         value = "/pet/findByTags",
         produces = "application/json"
     )
-    ResponseEntity<List<Pet>> findPetsByTags(
+    @ResponseStatus()
+    List<Pet> findPetsByTags(
         @NotNull @ApiParam(value = "Tags to filter by", required = true) @Valid @RequestParam(value = "tags", required = true) List<String> tags
     );
 
@@ -198,7 +202,8 @@ public interface PetApi {
         value = "/pet/{petId}",
         produces = "application/json"
     )
-    ResponseEntity<Pet> getPetById(
+    @ResponseStatus()
+    Pet getPetById(
         @ApiParam(value = "ID of pet to return", required = true) @PathVariable("petId") Long petId
     );
 
@@ -240,7 +245,8 @@ public interface PetApi {
         produces = "application/json",
         consumes = "application/json"
     )
-    ResponseEntity<Pet> updatePet(
+    @ResponseStatus()
+    Pet updatePet(
         @ApiParam(value = "Pet object that needs to be added to the store", required = true) @Valid @RequestBody Pet pet
     );
 
@@ -274,7 +280,8 @@ public interface PetApi {
         value = "/pet/{petId}",
         consumes = "application/x-www-form-urlencoded"
     )
-    ResponseEntity<Void> updatePetWithForm(
+    @ResponseStatus()
+    Void updatePetWithForm(
         @ApiParam(value = "ID of pet that needs to be updated", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "Updated name of the pet") @Valid @RequestParam(value = "name", required = false) String name,
         @ApiParam(value = "Updated status of the pet") @Valid @RequestParam(value = "status", required = false) String status
@@ -312,7 +319,8 @@ public interface PetApi {
         produces = "application/json",
         consumes = "multipart/form-data"
     )
-    ResponseEntity<ModelApiResponse> uploadFile(
+    @ResponseStatus()
+    ModelApiResponse uploadFile(
         @ApiParam(value = "ID of pet to update", required = true) @PathVariable("petId") Long petId,
         @ApiParam(value = "Additional data to pass to server") @Valid @RequestParam(value = "additionalMetadata", required = false) String additionalMetadata,
         @ApiParam(value = "file to upload") @RequestPart(value = "file", required = false) MultipartFile file

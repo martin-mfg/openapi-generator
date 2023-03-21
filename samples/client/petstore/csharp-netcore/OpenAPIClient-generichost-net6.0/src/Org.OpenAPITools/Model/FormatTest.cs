@@ -345,12 +345,12 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// The format to use to serialize Date
         /// </summary>
-        public static string DateFormat { get; set; } = "yyyy'-'MM'-'dd";
+        public static string DateFormat { get; set; } = "";
 
         /// <summary>
         /// The format to use to serialize DateTime
         /// </summary>
-        public static string DateTimeFormat { get; set; } = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK";
+        public static string DateTimeFormat { get; set; } = "";
 
         /// <summary>
         /// A Json reader.
@@ -445,7 +445,7 @@ namespace Org.OpenAPITools.Model
                             break;
                         case "number":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                number = utf8JsonReader.GetDecimal();
+                                number = utf8JsonReader.GetInt32();
                             break;
                         case "password":
                             password = utf8JsonReader.GetString();

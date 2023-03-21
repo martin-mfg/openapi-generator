@@ -117,7 +117,7 @@ namespace Org.OpenAPITools.Model
                     {
                         case "JustNumber":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                justNumber = utf8JsonReader.GetDecimal();
+                                justNumber = utf8JsonReader.GetInt32();
                             break;
                         default:
                             break;

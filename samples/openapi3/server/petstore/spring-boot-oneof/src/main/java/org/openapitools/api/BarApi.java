@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -64,7 +64,8 @@ public interface BarApi {
         produces = { "application/json" },
         consumes = { "application/json" }
     )
-    default ResponseEntity<Bar> createBar(
+    @ResponseStatus()
+    default Bar createBar(
         @Parameter(name = "BarCreate", description = "", required = true) @Valid @RequestBody BarCreate barCreate
     ) {
         getRequest().ifPresent(request -> {
@@ -76,7 +77,7 @@ public interface BarApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 

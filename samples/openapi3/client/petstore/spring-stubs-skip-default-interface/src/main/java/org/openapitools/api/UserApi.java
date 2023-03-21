@@ -21,7 +21,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -63,7 +63,8 @@ public interface UserApi {
         value = "/user",
         consumes = "application/json"
     )
-    ResponseEntity<Void> createUser(
+    @ResponseStatus()
+    Void createUser(
         @Parameter(name = "User", description = "Created user object", required = true) @Valid @RequestBody User user
     ) throws Exception;
 
@@ -92,7 +93,8 @@ public interface UserApi {
         value = "/user/createWithArray",
         consumes = "application/json"
     )
-    ResponseEntity<Void> createUsersWithArrayInput(
+    @ResponseStatus()
+    Void createUsersWithArrayInput(
         @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody List<User> user
     ) throws Exception;
 
@@ -121,7 +123,8 @@ public interface UserApi {
         value = "/user/createWithList",
         consumes = "application/json"
     )
-    ResponseEntity<Void> createUsersWithListInput(
+    @ResponseStatus()
+    Void createUsersWithListInput(
         @Parameter(name = "User", description = "List of user object", required = true) @Valid @RequestBody List<User> user
     ) throws Exception;
 
@@ -151,7 +154,8 @@ public interface UserApi {
         method = RequestMethod.DELETE,
         value = "/user/{username}"
     )
-    ResponseEntity<Void> deleteUser(
+    @ResponseStatus()
+    Void deleteUser(
         @Parameter(name = "username", description = "The name that needs to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("username") String username
     ) throws Exception;
 
@@ -184,7 +188,8 @@ public interface UserApi {
         value = "/user/{username}",
         produces = "application/json"
     )
-    ResponseEntity<User> getUserByName(
+    @ResponseStatus()
+    User getUserByName(
         @Parameter(name = "username", description = "The name that needs to be fetched. Use user1 for testing.", required = true, in = ParameterIn.PATH) @PathVariable("username") String username
     ) throws Exception;
 
@@ -216,7 +221,8 @@ public interface UserApi {
         value = "/user/login",
         produces = "application/json"
     )
-    ResponseEntity<String> loginUser(
+    @ResponseStatus()
+    String loginUser(
         @NotNull @Pattern(regexp = "^[a-zA-Z0-9]+[a-zA-Z0-9\\.\\-_]*[a-zA-Z0-9]+$") @Parameter(name = "username", description = "The user name for login", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "username", required = true) String username,
         @NotNull @Parameter(name = "password", description = "The password for login in clear text", required = true, in = ParameterIn.QUERY) @Valid @RequestParam(value = "password", required = true) String password
     ) throws Exception;
@@ -244,7 +250,8 @@ public interface UserApi {
         method = RequestMethod.GET,
         value = "/user/logout"
     )
-    ResponseEntity<Void> logoutUser(
+    @ResponseStatus()
+    Void logoutUser(
         
     ) throws Exception;
 
@@ -276,7 +283,8 @@ public interface UserApi {
         value = "/user/{username}",
         consumes = "application/json"
     )
-    ResponseEntity<Void> updateUser(
+    @ResponseStatus()
+    Void updateUser(
         @Parameter(name = "username", description = "name that need to be deleted", required = true, in = ParameterIn.PATH) @PathVariable("username") String username,
         @Parameter(name = "User", description = "Updated user object", required = true) @Valid @RequestBody User user
     ) throws Exception;

@@ -35,22 +35,27 @@ import javax.annotation.Generated;
 @Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen")
 public class Pet {
 
+  @JsonProperty("id")
   @JacksonXmlProperty(localName = "id")
   private Long id;
 
+  @JsonProperty("category")
   @JacksonXmlProperty(localName = "category")
   private Category category;
 
+  @JsonProperty("name")
   @JacksonXmlProperty(localName = "name")
   private String name;
 
+  @JsonProperty("photoUrls")
   @JacksonXmlProperty(localName = "photoUrl")
   @Valid
   private List<String> photoUrls = new ArrayList<>();
 
+  @JsonProperty("tags")
   @JacksonXmlProperty(localName = "tag")
   @Valid
-  private List<@Valid Tag> tags;
+  private List<@Valid Tag> tags = null;
 
   /**
    * pet status in the store
@@ -89,6 +94,7 @@ public class Pet {
     }
   }
 
+  @JsonProperty("status")
   @JacksonXmlProperty(localName = "status")
   private StatusEnum status;
 
@@ -120,7 +126,6 @@ public class Pet {
   */
   
   @Schema(name = "id", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("id")
   public Long getId() {
     return id;
   }
@@ -140,7 +145,6 @@ public class Pet {
   */
   @Valid 
   @Schema(name = "category", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("category")
   public Category getCategory() {
     return category;
   }
@@ -160,7 +164,6 @@ public class Pet {
   */
   @NotNull 
   @Schema(name = "name", example = "doggie", requiredMode = Schema.RequiredMode.REQUIRED)
-  @JsonProperty("name")
   public String getName() {
     return name;
   }
@@ -175,9 +178,6 @@ public class Pet {
   }
 
   public Pet addPhotoUrlsItem(String photoUrlsItem) {
-    if (this.photoUrls == null) {
-      this.photoUrls = new ArrayList<>();
-    }
     this.photoUrls.add(photoUrlsItem);
     return this;
   }
@@ -188,7 +188,6 @@ public class Pet {
   */
   @NotNull 
   @Schema(name = "photoUrls", requiredMode = Schema.RequiredMode.REQUIRED)
-  @JsonProperty("photoUrls")
   public List<String> getPhotoUrls() {
     return photoUrls;
   }
@@ -216,7 +215,6 @@ public class Pet {
   */
   @Valid 
   @Schema(name = "tags", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("tags")
   public List<@Valid Tag> getTags() {
     return tags;
   }
@@ -236,7 +234,6 @@ public class Pet {
   */
   
   @Schema(name = "status", description = "pet status in the store", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
   }

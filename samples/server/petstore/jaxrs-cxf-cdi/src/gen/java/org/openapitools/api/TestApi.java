@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import java.io.File;
 import org.openapitools.api.TestApiService;
 
 import javax.ws.rs.*;
@@ -41,7 +42,7 @@ public class TestApi  {
     @ApiOperation(value = "test upload", notes = "upload test", response = Void.class, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "whatever", response = Void.class) })
-    public Response testUpload(@ApiParam(value = "" ) java.io.InputStream body) {
+    public Response testUpload(@ApiParam(value = "" ) File body) {
         return delegate.testUpload(body, securityContext);
     }
 }

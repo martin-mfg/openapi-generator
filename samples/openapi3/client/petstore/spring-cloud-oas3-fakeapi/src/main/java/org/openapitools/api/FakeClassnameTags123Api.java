@@ -19,7 +19,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -64,7 +64,8 @@ public interface FakeClassnameTags123Api {
         produces = "application/json",
         consumes = "application/json"
     )
-    ResponseEntity<Client> testClassname(
+    @ResponseStatus()
+    Client testClassname(
         @Parameter(name = "Client", description = "client model", required = true) @Valid @RequestBody Client client
     );
 

@@ -7,7 +7,7 @@ package org.openapitools.api;
 
 import org.openapitools.model.Client;
 import io.swagger.annotations.*;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -50,7 +50,8 @@ public interface AnotherFakeApi {
         produces = { "application/json" },
         consumes = { "application/json" }
     )
-    default ResponseEntity<Client> call123testSpecialTags(
+    @ResponseStatus()
+    default Client call123testSpecialTags(
         @ApiParam(value = "client model", required = true) @Valid @RequestBody Client client
     ) {
         return getDelegate().call123testSpecialTags(client);

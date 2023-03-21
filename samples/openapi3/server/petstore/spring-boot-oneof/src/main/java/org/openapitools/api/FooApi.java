@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -64,7 +64,8 @@ public interface FooApi {
         produces = { "application/json" },
         consumes = { "application/json;charset=utf-8" }
     )
-    default ResponseEntity<FooRefOrValue> createFoo(
+    @ResponseStatus()
+    default FooRefOrValue createFoo(
         @Parameter(name = "Foo", description = "The Foo to be created") @Valid @RequestBody(required = false) Foo foo
     ) {
         getRequest().ifPresent(request -> {
@@ -76,7 +77,7 @@ public interface FooApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
@@ -101,7 +102,8 @@ public interface FooApi {
         value = "/foo",
         produces = { "application/json;charset=utf-8" }
     )
-    default ResponseEntity<List<FooRefOrValue>> getAllFoos(
+    @ResponseStatus()
+    default List<FooRefOrValue> getAllFoos(
         
     ) {
         getRequest().ifPresent(request -> {
@@ -113,7 +115,7 @@ public interface FooApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        throw new IllegalArgumentException("Not implemented");
 
     }
 
