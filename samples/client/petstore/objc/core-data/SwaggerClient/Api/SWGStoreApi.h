@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "NSNumber*.h"
 #import "SWGOrder.h"
 #import "SWGApi.h"
 

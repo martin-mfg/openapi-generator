@@ -50,6 +50,7 @@ import time
 import x_auth_id_alias
 from pprint import pprint
 from x_auth_id_alias.api import usage_api
+from x_auth_id_alias.model.bool_date_datetime_dict_float_int_list_str_none_type import BoolDateDatetimeDictFloatIntListStrNoneType
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = x_auth_id_alias.Configuration(

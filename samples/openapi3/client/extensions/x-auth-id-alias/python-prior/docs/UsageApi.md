@@ -26,6 +26,7 @@ Use any API key
 import time
 import x_auth_id_alias
 from x_auth_id_alias.api import usage_api
+from x_auth_id_alias.model.bool_date_datetime_dict_float_int_list_str_none_type import BoolDateDatetimeDictFloatIntListStrNoneType
 from pprint import pprint
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
@@ -106,6 +107,7 @@ Use both API keys
 import time
 import x_auth_id_alias
 from x_auth_id_alias.api import usage_api
+from x_auth_id_alias.model.bool_date_datetime_dict_float_int_list_str_none_type import BoolDateDatetimeDictFloatIntListStrNoneType
 from pprint import pprint
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
@@ -185,6 +187,7 @@ Use API key in header
 import time
 import x_auth_id_alias
 from x_auth_id_alias.api import usage_api
+from x_auth_id_alias.model.bool_date_datetime_dict_float_int_list_str_none_type import BoolDateDatetimeDictFloatIntListStrNoneType
 from pprint import pprint
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
@@ -258,6 +261,7 @@ Use API key in query
 import time
 import x_auth_id_alias
 from x_auth_id_alias.api import usage_api
+from x_auth_id_alias.model.bool_date_datetime_dict_float_int_list_str_none_type import BoolDateDatetimeDictFloatIntListStrNoneType
 from pprint import pprint
 # Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.

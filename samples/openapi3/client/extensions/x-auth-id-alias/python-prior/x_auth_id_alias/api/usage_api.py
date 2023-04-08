@@ -21,6 +21,7 @@ from x_auth_id_alias.model_utils import (  # noqa: F401
     none_type,
     validate_and_convert_types
 )
+from x_auth_id_alias.model.bool_date_datetime_dict_float_int_list_str_none_type import BoolDateDatetimeDictFloatIntListStrNoneType
 
 
 class UsageApi(object):
