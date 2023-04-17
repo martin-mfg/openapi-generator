@@ -73,7 +73,7 @@ public class AbstractJavaCodegenTest {
     }
 
     @Test
-    public void testPreprocessOpenAPI() throws Exception {
+    public void testPreprocessOpenApiIncludeOnlyDefaultMediaTypeIfSet() throws Exception {
         final OpenAPI openAPI = TestUtils.parseFlattenSpec("src/test/resources/3_0/petstore.yaml");
         final P_AbstractJavaCodegen codegen = new P_AbstractJavaCodegen();
 
@@ -82,6 +82,18 @@ public class AbstractJavaCodegenTest {
         Assert.assertEquals(codegen.getArtifactVersion(), openAPI.getInfo().getVersion());
         Assert.assertEquals(openAPI.getPaths().get("/pet").getPost().getExtensions().get("x-accepts"), "application/json");
     }
+
+    @Test
+    public void testPreprocessOpenApiIncludeAllMediaTypesInAcceptHeader() throws Exception {
+        final OpenAPI openAPI = TestUtils.parseFlattenSpec("src/test/resources/3_0/petstore.yaml");
+        final P_AbstractJavaCodegen codegen = new P_AbstractJavaCodegen();
+        codegen.setOnlyUseDefaultMediaTypeForAcceptHeaderIfSet(false);
+        codegen.preprocessOpenAPI(openAPI);
+
+        Assert.assertEquals(codegen.getArtifactVersion(), openAPI.getInfo().getVersion());
+        Assert.assertEquals(openAPI.getPaths().get("/pet").getPost().getExtensions().get("x-accepts"), "application/json,application/xml");
+    }
+
 
     @Test
     public void testPreprocessOpenAPINumVersion() throws Exception {

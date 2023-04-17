@@ -92,6 +92,8 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
 
     public static final String DEFAULT_TEST_FOLDER = "${project.build.directory}/generated-test-sources/openapi";
 
+    public static final String ONLY_USE_DEFAULT_MEDIA_TYPE_FOR_ACCEPT_HEADER_IF_SET = "onlyUseDefaultMediaTypeForAcceptHeaderIfSet";
+
     protected String dateLibrary = "java8";
     protected boolean supportAsync = false;
     protected boolean withXml = false;
@@ -143,6 +145,7 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
     protected boolean useJakartaEe = false;
     protected boolean containerDefaultToNull = false;
 
+    protected boolean onlyUseDefaultMediaTypeForAcceptHeaderIfSet = true;
     private Map<String, String> schemaKeyToModelNameCache = new HashMap<>();
 
     public AbstractJavaCodegen() {
@@ -693,6 +696,10 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
             applyJakartaPackage();
         } else {
             applyJavaxPackage();
+        }
+
+        if (additionalProperties.containsKey(ONLY_USE_DEFAULT_MEDIA_TYPE_FOR_ACCEPT_HEADER_IF_SET)) {
+            this.setOnlyUseDefaultMediaTypeForAcceptHeaderIfSet(Boolean.parseBoolean(additionalProperties.get(ONLY_USE_DEFAULT_MEDIA_TYPE_FOR_ACCEPT_HEADER_IF_SET).toString()));
         }
 
         if (additionalProperties.containsKey(CONTAINER_DEFAULT_TO_NULL)) {
@@ -1653,31 +1660,30 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
         }
     }
 
-    private static String getAccept(OpenAPI openAPI, Operation operation) {
+    private String getAccept(OpenAPI openAPIArg, Operation operation) {
+        final String defaultMediaType = "application/json";
+        final Set<String> producesInfo = getProducesInfo(openAPIArg, operation);
+
         String accepts = null;
-        String defaultContentType = "application/json";
-        Set<String> producesInfo = getProducesInfo(openAPI, operation);
         if (producesInfo != null && !producesInfo.isEmpty()) {
-            ArrayList<String> produces = new ArrayList<>(producesInfo);
+            List<String> produces = new ArrayList<>(producesInfo);
             StringBuilder sb = new StringBuilder();
             for (String produce : produces) {
-                if (defaultContentType.equalsIgnoreCase(produce)) {
-                    accepts = defaultContentType;
+                if (onlyUseDefaultMediaTypeForAcceptHeaderIfSet && defaultMediaType.equalsIgnoreCase(produce)) {
+                    accepts = defaultMediaType;
                     break;
-                } else {
-                    if (sb.length() > 0) {
-                        sb.append(",");
-                    }
-                    sb.append(produce);
                 }
+                if (sb.length() > 0) {
+                    sb.append(",");
+                }
+                sb.append(produce);
             }
             if (accepts == null) {
                 accepts = sb.toString();
             }
         } else {
-            accepts = defaultContentType;
+            accepts = defaultMediaType;
         }
-
         return accepts;
     }
 
@@ -2064,6 +2070,18 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
 
     public void setContainerDefaultToNull(boolean containerDefaultToNull) {
         this.containerDefaultToNull = containerDefaultToNull;
+    }
+
+    /**
+     * By default, if the content-type of an OpenAPI contains the default media type ('application/json'), the accept
+     * header of the generated client is automatically set to this default media type and other media types are
+     * ignored for the accept header. When this setting is set to false, the accept header will also contain the other
+     * media types, besides the default one.
+     *
+     * @param onlyUseDefaultMediaTypeForAcceptHeaderIfSet whether or not the setting is set
+     */
+    public void setOnlyUseDefaultMediaTypeForAcceptHeaderIfSet(boolean onlyUseDefaultMediaTypeForAcceptHeaderIfSet) {
+        this.onlyUseDefaultMediaTypeForAcceptHeaderIfSet = onlyUseDefaultMediaTypeForAcceptHeaderIfSet;
     }
 
     @Override
