@@ -1,8 +1,8 @@
 package org.openapitools.virtualan.api;
 
-import java.util.List;
-import java.time.OffsetDateTime;
-import org.openapitools.virtualan.model.User;
+import org.openapitools.virtualan.model.CreateUsersWithArrayInput201Response;
+import org.openapitools.virtualan.model.Param0Def;
+import org.openapitools.virtualan.model.Param1Def;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ import javax.annotation.Generated;
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 @Controller
-@RequestMapping("${openapi.openAPIPetstore.base-path:/v2}")
+@RequestMapping("${openapi.openAPIPetstore.base-path:}")
 public class UserApiController implements UserApi {
 
     private final NativeWebRequest request;

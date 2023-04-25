@@ -17,6 +17,7 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
+// ArrayType should be imported below
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 

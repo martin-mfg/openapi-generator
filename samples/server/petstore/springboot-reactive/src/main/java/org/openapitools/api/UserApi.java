@@ -6,9 +6,9 @@
 package org.openapitools.api;
 
 import springfox.documentation.annotations.ApiIgnore;
-import java.util.List;
-import java.time.OffsetDateTime;
-import org.openapitools.model.User;
+import org.openapitools.model.CreateUsersWithArrayInput201Response;
+import org.openapitools.model.Param0Def;
+import org.openapitools.model.Param1Def;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -27,7 +27,7 @@ import javax.annotation.Generated;
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 @Validated
-@Api(value = "user", description = "Operations about user")
+@Api(value = "user", description = "the user API")
 public interface UserApi {
 
     default UserApiDelegate getDelegate() {
@@ -35,246 +35,37 @@ public interface UserApi {
     }
 
     /**
-     * POST /user : Create user
-     * This can only be done by the logged in user.
-     *
-     * @param user Created user object (required)
-     * @return successful operation (status code 200)
-     */
-    @ApiOperation(
-        tags = { "user" },
-        value = "Create user",
-        nickname = "createUser",
-        notes = "This can only be done by the logged in user."
-    )
-    @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation")
-    })
-    @RequestMapping(
-        method = RequestMethod.POST,
-        value = "/user",
-        consumes = { "application/json" }
-    )
-    default Mono<ResponseEntity<Void>> createUser(
-        @ApiParam(value = "Created user object", required = true) @Valid @RequestBody Mono<User> user,
-        @ApiIgnore final ServerWebExchange exchange
-    ) {
-        return getDelegate().createUser(user, exchange);
-    }
-
-
-    /**
      * POST /user/createWithArray : Creates list of users with given input array
      * 
      *
-     * @param user List of user object (required)
-     * @return successful operation (status code 200)
+     * @param param1  (optional)
+     * @param param2  (optional)
+     * @return bar baz (status code 200)
+     *         or foo bar (status code 201)
      */
     @ApiOperation(
         tags = { "user" },
         value = "Creates list of users with given input array",
         nickname = "createUsersWithArrayInput",
-        notes = ""
+        notes = "",
+        response = Param1Def.class,
+        responseContainer = "List"
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation")
+        @ApiResponse(code = 200, message = "bar baz", response = Param1Def.class, responseContainer = "List"),
+        @ApiResponse(code = 201, message = "foo bar", response = CreateUsersWithArrayInput201Response.class)
     })
     @RequestMapping(
         method = RequestMethod.POST,
         value = "/user/createWithArray",
-        consumes = { "application/json" }
+        produces = { "application/json" }
     )
-    default Mono<ResponseEntity<Void>> createUsersWithArrayInput(
-        @ApiParam(value = "List of user object", required = true) @Valid @RequestBody Flux<User> user,
+    default Mono<ResponseEntity<Flux<Param1Def>>> createUsersWithArrayInput(
+        @ApiParam(value = "") @RequestHeader(value = "param1", required = false) Param0Def param1,
+        @ApiParam(value = "") @RequestHeader(value = "param2", required = false) List<@Valid Param1Def> param2,
         @ApiIgnore final ServerWebExchange exchange
     ) {
-        return getDelegate().createUsersWithArrayInput(user, exchange);
-    }
-
-
-    /**
-     * POST /user/createWithList : Creates list of users with given input array
-     * 
-     *
-     * @param user List of user object (required)
-     * @return successful operation (status code 200)
-     */
-    @ApiOperation(
-        tags = { "user" },
-        value = "Creates list of users with given input array",
-        nickname = "createUsersWithListInput",
-        notes = ""
-    )
-    @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation")
-    })
-    @RequestMapping(
-        method = RequestMethod.POST,
-        value = "/user/createWithList",
-        consumes = { "application/json" }
-    )
-    default Mono<ResponseEntity<Void>> createUsersWithListInput(
-        @ApiParam(value = "List of user object", required = true) @Valid @RequestBody Flux<User> user,
-        @ApiIgnore final ServerWebExchange exchange
-    ) {
-        return getDelegate().createUsersWithListInput(user, exchange);
-    }
-
-
-    /**
-     * DELETE /user/{username} : Delete user
-     * This can only be done by the logged in user.
-     *
-     * @param username The name that needs to be deleted (required)
-     * @return Invalid username supplied (status code 400)
-     *         or User not found (status code 404)
-     */
-    @ApiOperation(
-        tags = { "user" },
-        value = "Delete user",
-        nickname = "deleteUser",
-        notes = "This can only be done by the logged in user."
-    )
-    @ApiResponses({
-        @ApiResponse(code = 400, message = "Invalid username supplied"),
-        @ApiResponse(code = 404, message = "User not found")
-    })
-    @RequestMapping(
-        method = RequestMethod.DELETE,
-        value = "/user/{username}"
-    )
-    default Mono<ResponseEntity<Void>> deleteUser(
-        @ApiParam(value = "The name that needs to be deleted", required = true) @PathVariable("username") String username,
-        @ApiIgnore final ServerWebExchange exchange
-    ) {
-        return getDelegate().deleteUser(username, exchange);
-    }
-
-
-    /**
-     * GET /user/{username} : Get user by user name
-     * 
-     *
-     * @param username The name that needs to be fetched. Use user1 for testing. (required)
-     * @return successful operation (status code 200)
-     *         or Invalid username supplied (status code 400)
-     *         or User not found (status code 404)
-     */
-    @ApiOperation(
-        tags = { "user" },
-        value = "Get user by user name",
-        nickname = "getUserByName",
-        notes = "",
-        response = User.class
-    )
-    @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation", response = User.class),
-        @ApiResponse(code = 400, message = "Invalid username supplied"),
-        @ApiResponse(code = 404, message = "User not found")
-    })
-    @RequestMapping(
-        method = RequestMethod.GET,
-        value = "/user/{username}",
-        produces = { "application/xml", "application/json" }
-    )
-    default Mono<ResponseEntity<User>> getUserByName(
-        @ApiParam(value = "The name that needs to be fetched. Use user1 for testing.", required = true) @PathVariable("username") String username,
-        @ApiIgnore final ServerWebExchange exchange
-    ) {
-        return getDelegate().getUserByName(username, exchange);
-    }
-
-
-    /**
-     * GET /user/login : Logs user into the system
-     * 
-     *
-     * @param username The user name for login (required)
-     * @param password The password for login in clear text (required)
-     * @return successful operation (status code 200)
-     *         or Invalid username/password supplied (status code 400)
-     */
-    @ApiOperation(
-        tags = { "user" },
-        value = "Logs user into the system",
-        nickname = "loginUser",
-        notes = "",
-        response = String.class
-    )
-    @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation", response = String.class),
-        @ApiResponse(code = 400, message = "Invalid username/password supplied")
-    })
-    @RequestMapping(
-        method = RequestMethod.GET,
-        value = "/user/login",
-        produces = { "application/xml", "application/json" }
-    )
-    default Mono<ResponseEntity<String>> loginUser(
-        @NotNull @ApiParam(value = "The user name for login", required = true) @Valid @RequestParam(value = "username", required = true) String username,
-        @NotNull @ApiParam(value = "The password for login in clear text", required = true) @Valid @RequestParam(value = "password", required = true) String password,
-        @ApiIgnore final ServerWebExchange exchange
-    ) {
-        return getDelegate().loginUser(username, password, exchange);
-    }
-
-
-    /**
-     * GET /user/logout : Logs out current logged in user session
-     * 
-     *
-     * @return successful operation (status code 200)
-     */
-    @ApiOperation(
-        tags = { "user" },
-        value = "Logs out current logged in user session",
-        nickname = "logoutUser",
-        notes = ""
-    )
-    @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation")
-    })
-    @RequestMapping(
-        method = RequestMethod.GET,
-        value = "/user/logout"
-    )
-    default Mono<ResponseEntity<Void>> logoutUser(
-        @ApiIgnore final ServerWebExchange exchange
-    ) {
-        return getDelegate().logoutUser(exchange);
-    }
-
-
-    /**
-     * PUT /user/{username} : Updated user
-     * This can only be done by the logged in user.
-     *
-     * @param username name that need to be deleted (required)
-     * @param user Updated user object (required)
-     * @return Invalid user supplied (status code 400)
-     *         or User not found (status code 404)
-     */
-    @ApiOperation(
-        tags = { "user" },
-        value = "Updated user",
-        nickname = "updateUser",
-        notes = "This can only be done by the logged in user."
-    )
-    @ApiResponses({
-        @ApiResponse(code = 400, message = "Invalid user supplied"),
-        @ApiResponse(code = 404, message = "User not found")
-    })
-    @RequestMapping(
-        method = RequestMethod.PUT,
-        value = "/user/{username}",
-        consumes = { "application/json" }
-    )
-    default Mono<ResponseEntity<Void>> updateUser(
-        @ApiParam(value = "name that need to be deleted", required = true) @PathVariable("username") String username,
-        @ApiParam(value = "Updated user object", required = true) @Valid @RequestBody Mono<User> user,
-        @ApiIgnore final ServerWebExchange exchange
-    ) {
-        return getDelegate().updateUser(username, user, exchange);
+        return getDelegate().createUsersWithArrayInput(param1, param2, exchange);
     }
 
 }

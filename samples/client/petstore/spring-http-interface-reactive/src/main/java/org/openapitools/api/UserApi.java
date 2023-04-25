@@ -5,9 +5,9 @@
  */
 package org.openapitools.api;
 
-import java.util.List;
-import java.time.OffsetDateTime;
-import org.openapitools.model.User;
+import org.openapitools.model.CreateUsersWithArrayInput201Response;
+import org.openapitools.model.Param0Def;
+import org.openapitools.model.Param1Def;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.service.annotation.*;
@@ -27,150 +27,22 @@ import jakarta.annotation.Generated;
 public interface UserApi {
 
     /**
-     * POST /user : Create user
-     * This can only be done by the logged in user.
-     *
-     * @param user Created user object (required)
-     * @return successful operation (status code 200)
-     */
-    @HttpExchange(
-        method = "POST",
-        value = "/user",
-        accept = "application/json",
-        contentType = "application/json"
-    )
-    Mono<ResponseEntity<Void>> createUser(
-         @RequestBody Mono<User> user
-    );
-
-
-    /**
      * POST /user/createWithArray : Creates list of users with given input array
      * 
      *
-     * @param user List of user object (required)
-     * @return successful operation (status code 200)
+     * @param param1  (optional)
+     * @param param2  (optional)
+     * @return bar baz (status code 200)
+     *         or foo bar (status code 201)
      */
     @HttpExchange(
         method = "POST",
         value = "/user/createWithArray",
-        accept = "application/json",
-        contentType = "application/json"
-    )
-    Mono<ResponseEntity<Void>> createUsersWithArrayInput(
-         @RequestBody Flux<User> user
-    );
-
-
-    /**
-     * POST /user/createWithList : Creates list of users with given input array
-     * 
-     *
-     * @param user List of user object (required)
-     * @return successful operation (status code 200)
-     */
-    @HttpExchange(
-        method = "POST",
-        value = "/user/createWithList",
-        accept = "application/json",
-        contentType = "application/json"
-    )
-    Mono<ResponseEntity<Void>> createUsersWithListInput(
-         @RequestBody Flux<User> user
-    );
-
-
-    /**
-     * DELETE /user/{username} : Delete user
-     * This can only be done by the logged in user.
-     *
-     * @param username The name that needs to be deleted (required)
-     * @return Invalid username supplied (status code 400)
-     *         or User not found (status code 404)
-     */
-    @HttpExchange(
-        method = "DELETE",
-        value = "/user/{username}",
         accept = "application/json"
     )
-    Mono<ResponseEntity<Void>> deleteUser(
-         @PathVariable("username") String username
-    );
-
-
-    /**
-     * GET /user/{username} : Get user by user name
-     * 
-     *
-     * @param username The name that needs to be fetched. Use user1 for testing. (required)
-     * @return successful operation (status code 200)
-     *         or Invalid username supplied (status code 400)
-     *         or User not found (status code 404)
-     */
-    @HttpExchange(
-        method = "GET",
-        value = "/user/{username}",
-        accept = "application/json"
-    )
-    Mono<ResponseEntity<User>> getUserByName(
-         @PathVariable("username") String username
-    );
-
-
-    /**
-     * GET /user/login : Logs user into the system
-     * 
-     *
-     * @param username The user name for login (required)
-     * @param password The password for login in clear text (required)
-     * @return successful operation (status code 200)
-     *         or Invalid username/password supplied (status code 400)
-     */
-    @HttpExchange(
-        method = "GET",
-        value = "/user/login",
-        accept = "application/json"
-    )
-    Mono<ResponseEntity<String>> loginUser(
-         @RequestParam(value = "username", required = true) String username,
-         @RequestParam(value = "password", required = true) String password
-    );
-
-
-    /**
-     * GET /user/logout : Logs out current logged in user session
-     * 
-     *
-     * @return successful operation (status code 200)
-     */
-    @HttpExchange(
-        method = "GET",
-        value = "/user/logout",
-        accept = "application/json"
-    )
-    Mono<ResponseEntity<Void>> logoutUser(
-        
-    );
-
-
-    /**
-     * PUT /user/{username} : Updated user
-     * This can only be done by the logged in user.
-     *
-     * @param username name that need to be deleted (required)
-     * @param user Updated user object (required)
-     * @return Invalid user supplied (status code 400)
-     *         or User not found (status code 404)
-     */
-    @HttpExchange(
-        method = "PUT",
-        value = "/user/{username}",
-        accept = "application/json",
-        contentType = "application/json"
-    )
-    Mono<ResponseEntity<Void>> updateUser(
-         @PathVariable("username") String username,
-         @RequestBody Mono<User> user
+    Mono<ResponseEntity<Flux<Param1Def>>> createUsersWithArrayInput(
+         @RequestHeader(value = "param1", required = false) Param0Def param1,
+         @RequestHeader(value = "param2", required = false) List<Param1Def> param2
     );
 
 }
