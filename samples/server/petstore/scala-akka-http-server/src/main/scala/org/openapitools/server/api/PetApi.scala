@@ -113,27 +113,25 @@ trait PetApiService {
    */
   def deletePet(petId: Long, apiKey: Option[String]): Route
 
-  def findPetsByStatus200(responsePetarray: Seq[Pet])(implicit toEntityMarshallerPetarray: ToEntityMarshaller[Seq[Pet]]): Route =
-    complete((200, responsePetarray))
+  def findPetsByStatus200(responseSeqarray: Seq[Pet])(implicit toEntityMarshallerSeqarray: ToEntityMarshaller[Seq[Pet]]): Route =
+    complete((200, responseSeqarray))
   def findPetsByStatus400: Route =
     complete((400, "Invalid status value"))
   /**
    * Code: 200, Message: successful operation, DataType: Seq[Pet]
    * Code: 400, Message: Invalid status value
    */
-  def findPetsByStatus(status: String)
-      (implicit toEntityMarshallerPetarray: ToEntityMarshaller[Seq[Pet]]): Route
+  def findPetsByStatus(status: String): Route
 
-  def findPetsByTags200(responsePetarray: Seq[Pet])(implicit toEntityMarshallerPetarray: ToEntityMarshaller[Seq[Pet]]): Route =
-    complete((200, responsePetarray))
+  def findPetsByTags200(responseSeqarray: Seq[Pet])(implicit toEntityMarshallerSeqarray: ToEntityMarshaller[Seq[Pet]]): Route =
+    complete((200, responseSeqarray))
   def findPetsByTags400: Route =
     complete((400, "Invalid tag value"))
   /**
    * Code: 200, Message: successful operation, DataType: Seq[Pet]
    * Code: 400, Message: Invalid tag value
    */
-  def findPetsByTags(tags: String)
-      (implicit toEntityMarshallerPetarray: ToEntityMarshaller[Seq[Pet]]): Route
+  def findPetsByTags(tags: String): Route
 
   def getPetById200(responsePet: Pet)(implicit toEntityMarshallerPet: ToEntityMarshaller[Pet]): Route =
     complete((200, responsePet))
@@ -187,8 +185,6 @@ trait PetApiMarshaller {
   implicit def fromEntityUnmarshallerPet: FromEntityUnmarshaller[Pet]
 
 
-
-  implicit def toEntityMarshallerPetarray: ToEntityMarshaller[Seq[Pet]]
 
   implicit def toEntityMarshallerPet: ToEntityMarshaller[Pet]
 

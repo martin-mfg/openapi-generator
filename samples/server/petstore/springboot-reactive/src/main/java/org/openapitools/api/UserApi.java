@@ -7,6 +7,7 @@ package org.openapitools.api;
 
 import springfox.documentation.annotations.ApiIgnore;
 import org.openapitools.model.CreateUsersWithArrayInput201Response;
+import java.util.List;
 import org.openapitools.model.Param0Def;
 import org.openapitools.model.Param1Def;
 import io.swagger.annotations.*;
@@ -52,7 +53,7 @@ public interface UserApi {
         responseContainer = "List"
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "bar baz", response = Param1Def.class, responseContainer = "List"),
+        @ApiResponse(code = 200, message = "bar baz", response = List.class, responseContainer = "List"),
         @ApiResponse(code = 201, message = "foo bar", response = CreateUsersWithArrayInput201Response.class)
     })
     @RequestMapping(

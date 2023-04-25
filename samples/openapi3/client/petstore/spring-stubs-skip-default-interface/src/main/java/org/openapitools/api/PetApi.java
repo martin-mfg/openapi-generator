@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import java.util.List;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
@@ -118,8 +119,8 @@ public interface PetApi {
         tags = { "pet" },
         responses = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = {
-                @Content(mediaType = "application/xml", array = @ArraySchema(schema = @Schema(implementation = Pet.class))),
-                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Pet.class)))
+                @Content(mediaType = "application/xml", array = @ArraySchema(schema = @Schema(implementation = List.class))),
+                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = List.class)))
             }),
             @ApiResponse(responseCode = "400", description = "Invalid status value")
         },
@@ -154,8 +155,8 @@ public interface PetApi {
         tags = { "pet" },
         responses = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = {
-                @Content(mediaType = "application/xml", array = @ArraySchema(schema = @Schema(implementation = Pet.class))),
-                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Pet.class)))
+                @Content(mediaType = "application/xml", array = @ArraySchema(schema = @Schema(implementation = List.class))),
+                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = List.class)))
             }),
             @ApiResponse(responseCode = "400", description = "Invalid tag value")
         },

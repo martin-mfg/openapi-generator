@@ -7,6 +7,7 @@ package org.openapitools.api;
 
 import org.openapitools.model.Foo;
 import org.openapitools.model.FooRefOrValue;
+import java.util.List;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -92,7 +93,7 @@ public interface FooApi {
         tags = { "Foo" },
         responses = {
             @ApiResponse(responseCode = "200", description = "Success", content = {
-                @Content(mediaType = "application/json;charset=utf-8", array = @ArraySchema(schema = @Schema(implementation = FooRefOrValue.class)))
+                @Content(mediaType = "application/json;charset=utf-8", array = @ArraySchema(schema = @Schema(implementation = List.class)))
             })
         }
     )

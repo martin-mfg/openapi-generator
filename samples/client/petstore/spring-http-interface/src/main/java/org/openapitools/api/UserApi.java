@@ -6,6 +6,7 @@
 package org.openapitools.api;
 
 import org.openapitools.model.CreateUsersWithArrayInput201ResponseDto;
+import java.util.List;
 import org.openapitools.model.Param0DefDto;
 import org.openapitools.model.Param1DefDto;
 import org.springframework.http.ResponseEntity;

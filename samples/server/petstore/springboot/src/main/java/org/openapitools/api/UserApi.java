@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import java.xyz.ArrayType;
 import org.openapitools.model.CreateUsersWithArrayInput201ResponseDto;
 import org.openapitools.model.Param0DefDto;
 import java.xyz.Param1DefType;
@@ -51,7 +52,7 @@ public interface UserApi {
         responseContainer = "array"
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "bar baz", response = Param1DefType.class, responseContainer = "array"),
+        @ApiResponse(code = 200, message = "bar baz", response = ArrayType.class, responseContainer = "array"),
         @ApiResponse(code = 201, message = "foo bar", response = CreateUsersWithArrayInput201ResponseDto.class)
     })
     @RequestMapping(

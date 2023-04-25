@@ -4822,6 +4822,10 @@ public class DefaultCodegen implements CodegenConfig {
             LOGGER.debug("Property type is not primitive: {}", cp.dataType);
         }
 
+
+        r.baseType = getSchemaType(responseSchema);
+
+
         r.primitiveType = (r.baseType == null || languageSpecificPrimitives().contains(r.baseType));
 
         if (r.baseType == null) {

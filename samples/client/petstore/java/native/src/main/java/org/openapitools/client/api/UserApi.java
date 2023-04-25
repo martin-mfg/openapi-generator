@@ -18,6 +18,7 @@ import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
 // ArrayType should be imported below
+import java.xyz.ArrayType;
 import org.openapitools.client.model.CreateUsersWithArrayInput201Response;
 import org.openapitools.client.model.Param0Def;
 import java.xyz.Param1DefType;

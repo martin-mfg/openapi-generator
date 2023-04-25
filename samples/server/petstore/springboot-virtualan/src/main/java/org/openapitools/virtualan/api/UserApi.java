@@ -6,6 +6,7 @@
 package org.openapitools.virtualan.api;
 
 import org.openapitools.virtualan.model.CreateUsersWithArrayInput201Response;
+import java.util.List;
 import org.openapitools.virtualan.model.Param0Def;
 import org.openapitools.virtualan.model.Param1Def;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
@@ -63,7 +64,7 @@ public interface UserApi {
         tags = { "user" },
         responses = {
             @ApiResponse(responseCode = "200", description = "bar baz", content = {
-                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Param1Def.class)))
+                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = List.class)))
             }),
             @ApiResponse(responseCode = "201", description = "foo bar", content = {
                 @Content(mediaType = "application/json", schema = @Schema(implementation = CreateUsersWithArrayInput201Response.class))

@@ -1,6 +1,7 @@
 package org.openapitools.api;
 
 import java.io.File;
+import java.util.List;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 import java.util.Set;
@@ -57,7 +58,7 @@ public interface PetApi {
             @AuthorizationScope(scope = "read:pets", description = "read your pets") })
          }, tags={ "pet" })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
+        @ApiResponse(code = 200, message = "successful operation", response = List.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "Invalid status value", response = Void.class, responseContainer = "List") })
     List<Pet> findPetsByStatus(@QueryParam("status") @NotNull  @ApiParam("Status values that need to be considered for filter")  List<String> status);
 
@@ -70,7 +71,7 @@ public interface PetApi {
             @AuthorizationScope(scope = "read:pets", description = "read your pets") })
          }, tags={ "pet" })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "Set"),
+        @ApiResponse(code = 200, message = "successful operation", response = Set.class, responseContainer = "Set"),
         @ApiResponse(code = 400, message = "Invalid tag value", response = Void.class, responseContainer = "Set") })
     Set<Pet> findPetsByTags(@QueryParam("tags") @NotNull  @ApiParam("Tags to filter by")  Set<String> tags);
 

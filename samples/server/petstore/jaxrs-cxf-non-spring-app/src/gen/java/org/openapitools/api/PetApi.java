@@ -1,6 +1,7 @@
 package org.openapitools.api;
 
 import java.io.File;
+import java.util.List;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 
@@ -65,7 +66,7 @@ public interface PetApi  {
     @Produces({ "application/xml", "application/json" })
     @ApiOperation(value = "Finds Pets by status", tags={ "pet" })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
+        @ApiResponse(code = 200, message = "successful operation", response = List.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "Invalid status value") })
     public List<Pet> findPetsByStatus(@QueryParam("status") @NotNull List<String> status);
 
@@ -80,7 +81,7 @@ public interface PetApi  {
     @Produces({ "application/xml", "application/json" })
     @ApiOperation(value = "Finds Pets by tags", tags={ "pet" })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
+        @ApiResponse(code = 200, message = "successful operation", response = List.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "Invalid tag value") })
     public List<Pet> findPetsByTags(@QueryParam("tags") @NotNull List<String> tags);
 
