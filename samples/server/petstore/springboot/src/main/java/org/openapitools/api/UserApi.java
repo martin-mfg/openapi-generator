@@ -5,8 +5,6 @@
  */
 package org.openapitools.api;
 
-import java.xyz.ArrayType;
-import org.openapitools.model.CreateUsersWithArrayInput201ResponseDto;
 import org.openapitools.model.Param0DefDto;
 import java.xyz.Param1DefType;
 import io.swagger.annotations.*;
@@ -38,8 +36,8 @@ public interface UserApi {
      * POST /user/createWithArray : Creates list of users with given input array
      * 
      *
+     * @param param0  (optional)
      * @param param1  (optional)
-     * @param param2  (optional)
      * @return bar baz (status code 200)
      *         or foo bar (status code 201)
      */
@@ -52,8 +50,8 @@ public interface UserApi {
         responseContainer = "array"
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "bar baz", response = ArrayType.class, responseContainer = "array"),
-        @ApiResponse(code = 201, message = "foo bar", response = CreateUsersWithArrayInput201ResponseDto.class)
+        @ApiResponse(code = 200, message = "bar baz", response = Param1DefType.class, responseContainer = "array"),
+        @ApiResponse(code = 201, message = "foo bar", response = Object.class)
     })
     @RequestMapping(
         method = RequestMethod.POST,
@@ -61,8 +59,8 @@ public interface UserApi {
         produces = { "application/json" }
     )
     default ResponseEntity<array<ArrayType<Param1DefType>>> createUsersWithArrayInput(
-        @ApiParam(value = "") @RequestHeader(value = "param1", required = false) Param0DefDto param1,
-        @ApiParam(value = "") @RequestHeader(value = "param2", required = false) ArrayType<@Valid Param1DefType> param2
+        @ApiParam(value = "") @RequestHeader(value = "param0", required = false) Param0DefDto param0,
+        @ApiParam(value = "") @RequestHeader(value = "param1", required = false) ArrayType<@Valid Param1DefType> param1
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {

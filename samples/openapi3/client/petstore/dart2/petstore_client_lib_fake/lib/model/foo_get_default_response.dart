@@ -13,7 +13,7 @@ part of openapi.api;
 class FooGetDefaultResponse {
   /// Returns a new [FooGetDefaultResponse] instance.
   FooGetDefaultResponse({
-    this.string,
+    this.myString,
   });
 
   ///
@@ -22,26 +22,26 @@ class FooGetDefaultResponse {
   /// source code must fall back to having a nullable type.
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
-  Foo? string;
+  Foo? myString;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FooGetDefaultResponse &&
-     other.string == string;
+     other.myString == myString;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (string == null ? 0 : string!.hashCode);
+    (myString == null ? 0 : myString!.hashCode);
 
   @override
-  String toString() => 'FooGetDefaultResponse[string=$string]';
+  String toString() => 'FooGetDefaultResponse[myString=$myString]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (this.string != null) {
-      json[r'string'] = this.string;
+    if (this.myString != null) {
+      json[r'myString'] = this.myString;
     } else {
-      json[r'string'] = null;
+      json[r'myString'] = null;
     }
     return json;
   }
@@ -65,7 +65,7 @@ class FooGetDefaultResponse {
       }());
 
       return FooGetDefaultResponse(
-        string: Foo.fromJson(json[r'string']),
+        myString: Foo.fromJson(json[r'myString']),
       );
     }
     return null;

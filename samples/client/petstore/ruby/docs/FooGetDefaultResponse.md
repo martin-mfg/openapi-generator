@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **string** | [**Foo**](Foo.md) |  | [optional] |
+| **my_string** | [**Foo**](Foo.md) |  | [optional] |
 
 ## Example
 
@@ -12,7 +12,7 @@
 require 'petstore'
 
 instance = Petstore::FooGetDefaultResponse.new(
-  string: null
+  my_string: null
 )
 ```
 

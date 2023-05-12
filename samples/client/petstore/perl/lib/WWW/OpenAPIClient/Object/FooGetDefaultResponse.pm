@@ -220,9 +220,9 @@ __PACKAGE__->class_documentation({description => '',
 }                                 );
 
 __PACKAGE__->method_documentation({
-    'string' => {
+    'my_string' => {
         datatype => 'Foo',
-        base_name => 'string',
+        base_name => 'myString',
         description => '',
         format => '',
         read_only => '',
@@ -230,11 +230,11 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->openapi_types( {
-    'string' => 'Foo'
+    'my_string' => 'Foo'
 } );
 
 __PACKAGE__->attribute_map( {
-    'string' => 'string'
+    'my_string' => 'myString'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

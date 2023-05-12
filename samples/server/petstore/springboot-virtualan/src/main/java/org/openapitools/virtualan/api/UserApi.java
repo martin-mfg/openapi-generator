@@ -5,8 +5,6 @@
  */
 package org.openapitools.virtualan.api;
 
-import org.openapitools.virtualan.model.CreateUsersWithArrayInput201Response;
-import java.util.List;
 import org.openapitools.virtualan.model.Param0Def;
 import org.openapitools.virtualan.model.Param1Def;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
@@ -51,8 +49,8 @@ public interface UserApi {
      * POST /user/createWithArray : Creates list of users with given input array
      * 
      *
+     * @param param0  (optional)
      * @param param1  (optional)
-     * @param param2  (optional)
      * @return bar baz (status code 200)
      *         or foo bar (status code 201)
      */
@@ -64,10 +62,10 @@ public interface UserApi {
         tags = { "user" },
         responses = {
             @ApiResponse(responseCode = "200", description = "bar baz", content = {
-                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = List.class)))
+                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Param1Def.class)))
             }),
             @ApiResponse(responseCode = "201", description = "foo bar", content = {
-                @Content(mediaType = "application/json", schema = @Schema(implementation = CreateUsersWithArrayInput201Response.class))
+                @Content(mediaType = "application/json", schema = @Schema(implementation = Object.class))
             })
         }
     )
@@ -77,8 +75,8 @@ public interface UserApi {
         produces = { "application/json" }
     )
     default ResponseEntity<List<Param1Def>> createUsersWithArrayInput(
-        @Parameter(name = "param1", description = "", in = ParameterIn.HEADER) @RequestHeader(value = "param1", required = false) Param0Def param1,
-        @Parameter(name = "param2", description = "", in = ParameterIn.HEADER) @RequestHeader(value = "param2", required = false) List<@Valid Param1Def> param2
+        @Parameter(name = "param0", description = "", in = ParameterIn.HEADER) @RequestHeader(value = "param0", required = false) Param0Def param0,
+        @Parameter(name = "param1", description = "", in = ParameterIn.HEADER) @RequestHeader(value = "param1", required = false) List<@Valid Param1Def> param1
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {

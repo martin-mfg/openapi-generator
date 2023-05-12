@@ -46,10 +46,10 @@ public class UserApiTest {
      */
     @Test
     public void createUsersWithArrayInputTest() throws ApiException {
-        Param0Def param1 = null;
-        List<Param1Def> param2 = null;
+        Param0Def param0 = null;
+        List<Param1Def> param1 = null;
         List<Param1Def> response = 
-        api.createUsersWithArrayInput(param1, param2);
+        api.createUsersWithArrayInput(param0, param1);
         
         // TODO: test validations
     }

@@ -11,9 +11,9 @@ from unittest.mock import patch
 
 import urllib3
 
-import petstore_api
-from petstore_api.paths.user_create_with_array import post  # noqa: E501
-from petstore_api import configuration, schemas, api_client
+import openapi_client
+from openapi_client.paths.user_create_with_array import post  # noqa: E501
+from openapi_client import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
@@ -32,8 +32,7 @@ class TestUserCreateWithArray(ApiTestMixin, unittest.TestCase):
     def tearDown(self):
         pass
 
-    response_status = 0
-    response_body = ''
+    response_status = 200
 
 
 

@@ -68,10 +68,10 @@ public interface UserApi {
    * Get user by user name
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return Observable&lt;User&gt;
+   * @return Completable
    */
   @GET("user/{username}")
-  Observable<User> getUserByName(
+  Completable getUserByName(
     @retrofit2.http.Path("username") String username
   );
 

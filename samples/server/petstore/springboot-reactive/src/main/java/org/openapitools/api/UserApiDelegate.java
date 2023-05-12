@@ -1,8 +1,6 @@
 package org.openapitools.api;
 
 import springfox.documentation.annotations.ApiIgnore;
-import org.openapitools.model.CreateUsersWithArrayInput201Response;
-import java.util.List;
 import org.openapitools.model.Param0Def;
 import org.openapitools.model.Param1Def;
 import org.springframework.http.HttpStatus;
@@ -35,14 +33,14 @@ public interface UserApiDelegate {
      * POST /user/createWithArray : Creates list of users with given input array
      * 
      *
+     * @param param0  (optional)
      * @param param1  (optional)
-     * @param param2  (optional)
      * @return bar baz (status code 200)
      *         or foo bar (status code 201)
      * @see UserApi#createUsersWithArrayInput
      */
-    default Mono<ResponseEntity<Flux<Param1Def>>> createUsersWithArrayInput(Param0Def param1,
-        List<@Valid Param1Def> param2,
+    default Mono<ResponseEntity<Flux<Param1Def>>> createUsersWithArrayInput(Param0Def param0,
+        List<@Valid Param1Def> param1,
         ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);

@@ -127,26 +127,24 @@ public interface UserApi extends ApiClient.Api {
    * Get user by user name
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return User
    */
   @RequestLine("GET /user/{username}")
   @Headers({
     "Accept: application/json",
   })
-  User getUserByName(@Param("username") String username);
+  void getUserByName(@Param("username") String username);
 
   /**
    * Get user by user name
    * Similar to <code>getUserByName</code> but it also returns the http response headers .
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return A ApiResponse that wraps the response boyd and the http headers.
    */
   @RequestLine("GET /user/{username}")
   @Headers({
     "Accept: application/json",
   })
-  ApiResponse<User> getUserByNameWithHttpInfo(@Param("username") String username);
+  ApiResponse<Void> getUserByNameWithHttpInfo(@Param("username") String username);
 
 
 

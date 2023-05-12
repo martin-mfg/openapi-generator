@@ -62,26 +62,26 @@ ptree _foo_get_default_response::toPropertyTree() const
 {
 	ptree pt;
 	ptree tmp_node;
-	pt.add_child("string", m_string.toPropertyTree());
+	pt.add_child("myString", m_MyString.toPropertyTree());
 	return pt;
 }
 
 void _foo_get_default_response::fromPropertyTree(ptree const &pt)
 {
 	ptree tmp_node;
-	if (pt.get_child_optional("string")) {
-        m_string = fromPt<Foo>(pt.get_child("string"));
+	if (pt.get_child_optional("myString")) {
+        m_MyString = fromPt<Foo>(pt.get_child("myString"));
 	}
 }
 
-Foo _foo_get_default_response::getString() const
+Foo _foo_get_default_response::getMyString() const
 {
-    return m_string;
+    return m_MyString;
 }
 
-void _foo_get_default_response::setString(Foo value)
+void _foo_get_default_response::setMyString(Foo value)
 {
-    m_string = value;
+    m_MyString = value;
 }
 
 

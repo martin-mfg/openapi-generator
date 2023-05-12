@@ -1,7 +1,5 @@
 package org.openapitools.api;
 
-import org.openapitools.model.CreateUsersWithArrayInput201Response;
-import java.util.List;
 import org.openapitools.model.Param0Def;
 import org.openapitools.model.Param1Def;
 import org.springframework.http.HttpStatus;
@@ -30,14 +28,14 @@ public interface UserApiDelegate {
      * POST /user/createWithArray : Creates list of users with given input array
      * 
      *
+     * @param param0  (optional)
      * @param param1  (optional)
-     * @param param2  (optional)
      * @return bar baz (status code 200)
      *         or foo bar (status code 201)
      * @see UserApi#createUsersWithArrayInput
      */
-    default ResponseEntity<List<Param1Def>> createUsersWithArrayInput(Param0Def param1,
-        List<@Valid Param1Def> param2) {
+    default ResponseEntity<List<Param1Def>> createUsersWithArrayInput(Param0Def param0,
+        List<@Valid Param1Def> param1) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {

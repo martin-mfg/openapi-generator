@@ -1,6 +1,6 @@
 # DefaultApi
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -10,7 +10,7 @@ All URIs are relative to *http://petstore.swagger.io:80/v2*
 
 ## fooGet
 
-> FooGetDefaultResponse fooGet()
+> Object fooGet()
 
 
 
@@ -20,7 +20,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+**Object**
 
 ### Authorization
 

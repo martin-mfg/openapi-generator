@@ -329,7 +329,7 @@ public class Example {
         defaultClient.setBasePath("http://localhost:3000");
 
         QueryApi apiInstance = new QueryApi(defaultClient);
-        Pet queryObject = new HashMap(); // Pet | 
+        Pet queryObject = new Pet(); // Pet | 
         try {
             String result = apiInstance.testQueryStyleDeepObjectExplodeTrueObject(queryObject);
             System.out.println(result);
@@ -395,7 +395,7 @@ public class Example {
         defaultClient.setBasePath("http://localhost:3000");
 
         QueryApi apiInstance = new QueryApi(defaultClient);
-        Pet queryObject = new HashMap(); // Pet | 
+        Pet queryObject = new Pet(); // Pet | 
         try {
             ApiResponse<String> response = apiInstance.testQueryStyleDeepObjectExplodeTrueObjectWithHttpInfo(queryObject);
             System.out.println("Status code: " + response.getStatusCode());
@@ -463,7 +463,7 @@ public class Example {
         defaultClient.setBasePath("http://localhost:3000");
 
         QueryApi apiInstance = new QueryApi(defaultClient);
-        TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject = new TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter(); // TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter | 
+        Bird queryObject = new Bird(); // Bird | 
         try {
             String result = apiInstance.testQueryStyleDeepObjectExplodeTrueObjectAllOf(queryObject);
             System.out.println(result);
@@ -483,7 +483,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **queryObject** | [**TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter**](.md)|  | [optional] |
+| **queryObject** | [**Bird**](.md)|  | [optional] |
 
 ### Return type
 
@@ -529,7 +529,7 @@ public class Example {
         defaultClient.setBasePath("http://localhost:3000");
 
         QueryApi apiInstance = new QueryApi(defaultClient);
-        TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject = new TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter(); // TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter | 
+        Bird queryObject = new Bird(); // Bird | 
         try {
             ApiResponse<String> response = apiInstance.testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(queryObject);
             System.out.println("Status code: " + response.getStatusCode());
@@ -551,7 +551,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **queryObject** | [**TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter**](.md)|  | [optional] |
+| **queryObject** | [**Bird**](.md)|  | [optional] |
 
 ### Return type
 
@@ -597,7 +597,7 @@ public class Example {
         defaultClient.setBasePath("http://localhost:3000");
 
         QueryApi apiInstance = new QueryApi(defaultClient);
-        TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject = new HashMap(); // TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter | 
+        Object queryObject = null; // Object | 
         try {
             String result = apiInstance.testQueryStyleFormExplodeTrueArrayString(queryObject);
             System.out.println(result);
@@ -617,7 +617,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **queryObject** | [**TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter**](.md)|  | [optional] |
+| **queryObject** | [**Object**](.md)|  | [optional] |
 
 ### Return type
 
@@ -663,7 +663,7 @@ public class Example {
         defaultClient.setBasePath("http://localhost:3000");
 
         QueryApi apiInstance = new QueryApi(defaultClient);
-        TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject = new HashMap(); // TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter | 
+        Object queryObject = null; // Object | 
         try {
             ApiResponse<String> response = apiInstance.testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(queryObject);
             System.out.println("Status code: " + response.getStatusCode());
@@ -685,7 +685,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **queryObject** | [**TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter**](.md)|  | [optional] |
+| **queryObject** | [**Object**](.md)|  | [optional] |
 
 ### Return type
 
@@ -731,7 +731,7 @@ public class Example {
         defaultClient.setBasePath("http://localhost:3000");
 
         QueryApi apiInstance = new QueryApi(defaultClient);
-        Pet queryObject = new HashMap(); // Pet | 
+        Pet queryObject = new Pet(); // Pet | 
         try {
             String result = apiInstance.testQueryStyleFormExplodeTrueObject(queryObject);
             System.out.println(result);
@@ -797,7 +797,7 @@ public class Example {
         defaultClient.setBasePath("http://localhost:3000");
 
         QueryApi apiInstance = new QueryApi(defaultClient);
-        Pet queryObject = new HashMap(); // Pet | 
+        Pet queryObject = new Pet(); // Pet | 
         try {
             ApiResponse<String> response = apiInstance.testQueryStyleFormExplodeTrueObjectWithHttpInfo(queryObject);
             System.out.println("Status code: " + response.getStatusCode());

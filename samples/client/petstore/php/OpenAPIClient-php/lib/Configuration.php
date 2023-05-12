@@ -93,7 +93,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://petstore.swagger.io:80/v2';
+    protected $host = 'http://localhost';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
@@ -472,45 +472,8 @@ class Configuration
     {
         return [
             [
-                "url" => "http://{server}.swagger.io:{port}/v2",
-                "description" => "petstore server",
-                "variables" => [
-                    "server" => [
-                        "description" => "No description provided",
-                        "default_value" => "petstore",
-                        "enum_values" => [
-                            "petstore",
-                            "qa-petstore",
-                            "dev-petstore"
-                        ]
-                    ],
-                    "port" => [
-                        "description" => "No description provided",
-                        "default_value" => "80",
-                        "enum_values" => [
-                            "80",
-                            "8080"
-                        ]
-                    ]
-                ]
-            ],
-            [
-                "url" => "https://localhost:8080/{version}",
-                "description" => "The local server",
-                "variables" => [
-                    "version" => [
-                        "description" => "No description provided",
-                        "default_value" => "v2",
-                        "enum_values" => [
-                            "v1",
-                            "v2"
-                        ]
-                    ]
-                ]
-            ],
-            [
-                "url" => "https://127.0.0.1/no_varaible",
-                "description" => "The local server without variables",
+                "url" => "",
+                "description" => "No description provided",
             ]
         ];
     }

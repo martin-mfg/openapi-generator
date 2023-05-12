@@ -15,12 +15,12 @@ require 'time'
 
 module Petstore
   class FooGetDefaultResponse
-    attr_accessor :string
+    attr_accessor :my_string
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'string' => :'string'
+        :'my_string' => :'myString'
       }
     end
 
@@ -32,7 +32,7 @@ module Petstore
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'string' => :'Foo'
+        :'my_string' => :'Foo'
       }
     end
 
@@ -57,8 +57,8 @@ module Petstore
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'string')
-        self.string = attributes[:'string']
+      if attributes.key?(:'my_string')
+        self.my_string = attributes[:'my_string']
       end
     end
 
@@ -80,7 +80,7 @@ module Petstore
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          string == o.string
+          my_string == o.my_string
     end
 
     # @see the `==` method
@@ -92,7 +92,7 @@ module Petstore
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [string].hash
+      [my_string].hash
     end
 
     # Builds the object from hash

@@ -53,10 +53,7 @@ public class UserServiceImpl implements UserService {
 
     @GET
     @Path("/{username}")
-    @Produces({ "application/xml", "application/json" })
-    public User getUserByName(@PathParam("username") String username) {
-        User result = null; // Replace with correct business logic.
-        return result;
+    public void getUserByName(@PathParam("username") String username) {
     }
 
     @GET

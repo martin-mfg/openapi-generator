@@ -125,15 +125,12 @@ Class | Method | HTTP request | Description
  - [Bird](docs/Bird.md)
  - [Category](docs/Category.md)
  - [DataQuery](docs/DataQuery.md)
- - [DataQueryAllOf](docs/DataQueryAllOf.md)
  - [DefaultValue](docs/DefaultValue.md)
  - [NumberPropertiesOnly](docs/NumberPropertiesOnly.md)
  - [Pet](docs/Pet.md)
  - [Query](docs/Query.md)
  - [StringEnumRef](docs/StringEnumRef.md)
  - [Tag](docs/Tag.md)
- - [TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter](docs/TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter.md)
- - [TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter](docs/TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter.md)
 
 
 ## Documentation for Authorization

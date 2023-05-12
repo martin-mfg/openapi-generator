@@ -212,7 +212,7 @@ No authorization required
 
 # **getUserByName**
 ```swift
-    open class func getUserByName(username: String, completion: @escaping (_ data: User?, _ error: Error?) -> Void)
+    open class func getUserByName(username: String, completion: @escaping (_ data: Void?, _ error: Error?) -> Void)
 ```
 
 Get user by user name
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+Void (empty response body)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/xml, application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

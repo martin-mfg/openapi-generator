@@ -23,13 +23,6 @@ import org.openapitools.client.auth.HttpBearerAuth;
 import org.openapitools.client.auth.ApiKeyAuth;
 import org.openapitools.client.ApiResponseDecoder;
 
-import org.openapitools.client.auth.ApiErrorDecoder;
-import org.openapitools.client.auth.OAuth;
-import org.openapitools.client.auth.OAuth.AccessTokenListener;
-import org.openapitools.client.auth.OAuthFlow;
-import org.openapitools.client.auth.OauthPasswordGrant;
-import org.openapitools.client.auth.OauthClientCredentialsGrant;
-import feign.Retryer;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApiClient {
@@ -38,7 +31,7 @@ public class ApiClient {
   public interface Api {}
 
   protected ObjectMapper objectMapper;
-  private String basePath = "http://petstore.swagger.io:80/v2";
+  private String basePath = "http://localhost";
   private Map<String, RequestInterceptor> apiAuthorizations;
   private Feign.Builder feignBuilder;
 
@@ -49,8 +42,6 @@ public class ApiClient {
                 .client(new OkHttpClient())
                 .encoder(new FormEncoder(new JacksonEncoder(objectMapper)))
                 .decoder(new ApiResponseDecoder(objectMapper))
-                .errorDecoder(new ApiErrorDecoder())
-                .retryer(new Retryer.Default(0, 0, 2))
                 .logger(new Slf4jLogger());
   }
 
@@ -58,23 +49,7 @@ public class ApiClient {
     this();
     for(String authName : authNames) {
       log.log(Level.FINE, "Creating authentication {0}", authName);
-      RequestInterceptor auth;
-      if ("petstore_auth".equals(authName)) {
-        auth = buildOauthRequestInterceptor(OAuthFlow.IMPLICIT, "http://petstore.swagger.io/api/oauth/dialog", "", "write:pets, read:pets");
-      } else if ("api_key".equals(authName)) {
-        auth = new ApiKeyAuth("header", "api_key");
-      } else if ("api_key_query".equals(authName)) {
-        auth = new ApiKeyAuth("query", "api_key_query");
-      } else if ("http_basic_test".equals(authName)) {
-        auth = new HttpBasicAuth();
-      } else if ("bearer_test".equals(authName)) {
-        auth = new HttpBearerAuth("bearer");
-      } else if ("http_signature_test".equals(authName)) {
-        auth = new HttpBearerAuth("signature");
-      } else {
-        throw new RuntimeException("auth name \"" + authName + "\" not found in available auth names");
-      }
-      addAuthorization(authName, auth);
+      throw new RuntimeException("auth name \"" + authName + "\" not found in available auth names");
     }
   }
 
@@ -134,17 +109,6 @@ public class ApiClient {
     JsonNullableModule jnm = new JsonNullableModule();
     objectMapper.registerModule(jnm);
     return objectMapper;
-  }
-
-  private RequestInterceptor buildOauthRequestInterceptor(OAuthFlow flow, String authorizationUrl, String tokenUrl, String scopes) {
-    switch (flow) {
-      case PASSWORD:
-        return new OauthPasswordGrant(tokenUrl, scopes);
-      case APPLICATION:
-        return new OauthClientCredentialsGrant(authorizationUrl, tokenUrl, scopes);
-      default:
-        throw new RuntimeException("Oauth flow \"" + flow + "\" is not implemented");
-    }
   }
 
 
@@ -228,57 +192,6 @@ public class ApiClient {
   public void setCredentials(String username, String password) {
     HttpBasicAuth apiAuthorization = getAuthorization(HttpBasicAuth.class);
     apiAuthorization.setCredentials(username, password);
-  }
-
-  /**
-   * Helper method to configure the client credentials for Oauth
-   * @param clientId Client ID
-   * @param clientSecret Client secret
-   */
-  public void setClientCredentials(String clientId, String clientSecret) {
-    OauthClientCredentialsGrant authorization = getAuthorization(OauthClientCredentialsGrant.class);
-    authorization.configure(clientId, clientSecret);
-  }
-
-  /**
-   * Helper method to configure the username/password for Oauth password grant
-   * @param username Username
-   * @param password Password
-   * @param clientId Client ID
-   * @param clientSecret Client secret
-   */
-  public void setOauthPassword(String username, String password, String clientId, String clientSecret) {
-    OauthPasswordGrant apiAuthorization = getAuthorization(OauthPasswordGrant.class);
-    apiAuthorization.configure(username, password, clientId, clientSecret);
-  }
-
-  /**
-   * Helper method to pre-set the oauth access token of the first oauth found in the apiAuthorizations (there should be only one)
-   * @param accessToken Access Token
-   * @param expiresIn Validity period in seconds
-   */
-  public void setAccessToken(String accessToken, Integer expiresIn) {
-    OAuth apiAuthorization = getAuthorization(OAuth.class);
-    apiAuthorization.setAccessToken(accessToken, expiresIn);
-  }
-
-  /**
-   * Helper method to configure the oauth accessCode/implicit flow parameters
-   * @param clientId Client ID
-   * @param clientSecret Client secret
-   * @param redirectURI Redirect URI
-   */
-  public void configureAuthorizationFlow(String clientId, String clientSecret, String redirectURI) {
-    throw new RuntimeException("Not implemented");
-  }
-
-  /**
-   * Configures a listener which is notified when a new access token is received.
-   * @param accessTokenListener Access token listener
-   */
-  public void registerAccessTokenListener(AccessTokenListener accessTokenListener) {
-    OAuth apiAuthorization = getAuthorization(OAuth.class);
-    apiAuthorization.registerAccessTokenListener(accessTokenListener);
   }
 
   /**

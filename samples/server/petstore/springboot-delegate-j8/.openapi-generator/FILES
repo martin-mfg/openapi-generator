@@ -8,7 +8,6 @@ src/main/java/org/openapitools/api/UserApiController.java
 src/main/java/org/openapitools/api/UserApiDelegate.java
 src/main/java/org/openapitools/configuration/HomeController.java
 src/main/java/org/openapitools/configuration/SpringFoxConfiguration.java
-src/main/java/org/openapitools/model/CreateUsersWithArrayInput201Response.java
 src/main/java/org/openapitools/model/Param0Def.java
 src/main/java/org/openapitools/model/Param1Def.java
 src/main/resources/application.properties

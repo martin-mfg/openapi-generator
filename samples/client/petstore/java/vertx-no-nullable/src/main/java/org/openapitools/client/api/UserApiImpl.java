@@ -239,7 +239,7 @@ public class UserApiImpl implements UserApi {
         * @param username The name that needs to be fetched. Use user1 for testing. (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void getUserByName(String username, Handler<AsyncResult<User>> resultHandler) {
+    public void getUserByName(String username, Handler<AsyncResult<Void>> resultHandler) {
         getUserByName(username, null, resultHandler);
     }
 
@@ -250,7 +250,7 @@ public class UserApiImpl implements UserApi {
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void getUserByName(String username, ApiClient.AuthInfo authInfo, Handler<AsyncResult<User>> resultHandler) {
+    public void getUserByName(String username, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
         Object localVarBody = null;
         
         // verify the required parameter 'username' is set
@@ -275,11 +275,11 @@ public class UserApiImpl implements UserApi {
         // TODO: sending files within multipart/form-data is not supported yet (because of vertx web-client)
         Map<String, Object> localVarFormParams = new HashMap<>();
         
-        String[] localVarAccepts = { "application/xml", "application/json" };
+        String[] localVarAccepts = {  };
         String[] localVarContentTypes = {  };
         String[] localVarAuthNames = new String[] {  };
-        TypeReference<User> localVarReturnType = new TypeReference<User>() {};
-        apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccepts, localVarContentTypes, localVarAuthNames, authInfo, localVarReturnType, resultHandler);
+
+        apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccepts, localVarContentTypes, localVarAuthNames, authInfo, null, resultHandler);
     }
     /**
     * Logs user into the system

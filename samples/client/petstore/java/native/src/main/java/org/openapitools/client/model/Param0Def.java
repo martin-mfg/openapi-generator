@@ -27,8 +27,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
-import java.xyz.ArrayType;
-import java.xyz.Param1DefType;
+import java.util.List;
+import org.openapitools.client.model.Param1Def;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
@@ -41,17 +41,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Param0Def {
   public static final String JSON_PROPERTY_PARAM0_FIELD = "param0Field";
-  private ArrayType<Param1DefType> param0Field;
+  private List<Param1Def> param0Field;
 
   public Param0Def() { 
   }
 
-  public Param0Def param0Field(ArrayType<Param1DefType> param0Field) {
+  public Param0Def param0Field(List<Param1Def> param0Field) {
     this.param0Field = param0Field;
     return this;
   }
 
-  public Param0Def addParam0FieldItem(Param1DefType param0FieldItem) {
+  public Param0Def addParam0FieldItem(Param1Def param0FieldItem) {
     if (this.param0Field == null) {
       this.param0Field = new ArrayList<>();
     }
@@ -67,14 +67,14 @@ public class Param0Def {
   @JsonProperty(JSON_PROPERTY_PARAM0_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public ArrayType<Param1DefType> getParam0Field() {
+  public List<Param1Def> getParam0Field() {
     return param0Field;
   }
 
 
   @JsonProperty(JSON_PROPERTY_PARAM0_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setParam0Field(ArrayType<Param1DefType> param0Field) {
+  public void setParam0Field(List<Param1Def> param0Field) {
     this.param0Field = param0Field;
   }
 

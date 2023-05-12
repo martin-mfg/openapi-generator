@@ -31,7 +31,7 @@ export interface FooGetDefaultResponse {
      * @type {Foo}
      * @memberof FooGetDefaultResponse
      */
-    string?: Foo;
+    myString?: Foo;
 }
 
 /**
@@ -53,7 +53,7 @@ export function FooGetDefaultResponseFromJSONTyped(json: any, ignoreDiscriminato
     }
     return {
         
-        'string': !exists(json, 'string') ? undefined : FooFromJSON(json['string']),
+        'myString': !exists(json, 'myString') ? undefined : FooFromJSON(json['myString']),
     };
 }
 
@@ -66,7 +66,7 @@ export function FooGetDefaultResponseToJSON(value?: FooGetDefaultResponse | null
     }
     return {
         
-        'string': FooToJSON(value.string),
+        'myString': FooToJSON(value.myString),
     };
 }
 

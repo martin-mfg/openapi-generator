@@ -7,7 +7,6 @@ src/main/java/org/openapitools/api/UserApi.java
 src/main/java/org/openapitools/api/UserApiController.java
 src/main/java/org/openapitools/configuration/HomeController.java
 src/main/java/org/openapitools/configuration/SpringFoxConfiguration.java
-src/main/java/org/openapitools/model/CreateUsersWithArrayInput201ResponseDto.java
 src/main/java/org/openapitools/model/Param0DefDto.java
 src/main/resources/application.properties
 src/main/resources/openapi.yaml

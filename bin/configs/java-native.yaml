@@ -7,32 +7,32 @@ additionalProperties:
   artifactId: petstore-native
   hideGenerationTimestamp: "true"
   #generateAliasAsModel: "true"
-typeMappings:
-  array: ArrayType
-  Param1Def: Param1DefType
-  ResponseDef: ResponseDefType
-  List: ListType
-schemaMappings:
-  ArrayType: ArrayTypeSchema
-  Param1DefType: Param1DefTypeSchema
-  Param1Def: Param1DefSchema
-  #  MyIntArray: MyIntArraySchema
-  ResponseDef: ResponseDefSchema
-  ResponseDefType: ResponseDefTypeSchema
-  List: ListSchema
-  ListType: ListTypeSchema
-importMappings:
-  array: java.xyz.Array
-  List: java.xyz.List
-  Param1Def: java.xyz.Param1Def
-  ArrayType: java.xyz.ArrayType
-  Param1DefType: java.xyz.Param1DefType
-  MyIntArray: java.xyz.MyIntArray
-  ArrayTypeSchema: java.xyz.ArrayTypeSchema
-  Param1DefTypeSchema: java.xyz.Param1DefTypeSchema
-  Param1DefSchema: java.xyz.Param1DefSchema
-  MyIntArraySchema: java.xyz.MyIntArraySchema
-  ResponseDef: java.xyz.ResponseDef
-  ResponseDefType: java.xyz.ResponseDefType
-  ResponseDefSchema: java.xyz.ResponseDefSchema
-  ResponseDefTypeSchema: java.xyz.ResponseDefTypeSchema
+#typeMappings:
+#  array: ArrayType
+#  Param1Def: Param1DefType
+#  ResponseDef: ResponseDefType
+#  List: ListType
+#schemaMappings:
+#  ArrayType: ArrayTypeSchema
+#  Param1DefType: Param1DefTypeSchema
+#  Param1Def: Param1DefSchema
+#  MyIntArray: MyIntArraySchema
+#  ResponseDef: ResponseDefSchema
+#  ResponseDefType: ResponseDefTypeSchema
+#  List: ListSchema
+#  ListType: ListTypeSchema
+#importMappings:
+#  array: java.xyz.Array
+#  List: java.xyz.List
+#  Param1Def: java.xyz.Param1Def
+#  ArrayType: java.xyz.ArrayType
+#  Param1DefType: java.xyz.Param1DefType
+#  MyIntArray: java.xyz.MyIntArray
+#  ArrayTypeSchema: java.xyz.ArrayTypeSchema
+#  Param1DefTypeSchema: java.xyz.Param1DefTypeSchema
+#  Param1DefSchema: java.xyz.Param1DefSchema
+#  MyIntArraySchema: java.xyz.MyIntArraySchema
+#  ResponseDef: java.xyz.ResponseDef
+#  ResponseDefType: java.xyz.ResponseDefType
+#  ResponseDefSchema: java.xyz.ResponseDefSchema
+#  ResponseDefTypeSchema: java.xyz.ResponseDefTypeSchema

@@ -4418,7 +4418,7 @@ public class DefaultCodegen implements CodegenConfig {
 
 
                     LOGGER.warn("importContainerType: {}", importContainerType);
-                    addImports(imports, r);
+                    // addImports(imports, r);
 
 
                     if ("set".equals(r.containerType) && typeMapping.containsKey(r.containerType)) {
@@ -4823,7 +4823,7 @@ public class DefaultCodegen implements CodegenConfig {
         }
 
 
-        r.baseType = getSchemaType(responseSchema);
+        // r.baseType = getSchemaType(responseSchema);
 
 
         r.primitiveType = (r.baseType == null || languageSpecificPrimitives().contains(r.baseType));

@@ -6,8 +6,6 @@
 package org.openapitools.api;
 
 import springfox.documentation.annotations.ApiIgnore;
-import org.openapitools.model.CreateUsersWithArrayInput201Response;
-import java.util.List;
 import org.openapitools.model.Param0Def;
 import org.openapitools.model.Param1Def;
 import io.swagger.annotations.*;
@@ -39,8 +37,8 @@ public interface UserApi {
      * POST /user/createWithArray : Creates list of users with given input array
      * 
      *
+     * @param param0  (optional)
      * @param param1  (optional)
-     * @param param2  (optional)
      * @return bar baz (status code 200)
      *         or foo bar (status code 201)
      */
@@ -53,8 +51,8 @@ public interface UserApi {
         responseContainer = "List"
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "bar baz", response = List.class, responseContainer = "List"),
-        @ApiResponse(code = 201, message = "foo bar", response = CreateUsersWithArrayInput201Response.class)
+        @ApiResponse(code = 200, message = "bar baz", response = Param1Def.class, responseContainer = "List"),
+        @ApiResponse(code = 201, message = "foo bar", response = Object.class)
     })
     @RequestMapping(
         method = RequestMethod.POST,
@@ -62,11 +60,11 @@ public interface UserApi {
         produces = { "application/json" }
     )
     default Mono<ResponseEntity<Flux<Param1Def>>> createUsersWithArrayInput(
-        @ApiParam(value = "") @RequestHeader(value = "param1", required = false) Param0Def param1,
-        @ApiParam(value = "") @RequestHeader(value = "param2", required = false) List<@Valid Param1Def> param2,
+        @ApiParam(value = "") @RequestHeader(value = "param0", required = false) Param0Def param0,
+        @ApiParam(value = "") @RequestHeader(value = "param1", required = false) List<@Valid Param1Def> param1,
         @ApiIgnore final ServerWebExchange exchange
     ) {
-        return getDelegate().createUsersWithArrayInput(param1, param2, exchange);
+        return getDelegate().createUsersWithArrayInput(param0, param1, exchange);
     }
 
 }

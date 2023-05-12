@@ -158,7 +158,7 @@ No authorization required
 
 ## getUserByName
 
-> User getUserByName(username)
+> void getUserByName(username)
 
 Get user by user name
 
@@ -173,7 +173,7 @@ Get user by user name
 
 ### Return type
 
-[**User**](User.md)
+[**void**](Void.md)
 
 ### Authorization
 
@@ -182,13 +182,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/xml, application/json
+- **Accept**: Not defined
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | successful operation |  -  |
 | **400** | Invalid username supplied |  -  |
 | **404** | User not found |  -  |
 

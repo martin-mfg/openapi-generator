@@ -2,7 +2,6 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
-import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 import java.util.Set;
@@ -328,9 +327,9 @@ public class PetApi {
      * @return Set&lt;Pet&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Set<Pet> findPetsByTags(Set<String> tags) throws WebClientResponseException {
+    public List<Pet> findPetsByTags(Set<String> tags) throws WebClientResponseException {
         ParameterizedTypeReference<Pet> localVarReturnType = new ParameterizedTypeReference<Pet>() {};
-        return findPetsByTagsRequestCreation(tags).bodyToFlux(localVarReturnType).collect(Collectors.toSet()).block();
+        return findPetsByTagsRequestCreation(tags).bodyToFlux(localVarReturnType).collectList().block();
     }
 
     /**

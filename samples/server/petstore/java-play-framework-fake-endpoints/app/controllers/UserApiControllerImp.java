@@ -35,9 +35,8 @@ public class UserApiControllerImp extends UserApiControllerImpInterface {
     }
 
     @Override
-    public User getUserByName(Http.Request request, String username) throws Exception {
+    public void getUserByName(Http.Request request, String username) throws Exception {
         //Do your magic!!!
-        return new User();
     }
 
     @Override

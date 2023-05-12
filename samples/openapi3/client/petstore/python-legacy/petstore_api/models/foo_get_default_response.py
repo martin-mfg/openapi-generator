@@ -36,45 +36,45 @@ class FooGetDefaultResponse(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'string': 'Foo'
+        'my_string': 'Foo'
     }
 
     attribute_map = {
-        'string': 'string'
+        'my_string': 'myString'
     }
 
-    def __init__(self, string=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, my_string=None, local_vars_configuration=None):  # noqa: E501
         """FooGetDefaultResponse - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration.get_default_copy()
         self.local_vars_configuration = local_vars_configuration
 
-        self._string = None
+        self._my_string = None
         self.discriminator = None
 
-        if string is not None:
-            self.string = string
+        if my_string is not None:
+            self.my_string = my_string
 
     @property
-    def string(self):
-        """Gets the string of this FooGetDefaultResponse.  # noqa: E501
+    def my_string(self):
+        """Gets the my_string of this FooGetDefaultResponse.  # noqa: E501
 
 
-        :return: The string of this FooGetDefaultResponse.  # noqa: E501
+        :return: The my_string of this FooGetDefaultResponse.  # noqa: E501
         :rtype: Foo
         """
-        return self._string
+        return self._my_string
 
-    @string.setter
-    def string(self, string):
-        """Sets the string of this FooGetDefaultResponse.
+    @my_string.setter
+    def my_string(self, my_string):
+        """Sets the my_string of this FooGetDefaultResponse.
 
 
-        :param string: The string of this FooGetDefaultResponse.  # noqa: E501
-        :type string: Foo
+        :param my_string: The my_string of this FooGetDefaultResponse.  # noqa: E501
+        :type my_string: Foo
         """
 
-        self._string = string
+        self._my_string = my_string
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

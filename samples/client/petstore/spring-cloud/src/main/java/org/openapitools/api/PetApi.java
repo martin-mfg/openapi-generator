@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import java.util.List;
 import org.openapitools.model.ModelApiResponse;
 import org.openapitools.model.Pet;
 import io.swagger.annotations.*;
@@ -120,7 +119,7 @@ public interface PetApi {
          }
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation", response = List.class, responseContainer = "List"),
+        @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "Invalid status value")
     })
     @RequestMapping(
@@ -157,7 +156,7 @@ public interface PetApi {
          }
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "successful operation", response = List.class, responseContainer = "List"),
+        @ApiResponse(code = 200, message = "successful operation", response = Pet.class, responseContainer = "List"),
         @ApiResponse(code = 400, message = "Invalid tag value")
     })
     @RequestMapping(

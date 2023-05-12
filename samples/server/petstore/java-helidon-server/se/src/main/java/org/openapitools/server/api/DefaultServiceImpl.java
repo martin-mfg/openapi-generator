@@ -1,6 +1,6 @@
 package org.openapitools.server.api;
 
-import org.openapitools.server.model.FooGetDefaultResponse;
+import org.openapitools.server.model.Foo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.logging.Logger;
 

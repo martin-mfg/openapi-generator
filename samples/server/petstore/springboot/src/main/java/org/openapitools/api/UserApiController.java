@@ -1,7 +1,5 @@
 package org.openapitools.api;
 
-import java.xyz.ArrayType;
-import org.openapitools.model.CreateUsersWithArrayInput201ResponseDto;
 import org.openapitools.model.Param0DefDto;
 import java.xyz.Param1DefType;
 

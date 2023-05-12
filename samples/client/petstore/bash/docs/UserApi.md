@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+(empty response body)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: application/xml, application/json
+- **Accept**: Not Applicable
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

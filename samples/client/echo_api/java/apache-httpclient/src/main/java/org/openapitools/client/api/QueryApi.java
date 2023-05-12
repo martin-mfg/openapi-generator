@@ -20,12 +20,11 @@ import org.openapitools.client.Configuration;
 import org.openapitools.client.model.*;
 import org.openapitools.client.Pair;
 
+import org.openapitools.client.model.Bird;
 import org.openapitools.client.model.DataQuery;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.Pet;
-import org.openapitools.client.model.TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter;
-import org.openapitools.client.model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter;
 
 
 import java.util.ArrayList;
@@ -287,7 +286,7 @@ public class QueryApi {
    * @return String
    * @throws ApiException if fails to make API call
    */
-  public String testQueryStyleDeepObjectExplodeTrueObjectAllOf(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject) throws ApiException {
+  public String testQueryStyleDeepObjectExplodeTrueObjectAllOf(Bird queryObject) throws ApiException {
     return this.testQueryStyleDeepObjectExplodeTrueObjectAllOf(queryObject, Collections.emptyMap());
   }
 
@@ -300,7 +299,7 @@ public class QueryApi {
    * @return String
    * @throws ApiException if fails to make API call
    */
-  public String testQueryStyleDeepObjectExplodeTrueObjectAllOf(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject, Map<String, String> additionalHeaders) throws ApiException {
+  public String testQueryStyleDeepObjectExplodeTrueObjectAllOf(Bird queryObject, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -358,7 +357,7 @@ public class QueryApi {
    * @return String
    * @throws ApiException if fails to make API call
    */
-  public String testQueryStyleFormExplodeTrueArrayString(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject) throws ApiException {
+  public String testQueryStyleFormExplodeTrueArrayString(Object queryObject) throws ApiException {
     return this.testQueryStyleFormExplodeTrueArrayString(queryObject, Collections.emptyMap());
   }
 
@@ -371,7 +370,7 @@ public class QueryApi {
    * @return String
    * @throws ApiException if fails to make API call
    */
-  public String testQueryStyleFormExplodeTrueArrayString(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject, Map<String, String> additionalHeaders) throws ApiException {
+  public String testQueryStyleFormExplodeTrueArrayString(Object queryObject, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -455,12 +454,7 @@ public class QueryApi {
     Map<String, String> localVarCookieParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-    localVarQueryParams.addAll(apiClient.parameterToPair("id", queryObject.getId()));
-    localVarQueryParams.addAll(apiClient.parameterToPair("name", queryObject.getName()));
-    localVarQueryParams.addAll(apiClient.parameterToPair("category", queryObject.getCategory()));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("multi", "photoUrls", queryObject.getPhotoUrls()));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("multi", "tags", queryObject.getTags()));
-    localVarQueryParams.addAll(apiClient.parameterToPair("status", queryObject.getStatus()));
+    localVarQueryStringJoiner.add(queryObject.toUrlQueryString());
     
     localVarHeaderParams.putAll(additionalHeaders);
 

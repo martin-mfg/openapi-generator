@@ -342,11 +342,10 @@ public class UserApi {
    * Get user by user name
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return User
    * @throws ApiException if fails to make API call
    */
-  public User getUserByName(String username) throws ApiException {
-    return this.getUserByName(username, Collections.emptyMap());
+  public void getUserByName(String username) throws ApiException {
+    this.getUserByName(username, Collections.emptyMap());
   }
 
 
@@ -355,10 +354,9 @@ public class UserApi {
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
    * @param additionalHeaders additionalHeaders for this call
-   * @return User
    * @throws ApiException if fails to make API call
    */
-  public User getUserByName(String username, Map<String, String> additionalHeaders) throws ApiException {
+  public void getUserByName(String username, Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'username' is set
@@ -384,7 +382,7 @@ public class UserApi {
     
     
     final String[] localVarAccepts = {
-      "application/xml", "application/json"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -395,8 +393,7 @@ public class UserApi {
 
     String[] localVarAuthNames = new String[] {  };
 
-    TypeReference<User> localVarReturnType = new TypeReference<User>() {};
-    return apiClient.invokeAPI(
+    apiClient.invokeAPI(
         localVarPath,
         "GET",
         localVarQueryParams,
@@ -409,7 +406,7 @@ public class UserApi {
         localVarAccept,
         localVarContentType,
         localVarAuthNames,
-        localVarReturnType
+        null
     );
   }
 

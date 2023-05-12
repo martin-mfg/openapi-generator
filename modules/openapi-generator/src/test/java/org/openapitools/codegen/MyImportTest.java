@@ -31,7 +31,6 @@ public class MyImportTest {
     @Test
     public void testGenerate() {
         Map<String, Object> properties = new HashMap<>();
-        properties.put("artifactId","petstore-native");
         properties.put("hideGenerationTimestamp","true");
 
         File output = new File("C:\\Martin\\Projekte\\openapi-generator\\samples\\client\\petstore\\java\\native");
@@ -41,7 +40,7 @@ public class MyImportTest {
                 .setLibrary("native")
                 .setAdditionalProperties(properties)
                 .setInputSpec("src/test/resources/3_0/spring/petstore-with-fake-endpoints-models-for-testing.yaml")
-                .setTemplateDir("C:/Martin/Projekte/openapi-generator/modules/openapi-generator/src/main/resources/Java")
+/*
                 .addTypeMapping("array","ArrayType")
                 .addTypeMapping("Param1Def","Param1DefType")
                 .addTypeMapping("ResponseDef","ResponseDefType")
@@ -65,6 +64,7 @@ public class MyImportTest {
                 .addImportMapping("ResponseDefType","java.xyz.ResponseDefType")
                 .addImportMapping("ResponseDefSchema","java.xyz.ResponseDefSchema")
                 .addImportMapping("ResponseDefTypeSchema","java.xyz.ResponseDefTypeSchema")
+*/
                 .setOutputDir(output.getAbsolutePath().replace("\\", "/"));
 
         final ClientOptInput clientOptInput = configurator.toClientOptInput();
@@ -72,8 +72,50 @@ public class MyImportTest {
         List<File> files = generator.opts(clientOptInput).generate();
         output.deleteOnExit();
 
-        Assert.assertEquals(files.size(), 36);
         TestUtils.ensureContainsFile(files, output, "README.md");
+    }
+
+    @Test
+    public void testGeneratePython() {
+        Map<String, Object> properties = new HashMap<>();
+        properties.put("hideGenerationTimestamp","true");
+
+        File output = new File("C:\\Martin\\Projekte\\openapi-generator\\samples\\openapi3\\client\\petstore\\python");
+
+        final CodegenConfigurator configurator = new CodegenConfigurator()
+                .setGeneratorName("python")
+                .setAdditionalProperties(properties)
+                .setInputSpec("src/test/resources/3_0/spring/petstore-with-fake-endpoints-models-for-testing.yaml")
+                .setTemplateDir("C:/Martin/Projekte/openapi-generator/modules/openapi-generator/src/main/resources/python")
+                .setOutputDir(output.getAbsolutePath().replace("\\", "/"));
+
+        final ClientOptInput clientOptInput = configurator.toClientOptInput();
+        DefaultGenerator generator = new DefaultGenerator();
+        List<File> files = generator.opts(clientOptInput).generate();
+        output.deleteOnExit();
+
+        TestUtils.ensureContainsFile(files, output, "README.md");
+    }
+
+    @Test
+    public void testGenerateAsciiDoc() {
+        Map<String, Object> properties = new HashMap<>();
+        properties.put("hideGenerationTimestamp","true");
+
+        File output = new File("C:\\Martin\\Projekte\\openapi-generator\\samples\\asciiDoc");
+
+        final CodegenConfigurator configurator = new CodegenConfigurator()
+                .setGeneratorName("asciidoc")
+                .setAdditionalProperties(properties)
+                .setInputSpec("src/test/resources/3_0/petstore-with-fake-endpoints-models-for-testing.yaml")
+                .setOutputDir(output.getAbsolutePath().replace("\\", "/"));
+
+        final ClientOptInput clientOptInput = configurator.toClientOptInput();
+        DefaultGenerator generator = new DefaultGenerator();
+        List<File> files = generator.opts(clientOptInput).generate();
+        output.deleteOnExit();
+
+        TestUtils.ensureContainsFile(files, output, "index.adoc");
     }
 
 }

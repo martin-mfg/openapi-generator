@@ -167,6 +167,8 @@ public class JavaClientCodegen extends AbstractJavaCodegen
     public JavaClientCodegen() {
         super();
 
+//        addSchemaImportsFromV3SpecLocations = true;
+
         // TODO: Move GlobalFeature.ParameterizedServer to library: jersey after moving featureSet to generatorMetadata
         modifyFeatureSet(features -> features
                 .includeDocumentationFeatures(DocumentationFeature.Readme)

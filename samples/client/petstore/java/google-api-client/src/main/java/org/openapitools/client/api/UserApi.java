@@ -376,33 +376,25 @@ public class UserApi {
 
   /**
     * Get user by user name
-    * <p><b>200</b> - successful operation
     * <p><b>400</b> - Invalid username supplied
     * <p><b>404</b> - User not found
     * @param username The name that needs to be fetched. Use user1 for testing.
-    * @return User
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public User getUserByName(String username) throws IOException {
-        HttpResponse response = getUserByNameForHttpResponse(username);
-        TypeReference<User> typeRef = new TypeReference<User>() {};
-        return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
+    public void getUserByName(String username) throws IOException {
+        getUserByNameForHttpResponse(username);
     }
 
   /**
     * Get user by user name
-    * <p><b>200</b> - successful operation
     * <p><b>400</b> - Invalid username supplied
     * <p><b>404</b> - User not found
     * @param username The name that needs to be fetched. Use user1 for testing.
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
-    * @return User
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public User getUserByName(String username, Map<String, Object> params) throws IOException {
-        HttpResponse response = getUserByNameForHttpResponse(username, params);
-        TypeReference<User> typeRef = new TypeReference<User>() {};
-        return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
+    public void getUserByName(String username, Map<String, Object> params) throws IOException {
+        getUserByNameForHttpResponse(username, params);
     }
 
     public HttpResponse getUserByNameForHttpResponse(String username) throws IOException {

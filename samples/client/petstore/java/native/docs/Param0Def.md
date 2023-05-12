@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**param0Field** | [**ArrayType&lt;Param1DefType&gt;**](Param1DefType.md) |  |  [optional] |
+|**param0Field** | [**List&lt;Param1Def&gt;**](Param1Def.md) |  |  [optional] |
 
 
 

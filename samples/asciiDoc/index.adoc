@@ -1,0 +1,123 @@
+= OpenAPI Petstore
+team@openapitools.org
+1.0.0
+:toc: left
+:numbered:
+:toclevels: 3
+:source-highlighter: highlightjs
+:keywords: openapi, rest, OpenAPI Petstore
+:specDir: 
+:snippetDir: 
+:generator-template: v1 2019-12-20
+:info-url: https://openapi-generator.tech
+:app-name: OpenAPI Petstore
+
+[abstract]
+.Abstract
+This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \" \\
+
+
+// markup not found, no include::{specDir}intro.adoc[opts=optional]
+
+
+
+== Endpoints
+
+
+[.Default]
+=== Default
+
+
+[.fooGet]
+==== fooGet
+
+`GET /foo`
+
+
+
+===== Description
+
+
+
+
+// markup not found, no include::{specDir}foo/GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+
+
+===== Return Type
+
+
+<<Object>>
+
+
+===== Content Type
+
+* application/json
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 0
+| response
+|  <<Object>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}foo/GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}foo/GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :foo/GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}foo/GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[#models]
+== Models
+
+
+[#Foo]
+=== _Foo_ 
+
+
+
+[.fields-Foo]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| bar
+| 
+| String 
+| 
+|  
+
+|===
+
+

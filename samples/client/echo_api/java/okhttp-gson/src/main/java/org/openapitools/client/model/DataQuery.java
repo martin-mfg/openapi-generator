@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.client.model.Query;
 
 import com.google.gson.Gson;
@@ -184,11 +183,11 @@ public class DataQuery extends Query {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("id");
+    openapiFields.add("outcomes");
     openapiFields.add("suffix");
     openapiFields.add("text");
     openapiFields.add("date");
-    openapiFields.add("id");
-    openapiFields.add("outcomes");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

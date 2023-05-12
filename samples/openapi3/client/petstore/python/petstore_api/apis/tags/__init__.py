@@ -6,10 +6,4 @@ import enum
 
 
 class TagValues(str, enum.Enum):
-    PET = "pet"
-    STORE = "store"
-    USER = "user"
-    ANOTHERFAKE = "$another-fake?"
     DEFAULT = "default"
-    FAKE = "fake"
-    FAKE_CLASSNAME_TAGS_123 = "fake_classname_tags 123#$%^"

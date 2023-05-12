@@ -79,7 +79,7 @@ class PetApiController(@Autowired(required = true) val service: PetApiService) {
         responseContainer = "List",
         authorizations = [Authorization(value = "petstore_auth", scopes = [AuthorizationScope(scope = "write:pets", description = "modify pets in your account"), AuthorizationScope(scope = "read:pets", description = "read your pets")])])
     @ApiResponses(
-        value = [ApiResponse(code = 200, message = "successful operation", response = kotlin.collections.List::class, responseContainer = "List"),ApiResponse(code = 400, message = "Invalid status value")])
+        value = [ApiResponse(code = 200, message = "successful operation", response = Pet::class, responseContainer = "List"),ApiResponse(code = 400, message = "Invalid status value")])
     @RequestMapping(
         method = [RequestMethod.GET],
         value = ["/pet/findByStatus"],
@@ -98,7 +98,7 @@ class PetApiController(@Autowired(required = true) val service: PetApiService) {
         responseContainer = "List",
         authorizations = [Authorization(value = "petstore_auth", scopes = [AuthorizationScope(scope = "write:pets", description = "modify pets in your account"), AuthorizationScope(scope = "read:pets", description = "read your pets")])])
     @ApiResponses(
-        value = [ApiResponse(code = 200, message = "successful operation", response = kotlin.collections.List::class, responseContainer = "List"),ApiResponse(code = 400, message = "Invalid tag value")])
+        value = [ApiResponse(code = 200, message = "successful operation", response = Pet::class, responseContainer = "List"),ApiResponse(code = 400, message = "Invalid tag value")])
     @RequestMapping(
         method = [RequestMethod.GET],
         value = ["/pet/findByTags"],

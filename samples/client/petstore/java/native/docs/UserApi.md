@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 ## createUsersWithArrayInput
 
-> ArrayType<Param1DefType> createUsersWithArrayInput(param1, param2)
+> List<Param1Def> createUsersWithArrayInput(param0, param1)
 
 Creates list of users with given input array
 
@@ -33,10 +33,10 @@ public class Example {
         defaultClient.setBasePath("http://localhost");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        Param0Def param1 = new HashMap(); // Param0Def | 
-        ArrayType<Param1DefType> param2 = Arrays.asList(); // ArrayType<Param1DefType> | 
+        Param0Def param0 = new HashMap(); // Param0Def | 
+        List<Param1Def> param1 = Arrays.asList(); // List<Param1Def> | 
         try {
-            ArrayType<Param1DefType> result = apiInstance.createUsersWithArrayInput(param1, param2);
+            List<Param1Def> result = apiInstance.createUsersWithArrayInput(param0, param1);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#createUsersWithArrayInput");
@@ -54,12 +54,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **param1** | [**Param0Def**](.md)|  | [optional] |
-| **param2** | [**ArrayType&lt;Param1DefType&gt;**](Param1DefType.md)|  | [optional] |
+| **param0** | [**Param0Def**](.md)|  | [optional] |
+| **param1** | [**List&lt;Param1Def&gt;**](Param1Def.md)|  | [optional] |
 
 ### Return type
 
-[**ArrayType&lt;Param1DefType&gt;**](Param1DefType.md)
+[**List&lt;Param1Def&gt;**](Param1Def.md)
 
 
 ### Authorization
@@ -79,7 +79,7 @@ No authorization required
 
 ## createUsersWithArrayInputWithHttpInfo
 
-> ApiResponse<ArrayType<Param1DefType>> createUsersWithArrayInput createUsersWithArrayInputWithHttpInfo(param1, param2)
+> ApiResponse<List<Param1Def>> createUsersWithArrayInput createUsersWithArrayInputWithHttpInfo(param0, param1)
 
 Creates list of users with given input array
 
@@ -102,10 +102,10 @@ public class Example {
         defaultClient.setBasePath("http://localhost");
 
         UserApi apiInstance = new UserApi(defaultClient);
-        Param0Def param1 = new HashMap(); // Param0Def | 
-        ArrayType<Param1DefType> param2 = Arrays.asList(); // ArrayType<Param1DefType> | 
+        Param0Def param0 = new HashMap(); // Param0Def | 
+        List<Param1Def> param1 = Arrays.asList(); // List<Param1Def> | 
         try {
-            ApiResponse<ArrayType<Param1DefType>> response = apiInstance.createUsersWithArrayInputWithHttpInfo(param1, param2);
+            ApiResponse<List<Param1Def>> response = apiInstance.createUsersWithArrayInputWithHttpInfo(param0, param1);
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -125,12 +125,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **param1** | [**Param0Def**](.md)|  | [optional] |
-| **param2** | [**ArrayType&lt;Param1DefType&gt;**](Param1DefType.md)|  | [optional] |
+| **param0** | [**Param0Def**](.md)|  | [optional] |
+| **param1** | [**List&lt;Param1Def&gt;**](Param1Def.md)|  | [optional] |
 
 ### Return type
 
-ApiResponse<[**ArrayType&lt;Param1DefType&gt;**](Param1DefType.md)>
+ApiResponse<[**List&lt;Param1Def&gt;**](Param1Def.md)>
 
 
 ### Authorization

@@ -273,7 +273,7 @@ No authorization required
 
 ## GetUserByName
 
-> User GetUserByName(ctx, username).Execute()
+> GetUserByName(ctx, username).Execute()
 
 Get user by user name
 
@@ -294,13 +294,11 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UserApi.GetUserByName(context.Background(), username).Execute()
+    r, err := apiClient.UserApi.GetUserByName(context.Background(), username).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UserApi.GetUserByName``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetUserByName`: User
-    fmt.Fprintf(os.Stdout, "Response from `UserApi.GetUserByName`: %v\n", resp)
 }
 ```
 
@@ -323,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+ (empty response body)
 
 ### Authorization
 
@@ -332,7 +330,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/xml, application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

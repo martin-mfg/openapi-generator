@@ -13,7 +13,8 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiResponse;
-import org.openapitools.client.model.FooGetDefaultResponse;
+import org.openapitools.client.model.Foo;
+import java.util.Map;
 
 /**
  * OpenAPI Petstore
@@ -22,6 +23,6 @@ import org.openapitools.client.model.FooGetDefaultResponse;
  */
 public interface DefaultApi {
 
-  ApiResponse<FooGetDefaultResponse> fooGet();
+  ApiResponse<Object> fooGet();
 
 }

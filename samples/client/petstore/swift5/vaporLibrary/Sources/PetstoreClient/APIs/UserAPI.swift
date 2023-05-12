@@ -224,7 +224,6 @@ open class UserAPI {
     }
 
     public enum GetUserByName {
-        case http200(value: User, raw: ClientResponse)
         case http400(raw: ClientResponse)
         case http404(raw: ClientResponse)
         case http0(raw: ClientResponse)
@@ -239,8 +238,6 @@ open class UserAPI {
     open class func getUserByName(username: String, headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<GetUserByName> {
         return getUserByNameRaw(username: username, headers: headers, beforeSend: beforeSend).flatMapThrowing { response -> GetUserByName in
             switch response.status.code {
-            case 200:
-                return .http200(value: try response.content.decode(User.self, using: Configuration.contentConfiguration.requireDecoder(for: User.defaultContentType)), raw: response)
             case 400:
                 return .http400(raw: response)
             case 404:

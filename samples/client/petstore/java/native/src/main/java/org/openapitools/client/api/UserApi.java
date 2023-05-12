@@ -18,10 +18,9 @@ import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
 // ArrayType should be imported below
-import java.xyz.ArrayType;
 import org.openapitools.client.model.CreateUsersWithArrayInput201Response;
 import org.openapitools.client.model.Param0Def;
-import java.xyz.Param1DefType;
+import org.openapitools.client.model.Param1Def;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -88,26 +87,26 @@ public class UserApi {
   /**
    * Creates list of users with given input array
    * 
-   * @param param1  (optional)
-   * @param param2  (optional
-   * @return ArrayType&lt;Param1DefType&gt;
+   * @param param0  (optional)
+   * @param param1  (optional
+   * @return List&lt;Param1Def&gt;
    * @throws ApiException if fails to make API call
    */
-  public ArrayType<Param1DefType> createUsersWithArrayInput(Param0Def param1, ArrayType<Param1DefType> param2) throws ApiException {
-    ApiResponse<ArrayType<Param1DefType>> localVarResponse = createUsersWithArrayInputWithHttpInfo(param1, param2);
+  public List<Param1Def> createUsersWithArrayInput(Param0Def param0, List<Param1Def> param1) throws ApiException {
+    ApiResponse<List<Param1Def>> localVarResponse = createUsersWithArrayInputWithHttpInfo(param0, param1);
     return localVarResponse.getData();
   }
 
   /**
    * Creates list of users with given input array
    * 
-   * @param param1  (optional)
-   * @param param2  (optional
-   * @return ApiResponse&lt;ArrayType&lt;Param1DefType&gt;&gt;
+   * @param param0  (optional)
+   * @param param1  (optional
+   * @return ApiResponse&lt;List&lt;Param1Def&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<ArrayType<Param1DefType>> createUsersWithArrayInputWithHttpInfo(Param0Def param1, ArrayType<Param1DefType> param2) throws ApiException {
-    HttpRequest.Builder localVarRequestBuilder = createUsersWithArrayInputRequestBuilder(param1, param2);
+  public ApiResponse<List<Param1Def>> createUsersWithArrayInputWithHttpInfo(Param0Def param0, List<Param1Def> param1) throws ApiException {
+    HttpRequest.Builder localVarRequestBuilder = createUsersWithArrayInputRequestBuilder(param0, param1);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
           localVarRequestBuilder.build(),
@@ -119,10 +118,10 @@ public class UserApi {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("createUsersWithArrayInput", localVarResponse);
         }
-        return new ApiResponse<ArrayType<Param1DefType>>(
+        return new ApiResponse<List<Param1Def>>(
           localVarResponse.statusCode(),
           localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<ArrayType<Param1DefType>>() {}) // closes the InputStream
+          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<List<Param1Def>>() {}) // closes the InputStream
         );
       } finally {
       }
@@ -135,7 +134,7 @@ public class UserApi {
     }
   }
 
-  private HttpRequest.Builder createUsersWithArrayInputRequestBuilder(Param0Def param1, ArrayType<Param1DefType> param2) throws ApiException {
+  private HttpRequest.Builder createUsersWithArrayInputRequestBuilder(Param0Def param0, List<Param1Def> param1) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -143,11 +142,11 @@ public class UserApi {
 
     localVarRequestBuilder.uri(URI.create(memberVarBaseUri + localVarPath));
 
+    if (param0 != null) {
+      localVarRequestBuilder.header("param0", param0.toString());
+    }
     if (param1 != null) {
       localVarRequestBuilder.header("param1", param1.toString());
-    }
-    if (param2 != null) {
-      localVarRequestBuilder.header("param2", param2.toString());
     }
     localVarRequestBuilder.header("Accept", "application/json");
 

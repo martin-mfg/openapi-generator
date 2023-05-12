@@ -69,10 +69,10 @@ public interface UserApi {
    * Get user by user name
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return Call&lt;User&gt;
+   * @return Call&lt;Void&gt;
    */
   @GET("user/{username}")
-  CompletionStage<Response<User>> getUserByName(
+  CompletionStage<Response<Void>> getUserByName(
     @retrofit2.http.Path("username") String username
   );
 

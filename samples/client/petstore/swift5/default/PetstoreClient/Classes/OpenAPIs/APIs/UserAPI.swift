@@ -197,11 +197,11 @@ open class UserAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getUserByName(username: String, apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ data: User?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getUserByName(username: String, apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ data: Void?, _ error: Error?) -> Void)) -> RequestTask {
         return getUserByNameWithRequestBuilder(username: username).execute(apiResponseQueue) { result in
             switch result {
-            case let .success(response):
-                completion(response.body, nil)
+            case .success:
+                completion((), nil)
             case let .failure(error):
                 completion(nil, error)
             }
@@ -212,9 +212,9 @@ open class UserAPI {
      Get user by user name
      - GET /user/{username}
      - parameter username: (path) The name that needs to be fetched. Use user1 for testing. 
-     - returns: RequestBuilder<User> 
+     - returns: RequestBuilder<Void> 
      */
-    open class func getUserByNameWithRequestBuilder(username: String) -> RequestBuilder<User> {
+    open class func getUserByNameWithRequestBuilder(username: String) -> RequestBuilder<Void> {
         var localVariablePath = "/user/{username}"
         let usernamePreEscape = "\(APIHelper.mapValueToPathItem(username))"
         let usernamePostEscape = usernamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -230,7 +230,7 @@ open class UserAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<User>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Void>.Type = PetstoreClientAPI.requestBuilderFactory.getNonDecodableBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: false)
     }

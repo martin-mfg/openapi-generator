@@ -62,10 +62,8 @@ public class UserApi {
 
     @GET
     @Path("/{username}")
-    @Produces({ "application/xml", "application/json" })
-    @ApiOperation(value = "Get user by user name", notes = "", response = User.class, tags={ "user" })
+    @ApiOperation(value = "Get user by user name", notes = "", response = Void.class, tags={ "user" })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "successful operation", response = User.class),
         @ApiResponse(code = 400, message = "Invalid username supplied", response = Void.class),
         @ApiResponse(code = 404, message = "User not found", response = Void.class)
     })

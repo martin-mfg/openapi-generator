@@ -8,7 +8,7 @@ import org.openapitools.client.Pair;
 
 import jakarta.ws.rs.core.GenericType;
 
-import org.openapitools.client.model.FooGetDefaultResponse;
+import org.openapitools.client.model.Foo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -49,7 +49,7 @@ public class DefaultApi {
   /**
    * 
    * 
-   * @return FooGetDefaultResponse
+   * @return Object
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -57,14 +57,14 @@ public class DefaultApi {
        <tr><td> 0 </td><td> response </td><td>  -  </td></tr>
      </table>
    */
-  public FooGetDefaultResponse fooGet() throws ApiException {
+  public Object fooGet() throws ApiException {
     return fooGetWithHttpInfo().getData();
   }
 
   /**
    * 
    * 
-   * @return ApiResponse&lt;FooGetDefaultResponse&gt;
+   * @return ApiResponse&lt;Object&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -72,10 +72,10 @@ public class DefaultApi {
        <tr><td> 0 </td><td> response </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<FooGetDefaultResponse> fooGetWithHttpInfo() throws ApiException {
+  public ApiResponse<Object> fooGetWithHttpInfo() throws ApiException {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
-    GenericType<FooGetDefaultResponse> localVarReturnType = new GenericType<FooGetDefaultResponse>() {};
+    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
     return apiClient.invokeAPI("DefaultApi.fooGet", "/foo", "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                null, localVarReturnType, false);

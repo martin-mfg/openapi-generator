@@ -277,7 +277,7 @@
       </xs:complexType>
       <xs:complexType name="GetPetFindbystatus_ResponseMessage">
         <xs:sequence>
-          <xs:element minOccurs="1" maxOccurs="unbounded" name="Array" type="schemas:Array">
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="Pet" type="schemas:Pet">
             <xs:annotation>
               <xs:documentation>successful operation</xs:documentation>
             </xs:annotation>
@@ -295,7 +295,7 @@
       </xs:complexType>
       <xs:complexType name="GetPetFindbytags_ResponseMessage">
         <xs:sequence>
-          <xs:element minOccurs="1" maxOccurs="unbounded" name="Array" type="schemas:Array">
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="Pet" type="schemas:Pet">
             <xs:annotation>
               <xs:documentation>successful operation</xs:documentation>
             </xs:annotation>
@@ -393,7 +393,7 @@
       <xs:complexType name="GetStoreInventory_RequestMessage" />
       <xs:complexType name="GetStoreInventory_ResponseMessage">
         <xs:sequence>
-          <xs:element minOccurs="1" name="response" type="xs:map">
+          <xs:element minOccurs="1" name="response" type="xs:integer">
             <xs:annotation>
               <xs:documentation>successful operation</xs:documentation>
             </xs:annotation>

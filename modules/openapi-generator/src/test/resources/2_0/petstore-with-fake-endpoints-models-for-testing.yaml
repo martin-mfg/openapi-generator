@@ -504,10 +504,6 @@ paths:
           required: true
           type: string
       responses:
-        '200':
-          description: successful operation
-          schema:
-            $ref: '#/definitions/User'
         '400':
           description: Invalid username supplied
         '404':

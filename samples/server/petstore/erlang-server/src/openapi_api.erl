@@ -437,12 +437,12 @@ validate_response('DeletePet', 400, Body, ValidatorState) ->
     validate_response_body('', '', Body, ValidatorState);
 
 validate_response('FindPetsByStatus', 200, Body, ValidatorState) ->
-    validate_response_body('list', 'array', Body, ValidatorState);
+    validate_response_body('list', 'Pet', Body, ValidatorState);
 validate_response('FindPetsByStatus', 400, Body, ValidatorState) ->
     validate_response_body('', '', Body, ValidatorState);
 
 validate_response('FindPetsByTags', 200, Body, ValidatorState) ->
-    validate_response_body('list', 'array', Body, ValidatorState);
+    validate_response_body('list', 'Pet', Body, ValidatorState);
 validate_response('FindPetsByTags', 400, Body, ValidatorState) ->
     validate_response_body('', '', Body, ValidatorState);
 
@@ -475,7 +475,7 @@ validate_response('DeleteOrder', 404, Body, ValidatorState) ->
     validate_response_body('', '', Body, ValidatorState);
 
 validate_response('GetInventory', 200, Body, ValidatorState) ->
-    validate_response_body('map', 'map', Body, ValidatorState);
+    validate_response_body('map', 'integer', Body, ValidatorState);
 
 validate_response('GetOrderById', 200, Body, ValidatorState) ->
     validate_response_body('Order', 'Order', Body, ValidatorState);

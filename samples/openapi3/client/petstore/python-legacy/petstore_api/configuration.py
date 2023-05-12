@@ -69,8 +69,6 @@ class Configuration(object):
       disabled. This can be useful to troubleshoot data validation problem, such as
       when the OpenAPI document validation rules do not match the actual API data
       received by the server.
-    :param signing_info: Configuration parameters for the HTTP signature security scheme.
-        Must be an instance of petstore_api.signing.HttpSigningConfiguration
     :param server_index: Index to servers configuration.
     :param server_variables: Mapping with string values to replace variables in
       templated server configuration. The validation of enums is performed for
@@ -83,81 +81,6 @@ class Configuration(object):
     :param ssl_ca_cert: str - the path to a file of concatenated CA certificates
       in PEM format
 
-    :Example:
-
-    API Key Authentication Example.
-    Given the following security scheme in the OpenAPI specification:
-      components:
-        securitySchemes:
-          cookieAuth:         # name for the security scheme
-            type: apiKey
-            in: cookie
-            name: JSESSIONID  # cookie name
-
-    You can programmatically set the cookie:
-
-conf = petstore_api.Configuration(
-    api_key={'cookieAuth': 'abc123'}
-    api_key_prefix={'cookieAuth': 'JSESSIONID'}
-)
-
-    The following cookie will be added to the HTTP request:
-       Cookie: JSESSIONID abc123
-
-    HTTP Basic Authentication Example.
-    Given the following security scheme in the OpenAPI specification:
-      components:
-        securitySchemes:
-          http_basic_auth:
-            type: http
-            scheme: basic
-
-    Configure API client with HTTP basic authentication:
-
-conf = petstore_api.Configuration(
-    username='the-user',
-    password='the-password',
-)
-
-
-    HTTP Signature Authentication Example.
-    Given the following security scheme in the OpenAPI specification:
-      components:
-        securitySchemes:
-          http_basic_auth:
-            type: http
-            scheme: signature
-
-    Configure API client with HTTP signature authentication. Use the 'hs2019' signature scheme,
-    sign the HTTP requests with the RSA-SSA-PSS signature algorithm, and set the expiration time
-    of the signature to 5 minutes after the signature has been created.
-    Note you can use the constants defined in the petstore_api.signing module, and you can
-    also specify arbitrary HTTP headers to be included in the HTTP signature, except for the
-    'Authorization' header, which is used to carry the signature.
-
-    One may be tempted to sign all headers by default, but in practice it rarely works.
-    This is because explicit proxies, transparent proxies, TLS termination endpoints or
-    load balancers may add/modify/remove headers. Include the HTTP headers that you know
-    are not going to be modified in transit.
-
-conf = petstore_api.Configuration(
-    signing_info = petstore_api.signing.HttpSigningConfiguration(
-        key_id =                 'my-key-id',
-        private_key_path =       'rsa.pem',
-        signing_scheme =         petstore_api.signing.SCHEME_HS2019,
-        signing_algorithm =      petstore_api.signing.ALGORITHM_RSASSA_PSS,
-        signed_headers =         [petstore_api.signing.HEADER_REQUEST_TARGET,
-                                    petstore_api.signing.HEADER_CREATED,
-                                    petstore_api.signing.HEADER_EXPIRES,
-                                    petstore_api.signing.HEADER_HOST,
-                                    petstore_api.signing.HEADER_DATE,
-                                    petstore_api.signing.HEADER_DIGEST,
-                                    'Content-Type',
-                                    'User-Agent'
-                                    ],
-        signature_max_validity = datetime.timedelta(minutes=5)
-    )
-)
     """
 
     _default = None
@@ -167,14 +90,13 @@ conf = petstore_api.Configuration(
                  username=None, password=None,
                  discard_unknown_keys=False,
                  disabled_client_side_validations="",
-                 signing_info=None,
                  server_index=None, server_variables=None,
                  server_operation_index=None, server_operation_variables=None,
                  ssl_ca_cert=None,
                  ):
         """Constructor
         """
-        self._base_path = "http://petstore.swagger.io:80/v2" if host is None else host
+        self._base_path = "http://localhost" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -210,14 +132,6 @@ conf = petstore_api.Configuration(
         """
         self.discard_unknown_keys = discard_unknown_keys
         self.disabled_client_side_validations = disabled_client_side_validations
-        if signing_info is not None:
-            signing_info.host = host
-        self.signing_info = signing_info
-        """The HTTP signing configuration
-        """
-        self.access_token = None
-        """access token for OAuth/Bearer
-        """
         self.logger = {}
         """Logging Settings
         """
@@ -307,10 +221,6 @@ conf = petstore_api.Configuration(
                     raise ApiValueError(
                         "Invalid keyword: '{0}''".format(v))
             self._disabled_client_side_validations = s
-        if name == "signing_info" and value is not None:
-            # Ensure the host parameter from signing info is the same as
-            # Configuration.host.
-            value.host = self.host
 
     @classmethod
     def set_default(cls, default):
@@ -460,53 +370,6 @@ conf = petstore_api.Configuration(
         :return: The Auth Settings information dict.
         """
         auth = {}
-        if self.access_token is not None:
-            auth['petstore_auth'] = {
-                'type': 'oauth2',
-                'in': 'header',
-                'key': 'Authorization',
-                'value': 'Bearer ' + self.access_token
-            }
-        if 'api_key' in self.api_key:
-            auth['api_key'] = {
-                'type': 'api_key',
-                'in': 'header',
-                'key': 'api_key',
-                'value': self.get_api_key_with_prefix(
-                    'api_key',
-                ),
-            }
-        if 'api_key_query' in self.api_key:
-            auth['api_key_query'] = {
-                'type': 'api_key',
-                'in': 'query',
-                'key': 'api_key_query',
-                'value': self.get_api_key_with_prefix(
-                    'api_key_query',
-                ),
-            }
-        if self.username is not None and self.password is not None:
-            auth['http_basic_test'] = {
-                'type': 'basic',
-                'in': 'header',
-                'key': 'Authorization',
-                'value': self.get_basic_auth_token()
-            }
-        if self.access_token is not None:
-            auth['bearer_test'] = {
-                'type': 'bearer',
-                'in': 'header',
-                'format': 'JWT',
-                'key': 'Authorization',
-                'value': 'Bearer ' + self.access_token
-            }
-        if self.signing_info is not None:
-            auth['http_signature_test'] = {
-                'type': 'http-signature',
-                'in': 'header',
-                'key': 'Authorization',
-                'value': None  # Signature headers are calculated for every HTTP request
-            }
         return auth
 
     def to_debug_report(self):
@@ -528,45 +391,8 @@ conf = petstore_api.Configuration(
         """
         return [
             {
-                'url': "http://{server}.swagger.io:{port}/v2",
-                'description': "petstore server",
-                'variables': {
-                    'server': {
-                        'description': "No description provided",
-                        'default_value': "petstore",
-                        'enum_values': [
-                            "petstore",
-                            "qa-petstore",
-                            "dev-petstore"
-                        ]
-                        },
-                    'port': {
-                        'description': "No description provided",
-                        'default_value': "80",
-                        'enum_values': [
-                            "80",
-                            "8080"
-                        ]
-                        }
-                    }
-            },
-            {
-                'url': "https://localhost:8080/{version}",
-                'description': "The local server",
-                'variables': {
-                    'version': {
-                        'description': "No description provided",
-                        'default_value': "v2",
-                        'enum_values': [
-                            "v1",
-                            "v2"
-                        ]
-                        }
-                    }
-            },
-            {
-                'url': "https://127.0.0.1/no_varaible",
-                'description': "The local server without variables",
+                'url': "",
+                'description': "No description provided",
             }
         ]
 

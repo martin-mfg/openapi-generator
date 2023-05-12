@@ -120,8 +120,8 @@ public class PetController {
         summary = "Finds Pets by status",
         responses = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = {
-                @Content(mediaType = "application/xml", schema = @Schema(implementation = List.class)),
-                @Content(mediaType = "application/json", schema = @Schema(implementation = List.class))
+                @Content(mediaType = "application/xml", schema = @Schema(implementation = Pet.class)),
+                @Content(mediaType = "application/json", schema = @Schema(implementation = Pet.class))
             }),
             @ApiResponse(responseCode = "400", description = "Invalid status value")
         },
@@ -154,8 +154,8 @@ public class PetController {
         summary = "Finds Pets by tags",
         responses = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = {
-                @Content(mediaType = "application/xml", schema = @Schema(implementation = List.class)),
-                @Content(mediaType = "application/json", schema = @Schema(implementation = List.class))
+                @Content(mediaType = "application/xml", schema = @Schema(implementation = Pet.class)),
+                @Content(mediaType = "application/json", schema = @Schema(implementation = Pet.class))
             }),
             @ApiResponse(responseCode = "400", description = "Invalid tag value")
         },

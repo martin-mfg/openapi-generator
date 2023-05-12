@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
-import java.xyz.ArrayType;
+import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
@@ -40,12 +40,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CreateUsersWithArrayInput201Response {
   public static final String JSON_PROPERTY_MY_FIELD = "myField";
-  private ArrayType<Integer> myField;
+  private List<Integer> myField;
 
   public CreateUsersWithArrayInput201Response() { 
   }
 
-  public CreateUsersWithArrayInput201Response myField(ArrayType<Integer> myField) {
+  public CreateUsersWithArrayInput201Response myField(List<Integer> myField) {
     this.myField = myField;
     return this;
   }
@@ -66,14 +66,14 @@ public class CreateUsersWithArrayInput201Response {
   @JsonProperty(JSON_PROPERTY_MY_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public ArrayType<Integer> getMyField() {
+  public List<Integer> getMyField() {
     return myField;
   }
 
 
   @JsonProperty(JSON_PROPERTY_MY_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMyField(ArrayType<Integer> myField) {
+  public void setMyField(List<Integer> myField) {
     this.myField = myField;
   }
 

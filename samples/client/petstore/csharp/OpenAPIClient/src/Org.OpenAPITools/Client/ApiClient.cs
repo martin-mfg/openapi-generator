@@ -54,12 +54,12 @@ namespace Org.OpenAPITools.Client
         public ApiClient()
         {
             Configuration = Org.OpenAPITools.Client.Configuration.Default;
-            RestClient = new RestClient("http://petstore.swagger.io:80/v2");
+            RestClient = new RestClient("http://localhost");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (http://petstore.swagger.io:80/v2).
+        /// with default base path (http://localhost).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
@@ -74,7 +74,7 @@ namespace Org.OpenAPITools.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "http://petstore.swagger.io:80/v2")
+        public ApiClient(String basePath = "http://localhost")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

@@ -226,28 +226,25 @@ public class UserApi {
     /**
      * Get user by user name
      * 
-     * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid username supplied
      * <p><b>404</b> - User not found
      * @param username The name that needs to be fetched. Use user1 for testing. (required)
-     * @return User
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public User getUserByName(String username) throws RestClientException {
-        return getUserByNameWithHttpInfo(username).getBody();
+    public void getUserByName(String username) throws RestClientException {
+        getUserByNameWithHttpInfo(username);
     }
 
     /**
      * Get user by user name
      * 
-     * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid username supplied
      * <p><b>404</b> - User not found
      * @param username The name that needs to be fetched. Use user1 for testing. (required)
-     * @return ResponseEntity&lt;User&gt;
+     * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<User> getUserByNameWithHttpInfo(String username) throws RestClientException {
+    public ResponseEntity<Void> getUserByNameWithHttpInfo(String username) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'username' is set
@@ -264,16 +261,14 @@ public class UserApi {
         final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
-        final String[] localVarAccepts = { 
-            "application/xml", "application/json"
-         };
+        final String[] localVarAccepts = {  };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<User> localReturnType = new ParameterizedTypeReference<User>() {};
+        ParameterizedTypeReference<Void> localReturnType = new ParameterizedTypeReference<Void>() {};
         return apiClient.invokeAPI("/user/{username}", HttpMethod.GET, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**

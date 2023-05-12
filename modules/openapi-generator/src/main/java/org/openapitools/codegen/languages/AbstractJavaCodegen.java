@@ -62,6 +62,9 @@ import static org.openapitools.codegen.utils.StringUtils.*;
 public abstract class AbstractJavaCodegen extends DefaultCodegen implements CodegenConfig,
         DocumentationProviderFeatures {
 
+    @Override
+    public boolean getUseInlineModelResolver() { return true; }
+
     private final Logger LOGGER = LoggerFactory.getLogger(AbstractJavaCodegen.class);
     private static final String ARTIFACT_VERSION_DEFAULT_VALUE = "1.0.0";
 

@@ -20,7 +20,7 @@ import org.openapitools.client.Configuration;
 import org.openapitools.client.model.*;
 import org.openapitools.client.Pair;
 
-import org.openapitools.client.model.FooGetDefaultResponse;
+import org.openapitools.client.model.Foo;
 
 
 import java.util.ArrayList;
@@ -55,10 +55,10 @@ public class DefaultApi {
   /**
    * 
    * 
-   * @return FooGetDefaultResponse
+   * @return Object
    * @throws ApiException if fails to make API call
    */
-  public FooGetDefaultResponse fooGet() throws ApiException {
+  public Object fooGet() throws ApiException {
     return this.fooGet(Collections.emptyMap());
   }
 
@@ -67,10 +67,10 @@ public class DefaultApi {
    * 
    * 
    * @param additionalHeaders additionalHeaders for this call
-   * @return FooGetDefaultResponse
+   * @return Object
    * @throws ApiException if fails to make API call
    */
-  public FooGetDefaultResponse fooGet(Map<String, String> additionalHeaders) throws ApiException {
+  public Object fooGet(Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -101,7 +101,7 @@ public class DefaultApi {
 
     String[] localVarAuthNames = new String[] {  };
 
-    TypeReference<FooGetDefaultResponse> localVarReturnType = new TypeReference<FooGetDefaultResponse>() {};
+    TypeReference<Object> localVarReturnType = new TypeReference<Object>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "GET",

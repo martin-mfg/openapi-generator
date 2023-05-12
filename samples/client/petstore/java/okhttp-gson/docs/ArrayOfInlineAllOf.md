@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** |  |  [optional] |
 |**name** | **String** |  |  |
-|**arrayAllofDogProperty** | [**List&lt;ArrayOfInlineAllOfArrayAllofDogPropertyInner&gt;**](ArrayOfInlineAllOfArrayAllofDogPropertyInner.md) |  |  [optional] |
+|**arrayAllofDogProperty** | [**List&lt;Object&gt;**](Object.md) |  |  [optional] |
 
 
 

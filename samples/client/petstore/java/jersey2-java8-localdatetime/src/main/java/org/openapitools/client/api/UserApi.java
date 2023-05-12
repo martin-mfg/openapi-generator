@@ -213,35 +213,32 @@ public class UserApi {
    * Get user by user name
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return User
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-       <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
        <tr><td> 400 </td><td> Invalid username supplied </td><td>  -  </td></tr>
        <tr><td> 404 </td><td> User not found </td><td>  -  </td></tr>
      </table>
    */
-  public User getUserByName(String username) throws ApiException {
-    return getUserByNameWithHttpInfo(username).getData();
+  public void getUserByName(String username) throws ApiException {
+    getUserByNameWithHttpInfo(username);
   }
 
   /**
    * Get user by user name
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return ApiResponse&lt;User&gt;
+   * @return ApiResponse&lt;Void&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-       <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
        <tr><td> 400 </td><td> Invalid username supplied </td><td>  -  </td></tr>
        <tr><td> 404 </td><td> User not found </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<User> getUserByNameWithHttpInfo(String username) throws ApiException {
+  public ApiResponse<Void> getUserByNameWithHttpInfo(String username) throws ApiException {
     // Check required parameters
     if (username == null) {
       throw new ApiException(400, "Missing the required parameter 'username' when calling getUserByName");
@@ -251,12 +248,11 @@ public class UserApi {
     String localVarPath = "/user/{username}"
             .replaceAll("\\{username}", apiClient.escapeString(username));
 
-    String localVarAccept = apiClient.selectHeaderAccept("application/xml", "application/json");
+    String localVarAccept = apiClient.selectHeaderAccept();
     String localVarContentType = apiClient.selectHeaderContentType();
-    GenericType<User> localVarReturnType = new GenericType<User>() {};
     return apiClient.invokeAPI("UserApi.getUserByName", localVarPath, "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
-                               null, localVarReturnType, false);
+                               null, null, false);
   }
   /**
    * Logs user into the system

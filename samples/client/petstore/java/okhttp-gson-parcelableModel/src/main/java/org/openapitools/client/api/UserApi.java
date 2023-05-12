@@ -556,7 +556,6 @@ public class UserApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid username supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> User not found </td><td>  -  </td></tr>
      </table>
@@ -588,8 +587,6 @@ public class UserApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/xml",
-            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -622,39 +619,34 @@ public class UserApi {
      * Get user by user name
      * 
      * @param username The name that needs to be fetched. Use user1 for testing. (required)
-     * @return User
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid username supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> User not found </td><td>  -  </td></tr>
      </table>
      */
-    public User getUserByName(String username) throws ApiException {
-        ApiResponse<User> localVarResp = getUserByNameWithHttpInfo(username);
-        return localVarResp.getData();
+    public void getUserByName(String username) throws ApiException {
+        getUserByNameWithHttpInfo(username);
     }
 
     /**
      * Get user by user name
      * 
      * @param username The name that needs to be fetched. Use user1 for testing. (required)
-     * @return ApiResponse&lt;User&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid username supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> User not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<User> getUserByNameWithHttpInfo(String username) throws ApiException {
+    public ApiResponse<Void> getUserByNameWithHttpInfo(String username) throws ApiException {
         okhttp3.Call localVarCall = getUserByNameValidateBeforeCall(username, null);
-        Type localVarReturnType = new TypeToken<User>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
@@ -667,16 +659,14 @@ public class UserApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid username supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> User not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getUserByNameAsync(String username, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call getUserByNameAsync(String username, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getUserByNameValidateBeforeCall(username, _callback);
-        Type localVarReturnType = new TypeToken<User>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**

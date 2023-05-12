@@ -264,7 +264,6 @@ UserAPI.getUserByName(username: username).whenComplete { result in
     case .success(let response):
         switch response {
         // process decoded response value or raw ClientResponse
-        case .http200(let value, let raw):
         case .http400(let value, let raw):
         case .http404(let value, let raw):
         case .http0(let value, let raw):
@@ -285,10 +284,9 @@ Name | Type | Description  | Notes
 
 ```swift
 public enum GetUserByName {
-    case http200(value: User?, raw: ClientResponse)
     case http400(value: Void?, raw: ClientResponse)
     case http404(value: Void?, raw: ClientResponse)
-    case http0(value: User?, raw: ClientResponse)
+    case http0(value: Void?, raw: ClientResponse)
 }
 ```
 
@@ -299,7 +297,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/xml, application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

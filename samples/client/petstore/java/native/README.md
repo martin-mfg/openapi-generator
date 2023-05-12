@@ -1,4 +1,4 @@
-# petstore-native
+# openapi-java-client
 
 OpenAPI Petstore
 
@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
   <groupId>org.openapitools</groupId>
-  <artifactId>petstore-native</artifactId>
+  <artifactId>openapi-java-client</artifactId>
   <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools:petstore-native:1.0.0"
+compile "org.openapitools:openapi-java-client:1.0.0"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/petstore-native-1.0.0.jar`
+- `target/openapi-java-client-1.0.0.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -83,10 +83,10 @@ public class UserApiExample {
         // Configure clients using the `defaultClient` object, such as
         // overriding the host and port, timeout, etc.
         UserApi apiInstance = new UserApi(defaultClient);
-        Param0Def param1 = new HashMap(); // Param0Def | 
-        ArrayType<Param1DefType> param2 = Arrays.asList(); // ArrayType<Param1DefType> | 
+        Param0Def param0 = new HashMap(); // Param0Def | 
+        List<Param1Def> param1 = Arrays.asList(); // List<Param1Def> | 
         try {
-            ArrayType<Param1DefType> result = apiInstance.createUsersWithArrayInput(param1, param2);
+            List<Param1Def> result = apiInstance.createUsersWithArrayInput(param0, param1);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#createUsersWithArrayInput");
@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 
  - [CreateUsersWithArrayInput201Response](docs/CreateUsersWithArrayInput201Response.md)
  - [Param0Def](docs/Param0Def.md)
+ - [Param1Def](docs/Param1Def.md)
 
 
 ## Documentation for Authorization

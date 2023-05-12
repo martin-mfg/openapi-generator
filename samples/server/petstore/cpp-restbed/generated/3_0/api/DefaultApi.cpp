@@ -114,7 +114,7 @@ std::string convertMapResponse(const std::map<KEY_T, VAL_T>& map)
 }
 
 namespace DefaultApiResources {
-FooResource::FooResource(const std::string& context /* = "/v2" */)
+FooResource::FooResource(const std::string& context /* = "" */)
 {
 	this->set_path(context + "/foo");
 	this->set_method_handler("GET",

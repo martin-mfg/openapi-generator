@@ -12,11 +12,11 @@ paths:
       description: ""
       operationId: createUsersWithArrayInput
       parameters:
-        - name: param1
+        - name: param0
           in: header
           schema:
             $ref: '#/components/schemas/Param0Def'
-        - name: param2
+        - name: param1
           in: header
           schema:
             type: array

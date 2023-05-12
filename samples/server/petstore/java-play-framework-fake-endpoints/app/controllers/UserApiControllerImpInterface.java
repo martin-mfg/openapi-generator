@@ -61,19 +61,12 @@ public abstract class UserApiControllerImpInterface {
     public abstract void deleteUser(Http.Request request, String username) throws Exception;
 
     public Result getUserByNameHttp(Http.Request request, String username) throws Exception {
-        User obj = getUserByName(request, username);
-
-        if (configuration.getBoolean("useOutputBeanValidation")) {
-            OpenAPIUtils.validate(obj);
-        }
-
-        JsonNode result = mapper.valueToTree(obj);
-
-        return ok(result);
+        getUserByName(request, username);
+        return ok();
 
     }
 
-    public abstract User getUserByName(Http.Request request, String username) throws Exception;
+    public abstract void getUserByName(Http.Request request, String username) throws Exception;
 
     public Result loginUserHttp(Http.Request request, @NotNull String username, @NotNull String password) throws Exception {
         String obj = loginUser(request, username, password);

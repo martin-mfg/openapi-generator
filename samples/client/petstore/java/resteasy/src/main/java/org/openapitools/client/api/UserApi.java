@@ -208,10 +208,9 @@ public class UserApi {
    * Get user by user name
    * 
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return a {@code User}
    * @throws ApiException if fails to make API call
    */
-  public User getUserByName(String username) throws ApiException {
+  public void getUserByName(String username) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'username' is set
@@ -234,7 +233,7 @@ public class UserApi {
     
     
     final String[] localVarAccepts = {
-      "application/xml", "application/json"
+      
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -245,9 +244,9 @@ public class UserApi {
 
     String[] localVarAuthNames = new String[] {  };
 
-    GenericType<User> localVarReturnType = new GenericType<User>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
   /**
    * Logs user into the system
    * 

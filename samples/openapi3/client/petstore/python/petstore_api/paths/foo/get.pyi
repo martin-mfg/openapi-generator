@@ -25,61 +25,29 @@ import frozendict  # noqa: F401
 
 from petstore_api import schemas  # noqa: F401
 
-from petstore_api.model.foo import Foo
+from petstore_api.model.foo_get_default_response import FooGetDefaultResponse
+from petstore_api.model.baz import Baz
+
+SchemaFor201ResponseBodyApplicationJson = Baz
 
 
+@dataclass
+class ApiResponseFor201(api_client.ApiResponse):
+    response: urllib3.HTTPResponse
+    body: typing.Union[
+        SchemaFor201ResponseBodyApplicationJson,
+    ]
+    headers: schemas.Unset = schemas.unset
 
-class SchemaFor0ResponseBodyApplicationJson(
-    schemas.DictSchema
-):
 
-
-    class MetaOapg:
-        
-        class properties:
-        
-            @staticmethod
-            def string() -> typing.Type['Foo']:
-                return Foo
-            __annotations__ = {
-                "string": string,
-            }
-    
-    @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["string"]) -> 'Foo': ...
-    
-    @typing.overload
-    def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
-    
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["string", ], str]):
-        # dict_instance[name] accessor
-        return super().__getitem__(name)
-    
-    
-    @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["string"]) -> typing.Union['Foo', schemas.Unset]: ...
-    
-    @typing.overload
-    def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
-    
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["string", ], str]):
-        return super().get_item_oapg(name)
-    
-
-    def __new__(
-        cls,
-        *_args: typing.Union[dict, frozendict.frozendict, ],
-        string: typing.Union['Foo', schemas.Unset] = schemas.unset,
-        _configuration: typing.Optional[schemas.Configuration] = None,
-        **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
-    ) -> 'SchemaFor0ResponseBodyApplicationJson':
-        return super().__new__(
-            cls,
-            *_args,
-            string=string,
-            _configuration=_configuration,
-            **kwargs,
-        )
+_response_for_201 = api_client.OpenApiResponse(
+    response_cls=ApiResponseFor201,
+    content={
+        'application/json': api_client.MediaType(
+            schema=SchemaFor201ResponseBodyApplicationJson),
+    },
+)
+SchemaFor0ResponseBodyApplicationJson = FooGetDefaultResponse
 
 
 @dataclass
@@ -112,6 +80,7 @@ class BaseApi(api_client.Api):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: typing_extensions.Literal[False] = ...,
     ) -> typing.Union[
+        ApiResponseFor201,
         ApiResponseForDefault,
     ]: ...
 
@@ -132,6 +101,7 @@ class BaseApi(api_client.Api):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = ...,
     ) -> typing.Union[
+        ApiResponseFor201,
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
@@ -198,6 +168,7 @@ class FooGet(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: typing_extensions.Literal[False] = ...,
     ) -> typing.Union[
+        ApiResponseFor201,
         ApiResponseForDefault,
     ]: ...
 
@@ -218,6 +189,7 @@ class FooGet(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = ...,
     ) -> typing.Union[
+        ApiResponseFor201,
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
@@ -248,6 +220,7 @@ class ApiForget(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: typing_extensions.Literal[False] = ...,
     ) -> typing.Union[
+        ApiResponseFor201,
         ApiResponseForDefault,
     ]: ...
 
@@ -268,6 +241,7 @@ class ApiForget(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = ...,
     ) -> typing.Union[
+        ApiResponseFor201,
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]: ...

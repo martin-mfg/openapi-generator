@@ -33,17 +33,17 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FooGetDefaultResponse" /> class.
         /// </summary>
-        /// <param name="_string">_string.</param>
-        public FooGetDefaultResponse(Foo _string = default(Foo))
+        /// <param name="myString">myString.</param>
+        public FooGetDefaultResponse(Foo myString = default(Foo))
         {
-            this.String = _string;
+            this.MyString = myString;
         }
 
         /// <summary>
-        /// Gets or Sets String
+        /// Gets or Sets MyString
         /// </summary>
-        [DataMember(Name="string", EmitDefaultValue=false)]
-        public Foo String { get; set; }
+        [DataMember(Name="myString", EmitDefaultValue=false)]
+        public Foo MyString { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,7 +53,7 @@ namespace Org.OpenAPITools.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FooGetDefaultResponse {\n");
-            sb.Append("  String: ").Append(String).Append("\n");
+            sb.Append("  MyString: ").Append(MyString).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,9 +89,9 @@ namespace Org.OpenAPITools.Model
 
             return 
                 (
-                    this.String == input.String ||
-                    (this.String != null &&
-                    this.String.Equals(input.String))
+                    this.MyString == input.MyString ||
+                    (this.MyString != null &&
+                    this.MyString.Equals(input.MyString))
                 );
         }
 
@@ -104,8 +104,8 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.String != null)
-                    hashCode = hashCode * 59 + this.String.GetHashCode();
+                if (this.MyString != null)
+                    hashCode = hashCode * 59 + this.MyString.GetHashCode();
                 return hashCode;
             }
         }

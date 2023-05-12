@@ -13,14 +13,14 @@ paths:
       parameters:
       - explode: false
         in: header
-        name: param1
+        name: param0
         required: false
         schema:
           $ref: '#/components/schemas/Param0Def'
         style: simple
       - explode: false
         in: header
-        name: param2
+        name: param1
         required: false
         schema:
           items:
@@ -64,10 +64,14 @@ components:
       type: object
     Param1Def:
       example:
-        myField: null
+        myField:
+        - 0
+        - 0
       properties:
         myField:
-          $ref: '#/components/schemas/MyIntArray'
+          items:
+            type: integer
+          type: array
       type: object
     MyIntArray:
       items:

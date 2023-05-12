@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**myField** | **ArrayType&lt;Integer&gt;** |  |  [optional] |
+|**myField** | **List&lt;Integer&gt;** |  |  [optional] |
 
 
 

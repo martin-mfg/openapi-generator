@@ -66,7 +66,7 @@ namespace DefaultApiResources {
 class  FooResource: public restbed::Resource
 {
 public:
-    FooResource(const std::string& context = "/v2");
+    FooResource(const std::string& context = "");
     virtual ~FooResource() = default;
 
     FooResource(

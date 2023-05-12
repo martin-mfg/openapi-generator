@@ -12,7 +12,7 @@
 
 package org.openapitools.server.api;
 
-import org.openapitools.server.model.FooGetDefaultResponse;
+import org.openapitools.server.model.Foo;
 
 import jakarta.ws.rs.*;
 
@@ -29,8 +29,8 @@ public class DefaultServiceImpl implements DefaultService {
 
     @GET
     @Produces({ "application/json" })
-    public FooGetDefaultResponse fooGet() {
-        FooGetDefaultResponse result = null; // Replace with correct business logic.
+    public Object fooGet() {
+        Object result = new Object(); // Replace with correct business logic.
         return result;
     }
 }

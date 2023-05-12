@@ -48,8 +48,7 @@ public interface UserService {
 
     @GET
     @Path("/{username}")
-    @Produces({ "application/xml", "application/json" })
-    User getUserByName(@PathParam("username") String username);
+    void getUserByName(@PathParam("username") String username);
 
     @GET
     @Path("/login")

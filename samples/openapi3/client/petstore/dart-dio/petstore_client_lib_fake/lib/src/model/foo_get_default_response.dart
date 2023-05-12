@@ -12,11 +12,11 @@ part 'foo_get_default_response.g.dart';
 /// FooGetDefaultResponse
 ///
 /// Properties:
-/// * [string] 
+/// * [myString] 
 @BuiltValue()
 abstract class FooGetDefaultResponse implements Built<FooGetDefaultResponse, FooGetDefaultResponseBuilder> {
-  @BuiltValueField(wireName: r'string')
-  Foo? get string;
+  @BuiltValueField(wireName: r'myString')
+  Foo? get myString;
 
   FooGetDefaultResponse._();
 
@@ -41,10 +41,10 @@ class _$FooGetDefaultResponseSerializer implements PrimitiveSerializer<FooGetDef
     FooGetDefaultResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.string != null) {
-      yield r'string';
+    if (object.myString != null) {
+      yield r'myString';
       yield serializers.serialize(
-        object.string,
+        object.myString,
         specifiedType: const FullType(Foo),
       );
     }
@@ -71,12 +71,12 @@ class _$FooGetDefaultResponseSerializer implements PrimitiveSerializer<FooGetDef
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'string':
+        case r'myString':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(Foo),
           ) as Foo;
-          result.string.replace(valueDes);
+          result.myString.replace(valueDes);
           break;
         default:
           unhandled.add(key);

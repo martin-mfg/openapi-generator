@@ -77,19 +77,17 @@ namespace Example
         public static void Main()
         {
 
-            Configuration.Default.BasePath = "http://petstore.swagger.io:80/v2";
-            var apiInstance = new AnotherFakeApi(Configuration.Default);
-            var modelClient = new ModelClient(); // ModelClient | client model
+            Configuration.Default.BasePath = "http://localhost";
+            var apiInstance = new DefaultApi(Configuration.Default);
 
             try
             {
-                // To test special tags
-                ModelClient result = apiInstance.Call123TestSpecialTags(modelClient);
+                FooGetDefaultResponse result = apiInstance.FooGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling AnotherFakeApi.Call123TestSpecialTags: " + e.Message );
+                Debug.Print("Exception when calling DefaultApi.FooGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -101,147 +99,19 @@ namespace Example
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AnotherFakeApi* | [**Call123TestSpecialTags**](docs/AnotherFakeApi.md#call123testspecialtags) | **PATCH** /another-fake/dummy | To test special tags
 *DefaultApi* | [**FooGet**](docs/DefaultApi.md#fooget) | **GET** /foo | 
-*FakeApi* | [**FakeHealthGet**](docs/FakeApi.md#fakehealthget) | **GET** /fake/health | Health check endpoint
-*FakeApi* | [**FakeHttpSignatureTest**](docs/FakeApi.md#fakehttpsignaturetest) | **GET** /fake/http-signature-test | test http signature authentication
-*FakeApi* | [**FakeOuterBooleanSerialize**](docs/FakeApi.md#fakeouterbooleanserialize) | **POST** /fake/outer/boolean | 
-*FakeApi* | [**FakeOuterCompositeSerialize**](docs/FakeApi.md#fakeoutercompositeserialize) | **POST** /fake/outer/composite | 
-*FakeApi* | [**FakeOuterNumberSerialize**](docs/FakeApi.md#fakeouternumberserialize) | **POST** /fake/outer/number | 
-*FakeApi* | [**FakeOuterStringSerialize**](docs/FakeApi.md#fakeouterstringserialize) | **POST** /fake/outer/string | 
-*FakeApi* | [**FakePropertyEnumIntegerSerialize**](docs/FakeApi.md#fakepropertyenumintegerserialize) | **POST** /fake/property/enum-int | 
-*FakeApi* | [**TestBodyWithBinary**](docs/FakeApi.md#testbodywithbinary) | **PUT** /fake/body-with-binary | 
-*FakeApi* | [**TestBodyWithFileSchema**](docs/FakeApi.md#testbodywithfileschema) | **PUT** /fake/body-with-file-schema | 
-*FakeApi* | [**TestBodyWithQueryParams**](docs/FakeApi.md#testbodywithqueryparams) | **PUT** /fake/body-with-query-params | 
-*FakeApi* | [**TestClientModel**](docs/FakeApi.md#testclientmodel) | **PATCH** /fake | To test \"client\" model
-*FakeApi* | [**TestEndpointParameters**](docs/FakeApi.md#testendpointparameters) | **POST** /fake | Fake endpoint for testing various parameters 假端點 偽のエンドポイント 가짜 엔드 포인트 
-*FakeApi* | [**TestEnumParameters**](docs/FakeApi.md#testenumparameters) | **GET** /fake | To test enum parameters
-*FakeApi* | [**TestGroupParameters**](docs/FakeApi.md#testgroupparameters) | **DELETE** /fake | Fake endpoint to test group parameters (optional)
-*FakeApi* | [**TestInlineAdditionalProperties**](docs/FakeApi.md#testinlineadditionalproperties) | **POST** /fake/inline-additionalProperties | test inline additionalProperties
-*FakeApi* | [**TestJsonFormData**](docs/FakeApi.md#testjsonformdata) | **GET** /fake/jsonFormData | test json serialization of form data
-*FakeApi* | [**TestQueryParameterCollectionFormat**](docs/FakeApi.md#testqueryparametercollectionformat) | **PUT** /fake/test-query-parameters | 
-*FakeClassnameTags123Api* | [**TestClassname**](docs/FakeClassnameTags123Api.md#testclassname) | **PATCH** /fake_classname_test | To test class name in snake case
-*PetApi* | [**AddPet**](docs/PetApi.md#addpet) | **POST** /pet | Add a new pet to the store
-*PetApi* | [**DeletePet**](docs/PetApi.md#deletepet) | **DELETE** /pet/{petId} | Deletes a pet
-*PetApi* | [**FindPetsByStatus**](docs/PetApi.md#findpetsbystatus) | **GET** /pet/findByStatus | Finds Pets by status
-*PetApi* | [**FindPetsByTags**](docs/PetApi.md#findpetsbytags) | **GET** /pet/findByTags | Finds Pets by tags
-*PetApi* | [**GetPetById**](docs/PetApi.md#getpetbyid) | **GET** /pet/{petId} | Find pet by ID
-*PetApi* | [**UpdatePet**](docs/PetApi.md#updatepet) | **PUT** /pet | Update an existing pet
-*PetApi* | [**UpdatePetWithForm**](docs/PetApi.md#updatepetwithform) | **POST** /pet/{petId} | Updates a pet in the store with form data
-*PetApi* | [**UploadFile**](docs/PetApi.md#uploadfile) | **POST** /pet/{petId}/uploadImage | uploads an image
-*PetApi* | [**UploadFileWithRequiredFile**](docs/PetApi.md#uploadfilewithrequiredfile) | **POST** /fake/{petId}/uploadImageWithRequiredFile | uploads an image (required)
-*StoreApi* | [**DeleteOrder**](docs/StoreApi.md#deleteorder) | **DELETE** /store/order/{order_id} | Delete purchase order by ID
-*StoreApi* | [**GetInventory**](docs/StoreApi.md#getinventory) | **GET** /store/inventory | Returns pet inventories by status
-*StoreApi* | [**GetOrderById**](docs/StoreApi.md#getorderbyid) | **GET** /store/order/{order_id} | Find purchase order by ID
-*StoreApi* | [**PlaceOrder**](docs/StoreApi.md#placeorder) | **POST** /store/order | Place an order for a pet
-*UserApi* | [**CreateUser**](docs/UserApi.md#createuser) | **POST** /user | Create user
-*UserApi* | [**CreateUsersWithArrayInput**](docs/UserApi.md#createuserswitharrayinput) | **POST** /user/createWithArray | Creates list of users with given input array
-*UserApi* | [**CreateUsersWithListInput**](docs/UserApi.md#createuserswithlistinput) | **POST** /user/createWithList | Creates list of users with given input array
-*UserApi* | [**DeleteUser**](docs/UserApi.md#deleteuser) | **DELETE** /user/{username} | Delete user
-*UserApi* | [**GetUserByName**](docs/UserApi.md#getuserbyname) | **GET** /user/{username} | Get user by user name
-*UserApi* | [**LoginUser**](docs/UserApi.md#loginuser) | **GET** /user/login | Logs user into the system
-*UserApi* | [**LogoutUser**](docs/UserApi.md#logoutuser) | **GET** /user/logout | Logs out current logged in user session
-*UserApi* | [**UpdateUser**](docs/UserApi.md#updateuser) | **PUT** /user/{username} | Updated user
 
 
 ## Documentation for Models
 
- - [Model.AdditionalPropertiesClass](docs/AdditionalPropertiesClass.md)
- - [Model.AllOfWithSingleRef](docs/AllOfWithSingleRef.md)
- - [Model.Animal](docs/Animal.md)
- - [Model.ApiResponse](docs/ApiResponse.md)
- - [Model.ArrayOfArrayOfNumberOnly](docs/ArrayOfArrayOfNumberOnly.md)
- - [Model.ArrayOfNumberOnly](docs/ArrayOfNumberOnly.md)
- - [Model.ArrayTest](docs/ArrayTest.md)
- - [Model.Capitalization](docs/Capitalization.md)
- - [Model.Cat](docs/Cat.md)
- - [Model.CatAllOf](docs/CatAllOf.md)
- - [Model.Category](docs/Category.md)
- - [Model.ClassModel](docs/ClassModel.md)
- - [Model.DeprecatedObject](docs/DeprecatedObject.md)
- - [Model.Dog](docs/Dog.md)
- - [Model.DogAllOf](docs/DogAllOf.md)
- - [Model.EnumArrays](docs/EnumArrays.md)
- - [Model.EnumClass](docs/EnumClass.md)
- - [Model.EnumTest](docs/EnumTest.md)
- - [Model.File](docs/File.md)
- - [Model.FileSchemaTestClass](docs/FileSchemaTestClass.md)
  - [Model.Foo](docs/Foo.md)
  - [Model.FooGetDefaultResponse](docs/FooGetDefaultResponse.md)
- - [Model.FormatTest](docs/FormatTest.md)
- - [Model.HasOnlyReadOnly](docs/HasOnlyReadOnly.md)
- - [Model.HealthCheckResult](docs/HealthCheckResult.md)
- - [Model.List](docs/List.md)
- - [Model.MapTest](docs/MapTest.md)
- - [Model.MixedPropertiesAndAdditionalPropertiesClass](docs/MixedPropertiesAndAdditionalPropertiesClass.md)
- - [Model.Model200Response](docs/Model200Response.md)
- - [Model.ModelClient](docs/ModelClient.md)
- - [Model.Name](docs/Name.md)
- - [Model.NullableClass](docs/NullableClass.md)
- - [Model.NumberOnly](docs/NumberOnly.md)
- - [Model.ObjectWithDeprecatedFields](docs/ObjectWithDeprecatedFields.md)
- - [Model.Order](docs/Order.md)
- - [Model.OuterComposite](docs/OuterComposite.md)
- - [Model.OuterEnum](docs/OuterEnum.md)
- - [Model.OuterEnumDefaultValue](docs/OuterEnumDefaultValue.md)
- - [Model.OuterEnumInteger](docs/OuterEnumInteger.md)
- - [Model.OuterEnumIntegerDefaultValue](docs/OuterEnumIntegerDefaultValue.md)
- - [Model.OuterObjectWithEnumProperty](docs/OuterObjectWithEnumProperty.md)
- - [Model.Pet](docs/Pet.md)
- - [Model.ReadOnlyFirst](docs/ReadOnlyFirst.md)
- - [Model.Return](docs/Return.md)
- - [Model.SingleRefType](docs/SingleRefType.md)
- - [Model.SpecialModelName](docs/SpecialModelName.md)
- - [Model.Tag](docs/Tag.md)
- - [Model.User](docs/User.md)
 
 
 ## Documentation for Authorization
 
-
-### petstore_auth
-
-
-- **Type**: OAuth
-- **Flow**: implicit
-- **Authorization URL**: http://petstore.swagger.io/api/oauth/dialog
-- **Scopes**: 
-  - write:pets: modify pets in your account
-  - read:pets: read your pets
-
-
-### api_key
-
-- **Type**: API key
-
-- **API key parameter name**: api_key
-- **Location**: HTTP header
-
-
-### api_key_query
-
-- **Type**: API key
-
-- **API key parameter name**: api_key_query
-- **Location**: URL query string
-
-
-### http_basic_test
-
-
-- **Type**: HTTP basic authentication
-
-
-### bearer_test
-
-
-- **Type**: HTTP bearer authentication
-
-
-### http_signature_test
-
-
+All endpoints do not require authorization.
