@@ -27,11 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.openapitools.client.model.Bird;
 import org.openapitools.client.model.DataQuery;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.Pet;
+import org.openapitools.client.model.TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter;
+import org.openapitools.client.model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -484,7 +485,7 @@ public class QueryApi {
         <tr><td> 200 </td><td> Successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testQueryStyleDeepObjectExplodeTrueObjectAllOfCall(Bird queryObject, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call testQueryStyleDeepObjectExplodeTrueObjectAllOfCall(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -533,7 +534,7 @@ public class QueryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call testQueryStyleDeepObjectExplodeTrueObjectAllOfValidateBeforeCall(Bird queryObject, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call testQueryStyleDeepObjectExplodeTrueObjectAllOfValidateBeforeCall(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject, final ApiCallback _callback) throws ApiException {
         return testQueryStyleDeepObjectExplodeTrueObjectAllOfCall(queryObject, _callback);
 
     }
@@ -550,7 +551,7 @@ public class QueryApi {
         <tr><td> 200 </td><td> Successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public String testQueryStyleDeepObjectExplodeTrueObjectAllOf(Bird queryObject) throws ApiException {
+    public String testQueryStyleDeepObjectExplodeTrueObjectAllOf(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject) throws ApiException {
         ApiResponse<String> localVarResp = testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(queryObject);
         return localVarResp.getData();
     }
@@ -567,7 +568,7 @@ public class QueryApi {
         <tr><td> 200 </td><td> Successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(Bird queryObject) throws ApiException {
+    public ApiResponse<String> testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject) throws ApiException {
         okhttp3.Call localVarCall = testQueryStyleDeepObjectExplodeTrueObjectAllOfValidateBeforeCall(queryObject, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -586,7 +587,7 @@ public class QueryApi {
         <tr><td> 200 </td><td> Successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testQueryStyleDeepObjectExplodeTrueObjectAllOfAsync(Bird queryObject, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call testQueryStyleDeepObjectExplodeTrueObjectAllOfAsync(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = testQueryStyleDeepObjectExplodeTrueObjectAllOfValidateBeforeCall(queryObject, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -605,7 +606,7 @@ public class QueryApi {
         <tr><td> 200 </td><td> Successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testQueryStyleFormExplodeTrueArrayStringCall(Object queryObject, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call testQueryStyleFormExplodeTrueArrayStringCall(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -654,7 +655,7 @@ public class QueryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call testQueryStyleFormExplodeTrueArrayStringValidateBeforeCall(Object queryObject, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call testQueryStyleFormExplodeTrueArrayStringValidateBeforeCall(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject, final ApiCallback _callback) throws ApiException {
         return testQueryStyleFormExplodeTrueArrayStringCall(queryObject, _callback);
 
     }
@@ -671,7 +672,7 @@ public class QueryApi {
         <tr><td> 200 </td><td> Successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public String testQueryStyleFormExplodeTrueArrayString(Object queryObject) throws ApiException {
+    public String testQueryStyleFormExplodeTrueArrayString(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject) throws ApiException {
         ApiResponse<String> localVarResp = testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(queryObject);
         return localVarResp.getData();
     }
@@ -688,7 +689,7 @@ public class QueryApi {
         <tr><td> 200 </td><td> Successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(Object queryObject) throws ApiException {
+    public ApiResponse<String> testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject) throws ApiException {
         okhttp3.Call localVarCall = testQueryStyleFormExplodeTrueArrayStringValidateBeforeCall(queryObject, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -707,7 +708,7 @@ public class QueryApi {
         <tr><td> 200 </td><td> Successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call testQueryStyleFormExplodeTrueArrayStringAsync(Object queryObject, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call testQueryStyleFormExplodeTrueArrayStringAsync(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = testQueryStyleFormExplodeTrueArrayStringValidateBeforeCall(queryObject, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();

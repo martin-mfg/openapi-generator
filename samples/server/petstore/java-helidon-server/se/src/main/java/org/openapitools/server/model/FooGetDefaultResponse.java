@@ -7,7 +7,7 @@ import org.openapitools.server.model.Foo;
 
 public class FooGetDefaultResponse   {
 
-    private Foo string;
+    private Foo myString;
 
     /**
      * Default constructor.
@@ -19,26 +19,26 @@ public class FooGetDefaultResponse   {
     /**
      * Create FooGetDefaultResponse.
      *
-     * @param string string
+     * @param myString myString
      */
     public FooGetDefaultResponse(
-        Foo string
+        Foo myString
     ) {
-        this.string = string;
+        this.myString = myString;
     }
 
 
 
     /**
-     * Get string
-     * @return string
+     * Get myString
+     * @return myString
      */
-    public Foo getString() {
-        return string;
+    public Foo getMyString() {
+        return myString;
     }
 
-    public void setString(Foo string) {
-        this.string = string;
+    public void setMyString(Foo myString) {
+        this.myString = myString;
     }
 
     /**
@@ -49,7 +49,7 @@ public class FooGetDefaultResponse   {
         StringBuilder sb = new StringBuilder();
         sb.append("class FooGetDefaultResponse {\n");
         
-        sb.append("    string: ").append(toIndentedString(string)).append("\n");
+        sb.append("    myString: ").append(toIndentedString(myString)).append("\n");
         sb.append("}");
         return sb.toString();
     }

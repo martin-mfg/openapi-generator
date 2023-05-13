@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## fooGet
 
-> Object fooGet()
+> Baz fooGet()
 
 
 
@@ -31,7 +31,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            Object result = apiInstance.fooGet();
+            Baz result = apiInstance.fooGet();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#fooGet");
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**Baz**](Baz.md)
 
 ### Authorization
 
@@ -65,5 +65,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | response201 |  -  |
 | **0** | response |  -  |
 

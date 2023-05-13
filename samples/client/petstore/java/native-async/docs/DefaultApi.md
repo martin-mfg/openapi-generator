@@ -11,7 +11,7 @@ All URIs are relative to *http://petstore.swagger.io:80/v2*
 
 ## fooGet
 
-> CompletableFuture<Object> fooGet()
+> CompletableFuture<FooGetDefaultResponse> fooGet()
 
 
 
@@ -33,7 +33,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<Object> result = apiInstance.fooGet();
+            CompletableFuture<FooGetDefaultResponse> result = apiInstance.fooGet();
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#fooGet");
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<**Object**>
+CompletableFuture<[**FooGetDefaultResponse**](FooGetDefaultResponse.md)>
 
 
 ### Authorization
@@ -71,7 +71,7 @@ No authorization required
 
 ## fooGetWithHttpInfo
 
-> CompletableFuture<ApiResponse<Object>> fooGet fooGetWithHttpInfo()
+> CompletableFuture<ApiResponse<FooGetDefaultResponse>> fooGet fooGetWithHttpInfo()
 
 
 
@@ -94,7 +94,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<ApiResponse<Object>> response = apiInstance.fooGetWithHttpInfo();
+            CompletableFuture<ApiResponse<FooGetDefaultResponse>> response = apiInstance.fooGetWithHttpInfo();
             System.out.println("Status code: " + response.get().getStatusCode());
             System.out.println("Response headers: " + response.get().getHeaders());
             System.out.println("Response body: " + response.get().getData());
@@ -122,7 +122,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<ApiResponse<**Object**>>
+CompletableFuture<ApiResponse<[**FooGetDefaultResponse**](FooGetDefaultResponse.md)>>
 
 
 ### Authorization

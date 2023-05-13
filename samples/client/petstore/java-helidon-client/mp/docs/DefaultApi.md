@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## fooGet
 
-> Object fooGet()
+> Baz fooGet()
 
 
 
@@ -20,7 +20,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**Baz**](Baz.md)
 
 ### Authorization
 
@@ -35,5 +35,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | response201 |  -  |
 | **200** | response |  -  |
 

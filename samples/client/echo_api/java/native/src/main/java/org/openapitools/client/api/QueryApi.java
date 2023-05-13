@@ -18,11 +18,12 @@ import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
 // ArrayType should be imported below
-import org.openapitools.client.model.Bird;
 import org.openapitools.client.model.DataQuery;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.Pet;
+import org.openapitools.client.model.TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter;
+import org.openapitools.client.model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -387,7 +388,7 @@ public class QueryApi {
    * @return String
    * @throws ApiException if fails to make API call
    */
-  public String testQueryStyleDeepObjectExplodeTrueObjectAllOf(Bird queryObject) throws ApiException {
+  public String testQueryStyleDeepObjectExplodeTrueObjectAllOf(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject) throws ApiException {
     ApiResponse<String> localVarResponse = testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(queryObject);
     return localVarResponse.getData();
   }
@@ -399,7 +400,7 @@ public class QueryApi {
    * @return ApiResponse&lt;String&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<String> testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(Bird queryObject) throws ApiException {
+  public ApiResponse<String> testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject) throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = testQueryStyleDeepObjectExplodeTrueObjectAllOfRequestBuilder(queryObject);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -436,7 +437,7 @@ public class QueryApi {
     }
   }
 
-  private HttpRequest.Builder testQueryStyleDeepObjectExplodeTrueObjectAllOfRequestBuilder(Bird queryObject) throws ApiException {
+  private HttpRequest.Builder testQueryStyleDeepObjectExplodeTrueObjectAllOfRequestBuilder(TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -479,7 +480,7 @@ public class QueryApi {
    * @return String
    * @throws ApiException if fails to make API call
    */
-  public String testQueryStyleFormExplodeTrueArrayString(Object queryObject) throws ApiException {
+  public String testQueryStyleFormExplodeTrueArrayString(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject) throws ApiException {
     ApiResponse<String> localVarResponse = testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(queryObject);
     return localVarResponse.getData();
   }
@@ -491,7 +492,7 @@ public class QueryApi {
    * @return ApiResponse&lt;String&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<String> testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(Object queryObject) throws ApiException {
+  public ApiResponse<String> testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject) throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = testQueryStyleFormExplodeTrueArrayStringRequestBuilder(queryObject);
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -528,7 +529,7 @@ public class QueryApi {
     }
   }
 
-  private HttpRequest.Builder testQueryStyleFormExplodeTrueArrayStringRequestBuilder(Object queryObject) throws ApiException {
+  private HttpRequest.Builder testQueryStyleFormExplodeTrueArrayStringRequestBuilder(TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject) throws ApiException {
 
     HttpRequest.Builder localVarRequestBuilder = HttpRequest.newBuilder();
 
@@ -628,7 +629,12 @@ public class QueryApi {
     StringJoiner localVarQueryStringJoiner = new StringJoiner("&");
     String localVarQueryParameterBaseName;
     localVarQueryParameterBaseName = "query_object";
-    localVarQueryStringJoiner.add(queryObject.toUrlQueryString());
+    localVarQueryParams.addAll(ApiClient.parameterToPairs("id", queryObject.getId()));
+    localVarQueryParams.addAll(ApiClient.parameterToPairs("name", queryObject.getName()));
+    localVarQueryParams.addAll(ApiClient.parameterToPairs("category", queryObject.getCategory()));
+    localVarQueryParams.addAll(ApiClient.parameterToPairs("multi", "photoUrls", queryObject.getPhotoUrls()));
+    localVarQueryParams.addAll(ApiClient.parameterToPairs("multi", "tags", queryObject.getTags()));
+    localVarQueryParams.addAll(ApiClient.parameterToPairs("status", queryObject.getStatus()));
 
     if (!localVarQueryParams.isEmpty() || localVarQueryStringJoiner.length() != 0) {
       StringJoiner queryJoiner = new StringJoiner("&");

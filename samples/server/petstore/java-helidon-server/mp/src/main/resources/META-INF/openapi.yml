@@ -18,11 +18,14 @@ paths:
           content:
             application/json:
               schema:
-                properties:
-                  myString:
-                    $ref: '#/components/schemas/Foo'
-                type: object
+                $ref: '#/components/schemas/_foo_get_default_response'
           description: response
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Baz'
+          description: response201
       x-accepts: application/json
 components:
   schemas:
@@ -35,3 +38,16 @@ components:
     Bar:
       default: bar
       type: string
+    Baz:
+      example:
+        innerBaz: defaultBaz
+      properties:
+        innerBaz:
+          default: defaultBaz
+          type: string
+      type: object
+    _foo_get_default_response:
+      properties:
+        myString:
+          $ref: '#/components/schemas/Foo'
+      type: object

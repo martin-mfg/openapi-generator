@@ -1,6 +1,8 @@
 README.md
+docs/Baz.md
 docs/DefaultApi.md
 docs/Foo.md
+docs/FooGetDefaultResponse.md
 pom.xml
 src/main/java/org/openapitools/client/ApiClient.java
 src/main/java/org/openapitools/client/ApiResponse.java
@@ -10,4 +12,7 @@ src/main/java/org/openapitools/client/RFC3339DateFormat.java
 src/main/java/org/openapitools/client/api/DefaultApi.java
 src/main/java/org/openapitools/client/api/DefaultApiImpl.java
 src/main/java/org/openapitools/client/api/ResponseType.java
+src/main/java/org/openapitools/client/model/Baz.java
 src/main/java/org/openapitools/client/model/Foo.java
+src/main/java/org/openapitools/client/model/FooGetDefaultResponse.java
+src/test/java/org/openapitools/client/model/BazTest.java

@@ -49,14 +49,7 @@ paths:
         content:
           application/x-www-form-urlencoded:
             schema:
-              properties:
-                integer_form:
-                  type: integer
-                boolean_form:
-                  type: boolean
-                string_form:
-                  type: string
-              type: object
+              $ref: '#/components/schemas/test_form_integer_boolean_string_request'
       responses:
         "200":
           content:
@@ -192,12 +185,7 @@ paths:
         name: query_object
         required: false
         schema:
-          properties:
-            values:
-              items:
-                type: string
-              type: array
-          type: object
+          $ref: '#/components/schemas/test_query_style_form_explode_true_array_string_query_object_parameter'
         style: form
       responses:
         "200":
@@ -289,9 +277,7 @@ paths:
         name: query_object
         required: false
         schema:
-          allOf:
-          - $ref: '#/components/schemas/Bird'
-          - $ref: '#/components/schemas/Category'
+          $ref: '#/components/schemas/test_query_style_deepObject_explode_true_object_allOf_query_object_parameter'
         style: deepObject
       responses:
         "200":
@@ -533,19 +519,7 @@ components:
       x-parent: true
     DataQuery:
       allOf:
-      - properties:
-          suffix:
-            description: test suffix
-            type: string
-          text:
-            description: Some text containing white spaces
-            example: Some text
-            type: string
-          date:
-            description: A date
-            format: date-time
-            type: string
-        type: object
+      - $ref: '#/components/schemas/DataQuery_allOf'
       - $ref: '#/components/schemas/Query'
     NumberPropertiesOnly:
       properties:
@@ -560,4 +534,39 @@ components:
           minimum: 0.8
           type: number
       type: object
+    test_form_integer_boolean_string_request:
+      properties:
+        integer_form:
+          type: integer
+        boolean_form:
+          type: boolean
+        string_form:
+          type: string
+      type: object
+    test_query_style_form_explode_true_array_string_query_object_parameter:
+      properties:
+        values:
+          items:
+            type: string
+          type: array
+      type: object
+    test_query_style_deepObject_explode_true_object_allOf_query_object_parameter:
+      allOf:
+      - $ref: '#/components/schemas/Bird'
+      - $ref: '#/components/schemas/Category'
+    DataQuery_allOf:
+      properties:
+        suffix:
+          description: test suffix
+          type: string
+        text:
+          description: Some text containing white spaces
+          example: Some text
+          type: string
+        date:
+          description: A date
+          format: date-time
+          type: string
+      type: object
+      example: null
 

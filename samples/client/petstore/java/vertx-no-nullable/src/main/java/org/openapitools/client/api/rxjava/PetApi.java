@@ -1,5 +1,6 @@
 package org.openapitools.client.api.rxjava;
 
+import io.vertx.core.file.AsyncFile;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 import java.util.Set;

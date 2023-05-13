@@ -28,40 +28,40 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * FooGetDefaultResponse
  */
 @JsonPropertyOrder({
-  FooGetDefaultResponse.JSON_PROPERTY_STRING
+  FooGetDefaultResponse.JSON_PROPERTY_MY_STRING
 })
 @JsonTypeName("_foo_get_default_response")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FooGetDefaultResponse {
-  public static final String JSON_PROPERTY_STRING = "string";
-  private Foo string;
+  public static final String JSON_PROPERTY_MY_STRING = "myString";
+  private Foo myString;
 
   public FooGetDefaultResponse() {
   }
 
-  public FooGetDefaultResponse string(Foo string) {
+  public FooGetDefaultResponse myString(Foo myString) {
     
-    this.string = string;
+    this.myString = myString;
     return this;
   }
 
    /**
-   * Get string
-   * @return string
+   * Get myString
+   * @return myString
   **/
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STRING)
+  @JsonProperty(JSON_PROPERTY_MY_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Foo getString() {
-    return string;
+  public Foo getMyString() {
+    return myString;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STRING)
+  @JsonProperty(JSON_PROPERTY_MY_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setString(Foo string) {
-    this.string = string;
+  public void setMyString(Foo myString) {
+    this.myString = myString;
   }
 
   @Override
@@ -73,19 +73,19 @@ public class FooGetDefaultResponse {
       return false;
     }
     FooGetDefaultResponse fooGetDefaultResponse = (FooGetDefaultResponse) o;
-    return Objects.equals(this.string, fooGetDefaultResponse.string);
+    return Objects.equals(this.myString, fooGetDefaultResponse.myString);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(string);
+    return Objects.hash(myString);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FooGetDefaultResponse {\n");
-    sb.append("    string: ").append(toIndentedString(string)).append("\n");
+    sb.append("    myString: ").append(toIndentedString(myString)).append("\n");
     sb.append("}");
     return sb.toString();
   }

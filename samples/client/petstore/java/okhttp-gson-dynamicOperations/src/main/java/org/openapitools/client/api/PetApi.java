@@ -30,6 +30,7 @@ import io.swagger.v3.oas.models.parameters.Parameter;
 import java.io.IOException;
 
 
+import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 import java.util.Set;

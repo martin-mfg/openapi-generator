@@ -85,7 +85,7 @@ public class DefaultApiExample {
         
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            Object result = apiInstance.fooGet();
+            Baz result = apiInstance.fooGet();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#fooGet");
@@ -110,7 +110,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [Baz](docs/Baz.md)
  - [Foo](docs/Foo.md)
+ - [FooGetDefaultResponse](docs/FooGetDefaultResponse.md)
 
 
 ## Documentation for Authorization

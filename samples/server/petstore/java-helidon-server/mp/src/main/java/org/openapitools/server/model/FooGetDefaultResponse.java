@@ -25,25 +25,25 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class FooGetDefaultResponse  {
   
-  private Foo string;
+  private Foo myString;
 
  /**
-   * Get string
-   * @return string
+   * Get myString
+   * @return myString
   **/
-  public Foo getString() {
-    return string;
+  public Foo getMyString() {
+    return myString;
   }
 
   /**
-    * Set string
+    * Set myString
   **/
-  public void setString(Foo string) {
-    this.string = string;
+  public void setMyString(Foo myString) {
+    this.myString = myString;
   }
 
-  public FooGetDefaultResponse string(Foo string) {
-    this.string = string;
+  public FooGetDefaultResponse myString(Foo myString) {
+    this.myString = myString;
     return this;
   }
 
@@ -56,7 +56,7 @@ public class FooGetDefaultResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class FooGetDefaultResponse {\n");
     
-    sb.append("    string: ").append(toIndentedString(string)).append("\n");
+    sb.append("    myString: ").append(toIndentedString(myString)).append("\n");
     sb.append("}");
     return sb.toString();
   }

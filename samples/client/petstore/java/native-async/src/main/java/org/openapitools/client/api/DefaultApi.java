@@ -18,7 +18,7 @@ import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
 // ArrayType should be imported below
-import org.openapitools.client.model.Foo;
+import org.openapitools.client.model.FooGetDefaultResponse;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -86,10 +86,10 @@ public class DefaultApi {
   /**
    * 
    * 
-   * @return CompletableFuture&lt;Object&gt;
+   * @return CompletableFuture&lt;FooGetDefaultResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<Object> fooGet() throws ApiException {
+  public CompletableFuture<FooGetDefaultResponse> fooGet() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = fooGetRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -101,7 +101,7 @@ public class DefaultApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<Object>() {})
+                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<FooGetDefaultResponse>() {})
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -116,10 +116,10 @@ public class DefaultApi {
   /**
    * 
    * 
-   * @return CompletableFuture&lt;ApiResponse&lt;Object&gt;&gt;
+   * @return CompletableFuture&lt;ApiResponse&lt;FooGetDefaultResponse&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<Object>> fooGetWithHttpInfo() throws ApiException {
+  public CompletableFuture<ApiResponse<FooGetDefaultResponse>> fooGetWithHttpInfo() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = fooGetRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -134,10 +134,10 @@ public class DefaultApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  new ApiResponse<Object>(
+                  new ApiResponse<FooGetDefaultResponse>(
                       localVarResponse.statusCode(),
                       localVarResponse.headers().map(),
-                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<Object>() {}))
+                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<FooGetDefaultResponse>() {}))
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));

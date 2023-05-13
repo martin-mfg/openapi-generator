@@ -22,14 +22,7 @@ paths:
         content:
           application/x-www-form-urlencoded:
             schema:
-              properties:
-                name:
-                  description: Updated name of the pet
-                  type: string
-                status:
-                  description: Updated status of the pet
-                  type: string
-              type: object
+              $ref: '#/components/schemas/getPing_request'
       responses:
         "200":
           content:
@@ -85,6 +78,15 @@ components:
         active:
           type: boolean
         type:
+          type: string
+      type: object
+    getPing_request:
+      properties:
+        name:
+          description: Updated name of the pet
+          type: string
+        status:
+          description: Updated status of the pet
           type: string
       type: object
 

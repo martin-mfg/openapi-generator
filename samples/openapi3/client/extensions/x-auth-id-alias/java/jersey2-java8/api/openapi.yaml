@@ -105,6 +105,7 @@ paths:
       - usage
       x-accepts: application/json
 components:
+  schemas: {}
   securitySchemes:
     api_key:
       in: header

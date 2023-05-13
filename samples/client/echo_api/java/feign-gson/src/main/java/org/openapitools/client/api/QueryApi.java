@@ -4,11 +4,12 @@ import org.openapitools.client.ApiClient;
 import org.openapitools.client.EncodingUtils;
 import org.openapitools.client.model.ApiResponse;
 
-import org.openapitools.client.model.Bird;
 import org.openapitools.client.model.DataQuery;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.Pet;
+import org.openapitools.client.model.TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter;
+import org.openapitools.client.model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -293,7 +294,7 @@ public interface QueryApi extends ApiClient.Api {
   @Headers({
     "Accept: text/plain",
   })
-  String testQueryStyleDeepObjectExplodeTrueObjectAllOf(@Param("queryObject") Bird queryObject);
+  String testQueryStyleDeepObjectExplodeTrueObjectAllOf(@Param("queryObject") TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject);
 
   /**
    * Test query parameter(s)
@@ -306,7 +307,7 @@ public interface QueryApi extends ApiClient.Api {
   @Headers({
     "Accept: text/plain",
   })
-  ApiResponse<String> testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(@Param("queryObject") Bird queryObject);
+  ApiResponse<String> testQueryStyleDeepObjectExplodeTrueObjectAllOfWithHttpInfo(@Param("queryObject") TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject);
 
 
   /**
@@ -354,7 +355,7 @@ public interface QueryApi extends ApiClient.Api {
    * <code>testQueryStyleDeepObjectExplodeTrueObjectAllOf</code> method in a fluent style.
    */
   public static class TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryParams extends HashMap<String, Object> {
-    public TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryParams queryObject(final Bird value) {
+    public TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryParams queryObject(final TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter value) {
       put("query_object", EncodingUtils.encode(value));
       return this;
     }
@@ -370,7 +371,7 @@ public interface QueryApi extends ApiClient.Api {
   @Headers({
     "Accept: text/plain",
   })
-  String testQueryStyleFormExplodeTrueArrayString(@Param("queryObject") Object queryObject);
+  String testQueryStyleFormExplodeTrueArrayString(@Param("queryObject") TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject);
 
   /**
    * Test query parameter(s)
@@ -383,7 +384,7 @@ public interface QueryApi extends ApiClient.Api {
   @Headers({
     "Accept: text/plain",
   })
-  ApiResponse<String> testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(@Param("queryObject") Object queryObject);
+  ApiResponse<String> testQueryStyleFormExplodeTrueArrayStringWithHttpInfo(@Param("queryObject") TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter queryObject);
 
 
   /**
@@ -431,7 +432,7 @@ public interface QueryApi extends ApiClient.Api {
    * <code>testQueryStyleFormExplodeTrueArrayString</code> method in a fluent style.
    */
   public static class TestQueryStyleFormExplodeTrueArrayStringQueryParams extends HashMap<String, Object> {
-    public TestQueryStyleFormExplodeTrueArrayStringQueryParams queryObject(final Object value) {
+    public TestQueryStyleFormExplodeTrueArrayStringQueryParams queryObject(final TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter value) {
       put("query_object", EncodingUtils.encode(value));
       return this;
     }

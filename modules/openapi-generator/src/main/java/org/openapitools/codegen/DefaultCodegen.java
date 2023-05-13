@@ -5018,7 +5018,11 @@ public class DefaultCodegen implements CodegenConfig {
             codegenParameter.setSchema(prop);
             LOGGER.warn("addSchemaImportsFromV3SpecLocations: {}",addSchemaImportsFromV3SpecLocations);
             if (addSchemaImportsFromV3SpecLocations) {
-                addImports(imports, prop.getImports(importContainerType, importBaseType, generatorMetadata.getFeatureSet()));
+                addImports(
+                        imports,
+                        fromProperty(parameter.getName(), parameterSchema, false)
+                                .getImports(importContainerType, importBaseType, generatorMetadata.getFeatureSet())
+                );
             }
         } else if (parameter.getContent() != null) {
             Content content = parameter.getContent();

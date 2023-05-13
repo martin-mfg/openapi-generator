@@ -25,7 +25,8 @@ import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import org.openapitools.client.model.Foo;
+import org.openapitools.client.model.Baz;
+import org.openapitools.client.model.FooGetDefaultResponse;
 
 /**
  * OpenAPI Petstore
@@ -40,5 +41,5 @@ public interface DefaultApi  {
     @GET
     
     @Produces({ "application/json" })
-    Object fooGet() throws ApiException, ProcessingException;
+    Baz fooGet() throws ApiException, ProcessingException;
 }

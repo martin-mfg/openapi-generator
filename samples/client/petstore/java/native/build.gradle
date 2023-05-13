@@ -38,7 +38,7 @@ javadoc {
 publishing {
     publications {
         maven(MavenPublication) {
-            artifactId = 'openapi-java-client'
+            artifactId = 'petstore-native'
             from components.java
         }
     }

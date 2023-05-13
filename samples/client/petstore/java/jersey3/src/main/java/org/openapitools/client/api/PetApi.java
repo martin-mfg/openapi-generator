@@ -8,6 +8,7 @@ import org.openapitools.client.Pair;
 
 import jakarta.ws.rs.core.GenericType;
 
+import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 

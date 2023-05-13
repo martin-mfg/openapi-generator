@@ -1,10 +1,15 @@
 README.md
+docs/Baz.md
 docs/DefaultApi.md
 docs/Foo.md
+docs/FooGetDefaultResponse.md
 pom.xml
 src/main/java/org/openapitools/client/JavaTimeFormatter.java
 src/main/java/org/openapitools/client/RFC3339DateFormat.java
 src/main/java/org/openapitools/client/api/ApiException.java
 src/main/java/org/openapitools/client/api/ApiExceptionMapper.java
 src/main/java/org/openapitools/client/api/DefaultApi.java
+src/main/java/org/openapitools/client/model/Baz.java
 src/main/java/org/openapitools/client/model/Foo.java
+src/main/java/org/openapitools/client/model/FooGetDefaultResponse.java
+src/test/java/org/openapitools/client/model/BazTest.java
