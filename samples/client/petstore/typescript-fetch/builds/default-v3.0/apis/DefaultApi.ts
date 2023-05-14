@@ -15,9 +15,12 @@
 
 import * as runtime from '../runtime';
 import type {
+  Baz,
   FooGetDefaultResponse,
 } from '../models';
 import {
+    BazFromJSON,
+    BazToJSON,
     FooGetDefaultResponseFromJSON,
     FooGetDefaultResponseToJSON,
 } from '../models';
@@ -29,7 +32,7 @@ export class DefaultApi extends runtime.BaseAPI {
 
     /**
      */
-    async fooGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<FooGetDefaultResponse>> {
+    async fooGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Baz>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -41,12 +44,12 @@ export class DefaultApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => FooGetDefaultResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => BazFromJSON(jsonValue));
     }
 
     /**
      */
-    async fooGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<FooGetDefaultResponse> {
+    async fooGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Baz> {
         const response = await this.fooGetRaw(initOverrides);
         return await response.value();
     }

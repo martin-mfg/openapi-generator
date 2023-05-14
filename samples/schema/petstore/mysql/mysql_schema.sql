@@ -6,6 +6,14 @@
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Baz` generated from model 'Baz'
+--
+
+CREATE TABLE IF NOT EXISTS `Baz` (
+  `innerBaz` TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
 -- Table structure for table `Foo` generated from model 'Foo'
 --
 

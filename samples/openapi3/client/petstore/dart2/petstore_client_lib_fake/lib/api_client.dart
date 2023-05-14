@@ -181,6 +181,8 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
+        case 'Baz':
+          return Baz.fromJson(value);
         case 'Foo':
           return Foo.fromJson(value);
         case 'FooGetDefaultResponse':

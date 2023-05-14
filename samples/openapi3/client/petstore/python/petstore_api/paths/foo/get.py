@@ -25,7 +25,7 @@ import frozendict  # noqa: F401
 
 from petstore_api import schemas  # noqa: F401
 
-from petstore_api.model.foo_get_default_response import FooGetDefaultResponse
+from petstore_api.model.foo import Foo
 from petstore_api.model.baz import Baz
 
 from . import path
@@ -49,7 +49,59 @@ _response_for_201 = api_client.OpenApiResponse(
             schema=SchemaFor201ResponseBodyApplicationJson),
     },
 )
-SchemaFor0ResponseBodyApplicationJson = FooGetDefaultResponse
+
+
+class SchemaFor0ResponseBodyApplicationJson(
+    schemas.DictSchema
+):
+
+
+    class MetaOapg:
+        
+        class properties:
+        
+            @staticmethod
+            def myString() -> typing.Type['Foo']:
+                return Foo
+            __annotations__ = {
+                "myString": myString,
+            }
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["myString"]) -> 'Foo': ...
+    
+    @typing.overload
+    def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
+    
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["myString", ], str]):
+        # dict_instance[name] accessor
+        return super().__getitem__(name)
+    
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["myString"]) -> typing.Union['Foo', schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
+    
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["myString", ], str]):
+        return super().get_item_oapg(name)
+    
+
+    def __new__(
+        cls,
+        *_args: typing.Union[dict, frozendict.frozendict, ],
+        myString: typing.Union['Foo', schemas.Unset] = schemas.unset,
+        _configuration: typing.Optional[schemas.Configuration] = None,
+        **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
+    ) -> 'SchemaFor0ResponseBodyApplicationJson':
+        return super().__new__(
+            cls,
+            *_args,
+            myString=myString,
+            _configuration=_configuration,
+            **kwargs,
+        )
 
 
 @dataclass

@@ -2,6 +2,7 @@
 .travis.yml
 README.md
 analysis_options.yaml
+doc/Baz.md
 doc/DefaultApi.md
 doc/Foo.md
 doc/FooGetDefaultResponse.md
@@ -16,6 +17,7 @@ lib/auth/authentication.dart
 lib/auth/http_basic_auth.dart
 lib/auth/http_bearer_auth.dart
 lib/auth/oauth.dart
+lib/model/baz.dart
 lib/model/foo.dart
 lib/model/foo_get_default_response.dart
 pubspec.yaml

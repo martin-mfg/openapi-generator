@@ -20,14 +20,14 @@ module Petstore
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [FooGetDefaultResponse]
+    # @return [Baz]
     def foo_get(opts = {})
       data, _status_code, _headers = foo_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(FooGetDefaultResponse, Integer, Hash)>] FooGetDefaultResponse data, response status code and response headers
+    # @return [Array<(Baz, Integer, Hash)>] Baz data, response status code and response headers
     def foo_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: DefaultApi.foo_get ...'
@@ -50,7 +50,7 @@ module Petstore
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'FooGetDefaultResponse'
+      return_type = opts[:debug_return_type] || 'Baz'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []

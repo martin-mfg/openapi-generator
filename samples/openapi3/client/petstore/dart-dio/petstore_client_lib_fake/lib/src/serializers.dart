@@ -14,12 +14,14 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
+import 'package:openapi/src/model/baz.dart';
 import 'package:openapi/src/model/foo.dart';
 import 'package:openapi/src/model/foo_get_default_response.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
+  Baz,
   Foo,
   FooGetDefaultResponse,
 ])

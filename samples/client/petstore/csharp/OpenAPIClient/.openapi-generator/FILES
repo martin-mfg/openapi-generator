@@ -4,6 +4,7 @@ Org.OpenAPITools.sln
 README.md
 build.bat
 build.sh
+docs/Baz.md
 docs/DefaultApi.md
 docs/Foo.md
 docs/FooGetDefaultResponse.md
@@ -20,6 +21,7 @@ src/Org.OpenAPITools/Client/GlobalConfiguration.cs
 src/Org.OpenAPITools/Client/IApiAccessor.cs
 src/Org.OpenAPITools/Client/IReadableConfiguration.cs
 src/Org.OpenAPITools/Client/OpenAPIDateConverter.cs
+src/Org.OpenAPITools/Model/Baz.cs
 src/Org.OpenAPITools/Model/Foo.cs
 src/Org.OpenAPITools/Model/FooGetDefaultResponse.cs
 src/Org.OpenAPITools/Org.OpenAPITools.csproj

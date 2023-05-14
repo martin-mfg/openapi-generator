@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `fooGet()`
 
 ```php
-fooGet(): \OpenAPI\Client\Model\FooGetDefaultResponse
+fooGet(): \OpenAPI\Client\Model\Baz
 ```
 
 
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FooGetDefaultResponse**](../Model/FooGetDefaultResponse.md)
+[**\OpenAPI\Client\Model\Baz**](../Model/Baz.md)
 
 ### Authorization
 

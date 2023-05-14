@@ -31,6 +31,9 @@ export default function() {
             check(request, {
                 "response": (r) => r.status === 200
             });
+            check(request, {
+                "response201": (r) => r.status === 201
+            });
         }
     });
 

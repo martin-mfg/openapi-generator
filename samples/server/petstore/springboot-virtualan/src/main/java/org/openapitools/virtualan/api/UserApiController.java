@@ -1,5 +1,6 @@
 package org.openapitools.virtualan.api;
 
+import org.openapitools.virtualan.model.CreateUsersWithArrayInput201Response;
 import org.openapitools.virtualan.model.Param0Def;
 import org.openapitools.virtualan.model.Param1Def;
 

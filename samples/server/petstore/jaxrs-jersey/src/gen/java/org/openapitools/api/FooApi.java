@@ -6,7 +6,8 @@ import org.openapitools.api.factories.FooApiServiceFactory;
 import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
-import org.openapitools.model.Foo;
+import org.openapitools.model.Baz;
+import org.openapitools.model.FooGetDefaultResponse;
 
 import java.util.Map;
 import java.util.List;
@@ -58,9 +59,10 @@ public class FooApi  {
     
     
     @Produces({ "application/json" })
-    @io.swagger.annotations.ApiOperation(value = "", notes = "", response = Object.class, tags={  })
+    @io.swagger.annotations.ApiOperation(value = "", notes = "", response = Baz.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = {
-        @io.swagger.annotations.ApiResponse(code = 200, message = "response", response = Object.class)
+        @io.swagger.annotations.ApiResponse(code = 201, message = "response201", response = Baz.class),
+        @io.swagger.annotations.ApiResponse(code = 200, message = "response", response = FooGetDefaultResponse.class)
     })
     public Response fooGet(@Context SecurityContext securityContext)
     throws NotFoundException {

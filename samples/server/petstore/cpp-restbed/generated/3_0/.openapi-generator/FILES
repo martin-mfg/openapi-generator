@@ -5,6 +5,8 @@ README.md
 api/DefaultApi.cpp
 api/DefaultApi.h
 git_push.sh
+model/Baz.cpp
+model/Baz.h
 model/Foo.cpp
 model/Foo.h
 model/_foo_get_default_response.cpp

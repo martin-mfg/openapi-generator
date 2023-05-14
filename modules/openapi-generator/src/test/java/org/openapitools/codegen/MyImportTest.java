@@ -39,7 +39,7 @@ public class MyImportTest {
                 .setGeneratorName("java")
                 .setLibrary("native")
                 .setAdditionalProperties(properties)
-                .setInputSpec("src/test/resources/3_0/spring/petstore-with-fake-endpoints-models-for-testing.yaml")
+                .setInputSpec("src/test/resources/3_0/echo_api.yaml")
 /*
                 .addTypeMapping("array","ArrayType")
                 .addTypeMapping("Param1Def","Param1DefType")

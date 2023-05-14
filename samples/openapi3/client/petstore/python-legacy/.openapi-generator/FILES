@@ -2,6 +2,7 @@
 .gitlab-ci.yml
 .travis.yml
 README.md
+docs/Baz.md
 docs/DefaultApi.md
 docs/Foo.md
 docs/FooGetDefaultResponse.md
@@ -13,6 +14,7 @@ petstore_api/api_client.py
 petstore_api/configuration.py
 petstore_api/exceptions.py
 petstore_api/models/__init__.py
+petstore_api/models/baz.py
 petstore_api/models/foo.py
 petstore_api/models/foo_get_default_response.py
 petstore_api/rest.py

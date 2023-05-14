@@ -18,10 +18,10 @@ defmodule OpenapiPetstore.Api.Default do
 
   ### Returns
 
-  - `{:ok, OpenapiPetstore.Model.FooGetDefaultResponse.t}` on success
+  - `{:ok, OpenapiPetstore.Model.Baz.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec foo_get(Tesla.Env.client, keyword()) :: {:ok, OpenapiPetstore.Model.FooGetDefaultResponse.t} | {:error, Tesla.Env.t}
+  @spec foo_get(Tesla.Env.client, keyword()) :: {:ok, OpenapiPetstore.Model.Baz.t} | {:ok, OpenapiPetstore.Model.FooGetDefaultResponse.t} | {:error, Tesla.Env.t}
   def foo_get(connection, _opts \\ []) do
     request =
       %{}
@@ -32,6 +32,7 @@ defmodule OpenapiPetstore.Api.Default do
     connection
     |> Connection.request(request)
     |> evaluate_response([
+      {201, %OpenapiPetstore.Model.Baz{}},
       {:default, %OpenapiPetstore.Model.FooGetDefaultResponse{}}
     ])
   end

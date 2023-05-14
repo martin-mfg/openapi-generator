@@ -75,6 +75,7 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [Baz](docs/Model/Baz.md)
 - [Foo](docs/Model/Foo.md)
 - [FooGetDefaultResponse](docs/Model/FooGetDefaultResponse.md)
 

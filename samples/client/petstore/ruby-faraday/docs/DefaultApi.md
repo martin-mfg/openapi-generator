@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 ## foo_get
 
-> <FooGetDefaultResponse> foo_get
+> <Baz> foo_get
 
 
 
@@ -34,7 +34,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<FooGetDefaultResponse>, Integer, Hash)> foo_get_with_http_info
+> <Array(<Baz>, Integer, Hash)> foo_get_with_http_info
 
 ```ruby
 begin
@@ -42,7 +42,7 @@ begin
   data, status_code, headers = api_instance.foo_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <FooGetDefaultResponse>
+  p data # => <Baz>
 rescue Petstore::ApiError => e
   puts "Error when calling DefaultApi->foo_get_with_http_info: #{e}"
 end
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+[**Baz**](Baz.md)
 
 ### Authorization
 

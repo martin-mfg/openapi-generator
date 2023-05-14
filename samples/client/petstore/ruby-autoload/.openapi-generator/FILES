@@ -6,6 +6,7 @@
 Gemfile
 README.md
 Rakefile
+docs/Baz.md
 docs/DefaultApi.md
 docs/Foo.md
 docs/FooGetDefaultResponse.md
@@ -15,6 +16,7 @@ lib/petstore/api/default_api.rb
 lib/petstore/api_client.rb
 lib/petstore/api_error.rb
 lib/petstore/configuration.rb
+lib/petstore/models/baz.rb
 lib/petstore/models/foo.rb
 lib/petstore/models/foo_get_default_response.rb
 lib/petstore/version.rb

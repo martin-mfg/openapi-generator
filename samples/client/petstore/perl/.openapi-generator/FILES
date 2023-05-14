@@ -2,6 +2,7 @@
 .travis.yml
 README.md
 bin/autodoc
+docs/Baz.md
 docs/DefaultApi.md
 docs/Foo.md
 docs/FooGetDefaultResponse.md
@@ -10,6 +11,7 @@ lib/WWW/OpenAPIClient/ApiClient.pm
 lib/WWW/OpenAPIClient/ApiFactory.pm
 lib/WWW/OpenAPIClient/Configuration.pm
 lib/WWW/OpenAPIClient/DefaultApi.pm
+lib/WWW/OpenAPIClient/Object/Baz.pm
 lib/WWW/OpenAPIClient/Object/Foo.pm
 lib/WWW/OpenAPIClient/Object/FooGetDefaultResponse.pm
 lib/WWW/OpenAPIClient/Role.pm

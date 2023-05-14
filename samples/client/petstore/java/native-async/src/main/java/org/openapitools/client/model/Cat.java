@@ -79,12 +79,14 @@ public class Cat extends Animal {
   }
 
 
+  // outcomes override mustache place
   @Override
   public Cat className(String className) {
     this.setClassName(className);
     return this;
   }
 
+  // outcomes override mustache place
   @Override
   public Cat color(String color) {
     this.setColor(color);

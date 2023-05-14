@@ -12,4 +12,3 @@ src/main/java/org/openapitools/client/api/DefaultApi.java
 src/main/java/org/openapitools/client/model/Baz.java
 src/main/java/org/openapitools/client/model/Foo.java
 src/main/java/org/openapitools/client/model/FooGetDefaultResponse.java
-src/test/java/org/openapitools/client/model/BazTest.java

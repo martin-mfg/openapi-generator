@@ -79,12 +79,14 @@ public class Dog extends Animal {
   }
 
 
+  // outcomes override mustache place
   @Override
   public Dog className(String className) {
     this.setClassName(className);
     return this;
   }
 
+  // outcomes override mustache place
   @Override
   public Dog color(String color) {
     this.setColor(color);

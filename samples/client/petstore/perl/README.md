@@ -236,6 +236,7 @@ use WWW::OpenAPIClient::DefaultApi;
 
 To load the models:
 ```perl
+use WWW::OpenAPIClient::Object::Baz;
 use WWW::OpenAPIClient::Object::Foo;
 use WWW::OpenAPIClient::Object::FooGetDefaultResponse;
 
@@ -252,6 +253,7 @@ use warnings;
 use WWW::OpenAPIClient::DefaultApi;
 
 # load the models
+use WWW::OpenAPIClient::Object::Baz;
 use WWW::OpenAPIClient::Object::Foo;
 use WWW::OpenAPIClient::Object::FooGetDefaultResponse;
 
@@ -283,6 +285,7 @@ Class | Method | HTTP request | Description
 
 
 # DOCUMENTATION FOR MODELS
+ - [WWW::OpenAPIClient::Object::Baz](docs/Baz.md)
  - [WWW::OpenAPIClient::Object::Foo](docs/Foo.md)
  - [WWW::OpenAPIClient::Object::FooGetDefaultResponse](docs/FooGetDefaultResponse.md)
 

@@ -78,6 +78,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [Petstore::Baz](docs/Baz.md)
  - [Petstore::Foo](docs/Foo.md)
  - [Petstore::FooGetDefaultResponse](docs/FooGetDefaultResponse.md)
 

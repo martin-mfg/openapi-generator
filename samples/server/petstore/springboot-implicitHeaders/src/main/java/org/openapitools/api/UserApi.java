@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.CreateUsersWithArrayInput201Response;
 import org.openapitools.model.Param0Def;
 import org.openapitools.model.Param1Def;
 import io.swagger.annotations.*;
@@ -49,7 +50,7 @@ public interface UserApi {
     )
     @ApiResponses({
         @ApiResponse(code = 200, message = "bar baz", response = Param1Def.class, responseContainer = "List"),
-        @ApiResponse(code = 201, message = "foo bar", response = Object.class)
+        @ApiResponse(code = 201, message = "foo bar", response = CreateUsersWithArrayInput201Response.class)
     })
     @ApiImplicitParams({
         @ApiImplicitParam(name = "param0", value = "",  dataType = "Param0Def", paramType = "header"),

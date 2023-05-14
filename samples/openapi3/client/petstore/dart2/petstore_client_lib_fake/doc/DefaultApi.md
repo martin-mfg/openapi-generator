@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **fooGet**
-> FooGetDefaultResponse fooGet()
+> Baz fooGet()
 
 
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+[**Baz**](Baz.md)
 
 ### Authorization
 

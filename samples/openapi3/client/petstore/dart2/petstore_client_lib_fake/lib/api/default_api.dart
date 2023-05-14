@@ -42,7 +42,7 @@ class DefaultApi {
     );
   }
 
-  Future<FooGetDefaultResponse?> fooGet() async {
+  Future<Baz?> fooGet() async {
     final response = await fooGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -51,7 +51,7 @@ class DefaultApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'FooGetDefaultResponse',) as FooGetDefaultResponse;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Baz',) as Baz;
     
     }
     return null;

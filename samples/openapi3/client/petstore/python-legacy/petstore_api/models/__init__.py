@@ -14,5 +14,6 @@
 from __future__ import absolute_import
 
 # import models into model package
+from petstore_api.models.baz import Baz
 from petstore_api.models.foo import Foo
 from petstore_api.models.foo_get_default_response import FooGetDefaultResponse

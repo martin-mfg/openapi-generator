@@ -17,6 +17,7 @@ require 'petstore/version'
 require 'petstore/configuration'
 
 # Models
+require 'petstore/models/baz'
 require 'petstore/models/foo'
 require 'petstore/models/foo_get_default_response'
 

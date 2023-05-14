@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## FooGet
 
-> FooGetDefaultResponse FooGet ()
+> Baz FooGet ()
 
 
 
@@ -34,7 +34,7 @@ namespace Example
 
             try
             {
-                FooGetDefaultResponse result = apiInstance.FooGet();
+                Baz result = apiInstance.FooGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+[**Baz**](Baz.md)
 
 ### Authorization
 
@@ -69,6 +69,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | response201 |  -  |
 | **0** | response |  -  |
 
 [[Back to top]](#)

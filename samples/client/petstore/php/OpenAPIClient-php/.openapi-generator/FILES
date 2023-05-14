@@ -4,6 +4,7 @@
 README.md
 composer.json
 docs/Api/DefaultApi.md
+docs/Model/Baz.md
 docs/Model/Foo.md
 docs/Model/FooGetDefaultResponse.md
 git_push.sh
@@ -11,6 +12,7 @@ lib/Api/DefaultApi.php
 lib/ApiException.php
 lib/Configuration.php
 lib/HeaderSelector.php
+lib/Model/Baz.php
 lib/Model/Foo.php
 lib/Model/FooGetDefaultResponse.php
 lib/Model/ModelInterface.php

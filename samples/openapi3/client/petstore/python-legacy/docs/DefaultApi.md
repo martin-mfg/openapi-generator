@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **foo_get**
-> FooGetDefaultResponse foo_get()
+> Baz foo_get()
 
 
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+[**Baz**](Baz.md)
 
 ### Authorization
 
@@ -58,6 +58,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**201** | response201 |  -  |
 **0** | response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

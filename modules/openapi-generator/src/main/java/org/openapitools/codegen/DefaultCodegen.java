@@ -5792,9 +5792,9 @@ public class DefaultCodegen implements CodegenConfig {
                 if (!Boolean.TRUE.equals(cp.isReadOnly)) {
                     cm.hasOnlyReadOnly = false;
                 }
-                if (!addSchemaImportsFromV3SpecLocations) {
+//                if (!addSchemaImportsFromV3SpecLocations) {
                     addImportsForPropertyType(cm, cp);
-                }
+//                }
 
                 // if required, add to the list "requiredVars"
                 if (Boolean.FALSE.equals(cp.required)) {

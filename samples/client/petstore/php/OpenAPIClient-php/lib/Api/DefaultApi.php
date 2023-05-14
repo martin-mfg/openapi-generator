@@ -129,7 +129,7 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FooGetDefaultResponse
+     * @return \OpenAPI\Client\Model\Baz|\OpenAPI\Client\Model\FooGetDefaultResponse
      */
     public function fooGet(string $contentType = self::contentTypes['fooGet'][0])
     {
@@ -144,7 +144,7 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FooGetDefaultResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\Baz|\OpenAPI\Client\Model\FooGetDefaultResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function fooGetWithHttpInfo(string $contentType = self::contentTypes['fooGet'][0])
     {
@@ -186,6 +186,21 @@ class DefaultApi
             }
 
             switch($statusCode) {
+                case 201:
+                    if ('\OpenAPI\Client\Model\Baz' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\Baz' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Baz', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\OpenAPI\Client\Model\FooGetDefaultResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -203,7 +218,7 @@ class DefaultApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FooGetDefaultResponse';
+            $returnType = '\OpenAPI\Client\Model\Baz';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -221,6 +236,14 @@ class DefaultApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\Baz',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -262,7 +285,7 @@ class DefaultApi
      */
     public function fooGetAsyncWithHttpInfo(string $contentType = self::contentTypes['fooGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FooGetDefaultResponse';
+        $returnType = '\OpenAPI\Client\Model\Baz';
         $request = $this->fooGetRequest($contentType);
 
         return $this->client

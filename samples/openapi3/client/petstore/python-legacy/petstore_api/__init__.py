@@ -29,6 +29,7 @@ from petstore_api.exceptions import ApiKeyError
 from petstore_api.exceptions import ApiAttributeError
 from petstore_api.exceptions import ApiException
 # import models into sdk package
+from petstore_api.models.baz import Baz
 from petstore_api.models.foo import Foo
 from petstore_api.models.foo_get_default_response import FooGetDefaultResponse
 

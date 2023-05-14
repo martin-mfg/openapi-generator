@@ -9,7 +9,9 @@ src/gen/java/org/openapitools/api/JacksonJsonProvider.java
 src/gen/java/org/openapitools/api/NotFoundException.java
 src/gen/java/org/openapitools/api/RFC3339DateFormat.java
 src/gen/java/org/openapitools/api/StringUtil.java
+src/gen/java/org/openapitools/model/Baz.java
 src/gen/java/org/openapitools/model/Foo.java
+src/gen/java/org/openapitools/model/FooGetDefaultResponse.java
 src/main/java/org/openapitools/api/Bootstrap.java
 src/main/java/org/openapitools/api/factories/FooApiServiceFactory.java
 src/main/java/org/openapitools/api/impl/FooApiServiceImpl.java

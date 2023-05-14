@@ -158,7 +158,7 @@ void FooResource::handler_GET_internal(const std::shared_ptr<restbed::Session> s
     const auto request = session->get_request();
     
     int status_code = 500;
-    _foo_get_default_response resultObject = _foo_get_default_response{};
+    Baz resultObject = Baz{};
     std::string result = "";
     
     try {
@@ -182,6 +182,16 @@ void FooResource::handler_GET_internal(const std::shared_ptr<restbed::Session> s
     static const std::string acceptTypes{
     };
     
+    if (status_code == 201) {
+        responseHeaders.insert(std::make_pair("Content-Type", selectPreferredContentType(contentTypes)));
+        if (!acceptTypes.empty()) {
+            responseHeaders.insert(std::make_pair("Accept", acceptTypes));
+        }
+    
+        result = resultObject.toJsonString();
+        returnResponse(session, 201, result.empty() ? "{}" : result, responseHeaders);
+        return;
+    }
     if (status_code == 0) {
         responseHeaders.insert(std::make_pair("Content-Type", "text/plain"));
         result = "response";
@@ -194,7 +204,7 @@ void FooResource::handler_GET_internal(const std::shared_ptr<restbed::Session> s
 }
 
 
-std::pair<int, _foo_get_default_response> FooResource::handler_GET(
+std::pair<int, Baz> FooResource::handler_GET(
         )
 {
     return handler_GET_func();

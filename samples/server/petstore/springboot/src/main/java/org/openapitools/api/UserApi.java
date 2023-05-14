@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.CreateUsersWithArrayInput201ResponseDto;
 import org.openapitools.model.Param0DefDto;
 import java.xyz.Param1DefType;
 import io.swagger.annotations.*;
@@ -51,7 +52,7 @@ public interface UserApi {
     )
     @ApiResponses({
         @ApiResponse(code = 200, message = "bar baz", response = Param1DefType.class, responseContainer = "array"),
-        @ApiResponse(code = 201, message = "foo bar", response = Object.class)
+        @ApiResponse(code = 201, message = "foo bar", response = CreateUsersWithArrayInput201ResponseDto.class)
     })
     @RequestMapping(
         method = RequestMethod.POST,

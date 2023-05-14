@@ -18,7 +18,7 @@ Method | HTTP request | Description
 ```python
 import petstore_api
 from petstore_api.apis.tags import default_api
-from petstore_api.model.foo_get_default_response import FooGetDefaultResponse
+from petstore_api.model.foo import Foo
 from petstore_api.model.baz import Baz
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -71,10 +71,17 @@ body | typing.Union[SchemaFor0ResponseBodyApplicationJson, ] |  |
 headers | Unset | headers were not defined |
 
 # SchemaFor0ResponseBodyApplicationJson
-Type | Description  | Notes
-------------- | ------------- | -------------
-[**FooGetDefaultResponse**](../../models/FooGetDefaultResponse.md) |  | 
 
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+
+### Dictionary Keys
+Key | Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | ------------- | -------------
+**myString** | [**Foo**]({{complexTypePrefix}}Foo.md) | [**Foo**]({{complexTypePrefix}}Foo.md) |  | [optional] 
+**any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 ### Authorization
 

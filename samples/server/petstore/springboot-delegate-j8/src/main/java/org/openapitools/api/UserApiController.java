@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.CreateUsersWithArrayInput201Response;
 import org.openapitools.model.Param0Def;
 import org.openapitools.model.Param1Def;
 

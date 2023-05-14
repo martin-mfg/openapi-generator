@@ -58,7 +58,7 @@ class DefaultApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: FooGetDefaultResponse
+        :rtype: Baz
         """
         kwargs['_return_http_data_only'] = True
         return self.foo_get_with_http_info(**kwargs)  # noqa: E501
@@ -93,7 +93,7 @@ class DefaultApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(FooGetDefaultResponse, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(Baz, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -141,6 +141,7 @@ class DefaultApi(object):
         auth_settings = []  # noqa: E501
 
         response_types_map = {
+            201: "Baz",
         }
 
         return self.api_client.call_api(

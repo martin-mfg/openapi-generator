@@ -1,3 +1,4 @@
+import 'package:openapi/src/model/baz.dart';
 import 'package:openapi/src/model/foo.dart';
 import 'package:openapi/src/model/foo_get_default_response.dart';
 
@@ -19,6 +20,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return (valueString == 'true' || valueString == '1') as ReturnType;
         case 'double':
           return (value is double ? value : double.parse('$value')) as ReturnType;
+        case 'Baz':
+          return Baz.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'Foo':
           return Foo.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'FooGetDefaultResponse':

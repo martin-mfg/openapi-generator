@@ -9,6 +9,7 @@ import 'dart:convert';
 import 'package:openapi/src/deserialize.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/model/baz.dart';
 import 'package:openapi/src/model/foo_get_default_response.dart';
 
 class DefaultApi {
@@ -28,9 +29,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [FooGetDefaultResponse] as data
+  /// Returns a [Future] containing a [Response] with a [Baz] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<FooGetDefaultResponse>> fooGet({ 
+  Future<Response<Baz>> fooGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -59,10 +60,10 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    FooGetDefaultResponse _responseData;
+    Baz _responseData;
 
     try {
-_responseData = deserialize<FooGetDefaultResponse, FooGetDefaultResponse>(_response.data!, 'FooGetDefaultResponse', growable: true);
+_responseData = deserialize<Baz, Baz>(_response.data!, 'Baz', growable: true);
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -73,7 +74,7 @@ _responseData = deserialize<FooGetDefaultResponse, FooGetDefaultResponse>(_respo
       );
     }
 
-    return Response<FooGetDefaultResponse>(
+    return Response<Baz>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -29,6 +29,7 @@ part 'auth/http_bearer_auth.dart';
 
 part 'api/default_api.dart';
 
+part 'model/baz.dart';
 part 'model/foo.dart';
 part 'model/foo_get_default_response.dart';
 

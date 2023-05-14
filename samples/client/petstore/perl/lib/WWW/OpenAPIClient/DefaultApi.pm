@@ -59,10 +59,10 @@ sub new {
     __PACKAGE__->method_documentation->{ 'foo_get' } = {
         summary => '',
         params => $params,
-        returns => 'FooGetDefaultResponse',
+        returns => 'Baz',
         };
 }
-# @return FooGetDefaultResponse
+# @return Baz
 #
 sub foo_get {
     my ($self, %args) = @_;
@@ -93,7 +93,7 @@ sub foo_get {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('FooGetDefaultResponse', $response);
+    my $_response_object = $self->{api_client}->deserialize('Baz', $response);
     return $_response_object;
 }
 

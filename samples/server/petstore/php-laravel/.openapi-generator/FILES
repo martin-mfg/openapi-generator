@@ -16,6 +16,7 @@ lib/app/Http/Middleware/RedirectIfAuthenticated.php
 lib/app/Http/Middleware/TrimStrings.php
 lib/app/Http/Middleware/TrustProxies.php
 lib/app/Http/Middleware/VerifyCsrfToken.php
+lib/app/Models/Baz.php
 lib/app/Models/Foo.php
 lib/app/Models/FooGetDefaultResponse.php
 lib/app/Providers/AppServiceProvider.php

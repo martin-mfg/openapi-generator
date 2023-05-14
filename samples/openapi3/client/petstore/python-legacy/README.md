@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Baz](docs/Baz.md)
  - [Foo](docs/Foo.md)
  - [FooGetDefaultResponse](docs/FooGetDefaultResponse.md)
 

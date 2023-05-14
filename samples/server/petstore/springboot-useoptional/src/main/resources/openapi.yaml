@@ -40,10 +40,7 @@ paths:
           content:
             application/json:
               schema:
-                properties:
-                  myField:
-                    $ref: '#/components/schemas/MyIntArray'
-                type: object
+                $ref: '#/components/schemas/createUsersWithArrayInput_201_response'
           description: foo bar
       summary: Creates list of users with given input array
       tags:
@@ -57,10 +54,7 @@ components:
       content:
         application/json:
           schema:
-            properties:
-              myField:
-                $ref: '#/components/schemas/MyIntArray'
-            type: object
+            $ref: '#/components/schemas/createUsersWithArrayInput_201_response'
       description: foo bar
   schemas:
     Param0Def:
@@ -85,3 +79,10 @@ components:
       items:
         type: integer
       type: array
+    createUsersWithArrayInput_201_response:
+      properties:
+        myField:
+          items:
+            type: integer
+          type: array
+      type: object

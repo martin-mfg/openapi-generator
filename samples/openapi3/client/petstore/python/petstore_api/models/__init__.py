@@ -14,4 +14,3 @@
 from petstore_api.model.bar import Bar
 from petstore_api.model.baz import Baz
 from petstore_api.model.foo import Foo
-from petstore_api.model.foo_get_default_response import FooGetDefaultResponse

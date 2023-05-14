@@ -10,5 +10,6 @@ export 'package:openapi/src/auth/oauth.dart';
 
 export 'package:openapi/src/api/default_api.dart';
 
+export 'package:openapi/src/model/baz.dart';
 export 'package:openapi/src/model/foo.dart';
 export 'package:openapi/src/model/foo_get_default_response.dart';

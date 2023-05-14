@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.CreateUsersWithArrayInput201Response;
 import org.openapitools.model.Param0Def;
 import org.openapitools.model.Param1Def;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
@@ -57,7 +58,7 @@ public interface UserApi {
                 @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Param1Def.class)))
             }),
             @ApiResponse(responseCode = "201", description = "foo bar", content = {
-                @Content(mediaType = "application/json", schema = @Schema(implementation = Object.class))
+                @Content(mediaType = "application/json", schema = @Schema(implementation = CreateUsersWithArrayInput201Response.class))
             })
         }
     )

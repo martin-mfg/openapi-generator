@@ -1,6 +1,7 @@
 .gitignore
 README.md
 analysis_options.yaml
+doc/Baz.md
 doc/DefaultApi.md
 doc/Foo.md
 doc/FooGetDefaultResponse.md
@@ -14,6 +15,7 @@ lib/src/auth/basic_auth.dart
 lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
+lib/src/model/baz.dart
 lib/src/model/date.dart
 lib/src/model/foo.dart
 lib/src/model/foo_get_default_response.dart

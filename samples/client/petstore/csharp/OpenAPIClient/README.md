@@ -82,7 +82,7 @@ namespace Example
 
             try
             {
-                FooGetDefaultResponse result = apiInstance.FooGet();
+                Baz result = apiInstance.FooGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -108,6 +108,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [Model.Baz](docs/Baz.md)
  - [Model.Foo](docs/Foo.md)
  - [Model.FooGetDefaultResponse](docs/FooGetDefaultResponse.md)
 

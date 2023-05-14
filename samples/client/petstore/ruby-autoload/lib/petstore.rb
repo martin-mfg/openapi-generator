@@ -17,6 +17,7 @@ require 'petstore/version'
 require 'petstore/configuration'
 
 # Models
+Petstore.autoload :Baz, 'petstore/models/baz'
 Petstore.autoload :Foo, 'petstore/models/foo'
 Petstore.autoload :FooGetDefaultResponse, 'petstore/models/foo_get_default_response'
 
