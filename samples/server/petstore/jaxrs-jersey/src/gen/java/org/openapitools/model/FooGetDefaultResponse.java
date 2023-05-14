@@ -28,32 +28,32 @@ import javax.validation.Valid;
  * FooGetDefaultResponse
  */
 @JsonPropertyOrder({
-  FooGetDefaultResponse.JSON_PROPERTY_MY_STRING
+  FooGetDefaultResponse.JSON_PROPERTY_STRING
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen")
 public class FooGetDefaultResponse   {
-  public static final String JSON_PROPERTY_MY_STRING = "myString";
-  @JsonProperty(JSON_PROPERTY_MY_STRING)
-  private Foo myString;
+  public static final String JSON_PROPERTY_STRING = "string";
+  @JsonProperty(JSON_PROPERTY_STRING)
+  private Foo string;
 
-  public FooGetDefaultResponse myString(Foo myString) {
-    this.myString = myString;
+  public FooGetDefaultResponse string(Foo string) {
+    this.string = string;
     return this;
   }
 
   /**
-   * Get myString
-   * @return myString
+   * Get string
+   * @return string
    **/
-  @JsonProperty(value = "myString")
+  @JsonProperty(value = "string")
   @ApiModelProperty(value = "")
   @Valid 
-  public Foo getMyString() {
-    return myString;
+  public Foo getString() {
+    return string;
   }
 
-  public void setMyString(Foo myString) {
-    this.myString = myString;
+  public void setString(Foo string) {
+    this.string = string;
   }
 
 
@@ -66,12 +66,12 @@ public class FooGetDefaultResponse   {
       return false;
     }
     FooGetDefaultResponse fooGetDefaultResponse = (FooGetDefaultResponse) o;
-    return Objects.equals(this.myString, fooGetDefaultResponse.myString);
+    return Objects.equals(this.string, fooGetDefaultResponse.string);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(myString);
+    return Objects.hash(string);
   }
 
   @Override
@@ -79,7 +79,7 @@ public class FooGetDefaultResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class FooGetDefaultResponse {\n");
     
-    sb.append("    myString: ").append(toIndentedString(myString)).append("\n");
+    sb.append("    string: ").append(toIndentedString(string)).append("\n");
     sb.append("}");
     return sb.toString();
   }

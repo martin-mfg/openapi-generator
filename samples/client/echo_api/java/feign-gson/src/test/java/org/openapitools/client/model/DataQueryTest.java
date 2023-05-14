@@ -41,6 +41,14 @@ class DataQueryTest {
     }
 
     /**
+     * Test the property 'suffix'
+     */
+    @Test
+    void suffixTest() {
+        // TODO: test suffix
+    }
+
+    /**
      * Test the property 'text'
      */
     @Test

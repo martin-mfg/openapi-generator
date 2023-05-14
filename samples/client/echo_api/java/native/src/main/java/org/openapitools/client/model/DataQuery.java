@@ -20,7 +20,6 @@ import java.util.Objects;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
-// ArrayType is added below
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -130,14 +129,12 @@ public class DataQuery extends Query {
   }
 
 
-  // outcomes override mustache place
   @Override
   public DataQuery id(Long id) {
     this.setId(id);
     return this;
   }
 
-  // outcomes override mustache place
   @Override
   public DataQuery outcomes(List<OutcomesEnum> outcomes) {
     this.setOutcomes(outcomes);

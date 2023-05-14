@@ -37,7 +37,7 @@ class TestAllOfWithSingleRef(unittest.TestCase):
         if include_optional :
             return AllOfWithSingleRef(
                 username = '', 
-                single_ref_type = None
+                single_ref_type = 'admin'
             )
         else :
             return AllOfWithSingleRef(

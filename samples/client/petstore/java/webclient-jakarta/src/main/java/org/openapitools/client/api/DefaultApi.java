@@ -2,7 +2,6 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.Baz;
 import org.openapitools.client.model.FooGetDefaultResponse;
 
 import java.util.HashMap;
@@ -50,9 +49,8 @@ public class DefaultApi {
     /**
      * 
      * 
-     * <p><b>201</b> - response201
      * <p><b>0</b> - response
-     * @return Baz
+     * @return FooGetDefaultResponse
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
     private ResponseSpec fooGetRequestCreation() throws WebClientResponseException {
@@ -74,40 +72,37 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<Baz> localVarReturnType = new ParameterizedTypeReference<Baz>() {};
+        ParameterizedTypeReference<FooGetDefaultResponse> localVarReturnType = new ParameterizedTypeReference<FooGetDefaultResponse>() {};
         return apiClient.invokeAPI("/foo", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     }
 
     /**
      * 
      * 
-     * <p><b>201</b> - response201
      * <p><b>0</b> - response
-     * @return Baz
+     * @return FooGetDefaultResponse
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Baz> fooGet() throws WebClientResponseException {
-        ParameterizedTypeReference<Baz> localVarReturnType = new ParameterizedTypeReference<Baz>() {};
+    public Mono<FooGetDefaultResponse> fooGet() throws WebClientResponseException {
+        ParameterizedTypeReference<FooGetDefaultResponse> localVarReturnType = new ParameterizedTypeReference<FooGetDefaultResponse>() {};
         return fooGetRequestCreation().bodyToMono(localVarReturnType);
     }
 
     /**
      * 
      * 
-     * <p><b>201</b> - response201
      * <p><b>0</b> - response
-     * @return ResponseEntity&lt;Baz&gt;
+     * @return ResponseEntity&lt;FooGetDefaultResponse&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Baz>> fooGetWithHttpInfo() throws WebClientResponseException {
-        ParameterizedTypeReference<Baz> localVarReturnType = new ParameterizedTypeReference<Baz>() {};
+    public Mono<ResponseEntity<FooGetDefaultResponse>> fooGetWithHttpInfo() throws WebClientResponseException {
+        ParameterizedTypeReference<FooGetDefaultResponse> localVarReturnType = new ParameterizedTypeReference<FooGetDefaultResponse>() {};
         return fooGetRequestCreation().toEntity(localVarReturnType);
     }
 
     /**
      * 
      * 
-     * <p><b>201</b> - response201
      * <p><b>0</b> - response
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API

@@ -77,9 +77,11 @@ public interface UserApi {
      * Get user by user name
      *
      * @param username The name that needs to be fetched. Use user1 for testing. (required)
+     * @return User
      */
     @Get(uri="/user/{username}")
-    Mono<Void> getUserByName(
+    @Consumes({"application/xml", "application/json"})
+    Mono<User> getUserByName(
         @PathVariable(name="username") @NotNull String username
     );
 

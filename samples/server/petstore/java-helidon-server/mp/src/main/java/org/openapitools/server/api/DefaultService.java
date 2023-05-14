@@ -12,7 +12,6 @@
 
 package org.openapitools.server.api;
 
-import org.openapitools.server.model.Baz;
 import org.openapitools.server.model.FooGetDefaultResponse;
 
 import jakarta.ws.rs.*;
@@ -29,5 +28,5 @@ public interface DefaultService {
 
     @GET
     @Produces({ "application/json" })
-    Baz fooGet();
+    FooGetDefaultResponse fooGet();
 }

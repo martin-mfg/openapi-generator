@@ -13,7 +13,6 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiResponse;
-import org.openapitools.client.model.Baz;
 import org.openapitools.client.model.FooGetDefaultResponse;
 
 /**
@@ -23,6 +22,6 @@ import org.openapitools.client.model.FooGetDefaultResponse;
  */
 public interface DefaultApi {
 
-  ApiResponse<Baz> fooGet();
+  ApiResponse<FooGetDefaultResponse> fooGet();
 
 }

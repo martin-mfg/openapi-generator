@@ -1,6 +1,6 @@
 /*
  * OpenAPI Petstore
- * dummy
+ * This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \" \\
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -207,7 +207,7 @@ public class ApiClient {
   }
 
   protected String getDefaultBaseUri() {
-    return "http://localhost";
+    return "http://petstore.swagger.io:80/v2";
   }
 
   protected HttpClient.Builder createDefaultHttpClientBuilder() {

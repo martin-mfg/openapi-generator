@@ -137,7 +137,7 @@ This can only be done by the logged in user.
 <a name="getUserByName"></a>
 # **getUserByName**
 ```java
-Mono<Void> UserApi.getUserByName(username)
+Mono<User> UserApi.getUserByName(username)
 ```
 
 Get user by user name
@@ -148,13 +148,14 @@ Get user by user name
 | **username** | `String`| The name that needs to be fetched. Use user1 for testing. | |
 
 
-
+### Return type
+[**User**](User.md)
 
 
 
 ### HTTP request headers
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: `application/xml`, `application/json`
 
 <a name="loginUser"></a>
 # **loginUser**

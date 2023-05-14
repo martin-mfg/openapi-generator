@@ -330,9 +330,11 @@ public class UserApi {
     /**
      * Get user by user name
      * 
+     * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid username supplied
      * <p><b>404</b> - User not found
      * @param username The name that needs to be fetched. Use user1 for testing.
+     * @return User
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
     private ResponseSpec getUserByNameRequestCreation(String username) throws WebClientResponseException {
@@ -351,46 +353,53 @@ public class UserApi {
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
-        final String[] localVarAccepts = { };
+        final String[] localVarAccepts = { 
+            "application/xml", "application/json"
+        };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] localVarContentTypes = { };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
+        ParameterizedTypeReference<User> localVarReturnType = new ParameterizedTypeReference<User>() {};
         return apiClient.invokeAPI("/user/{username}", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     }
 
     /**
      * Get user by user name
      * 
+     * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid username supplied
      * <p><b>404</b> - User not found
      * @param username The name that needs to be fetched. Use user1 for testing.
+     * @return User
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Void> getUserByName(String username) throws WebClientResponseException {
-        ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
+    public Mono<User> getUserByName(String username) throws WebClientResponseException {
+        ParameterizedTypeReference<User> localVarReturnType = new ParameterizedTypeReference<User>() {};
         return getUserByNameRequestCreation(username).bodyToMono(localVarReturnType);
     }
 
     /**
      * Get user by user name
      * 
+     * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid username supplied
      * <p><b>404</b> - User not found
      * @param username The name that needs to be fetched. Use user1 for testing.
+     * @return ResponseEntity&lt;User&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Void>> getUserByNameWithHttpInfo(String username) throws WebClientResponseException {
-        ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
+    public Mono<ResponseEntity<User>> getUserByNameWithHttpInfo(String username) throws WebClientResponseException {
+        ParameterizedTypeReference<User> localVarReturnType = new ParameterizedTypeReference<User>() {};
         return getUserByNameRequestCreation(username).toEntity(localVarReturnType);
     }
 
     /**
      * Get user by user name
      * 
+     * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid username supplied
      * <p><b>404</b> - User not found
      * @param username The name that needs to be fetched. Use user1 for testing.

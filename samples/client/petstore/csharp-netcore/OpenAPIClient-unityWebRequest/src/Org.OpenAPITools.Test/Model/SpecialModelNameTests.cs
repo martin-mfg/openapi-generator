@@ -54,7 +54,6 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<SpecialModelName>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'SpecialPropertyName'
         /// </summary>

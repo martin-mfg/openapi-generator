@@ -1,6 +1,6 @@
 # Org.OpenAPITools.Api.DefaultApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://petstore.swagger.io:80/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## FooGet
 
-> Baz FooGet ()
+> FooGetDefaultResponse FooGet ()
 
 
 
@@ -29,12 +29,12 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "http://localhost";
+            Configuration.Default.BasePath = "http://petstore.swagger.io:80/v2";
             var apiInstance = new DefaultApi(Configuration.Default);
 
             try
             {
-                Baz result = apiInstance.FooGet();
+                FooGetDefaultResponse result = apiInstance.FooGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Baz**](Baz.md)
+[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
 
 ### Authorization
 
@@ -69,7 +69,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | response201 |  -  |
 | **0** | response |  -  |
 
 [[Back to top]](#)

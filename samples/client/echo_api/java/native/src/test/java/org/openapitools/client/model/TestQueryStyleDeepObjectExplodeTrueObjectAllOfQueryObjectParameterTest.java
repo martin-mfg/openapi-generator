@@ -38,22 +38,6 @@ public class TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameterT
     }
 
     /**
-     * Test the property 'id'
-     */
-    @Test
-    public void idTest() {
-        // TODO: test id
-    }
-
-    /**
-     * Test the property 'name'
-     */
-    @Test
-    public void nameTest() {
-        // TODO: test name
-    }
-
-    /**
      * Test the property 'size'
      */
     @Test
@@ -67,6 +51,22 @@ public class TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameterT
     @Test
     public void colorTest() {
         // TODO: test color
+    }
+
+    /**
+     * Test the property 'id'
+     */
+    @Test
+    public void idTest() {
+        // TODO: test id
+    }
+
+    /**
+     * Test the property 'name'
+     */
+    @Test
+    public void nameTest() {
+        // TODO: test name
     }
 
 }

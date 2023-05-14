@@ -360,6 +360,7 @@ public class UserApi {
      * 
      *
      * @see #usernamePath The name that needs to be fetched. Use user1 for testing. (required)
+     * return User
      */
     public static class GetUserByNameOper implements Oper {
 
@@ -384,6 +385,16 @@ public class UserApi {
         @Override
         public <T> T execute(Function<Response, T> handler) {
             return handler.apply(RestAssured.given().spec(reqSpec.build()).expect().spec(respSpec.build()).when().request(REQ_METHOD, REQ_URI));
+        }
+
+        /**
+         * GET /user/{username}
+         * @param handler handler
+         * @return User
+         */
+        public User executeAs(Function<Response, Response> handler) {
+            TypeRef<User> type = new TypeRef<User>(){};
+            return execute(handler).as(type);
         }
 
         public static final String USERNAME_PATH = "username";

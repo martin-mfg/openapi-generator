@@ -28,10 +28,9 @@ func Test_petstore_StoreApiService(t *testing.T) {
 
 		var orderId string
 
-		resp, httpRes, err := apiClient.StoreApi.DeleteOrder(context.Background(), orderId).Execute()
+		httpRes, err := apiClient.StoreApi.DeleteOrder(context.Background(), orderId).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

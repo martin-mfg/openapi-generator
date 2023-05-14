@@ -86,11 +86,13 @@ public interface UserApi  {
      */
     @GET
     @Path("/{username}")
+    @Produces({ "application/xml", "application/json" })
     @ApiOperation(value = "Get user by user name", tags={ "user" })
     @ApiResponses(value = { 
+        @ApiResponse(code = 200, message = "successful operation", response = User.class),
         @ApiResponse(code = 400, message = "Invalid username supplied"),
         @ApiResponse(code = 404, message = "User not found") })
-    public void getUserByName(@PathParam("username") String username);
+    public User getUserByName(@PathParam("username") String username);
 
     /**
      * Logs user into the system

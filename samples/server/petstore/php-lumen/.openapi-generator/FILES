@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 lib/.editorconfig
 lib/.env.example
 lib/.gitignore
@@ -7,9 +8,15 @@ lib/app/Console/Kernel.php
 lib/app/Events/Event.php
 lib/app/Events/ExampleEvent.php
 lib/app/Exceptions/Handler.php
+lib/app/Http/Controllers/AnotherFakeApi.php
 lib/app/Http/Controllers/Controller.php
 lib/app/Http/Controllers/DefaultApi.php
 lib/app/Http/Controllers/ExampleController.php
+lib/app/Http/Controllers/FakeApi.php
+lib/app/Http/Controllers/FakeClassnameTags123Api.php
+lib/app/Http/Controllers/PetApi.php
+lib/app/Http/Controllers/StoreApi.php
+lib/app/Http/Controllers/UserApi.php
 lib/app/Http/Middleware/Authenticate.php
 lib/app/Http/Middleware/ExampleMiddleware.php
 lib/app/Jobs/ExampleJob.php

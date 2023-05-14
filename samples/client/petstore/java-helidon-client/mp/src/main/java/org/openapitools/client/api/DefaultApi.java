@@ -25,7 +25,6 @@ import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import org.openapitools.client.model.Baz;
 import org.openapitools.client.model.FooGetDefaultResponse;
 
 /**
@@ -41,5 +40,5 @@ public interface DefaultApi  {
     @GET
     
     @Produces({ "application/json" })
-    Baz fooGet() throws ApiException, ProcessingException;
+    FooGetDefaultResponse fooGet() throws ApiException, ProcessingException;
 }

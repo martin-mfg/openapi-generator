@@ -4,7 +4,6 @@ import org.openapitools.api.*;
 
 import org.glassfish.jersey.media.multipart.FormDataBodyPart;
 
-import org.openapitools.model.Baz;
 import org.openapitools.model.FooGetDefaultResponse;
 
 import java.util.List;

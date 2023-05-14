@@ -162,13 +162,17 @@ instance Produces DeleteUser MimeNoContent
 -- Get user by user name
 -- 
 getUserByName
-  :: Username -- ^ "username" -  The name that needs to be fetched. Use user1 for testing.
-  -> OpenAPIPetstoreRequest GetUserByName MimeNoContent NoContent MimeNoContent
-getUserByName (Username username) =
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> Username -- ^ "username" -  The name that needs to be fetched. Use user1 for testing.
+  -> OpenAPIPetstoreRequest GetUserByName MimeNoContent User accept
+getUserByName  _ (Username username) =
   _mkRequest "GET" ["/user/",toPath username]
 
 data GetUserByName  
-instance Produces GetUserByName MimeNoContent
+-- | @application/xml@
+instance Produces GetUserByName MimeXML
+-- | @application/json@
+instance Produces GetUserByName MimeJSON
 
 
 -- *** loginUser

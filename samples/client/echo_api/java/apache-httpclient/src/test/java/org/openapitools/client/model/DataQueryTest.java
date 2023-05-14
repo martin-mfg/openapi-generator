@@ -42,6 +42,14 @@ public class DataQueryTest {
     }
 
     /**
+     * Test the property 'suffix'
+     */
+    @Test
+    public void suffixTest() {
+        // TODO: test suffix
+    }
+
+    /**
      * Test the property 'text'
      */
     @Test

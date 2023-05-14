@@ -26,10 +26,9 @@ func Test_petstore_UserApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.UserApi.CreateUser(context.Background()).Execute()
+		httpRes, err := apiClient.UserApi.CreateUser(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -38,10 +37,9 @@ func Test_petstore_UserApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.UserApi.CreateUsersWithArrayInput(context.Background()).Execute()
+		httpRes, err := apiClient.UserApi.CreateUsersWithArrayInput(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -50,10 +48,9 @@ func Test_petstore_UserApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.UserApi.CreateUsersWithListInput(context.Background()).Execute()
+		httpRes, err := apiClient.UserApi.CreateUsersWithListInput(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -64,10 +61,9 @@ func Test_petstore_UserApiService(t *testing.T) {
 
 		var username string
 
-		resp, httpRes, err := apiClient.UserApi.DeleteUser(context.Background(), username).Execute()
+		httpRes, err := apiClient.UserApi.DeleteUser(context.Background(), username).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -102,10 +98,9 @@ func Test_petstore_UserApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.UserApi.LogoutUser(context.Background()).Execute()
+		httpRes, err := apiClient.UserApi.LogoutUser(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -116,10 +111,9 @@ func Test_petstore_UserApiService(t *testing.T) {
 
 		var username string
 
-		resp, httpRes, err := apiClient.UserApi.UpdateUser(context.Background(), username).Execute()
+		httpRes, err := apiClient.UserApi.UpdateUser(context.Background(), username).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

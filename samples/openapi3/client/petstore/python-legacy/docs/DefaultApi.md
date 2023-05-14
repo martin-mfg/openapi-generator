@@ -1,6 +1,6 @@
 # petstore_api.DefaultApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://petstore.swagger.io:80/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **foo_get**
-> Baz foo_get()
+> FooGetDefaultResponse foo_get()
 
 
 
@@ -20,10 +20,10 @@ import time
 import petstore_api
 from petstore_api.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
-    host = "http://localhost"
+    host = "http://petstore.swagger.io:80/v2"
 )
 
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Baz**](Baz.md)
+[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | response201 |  -  |
 **0** | response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

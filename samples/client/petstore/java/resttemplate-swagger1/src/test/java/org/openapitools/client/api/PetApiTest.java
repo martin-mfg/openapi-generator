@@ -13,7 +13,6 @@
 
 package org.openapitools.client.api;
 
-import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 import org.junit.Test;

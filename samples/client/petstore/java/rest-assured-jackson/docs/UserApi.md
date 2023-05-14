@@ -180,7 +180,7 @@ No authorization required
 
 <a name="getUserByName"></a>
 # **getUserByName**
-> getUserByName(username)
+> User getUserByName(username)
 
 Get user by user name
 
@@ -207,7 +207,7 @@ api.getUserByName()
 
 ### Return type
 
-null (empty response body)
+[**User**](User.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/xml, application/json
 
 <a name="loginUser"></a>
 # **loginUser**

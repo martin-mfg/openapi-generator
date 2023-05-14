@@ -27,9 +27,9 @@ public interface UserApi {
 
     void deleteUser(String username, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
 
-    void getUserByName(String username, Handler<AsyncResult<Void>> handler);
+    void getUserByName(String username, Handler<AsyncResult<User>> handler);
 
-    void getUserByName(String username, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> handler);
+    void getUserByName(String username, ApiClient.AuthInfo authInfo, Handler<AsyncResult<User>> handler);
 
     void loginUser(String username, String password, Handler<AsyncResult<String>> handler);
 

@@ -59,7 +59,7 @@ public class UserApiTest {
     public void createUserTest() {
         // TODO: test validations
         User user = null;
-        //void response = api.createUser(user);
+        //api.createUser(user);
         //assertNotNull(response);
 
 
@@ -77,7 +77,7 @@ public class UserApiTest {
     public void createUsersWithArrayInputTest() {
         // TODO: test validations
         List<User> user = null;
-        //void response = api.createUsersWithArrayInput(user);
+        //api.createUsersWithArrayInput(user);
         //assertNotNull(response);
 
 
@@ -95,7 +95,7 @@ public class UserApiTest {
     public void createUsersWithListInputTest() {
         // TODO: test validations
         List<User> user = null;
-        //void response = api.createUsersWithListInput(user);
+        //api.createUsersWithListInput(user);
         //assertNotNull(response);
 
 
@@ -113,7 +113,7 @@ public class UserApiTest {
     public void deleteUserTest() {
         // TODO: test validations
         String username = null;
-        //void response = api.deleteUser(username);
+        //api.deleteUser(username);
         //assertNotNull(response);
 
 
@@ -167,7 +167,7 @@ public class UserApiTest {
     @Test
     public void logoutUserTest() {
         // TODO: test validations
-        //void response = api.logoutUser();
+        //api.logoutUser();
         //assertNotNull(response);
 
 
@@ -186,7 +186,7 @@ public class UserApiTest {
         // TODO: test validations
         String username = null;
         User user = null;
-        //void response = api.updateUser(username, user);
+        //api.updateUser(username, user);
         //assertNotNull(response);
 
 

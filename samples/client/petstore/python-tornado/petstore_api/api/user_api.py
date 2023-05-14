@@ -580,7 +580,7 @@ class UserApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
+        :rtype: User
         """
         kwargs['_return_http_data_only'] = True
         return self.get_user_by_name_with_http_info(username, **kwargs)  # noqa: E501
@@ -617,7 +617,7 @@ class UserApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
+        :rtype: tuple(User, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -663,10 +663,18 @@ class UserApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/xml', 'application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = []  # noqa: E501
 
-        response_types_map = {}
+        response_types_map = {
+            200: "User",
+            400: None,
+            404: None,
+        }
 
         return self.api_client.call_api(
             '/user/{username}', 'GET',

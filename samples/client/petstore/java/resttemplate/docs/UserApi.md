@@ -274,7 +274,7 @@ No authorization required
 
 ## getUserByName
 
-> getUserByName(username)
+> User getUserByName(username)
 
 Get user by user name
 
@@ -296,7 +296,8 @@ public class Example {
         UserApi apiInstance = new UserApi(defaultClient);
         String username = "username_example"; // String | The name that needs to be fetched. Use user1 for testing.
         try {
-            apiInstance.getUserByName(username);
+            User result = apiInstance.getUserByName(username);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling UserApi#getUserByName");
             System.err.println("Status code: " + e.getCode());
@@ -317,7 +318,7 @@ public class Example {
 
 ### Return type
 
-null (empty response body)
+[**User**](User.md)
 
 ### Authorization
 
@@ -326,12 +327,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/xml, application/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **200** | successful operation |  -  |
 | **400** | Invalid username supplied |  -  |
 | **404** | User not found |  -  |
 

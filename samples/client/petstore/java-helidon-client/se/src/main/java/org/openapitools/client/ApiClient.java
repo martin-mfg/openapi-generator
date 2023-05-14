@@ -223,7 +223,7 @@ public class ApiClient {
 
     private WebClient.Builder defaultWebClientBuilder() {
       WebClient.Builder defaultWebClientBuilder = WebClient.builder()
-                  .baseUri("http://localhost")
+                  .baseUri("http://petstore.swagger.io:80/v2")
                   .config(clientConfig());
       defaultWebClientBuilder.addMediaSupport(objectMapper == null
                 ? JacksonSupport.create()

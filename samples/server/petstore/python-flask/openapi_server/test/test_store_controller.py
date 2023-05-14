@@ -52,7 +52,7 @@ class TestStoreController(BaseTestCase):
             'Accept': 'application/json',
         }
         response = self.client.open(
-            '/v2/store/order/{order_id}'.format(order_id=1),
+            '/v2/store/order/{order_id}'.format(order_id=56),
             method='GET',
             headers=headers)
         self.assert200(response,

@@ -4409,18 +4409,11 @@ public class DefaultCodegen implements CodegenConfig {
                 r.setContent(getContent(response.getContent(), imports, mediaTypeSchemaSuffix));
 
                 if (!addSchemaImportsFromV3SpecLocations) {
-                    LOGGER.warn("--> r: {}", r);
                     if (r.baseType != null &&
                             !defaultIncludes.contains(r.baseType) &&
                             !languageSpecificPrimitives.contains(r.baseType)) {
                         imports.add(r.baseType);
                     }
-
-
-                    LOGGER.warn("importContainerType: {}", importContainerType);
-                    // addImports(imports, r);
-
-
                     if ("set".equals(r.containerType) && typeMapping.containsKey(r.containerType)) {
                         op.uniqueItems = true;
                         imports.add(typeMapping.get(r.containerType));
@@ -4596,7 +4589,6 @@ public class DefaultCodegen implements CodegenConfig {
         }
 
         // add imports to operation import tag
-        LOGGER.warn("operation imports: {}", imports);
         for (String i : imports) {
             if (needToImport(i)) {
                 op.imports.add(i);
@@ -4822,10 +4814,6 @@ public class DefaultCodegen implements CodegenConfig {
             LOGGER.debug("Property type is not primitive: {}", cp.dataType);
         }
 
-
-        // r.baseType = getSchemaType(responseSchema);
-
-
         r.primitiveType = (r.baseType == null || languageSpecificPrimitives().contains(r.baseType));
 
         if (r.baseType == null) {
@@ -5016,7 +5004,6 @@ public class DefaultCodegen implements CodegenConfig {
                 prop = fromProperty(parameter.getName(), parameterSchema, false);
             }
             codegenParameter.setSchema(prop);
-            LOGGER.warn("addSchemaImportsFromV3SpecLocations: {}",addSchemaImportsFromV3SpecLocations);
             if (addSchemaImportsFromV3SpecLocations) {
                 addImports(
                         imports,
@@ -6974,7 +6961,6 @@ public class DefaultCodegen implements CodegenConfig {
         if (!addSchemaImportsFromV3SpecLocations) {
             // import
             if (codegenProperty.complexType != null) {
-                LOGGER.warn("complex type: {}", codegenProperty.complexType);
                 imports.add(codegenProperty.complexType);
             }
         }

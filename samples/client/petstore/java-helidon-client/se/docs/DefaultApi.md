@@ -1,6 +1,6 @@
 # DefaultApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://petstore.swagger.io:80/v2*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## fooGet
 
-> Baz fooGet()
+> FooGetDefaultResponse fooGet()
 
 
 
@@ -27,11 +27,11 @@ import org.openapitools.client.api.DefaultApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://localhost");
+        defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            Baz result = apiInstance.fooGet();
+            FooGetDefaultResponse result = apiInstance.fooGet();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#fooGet");
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Baz**](Baz.md)
+[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
 
 ### Authorization
 
@@ -65,6 +65,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | response201 |  -  |
 | **0** | response |  -  |
 

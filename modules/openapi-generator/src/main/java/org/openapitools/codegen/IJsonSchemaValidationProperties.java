@@ -343,7 +343,6 @@ public interface IJsonSchemaValidationProperties {
         if (this.getVars() != null && !this.getVars().isEmpty()) {
             this.getVars().stream().flatMap(v -> v.getImports(importContainerType, importBaseType, featureSet).stream()).forEach(s -> imports.add(s));
         }
-        // idea: for each overridden allVars entry, add some import. "datatypeWithEnum" without enum. Is it baseType?
         if (this.getIsArray() || this.getIsMap()) {
             if (importContainerType) {
                 /*

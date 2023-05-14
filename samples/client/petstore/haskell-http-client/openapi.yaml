@@ -528,6 +528,15 @@ paths:
         schema:
           type: string
       responses:
+        "200":
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: successful operation
         "400":
           content: {}
           description: Invalid username supplied

@@ -13,7 +13,6 @@
 
 package org.openapitools.client.api;
 
-import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 import java.util.Set;
@@ -25,6 +24,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.Ignore;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -244,7 +245,7 @@ public class PetApiTest {
     public void shouldSee200AfterUploadFile() {
         Long petId = null;
         String additionalMetadata = null;
-        File file = null;
+        File _file = null;
         api.uploadFile()
                 .petIdPath(petId).execute(r -> r.prettyPeek());
         // TODO: test validations

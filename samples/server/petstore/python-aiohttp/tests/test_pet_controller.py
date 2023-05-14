@@ -15,23 +15,7 @@ async def test_add_pet(client):
 
     Add a new pet to the store
     """
-    body = {
-  "photoUrls" : [ "photoUrls", "photoUrls" ],
-  "name" : "doggie",
-  "id" : 0,
-  "category" : {
-    "name" : "name",
-    "id" : 6
-  },
-  "tags" : [ {
-    "name" : "name",
-    "id" : 1
-  }, {
-    "name" : "name",
-    "id" : 1
-  } ],
-  "status" : "available"
-}
+    body = {"photoUrls":["photoUrls","photoUrls"],"name":"doggie","id":0,"category":{"name":"name","id":6},"tags":[{"name":"name","id":1},{"name":"name","id":1}],"status":"available"}
     headers = { 
         'Content-Type': 'application/json',
         'Authorization': 'Bearer special-key',
@@ -67,7 +51,7 @@ async def test_find_pets_by_status(client):
 
     Finds Pets by status
     """
-    params = [('status', ['available'])]
+    params = [('status', ['status_example'])]
     headers = { 
         'Accept': 'application/json',
         'Authorization': 'Bearer special-key',
@@ -123,23 +107,7 @@ async def test_update_pet(client):
 
     Update an existing pet
     """
-    body = {
-  "photoUrls" : [ "photoUrls", "photoUrls" ],
-  "name" : "doggie",
-  "id" : 0,
-  "category" : {
-    "name" : "name",
-    "id" : 6
-  },
-  "tags" : [ {
-    "name" : "name",
-    "id" : 1
-  }, {
-    "name" : "name",
-    "id" : 1
-  } ],
-  "status" : "available"
-}
+    body = {"photoUrls":["photoUrls","photoUrls"],"name":"doggie","id":0,"category":{"name":"name","id":6},"tags":[{"name":"name","id":1},{"name":"name","id":1}],"status":"available"}
     headers = { 
         'Content-Type': 'application/json',
         'Authorization': 'Bearer special-key',

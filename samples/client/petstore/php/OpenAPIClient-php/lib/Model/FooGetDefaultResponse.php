@@ -57,7 +57,7 @@ class FooGetDefaultResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'my_string' => '\OpenAPI\Client\Model\Foo'
+        'string' => '\OpenAPI\Client\Model\Foo'
     ];
 
     /**
@@ -68,7 +68,7 @@ class FooGetDefaultResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'my_string' => null
+        'string' => null
     ];
 
     /**
@@ -77,7 +77,7 @@ class FooGetDefaultResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'my_string' => false
+        'string' => false
     ];
 
     /**
@@ -166,7 +166,7 @@ class FooGetDefaultResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'my_string' => 'myString'
+        'string' => 'string'
     ];
 
     /**
@@ -175,7 +175,7 @@ class FooGetDefaultResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'my_string' => 'setMyString'
+        'string' => 'setString'
     ];
 
     /**
@@ -184,7 +184,7 @@ class FooGetDefaultResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'my_string' => 'getMyString'
+        'string' => 'getString'
     ];
 
     /**
@@ -244,7 +244,7 @@ class FooGetDefaultResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('my_string', $data ?? [], null);
+        $this->setIfExists('string', $data ?? [], null);
     }
 
     /**
@@ -290,28 +290,28 @@ class FooGetDefaultResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets my_string
+     * Gets string
      *
      * @return \OpenAPI\Client\Model\Foo|null
      */
-    public function getMyString()
+    public function getString()
     {
-        return $this->container['my_string'];
+        return $this->container['string'];
     }
 
     /**
-     * Sets my_string
+     * Sets string
      *
-     * @param \OpenAPI\Client\Model\Foo|null $my_string my_string
+     * @param \OpenAPI\Client\Model\Foo|null $string string
      *
      * @return self
      */
-    public function setMyString($my_string)
+    public function setString($string)
     {
-        if (is_null($my_string)) {
-            throw new \InvalidArgumentException('non-nullable my_string cannot be null');
+        if (is_null($string)) {
+            throw new \InvalidArgumentException('non-nullable string cannot be null');
         }
-        $this->container['my_string'] = $my_string;
+        $this->container['string'] = $string;
 
         return $this;
     }

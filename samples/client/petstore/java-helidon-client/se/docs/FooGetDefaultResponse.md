@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**myString** | [**Foo**](Foo.md) |  |  [optional] |
+|**string** | [**Foo**](Foo.md) |  |  [optional] |
 
 
 

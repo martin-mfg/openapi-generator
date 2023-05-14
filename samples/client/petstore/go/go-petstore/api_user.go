@@ -81,7 +81,8 @@ type UserApi interface {
 	GetUserByName(ctx context.Context, username string) ApiGetUserByNameRequest
 
 	// GetUserByNameExecute executes the request
-	GetUserByNameExecute(r ApiGetUserByNameRequest) (*http.Response, error)
+	//  @return User
+	GetUserByNameExecute(r ApiGetUserByNameRequest) (*User, *http.Response, error)
 
 	/*
 	LoginUser Logs user into the system
@@ -518,7 +519,7 @@ type ApiGetUserByNameRequest struct {
 	username string
 }
 
-func (r ApiGetUserByNameRequest) Execute() (*http.Response, error) {
+func (r ApiGetUserByNameRequest) Execute() (*User, *http.Response, error) {
 	return r.ApiService.GetUserByNameExecute(r)
 }
 
@@ -538,16 +539,18 @@ func (a *UserApiService) GetUserByName(ctx context.Context, username string) Api
 }
 
 // Execute executes the request
-func (a *UserApiService) GetUserByNameExecute(r ApiGetUserByNameRequest) (*http.Response, error) {
+//  @return User
+func (a *UserApiService) GetUserByNameExecute(r ApiGetUserByNameRequest) (*User, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  *User
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserApiService.GetUserByName")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/user/{username}"
@@ -567,7 +570,7 @@ func (a *UserApiService) GetUserByNameExecute(r ApiGetUserByNameRequest) (*http.
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"application/xml", "application/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -576,19 +579,19 @@ func (a *UserApiService) GetUserByNameExecute(r ApiGetUserByNameRequest) (*http.
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -596,10 +599,19 @@ func (a *UserApiService) GetUserByNameExecute(r ApiGetUserByNameRequest) (*http.
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiLoginUserRequest struct {

@@ -49,7 +49,7 @@ public class UserApiImpl implements UserApi {
   protected static final GenericType<Void> RESPONSE_TYPE_createUsersWithArrayInput = ResponseType.create(Void.class);
   protected static final GenericType<Void> RESPONSE_TYPE_createUsersWithListInput = ResponseType.create(Void.class);
   protected static final GenericType<Void> RESPONSE_TYPE_deleteUser = ResponseType.create(Void.class);
-  protected static final GenericType<Void> RESPONSE_TYPE_getUserByName = ResponseType.create(Void.class);
+  protected static final GenericType<User> RESPONSE_TYPE_getUserByName = ResponseType.create(User.class);
   protected static final GenericType<String> RESPONSE_TYPE_loginUser = ResponseType.create(String.class);
   protected static final GenericType<Void> RESPONSE_TYPE_logoutUser = ResponseType.create(Void.class);
   protected static final GenericType<Void> RESPONSE_TYPE_updateUser = ResponseType.create(Void.class);
@@ -220,7 +220,7 @@ public class UserApiImpl implements UserApi {
   }
 
   @Override
-  public ApiResponse<Void> getUserByName(String username) {
+  public ApiResponse<User> getUserByName(String username) {
     Objects.requireNonNull(username, "Required parameter 'username' not specified");
     WebClientRequestBuilder webClientRequestBuilder = getUserByNameRequestBuilder(username);
     return getUserByNameSubmit(webClientRequestBuilder, username);
@@ -251,9 +251,9 @@ public class UserApiImpl implements UserApi {
    *
    * @param webClientRequestBuilder the request builder to use for submitting the request
    * @param username The name that needs to be fetched. Use user1 for testing. (required)
-   * @return {@code ApiResponse<Void>} for the submitted request
+   * @return {@code ApiResponse<User>} for the submitted request
    */
-  protected ApiResponse<Void> getUserByNameSubmit(WebClientRequestBuilder webClientRequestBuilder, String username) {
+  protected ApiResponse<User> getUserByNameSubmit(WebClientRequestBuilder webClientRequestBuilder, String username) {
     Single<WebClientResponse> webClientResponse = webClientRequestBuilder.submit();
     return ApiResponse.create(RESPONSE_TYPE_getUserByName, webClientResponse);
   }

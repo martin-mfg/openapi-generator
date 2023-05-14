@@ -31,40 +31,40 @@ import java.util.StringJoiner;
  * FooGetDefaultResponse
  */
 @JsonPropertyOrder({
-  FooGetDefaultResponse.JSON_PROPERTY_MY_STRING
+  FooGetDefaultResponse.JSON_PROPERTY_STRING
 })
 @JsonTypeName("_foo_get_default_response")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FooGetDefaultResponse {
-  public static final String JSON_PROPERTY_MY_STRING = "myString";
-  private Foo myString;
+  public static final String JSON_PROPERTY_STRING = "string";
+  private Foo string;
 
   public FooGetDefaultResponse() {
   }
 
-  public FooGetDefaultResponse myString(Foo myString) {
+  public FooGetDefaultResponse string(Foo string) {
     
-    this.myString = myString;
+    this.string = string;
     return this;
   }
 
    /**
-   * Get myString
-   * @return myString
+   * Get string
+   * @return string
   **/
   @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MY_STRING)
+  @JsonProperty(JSON_PROPERTY_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Foo getMyString() {
-    return myString;
+  public Foo getString() {
+    return string;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MY_STRING)
+  @JsonProperty(JSON_PROPERTY_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMyString(Foo myString) {
-    this.myString = myString;
+  public void setString(Foo string) {
+    this.string = string;
   }
 
   @Override
@@ -76,19 +76,19 @@ public class FooGetDefaultResponse {
       return false;
     }
     FooGetDefaultResponse fooGetDefaultResponse = (FooGetDefaultResponse) o;
-    return Objects.equals(this.myString, fooGetDefaultResponse.myString);
+    return Objects.equals(this.string, fooGetDefaultResponse.string);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(myString);
+    return Objects.hash(string);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FooGetDefaultResponse {\n");
-    sb.append("    myString: ").append(toIndentedString(myString)).append("\n");
+    sb.append("    string: ").append(toIndentedString(string)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -136,9 +136,9 @@ public class FooGetDefaultResponse {
 
     StringJoiner joiner = new StringJoiner("&");
 
-    // add `myString` to the URL query string
-    if (getMyString() != null) {
-      joiner.add(getMyString().toUrlQueryString(prefix + "myString" + suffix));
+    // add `string` to the URL query string
+    if (getString() != null) {
+      joiner.add(getString().toUrlQueryString(prefix + "string" + suffix));
     }
 
     return joiner.toString();

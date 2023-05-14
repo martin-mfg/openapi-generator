@@ -54,7 +54,6 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<FormatTest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Integer'
         /// </summary>
@@ -72,12 +71,28 @@ namespace Org.OpenAPITools.Test.Model
             // TODO unit test for the property 'Int32'
         }
         /// <summary>
+        /// Test the property 'UnsignedInteger'
+        /// </summary>
+        [Test]
+        public void UnsignedIntegerTest()
+        {
+            // TODO unit test for the property 'UnsignedInteger'
+        }
+        /// <summary>
         /// Test the property 'Int64'
         /// </summary>
         [Test]
         public void Int64Test()
         {
             // TODO unit test for the property 'Int64'
+        }
+        /// <summary>
+        /// Test the property 'UnsignedLong'
+        /// </summary>
+        [Test]
+        public void UnsignedLongTest()
+        {
+            // TODO unit test for the property 'UnsignedLong'
         }
         /// <summary>
         /// Test the property 'Number'

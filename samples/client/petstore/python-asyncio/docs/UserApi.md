@@ -256,7 +256,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_by_name**
-> get_user_by_name(username)
+> User get_user_by_name(username)
 
 Get user by user name
 
@@ -283,7 +283,8 @@ with petstore_api.ApiClient() as api_client:
 
     try:
         # Get user by user name
-        api_instance.get_user_by_name(username)
+        api_response = api_instance.get_user_by_name(username)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserApi->get_user_by_name: %s\n" % e)
 ```
@@ -296,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**User**](User.md)
 
 ### Authorization
 
@@ -305,11 +306,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/xml, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** | successful operation |  -  |
 **400** | Invalid username supplied |  -  |
 **404** | User not found |  -  |
 

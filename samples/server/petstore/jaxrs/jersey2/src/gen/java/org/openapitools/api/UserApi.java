@@ -108,9 +108,10 @@ public class UserApi  {
     @javax.ws.rs.GET
     @Path("/{username}")
     
-    
-    @io.swagger.annotations.ApiOperation(value = "Get user by user name", notes = "", response = Void.class, tags={ "user", })
+    @Produces({ "application/xml", "application/json" })
+    @io.swagger.annotations.ApiOperation(value = "Get user by user name", notes = "", response = User.class, tags={ "user", })
     @io.swagger.annotations.ApiResponses(value = {
+        @io.swagger.annotations.ApiResponse(code = 200, message = "successful operation", response = User.class),
         @io.swagger.annotations.ApiResponse(code = 400, message = "Invalid username supplied", response = Void.class),
         @io.swagger.annotations.ApiResponse(code = 404, message = "User not found", response = Void.class)
     })

@@ -1,7 +1,7 @@
 <a name="__pageTop"></a>
 # petstore_api.apis.tags.default_api.DefaultApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://petstore.swagger.io:80/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **foo_get**
 <a name="foo_get"></a>
-> Baz foo_get()
+> {str: (bool, date, datetime, dict, float, int, list, str, none_type)} foo_get()
 
 
 
@@ -19,12 +19,11 @@ Method | HTTP request | Description
 import petstore_api
 from petstore_api.apis.tags import default_api
 from petstore_api.model.foo import Foo
-from petstore_api.model.baz import Baz
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://petstore.swagger.io:80/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = petstore_api.Configuration(
-    host = "http://localhost"
+    host = "http://petstore.swagger.io:80/v2"
 )
 
 # Enter a context with an instance of the API client
@@ -47,21 +46,7 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-201 | [ApiResponseFor201](#foo_get.ApiResponseFor201) | response201
 default | [ApiResponseForDefault](#foo_get.ApiResponseForDefault) | response
-
-#### foo_get.ApiResponseFor201
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor201ResponseBodyApplicationJson, ] |  |
-headers | Unset | headers were not defined |
-
-# SchemaFor201ResponseBodyApplicationJson
-Type | Description  | Notes
-------------- | ------------- | -------------
-[**Baz**](../../models/Baz.md) |  | 
-
 
 #### foo_get.ApiResponseForDefault
 Name | Type | Description  | Notes
@@ -80,7 +65,7 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
-**myString** | [**Foo**]({{complexTypePrefix}}Foo.md) | [**Foo**]({{complexTypePrefix}}Foo.md) |  | [optional] 
+**string** | [**Foo**]({{complexTypePrefix}}Foo.md) | [**Foo**]({{complexTypePrefix}}Foo.md) |  | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 ### Authorization

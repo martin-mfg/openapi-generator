@@ -9,7 +9,7 @@ namespace app\Models;
  */
 class FooGetDefaultResponse {
 
-    /** @var \app\Models\Foo $myString */
-    public $myString;
+    /** @var \app\Models\Foo $string */
+    public $string;
 
 }

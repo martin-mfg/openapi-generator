@@ -24,25 +24,25 @@ import org.openapitools.client.model.Foo;
 
 public class FooGetDefaultResponse  {
   
-  private Foo myString;
+  private Foo string;
 
  /**
-   * Get myString
-   * @return myString
+   * Get string
+   * @return string
   **/
-  public Foo getMyString() {
-    return myString;
+  public Foo getString() {
+    return string;
   }
 
   /**
-    * Set myString
+    * Set string
   **/
-  public void setMyString(Foo myString) {
-    this.myString = myString;
+  public void setString(Foo string) {
+    this.string = string;
   }
 
-  public FooGetDefaultResponse myString(Foo myString) {
-    this.myString = myString;
+  public FooGetDefaultResponse string(Foo string) {
+    this.string = string;
     return this;
   }
 
@@ -55,7 +55,7 @@ public class FooGetDefaultResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class FooGetDefaultResponse {\n");
     
-    sb.append("    myString: ").append(toIndentedString(myString)).append("\n");
+    sb.append("    string: ").append(toIndentedString(string)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@
 part of openapi.api;
 
 class ApiClient {
-  ApiClient({this.basePath = 'http://localhost', this.authentication,});
+  ApiClient({this.basePath = 'http://petstore.swagger.io:80/v2', this.authentication,});
 
   final String basePath;
   final Authentication? authentication;
@@ -181,12 +181,102 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
-        case 'Baz':
-          return Baz.fromJson(value);
+        case 'AdditionalPropertiesClass':
+          return AdditionalPropertiesClass.fromJson(value);
+        case 'AllOfWithSingleRef':
+          return AllOfWithSingleRef.fromJson(value);
+        case 'Animal':
+          return Animal.fromJson(value);
+        case 'ApiResponse':
+          return ApiResponse.fromJson(value);
+        case 'ArrayOfArrayOfNumberOnly':
+          return ArrayOfArrayOfNumberOnly.fromJson(value);
+        case 'ArrayOfNumberOnly':
+          return ArrayOfNumberOnly.fromJson(value);
+        case 'ArrayTest':
+          return ArrayTest.fromJson(value);
+        case 'Capitalization':
+          return Capitalization.fromJson(value);
+        case 'Cat':
+          return Cat.fromJson(value);
+        case 'CatAllOf':
+          return CatAllOf.fromJson(value);
+        case 'Category':
+          return Category.fromJson(value);
+        case 'ClassModel':
+          return ClassModel.fromJson(value);
+        case 'DeprecatedObject':
+          return DeprecatedObject.fromJson(value);
+        case 'Dog':
+          return Dog.fromJson(value);
+        case 'DogAllOf':
+          return DogAllOf.fromJson(value);
+        case 'EnumArrays':
+          return EnumArrays.fromJson(value);
+        case 'EnumClass':
+          return EnumClassTypeTransformer().decode(value);
+        case 'EnumTest':
+          return EnumTest.fromJson(value);
+        case 'FileSchemaTestClass':
+          return FileSchemaTestClass.fromJson(value);
         case 'Foo':
           return Foo.fromJson(value);
         case 'FooGetDefaultResponse':
           return FooGetDefaultResponse.fromJson(value);
+        case 'FormatTest':
+          return FormatTest.fromJson(value);
+        case 'HasOnlyReadOnly':
+          return HasOnlyReadOnly.fromJson(value);
+        case 'HealthCheckResult':
+          return HealthCheckResult.fromJson(value);
+        case 'MapTest':
+          return MapTest.fromJson(value);
+        case 'MixedPropertiesAndAdditionalPropertiesClass':
+          return MixedPropertiesAndAdditionalPropertiesClass.fromJson(value);
+        case 'Model200Response':
+          return Model200Response.fromJson(value);
+        case 'ModelClient':
+          return ModelClient.fromJson(value);
+        case 'ModelFile':
+          return ModelFile.fromJson(value);
+        case 'ModelList':
+          return ModelList.fromJson(value);
+        case 'ModelReturn':
+          return ModelReturn.fromJson(value);
+        case 'Name':
+          return Name.fromJson(value);
+        case 'NullableClass':
+          return NullableClass.fromJson(value);
+        case 'NumberOnly':
+          return NumberOnly.fromJson(value);
+        case 'ObjectWithDeprecatedFields':
+          return ObjectWithDeprecatedFields.fromJson(value);
+        case 'Order':
+          return Order.fromJson(value);
+        case 'OuterComposite':
+          return OuterComposite.fromJson(value);
+        case 'OuterEnum':
+          return OuterEnumTypeTransformer().decode(value);
+        case 'OuterEnumDefaultValue':
+          return OuterEnumDefaultValueTypeTransformer().decode(value);
+        case 'OuterEnumInteger':
+          return OuterEnumIntegerTypeTransformer().decode(value);
+        case 'OuterEnumIntegerDefaultValue':
+          return OuterEnumIntegerDefaultValueTypeTransformer().decode(value);
+        case 'OuterObjectWithEnumProperty':
+          return OuterObjectWithEnumProperty.fromJson(value);
+        case 'Pet':
+          return Pet.fromJson(value);
+        case 'ReadOnlyFirst':
+          return ReadOnlyFirst.fromJson(value);
+        case 'SingleRefType':
+          return SingleRefTypeTypeTransformer().decode(value);
+        case 'SpecialModelName':
+          return SpecialModelName.fromJson(value);
+        case 'Tag':
+          return Tag.fromJson(value);
+        case 'User':
+          return User.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

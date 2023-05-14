@@ -1,6 +1,6 @@
 /*
  * OpenAPI Petstore
- * dummy
+ * This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \" \\
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -14,9 +14,8 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import org.openapitools.client.model.CreateUsersWithArrayInput201Response;
-import org.openapitools.client.model.Param0Def;
-import org.openapitools.client.model.Param1Def;
+import java.time.OffsetDateTime;
+import org.openapitools.client.model.User;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -37,6 +36,23 @@ public class UserApiTest {
 
     
     /**
+     * Create user
+     *
+     * This can only be done by the logged in user.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createUserTest() throws ApiException {
+        User user = null;
+        
+        api.createUser(user);
+        
+        // TODO: test validations
+    }
+    
+    /**
      * Creates list of users with given input array
      *
      * 
@@ -46,10 +62,112 @@ public class UserApiTest {
      */
     @Test
     public void createUsersWithArrayInputTest() throws ApiException {
-        Param0Def param0 = null;
-        List<Param1Def> param1 = null;
-        List<Param1Def> response = 
-        api.createUsersWithArrayInput(param0, param1);
+        List<User> user = null;
+        
+        api.createUsersWithArrayInput(user);
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Creates list of users with given input array
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createUsersWithListInputTest() throws ApiException {
+        List<User> user = null;
+        
+        api.createUsersWithListInput(user);
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Delete user
+     *
+     * This can only be done by the logged in user.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteUserTest() throws ApiException {
+        String username = null;
+        
+        api.deleteUser(username);
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Get user by user name
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getUserByNameTest() throws ApiException {
+        String username = null;
+        User response = 
+        api.getUserByName(username);
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Logs user into the system
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void loginUserTest() throws ApiException {
+        String username = null;
+        String password = null;
+        String response = 
+        api.loginUser(username, password);
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Logs out current logged in user session
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void logoutUserTest() throws ApiException {
+        
+        api.logoutUser();
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Updated user
+     *
+     * This can only be done by the logged in user.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateUserTest() throws ApiException {
+        String username = null;
+        User user = null;
+        
+        api.updateUser(username, user);
         
         // TODO: test validations
     }

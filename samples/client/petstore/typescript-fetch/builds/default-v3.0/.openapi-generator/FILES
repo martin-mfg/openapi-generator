@@ -1,8 +1,0 @@
-apis/DefaultApi.ts
-apis/index.ts
-index.ts
-models/Baz.ts
-models/Foo.ts
-models/FooGetDefaultResponse.ts
-models/index.ts
-runtime.ts

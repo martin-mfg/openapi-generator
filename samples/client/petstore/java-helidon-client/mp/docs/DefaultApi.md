@@ -1,6 +1,6 @@
 # DefaultApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://petstore.swagger.io:80/v2*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## fooGet
 
-> Baz fooGet()
+> FooGetDefaultResponse fooGet()
 
 
 
@@ -20,7 +20,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Baz**](Baz.md)
+[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
 
 ### Authorization
 
@@ -35,6 +35,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | response201 |  -  |
 | **200** | response |  -  |
 

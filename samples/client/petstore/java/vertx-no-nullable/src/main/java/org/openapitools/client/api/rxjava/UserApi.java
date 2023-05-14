@@ -209,7 +209,7 @@ public class UserApi {
     * @param username The name that needs to be fetched. Use user1 for testing. (required)
     * @param resultHandler Asynchronous result handler
     */
-    public void getUserByName(String username, Handler<AsyncResult<Void>> resultHandler) {
+    public void getUserByName(String username, Handler<AsyncResult<User>> resultHandler) {
         delegate.getUserByName(username, resultHandler);
     }
 
@@ -220,7 +220,7 @@ public class UserApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void getUserByName(String username, ApiClient.AuthInfo authInfo, Handler<AsyncResult<Void>> resultHandler) {
+    public void getUserByName(String username, ApiClient.AuthInfo authInfo, Handler<AsyncResult<User>> resultHandler) {
         delegate.getUserByName(username, authInfo, resultHandler);
     }
 
@@ -230,7 +230,7 @@ public class UserApi {
     * @param username The name that needs to be fetched. Use user1 for testing. (required)
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxGetUserByName(String username) {
+    public Single<User> rxGetUserByName(String username) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.getUserByName(username, fut)
         ));
@@ -243,7 +243,7 @@ public class UserApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Void> rxGetUserByName(String username, ApiClient.AuthInfo authInfo) {
+    public Single<User> rxGetUserByName(String username, ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.getUserByName(username, authInfo, fut)
         ));

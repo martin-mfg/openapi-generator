@@ -19,28 +19,28 @@ class FooGetDefaultResponse {
   /// Returns a new [FooGetDefaultResponse] instance.
   FooGetDefaultResponse({
 
-     this.myString,
+     this.string,
   });
 
   @JsonKey(
     
-    name: r'myString',
+    name: r'string',
     required: false,
     includeIfNull: false
   )
 
 
-  final Foo? myString;
+  final Foo? string;
 
 
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is FooGetDefaultResponse &&
-     other.myString == myString;
+     other.string == string;
 
   @override
   int get hashCode =>
-    myString.hashCode;
+    string.hashCode;
 
   factory FooGetDefaultResponse.fromJson(Map<String, dynamic> json) => _$FooGetDefaultResponseFromJson(json);
 

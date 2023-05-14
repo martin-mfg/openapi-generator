@@ -29,7 +29,6 @@ import io.helidon.webclient.WebClientResponse;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.Baz;
 import org.openapitools.client.model.FooGetDefaultResponse;
 
 /**
@@ -41,7 +40,7 @@ public class DefaultApiImpl implements DefaultApi {
 
   private final ApiClient apiClient;
 
-  protected static final GenericType<Baz> RESPONSE_TYPE_fooGet = ResponseType.create(Baz.class);
+  protected static final GenericType<FooGetDefaultResponse> RESPONSE_TYPE_fooGet = ResponseType.create(FooGetDefaultResponse.class);
 
   /**
    * Creates a new instance of DefaultApiImpl initialized with the specified {@link ApiClient}.
@@ -56,7 +55,7 @@ public class DefaultApiImpl implements DefaultApi {
   }
 
   @Override
-  public ApiResponse<Baz> fooGet() {
+  public ApiResponse<FooGetDefaultResponse> fooGet() {
     WebClientRequestBuilder webClientRequestBuilder = fooGetRequestBuilder();
     return fooGetSubmit(webClientRequestBuilder);
   }
@@ -82,9 +81,9 @@ public class DefaultApiImpl implements DefaultApi {
    * Optional customization point for subclasses.
    *
    * @param webClientRequestBuilder the request builder to use for submitting the request
-   * @return {@code ApiResponse<Baz>} for the submitted request
+   * @return {@code ApiResponse<FooGetDefaultResponse>} for the submitted request
    */
-  protected ApiResponse<Baz> fooGetSubmit(WebClientRequestBuilder webClientRequestBuilder) {
+  protected ApiResponse<FooGetDefaultResponse> fooGetSubmit(WebClientRequestBuilder webClientRequestBuilder) {
     Single<WebClientResponse> webClientResponse = webClientRequestBuilder.submit();
     return ApiResponse.create(RESPONSE_TYPE_fooGet, webClientResponse);
   }

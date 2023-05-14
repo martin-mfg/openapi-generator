@@ -4,7 +4,6 @@ import org.openapitools.client.ApiClient;
 import org.openapitools.client.EncodingUtils;
 import org.openapitools.client.model.ApiResponse;
 
-import org.openapitools.client.model.Baz;
 import org.openapitools.client.model.FooGetDefaultResponse;
 
 import java.util.ArrayList;
@@ -20,13 +19,13 @@ public interface DefaultApi extends ApiClient.Api {
   /**
    * 
    * 
-   * @return Baz
+   * @return FooGetDefaultResponse
    */
   @RequestLine("GET /foo")
   @Headers({
     "Accept: application/json",
   })
-  Baz fooGet();
+  FooGetDefaultResponse fooGet();
 
   /**
    * 
@@ -38,7 +37,7 @@ public interface DefaultApi extends ApiClient.Api {
   @Headers({
     "Accept: application/json",
   })
-  ApiResponse<Baz> fooGetWithHttpInfo();
+  ApiResponse<FooGetDefaultResponse> fooGetWithHttpInfo();
 
 
 }

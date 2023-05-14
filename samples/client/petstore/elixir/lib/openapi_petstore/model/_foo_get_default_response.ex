@@ -8,11 +8,11 @@ defmodule OpenapiPetstore.Model.FooGetDefaultResponse do
 
   @derive [Poison.Encoder]
   defstruct [
-    :myString
+    :string
   ]
 
   @type t :: %__MODULE__{
-    :myString => OpenapiPetstore.Model.Foo.t | nil
+    :string => OpenapiPetstore.Model.Foo.t | nil
   }
 end
 
@@ -20,7 +20,7 @@ defimpl Poison.Decoder, for: OpenapiPetstore.Model.FooGetDefaultResponse do
   import OpenapiPetstore.Deserializer
   def decode(value, options) do
     value
-    |> deserialize(:myString, :struct, OpenapiPetstore.Model.Foo, options)
+    |> deserialize(:string, :struct, OpenapiPetstore.Model.Foo, options)
   end
 end
 

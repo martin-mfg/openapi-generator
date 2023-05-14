@@ -79,7 +79,8 @@ public interface UserApi  {
      */
     @GET
     @Path("/{username}")
-    void getUserByName(@PathParam("username") String username) throws ApiException, ProcessingException;
+    @Produces({ "application/xml", "application/json" })
+    User getUserByName(@PathParam("username") String username) throws ApiException, ProcessingException;
 
     /**
      * Logs user into the system

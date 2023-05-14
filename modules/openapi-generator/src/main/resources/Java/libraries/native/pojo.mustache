@@ -270,7 +270,6 @@ public class {{classname}} {{#parent}}extends {{{.}}} {{/parent}}{{#vendorExtens
   {{#parent}}
   {{#allVars}}
   {{#isOverridden}}
-  // outcomes override mustache place
   @Override
   public {{classname}} {{name}}({{{datatypeWithEnum}}} {{name}}) {
     {{#vendorExtensions.x-is-jackson-optional-nullable}}

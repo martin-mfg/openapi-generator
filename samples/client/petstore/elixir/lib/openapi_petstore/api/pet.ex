@@ -93,7 +93,7 @@ defmodule OpenapiPetstore.Api.Pet do
   - `{:ok, [%Pet{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec find_pets_by_status(Tesla.Env.client, list(String.t), keyword()) :: {:ok, nil} | {:ok, list(List.t)} | {:error, Tesla.Env.t}
+  @spec find_pets_by_status(Tesla.Env.client, list(String.t), keyword()) :: {:ok, nil} | {:ok, list(OpenapiPetstore.Model.Pet.t)} | {:error, Tesla.Env.t}
   def find_pets_by_status(connection, status, _opts \\ []) do
     request =
       %{}
@@ -105,7 +105,7 @@ defmodule OpenapiPetstore.Api.Pet do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, []},
+      {200, [%OpenapiPetstore.Model.Pet{}]},
       {400, false}
     ])
   end
@@ -125,7 +125,7 @@ defmodule OpenapiPetstore.Api.Pet do
   - `{:ok, [%Pet{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec find_pets_by_tags(Tesla.Env.client, list(String.t), keyword()) :: {:ok, list(OpenapiPetstore.Model.Set.t)} | {:ok, nil} | {:error, Tesla.Env.t}
+  @spec find_pets_by_tags(Tesla.Env.client, list(String.t), keyword()) :: {:ok, nil} | {:ok, list(OpenapiPetstore.Model.Pet.t)} | {:error, Tesla.Env.t}
   def find_pets_by_tags(connection, tags, _opts \\ []) do
     request =
       %{}
@@ -137,7 +137,7 @@ defmodule OpenapiPetstore.Api.Pet do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, [%OpenapiPetstore.Model.Set{}]},
+      {200, [%OpenapiPetstore.Model.Pet{}]},
       {400, false}
     ])
   end

@@ -60,11 +60,11 @@ public:
     /// <summary>
     /// 
     /// </summary>
-    Foo getMyString() const;
-    void setMyString(Foo value);
+    Foo getString() const;
+    void setString(Foo value);
 
 protected:
-    Foo m_MyString;
+    Foo m_string;
 };
 
 std::vector<_foo_get_default_response> create_foo_get_default_responseVectorFromJsonString(const std::string& json);

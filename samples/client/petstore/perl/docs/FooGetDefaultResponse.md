@@ -8,7 +8,7 @@ use WWW::OpenAPIClient::Object::FooGetDefaultResponse;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**my_string** | [**Foo**](Foo.md) |  | [optional] 
+**string** | [**Foo**](Foo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

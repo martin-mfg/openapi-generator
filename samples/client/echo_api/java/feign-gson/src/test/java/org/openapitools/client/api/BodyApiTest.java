@@ -1,6 +1,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
+import java.io.File;
 import org.openapitools.client.model.Pet;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,6 +27,19 @@ class BodyApiTest {
 
     
     /**
+     * Test binary (gif) response body
+     *
+     * Test binary (gif) response body
+     */
+    @Test
+    void testBinaryGifTest() {
+        // File response = api.testBinaryGif();
+
+        // TODO: test validations
+    }
+
+    
+    /**
      * Test body parameter(s)
      *
      * Test body parameter(s)
@@ -34,6 +48,20 @@ class BodyApiTest {
     void testEchoBodyPetTest() {
         Pet pet = null;
         // Pet response = api.testEchoBodyPet(pet);
+
+        // TODO: test validations
+    }
+
+    
+    /**
+     * Test empty response body
+     *
+     * Test empty response body
+     */
+    @Test
+    void testEchoBodyPetResponseStringTest() {
+        Pet pet = null;
+        // String response = api.testEchoBodyPetResponseString(pet);
 
         // TODO: test validations
     }

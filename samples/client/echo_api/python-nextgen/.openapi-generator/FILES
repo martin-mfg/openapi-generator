@@ -1,6 +1,7 @@
 .github/workflows/python.yml
 .gitignore
 .gitlab-ci.yml
+.openapi-generator-ignore
 .travis.yml
 README.md
 docs/Bird.md
@@ -51,4 +52,10 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_body_api.py
+test/test_form_api.py
+test/test_header_api.py
+test/test_path_api.py
+test/test_query_api.py
+test/test_test_query_style_form_explode_true_array_string_query_object_parameter.py
 tox.ini

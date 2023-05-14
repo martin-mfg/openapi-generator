@@ -61,9 +61,9 @@ public interface UserApi {
   * Get user by user name
   * 
   * @param username The name that needs to be fetched. Use user1 for testing. (required)
-  * @return {@code ApiResponse<Void>}
+  * @return {@code ApiResponse<User>}
   */
-  ApiResponse<Void> getUserByName(String username);
+  ApiResponse<User> getUserByName(String username);
 
  /**
   * Logs user into the system

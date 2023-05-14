@@ -41,7 +41,7 @@ class TestNumberPropertiesOnly(unittest.TestCase):
             return NumberPropertiesOnly(
                 number = 1.337, 
                 float = 1.337, 
-                double = ''
+                double = 0.8
             )
         else :
             return NumberPropertiesOnly(

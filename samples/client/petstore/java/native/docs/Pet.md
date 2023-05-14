@@ -8,8 +8,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** |  |  [optional] |
-|**name** | **String** |  |  |
 |**category** | [**Category**](Category.md) |  |  [optional] |
+|**name** | **String** |  |  |
 |**photoUrls** | **List&lt;String&gt;** |  |  |
 |**tags** | [**List&lt;Tag&gt;**](Tag.md) |  |  [optional] |
 |**status** | [**StatusEnum**](#StatusEnum) | pet status in the store |  [optional] |

@@ -54,7 +54,6 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<List>(instance);
         }
 
-
         /// <summary>
         /// Test the property '_123List'
         /// </summary>

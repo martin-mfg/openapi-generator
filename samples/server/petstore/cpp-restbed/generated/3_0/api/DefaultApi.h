@@ -31,7 +31,6 @@
 #include <corvusoft/restbed/service.hpp>
 #include <corvusoft/restbed/settings.hpp>
 
-#include "Baz.h"
 #include "_foo_get_default_response.h"
 
 namespace org {
@@ -67,7 +66,7 @@ namespace DefaultApiResources {
 class  FooResource: public restbed::Resource
 {
 public:
-    FooResource(const std::string& context = "");
+    FooResource(const std::string& context = "/v2");
     virtual ~FooResource() = default;
 
     FooResource(
@@ -80,9 +79,9 @@ public:
     /////////////////////////////////////////////////////
     // Set these to implement the server functionality //
     /////////////////////////////////////////////////////
-    std::function<std::pair<int, Baz>(
+    std::function<std::pair<int, _foo_get_default_response>(
         )> handler_GET_func =
-            []() -> std::pair<int, Baz>
+            []() -> std::pair<int, _foo_get_default_response>
                 { throw DefaultApiException(501, "Not implemented"); };
 
 
@@ -92,7 +91,7 @@ protected:
     // override these to implement the server functionality //
     //////////////////////////////////////////////////////////
 
-    virtual std::pair<int, Baz> handler_GET(
+    virtual std::pair<int, _foo_get_default_response> handler_GET(
         );
 
 
