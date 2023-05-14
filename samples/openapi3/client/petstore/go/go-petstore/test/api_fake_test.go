@@ -86,9 +86,10 @@ func Test_petstore_FakeApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.FakeApi.TestBodyWithFileSchema(context.Background()).Execute()
+		resp, httpRes, err := apiClient.FakeApi.TestBodyWithFileSchema(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -97,9 +98,10 @@ func Test_petstore_FakeApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.FakeApi.TestBodyWithQueryParams(context.Background()).Execute()
+		resp, httpRes, err := apiClient.FakeApi.TestBodyWithQueryParams(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -120,9 +122,10 @@ func Test_petstore_FakeApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.FakeApi.TestEndpointParameters(context.Background()).Execute()
+		resp, httpRes, err := apiClient.FakeApi.TestEndpointParameters(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -131,9 +134,10 @@ func Test_petstore_FakeApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.FakeApi.TestEnumParameters(context.Background()).Execute()
+		resp, httpRes, err := apiClient.FakeApi.TestEnumParameters(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -142,9 +146,10 @@ func Test_petstore_FakeApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.FakeApi.TestGroupParameters(context.Background()).Execute()
+		resp, httpRes, err := apiClient.FakeApi.TestGroupParameters(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -153,9 +158,10 @@ func Test_petstore_FakeApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.FakeApi.TestInlineAdditionalProperties(context.Background()).Execute()
+		resp, httpRes, err := apiClient.FakeApi.TestInlineAdditionalProperties(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -164,20 +170,10 @@ func Test_petstore_FakeApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.FakeApi.TestJsonFormData(context.Background()).Execute()
+		resp, httpRes, err := apiClient.FakeApi.TestJsonFormData(context.Background()).Execute()
 
 		require.Nil(t, err)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test FakeApiService TestQueryDeepObject", func(t *testing.T) {
-
-		t.Skip("skip test")  // remove to run test
-
-		httpRes, err := apiClient.FakeApi.TestQueryDeepObject(context.Background()).Execute()
-
-		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -186,9 +182,10 @@ func Test_petstore_FakeApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.FakeApi.TestQueryParameterCollectionFormat(context.Background()).Execute()
+		resp, httpRes, err := apiClient.FakeApi.TestQueryParameterCollectionFormat(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

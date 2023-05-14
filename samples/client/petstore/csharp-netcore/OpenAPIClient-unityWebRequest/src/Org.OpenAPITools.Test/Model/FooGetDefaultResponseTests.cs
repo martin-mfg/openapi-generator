@@ -54,6 +54,7 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<FooGetDefaultResponse>(instance);
         }
 
+
         /// <summary>
         /// Test the property 'String'
         /// </summary>

@@ -36,18 +36,19 @@ class TestAnimal(unittest.TestCase):
         # model = petstore_api.models.animal.Animal()  # noqa: E501
         if include_optional :
             return Animal(
-                class_name = '', 
+                class_name = '0', 
                 color = 'red'
             )
         else :
             return Animal(
-                class_name = '',
+                class_name = '0',
         )
 
     def testAnimal(self):
         """Test Animal"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
+
 
 if __name__ == '__main__':
     unittest.main()

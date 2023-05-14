@@ -14,14 +14,11 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 import org.junit.Test;
 import org.junit.Ignore;
 import org.junit.Assert;
 
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,38 +42,34 @@ public class UserApiTest {
      */
     @Test
     public void createUserTest() throws ApiException {
-        User user = null;
-        api.createUser(user);
+        User body = null;
+        api.createUser(body);
 
         // TODO: test validations
     }
     /**
      * Creates list of users with given input array
-     *
-     * 
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void createUsersWithArrayInputTest() throws ApiException {
-        List<User> user = null;
-        api.createUsersWithArrayInput(user);
+        List<User> body = null;
+        api.createUsersWithArrayInput(body);
 
         // TODO: test validations
     }
     /**
      * Creates list of users with given input array
      *
-     * 
-     *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void createUsersWithListInputTest() throws ApiException {
-        List<User> user = null;
-        api.createUsersWithListInput(user);
+        List<User> body = null;
+        api.createUsersWithListInput(body);
 
         // TODO: test validations
     }
@@ -98,8 +91,6 @@ public class UserApiTest {
     /**
      * Get user by user name
      *
-     * 
-     *
      * @throws ApiException
      *          if the Api call fails
      */
@@ -112,8 +103,6 @@ public class UserApiTest {
     }
     /**
      * Logs user into the system
-     *
-     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -128,8 +117,6 @@ public class UserApiTest {
     }
     /**
      * Logs out current logged in user session
-     *
-     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -151,8 +138,8 @@ public class UserApiTest {
     @Test
     public void updateUserTest() throws ApiException {
         String username = null;
-        User user = null;
-        api.updateUser(username, user);
+        User body = null;
+        api.updateUser(username, body);
 
         // TODO: test validations
     }

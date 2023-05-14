@@ -74,16 +74,5 @@ namespace Org.OpenAPITools.Test.Api
             //string country = null;
             //instance.GetCountry(country);
         }
-
-        /// <summary>
-        /// Test Hello
-        /// </summary>
-        [Test]
-        public void HelloTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.Hello();
-            //Assert.IsType<List<Guid>>(response);
-        }
     }
 }

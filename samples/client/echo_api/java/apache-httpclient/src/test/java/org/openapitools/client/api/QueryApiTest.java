@@ -14,11 +14,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import org.openapitools.client.model.DataQuery;
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import org.openapitools.client.model.Pet;
-import org.openapitools.client.model.TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter;
 import org.openapitools.client.model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -48,58 +44,11 @@ public class QueryApiTest {
      *          if the Api call fails
      */
     @Test
-    public void testQueryDatetimeDateStringTest() throws ApiException {
-        OffsetDateTime datetimeQuery = null;
-        LocalDate dateQuery = null;
-        String stringQuery = null;
-        String response = api.testQueryDatetimeDateString(datetimeQuery, dateQuery, stringQuery);
-
-        // TODO: test validations
-    }
-    /**
-     * Test query parameter(s)
-     *
-     * Test query parameter(s)
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
     public void testQueryIntegerBooleanStringTest() throws ApiException {
         Integer integerQuery = null;
         Boolean booleanQuery = null;
         String stringQuery = null;
         String response = api.testQueryIntegerBooleanString(integerQuery, booleanQuery, stringQuery);
-
-        // TODO: test validations
-    }
-    /**
-     * Test query parameter(s)
-     *
-     * Test query parameter(s)
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void testQueryStyleDeepObjectExplodeTrueObjectTest() throws ApiException {
-        Pet queryObject = null;
-        String response = api.testQueryStyleDeepObjectExplodeTrueObject(queryObject);
-
-        // TODO: test validations
-    }
-    /**
-     * Test query parameter(s)
-     *
-     * Test query parameter(s)
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void testQueryStyleDeepObjectExplodeTrueObjectAllOfTest() throws ApiException {
-        TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter queryObject = null;
-        String response = api.testQueryStyleDeepObjectExplodeTrueObjectAllOf(queryObject);
 
         // TODO: test validations
     }
@@ -130,21 +79,6 @@ public class QueryApiTest {
     public void testQueryStyleFormExplodeTrueObjectTest() throws ApiException {
         Pet queryObject = null;
         String response = api.testQueryStyleFormExplodeTrueObject(queryObject);
-
-        // TODO: test validations
-    }
-    /**
-     * Test query parameter(s)
-     *
-     * Test query parameter(s)
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void testQueryStyleFormExplodeTrueObjectAllOfTest() throws ApiException {
-        DataQuery queryObject = null;
-        String response = api.testQueryStyleFormExplodeTrueObjectAllOf(queryObject);
 
         // TODO: test validations
     }

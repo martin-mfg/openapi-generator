@@ -54,6 +54,7 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<Return>(instance);
         }
 
+
         /// <summary>
         /// Test the property '_Return'
         /// </summary>

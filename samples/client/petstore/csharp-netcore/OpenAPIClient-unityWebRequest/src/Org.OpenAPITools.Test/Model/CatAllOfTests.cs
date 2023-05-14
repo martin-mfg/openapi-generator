@@ -54,6 +54,7 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<CatAllOf>(instance);
         }
 
+
         /// <summary>
         /// Test the property 'Declawed'
         /// </summary>

@@ -54,6 +54,7 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<GmFruit>(instance);
         }
 
+
         /// <summary>
         /// Test the property 'Color'
         /// </summary>

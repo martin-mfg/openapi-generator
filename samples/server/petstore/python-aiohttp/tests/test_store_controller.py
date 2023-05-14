@@ -49,7 +49,7 @@ async def test_get_order_by_id(client):
     }
     response = await client.request(
         method='GET',
-        path='/v2/store/order/{order_id}'.format(order_id=56),
+        path='/v2/store/order/{order_id}'.format(order_id=1),
         headers=headers,
         )
     assert response.status == 200, 'Response body is : ' + (await response.read()).decode('utf-8')

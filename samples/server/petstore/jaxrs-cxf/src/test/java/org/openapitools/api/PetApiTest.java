@@ -192,7 +192,7 @@ public class PetApiTest {
     public void uploadFileTest() {
         Long petId = null;
         String additionalMetadata = null;
-        File _file = null;
+        org.apache.cxf.jaxrs.ext.multipart.Attachment _file = null;
         //ModelApiResponse response = api.uploadFile(petId, additionalMetadata, _file);
         //assertNotNull(response);
         // TODO: test validations
@@ -209,7 +209,7 @@ public class PetApiTest {
     @Test
     public void uploadFileWithRequiredFileTest() {
         Long petId = null;
-        File requiredFile = null;
+        org.apache.cxf.jaxrs.ext.multipart.Attachment requiredFile = null;
         String additionalMetadata = null;
         //ModelApiResponse response = api.uploadFileWithRequiredFile(petId, requiredFile, additionalMetadata);
         //assertNotNull(response);

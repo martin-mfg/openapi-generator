@@ -64,27 +64,5 @@ namespace Org.OpenAPITools.Test.Api
             //var response = instance.FooGet();
             //Assert.IsType<FooGetDefaultResponse>(response);
         }
-
-        /// <summary>
-        /// Test GetCountry
-        /// </summary>
-        [Fact]
-        public void GetCountryTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string country = null;
-            //instance.GetCountry(country);
-        }
-
-        /// <summary>
-        /// Test Hello
-        /// </summary>
-        [Fact]
-        public void HelloTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.Hello();
-            //Assert.IsType<List<Guid>>(response);
-        }
     }
 }

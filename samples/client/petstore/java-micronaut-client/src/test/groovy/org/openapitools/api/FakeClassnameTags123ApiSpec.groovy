@@ -4,13 +4,11 @@ import org.openapitools.model.ModelClient
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import spock.lang.Specification
 import jakarta.inject.Inject
-import spock.lang.Ignore
-import java.util.Arrays
+import reactor.core.publisher.Mono
 import java.util.ArrayList
 import java.util.HashMap
 import java.util.List
 import java.util.Map
-import java.util.HashSet
 
 
 /**
@@ -28,15 +26,13 @@ class FakeClassnameTags123ApiSpec extends Specification {
      *
      * To test class name in snake case
      */
-    @Ignore("Not Implemented")
-    void 'testClassname() test'() {
+    void "testClassname() test"() {
         given:
-        ModelClient _body = new ModelClient()
+        ModelClient _body = null
+        // ModelClient response = api.testClassname(_body).block()
+        // Mono<ModelClient> asyncResponse = api.testClassname(_body)
 
-        when:
-        ModelClient body = api.testClassname(_body).block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }

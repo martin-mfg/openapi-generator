@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """
     OpenAPI Petstore
 
@@ -8,14 +10,21 @@
 """
 
 
+from __future__ import absolute_import
 import sys
 import unittest
 
 import petstore_api
-from petstore_api.model.child_all_of import ChildAllOf
-from petstore_api.model.parent import Parent
-globals()['ChildAllOf'] = ChildAllOf
-globals()['Parent'] = Parent
+try:
+    from petstore_api.model import child_all_of
+except ImportError:
+    child_all_of = sys.modules[
+        'petstore_api.model.child_all_of']
+try:
+    from petstore_api.model import parent
+except ImportError:
+    parent = sys.modules[
+        'petstore_api.model.parent']
 from petstore_api.model.child import Child
 
 
@@ -29,11 +38,20 @@ class TestChild(unittest.TestCase):
         pass
 
     def testChild(self):
-        """Test Child"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = Child()  # noqa: E501
-        pass
-
+        """Test Child
+        This will fail because additional_properties_type is None in ChildAllOf and it must be defined as any type
+        to allow in the property radio_waves which is not defined in ChildAllOf, it is defined in Grandparent
+        """
+        # make an instance of Child, a composed schema model
+        radio_waves = True
+        tele_vision = True
+        inter_net = True
+        with self.assertRaises(petstore_api.exceptions.ApiValueError):
+            child = Child(
+                radio_waves=radio_waves,
+                tele_vision=tele_vision,
+                inter_net=inter_net
+            )
 
 if __name__ == '__main__':
     unittest.main()

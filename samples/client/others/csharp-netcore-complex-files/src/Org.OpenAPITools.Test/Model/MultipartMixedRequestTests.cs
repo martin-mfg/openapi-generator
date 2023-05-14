@@ -14,6 +14,7 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
+using Org.OpenAPITools.Api;
 using Org.OpenAPITools.Model;
 using Org.OpenAPITools.Client;
 using System.Reflection;
@@ -78,14 +79,6 @@ namespace Org.OpenAPITools.Test.Model
         public void FileTest()
         {
             // TODO unit test for the property 'File'
-        }
-        /// <summary>
-        /// Test the property 'StatusArray'
-        /// </summary>
-        [Fact]
-        public void StatusArrayTest()
-        {
-            // TODO unit test for the property 'StatusArray'
         }
 
     }

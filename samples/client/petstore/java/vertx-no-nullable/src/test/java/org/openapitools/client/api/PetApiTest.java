@@ -12,6 +12,7 @@
 
 package org.openapitools.client.api;
 
+import io.vertx.core.file.AsyncFile;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 import java.util.Set;
@@ -33,8 +34,6 @@ import io.vertx.ext.unit.junit.RunTestOnContext;
 import io.vertx.ext.unit.TestContext;
 import io.vertx.ext.unit.Async;
 
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -187,8 +186,8 @@ public class PetApiTest {
         Async async = testContext.async();
         Long petId = null;
         String additionalMetadata = null;
-        AsyncFile _file = null;
-        api.uploadFile(petId, additionalMetadata, _file, result -> {
+        AsyncFile file = null;
+        api.uploadFile(petId, additionalMetadata, file, result -> {
             // TODO: test validations
             async.complete();
         });

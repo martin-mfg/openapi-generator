@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """
     OpenAPI Petstore
 
@@ -12,8 +14,10 @@ import sys
 import unittest
 
 import petstore_api
+from petstore_api.model.address import Address
 from petstore_api.model.animal import Animal
 from petstore_api.model.cat_all_of import CatAllOf
+globals()['Address'] = Address
 globals()['Animal'] = Animal
 globals()['CatAllOf'] = CatAllOf
 from petstore_api.model.cat import Cat

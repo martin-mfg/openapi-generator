@@ -20,7 +20,23 @@ class TestPetController(BaseTestCase):
 
         Add a new pet to the store
         """
-        body = {"photoUrls":["photoUrls","photoUrls"],"name":"doggie","id":0,"category":{"name":"name","id":6},"tags":[{"name":"name","id":1},{"name":"name","id":1}],"status":"available"}
+        body = {
+  "photoUrls" : [ "photoUrls", "photoUrls" ],
+  "name" : "doggie",
+  "id" : 0,
+  "category" : {
+    "name" : "name",
+    "id" : 6
+  },
+  "tags" : [ {
+    "name" : "name",
+    "id" : 1
+  }, {
+    "name" : "name",
+    "id" : 1
+  } ],
+  "status" : "available"
+}
         headers = { 
             'Content-Type': 'application/json',
             'Authorization': 'Bearer special-key',
@@ -55,7 +71,7 @@ class TestPetController(BaseTestCase):
 
         Finds Pets by status
         """
-        query_string = [('status', ['status_example'])]
+        query_string = [('status', 'available')]
         headers = { 
             'Accept': 'application/json',
             'Authorization': 'Bearer special-key',
@@ -108,7 +124,23 @@ class TestPetController(BaseTestCase):
 
         Update an existing pet
         """
-        body = {"photoUrls":["photoUrls","photoUrls"],"name":"doggie","id":0,"category":{"name":"name","id":6},"tags":[{"name":"name","id":1},{"name":"name","id":1}],"status":"available"}
+        body = {
+  "photoUrls" : [ "photoUrls", "photoUrls" ],
+  "name" : "doggie",
+  "id" : 0,
+  "category" : {
+    "name" : "name",
+    "id" : 6
+  },
+  "tags" : [ {
+    "name" : "name",
+    "id" : 1
+  }, {
+    "name" : "name",
+    "id" : 1
+  } ],
+  "status" : "available"
+}
         headers = { 
             'Content-Type': 'application/json',
             'Authorization': 'Bearer special-key',

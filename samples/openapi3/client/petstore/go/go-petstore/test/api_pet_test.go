@@ -26,9 +26,10 @@ func Test_petstore_PetApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.PetApi.AddPet(context.Background()).Execute()
+		resp, httpRes, err := apiClient.PetApi.AddPet(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -39,9 +40,10 @@ func Test_petstore_PetApiService(t *testing.T) {
 
 		var petId int64
 
-		httpRes, err := apiClient.PetApi.DeletePet(context.Background(), petId).Execute()
+		resp, httpRes, err := apiClient.PetApi.DeletePet(context.Background(), petId).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -88,9 +90,10 @@ func Test_petstore_PetApiService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.PetApi.UpdatePet(context.Background()).Execute()
+		resp, httpRes, err := apiClient.PetApi.UpdatePet(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -101,9 +104,10 @@ func Test_petstore_PetApiService(t *testing.T) {
 
 		var petId int64
 
-		httpRes, err := apiClient.PetApi.UpdatePetWithForm(context.Background(), petId).Execute()
+		resp, httpRes, err := apiClient.PetApi.UpdatePetWithForm(context.Background(), petId).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

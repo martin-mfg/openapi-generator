@@ -14,9 +14,6 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import org.openapitools.client.model.DataQuery;
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import org.openapitools.client.model.Pet;
 import org.openapitools.client.model.TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter;
 import org.openapitools.client.model.TestQueryStyleFormExplodeTrueArrayStringQueryObjectParameter;
@@ -35,22 +32,6 @@ import java.util.Map;
 public class QueryApiTest {
 
     private final QueryApi api = new QueryApi();
-
-    /**
-     * Test query parameter(s)
-     *
-     * Test query parameter(s)
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void testQueryDatetimeDateStringTest() throws ApiException {
-        OffsetDateTime datetimeQuery = null;
-        LocalDate dateQuery = null;
-        String stringQuery = null;
-        String response = api.testQueryDatetimeDateString(datetimeQuery, dateQuery, stringQuery);
-        // TODO: test validations
-    }
 
     /**
      * Test query parameter(s)
@@ -121,20 +102,6 @@ public class QueryApiTest {
     public void testQueryStyleFormExplodeTrueObjectTest() throws ApiException {
         Pet queryObject = null;
         String response = api.testQueryStyleFormExplodeTrueObject(queryObject);
-        // TODO: test validations
-    }
-
-    /**
-     * Test query parameter(s)
-     *
-     * Test query parameter(s)
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void testQueryStyleFormExplodeTrueObjectAllOfTest() throws ApiException {
-        DataQuery queryObject = null;
-        String response = api.testQueryStyleFormExplodeTrueObjectAllOf(queryObject);
         // TODO: test validations
     }
 

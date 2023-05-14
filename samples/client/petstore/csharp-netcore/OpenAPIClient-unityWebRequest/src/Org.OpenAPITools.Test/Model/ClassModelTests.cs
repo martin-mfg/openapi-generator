@@ -54,6 +54,7 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<ClassModel>(instance);
         }
 
+
         /// <summary>
         /// Test the property 'Class'
         /// </summary>

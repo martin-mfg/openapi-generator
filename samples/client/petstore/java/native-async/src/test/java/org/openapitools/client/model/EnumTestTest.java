@@ -70,14 +70,6 @@ public class EnumTestTest {
     }
 
     /**
-     * Test the property 'enumIntegerOnly'
-     */
-    @Test
-    public void enumIntegerOnlyTest() {
-        // TODO: test enumIntegerOnly
-    }
-
-    /**
      * Test the property 'enumNumber'
      */
     @Test

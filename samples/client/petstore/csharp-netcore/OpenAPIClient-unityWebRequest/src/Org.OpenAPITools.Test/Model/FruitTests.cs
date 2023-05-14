@@ -54,6 +54,7 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<Fruit>(instance);
         }
 
+
         /// <summary>
         /// Test the property 'Color'
         /// </summary>

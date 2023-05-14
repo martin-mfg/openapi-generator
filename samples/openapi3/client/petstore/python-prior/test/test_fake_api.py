@@ -178,12 +178,6 @@ class TestFakeApi(unittest.TestCase):
         """
         pass
 
-    def test_tx_rx_all_of_model(self):
-        """Test case for tx_rx_all_of_model
-
-        """
-        pass
-
     def test_tx_rx_any_of_model(self):
         """Test case for tx_rx_any_of_model
 

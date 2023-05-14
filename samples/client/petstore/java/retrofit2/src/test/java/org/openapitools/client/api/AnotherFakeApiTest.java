@@ -5,8 +5,6 @@ import org.openapitools.client.model.Client;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,12 +25,12 @@ public class AnotherFakeApiTest {
     /**
      * To test special tags
      *
-     * To test special tags and operation ID starting with number
+     * To test special tags
      */
     @Test
-    public void call123testSpecialTagsTest() {
-        Client body = null;
-        // Client response = api.call123testSpecialTags(body);
+    public void testSpecialTagsTest() {
+        Client client = null;
+        // Client response = api.testSpecialTags(client);
 
         // TODO: test validations
     }

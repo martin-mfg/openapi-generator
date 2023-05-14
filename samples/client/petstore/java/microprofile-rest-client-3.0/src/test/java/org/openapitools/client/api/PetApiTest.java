@@ -13,6 +13,7 @@
 
 package org.openapitools.client.api;
 
+import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
 import org.junit.Test;
@@ -78,7 +79,7 @@ public class PetApiTest {
         // TODO: test validations
         Long petId = null;
         String apiKey = null;
-        //api.deletePet(petId, apiKey);
+        //void response = api.deletePet(petId, apiKey);
         //assertNotNull(response);
 
 
@@ -170,7 +171,7 @@ public class PetApiTest {
         Long petId = null;
         String name = null;
         String status = null;
-        //api.updatePetWithForm(petId, name, status);
+        //void response = api.updatePetWithForm(petId, name, status);
         //assertNotNull(response);
 
 

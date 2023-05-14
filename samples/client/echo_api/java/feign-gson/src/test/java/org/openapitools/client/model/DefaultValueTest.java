@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.client.model.StringEnumRef;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Test;
 
@@ -38,14 +37,6 @@ class DefaultValueTest {
     @Test
     void testDefaultValue() {
         // TODO: test DefaultValue
-    }
-
-    /**
-     * Test the property 'arrayStringEnumRefDefault'
-     */
-    @Test
-    void arrayStringEnumRefDefaultTest() {
-        // TODO: test arrayStringEnumRefDefault
     }
 
     /**
@@ -86,14 +77,6 @@ class DefaultValueTest {
     @Test
     void arrayStringNullableTest() {
         // TODO: test arrayStringNullable
-    }
-
-    /**
-     * Test the property 'arrayStringExtensionNullable'
-     */
-    @Test
-    void arrayStringExtensionNullableTest() {
-        // TODO: test arrayStringExtensionNullable
     }
 
     /**

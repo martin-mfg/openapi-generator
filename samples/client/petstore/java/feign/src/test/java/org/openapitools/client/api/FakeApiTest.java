@@ -3,10 +3,11 @@ package org.openapitools.client.api;
 import org.openapitools.client.ApiClient;
 import java.math.BigDecimal;
 import org.openapitools.client.model.Client;
-import org.openapitools.client.model.EnumClass;
 import java.io.File;
 import org.openapitools.client.model.FileSchemaTestClass;
 import org.openapitools.client.model.HealthCheckResult;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import org.openapitools.client.model.OuterComposite;
 import org.openapitools.client.model.OuterObjectWithEnumProperty;
 import org.openapitools.client.model.Pet;
@@ -14,8 +15,6 @@ import org.openapitools.client.model.User;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -265,10 +264,9 @@ class FakeApiTest {
         String enumQueryString = null;
         Integer enumQueryInteger = null;
         Double enumQueryDouble = null;
-        List<EnumClass> enumQueryModelArray = null;
         List<String> enumFormStringArray = null;
         String enumFormString = null;
-        // api.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumQueryModelArray, enumFormStringArray, enumFormString);
+        // api.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
 
         // TODO: test validations
     }
@@ -291,8 +289,7 @@ class FakeApiTest {
             .enumQueryStringArray(null)
             .enumQueryString(null)
             .enumQueryInteger(null)
-            .enumQueryDouble(null)
-            .enumQueryModelArray(null);
+            .enumQueryDouble(null);
         // api.testEnumParameters(enumHeaderStringArray, enumHeaderString, enumFormStringArray, enumFormString, queryParams);
 
     // TODO: test validations

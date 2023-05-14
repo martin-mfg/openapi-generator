@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """
     OpenAPI Petstore
 
@@ -8,14 +10,21 @@
 """
 
 
+from __future__ import absolute_import
 import sys
 import unittest
 
 import petstore_api
-from petstore_api.model.animal import Animal
-from petstore_api.model.dog_all_of import DogAllOf
-globals()['Animal'] = Animal
-globals()['DogAllOf'] = DogAllOf
+try:
+    from petstore_api.model import animal
+except ImportError:
+    animal = sys.modules[
+        'petstore_api.model.animal']
+try:
+    from petstore_api.model import dog_all_of
+except ImportError:
+    dog_all_of = sys.modules[
+        'petstore_api.model.dog_all_of']
 from petstore_api.model.dog import Dog
 
 
@@ -29,11 +38,20 @@ class TestDog(unittest.TestCase):
         pass
 
     def testDog(self):
-        """Test Dog"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = Dog()  # noqa: E501
-        pass
-
+        """Test Dog
+        This will fail because additional_properties_type is None in Animal and it must be defined as any type
+        to allow in the property breed which is not defined in Animal, it is defined in Dog
+        """
+        # make an instance of dog, a composed schema model
+        class_name = 'Dog'
+        color = 'white'
+        breed = 'Jack Russel Terrier'
+        with self.assertRaises(petstore_api.exceptions.ApiValueError):
+            dog = Dog(
+                class_name=class_name,
+                color=color,
+                breed=breed
+            )
 
 if __name__ == '__main__':
     unittest.main()

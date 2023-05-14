@@ -12,8 +12,6 @@
 
 package org.openapitools.server.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import org.openapitools.server.model.OuterEnumInteger;
 import org.junit.jupiter.api.Test;
 

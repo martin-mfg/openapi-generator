@@ -1,14 +1,12 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
+import java.io.File;
 import org.openapitools.client.model.ModelApiResponse;
 import org.openapitools.client.model.Pet;
-import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -33,8 +31,8 @@ public class PetApiTest {
      */
     @Test
     public void addPetTest() {
-        Pet body = null;
-        // api.addPet(body);
+        Pet pet = null;
+        // api.addPet(pet);
 
         // TODO: test validations
     }
@@ -70,8 +68,8 @@ public class PetApiTest {
      */
     @Test
     public void findPetsByTagsTest() {
-        Set<String> tags = null;
-        // Set<Pet> response = api.findPetsByTags(tags);
+        List<String> tags = null;
+        // List<Pet> response = api.findPetsByTags(tags);
 
         // TODO: test validations
     }
@@ -94,8 +92,8 @@ public class PetApiTest {
      */
     @Test
     public void updatePetTest() {
-        Pet body = null;
-        // api.updatePet(body);
+        Pet pet = null;
+        // api.updatePet(pet);
 
         // TODO: test validations
     }
@@ -122,22 +120,8 @@ public class PetApiTest {
     public void uploadFileTest() {
         Long petId = null;
         String additionalMetadata = null;
-        File _file = null;
-        // ModelApiResponse response = api.uploadFile(petId, additionalMetadata, _file);
-
-        // TODO: test validations
-    }
-    /**
-     * uploads an image (required)
-     *
-     * 
-     */
-    @Test
-    public void uploadFileWithRequiredFileTest() {
-        Long petId = null;
-        File requiredFile = null;
-        String additionalMetadata = null;
-        // ModelApiResponse response = api.uploadFileWithRequiredFile(petId, requiredFile, additionalMetadata);
+        File file = null;
+        // ModelApiResponse response = api.uploadFile(petId, additionalMetadata, file);
 
         // TODO: test validations
     }

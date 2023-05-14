@@ -14,6 +14,7 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
+using Org.OpenAPITools.Api;
 using Org.OpenAPITools.Model;
 using Org.OpenAPITools.Client;
 using System.Reflection;
@@ -72,28 +73,12 @@ namespace Org.OpenAPITools.Test.Model
             // TODO unit test for the property 'Int32'
         }
         /// <summary>
-        /// Test the property 'UnsignedInteger'
-        /// </summary>
-        [Fact]
-        public void UnsignedIntegerTest()
-        {
-            // TODO unit test for the property 'UnsignedInteger'
-        }
-        /// <summary>
         /// Test the property 'Int64'
         /// </summary>
         [Fact]
         public void Int64Test()
         {
             // TODO unit test for the property 'Int64'
-        }
-        /// <summary>
-        /// Test the property 'UnsignedLong'
-        /// </summary>
-        [Fact]
-        public void UnsignedLongTest()
-        {
-            // TODO unit test for the property 'UnsignedLong'
         }
         /// <summary>
         /// Test the property 'Number'

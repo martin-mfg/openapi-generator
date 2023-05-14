@@ -1,17 +1,14 @@
 package org.openapitools.api
 
-import java.time.OffsetDateTime
 import org.openapitools.model.User
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import spock.lang.Specification
 import jakarta.inject.Inject
-import spock.lang.Ignore
-import java.util.Arrays
+import reactor.core.publisher.Mono
 import java.util.ArrayList
 import java.util.HashMap
 import java.util.List
 import java.util.Map
-import java.util.HashSet
 
 
 /**
@@ -29,15 +26,13 @@ class UserApiSpec extends Specification {
      *
      * This can only be done by the logged in user.
      */
-    @Ignore("Not Implemented")
-    void 'createUser() test'() {
+    void "createUser() test"() {
         given:
-        User _body = new User()
+        User _body = null
+        // api.createUser(_body).block()
+        // Mono<Void> asyncResponse = api.createUser(_body)
 
-        when:
-        api.createUser(_body).block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }
@@ -46,15 +41,13 @@ class UserApiSpec extends Specification {
     /**
      * Creates list of users with given input array
      */
-    @Ignore("Not Implemented")
-    void 'createUsersWithArrayInput() test'() {
+    void "createUsersWithArrayInput() test"() {
         given:
-        List<User> _body = []
+        List<User> _body = null
+        // api.createUsersWithArrayInput(_body).block()
+        // Mono<Void> asyncResponse = api.createUsersWithArrayInput(_body)
 
-        when:
-        api.createUsersWithArrayInput(_body).block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }
@@ -63,15 +56,13 @@ class UserApiSpec extends Specification {
     /**
      * Creates list of users with given input array
      */
-    @Ignore("Not Implemented")
-    void 'createUsersWithListInput() test'() {
+    void "createUsersWithListInput() test"() {
         given:
-        List<User> _body = []
+        List<User> _body = null
+        // api.createUsersWithListInput(_body).block()
+        // Mono<Void> asyncResponse = api.createUsersWithListInput(_body)
 
-        when:
-        api.createUsersWithListInput(_body).block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }
@@ -82,15 +73,13 @@ class UserApiSpec extends Specification {
      *
      * This can only be done by the logged in user.
      */
-    @Ignore("Not Implemented")
-    void 'deleteUser() test'() {
+    void "deleteUser() test"() {
         given:
-        String username = 'example'
+        String username = null
+        // api.deleteUser(username).block()
+        // Mono<Void> asyncResponse = api.deleteUser(username)
 
-        when:
-        api.deleteUser(username).block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }
@@ -99,15 +88,13 @@ class UserApiSpec extends Specification {
     /**
      * Get user by user name
      */
-    @Ignore("Not Implemented")
-    void 'getUserByName() test'() {
+    void "getUserByName() test"() {
         given:
-        String username = 'example'
+        String username = null
+        // User response = api.getUserByName(username).block()
+        // Mono<User> asyncResponse = api.getUserByName(username)
 
-        when:
-        User body = api.getUserByName(username).block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }
@@ -116,16 +103,14 @@ class UserApiSpec extends Specification {
     /**
      * Logs user into the system
      */
-    @Ignore("Not Implemented")
-    void 'loginUser() test'() {
+    void "loginUser() test"() {
         given:
-        String username = 'example'
-        String password = 'example'
+        String username = null
+        String password = null
+        // String response = api.loginUser(username, password).block()
+        // Mono<String> asyncResponse = api.loginUser(username, password)
 
-        when:
-        String body = api.loginUser(username, password).block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }
@@ -134,14 +119,12 @@ class UserApiSpec extends Specification {
     /**
      * Logs out current logged in user session
      */
-    @Ignore("Not Implemented")
-    void 'logoutUser() test'() {
+    void "logoutUser() test"() {
         given:
+        // api.logoutUser().block()
+        // Mono<Void> asyncResponse = api.logoutUser()
 
-        when:
-        api.logoutUser().block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }
@@ -152,16 +135,14 @@ class UserApiSpec extends Specification {
      *
      * This can only be done by the logged in user.
      */
-    @Ignore("Not Implemented")
-    void 'updateUser() test'() {
+    void "updateUser() test"() {
         given:
-        String username = 'example'
-        User _body = new User()
+        String username = null
+        User _body = null
+        // api.updateUser(username, _body).block()
+        // Mono<Void> asyncResponse = api.updateUser(username, _body)
 
-        when:
-        api.updateUser(username, _body).block()
-
-        then:
+        expect:
         true
         // TODO: test validations
     }

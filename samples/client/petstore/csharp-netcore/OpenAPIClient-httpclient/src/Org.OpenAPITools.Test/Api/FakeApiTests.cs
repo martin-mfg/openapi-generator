@@ -107,9 +107,8 @@ namespace Org.OpenAPITools.Test.Api
         public void FakeOuterStringSerializeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //Guid requiredStringUuid = null;
             //string body = null;
-            //var response = instance.FakeOuterStringSerialize(requiredStringUuid, body);
+            //var response = instance.FakeOuterStringSerialize(body);
             //Assert.IsType<string>(response);
         }
 

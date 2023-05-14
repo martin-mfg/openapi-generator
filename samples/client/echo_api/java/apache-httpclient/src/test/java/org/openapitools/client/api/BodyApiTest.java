@@ -14,7 +14,6 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import java.io.File;
 import org.openapitools.client.model.Pet;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -36,20 +35,6 @@ public class BodyApiTest {
     private final BodyApi api = new BodyApi();
 
     /**
-     * Test binary (gif) response body
-     *
-     * Test binary (gif) response body
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void testBinaryGifTest() throws ApiException {
-        File response = api.testBinaryGif();
-
-        // TODO: test validations
-    }
-    /**
      * Test body parameter(s)
      *
      * Test body parameter(s)
@@ -61,21 +46,6 @@ public class BodyApiTest {
     public void testEchoBodyPetTest() throws ApiException {
         Pet pet = null;
         Pet response = api.testEchoBodyPet(pet);
-
-        // TODO: test validations
-    }
-    /**
-     * Test empty response body
-     *
-     * Test empty response body
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void testEchoBodyPetResponseStringTest() throws ApiException {
-        Pet pet = null;
-        String response = api.testEchoBodyPetResponseString(pet);
 
         // TODO: test validations
     }

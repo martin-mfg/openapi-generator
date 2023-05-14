@@ -1,13 +1,10 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
-import java.time.OffsetDateTime;
 import org.openapitools.client.model.User;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,8 +29,8 @@ public class UserApiTest {
      */
     @Test
     public void createUserTest() {
-        User body = null;
-        // api.createUser(body);
+        User user = null;
+        // api.createUser(user);
 
         // TODO: test validations
     }
@@ -44,8 +41,8 @@ public class UserApiTest {
      */
     @Test
     public void createUsersWithArrayInputTest() {
-        List<User> body = null;
-        // api.createUsersWithArrayInput(body);
+        List<User> user = null;
+        // api.createUsersWithArrayInput(user);
 
         // TODO: test validations
     }
@@ -56,8 +53,8 @@ public class UserApiTest {
      */
     @Test
     public void createUsersWithListInputTest() {
-        List<User> body = null;
-        // api.createUsersWithListInput(body);
+        List<User> user = null;
+        // api.createUsersWithListInput(user);
 
         // TODO: test validations
     }
@@ -117,8 +114,8 @@ public class UserApiTest {
     @Test
     public void updateUserTest() {
         String username = null;
-        User body = null;
-        // api.updateUser(username, body);
+        User user = null;
+        // api.updateUser(username, user);
 
         // TODO: test validations
     }

@@ -21,6 +21,8 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
+import org.openapitools.client.JSON;
+import org.openapitools.client.model.MySchemaNameCharactersAllOf;
 import org.openapitools.client.model.Parent;
 
 import org.junit.jupiter.api.Assertions;
@@ -38,7 +40,15 @@ public class MySchemaNameCharactersTest {
      */
     @Test
     public void testMySchemaNameCharacters() {
-        // TODO: test MySchemaNameCharacters
+        String objJson = "{ \"objectType\": \"MySchemaName._-Characters\", \"prop2\":\"some_value\" }";
+        try {
+            JSON j = new JSON();
+            MySchemaNameCharacters obj = j.getMapper().readValue(objJson, MySchemaNameCharacters.class);
+            Assertions.assertEquals(obj.getObjectType(), "MySchemaName._-Characters");
+            Assertions.assertEquals(obj.getProp2(), "some_value");
+        } catch (Exception ex) {
+            Assertions.fail("Exception '" + ex.getMessage() + "' should not have been raised");
+        }
     }
 
     /**

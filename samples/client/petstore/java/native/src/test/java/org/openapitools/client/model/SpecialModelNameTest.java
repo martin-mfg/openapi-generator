@@ -45,12 +45,4 @@ public class SpecialModelNameTest {
         // TODO: test $specialPropertyName
     }
 
-    /**
-     * Test the property 'specialModelName'
-     */
-    @Test
-    public void specialModelNameTest() {
-        // TODO: test specialModelName
-    }
-
 }

@@ -54,6 +54,7 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<ModelClient>(instance);
         }
 
+
         /// <summary>
         /// Test the property '_Client'
         /// </summary>

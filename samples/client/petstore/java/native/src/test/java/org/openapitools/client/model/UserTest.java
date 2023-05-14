@@ -18,10 +18,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import org.openapitools.jackson.nullable.JsonNullable;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.openapitools.jackson.nullable.JsonNullable;
-import java.util.NoSuchElementException;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -103,38 +99,6 @@ public class UserTest {
     @Test
     public void userStatusTest() {
         // TODO: test userStatus
-    }
-
-    /**
-     * Test the property 'objectWithNoDeclaredProps'
-     */
-    @Test
-    public void objectWithNoDeclaredPropsTest() {
-        // TODO: test objectWithNoDeclaredProps
-    }
-
-    /**
-     * Test the property 'objectWithNoDeclaredPropsNullable'
-     */
-    @Test
-    public void objectWithNoDeclaredPropsNullableTest() {
-        // TODO: test objectWithNoDeclaredPropsNullable
-    }
-
-    /**
-     * Test the property 'anyTypeProp'
-     */
-    @Test
-    public void anyTypePropTest() {
-        // TODO: test anyTypeProp
-    }
-
-    /**
-     * Test the property 'anyTypePropNullable'
-     */
-    @Test
-    public void anyTypePropNullableTest() {
-        // TODO: test anyTypePropNullable
     }
 
 }

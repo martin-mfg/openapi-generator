@@ -58,7 +58,7 @@ public class StoreApiTest {
     public void deleteOrderTest() {
         // TODO: test validations
         String orderId = null;
-        //api.deleteOrder(orderId);
+        //void response = api.deleteOrder(orderId);
         //assertNotNull(response);
 
 

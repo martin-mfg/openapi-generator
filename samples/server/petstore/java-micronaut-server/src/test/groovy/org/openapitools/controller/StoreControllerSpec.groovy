@@ -32,7 +32,7 @@ class StoreControllerSpec extends Specification {
     EmbeddedServer server
 
     @Inject
-    @Client
+    @Client('${context-path}')
     HttpClient client
 
     @Inject
@@ -170,8 +170,6 @@ class StoreControllerSpec extends Specification {
      * This test is used to validate the implementation of placeOrder() method
      *
      * The method should: Place an order for a pet
-     *
-     * 
      *
      * TODO fill in the parameters and test return value.
      */

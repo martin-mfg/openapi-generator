@@ -19,8 +19,6 @@ import org.junit.Test;
 import org.junit.Ignore;
 import org.junit.Assert;
 
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,8 +42,8 @@ public class AnotherFakeApiTest {
      */
     @Test
     public void call123testSpecialTagsTest() throws ApiException {
-        Client client = null;
-        Client response = api.call123testSpecialTags(client);
+        Client body = null;
+        Client response = api.call123testSpecialTags(body);
 
         // TODO: test validations
     }
