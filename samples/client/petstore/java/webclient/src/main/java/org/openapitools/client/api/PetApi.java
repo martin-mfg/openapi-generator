@@ -328,9 +328,9 @@ public class PetApi {
      * @return Set&lt;Pet&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public List<Pet> findPetsByTags(Set<String> tags) throws WebClientResponseException {
+    public Set<Pet> findPetsByTags(Set<String> tags) throws WebClientResponseException {
         ParameterizedTypeReference<Pet> localVarReturnType = new ParameterizedTypeReference<Pet>() {};
-        return findPetsByTagsRequestCreation(tags).bodyToFlux(localVarReturnType).collectList().block();
+        return findPetsByTagsRequestCreation(tags).bodyToFlux(localVarReturnType).collect(Collectors.toSet()).block();
     }
 
     /**

@@ -4408,7 +4408,7 @@ public class DefaultCodegen implements CodegenConfig {
                 String mediaTypeSchemaSuffix = String.format(Locale.ROOT, "%sResponseBody", r.code);
                 r.setContent(getContent(response.getContent(), imports, mediaTypeSchemaSuffix));
 
-                if (!addSchemaImportsFromV3SpecLocations) {
+//            if (!addSchemaImportsFromV3SpecLocations) {
                     if (r.baseType != null &&
                             !defaultIncludes.contains(r.baseType) &&
                             !languageSpecificPrimitives.contains(r.baseType)) {
@@ -4418,7 +4418,7 @@ public class DefaultCodegen implements CodegenConfig {
                         op.uniqueItems = true;
                         imports.add(typeMapping.get(r.containerType));
                     }
-                }
+//            }
 
                 op.responses.add(r);
                 if (Boolean.TRUE.equals(r.isBinary) && Boolean.TRUE.equals(r.is2xx) && Boolean.FALSE.equals(op.isResponseBinary)) {
