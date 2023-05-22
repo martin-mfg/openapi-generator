@@ -5560,7 +5560,7 @@ public class DefaultCodegen implements CodegenConfig {
         final CodegenProperty property = fromProperty(name, schema, false);
         addImport(model, property.complexType);
         model.parent = toInstantiationType(schema);
-        if (!addSchemaImportsFromV3SpecLocations) {
+//        if (!addSchemaImportsFromV3SpecLocations) {
             final String containerType = property.containerType;
             final String instantiationType = instantiationTypes.get(containerType);
             if (instantiationType != null) {
@@ -5571,7 +5571,7 @@ public class DefaultCodegen implements CodegenConfig {
             if (mappedType != null) {
                 addImport(model, mappedType);
             }
-        }
+//        }
     }
 
     /**

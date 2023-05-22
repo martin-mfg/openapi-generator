@@ -37,9 +37,9 @@ public class MyImportTest {
 
         final CodegenConfigurator configurator = new CodegenConfigurator()
                 .setGeneratorName("java")
-                .setLibrary("native")
+                .setLibrary("resttemplate")
                 .setAdditionalProperties(properties)
-                .setInputSpec("src/test/resources/3_0/spring/petstore-with-fake-endpoints-models-for-testing.yaml")
+                .setInputSpec("src/test/resources/2_0/petstore-with-fake-endpoints-models-for-testing.yaml")
 /*
                 .addTypeMapping("array","ArrayType")
                 .addTypeMapping("Param1Def","Param1DefType")
