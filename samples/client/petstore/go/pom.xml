@@ -33,6 +33,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
+                            <basedir>./go-petstore</basedir>
                             <executable>go</executable>
                             <arguments>
                                 <argument>get</argument>
@@ -47,6 +48,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
+                            <basedir>./go-petstore</basedir>
                             <executable>go</executable>
                             <arguments>
                                 <argument>get</argument>
@@ -61,6 +63,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
+                            <basedir>./go-petstore</basedir>
                             <executable>go</executable>
                             <arguments>
                                 <argument>get</argument>
@@ -75,10 +78,12 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
+                            <basedir>./go-petstore</basedir>
                             <executable>go</executable>
                             <arguments>
                                 <argument>test</argument>
                                 <argument>-v</argument>
+                                <argument>./...</argument>
                             </arguments>
                         </configuration>
                     </execution>
