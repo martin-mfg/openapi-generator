@@ -43,7 +43,7 @@ elif [ "$NODE_INDEX" = "2" ]; then
   go version
 
   # run integration tests
-  mvn --no-snapshot-updates --quiet verify -Psamples.misc -Dorg.slf4j.simpleLogger.defaultLogLevel=error
+  mvn --no-snapshot-updates verify -Psamples.misc
 elif [ "$NODE_INDEX" = "3" ]; then
 
   echo "Running node $NODE_INDEX to test 'samples.circleci.node3' defined in pom.xml ..."
