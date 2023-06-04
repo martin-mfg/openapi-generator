@@ -4,22 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-****](default_api.md#) | **GET** /op | 
+**retrieveSomething**](default_api.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
-# ****
-> (op_get_request)
+# **retrieveSomething**
+> models::ExampleResponse retrieveSomething()
 
+
+get some object
 
 ### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-  **op_get_request** | [**OpGetRequest**](OpGetRequest.md)|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
- (empty response body)
+[**models::ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 
@@ -27,8 +26,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

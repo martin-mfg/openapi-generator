@@ -4,7 +4,6 @@ import org.openapitools.client.auth.Authentication;
 import org.openapitools.client.auth.HttpBasicAuth;
 import org.openapitools.client.auth.HttpBearerAuth;
 import org.openapitools.client.auth.ApiKeyAuth;
-import org.openapitools.client.auth.OAuth;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -51,7 +50,7 @@ public class ApiClient extends JavaTimeFormatter {
     private MultiMap defaultHeaders = MultiMap.caseInsensitiveMultiMap();
     private MultiMap defaultCookies = MultiMap.caseInsensitiveMultiMap();
     private Map<String, Authentication> authentications;
-    private String basePath = "http://petstore.swagger.io:80/v2";
+    private String basePath = "http://localhost";
     private DateFormat dateFormat;
     private ObjectMapper objectMapper;
     private String downloadsDir = "";
@@ -85,10 +84,6 @@ public class ApiClient extends JavaTimeFormatter {
 
         // Setup authentications (key: authentication name, value: authentication).
         this.authentications = new HashMap<>();
-        authentications.put("petstore_auth", new OAuth());
-        authentications.put("api_key", new ApiKeyAuth("header", "api_key"));
-        authentications.put("api_key_query", new ApiKeyAuth("query", "api_key_query"));
-        authentications.put("http_basic_test", new HttpBasicAuth());
         // Prevent the authentications from being modified.
         this.authentications = Collections.unmodifiableMap(authentications);
 
@@ -250,21 +245,6 @@ public class ApiClient extends JavaTimeFormatter {
             }
         }
         throw new RuntimeException("No API key authentication configured!");
-    }
-
-    /**
-     * Helper method to set access token for the first OAuth2 authentication.
-     *
-     * @param accessToken Access token
-     */
-    public ApiClient setAccessToken(String accessToken) {
-        for (Authentication auth : authentications.values()) {
-            if (auth instanceof OAuth) {
-                ((OAuth) auth).setAccessToken(accessToken);
-                return this;
-            }
-        }
-        throw new RuntimeException("No OAuth2 authentication configured!");
     }
 
     /**
@@ -641,7 +621,7 @@ public class ApiClient extends JavaTimeFormatter {
     protected WebClient buildWebClient(Vertx vertx, JsonObject config) {
 
         if (!config.containsKey("userAgent")) {
-            config.put("userAgent", "OpenAPI-Generator/1.0.0/java");
+            config.put("userAgent", "OpenAPI-Generator/0.0.1/java");
         }
 
         return WebClient.create(vertx, new WebClientOptions(config));
@@ -669,56 +649,5 @@ public class ApiClient extends JavaTimeFormatter {
     public static class AuthInfo {
 
         private final Map<String, Authentication> authentications = new LinkedHashMap<>();
-
-        public void addPetstore_authAuthentication(String accessToken) {
-           OAuth auth = new OAuth();
-           auth.setAccessToken(accessToken);
-           authentications.put("petstore_auth", auth);
-        }
-
-        public void addApi_keyAuthentication(String apikey, String apiKeyPrefix) {
-           ApiKeyAuth auth = new ApiKeyAuth("header","api_key");
-           auth.setApiKey(apikey);
-           auth.setApiKeyPrefix(apiKeyPrefix);
-           authentications.put("api_key", auth);
-        }
-
-        public void addApi_key_queryAuthentication(String apikey, String apiKeyPrefix) {
-           ApiKeyAuth auth = new ApiKeyAuth("query","api_key_query");
-           auth.setApiKey(apikey);
-           auth.setApiKeyPrefix(apiKeyPrefix);
-           authentications.put("api_key_query", auth);
-        }
-
-        public void addHttp_basic_testAuthentication(String username, String password) {
-            HttpBasicAuth auth = new HttpBasicAuth();
-            auth.setUsername(username);
-            auth.setPassword(password);
-            authentications.put("http_basic_test", auth);
-        }
-
-        public static AuthInfo forPetstore_authAuthentication(String accessToken) {
-            AuthInfo authInfo = new AuthInfo();
-            authInfo.addPetstore_authAuthentication(accessToken);
-            return authInfo;
-        }
-
-        public static AuthInfo forApi_keyAuthentication(String apikey, String apiKeyPrefix) {
-            AuthInfo authInfo = new AuthInfo();
-            authInfo.addApi_keyAuthentication(apikey, apiKeyPrefix);
-            return authInfo;
-        }
-
-        public static AuthInfo forApi_key_queryAuthentication(String apikey, String apiKeyPrefix) {
-            AuthInfo authInfo = new AuthInfo();
-            authInfo.addApi_key_queryAuthentication(apikey, apiKeyPrefix);
-            return authInfo;
-        }
-
-        public static AuthInfo forHttp_basic_test(String username, String password) {
-            AuthInfo authInfo = new AuthInfo();
-            authInfo.addHttp_basic_testAuthentication(username, password);
-            return authInfo;
-        }
     }
 }

@@ -49,10 +49,10 @@ import 'package:openapi/openapi.dart';
 final api = Openapi().getDefaultApi();
 
 try {
-    final response = await api.rootGet();
+    final response = await api.retrieveSomething();
     print(response);
 } catch on DioError (e) {
-    print("Exception when calling DefaultApi->rootGet: $e\n");
+    print("Exception when calling DefaultApi->retrieveSomething: $e\n");
 }
 
 ```
@@ -63,14 +63,11 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-[*DefaultApi*](doc/DefaultApi.md) | [**rootGet**](doc/DefaultApi.md#rootget) | **GET** / | 
+[*DefaultApi*](doc/DefaultApi.md) | [**retrieveSomething**](doc/DefaultApi.md#retrievesomething) | **GET** /example/someMethod | 
 
 
 ## Documentation For Models
 
- - [Apple](doc/Apple.md)
- - [Banana](doc/Banana.md)
- - [Fruit](doc/Fruit.md)
 
 
 ## Documentation For Authorization

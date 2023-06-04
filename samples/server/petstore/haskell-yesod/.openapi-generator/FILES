@@ -12,14 +12,12 @@ package.yaml
 src/Application.hs
 src/Error.hs
 src/Foundation.hs
-src/Handler/Pet.hs
-src/Handler/Store.hs
-src/Handler/User.hs
+src/Handler/Default.hs
 src/Import.hs
 src/Import/NoFoundation.hs
-src/OpenAPIPetstore/Types.hs
 src/Settings.hs
 src/Settings/StaticFiles.hs
+src/SomeExample/Types.hs
 stack.yaml
 static/.gitkeep
 test/Spec.hs

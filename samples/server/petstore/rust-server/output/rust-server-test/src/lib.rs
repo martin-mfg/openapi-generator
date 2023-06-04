@@ -12,65 +12,13 @@ use serde::{Serialize, Deserialize};
 type ServiceError = Box<dyn Error + Send + Sync + 'static>;
 
 pub const BASE_PATH: &str = "";
-pub const API_VERSION: &str = "2.3.4";
+pub const API_VERSION: &str = "0.0.1";
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum AllOfGetResponse {
-    /// OK
-    OK
-    (models::AllOfObject)
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum DummyGetResponse {
-    /// Success
-    Success
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum DummyPutResponse {
-    /// Success
-    Success
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum FileResponseGetResponse {
-    /// Success
-    Success
-    (swagger::ByteArray)
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum GetStructuredYamlResponse {
-    /// OK
-    OK
-    (String)
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum HtmlPostResponse {
-    /// Success
-    Success
-    (String)
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum PostYamlResponse {
-    /// OK
-    OK
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum RawJsonGetResponse {
-    /// Success
-    Success
-    (serde_json::Value)
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum SoloObjectPostResponse {
-    /// OK
-    OK
+pub enum RetrieveSomethingResponse {
+    /// The response with results
+    TheResponseWithResults
+    (models::ExampleResponse)
 }
 
 /// API
@@ -81,50 +29,9 @@ pub trait Api<C: Send + Sync> {
         Poll::Ready(Ok(()))
     }
 
-    async fn all_of_get(
+    async fn retrieve_something(
         &self,
-        context: &C) -> Result<AllOfGetResponse, ApiError>;
-
-    /// A dummy endpoint to make the spec valid.
-    async fn dummy_get(
-        &self,
-        context: &C) -> Result<DummyGetResponse, ApiError>;
-
-    async fn dummy_put(
-        &self,
-        nested_response: models::DummyPutRequest,
-        context: &C) -> Result<DummyPutResponse, ApiError>;
-
-    /// Get a file
-    async fn file_response_get(
-        &self,
-        context: &C) -> Result<FileResponseGetResponse, ApiError>;
-
-    async fn get_structured_yaml(
-        &self,
-        context: &C) -> Result<GetStructuredYamlResponse, ApiError>;
-
-    /// Test HTML handling
-    async fn html_post(
-        &self,
-        body: String,
-        context: &C) -> Result<HtmlPostResponse, ApiError>;
-
-    async fn post_yaml(
-        &self,
-        value: String,
-        context: &C) -> Result<PostYamlResponse, ApiError>;
-
-    /// Get an arbitrary JSON blob.
-    async fn raw_json_get(
-        &self,
-        context: &C) -> Result<RawJsonGetResponse, ApiError>;
-
-    /// Send an arbitrary JSON blob
-    async fn solo_object_post(
-        &self,
-        value: serde_json::Value,
-        context: &C) -> Result<SoloObjectPostResponse, ApiError>;
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>;
 
 }
 
@@ -137,50 +44,9 @@ pub trait ApiNoContext<C: Send + Sync> {
 
     fn context(&self) -> &C;
 
-    async fn all_of_get(
+    async fn retrieve_something(
         &self,
-        ) -> Result<AllOfGetResponse, ApiError>;
-
-    /// A dummy endpoint to make the spec valid.
-    async fn dummy_get(
-        &self,
-        ) -> Result<DummyGetResponse, ApiError>;
-
-    async fn dummy_put(
-        &self,
-        nested_response: models::DummyPutRequest,
-        ) -> Result<DummyPutResponse, ApiError>;
-
-    /// Get a file
-    async fn file_response_get(
-        &self,
-        ) -> Result<FileResponseGetResponse, ApiError>;
-
-    async fn get_structured_yaml(
-        &self,
-        ) -> Result<GetStructuredYamlResponse, ApiError>;
-
-    /// Test HTML handling
-    async fn html_post(
-        &self,
-        body: String,
-        ) -> Result<HtmlPostResponse, ApiError>;
-
-    async fn post_yaml(
-        &self,
-        value: String,
-        ) -> Result<PostYamlResponse, ApiError>;
-
-    /// Get an arbitrary JSON blob.
-    async fn raw_json_get(
-        &self,
-        ) -> Result<RawJsonGetResponse, ApiError>;
-
-    /// Send an arbitrary JSON blob
-    async fn solo_object_post(
-        &self,
-        value: serde_json::Value,
-        ) -> Result<SoloObjectPostResponse, ApiError>;
+        ) -> Result<RetrieveSomethingResponse, ApiError>;
 
 }
 
@@ -207,85 +73,12 @@ impl<T: Api<C> + Send + Sync, C: Clone + Send + Sync> ApiNoContext<C> for Contex
         ContextWrapper::context(self)
     }
 
-    async fn all_of_get(
+    async fn retrieve_something(
         &self,
-        ) -> Result<AllOfGetResponse, ApiError>
+        ) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let context = self.context().clone();
-        self.api().all_of_get(&context).await
-    }
-
-    /// A dummy endpoint to make the spec valid.
-    async fn dummy_get(
-        &self,
-        ) -> Result<DummyGetResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().dummy_get(&context).await
-    }
-
-    async fn dummy_put(
-        &self,
-        nested_response: models::DummyPutRequest,
-        ) -> Result<DummyPutResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().dummy_put(nested_response, &context).await
-    }
-
-    /// Get a file
-    async fn file_response_get(
-        &self,
-        ) -> Result<FileResponseGetResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().file_response_get(&context).await
-    }
-
-    async fn get_structured_yaml(
-        &self,
-        ) -> Result<GetStructuredYamlResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().get_structured_yaml(&context).await
-    }
-
-    /// Test HTML handling
-    async fn html_post(
-        &self,
-        body: String,
-        ) -> Result<HtmlPostResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().html_post(body, &context).await
-    }
-
-    async fn post_yaml(
-        &self,
-        value: String,
-        ) -> Result<PostYamlResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().post_yaml(value, &context).await
-    }
-
-    /// Get an arbitrary JSON blob.
-    async fn raw_json_get(
-        &self,
-        ) -> Result<RawJsonGetResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().raw_json_get(&context).await
-    }
-
-    /// Send an arbitrary JSON blob
-    async fn solo_object_post(
-        &self,
-        value: serde_json::Value,
-        ) -> Result<SoloObjectPostResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().solo_object_post(value, &context).await
+        self.api().retrieve_something(&context).await
     }
 
 }

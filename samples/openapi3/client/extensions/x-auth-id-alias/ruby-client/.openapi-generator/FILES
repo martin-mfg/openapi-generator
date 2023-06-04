@@ -6,14 +6,15 @@
 Gemfile
 README.md
 Rakefile
-docs/UsageApi.md
+docs/DefaultApi.md
 git_push.sh
 lib/x_auth_id_alias.rb
-lib/x_auth_id_alias/api/usage_api.rb
+lib/x_auth_id_alias/api/default_api.rb
 lib/x_auth_id_alias/api_client.rb
 lib/x_auth_id_alias/api_error.rb
 lib/x_auth_id_alias/configuration.rb
 lib/x_auth_id_alias/version.rb
+spec/api/default_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
 spec/spec_helper.rb

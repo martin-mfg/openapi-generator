@@ -40,7 +40,7 @@ request method path pathParams queryParams headerParams body decoder =
     Request
         { method = method
         , headers = headers headerParams
-        , basePath = "http://petstore.swagger.io/v2"
+        , basePath = "http://localhost"
         , pathParams = interpolatePath path pathParams
         , queryParams = queries queryParams
         , body = Maybe.withDefault Http.emptyBody body

@@ -1,6 +1,6 @@
 generatorName: typescript-nestjs
 outputDir: samples/client/petstore/typescript-nestjs-v8-provided-in-root/builds/default
-inputSpec: modules/openapi-generator/src/test/resources/3_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/typescript-nestjs
 additionalProperties:
   nestVersion: 8.0.0

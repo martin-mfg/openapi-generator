@@ -8,5 +8,5 @@ export * from "./servers";
 export { RequiredError } from "./apis/baseapi";
 
 export { PromiseMiddleware as Middleware } from './middleware';
-export { PetApiAddPetRequest, PetApiDeletePetRequest, PetApiFindPetsByStatusRequest, PetApiFindPetsByTagsRequest, PetApiGetPetByIdRequest, PetApiUpdatePetRequest, PetApiUpdatePetWithFormRequest, PetApiUploadFileRequest, ObjectPetApi as PetApi,  StoreApiDeleteOrderRequest, StoreApiGetInventoryRequest, StoreApiGetOrderByIdRequest, StoreApiPlaceOrderRequest, ObjectStoreApi as StoreApi,  UserApiCreateUserRequest, UserApiCreateUsersWithArrayInputRequest, UserApiCreateUsersWithListInputRequest, UserApiDeleteUserRequest, UserApiGetUserByNameRequest, UserApiLoginUserRequest, UserApiLogoutUserRequest, UserApiUpdateUserRequest, ObjectUserApi as UserApi } from './types/ObjectParamAPI';
+export { DefaultApiRetrieveSomethingRequest, ObjectDefaultApi as DefaultApi } from './types/ObjectParamAPI';
 

@@ -1,6 +1,6 @@
 generatorName: spring
 outputDir: samples/server/petstore/springboot-delegate-no-response-entity
-inputSpec: modules/openapi-generator/src/test/resources/3_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/JavaSpring
 additionalProperties:
   documentationProvider: springfox

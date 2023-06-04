@@ -25,12 +25,7 @@ All the properties can be changed in the [application.yml][src/main/resources/ap
 
 Description on how to create Apis is given inside individual api guides:
 
-* [AnotherFakeApi](docs/apis/AnotherFakeApi.md)
-* [FakeApi](docs/apis/FakeApi.md)
-* [FakeClassnameTags123Api](docs/apis/FakeClassnameTags123Api.md)
-* [PetApi](docs/apis/PetApi.md)
-* [StoreApi](docs/apis/StoreApi.md)
-* [UserApi](docs/apis/UserApi.md)
+* [DefaultApi](docs/apis/DefaultApi.md)
 
 
 ## Auth methods
@@ -38,11 +33,6 @@ Description on how to create Apis is given inside individual api guides:
 Details on auth methods can be found in the [auth.md](doc/auth.md).
 
 ## Author
-
-
-
-
-
 
 
 

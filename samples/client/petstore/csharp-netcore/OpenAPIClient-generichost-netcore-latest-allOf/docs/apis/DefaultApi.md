@@ -1,16 +1,18 @@
 # Org.OpenAPITools.Api.DefaultApi
 
-All URIs are relative to *http://api.example.xyz/v1*
+All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**List**](DefaultApi.md#list) | **GET** /person/display/{personId} |  |
+| [**RetrieveSomething**](DefaultApi.md#retrievesomething) | **GET** /example/someMethod |  |
 
-<a id="list"></a>
-# **List**
-> Person List (string personId)
+<a id="retrievesomething"></a>
+# **RetrieveSomething**
+> List&lt;decimal&gt; RetrieveSomething ()
 
 
+
+get some object
 
 ### Example
 ```csharp
@@ -22,23 +24,22 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class ListExample
+    public class RetrieveSomethingExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://api.example.xyz/v1";
+            config.BasePath = "http://localhost";
             var apiInstance = new DefaultApi(config);
-            var personId = "personId_example";  // string | The id of the person to retrieve
 
             try
             {
-                Person result = apiInstance.List(personId);
+                List<decimal> result = apiInstance.RetrieveSomething();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DefaultApi.List: " + e.Message);
+                Debug.Print("Exception when calling DefaultApi.RetrieveSomething: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -47,34 +48,30 @@ namespace Example
 }
 ```
 
-#### Using the ListWithHttpInfo variant
+#### Using the RetrieveSomethingWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    ApiResponse<Person> response = apiInstance.ListWithHttpInfo(personId);
+    ApiResponse<List<decimal>> response = apiInstance.RetrieveSomethingWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DefaultApi.ListWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DefaultApi.RetrieveSomethingWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
 ```
 
 ### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **personId** | **string** | The id of the person to retrieve |  |
-
+This endpoint does not need any parameter.
 ### Return type
 
-[**Person**](Person.md)
+**List<decimal>**
 
 ### Authorization
 
@@ -89,7 +86,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **200** | The response with results |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

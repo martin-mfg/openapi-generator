@@ -94,7 +94,7 @@ impl<C> Server<C> {
 
 use ping_bearer_auth::{
     Api,
-    PingGetResponse,
+    RetrieveSomethingResponse,
 };
 use ping_bearer_auth::server::MakeService;
 use std::error::Error;
@@ -103,12 +103,12 @@ use swagger::ApiError;
 #[async_trait]
 impl<C> Api<C> for Server<C> where C: Has<XSpanIdString> + Send + Sync
 {
-    async fn ping_get(
+    async fn retrieve_something(
         &self,
-        context: &C) -> Result<PingGetResponse, ApiError>
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let context = context.clone();
-        info!("ping_get() - X-Span-ID: {:?}", context.get().0.clone());
+        info!("retrieve_something() - X-Span-ID: {:?}", context.get().0.clone());
         Err(ApiError("Generic failure".into()))
     }
 

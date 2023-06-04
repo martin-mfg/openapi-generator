@@ -14,16 +14,16 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
-import 'package:openapi/src/model/child.dart';
-import 'package:openapi/src/model/example.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
-  Child,
-  Example,
 ])
 Serializers serializers = (_$serializers.toBuilder()
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(num)]),
+        () => ListBuilder<num>(),
+      )
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())
       ..add(const DateSerializer())

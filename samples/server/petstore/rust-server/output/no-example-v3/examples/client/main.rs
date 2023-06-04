@@ -5,7 +5,7 @@
 use futures::{future, Stream, stream};
 #[allow(unused_imports)]
 use no_example_v3::{Api, ApiNoContext, Client, ContextWrapperExt, models,
-                      OpGetResponse,
+                      RetrieveSomethingResponse,
                      };
 use clap::{App, Arg};
 
@@ -27,6 +27,7 @@ fn main() {
         .arg(Arg::with_name("operation")
             .help("Sets the operation to run")
             .possible_values(&[
+                "RetrieveSomething",
             ])
             .required(true)
             .index(1))
@@ -70,14 +71,11 @@ fn main() {
     let mut rt = tokio::runtime::Runtime::new().unwrap();
 
     match matches.value_of("operation") {
-        /* Disabled because there's no example.
-        Some("OpGet") => {
-            let result = rt.block_on(client.op_get(
-                  ???
+        Some("RetrieveSomething") => {
+            let result = rt.block_on(client.retrieve_something(
             ));
             info!("{:?} (X-Span-ID: {:?})", result, (client.context() as &dyn Has<XSpanIdString>).get().clone());
         },
-        */
         _ => {
             panic!("Invalid operation provided")
         }

@@ -14,18 +14,16 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
-import 'package:openapi/src/model/apple.dart';
-import 'package:openapi/src/model/banana.dart';
-import 'package:openapi/src/model/fruit.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
-  Apple,
-  Banana,
-  Fruit,
 ])
 Serializers serializers = (_$serializers.toBuilder()
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(num)]),
+        () => ListBuilder<num>(),
+      )
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())
       ..add(const DateSerializer())

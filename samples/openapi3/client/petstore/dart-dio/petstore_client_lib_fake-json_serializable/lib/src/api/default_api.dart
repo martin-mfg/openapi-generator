@@ -9,7 +9,6 @@ import 'dart:convert';
 import 'package:openapi/src/deserialize.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/model/foo_get_default_response.dart';
 
 class DefaultApi {
 
@@ -17,8 +16,8 @@ class DefaultApi {
 
   const DefaultApi(this._dio);
 
-  /// fooGet
-  /// 
+  /// retrieveSomething
+  /// get some object
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -28,9 +27,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [FooGetDefaultResponse] as data
+  /// Returns a [Future] containing a [Response] with a [List<num>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<FooGetDefaultResponse>> fooGet({ 
+  Future<Response<List<num>>> retrieveSomething({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -38,7 +37,7 @@ class DefaultApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/foo';
+    final _path = r'/example/someMethod';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -59,11 +58,11 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    FooGetDefaultResponse? _responseData;
+    List<num>? _responseData;
 
     try {
 final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<FooGetDefaultResponse, FooGetDefaultResponse>(rawData, 'FooGetDefaultResponse', growable: true);
+_responseData = rawData == null ? null : deserialize<List<num>, num>(rawData, 'List<num>', growable: true);
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
@@ -74,7 +73,7 @@ _responseData = rawData == null ? null : deserialize<FooGetDefaultResponse, FooG
       );
     }
 
-    return Response<FooGetDefaultResponse>(
+    return Response<List<num>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

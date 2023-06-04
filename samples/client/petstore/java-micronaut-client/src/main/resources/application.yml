@@ -1,4 +1,4 @@
-petstore-micronaut-base-path: "http://petstore.swagger.io:80/v2"
+petstore-micronaut-base-path: "http://localhost"
 
 micronaut:
   application:

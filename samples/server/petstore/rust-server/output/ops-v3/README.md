@@ -61,43 +61,7 @@ cargo run --example server
 To run a client, follow one of the following simple steps:
 
 ```
-cargo run --example client Op10Get
-cargo run --example client Op11Get
-cargo run --example client Op12Get
-cargo run --example client Op13Get
-cargo run --example client Op14Get
-cargo run --example client Op15Get
-cargo run --example client Op16Get
-cargo run --example client Op17Get
-cargo run --example client Op18Get
-cargo run --example client Op19Get
-cargo run --example client Op1Get
-cargo run --example client Op20Get
-cargo run --example client Op21Get
-cargo run --example client Op22Get
-cargo run --example client Op23Get
-cargo run --example client Op24Get
-cargo run --example client Op25Get
-cargo run --example client Op26Get
-cargo run --example client Op27Get
-cargo run --example client Op28Get
-cargo run --example client Op29Get
-cargo run --example client Op2Get
-cargo run --example client Op30Get
-cargo run --example client Op31Get
-cargo run --example client Op32Get
-cargo run --example client Op33Get
-cargo run --example client Op34Get
-cargo run --example client Op35Get
-cargo run --example client Op36Get
-cargo run --example client Op37Get
-cargo run --example client Op3Get
-cargo run --example client Op4Get
-cargo run --example client Op5Get
-cargo run --example client Op6Get
-cargo run --example client Op7Get
-cargo run --example client Op8Get
-cargo run --example client Op9Get
+cargo run --example client RetrieveSomething
 ```
 
 ### HTTPS
@@ -131,47 +95,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[****](docs/default_api.md#) | **GET** /op10 | 
-[****](docs/default_api.md#) | **GET** /op11 | 
-[****](docs/default_api.md#) | **GET** /op12 | 
-[****](docs/default_api.md#) | **GET** /op13 | 
-[****](docs/default_api.md#) | **GET** /op14 | 
-[****](docs/default_api.md#) | **GET** /op15 | 
-[****](docs/default_api.md#) | **GET** /op16 | 
-[****](docs/default_api.md#) | **GET** /op17 | 
-[****](docs/default_api.md#) | **GET** /op18 | 
-[****](docs/default_api.md#) | **GET** /op19 | 
-[****](docs/default_api.md#) | **GET** /op1 | 
-[****](docs/default_api.md#) | **GET** /op20 | 
-[****](docs/default_api.md#) | **GET** /op21 | 
-[****](docs/default_api.md#) | **GET** /op22 | 
-[****](docs/default_api.md#) | **GET** /op23 | 
-[****](docs/default_api.md#) | **GET** /op24 | 
-[****](docs/default_api.md#) | **GET** /op25 | 
-[****](docs/default_api.md#) | **GET** /op26 | 
-[****](docs/default_api.md#) | **GET** /op27 | 
-[****](docs/default_api.md#) | **GET** /op28 | 
-[****](docs/default_api.md#) | **GET** /op29 | 
-[****](docs/default_api.md#) | **GET** /op2 | 
-[****](docs/default_api.md#) | **GET** /op30 | 
-[****](docs/default_api.md#) | **GET** /op31 | 
-[****](docs/default_api.md#) | **GET** /op32 | 
-[****](docs/default_api.md#) | **GET** /op33 | 
-[****](docs/default_api.md#) | **GET** /op34 | 
-[****](docs/default_api.md#) | **GET** /op35 | 
-[****](docs/default_api.md#) | **GET** /op36 | 
-[****](docs/default_api.md#) | **GET** /op37 | 
-[****](docs/default_api.md#) | **GET** /op3 | 
-[****](docs/default_api.md#) | **GET** /op4 | 
-[****](docs/default_api.md#) | **GET** /op5 | 
-[****](docs/default_api.md#) | **GET** /op6 | 
-[****](docs/default_api.md#) | **GET** /op7 | 
-[****](docs/default_api.md#) | **GET** /op8 | 
-[****](docs/default_api.md#) | **GET** /op9 | 
+[**retrieveSomething**](docs/default_api.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
 ## Documentation For Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 ## Documentation For Authorization

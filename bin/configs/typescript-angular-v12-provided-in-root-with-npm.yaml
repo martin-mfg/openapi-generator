@@ -1,6 +1,6 @@
 generatorName: typescript-angular
 outputDir: samples/client/petstore/typescript-angular-v12-provided-in-root/builds/with-npm
-inputSpec: modules/openapi-generator/src/test/resources/2_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/typescript-angular
 additionalProperties:
   ngVersion: 12.2.0

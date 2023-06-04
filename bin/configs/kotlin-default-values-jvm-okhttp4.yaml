@@ -1,6 +1,6 @@
 generatorName: kotlin
 outputDir: samples/client/petstore/kotlin-default-values-jvm-okhttp4
-inputSpec: modules/openapi-generator/src/test/resources/3_0/issue_10865_default_values.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/kotlin-client
 additionalProperties:
   artifactId: kotlin-default-values-jvm-okhttp4

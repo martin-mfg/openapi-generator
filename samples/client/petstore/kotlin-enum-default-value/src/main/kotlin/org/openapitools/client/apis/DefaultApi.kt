@@ -19,7 +19,6 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import org.openapitools.client.models.ModelWithEnumPropertyHavingDefault
 
 import com.squareup.moshi.Json
 
@@ -47,8 +46,8 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
     /**
      * 
-     * 
-     * @return ModelWithEnumPropertyHavingDefault
+     * get some object
+     * @return kotlin.collections.List<java.math.BigDecimal>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -57,11 +56,11 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun operation() : ModelWithEnumPropertyHavingDefault {
-        val localVarResponse = operationWithHttpInfo()
+    fun retrieveSomething() : kotlin.collections.List<java.math.BigDecimal> {
+        val localVarResponse = retrieveSomethingWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ModelWithEnumPropertyHavingDefault
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<java.math.BigDecimal>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -77,27 +76,27 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
     /**
      * 
-     * 
-     * @return ApiResponse<ModelWithEnumPropertyHavingDefault?>
+     * get some object
+     * @return ApiResponse<kotlin.collections.List<java.math.BigDecimal>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun operationWithHttpInfo() : ApiResponse<ModelWithEnumPropertyHavingDefault?> {
-        val localVariableConfig = operationRequestConfig()
+    fun retrieveSomethingWithHttpInfo() : ApiResponse<kotlin.collections.List<java.math.BigDecimal>?> {
+        val localVariableConfig = retrieveSomethingRequestConfig()
 
-        return request<Unit, ModelWithEnumPropertyHavingDefault>(
+        return request<Unit, kotlin.collections.List<java.math.BigDecimal>>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation operation
+     * To obtain the request config of the operation retrieveSomething
      *
      * @return RequestConfig
      */
-    fun operationRequestConfig() : RequestConfig<Unit> {
+    fun retrieveSomethingRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -105,7 +104,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/",
+            path = "/example/someMethod",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,

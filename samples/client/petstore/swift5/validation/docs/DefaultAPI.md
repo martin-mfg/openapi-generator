@@ -4,15 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**rootGet**](DefaultAPI.md#rootget) | **GET** / | 
+[**retrieveSomething**](DefaultAPI.md#retrievesomething) | **GET** /example/someMethod | 
 
 
-# **rootGet**
+# **retrieveSomething**
 ```swift
-    open class func rootGet(completion: @escaping (_ data: Banana?, _ error: Error?) -> Void)
+    open class func retrieveSomething(completion: @escaping (_ data: ExampleResponse?, _ error: Error?) -> Void)
 ```
 
 
+
+get some object
 
 ### Example
 ```swift
@@ -20,7 +22,7 @@ Method | HTTP request | Description
 import PetstoreClient
 
 
-DefaultAPI.rootGet() { (response, error) in
+DefaultAPI.retrieveSomething() { (response, error) in
     guard error == nil else {
         print(error)
         return
@@ -37,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Banana**](Banana.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

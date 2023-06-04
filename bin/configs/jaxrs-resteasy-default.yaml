@@ -1,6 +1,6 @@
 generatorName: jaxrs-resteasy
 outputDir: samples/server/petstore/jaxrs-resteasy/default
-inputSpec: modules/openapi-generator/src/test/resources/2_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/JavaJaxRS/resteasy
 additionalProperties:
   hideGenerationTimestamp: "true"

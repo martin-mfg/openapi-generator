@@ -1,6 +1,6 @@
 generatorName: bash
 outputDir: samples/client/petstore/bash
-inputSpec: modules/openapi-generator/src/test/resources/2_0/petstore-with-fake-endpoints-models-for-testing.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/bash
 additionalProperties:
   generateZshCompletion: true

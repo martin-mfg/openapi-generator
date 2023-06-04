@@ -1,12 +1,6 @@
 package org.openapitools.server;
 
-import org.openapitools.server.api.AnotherFakeServiceImpl;
 import org.openapitools.server.api.DefaultServiceImpl;
-import org.openapitools.server.api.FakeServiceImpl;
-import org.openapitools.server.api.FakeClassnameTags123ServiceImpl;
-import org.openapitools.server.api.PetServiceImpl;
-import org.openapitools.server.api.StoreServiceImpl;
-import org.openapitools.server.api.UserServiceImpl;
 
 import io.helidon.common.LogConfig;
 import io.helidon.common.reactive.Single;
@@ -63,7 +57,7 @@ public final class Main {
         // Try to start the server. If successful, print some info and arrange to
         // print a message at shutdown. If unsuccessful, print the exception.
         webserver.thenAccept(ws -> {
-                     System.out.println("WEB server is up! http://petstore.swagger.io:80/v2");
+                     System.out.println("WEB server is up! http://localhost");
                      ws.whenShutdown().thenRun(() -> System.out.println("WEB server is DOWN. Good bye!"));
                  })
                  .exceptionallyAccept(t -> {
@@ -91,13 +85,7 @@ public final class Main {
                       .register(OpenAPISupport.create(config.get(OpenAPISupport.Builder.CONFIG_KEY)))
                       .register(health)                   // Health at "/health"
                       .register(metrics)                  // Metrics at "/metrics"
-                      .register("/", new AnotherFakeServiceImpl())
                       .register("/", new DefaultServiceImpl())
-                      .register("/", new FakeServiceImpl())
-                      .register("/", new FakeClassnameTags123ServiceImpl())
-                      .register("/", new PetServiceImpl())
-                      .register("/", new StoreServiceImpl())
-                      .register("/", new UserServiceImpl())
                       .build();
     }
 }

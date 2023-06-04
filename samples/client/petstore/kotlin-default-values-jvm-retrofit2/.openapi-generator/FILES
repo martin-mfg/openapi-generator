@@ -1,6 +1,5 @@
 README.md
 build.gradle
-docs/Apa.md
 docs/DefaultApi.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -20,4 +19,3 @@ src/main/kotlin/org/openapitools/client/infrastructure/ResponseExt.kt
 src/main/kotlin/org/openapitools/client/infrastructure/Serializer.kt
 src/main/kotlin/org/openapitools/client/infrastructure/URIAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/UUIDAdapter.kt
-src/main/kotlin/org/openapitools/client/models/Apa.kt

@@ -10,12 +10,8 @@ import io.vertx.ext.web.openapi.RouterBuilderOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.openapitools.vertxweb.server.api.PetApiHandler;
-import org.openapitools.vertxweb.server.api.PetApiImpl;
-import org.openapitools.vertxweb.server.api.StoreApiHandler;
-import org.openapitools.vertxweb.server.api.StoreApiImpl;
-import org.openapitools.vertxweb.server.api.UserApiHandler;
-import org.openapitools.vertxweb.server.api.UserApiImpl;
+import org.openapitools.vertxweb.server.api.DefaultApiHandler;
+import org.openapitools.vertxweb.server.api.DefaultApiImpl;
 
 public class HttpServerVerticle extends AbstractVerticle {
 
@@ -23,9 +19,7 @@ public class HttpServerVerticle extends AbstractVerticle {
     private static final String specFile = "src/main/resources/openapi.yaml";
 
     
-    private final PetApiHandler petHandler = new PetApiHandler(new PetApiImpl());
-    private final StoreApiHandler storeHandler = new StoreApiHandler(new StoreApiImpl());
-    private final UserApiHandler userHandler = new UserApiHandler(new UserApiImpl());
+    private final DefaultApiHandler defaultHandler = new DefaultApiHandler(new DefaultApiImpl());
 
     @Override
     public void start(Promise<Void> startPromise) {
@@ -36,9 +30,7 @@ public class HttpServerVerticle extends AbstractVerticle {
                   .setRequireSecurityHandlers(false)
               );
               
-              petHandler.mount(builder);
-              storeHandler.mount(builder);
-              userHandler.mount(builder);
+              defaultHandler.mount(builder);
 
               Router router = builder.createRouter();
               router.errorHandler(400, this::validationFailureHandler);

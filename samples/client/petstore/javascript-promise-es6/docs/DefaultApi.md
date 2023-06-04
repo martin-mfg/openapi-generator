@@ -1,26 +1,28 @@
-# OpenApiPetstore.DefaultApi
+# SomeExample.DefaultApi
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fooGet**](DefaultApi.md#fooGet) | **GET** /foo | 
+[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
 
-## fooGet
+## retrieveSomething
 
-> FooGetDefaultResponse fooGet()
+> [Number] retrieveSomething()
 
 
+
+get some object
 
 ### Example
 
 ```javascript
-import OpenApiPetstore from 'open_api_petstore';
+import SomeExample from 'some_example';
 
-let apiInstance = new OpenApiPetstore.DefaultApi();
-apiInstance.fooGet().then((data) => {
+let apiInstance = new SomeExample.DefaultApi();
+apiInstance.retrieveSomething().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -34,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+**[Number]**
 
 ### Authorization
 

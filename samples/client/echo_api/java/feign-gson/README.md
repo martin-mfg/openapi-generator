@@ -26,7 +26,7 @@ After the client library is installed/deployed, you can use it in your Maven pro
 <dependency>
     <groupId>org.openapitools</groupId>
     <artifactId>echo-api-feign-json</artifactId>
-    <version>0.1.0</version>
+    <version>0.0.1</version>
     <scope>compile</scope>
 </dependency>
 
@@ -73,5 +73,5 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 ## Author
 
-team@openapitools.org
+
 

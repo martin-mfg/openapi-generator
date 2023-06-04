@@ -1,6 +1,5 @@
 README.md
 build.gradle.kts
-docs/Apa.md
 docs/DefaultApi.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -26,4 +25,3 @@ src/main/kotlin/org/openapitools/client/infrastructure/OctetByteArray.kt
 src/main/kotlin/org/openapitools/client/infrastructure/PartConfig.kt
 src/main/kotlin/org/openapitools/client/infrastructure/RequestConfig.kt
 src/main/kotlin/org/openapitools/client/infrastructure/RequestMethod.kt
-src/main/kotlin/org/openapitools/client/models/Apa.kt

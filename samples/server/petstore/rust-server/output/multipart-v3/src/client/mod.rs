@@ -19,11 +19,6 @@ use std::task::{Context, Poll};
 use swagger::{ApiError, AuthData, BodyExt, Connector, DropContextService, Has, XSpanIdString};
 use url::form_urlencoded;
 
-use mime::Mime;
-use std::io::Cursor;
-use multipart::client::lazy::Multipart;
-use hyper_0_10::header::{Headers, ContentType};
-use mime_multipart::{Node, Part, generate_boundary, write_multipart};
 
 use crate::models;
 use crate::header;
@@ -41,9 +36,7 @@ const FRAGMENT_ENCODE_SET: &AsciiSet = &percent_encoding::CONTROLS
 const ID_ENCODE_SET: &AsciiSet = &FRAGMENT_ENCODE_SET.add(b'|');
 
 use crate::{Api,
-     MultipartRelatedRequestPostResponse,
-     MultipartRequestPostResponse,
-     MultipleIdenticalMimeTypesPostResponse
+     RetrieveSomethingResponse
      };
 
 /// Convert input into a base path, e.g. "http://example:123". Also checks the scheme as it goes.
@@ -387,16 +380,13 @@ impl<S, C> Api<C> for Client<S, C> where
         }
     }
 
-    async fn multipart_related_request_post(
+    async fn retrieve_something(
         &self,
-        param_required_binary_field: swagger::ByteArray,
-        param_object_field: Option<models::MultipartRequestObjectField>,
-        param_optional_binary_field: Option<swagger::ByteArray>,
-        context: &C) -> Result<MultipartRelatedRequestPostResponse, ApiError>
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let mut client_service = self.client_service.clone();
         let mut uri = format!(
-            "{}/multipart_related_request",
+            "{}/example/someMethod",
             self.base_path
         );
 
@@ -416,361 +406,12 @@ impl<S, C> Api<C> for Client<S, C> where
         };
 
         let mut request = match Request::builder()
-            .method("POST")
+            .method("GET")
             .uri(uri)
             .body(Body::empty()) {
                 Ok(req) => req,
                 Err(e) => return Err(ApiError(format!("Unable to create request: {}", e)))
         };
-
-        // Construct the Body for a multipart/related request. The mime 0.2.6 library
-        // does not parse quoted-string parameters correctly. The boundary doesn't
-        // need to be a quoted string if it does not contain a '/', hence ensure
-        // no such boundary is used.
-        let mut boundary = generate_boundary();
-        for b in boundary.iter_mut() {
-            if b == &(b'/') {
-                *b = b'=';
-            }
-        }
-
-        let mut body_parts = vec![];
-
-        if let Some(object_field) = param_object_field {
-            let part = Node::Part(Part {
-                headers: {
-                    let mut h = Headers::new();
-                    h.set(ContentType("application/json".parse().unwrap()));
-                    h.set_raw("Content-ID", vec![b"object_field".to_vec()]);
-                    h
-                },
-                body: serde_json::to_string(&object_field)
-                    .expect("Impossible to fail to serialize")
-                    .into_bytes(),
-            });
-            body_parts.push(part);
-        }
-
-        if let Some(optional_binary_field) = param_optional_binary_field {
-            let part = Node::Part(Part {
-                headers: {
-                    let mut h = Headers::new();
-                    h.set(ContentType("application/zip".parse().unwrap()));
-                    h.set_raw("Content-ID", vec![b"optional_binary_field".to_vec()]);
-                    h
-                },
-                body: optional_binary_field.0,
-            });
-            body_parts.push(part);
-        }
-
-        {
-            let part = Node::Part(Part {
-                headers: {
-                    let mut h = Headers::new();
-                    h.set(ContentType("image/png".parse().unwrap()));
-                    h.set_raw("Content-ID", vec![b"required_binary_field".to_vec()]);
-                    h
-                },
-                body: param_required_binary_field.0,
-            });
-            body_parts.push(part);
-        }
-
-        // Write the body into a vec.
-        let mut body: Vec<u8> = vec![];
-        write_multipart(&mut body, &boundary, &body_parts)
-            .expect("Failed to write multipart body");
-
-        // Add the message body to the request object.
-        *request.body_mut() = Body::from(body);
-
-        let header = "multipart/related";
-        request.headers_mut().insert(CONTENT_TYPE,
-        match HeaderValue::from_bytes(
-            &[header.as_bytes(), "; boundary=".as_bytes(), &boundary, "; type=\"application/json\"".as_bytes()].concat()
-        ) {
-            Ok(h) => h,
-            Err(e) => return Err(ApiError(format!("Unable to create header: {} - {}", header, e)))
-        });
-
-        let header = HeaderValue::from_str(Has::<XSpanIdString>::get(context).0.as_str());
-        request.headers_mut().insert(HeaderName::from_static("x-span-id"), match header {
-            Ok(h) => h,
-            Err(e) => return Err(ApiError(format!("Unable to create X-Span ID header value: {}", e)))
-        });
-
-        let response = client_service.call((request, context.clone()))
-            .map_err(|e| ApiError(format!("No response received: {}", e))).await?;
-
-        match response.status().as_u16() {
-            201 => {
-                Ok(
-                    MultipartRelatedRequestPostResponse::OK
-                )
-            }
-            code => {
-                let headers = response.headers().clone();
-                let body = response.into_body()
-                       .take(100)
-                       .into_raw().await;
-                Err(ApiError(format!("Unexpected response code {}:\n{:?}\n\n{}",
-                    code,
-                    headers,
-                    match body {
-                        Ok(body) => match String::from_utf8(body) {
-                            Ok(body) => body,
-                            Err(e) => format!("<Body was not UTF8: {:?}>", e),
-                        },
-                        Err(e) => format!("<Failed to read body: {}>", e),
-                    }
-                )))
-            }
-        }
-    }
-
-    async fn multipart_request_post(
-        &self,
-        param_string_field: String,
-        param_binary_field: swagger::ByteArray,
-        param_optional_string_field: Option<String>,
-        param_object_field: Option<models::MultipartRequestObjectField>,
-        context: &C) -> Result<MultipartRequestPostResponse, ApiError>
-    {
-        let mut client_service = self.client_service.clone();
-        let mut uri = format!(
-            "{}/multipart_request",
-            self.base_path
-        );
-
-        // Query parameters
-        let query_string = {
-            let mut query_string = form_urlencoded::Serializer::new("".to_owned());
-            query_string.finish()
-        };
-        if !query_string.is_empty() {
-            uri += "?";
-            uri += &query_string;
-        }
-
-        let uri = match Uri::from_str(&uri) {
-            Ok(uri) => uri,
-            Err(err) => return Err(ApiError(format!("Unable to build URI: {}", err))),
-        };
-
-        let mut request = match Request::builder()
-            .method("POST")
-            .uri(uri)
-            .body(Body::empty()) {
-                Ok(req) => req,
-                Err(e) => return Err(ApiError(format!("Unable to create request: {}", e)))
-        };
-
-        let (body_string, multipart_header) = {
-            let mut multipart = Multipart::new();
-
-            // For each parameter, encode as appropriate and add to the multipart body as a stream.
-
-            let string_field_str = match serde_json::to_string(&param_string_field) {
-                Ok(str) => str,
-                Err(e) => return Err(ApiError(format!("Unable to serialize string_field to string: {}", e))),
-            };
-
-            let string_field_vec = string_field_str.as_bytes().to_vec();
-            let string_field_mime = mime_0_2::Mime::from_str("application/json").expect("impossible to fail to parse");
-            let string_field_cursor = Cursor::new(string_field_vec);
-
-            multipart.add_stream("string_field",  string_field_cursor,  None as Option<&str>, Some(string_field_mime));
-
-
-            let optional_string_field_str = match serde_json::to_string(&param_optional_string_field) {
-                Ok(str) => str,
-                Err(e) => return Err(ApiError(format!("Unable to serialize optional_string_field to string: {}", e))),
-            };
-
-            let optional_string_field_vec = optional_string_field_str.as_bytes().to_vec();
-            let optional_string_field_mime = mime_0_2::Mime::from_str("application/json").expect("impossible to fail to parse");
-            let optional_string_field_cursor = Cursor::new(optional_string_field_vec);
-
-            multipart.add_stream("optional_string_field",  optional_string_field_cursor,  None as Option<&str>, Some(optional_string_field_mime));
-
-
-            let object_field_str = match serde_json::to_string(&param_object_field) {
-                Ok(str) => str,
-                Err(e) => return Err(ApiError(format!("Unable to serialize object_field to string: {}", e))),
-            };
-
-            let object_field_vec = object_field_str.as_bytes().to_vec();
-            let object_field_mime = mime_0_2::Mime::from_str("application/json").expect("impossible to fail to parse");
-            let object_field_cursor = Cursor::new(object_field_vec);
-
-            multipart.add_stream("object_field",  object_field_cursor,  None as Option<&str>, Some(object_field_mime));
-
-
-
-            let binary_field_vec = param_binary_field.to_vec();
-
-            let binary_field_mime = match mime_0_2::Mime::from_str("application/octet-stream") {
-                Ok(mime) => mime,
-                Err(err) => return Err(ApiError(format!("Unable to get mime type: {:?}", err))),
-            };
-
-            let binary_field_cursor = Cursor::new(binary_field_vec);
-
-            let filename = None as Option<&str> ;
-            multipart.add_stream("binary_field",  binary_field_cursor,  filename, Some(binary_field_mime));
-
-            let mut fields = match multipart.prepare() {
-                Ok(fields) => fields,
-                Err(err) => return Err(ApiError(format!("Unable to build request: {}", err))),
-            };
-
-            let mut body_string = String::new();
-
-            match fields.read_to_string(&mut body_string) {
-                Ok(_) => (),
-                Err(err) => return Err(ApiError(format!("Unable to build body: {}", err))),
-            }
-
-            let boundary = fields.boundary();
-
-            let multipart_header = format!("multipart/form-data;boundary={}", boundary);
-
-            (body_string, multipart_header)
-        };
-
-        *request.body_mut() = Body::from(body_string);
-
-        request.headers_mut().insert(CONTENT_TYPE, match HeaderValue::from_str(&multipart_header) {
-            Ok(h) => h,
-            Err(e) => return Err(ApiError(format!("Unable to create header: {} - {}", multipart_header, e)))
-        });
-
-        let header = HeaderValue::from_str(Has::<XSpanIdString>::get(context).0.as_str());
-        request.headers_mut().insert(HeaderName::from_static("x-span-id"), match header {
-            Ok(h) => h,
-            Err(e) => return Err(ApiError(format!("Unable to create X-Span ID header value: {}", e)))
-        });
-
-        let response = client_service.call((request, context.clone()))
-            .map_err(|e| ApiError(format!("No response received: {}", e))).await?;
-
-        match response.status().as_u16() {
-            201 => {
-                Ok(
-                    MultipartRequestPostResponse::OK
-                )
-            }
-            code => {
-                let headers = response.headers().clone();
-                let body = response.into_body()
-                       .take(100)
-                       .into_raw().await;
-                Err(ApiError(format!("Unexpected response code {}:\n{:?}\n\n{}",
-                    code,
-                    headers,
-                    match body {
-                        Ok(body) => match String::from_utf8(body) {
-                            Ok(body) => body,
-                            Err(e) => format!("<Body was not UTF8: {:?}>", e),
-                        },
-                        Err(e) => format!("<Failed to read body: {}>", e),
-                    }
-                )))
-            }
-        }
-    }
-
-    async fn multiple_identical_mime_types_post(
-        &self,
-        param_binary1: Option<swagger::ByteArray>,
-        param_binary2: Option<swagger::ByteArray>,
-        context: &C) -> Result<MultipleIdenticalMimeTypesPostResponse, ApiError>
-    {
-        let mut client_service = self.client_service.clone();
-        let mut uri = format!(
-            "{}/multiple-identical-mime-types",
-            self.base_path
-        );
-
-        // Query parameters
-        let query_string = {
-            let mut query_string = form_urlencoded::Serializer::new("".to_owned());
-            query_string.finish()
-        };
-        if !query_string.is_empty() {
-            uri += "?";
-            uri += &query_string;
-        }
-
-        let uri = match Uri::from_str(&uri) {
-            Ok(uri) => uri,
-            Err(err) => return Err(ApiError(format!("Unable to build URI: {}", err))),
-        };
-
-        let mut request = match Request::builder()
-            .method("POST")
-            .uri(uri)
-            .body(Body::empty()) {
-                Ok(req) => req,
-                Err(e) => return Err(ApiError(format!("Unable to create request: {}", e)))
-        };
-
-        // Construct the Body for a multipart/related request. The mime 0.2.6 library
-        // does not parse quoted-string parameters correctly. The boundary doesn't
-        // need to be a quoted string if it does not contain a '/', hence ensure
-        // no such boundary is used.
-        let mut boundary = generate_boundary();
-        for b in boundary.iter_mut() {
-            if b == &(b'/') {
-                *b = b'=';
-            }
-        }
-
-        let mut body_parts = vec![];
-
-        if let Some(binary1) = param_binary1 {
-            let part = Node::Part(Part {
-                headers: {
-                    let mut h = Headers::new();
-                    h.set(ContentType("application/octet-stream".parse().unwrap()));
-                    h.set_raw("Content-ID", vec![b"binary1".to_vec()]);
-                    h
-                },
-                body: binary1.0,
-            });
-            body_parts.push(part);
-        }
-
-        if let Some(binary2) = param_binary2 {
-            let part = Node::Part(Part {
-                headers: {
-                    let mut h = Headers::new();
-                    h.set(ContentType("application/octet-stream".parse().unwrap()));
-                    h.set_raw("Content-ID", vec![b"binary2".to_vec()]);
-                    h
-                },
-                body: binary2.0,
-            });
-            body_parts.push(part);
-        }
-
-        // Write the body into a vec.
-        let mut body: Vec<u8> = vec![];
-        write_multipart(&mut body, &boundary, &body_parts)
-            .expect("Failed to write multipart body");
-
-        // Add the message body to the request object.
-        *request.body_mut() = Body::from(body);
-
-        let header = "multipart/related";
-        request.headers_mut().insert(CONTENT_TYPE,
-        match HeaderValue::from_bytes(
-            &[header.as_bytes(), "; boundary=".as_bytes(), &boundary, "; type=\"application/json\"".as_bytes()].concat()
-        ) {
-            Ok(h) => h,
-            Err(e) => return Err(ApiError(format!("Unable to create header: {} - {}", header, e)))
-        });
 
         let header = HeaderValue::from_str(Has::<XSpanIdString>::get(context).0.as_str());
         request.headers_mut().insert(HeaderName::from_static("x-span-id"), match header {
@@ -783,8 +424,17 @@ impl<S, C> Api<C> for Client<S, C> where
 
         match response.status().as_u16() {
             200 => {
-                Ok(
-                    MultipleIdenticalMimeTypesPostResponse::OK
+                let body = response.into_body();
+                let body = body
+                        .into_raw()
+                        .map_err(|e| ApiError(format!("Failed to read response: {}", e))).await?;
+                let body = str::from_utf8(&body)
+                    .map_err(|e| ApiError(format!("Response was not valid UTF8: {}", e)))?;
+                let body = serde_json::from_str::<models::ExampleResponse>(body).map_err(|e| {
+                    ApiError(format!("Response body did not match the schema: {}", e))
+                })?;
+                Ok(RetrieveSomethingResponse::TheResponseWithResults
+                    (body)
                 )
             }
             code => {

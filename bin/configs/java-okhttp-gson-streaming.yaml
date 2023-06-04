@@ -1,7 +1,7 @@
 generatorName: java
 outputDir: samples/client/others/java/okhttp-gson-streaming
 library: okhttp-gson
-inputSpec: modules/openapi-generator/src/test/resources/3_0/streaming.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/Java
 additionalProperties:
   artifactId: petstore-okhttp-gson

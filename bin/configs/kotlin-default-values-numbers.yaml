@@ -1,6 +1,6 @@
 generatorName: kotlin
 outputDir: samples/client/petstore/kotlin-default-values-numbers
-inputSpec: modules/openapi-generator/src/test/resources/3_0/kotlin/issue13506-defaultValue-numbers.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/kotlin-client
 additionalProperties:
   artifactId: kotlin-default-values-numbers

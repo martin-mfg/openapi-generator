@@ -1,16 +1,4 @@
-export * from '../models/ApiResponse';
-export * from '../models/Category';
-export * from '../models/Order';
-export * from '../models/Pet';
-export * from '../models/Tag';
-export * from '../models/User';
 
-import { ApiResponse } from '../models/ApiResponse';
-import { Category } from '../models/Category';
-import { Order    , OrderStatusEnum    } from '../models/Order';
-import { Pet     , PetStatusEnum   } from '../models/Pet';
-import { Tag } from '../models/Tag';
-import { User } from '../models/User';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -32,17 +20,9 @@ const supportedMediaTypes: { [mediaType: string]: number } = {
 
 
 let enumsMap: Set<string> = new Set<string>([
-    "OrderStatusEnum",
-    "PetStatusEnum",
 ]);
 
 let typeMap: {[index: string]: any} = {
-    "ApiResponse": ApiResponse,
-    "Category": Category,
-    "Order": Order,
-    "Pet": Pet,
-    "Tag": Tag,
-    "User": User,
 }
 
 export class ObjectSerializer {

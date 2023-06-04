@@ -8,7 +8,7 @@ import org.openapitools.client.Pair;
 
 import jakarta.ws.rs.core.GenericType;
 
-import org.openapitools.client.model.FooGetDefaultResponse;
+import java.math.BigDecimal;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,35 +48,35 @@ public class DefaultApi {
 
   /**
    * 
-   * 
-   * @return FooGetDefaultResponse
+   * get some object
+   * @return List&lt;BigDecimal&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-       <tr><td> 0 </td><td> response </td><td>  -  </td></tr>
+       <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
    */
-  public FooGetDefaultResponse fooGet() throws ApiException {
-    return fooGetWithHttpInfo().getData();
+  public List<BigDecimal> retrieveSomething() throws ApiException {
+    return retrieveSomethingWithHttpInfo().getData();
   }
 
   /**
    * 
-   * 
-   * @return ApiResponse&lt;FooGetDefaultResponse&gt;
+   * get some object
+   * @return ApiResponse&lt;List&lt;BigDecimal&gt;&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-       <tr><td> 0 </td><td> response </td><td>  -  </td></tr>
+       <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<FooGetDefaultResponse> fooGetWithHttpInfo() throws ApiException {
+  public ApiResponse<List<BigDecimal>> retrieveSomethingWithHttpInfo() throws ApiException {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
-    GenericType<FooGetDefaultResponse> localVarReturnType = new GenericType<FooGetDefaultResponse>() {};
-    return apiClient.invokeAPI("DefaultApi.fooGet", "/foo", "GET", new ArrayList<>(), null,
+    GenericType<List<BigDecimal>> localVarReturnType = new GenericType<List<BigDecimal>>() {};
+    return apiClient.invokeAPI("DefaultApi.retrieveSomething", "/example/someMethod", "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                null, localVarReturnType, false);
   }

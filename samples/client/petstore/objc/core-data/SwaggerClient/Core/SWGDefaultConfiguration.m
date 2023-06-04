@@ -28,7 +28,7 @@
 - (instancetype) init {
     self = [super init];
     if (self) {
-        _host = @"http://petstore.swagger.io/v2";
+        _host = @"http://localhost";
         _username = @"";
         _password = @"";
         _accessToken= @"";
@@ -104,20 +104,6 @@
 
 - (NSDictionary *) authSettings {
     return @{
-               @"api_key":
-                   @{
-                       @"type": @"api_key",
-                       @"in": @"header",
-                       @"key": @"api_key",
-                       @"value": [self getApiKeyWithPrefix:@"api_key"]
-                   },
-               @"petstore_auth":
-                   @{
-                       @"type": @"oauth",
-                       @"in": @"header",
-                       @"key": @"Authorization",
-                       @"value": [self getAccessToken]
-                   },
                };
 }
 

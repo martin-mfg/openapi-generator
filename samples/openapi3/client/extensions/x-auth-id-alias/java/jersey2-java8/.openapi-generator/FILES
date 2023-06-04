@@ -5,7 +5,7 @@ README.md
 api/openapi.yaml
 build.gradle
 build.sbt
-docs/UsageApi.md
+docs/DefaultApi.md
 git_push.sh
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -26,7 +26,7 @@ src/main/java/org/openapitools/client/RFC3339DateFormat.java
 src/main/java/org/openapitools/client/ServerConfiguration.java
 src/main/java/org/openapitools/client/ServerVariable.java
 src/main/java/org/openapitools/client/StringUtil.java
-src/main/java/org/openapitools/client/api/UsageApi.java
+src/main/java/org/openapitools/client/api/DefaultApi.java
 src/main/java/org/openapitools/client/auth/ApiKeyAuth.java
 src/main/java/org/openapitools/client/auth/Authentication.java
 src/main/java/org/openapitools/client/auth/HttpBasicAuth.java

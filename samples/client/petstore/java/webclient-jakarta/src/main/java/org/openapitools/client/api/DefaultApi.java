@@ -2,7 +2,7 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.FooGetDefaultResponse;
+import java.math.BigDecimal;
 
 import java.util.HashMap;
 import java.util.List;
@@ -48,12 +48,12 @@ public class DefaultApi {
 
     /**
      * 
-     * 
-     * <p><b>0</b> - response
-     * @return FooGetDefaultResponse
+     * get some object
+     * <p><b>200</b> - The response with results
+     * @return List&lt;BigDecimal&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec fooGetRequestCreation() throws WebClientResponseException {
+    private ResponseSpec retrieveSomethingRequestCreation() throws WebClientResponseException {
         Object postBody = null;
         // create path and map variables
         final Map<String, Object> pathParams = new HashMap<String, Object>();
@@ -72,42 +72,42 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<FooGetDefaultResponse> localVarReturnType = new ParameterizedTypeReference<FooGetDefaultResponse>() {};
-        return apiClient.invokeAPI("/foo", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+        ParameterizedTypeReference<BigDecimal> localVarReturnType = new ParameterizedTypeReference<BigDecimal>() {};
+        return apiClient.invokeAPI("/example/someMethod", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     }
 
     /**
      * 
-     * 
-     * <p><b>0</b> - response
-     * @return FooGetDefaultResponse
+     * get some object
+     * <p><b>200</b> - The response with results
+     * @return List&lt;BigDecimal&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<FooGetDefaultResponse> fooGet() throws WebClientResponseException {
-        ParameterizedTypeReference<FooGetDefaultResponse> localVarReturnType = new ParameterizedTypeReference<FooGetDefaultResponse>() {};
-        return fooGetRequestCreation().bodyToMono(localVarReturnType);
+    public Flux<BigDecimal> retrieveSomething() throws WebClientResponseException {
+        ParameterizedTypeReference<BigDecimal> localVarReturnType = new ParameterizedTypeReference<BigDecimal>() {};
+        return retrieveSomethingRequestCreation().bodyToFlux(localVarReturnType);
     }
 
     /**
      * 
-     * 
-     * <p><b>0</b> - response
-     * @return ResponseEntity&lt;FooGetDefaultResponse&gt;
+     * get some object
+     * <p><b>200</b> - The response with results
+     * @return ResponseEntity&lt;List&lt;BigDecimal&gt;&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<FooGetDefaultResponse>> fooGetWithHttpInfo() throws WebClientResponseException {
-        ParameterizedTypeReference<FooGetDefaultResponse> localVarReturnType = new ParameterizedTypeReference<FooGetDefaultResponse>() {};
-        return fooGetRequestCreation().toEntity(localVarReturnType);
+    public Mono<ResponseEntity<List<BigDecimal>>> retrieveSomethingWithHttpInfo() throws WebClientResponseException {
+        ParameterizedTypeReference<BigDecimal> localVarReturnType = new ParameterizedTypeReference<BigDecimal>() {};
+        return retrieveSomethingRequestCreation().toEntityList(localVarReturnType);
     }
 
     /**
      * 
-     * 
-     * <p><b>0</b> - response
+     * get some object
+     * <p><b>200</b> - The response with results
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec fooGetWithResponseSpec() throws WebClientResponseException {
-        return fooGetRequestCreation();
+    public ResponseSpec retrieveSomethingWithResponseSpec() throws WebClientResponseException {
+        return retrieveSomethingRequestCreation();
     }
 }

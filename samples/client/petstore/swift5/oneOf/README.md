@@ -25,14 +25,12 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultAPI* | [**rootGet**](docs/DefaultAPI.md#rootget) | **GET** / | 
+*DefaultAPI* | [**retrieveSomething**](docs/DefaultAPI.md#retrievesomething) | **GET** /example/someMethod | 
 
 
 ## Documentation For Models
 
- - [Apple](docs/Apple.md)
- - [Banana](docs/Banana.md)
- - [Fruit](docs/Fruit.md)
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

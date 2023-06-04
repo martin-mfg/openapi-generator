@@ -1,0 +1,21 @@
+package org.openapitools.server.apis;
+
+
+import javax.ws.rs.*
+import javax.ws.rs.core.Response
+
+
+import java.io.InputStream
+
+
+
+@Path("/")
+@javax.annotation.Generated(value = arrayOf("org.openapitools.codegen.languages.KotlinServerCodegen"))
+class DefaultApi {
+
+    @GET
+    @Produces("application/json")
+    suspend fun retrieveSomething(): Response {
+        return Response.ok().entity("magic!").build();
+    }
+}

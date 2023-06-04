@@ -7,8 +7,6 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRequestBuilder;
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory;
@@ -17,9 +15,6 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 import org.openapitools.client.auth.HttpBasicAuth;
 import org.openapitools.client.auth.HttpBearerAuth;
 import org.openapitools.client.auth.ApiKeyAuth;
-import org.openapitools.client.auth.OAuth;
-import org.openapitools.client.auth.OAuth.AccessTokenListener;
-import org.openapitools.client.auth.OAuthFlow;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -53,25 +48,7 @@ public class ApiClient {
   public ApiClient(String[] authNames) {
     this();
     for(String authName : authNames) {
-      Interceptor auth;
-      if ("petstore_auth".equals(authName)) {
-        
-        auth = new OAuth(OAuthFlow.IMPLICIT, "http://petstore.swagger.io/api/oauth/dialog", "", "write:pets, read:pets");
-      } else if ("api_key".equals(authName)) {
-        
-        auth = new ApiKeyAuth("header", "api_key");
-      } else if ("api_key_query".equals(authName)) {
-        
-        auth = new ApiKeyAuth("query", "api_key_query");
-      } else if ("http_basic_test".equals(authName)) {
-        
-        auth = new HttpBasicAuth();
-        
-      } else {
-        throw new RuntimeException("auth name \"" + authName + "\" not found in available auth names");
-      }
-
-      addAuthorization(authName, auth);
+      throw new RuntimeException("auth name \"" + authName + "\" not found in available auth names");
     }
   }
 
@@ -104,27 +81,10 @@ public class ApiClient {
     this.setCredentials(username,  password);
   }
 
-  /**
-   * Helper constructor for single password oauth2
-   * @param authName Authentication name
-   * @param clientId Client ID
-   * @param secret Client Secret
-   * @param username Username
-   * @param password Password
-   */
-  public ApiClient(String authName, String clientId, String secret, String username, String password) {
-    this(authName);
-    this.getTokenEndPoint()
-      .setClientId(clientId)
-      .setClientSecret(secret)
-      .setUsername(username)
-      .setPassword(password);
-  }
-
   public void createDefaultAdapter() {
     json = new JSON();
 
-    String baseUrl = "http://petstore.swagger.io:80/v2";
+    String baseUrl = "http://localhost";
     if (!baseUrl.endsWith("/"))
       baseUrl = baseUrl + "/";
 
@@ -209,98 +169,10 @@ public class ApiClient {
         basicAuth.setCredentials(username, password);
         return this;
       }
-      if (apiAuthorization instanceof OAuth) {
-        OAuth oauth = (OAuth) apiAuthorization;
-        oauth.getTokenRequestBuilder().setUsername(username).setPassword(password);
-        return this;
-      }
     }
     return this;
   }
 
-  /**
-   * Helper method to configure the token endpoint of the first oauth found in the apiAuthorizations (there should be only one)
-   * @return Token request builder
-   */
-  public TokenRequestBuilder getTokenEndPoint() {
-    for(Interceptor apiAuthorization : apiAuthorizations.values()) {
-      if (apiAuthorization instanceof OAuth) {
-        OAuth oauth = (OAuth) apiAuthorization;
-        return oauth.getTokenRequestBuilder();
-      }
-    }
-    return null;
-  }
-
-  /**
-   * Helper method to configure authorization endpoint of the first oauth found in the apiAuthorizations (there should be only one)
-   * @return Authentication request builder
-   */
-  public AuthenticationRequestBuilder getAuthorizationEndPoint() {
-    for(Interceptor apiAuthorization : apiAuthorizations.values()) {
-      if (apiAuthorization instanceof OAuth) {
-        OAuth oauth = (OAuth) apiAuthorization;
-        return oauth.getAuthenticationRequestBuilder();
-      }
-    }
-    return null;
-  }
-
-  /**
-   * Helper method to pre-set the oauth access token of the first oauth found in the apiAuthorizations (there should be only one)
-   * @param accessToken Access token
-   * @return ApiClient
-   */
-  public ApiClient setAccessToken(String accessToken) {
-    for(Interceptor apiAuthorization : apiAuthorizations.values()) {
-      if (apiAuthorization instanceof OAuth) {
-        OAuth oauth = (OAuth) apiAuthorization;
-        oauth.setAccessToken(accessToken);
-        return this;
-      }
-    }
-    return this;
-  }
-
-  /**
-   * Helper method to configure the oauth accessCode/implicit flow parameters
-   * @param clientId Client ID
-   * @param clientSecret Client secret
-   * @param redirectURI Redirect URI
-   * @return ApiClient
-   */
-  public ApiClient configureAuthorizationFlow(String clientId, String clientSecret, String redirectURI) {
-    for(Interceptor apiAuthorization : apiAuthorizations.values()) {
-      if (apiAuthorization instanceof OAuth) {
-        OAuth oauth = (OAuth) apiAuthorization;
-        oauth.getTokenRequestBuilder()
-          .setClientId(clientId)
-          .setClientSecret(clientSecret)
-          .setRedirectURI(redirectURI);
-        oauth.getAuthenticationRequestBuilder()
-          .setClientId(clientId)
-          .setRedirectURI(redirectURI);
-        return this;
-      }
-    }
-    return this;
-  }
-
-  /**
-   * Configures a listener which is notified when a new access token is received.
-   * @param accessTokenListener Access token listener
-   * @return ApiClient
-   */
-  public ApiClient registerAccessTokenListener(AccessTokenListener accessTokenListener) {
-    for(Interceptor apiAuthorization : apiAuthorizations.values()) {
-      if (apiAuthorization instanceof OAuth) {
-        OAuth oauth = (OAuth) apiAuthorization;
-        oauth.registerAccessTokenListener(accessTokenListener);
-        return this;
-      }
-    }
-    return this;
-  }
 
   /**
    * Adds an authorization to be used by the client

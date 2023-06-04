@@ -1,7 +1,7 @@
 generatorName: spring
 outputDir: samples/client/petstore/spring-cloud-feign-without-url
 library: spring-cloud
-inputSpec: modules/openapi-generator/src/test/resources/3_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/JavaSpring
 additionalProperties:
   documentationProvider: springfox

@@ -57,9 +57,7 @@ public class SecurityAPIUtils {
         clientSecret = configuration.hasPath("oauth.clientSecret") ? configuration.getString("oauth.clientSecret") : "";
         leeway = configuration.hasPath("oauth.leeway") ? configuration.getLong("oauth.leeway") : 3;
 
-        tokenIntrospectEndpoints.put("petstore_token", "https://keycloak-dev.business.stingray.com/auth/realms/CSLocal/protocol/openid-connect/token/introspect");
 
-        jwksEndpoints.put("petstore_token", "https://keycloak-dev.business.stingray.com/auth/realms/CSLocal/protocol/openid-connect/certs");
     }
 
     //This function is not currently used because we hardcode USE_ONLINE_VALIDATION to false but might in the future versions

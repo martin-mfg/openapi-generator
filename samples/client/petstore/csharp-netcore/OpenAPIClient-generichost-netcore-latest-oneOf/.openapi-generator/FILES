@@ -4,9 +4,6 @@ README.md
 api/openapi.yaml
 appveyor.yml
 docs/apis/DefaultApi.md
-docs/models/Apple.md
-docs/models/Banana.md
-docs/models/Fruit.md
 docs/scripts/git_push.ps1
 docs/scripts/git_push.sh
 src/Org.OpenAPITools.Test/Api/DependencyInjectionTests.cs
@@ -31,8 +28,5 @@ src/Org.OpenAPITools/Client/TokenProvider`1.cs
 src/Org.OpenAPITools/Extensions/IHostBuilderExtensions.cs
 src/Org.OpenAPITools/Extensions/IHttpClientBuilderExtensions.cs
 src/Org.OpenAPITools/Extensions/IServiceCollectionExtensions.cs
-src/Org.OpenAPITools/Model/Apple.cs
-src/Org.OpenAPITools/Model/Banana.cs
-src/Org.OpenAPITools/Model/Fruit.cs
 src/Org.OpenAPITools/Org.OpenAPITools.csproj
 src/Org.OpenAPITools/README.md

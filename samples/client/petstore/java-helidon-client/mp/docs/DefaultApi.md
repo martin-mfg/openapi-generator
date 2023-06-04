@@ -1,18 +1,20 @@
 # DefaultApi
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**fooGet**](DefaultApi.md#fooGet) | **GET** /foo |  |
+| [**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
 
 
 
-## fooGet
+## retrieveSomething
 
-> FooGetDefaultResponse fooGet()
+> List&lt;BigDecimal&gt; retrieveSomething()
 
 
+
+get some object
 
 ### Parameters
 
@@ -20,7 +22,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+[**List&lt;BigDecimal&gt;**](BigDecimal.md)
 
 ### Authorization
 
@@ -35,5 +37,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | response |  -  |
+| **200** | The response with results |  -  |
 

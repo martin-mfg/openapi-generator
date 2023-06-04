@@ -1,6 +1,6 @@
 generatorName: ruby
 outputDir: samples/openapi3/client/extensions/x-auth-id-alias/ruby-client
-inputSpec: modules/openapi-generator/src/test/resources/3_0/extensions/x-auth-id-alias.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/ruby-client
 additionalProperties:
   gemName: x_auth_id_alias

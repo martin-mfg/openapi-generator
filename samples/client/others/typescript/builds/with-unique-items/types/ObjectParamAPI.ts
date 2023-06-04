@@ -1,12 +1,11 @@
 import { ResponseContext, RequestContext, HttpFile } from '../http/http';
 import { Configuration} from '../configuration'
 
-import { Response } from '../models/Response';
 
 import { ObservableDefaultApi } from "./ObservableAPI";
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
 
-export interface DefaultApiUniqueItemsRequest {
+export interface DefaultApiRetrieveSomethingRequest {
 }
 
 export class ObjectDefaultApi {
@@ -17,10 +16,11 @@ export class ObjectDefaultApi {
     }
 
     /**
+     * get some object
      * @param param the request object
      */
-    public uniqueItems(param: DefaultApiUniqueItemsRequest = {}, options?: Configuration): Promise<Response> {
-        return this.api.uniqueItems( options).toPromise();
+    public retrieveSomething(param: DefaultApiRetrieveSomethingRequest = {}, options?: Configuration): Promise<Array<number>> {
+        return this.api.retrieveSomething( options).toPromise();
     }
 
 }

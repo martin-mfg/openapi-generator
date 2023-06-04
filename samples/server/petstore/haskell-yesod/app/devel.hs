@@ -1,5 +1,5 @@
 {-# LANGUAGE PackageImports #-}
-import "open-api-petstore" Application (develMain)
+import "some-example" Application (develMain)
 import Prelude (IO)
 
 main :: IO ()

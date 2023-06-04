@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "org.openapitools",
     name := "petstore-jersey2-java8-localdatetime",
-    version := "1.0.0",
+    version := "0.0.1",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     Compile / javacOptions ++= Seq("-Xlint:deprecation"),
@@ -21,7 +21,6 @@ lazy val root = (project in file(".")).
       "com.fasterxml.jackson.core" % "jackson-databind" % "2.13.4.1" % "compile",
       "com.fasterxml.jackson.datatype" % "jackson-datatype-jsr310" % "2.13.2" % "compile",
       "org.openapitools" % "jackson-databind-nullable" % "0.2.6" % "compile",
-      "com.github.scribejava" % "scribejava-apis" % "8.3.1" % "compile",
       "jakarta.annotation" % "jakarta.annotation-api" % "1.3.5" % "compile",
       "org.junit.jupiter" % "junit-jupiter-api" % "5.8.2" % "test"
     )

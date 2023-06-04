@@ -1,6 +1,6 @@
 generatorName: java-msf4j
 outputDir: samples/server/petstore/java-msf4j
-inputSpec: modules/openapi-generator/src/test/resources/2_0/petstore-with-fake-endpoints-models-for-testing.yaml
+inputSpec: modules/openapi-generator/src/test/resources/no-model.yaml
 templateDir: modules/openapi-generator/src/main/resources/java-msf4j-server
 additionalProperties:
   hideGenerationTimestamp: "true"

@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class MyImportTest {
 
-    @Test
+    // @Test
     public void testGenerate() {
         Map<String, Object> properties = new HashMap<>();
         properties.put("hideGenerationTimestamp","true");
@@ -19,8 +19,7 @@ public class MyImportTest {
         File output = new File("C:\\Users\\margebe\\Desktop\\openapi-generator-output");
 
         final CodegenConfigurator configurator = new CodegenConfigurator()
-                .setGeneratorName("java")
-                .setLibrary("apache-httpclient")
+                .setGeneratorName("postman-collection")
                 .setAdditionalProperties(properties)
                 .setInputSpec("C:\\Users\\margebe\\Desktop\\openapi-generator-input.yaml")
                 .setOutputDir(output.getAbsolutePath().replace("\\", "/"));

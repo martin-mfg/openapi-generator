@@ -7,66 +7,9 @@ Encapsulates generated server code for PetStoreServer
 
 The following server methods must be implemented:
 
-- **add_pet**
-    - *invocation:* POST /pet
-    - *signature:* add_pet(req::HTTP.Request, pet::Pet;) -> Pet
-- **delete_pet**
-    - *invocation:* DELETE /pet/{petId}
-    - *signature:* delete_pet(req::HTTP.Request, pet_id::Int64; api_key=nothing,) -> Nothing
-- **find_pets_by_status**
-    - *invocation:* GET /pet/findByStatus
-    - *signature:* find_pets_by_status(req::HTTP.Request, status::Vector{String};) -> Vector{Pet}
-- **find_pets_by_tags**
-    - *invocation:* GET /pet/findByTags
-    - *signature:* find_pets_by_tags(req::HTTP.Request, tags::Vector{String};) -> Vector{Pet}
-- **get_pet_by_id**
-    - *invocation:* GET /pet/{petId}
-    - *signature:* get_pet_by_id(req::HTTP.Request, pet_id::Int64;) -> Pet
-- **update_pet**
-    - *invocation:* PUT /pet
-    - *signature:* update_pet(req::HTTP.Request, pet::Pet;) -> Pet
-- **update_pet_with_form**
-    - *invocation:* POST /pet/{petId}
-    - *signature:* update_pet_with_form(req::HTTP.Request, pet_id::Int64; name=nothing, status=nothing,) -> Nothing
-- **upload_file**
-    - *invocation:* POST /pet/{petId}/uploadImage
-    - *signature:* upload_file(req::HTTP.Request, pet_id::Int64; additional_metadata=nothing, file=nothing,) -> ApiResponse
-- **delete_order**
-    - *invocation:* DELETE /store/order/{orderId}
-    - *signature:* delete_order(req::HTTP.Request, order_id::String;) -> Nothing
-- **get_inventory**
-    - *invocation:* GET /store/inventory
-    - *signature:* get_inventory(req::HTTP.Request;) -> Dict{String, Int64}
-- **get_order_by_id**
-    - *invocation:* GET /store/order/{orderId}
-    - *signature:* get_order_by_id(req::HTTP.Request, order_id::Int64;) -> Order
-- **place_order**
-    - *invocation:* POST /store/order
-    - *signature:* place_order(req::HTTP.Request, order::Order;) -> Order
-- **create_user**
-    - *invocation:* POST /user
-    - *signature:* create_user(req::HTTP.Request, user::User;) -> Nothing
-- **create_users_with_array_input**
-    - *invocation:* POST /user/createWithArray
-    - *signature:* create_users_with_array_input(req::HTTP.Request, user::Vector{User};) -> Nothing
-- **create_users_with_list_input**
-    - *invocation:* POST /user/createWithList
-    - *signature:* create_users_with_list_input(req::HTTP.Request, user::Vector{User};) -> Nothing
-- **delete_user**
-    - *invocation:* DELETE /user/{username}
-    - *signature:* delete_user(req::HTTP.Request, username::String;) -> Nothing
-- **get_user_by_name**
-    - *invocation:* GET /user/{username}
-    - *signature:* get_user_by_name(req::HTTP.Request, username::String;) -> User
-- **login_user**
-    - *invocation:* GET /user/login
-    - *signature:* login_user(req::HTTP.Request, username::String, password::String;) -> String
-- **logout_user**
-    - *invocation:* GET /user/logout
-    - *signature:* logout_user(req::HTTP.Request;) -> Nothing
-- **update_user**
-    - *invocation:* PUT /user/{username}
-    - *signature:* update_user(req::HTTP.Request, username::String, user::User;) -> Nothing
+- **retrieve_something**
+    - *invocation:* GET /example/someMethod
+    - *signature:* retrieve_something(req::HTTP.Request;) -> Vector{Float64}
 """
 module PetStoreServer
 
@@ -77,13 +20,11 @@ using TimeZones
 using OpenAPI
 using OpenAPI.Servers
 
-const API_VERSION = "1.0.0"
+const API_VERSION = "0.0.1"
 
 include("modelincludes.jl")
 
-include("apis/api_PetApi.jl")
-include("apis/api_StoreApi.jl")
-include("apis/api_UserApi.jl")
+include("apis/api_DefaultApi.jl")
 
 """
 Register handlers for all APIs in this module in the supplied `Router` instance.
@@ -106,9 +47,7 @@ The order in which middlewares are invoked are:
 `init |> read |> pre_validation |> validate |> pre_invoke |> invoke |> post_invoke`
 """
 function register(router::HTTP.Router, impl; path_prefix::String="", optional_middlewares...)
-    registerPetApi(router, impl; path_prefix=path_prefix, optional_middlewares...)
-    registerStoreApi(router, impl; path_prefix=path_prefix, optional_middlewares...)
-    registerUserApi(router, impl; path_prefix=path_prefix, optional_middlewares...)
+    registerDefaultApi(router, impl; path_prefix=path_prefix, optional_middlewares...)
     return router
 end
 

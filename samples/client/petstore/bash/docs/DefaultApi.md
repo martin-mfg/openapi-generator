@@ -1,21 +1,23 @@
 # DefaultApi
 
-All URIs are relative to */v2*
+All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fooGet**](DefaultApi.md#fooGet) | **GET** /foo | 
+[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
 
-## fooGet
+## retrieveSomething
 
 
+
+get some object
 
 ### Example
 
 ```bash
-petstore-cli fooGet
+petstore-cli retrieveSomething
 ```
 
 ### Parameters
@@ -24,7 +26,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponseDefault**](InlineResponseDefault.md)
+**array[integer]**
 
 ### Authorization
 

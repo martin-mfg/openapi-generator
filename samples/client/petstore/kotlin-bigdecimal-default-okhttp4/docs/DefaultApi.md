@@ -4,14 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**testPost**](DefaultApi.md#testPost) | **POST** /test | 
+[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
-<a id="testPost"></a>
-# **testPost**
-> testPost(apa)
+<a id="retrieveSomething"></a>
+# **retrieveSomething**
+> kotlin.collections.List&lt;java.math.BigDecimal&gt; retrieveSomething()
 
 
+
+get some object
 
 ### Example
 ```kotlin
@@ -20,27 +22,24 @@ Method | HTTP request | Description
 //import org.openapitools.client.models.*
 
 val apiInstance = DefaultApi()
-val apa : Apa =  // Apa | 
 try {
-    apiInstance.testPost(apa)
+    val result : kotlin.collections.List<java.math.BigDecimal> = apiInstance.retrieveSomething()
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DefaultApi#testPost")
+    println("4xx response calling DefaultApi#retrieveSomething")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DefaultApi#testPost")
+    println("5xx response calling DefaultApi#retrieveSomething")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apa** | [**Apa**](Apa.md)|  |
+This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;java.math.BigDecimal&gt;**](java.math.BigDecimal.md)
 
 ### Authorization
 
@@ -48,6 +47,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
