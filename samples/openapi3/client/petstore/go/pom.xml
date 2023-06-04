@@ -34,6 +34,7 @@
                         </goals>
                         <configuration>
                             <executable>go</executable>
+                            <basedir>./go-petstore</basedir>
                             <arguments>
                                 <argument>get</argument>
                                 <argument>github.com/stretchr/testify/assert</argument>
@@ -48,6 +49,7 @@
                         </goals>
                         <configuration>
                             <executable>go</executable>
+                            <basedir>./go-petstore</basedir>
                             <arguments>
                                 <argument>get</argument>
                                 <argument>golang.org/x/oauth2</argument>
@@ -62,6 +64,7 @@
                         </goals>
                         <configuration>
                             <executable>go</executable>
+                            <basedir>./go-petstore</basedir>
                             <arguments>
                                 <argument>get</argument>
                                 <argument>golang.org/x/net/context</argument>
@@ -76,9 +79,11 @@
                         </goals>
                         <configuration>
                             <executable>go</executable>
+                            <basedir>./go-petstore</basedir>
                             <arguments>
                                 <argument>test</argument>
                                 <argument>-v</argument>
+                                <argument>./...</argument>
                             </arguments>
                         </configuration>
                     </execution>
