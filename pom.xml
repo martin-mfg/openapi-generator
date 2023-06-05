@@ -1283,7 +1283,6 @@
                 <!-- servers -->
                 <!--<module>samples/server/petstore/haskell-servant</module>-->
                 <!-- test Go projects -->
-                <module>samples/openapi3/client/petstore/go</module>
                 <!-- comment out due to Go version
                 <module>samples/server/petstore/go-gin-api-server</module>-->
             </modules>
