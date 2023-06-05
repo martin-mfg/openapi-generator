@@ -563,9 +563,6 @@
                     <value>clojure</value>
                 </property>
             </activation>
-            <modules>
-                <module>samples/client/petstore/clojure</module>
-            </modules>
         </profile>
         <profile>
             <id>haskell-http-client</id>
@@ -1056,9 +1053,6 @@
                     <value>java</value>
                 </property>
             </activation>
-            <modules>
-                <module>samples/client/petstore/go</module>
-            </modules>
         </profile>
         <profile>
             <id>springboot-beanvalidation</id>
@@ -1235,7 +1229,6 @@
                 <module>samples/client/petstore/typescript-rxjs/builds/with-npm-version</module>
                 <module>samples/client/petstore/typescript-axios/builds/with-npm-version</module>
                 <module>samples/client/petstore/typescript-axios/tests/default</module>
-                <module>samples/client/petstore/javascript-flowtyped</module>
                 <module>samples/client/petstore/javascript-es6</module>
                 <module>samples/client/petstore/javascript-promise-es6</module>
             </modules>
@@ -1266,7 +1259,6 @@
                 <!-- test java-related projects -->
                 <module>samples/client/petstore/scala-akka</module>
                 <module>samples/client/petstore/scala-sttp</module>
-                <module>samples/client/petstore/clojure</module>
                 <module>samples/client/petstore/java/jersey2-java8</module>
                 <module>samples/openapi3/client/petstore/java/jersey2-java8</module>
                 <module>samples/client/petstore/java/jersey3</module>
@@ -1291,7 +1283,6 @@
                 <!-- servers -->
                 <!--<module>samples/server/petstore/haskell-servant</module>-->
                 <!-- test Go projects -->
-                <module>samples/client/petstore/go</module>
                 <module>samples/openapi3/client/petstore/go</module>
                 <!-- comment out due to Go version
                 <module>samples/server/petstore/go-gin-api-server</module>-->
