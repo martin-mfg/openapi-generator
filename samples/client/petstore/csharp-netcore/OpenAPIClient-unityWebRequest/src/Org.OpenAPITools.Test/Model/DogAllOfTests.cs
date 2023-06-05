@@ -54,7 +54,6 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<DogAllOf>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Breed'
         /// </summary>

@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Org.OpenAPITools.Api;
 using Org.OpenAPITools.Model;
 using Org.OpenAPITools.Client;
 using System.Reflection;
@@ -57,12 +56,12 @@ namespace Org.OpenAPITools.Test.Model
 
 
         /// <summary>
-        /// Test the property '_Name'
+        /// Test the property 'VarName'
         /// </summary>
         [Fact]
-        public void _NameTest()
+        public void VarNameTest()
         {
-            // TODO unit test for the property '_Name'
+            // TODO unit test for the property 'VarName'
         }
         /// <summary>
         /// Test the property 'SnakeCase'
@@ -81,12 +80,12 @@ namespace Org.OpenAPITools.Test.Model
             // TODO unit test for the property 'Property'
         }
         /// <summary>
-        /// Test the property '_123Number'
+        /// Test the property 'var123Number'
         /// </summary>
         [Fact]
-        public void _123NumberTest()
+        public void var123NumberTest()
         {
-            // TODO unit test for the property '_123Number'
+            // TODO unit test for the property 'var123Number'
         }
 
     }

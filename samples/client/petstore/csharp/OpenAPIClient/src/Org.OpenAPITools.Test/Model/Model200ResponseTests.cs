@@ -1,4 +1,4 @@
-/* 
+/*
  * OpenAPI Petstore
  *
  * This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \" \\
@@ -74,12 +74,12 @@ namespace Org.OpenAPITools.Test
             // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'Class'
+        /// Test the property 'VarClass'
         /// </summary>
         [Test]
-        public void ClassTest()
+        public void VarClassTest()
         {
-            // TODO unit test for the property 'Class'
+            // TODO unit test for the property 'VarClass'
         }
 
     }

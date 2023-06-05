@@ -84,7 +84,7 @@ namespace Org.OpenAPITools.Test.Api
         public void FakeOuterCompositeSerializeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //OuterComposite outerComposite = null;
+            //OuterComposite? outerComposite = null;
             //var response = instance.FakeOuterCompositeSerialize(outerComposite);
             //Assert.IsType<OuterComposite>(response);
         }
@@ -108,8 +108,9 @@ namespace Org.OpenAPITools.Test.Api
         public void FakeOuterStringSerializeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string body = null;
-            //var response = instance.FakeOuterStringSerialize(body);
+            //Guid requiredStringUuid = null;
+            //string? body = null;
+            //var response = instance.FakeOuterStringSerialize(requiredStringUuid, body);
             //Assert.IsType<string>(response);
         }
 
@@ -167,20 +168,20 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //decimal number = null;
-            //double _double = null;
+            //double varDouble = null;
             //string patternWithoutDelimiter = null;
-            //byte[] _byte = null;
+            //byte[] varByte = null;
             //int? integer = null;
             //int? int32 = null;
             //long? int64 = null;
-            //float? _float = null;
-            //string _string = null;
-            //System.IO.Stream binary = null;
+            //float? varFloat = null;
+            //string? varString = null;
+            //System.IO.Stream? binary = null;
             //DateTime? date = null;
             //DateTime? dateTime = null;
-            //string password = null;
-            //string callback = null;
-            //instance.TestEndpointParameters(number, _double, patternWithoutDelimiter, _byte, integer, int32, int64, _float, _string, binary, date, dateTime, password, callback);
+            //string? password = null;
+            //string? callback = null;
+            //instance.TestEndpointParameters(number, varDouble, patternWithoutDelimiter, varByte, integer, int32, int64, varFloat, varString, binary, date, dateTime, password, callback);
         }
 
         /// <summary>
@@ -190,14 +191,14 @@ namespace Org.OpenAPITools.Test.Api
         public void TestEnumParametersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //List<string> enumHeaderStringArray = null;
-            //string enumHeaderString = null;
-            //List<string> enumQueryStringArray = null;
-            //string enumQueryString = null;
+            //List<string>? enumHeaderStringArray = null;
+            //string? enumHeaderString = null;
+            //List<string>? enumQueryStringArray = null;
+            //string? enumQueryString = null;
             //int? enumQueryInteger = null;
             //double? enumQueryDouble = null;
-            //List<string> enumFormStringArray = null;
-            //string enumFormString = null;
+            //List<string>? enumFormStringArray = null;
+            //string? enumFormString = null;
             //instance.TestEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
         }
 

@@ -24,7 +24,6 @@ import org.openapitools.client.model.ReadOnlyFirst;
 
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for ArrayTest
  */

@@ -22,7 +22,6 @@ import org.openapitools.server.model.OuterEnumInteger;
 import org.openapitools.server.model.OuterEnumIntegerDefaultValue;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for EnumTest
  */

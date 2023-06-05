@@ -23,7 +23,6 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for AdditionalPropertiesClass
  */

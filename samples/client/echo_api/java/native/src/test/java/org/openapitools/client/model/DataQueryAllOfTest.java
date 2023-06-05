@@ -23,7 +23,6 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-
 /**
  * Model tests for DataQueryAllOf
  */
@@ -36,6 +35,14 @@ public class DataQueryAllOfTest {
     @Test
     public void testDataQueryAllOf() {
         // TODO: test DataQueryAllOf
+    }
+
+    /**
+     * Test the property 'suffix'
+     */
+    @Test
+    public void suffixTest() {
+        // TODO: test suffix
     }
 
     /**

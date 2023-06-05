@@ -15,7 +15,6 @@ package org.openapitools.server.model;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for HealthCheckResult
  */

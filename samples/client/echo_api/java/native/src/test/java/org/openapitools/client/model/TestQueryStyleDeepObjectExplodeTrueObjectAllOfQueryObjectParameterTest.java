@@ -22,7 +22,6 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-
 /**
  * Model tests for TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter
  */
@@ -35,22 +34,6 @@ public class TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameterT
     @Test
     public void testTestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter() {
         // TODO: test TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameter
-    }
-
-    /**
-     * Test the property 'id'
-     */
-    @Test
-    public void idTest() {
-        // TODO: test id
-    }
-
-    /**
-     * Test the property 'name'
-     */
-    @Test
-    public void nameTest() {
-        // TODO: test name
     }
 
     /**
@@ -67,6 +50,22 @@ public class TestQueryStyleDeepObjectExplodeTrueObjectAllOfQueryObjectParameterT
     @Test
     public void colorTest() {
         // TODO: test color
+    }
+
+    /**
+     * Test the property 'id'
+     */
+    @Test
+    public void idTest() {
+        // TODO: test id
+    }
+
+    /**
+     * Test the property 'name'
+     */
+    @Test
+    public void nameTest() {
+        // TODO: test name
     }
 
 }

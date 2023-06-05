@@ -107,8 +107,9 @@ namespace Org.OpenAPITools.Test.Api
         public void FakeOuterStringSerializeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //Guid requiredStringUuid = null;
             //string body = null;
-            //var response = instance.FakeOuterStringSerialize(body);
+            //var response = instance.FakeOuterStringSerialize(requiredStringUuid, body);
             //Assert.IsType<string>(response);
         }
 
@@ -166,20 +167,20 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //decimal number = null;
-            //double _double = null;
+            //double varDouble = null;
             //string patternWithoutDelimiter = null;
-            //byte[] _byte = null;
+            //byte[] varByte = null;
             //int? integer = null;
             //int? int32 = null;
             //long? int64 = null;
-            //float? _float = null;
-            //string _string = null;
+            //float? varFloat = null;
+            //string varString = null;
             //FileParameter binary = null;
             //DateTime? date = null;
             //DateTime? dateTime = null;
             //string password = null;
             //string callback = null;
-            //instance.TestEndpointParameters(number, _double, patternWithoutDelimiter, _byte, integer, int32, int64, _float, _string, binary, date, dateTime, password, callback);
+            //instance.TestEndpointParameters(number, varDouble, patternWithoutDelimiter, varByte, integer, int32, int64, varFloat, varString, binary, date, dateTime, password, callback);
         }
 
         /// <summary>

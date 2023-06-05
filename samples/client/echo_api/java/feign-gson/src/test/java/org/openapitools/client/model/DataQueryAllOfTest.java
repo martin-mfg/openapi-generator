@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for DataQueryAllOf
  */
@@ -35,6 +34,14 @@ class DataQueryAllOfTest {
     @Test
     void testDataQueryAllOf() {
         // TODO: test DataQueryAllOf
+    }
+
+    /**
+     * Test the property 'suffix'
+     */
+    @Test
+    void suffixTest() {
+        // TODO: test suffix
     }
 
     /**

@@ -54,7 +54,6 @@ namespace Org.OpenAPITools.Test.Model
             //Assert.IsType<ChildCatAllOf>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Name'
         /// </summary>

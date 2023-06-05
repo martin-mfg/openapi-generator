@@ -25,7 +25,6 @@ import org.openapitools.client.model.ModelFile;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for FileSchemaTestClass
  */

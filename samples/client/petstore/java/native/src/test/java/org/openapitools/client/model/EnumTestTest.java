@@ -30,7 +30,6 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-
 /**
  * Model tests for EnumTest
  */
@@ -67,6 +66,14 @@ public class EnumTestTest {
     @Test
     public void enumIntegerTest() {
         // TODO: test enumInteger
+    }
+
+    /**
+     * Test the property 'enumIntegerOnly'
+     */
+    @Test
+    public void enumIntegerOnlyTest() {
+        // TODO: test enumIntegerOnly
     }
 
     /**

@@ -24,7 +24,6 @@ import org.openapitools.client.model.Triangle;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for ShapeOrNull
  */

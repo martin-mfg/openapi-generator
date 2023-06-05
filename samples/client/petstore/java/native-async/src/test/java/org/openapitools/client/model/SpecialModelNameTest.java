@@ -22,7 +22,6 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-
 /**
  * Model tests for SpecialModelName
  */
@@ -43,6 +42,14 @@ public class SpecialModelNameTest {
     @Test
     public void $specialPropertyNameTest() {
         // TODO: test $specialPropertyName
+    }
+
+    /**
+     * Test the property 'specialModelName'
+     */
+    @Test
+    public void specialModelNameTest() {
+        // TODO: test specialModelName
     }
 
 }

@@ -20,10 +20,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.HashMap;
 import java.util.Map;
+import org.openapitools.jackson.nullable.JsonNullable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-
 
 /**
  * Model tests for AdditionalPropertiesClass
@@ -53,6 +56,54 @@ public class AdditionalPropertiesClassTest {
     @Test
     public void mapOfMapPropertyTest() {
         // TODO: test mapOfMapProperty
+    }
+
+    /**
+     * Test the property 'anytype1'
+     */
+    @Test
+    public void anytype1Test() {
+        // TODO: test anytype1
+    }
+
+    /**
+     * Test the property 'mapWithUndeclaredPropertiesAnytype1'
+     */
+    @Test
+    public void mapWithUndeclaredPropertiesAnytype1Test() {
+        // TODO: test mapWithUndeclaredPropertiesAnytype1
+    }
+
+    /**
+     * Test the property 'mapWithUndeclaredPropertiesAnytype2'
+     */
+    @Test
+    public void mapWithUndeclaredPropertiesAnytype2Test() {
+        // TODO: test mapWithUndeclaredPropertiesAnytype2
+    }
+
+    /**
+     * Test the property 'mapWithUndeclaredPropertiesAnytype3'
+     */
+    @Test
+    public void mapWithUndeclaredPropertiesAnytype3Test() {
+        // TODO: test mapWithUndeclaredPropertiesAnytype3
+    }
+
+    /**
+     * Test the property 'emptyMap'
+     */
+    @Test
+    public void emptyMapTest() {
+        // TODO: test emptyMap
+    }
+
+    /**
+     * Test the property 'mapWithUndeclaredPropertiesString'
+     */
+    @Test
+    public void mapWithUndeclaredPropertiesStringTest() {
+        // TODO: test mapWithUndeclaredPropertiesString
     }
 
 }

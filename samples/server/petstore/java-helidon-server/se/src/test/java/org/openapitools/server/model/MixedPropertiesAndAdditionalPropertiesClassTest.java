@@ -19,7 +19,6 @@ import java.util.UUID;
 import org.openapitools.server.model.Animal;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for MixedPropertiesAndAdditionalPropertiesClass
  */

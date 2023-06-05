@@ -15,7 +15,6 @@ package org.openapitools.server.model;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for ModelApiResponse
  */

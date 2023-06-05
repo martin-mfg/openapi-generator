@@ -23,7 +23,6 @@ import org.openapitools.server.model.Category;
 import org.openapitools.server.model.Tag;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for Pet
  */

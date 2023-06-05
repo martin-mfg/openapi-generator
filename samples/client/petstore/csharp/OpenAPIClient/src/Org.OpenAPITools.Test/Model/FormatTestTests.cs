@@ -1,4 +1,4 @@
-/* 
+/*
  * OpenAPI Petstore
  *
  * This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \" \\
@@ -98,36 +98,44 @@ namespace Org.OpenAPITools.Test
             // TODO unit test for the property 'Number'
         }
         /// <summary>
-        /// Test the property 'Float'
+        /// Test the property 'VarFloat'
         /// </summary>
         [Test]
-        public void FloatTest()
+        public void VarFloatTest()
         {
-            // TODO unit test for the property 'Float'
+            // TODO unit test for the property 'VarFloat'
         }
         /// <summary>
-        /// Test the property 'Double'
+        /// Test the property 'VarDouble'
         /// </summary>
         [Test]
-        public void DoubleTest()
+        public void VarDoubleTest()
         {
-            // TODO unit test for the property 'Double'
+            // TODO unit test for the property 'VarDouble'
         }
         /// <summary>
-        /// Test the property 'String'
+        /// Test the property 'VarDecimal'
         /// </summary>
         [Test]
-        public void StringTest()
+        public void VarDecimalTest()
         {
-            // TODO unit test for the property 'String'
+            // TODO unit test for the property 'VarDecimal'
         }
         /// <summary>
-        /// Test the property 'Byte'
+        /// Test the property 'VarString'
         /// </summary>
         [Test]
-        public void ByteTest()
+        public void VarStringTest()
         {
-            // TODO unit test for the property 'Byte'
+            // TODO unit test for the property 'VarString'
+        }
+        /// <summary>
+        /// Test the property 'VarByte'
+        /// </summary>
+        [Test]
+        public void VarByteTest()
+        {
+            // TODO unit test for the property 'VarByte'
         }
         /// <summary>
         /// Test the property 'Binary'
@@ -170,12 +178,20 @@ namespace Org.OpenAPITools.Test
             // TODO unit test for the property 'Password'
         }
         /// <summary>
-        /// Test the property 'BigDecimal'
+        /// Test the property 'PatternWithDigits'
         /// </summary>
         [Test]
-        public void BigDecimalTest()
+        public void PatternWithDigitsTest()
         {
-            // TODO unit test for the property 'BigDecimal'
+            // TODO unit test for the property 'PatternWithDigits'
+        }
+        /// <summary>
+        /// Test the property 'PatternWithDigitsAndDelimiter'
+        /// </summary>
+        [Test]
+        public void PatternWithDigitsAndDelimiterTest()
+        {
+            // TODO unit test for the property 'PatternWithDigitsAndDelimiter'
         }
 
     }

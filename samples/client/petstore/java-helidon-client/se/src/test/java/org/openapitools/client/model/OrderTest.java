@@ -22,7 +22,6 @@ import java.time.OffsetDateTime;
 
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for Order
  */

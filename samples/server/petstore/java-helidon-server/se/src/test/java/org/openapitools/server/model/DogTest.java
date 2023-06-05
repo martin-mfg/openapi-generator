@@ -18,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.openapitools.server.model.Animal;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for Dog
  */

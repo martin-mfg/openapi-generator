@@ -21,7 +21,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for ModelList
  */

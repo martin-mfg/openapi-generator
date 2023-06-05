@@ -25,7 +25,6 @@ import java.util.List;
 import org.openapitools.client.model.Query;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for DataQuery
  */
@@ -38,6 +37,14 @@ class DataQueryTest {
     @Test
     void testDataQuery() {
         // TODO: test DataQuery
+    }
+
+    /**
+     * Test the property 'suffix'
+     */
+    @Test
+    void suffixTest() {
+        // TODO: test suffix
     }
 
     /**

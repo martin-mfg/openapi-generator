@@ -16,7 +16,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import org.openapitools.server.model.Foo;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for FooGetDefaultResponse
  */

@@ -30,8 +30,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-
-
 /**
  * OpenAPI Petstore Test
  *
@@ -79,7 +77,7 @@ public class PetApiTest {
         // TODO: test validations
         Long petId = null;
         String apiKey = null;
-        //void response = api.deletePet(petId, apiKey);
+        //api.deletePet(petId, apiKey);
         //assertNotNull(response);
 
 
@@ -171,7 +169,7 @@ public class PetApiTest {
         Long petId = null;
         String name = null;
         String status = null;
-        //void response = api.updatePetWithForm(petId, name, status);
+        //api.updatePetWithForm(petId, name, status);
         //assertNotNull(response);
 
 

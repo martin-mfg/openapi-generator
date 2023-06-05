@@ -14,7 +14,6 @@ package org.openapitools.server.model;
 
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for Name
  */

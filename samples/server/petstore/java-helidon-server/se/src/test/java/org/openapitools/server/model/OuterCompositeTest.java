@@ -15,7 +15,6 @@ package org.openapitools.server.model;
 import java.math.BigDecimal;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for OuterComposite
  */

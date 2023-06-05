@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using Org.OpenAPITools.Api;
 using Org.OpenAPITools.Model;
 using Org.OpenAPITools.Client;
 using System.Reflection;
@@ -56,6 +55,14 @@ namespace Org.OpenAPITools.Test.Model
         }
 
 
+        /// <summary>
+        /// Test the property 'UuidWithPattern'
+        /// </summary>
+        [Fact]
+        public void UuidWithPatternTest()
+        {
+            // TODO unit test for the property 'UuidWithPattern'
+        }
         /// <summary>
         /// Test the property 'Uuid'
         /// </summary>

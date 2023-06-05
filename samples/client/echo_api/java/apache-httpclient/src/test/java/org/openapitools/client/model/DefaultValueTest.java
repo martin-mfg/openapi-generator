@@ -20,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.model.StringEnumRef;
 import org.openapitools.jackson.nullable.JsonNullable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -27,7 +28,6 @@ import java.util.NoSuchElementException;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-
 
 /**
  * Model tests for DefaultValue
@@ -41,6 +41,14 @@ public class DefaultValueTest {
     @Test
     public void testDefaultValue() {
         // TODO: test DefaultValue
+    }
+
+    /**
+     * Test the property 'arrayStringEnumRefDefault'
+     */
+    @Test
+    public void arrayStringEnumRefDefaultTest() {
+        // TODO: test arrayStringEnumRefDefault
     }
 
     /**
@@ -81,6 +89,14 @@ public class DefaultValueTest {
     @Test
     public void arrayStringNullableTest() {
         // TODO: test arrayStringNullable
+    }
+
+    /**
+     * Test the property 'arrayStringExtensionNullable'
+     */
+    @Test
+    public void arrayStringExtensionNullableTest() {
+        // TODO: test arrayStringExtensionNullable
     }
 
     /**

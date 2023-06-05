@@ -18,7 +18,6 @@ import java.util.List;
 import org.openapitools.server.model.DeprecatedObject;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for ObjectWithDeprecatedFields
  */

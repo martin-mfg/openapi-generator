@@ -14,7 +14,9 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
+import java.io.File;
 import org.openapitools.client.model.Pet;
+import org.openapitools.client.model.Tag;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -35,6 +37,56 @@ public class BodyApiTest {
 
     
     /**
+     * Test binary (gif) response body
+     *
+     * Test binary (gif) response body
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void testBinaryGifTest() throws ApiException {
+        File response = 
+        api.testBinaryGif();
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Test body parameter(s)
+     *
+     * Test body parameter(s)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void testBodyApplicationOctetstreamBinaryTest() throws ApiException {
+        File body = null;
+        String response = 
+        api.testBodyApplicationOctetstreamBinary(body);
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Test free form object
+     *
+     * Test free form object
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void testEchoBodyFreeFormObjectResponseStringTest() throws ApiException {
+        Object body = null;
+        String response = 
+        api.testEchoBodyFreeFormObjectResponseString(body);
+        
+        // TODO: test validations
+    }
+    
+    /**
      * Test body parameter(s)
      *
      * Test body parameter(s)
@@ -47,6 +99,40 @@ public class BodyApiTest {
         Pet pet = null;
         Pet response = 
         api.testEchoBodyPet(pet);
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Test empty response body
+     *
+     * Test empty response body
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void testEchoBodyPetResponseStringTest() throws ApiException {
+        Pet pet = null;
+        String response = 
+        api.testEchoBodyPetResponseString(pet);
+        
+        // TODO: test validations
+    }
+    
+    /**
+     * Test empty json (request body)
+     *
+     * Test empty json (request body)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void testEchoBodyTagResponseStringTest() throws ApiException {
+        Tag tag = null;
+        String response = 
+        api.testEchoBodyTagResponseString(tag);
         
         // TODO: test validations
     }

@@ -22,7 +22,6 @@ import org.openapitools.client.model.OuterEnumInteger;
 
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for OuterObjectWithEnumProperty
  */
