@@ -9,10 +9,4 @@ src/gen/java/org/openapitools/model/Order.java
 src/gen/java/org/openapitools/model/Pet.java
 src/gen/java/org/openapitools/model/Tag.java
 src/gen/java/org/openapitools/model/User.java
-src/main/java/org/openapitools/api/impl/PetApiServiceImpl.java
-src/main/java/org/openapitools/api/impl/StoreApiServiceImpl.java
-src/main/java/org/openapitools/api/impl/UserApiServiceImpl.java
 src/main/webapp/WEB-INF/web.xml
-src/test/java/org/openapitools/api/PetApiTest.java
-src/test/java/org/openapitools/api/StoreApiTest.java
-src/test/java/org/openapitools/api/UserApiTest.java
