@@ -958,7 +958,7 @@
                 </property>
             </activation>
             <modules>
-                <module>samples/client/petstore/typescript-fetch/tests/default</module>
+                <module>samples/client/petstore/typescript-fetch/builds/prefix-parameter-interfaces</module>
             </modules>
         </profile>
         <profile>
@@ -1212,7 +1212,7 @@
                 <module>samples/client/petstore/typescript-fetch/builds/default</module>
                 <module>samples/client/petstore/typescript-fetch/builds/es6-target</module>
                 <module>samples/client/petstore/typescript-fetch/builds/with-npm-version</module>
-                <module>samples/client/petstore/typescript-fetch/tests/default</module>
+                <module>samples/client/petstore/typescript-fetch/builds/prefix-parameter-interfaces</module>
                 <module>samples/client/petstore/typescript-node/npm</module>
                 <module>samples/client/petstore/typescript-rxjs/builds/with-npm-version</module>
                 <module>samples/client/petstore/typescript-axios/builds/with-npm-version</module>
