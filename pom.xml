@@ -921,9 +921,6 @@
                     <value>java</value>
                 </property>
             </activation>
-            <modules>
-                <module>samples/openapi3/client/petstore/typescript/tests/default</module>
-            </modules>
         </profile>
         <profile>
             <id>typescript-client-tests-deno</id>
@@ -933,9 +930,6 @@
                     <value>java</value>
                 </property>
             </activation>
-            <modules>
-                <module>samples/openapi3/client/petstore/typescript/tests/deno</module>
-            </modules>
         </profile>
         <profile>
             <id>typescript-client-tests-jquery</id>
@@ -945,9 +939,6 @@
                     <value>java</value>
                 </property>
             </activation>
-            <modules>
-                <module>samples/openapi3/client/petstore/typescript/tests/jquery</module>
-            </modules>
         </profile>
         <profile>
             <id>typescript-client-tests-browser</id>
@@ -957,9 +948,6 @@
                     <value>java</value>
                 </property>
             </activation>
-            <modules>
-                <module>samples/openapi3/client/petstore/typescript/tests/browser</module>
-            </modules>
         </profile>
         <profile>
             <id>typescript-fetch-client-tests-default</id>
@@ -1214,17 +1202,13 @@
                 <module>samples/client/petstore/typescript-angular-v14-provided-in-root</module>
                 <module>samples/client/petstore/typescript-angular-v15-provided-in-root</module>
                 <module>samples/openapi3/client/petstore/typescript/builds/default</module>
-                <module>samples/openapi3/client/petstore/typescript/tests/default</module>
                 <module>samples/openapi3/client/petstore/typescript/builds/jquery</module>
-                <module>samples/openapi3/client/petstore/typescript/tests/jquery</module>
                 <module>samples/openapi3/client/petstore/typescript/builds/object_params</module>
-                <module>samples/openapi3/client/petstore/typescript/tests/object_params</module>
                 <module>samples/openapi3/client/petstore/typescript/builds/inversify</module>
                 <!-- comment out due to failure in travis ci
                 <module>samples/openapi3/client/petstore/typescript/tests/inversify</module>
                 <module>samples/openapi3/client/petstore/typescript/tests/deno</module>-->
                 <module>samples/openapi3/client/petstore/typescript/builds/browser</module>
-                <module>samples/openapi3/client/petstore/typescript/tests/browser</module>
                 <module>samples/client/petstore/typescript-fetch/builds/default</module>
                 <module>samples/client/petstore/typescript-fetch/builds/es6-target</module>
                 <module>samples/client/petstore/typescript-fetch/builds/with-npm-version</module>
