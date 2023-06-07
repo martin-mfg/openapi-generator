@@ -1,4 +1,4 @@
-# org.openapitools.database - Kotlin database library for OpenAPI Petstore
+# org.openapitools.database - Kotlin database library for Some example
 
 ## Requires
 
@@ -20,10 +20,4 @@ This runs all tests and packages the library.
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [org.openapitools.database.models.ApiResponse](docs/ApiResponse.md)
- - [org.openapitools.database.models.Category](docs/Category.md)
- - [org.openapitools.database.models.Order](docs/Order.md)
- - [org.openapitools.database.models.Pet](docs/Pet.md)
- - [org.openapitools.database.models.Tag](docs/Tag.md)
- - [org.openapitools.database.models.User](docs/User.md)
 

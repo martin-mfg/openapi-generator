@@ -14,13 +14,9 @@ All the properties can be changed in the [application.yml](src/main/resources/ap
 
 Description on how to create Apis is given inside individual api guides:
 
-* [PetController](docs/controllers/PetController.md)
-* [StoreController](docs/controllers/StoreController.md)
-* [UserController](docs/controllers/UserController.md)
+* [DefaultController](docs/controllers/DefaultController.md)
 
 ## Author
-
-
 
 
 

@@ -8,6 +8,6 @@ import Foundation
 import Vapor
 
 open class PetstoreClientAPI {
-    public static var basePath = "http://petstore.swagger.io:80/v2"
+    public static var basePath = "http://localhost"
     public static var customHeaders: HTTPHeaders = [:]
 }

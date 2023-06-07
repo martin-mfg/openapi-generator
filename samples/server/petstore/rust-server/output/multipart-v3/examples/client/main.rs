@@ -5,9 +5,7 @@
 use futures::{future, Stream, stream};
 #[allow(unused_imports)]
 use multipart_v3::{Api, ApiNoContext, Client, ContextWrapperExt, models,
-                      MultipartRelatedRequestPostResponse,
-                      MultipartRequestPostResponse,
-                      MultipleIdenticalMimeTypesPostResponse,
+                      RetrieveSomethingResponse,
                      };
 use clap::{App, Arg};
 
@@ -29,9 +27,7 @@ fn main() {
         .arg(Arg::with_name("operation")
             .help("Sets the operation to run")
             .possible_values(&[
-                "MultipartRelatedRequestPost",
-                "MultipartRequestPost",
-                "MultipleIdenticalMimeTypesPost",
+                "RetrieveSomething",
             ])
             .required(true)
             .index(1))
@@ -75,27 +71,8 @@ fn main() {
     let mut rt = tokio::runtime::Runtime::new().unwrap();
 
     match matches.value_of("operation") {
-        Some("MultipartRelatedRequestPost") => {
-            let result = rt.block_on(client.multipart_related_request_post(
-                  swagger::ByteArray(Vec::from("BINARY_DATA_HERE")),
-                  None,
-                  Some(swagger::ByteArray(Vec::from("BINARY_DATA_HERE")))
-            ));
-            info!("{:?} (X-Span-ID: {:?})", result, (client.context() as &dyn Has<XSpanIdString>).get().clone());
-        },
-        Some("MultipartRequestPost") => {
-            let result = rt.block_on(client.multipart_request_post(
-                  "string_field_example".to_string(),
-                  swagger::ByteArray(Vec::from("BYTE_ARRAY_DATA_HERE")),
-                  Some("optional_string_field_example".to_string()),
-                  None
-            ));
-            info!("{:?} (X-Span-ID: {:?})", result, (client.context() as &dyn Has<XSpanIdString>).get().clone());
-        },
-        Some("MultipleIdenticalMimeTypesPost") => {
-            let result = rt.block_on(client.multiple_identical_mime_types_post(
-                  Some(swagger::ByteArray(Vec::from("BINARY_DATA_HERE"))),
-                  Some(swagger::ByteArray(Vec::from("BINARY_DATA_HERE")))
+        Some("RetrieveSomething") => {
+            let result = rt.block_on(client.retrieve_something(
             ));
             info!("{:?} (X-Span-ID: {:?})", result, (client.context() as &dyn Has<XSpanIdString>).get().clone());
         },

@@ -11,7 +11,7 @@
     </parent>
     <artifactId>petstore-helidon-client-mp</artifactId>
     <name>petstore-helidon-client-mp</name>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <packaging>jar</packaging>

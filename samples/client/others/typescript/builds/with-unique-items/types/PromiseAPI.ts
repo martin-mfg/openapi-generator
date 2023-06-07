@@ -1,7 +1,6 @@
 import { ResponseContext, RequestContext, HttpFile } from '../http/http';
 import { Configuration} from '../configuration'
 
-import { Response } from '../models/Response';
 import { ObservableDefaultApi } from './ObservableAPI';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
@@ -17,9 +16,10 @@ export class PromiseDefaultApi {
     }
 
     /**
+     * get some object
      */
-    public uniqueItems(_options?: Configuration): Promise<Response> {
-        const result = this.api.uniqueItems(_options);
+    public retrieveSomething(_options?: Configuration): Promise<Array<number>> {
+        const result = this.api.retrieveSomething(_options);
         return result.toPromise();
     }
 

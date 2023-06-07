@@ -7,12 +7,10 @@ using Dates, TimeZones
 using OpenAPI
 using OpenAPI.Clients
 
-const API_VERSION = "1.0.0"
+const API_VERSION = "0.0.1"
 
 include("modelincludes.jl")
 
-include("apis/api_PetApi.jl")
-include("apis/api_StoreApi.jl")
-include("apis/api_UserApi.jl")
+include("apis/api_DefaultApi.jl")
 
 end # module PetStoreClient

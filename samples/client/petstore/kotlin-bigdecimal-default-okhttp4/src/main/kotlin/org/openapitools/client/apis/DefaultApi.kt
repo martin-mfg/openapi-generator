@@ -19,7 +19,6 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import org.openapitools.client.models.Apa
 
 import com.squareup.moshi.Json
 
@@ -47,21 +46,21 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
     /**
      * 
-     * 
-     * @param apa 
-     * @return void
+     * get some object
+     * @return kotlin.collections.List<java.math.BigDecimal>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
      * @throws ClientException If the API returns a client error response
      * @throws ServerException If the API returns a server error response
      */
+    @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun testPost(apa: Apa) : Unit {
-        val localVarResponse = testPostWithHttpInfo(apa = apa)
+    fun retrieveSomething() : kotlin.collections.List<java.math.BigDecimal> {
+        val localVarResponse = retrieveSomethingWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<java.math.BigDecimal>
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -77,36 +76,35 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
     /**
      * 
-     * 
-     * @param apa 
-     * @return ApiResponse<Unit?>
+     * get some object
+     * @return ApiResponse<kotlin.collections.List<java.math.BigDecimal>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
+    @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun testPostWithHttpInfo(apa: Apa) : ApiResponse<Unit?> {
-        val localVariableConfig = testPostRequestConfig(apa = apa)
+    fun retrieveSomethingWithHttpInfo() : ApiResponse<kotlin.collections.List<java.math.BigDecimal>?> {
+        val localVariableConfig = retrieveSomethingRequestConfig()
 
-        return request<Apa, Unit>(
+        return request<Unit, kotlin.collections.List<java.math.BigDecimal>>(
             localVariableConfig
         )
     }
 
     /**
-     * To obtain the request config of the operation testPost
+     * To obtain the request config of the operation retrieveSomething
      *
-     * @param apa 
      * @return RequestConfig
      */
-    fun testPostRequestConfig(apa: Apa) : RequestConfig<Apa> {
-        val localVariableBody = apa
+    fun retrieveSomethingRequestConfig() : RequestConfig<Unit> {
+        val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Content-Type"] = "application/json"
-        
+        localVariableHeaders["Accept"] = "application/json"
+
         return RequestConfig(
-            method = RequestMethod.POST,
-            path = "/test",
+            method = RequestMethod.GET,
+            path = "/example/someMethod",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,

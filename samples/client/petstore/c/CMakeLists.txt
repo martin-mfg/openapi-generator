@@ -27,7 +27,7 @@ else()
     message (STATUS "OpenSSL Not found.")
 endif()
 
-set(pkgName "openapi_petstore")
+set(pkgName "some_example")
 
 # this default version can be overridden in PreTarget.cmake
 set(PROJECT_VERSION_MAJOR 0)
@@ -54,15 +54,7 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
-    model/api_response.c
-    model/category.c
-    model/order.c
-    model/pet.c
-    model/tag.c
-    model/user.c
-    api/PetAPI.c
-    api/StoreAPI.c
-    api/UserAPI.c
+    api/DefaultAPI.c
 
 )
 
@@ -73,15 +65,7 @@ set(HDRS
     include/keyValuePair.h
     external/cJSON.h
     model/object.h
-    model/api_response.h
-    model/category.h
-    model/order.h
-    model/pet.h
-    model/tag.h
-    model/user.h
-    api/PetAPI.h
-    api/StoreAPI.h
-    api/UserAPI.h
+    api/DefaultAPI.h
 
 )
 
@@ -163,9 +147,7 @@ set(HDRS "")
 ## This section shows how to use the above compiled library to compile the source files
 ## set source files
 #set(SRCS
-#    unit-tests/manual-PetAPI.c
-#    unit-tests/manual-StoreAPI.c
-#    unit-tests/manual-UserAPI.c
+#    unit-tests/manual-DefaultAPI.c
 #)
 
 ##set header files

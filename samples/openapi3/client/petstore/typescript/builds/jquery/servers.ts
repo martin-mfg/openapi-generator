@@ -50,6 +50,6 @@ export class ServerConfiguration<T extends { [key: string]: string }> implements
     }
 }
 
-export const server1 = new ServerConfiguration<{  }>("http://petstore.swagger.io/v2", {  })
+export const server1 = new ServerConfiguration<{  }>("", {  })
 
 export const servers = [server1];

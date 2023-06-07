@@ -15,7 +15,7 @@ public class RestConfiguration extends RouteBuilder {
     public void configure() throws Exception {
         restConfiguration()
             .scheme("http")
-            .host("petstore.swagger.io")
+            .host("localhost")
             .component("servlet")
             .bindingMode(RestBindingMode.auto)
                 .dataFormatProperty("json.out.disableFeatures", "WRITE_DATES_AS_TIMESTAMPS")

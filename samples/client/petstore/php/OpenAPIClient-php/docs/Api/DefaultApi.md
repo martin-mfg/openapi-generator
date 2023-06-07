@@ -1,19 +1,21 @@
 # OpenAPI\Client\DefaultApi
 
-All URIs are relative to http://petstore.swagger.io:80/v2, except if the operation defines another base path.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**fooGet()**](DefaultApi.md#fooGet) | **GET** /foo |  |
+| [**retrieveSomething()**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
 
 
-## `fooGet()`
+## `retrieveSomething()`
 
 ```php
-fooGet(): \OpenAPI\Client\Model\FooGetDefaultResponse
+retrieveSomething(): float[]
 ```
 
 
+
+get some object
 
 ### Example
 
@@ -30,10 +32,10 @@ $apiInstance = new OpenAPI\Client\Api\DefaultApi(
 );
 
 try {
-    $result = $apiInstance->fooGet();
+    $result = $apiInstance->retrieveSomething();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->fooGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->retrieveSomething: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -43,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FooGetDefaultResponse**](../Model/FooGetDefaultResponse.md)
+**float[]**
 
 ### Authorization
 

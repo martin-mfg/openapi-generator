@@ -5,17 +5,19 @@
 import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fooGet**](DefaultApi.md#fooget) | **GET** /foo | 
+[**retrieveSomething**](DefaultApi.md#retrievesomething) | **GET** /example/someMethod | 
 
 
-# **fooGet**
-> FooGetDefaultResponse fooGet()
+# **retrieveSomething**
+> BuiltList<num> retrieveSomething()
 
 
+
+get some object
 
 ### Example
 ```dart
@@ -24,10 +26,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getDefaultApi();
 
 try {
-    final response = api.fooGet();
+    final response = api.retrieveSomething();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DefaultApi->fooGet: $e\n');
+    print('Exception when calling DefaultApi->retrieveSomething: $e\n');
 }
 ```
 
@@ -36,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+**BuiltList&lt;num&gt;**
 
 ### Authorization
 

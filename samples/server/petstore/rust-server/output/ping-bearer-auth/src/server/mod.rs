@@ -22,7 +22,7 @@ pub use crate::context;
 type ServiceFuture = BoxFuture<'static, Result<Response<Body>, crate::ServiceError>>;
 
 use crate::{Api,
-     PingGetResponse
+     RetrieveSomethingResponse
 };
 
 mod paths {
@@ -30,16 +30,16 @@ mod paths {
 
     lazy_static! {
         pub static ref GLOBAL_REGEX_SET: regex::RegexSet = regex::RegexSet::new(vec![
-            r"^/ping$"
+            r"^/example/someMethod$"
         ])
         .expect("Unable to create global regex set");
     }
-    pub(crate) static ID_PING: usize = 0;
+    pub(crate) static ID_EXAMPLE_SOMEMETHOD: usize = 0;
 }
 
 pub struct MakeService<T, C> where
     T: Api<C> + Clone + Send + 'static,
-    C: Has<XSpanIdString> + Has<Option<Authorization>> + Send + Sync + 'static
+    C: Has<XSpanIdString>  + Send + Sync + 'static
 {
     api_impl: T,
     marker: PhantomData<C>,
@@ -47,7 +47,7 @@ pub struct MakeService<T, C> where
 
 impl<T, C> MakeService<T, C> where
     T: Api<C> + Clone + Send + 'static,
-    C: Has<XSpanIdString> + Has<Option<Authorization>> + Send + Sync + 'static
+    C: Has<XSpanIdString>  + Send + Sync + 'static
 {
     pub fn new(api_impl: T) -> Self {
         MakeService {
@@ -59,7 +59,7 @@ impl<T, C> MakeService<T, C> where
 
 impl<T, C, Target> hyper::service::Service<Target> for MakeService<T, C> where
     T: Api<C> + Clone + Send + 'static,
-    C: Has<XSpanIdString> + Has<Option<Authorization>> + Send + Sync + 'static
+    C: Has<XSpanIdString>  + Send + Sync + 'static
 {
     type Response = Service<T, C>;
     type Error = crate::ServiceError;
@@ -86,7 +86,7 @@ fn method_not_allowed() -> Result<Response<Body>, crate::ServiceError> {
 
 pub struct Service<T, C> where
     T: Api<C> + Clone + Send + 'static,
-    C: Has<XSpanIdString> + Has<Option<Authorization>> + Send + Sync + 'static
+    C: Has<XSpanIdString>  + Send + Sync + 'static
 {
     api_impl: T,
     marker: PhantomData<C>,
@@ -94,7 +94,7 @@ pub struct Service<T, C> where
 
 impl<T, C> Service<T, C> where
     T: Api<C> + Clone + Send + 'static,
-    C: Has<XSpanIdString> + Has<Option<Authorization>> + Send + Sync + 'static
+    C: Has<XSpanIdString>  + Send + Sync + 'static
 {
     pub fn new(api_impl: T) -> Self {
         Service {
@@ -106,7 +106,7 @@ impl<T, C> Service<T, C> where
 
 impl<T, C> Clone for Service<T, C> where
     T: Api<C> + Clone + Send + 'static,
-    C: Has<XSpanIdString> + Has<Option<Authorization>> + Send + Sync + 'static
+    C: Has<XSpanIdString>  + Send + Sync + 'static
 {
     fn clone(&self) -> Self {
         Service {
@@ -118,7 +118,7 @@ impl<T, C> Clone for Service<T, C> where
 
 impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
     T: Api<C> + Clone + Send + Sync + 'static,
-    C: Has<XSpanIdString> + Has<Option<Authorization>> + Send + Sync + 'static
+    C: Has<XSpanIdString>  + Send + Sync + 'static
 {
     type Response = Response<Body>;
     type Error = crate::ServiceError;
@@ -130,7 +130,7 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
 
     fn call(&mut self, req: (Request<Body>, C)) -> Self::Future { async fn run<T, C>(mut api_impl: T, req: (Request<Body>, C)) -> Result<Response<Body>, crate::ServiceError> where
         T: Api<C> + Clone + Send + 'static,
-        C: Has<XSpanIdString> + Has<Option<Authorization>> + Send + Sync + 'static
+        C: Has<XSpanIdString>  + Send + Sync + 'static
     {
         let (request, context) = req;
         let (parts, body) = request.into_parts();
@@ -139,19 +139,9 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
 
         match method {
 
-            // PingGet - GET /ping
-            hyper::Method::GET if path.matched(paths::ID_PING) => {
-                {
-                    let authorization = match *(&context as &dyn Has<Option<Authorization>>).get() {
-                        Some(ref authorization) => authorization,
-                        None => return Ok(Response::builder()
-                                                .status(StatusCode::FORBIDDEN)
-                                                .body(Body::from("Unauthenticated"))
-                                                .expect("Unable to create Authentication Forbidden response")),
-                    };
-                }
-
-                                let result = api_impl.ping_get(
+            // RetrieveSomething - GET /example/someMethod
+            hyper::Method::GET if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => {
+                                let result = api_impl.retrieve_something(
                                         &context
                                     ).await;
                                 let mut response = Response::new(Body::empty());
@@ -162,9 +152,16 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
 
                                         match result {
                                             Ok(rsp) => match rsp {
-                                                PingGetResponse::OK
+                                                RetrieveSomethingResponse::TheResponseWithResults
+                                                    (body)
                                                 => {
-                                                    *response.status_mut() = StatusCode::from_u16(201).expect("Unable to turn 201 into a StatusCode");
+                                                    *response.status_mut() = StatusCode::from_u16(200).expect("Unable to turn 200 into a StatusCode");
+                                                    response.headers_mut().insert(
+                                                        CONTENT_TYPE,
+                                                        HeaderValue::from_str("application/json")
+                                                            .expect("Unable to create Content-Type header for RETRIEVE_SOMETHING_THE_RESPONSE_WITH_RESULTS"));
+                                                    let body = serde_json::to_string(&body).expect("impossible to fail to serialize");
+                                                    *response.body_mut() = Body::from(body);
                                                 },
                                             },
                                             Err(_) => {
@@ -178,7 +175,7 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
                                         Ok(response)
             },
 
-            _ if path.matched(paths::ID_PING) => method_not_allowed(),
+            _ if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => method_not_allowed(),
             _ => Ok(Response::builder().status(StatusCode::NOT_FOUND)
                     .body(Body::empty())
                     .expect("Unable to create Not Found response"))
@@ -192,8 +189,8 @@ impl<T> RequestParser<T> for ApiRequestParser {
     fn parse_operation_id(request: &Request<T>) -> Option<&'static str> {
         let path = paths::GLOBAL_REGEX_SET.matches(request.uri().path());
         match *request.method() {
-            // PingGet - GET /ping
-            hyper::Method::GET if path.matched(paths::ID_PING) => Some("PingGet"),
+            // RetrieveSomething - GET /example/someMethod
+            hyper::Method::GET if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => Some("RetrieveSomething"),
             _ => None,
         }
     }

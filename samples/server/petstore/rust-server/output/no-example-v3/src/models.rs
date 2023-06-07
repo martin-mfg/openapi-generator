@@ -6,111 +6,122 @@ use crate::header;
 
 #[derive(Debug, Clone, PartialEq, serde::Serialize, serde::Deserialize)]
 #[cfg_attr(feature = "conversion", derive(frunk::LabelledGeneric))]
-pub struct OpGetRequest {
-    #[serde(rename = "property")]
-    pub property: String,
+pub struct ExampleResponse(
+    Vec<f64>
+);
 
-}
-
-impl OpGetRequest {
-    #[allow(clippy::new_without_default)]
-    pub fn new(property: String, ) -> OpGetRequest {
-        OpGetRequest {
-            property,
-        }
+impl std::convert::From<Vec<f64>> for ExampleResponse {
+    fn from(x: Vec<f64>) -> Self {
+        ExampleResponse(x)
     }
 }
 
-/// Converts the OpGetRequest value to the Query Parameters representation (style=form, explode=false)
+impl std::convert::From<ExampleResponse> for Vec<f64> {
+    fn from(x: ExampleResponse) -> Self {
+        x.0
+    }
+}
+
+impl std::iter::FromIterator<f64> for ExampleResponse {
+    fn from_iter<U: IntoIterator<Item=f64>>(u: U) -> Self {
+        ExampleResponse(Vec::<f64>::from_iter(u))
+    }
+}
+
+impl std::iter::IntoIterator for ExampleResponse {
+    type Item = f64;
+    type IntoIter = std::vec::IntoIter<f64>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        self.0.into_iter()
+    }
+}
+
+impl<'a> std::iter::IntoIterator for &'a ExampleResponse {
+    type Item = &'a f64;
+    type IntoIter = std::slice::Iter<'a, f64>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        self.0.iter()
+    }
+}
+
+impl<'a> std::iter::IntoIterator for &'a mut ExampleResponse {
+    type Item = &'a mut f64;
+    type IntoIter = std::slice::IterMut<'a, f64>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        self.0.iter_mut()
+    }
+}
+
+impl std::ops::Deref for ExampleResponse {
+    type Target = Vec<f64>;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+
+impl std::ops::DerefMut for ExampleResponse {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+
+/// Converts the ExampleResponse value to the Query Parameters representation (style=form, explode=false)
 /// specified in https://swagger.io/docs/specification/serialization/
 /// Should be implemented in a serde serializer
-impl std::string::ToString for OpGetRequest {
+impl std::string::ToString for ExampleResponse {
     fn to_string(&self) -> String {
-        let params: Vec<Option<String>> = vec![
-
-            Some("property".to_string()),
-            Some(self.property.to_string()),
-
-        ];
-
-        params.into_iter().flatten().collect::<Vec<_>>().join(",")
+        self.iter().map(|x| x.to_string()).collect::<Vec<_>>().join(",")
     }
 }
 
-/// Converts Query Parameters representation (style=form, explode=false) to a OpGetRequest value
+/// Converts Query Parameters representation (style=form, explode=false) to a ExampleResponse value
 /// as specified in https://swagger.io/docs/specification/serialization/
 /// Should be implemented in a serde deserializer
-impl std::str::FromStr for OpGetRequest {
-    type Err = String;
+impl std::str::FromStr for ExampleResponse {
+    type Err = <f64 as std::str::FromStr>::Err;
 
     fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
-        /// An intermediate representation of the struct to use for parsing.
-        #[derive(Default)]
-        #[allow(dead_code)]
-        struct IntermediateRep {
-            pub property: Vec<String>,
+        let mut items = vec![];
+        for item in s.split(',')
+        {
+            items.push(item.parse()?);
         }
-
-        let mut intermediate_rep = IntermediateRep::default();
-
-        // Parse into intermediate representation
-        let mut string_iter = s.split(',');
-        let mut key_result = string_iter.next();
-
-        while key_result.is_some() {
-            let val = match string_iter.next() {
-                Some(x) => x,
-                None => return std::result::Result::Err("Missing value while parsing OpGetRequest".to_string())
-            };
-
-            if let Some(key) = key_result {
-                #[allow(clippy::match_single_binding)]
-                match key {
-                    #[allow(clippy::redundant_clone)]
-                    "property" => intermediate_rep.property.push(<String as std::str::FromStr>::from_str(val).map_err(|x| x.to_string())?),
-                    _ => return std::result::Result::Err("Unexpected key while parsing OpGetRequest".to_string())
-                }
-            }
-
-            // Get the next key
-            key_result = string_iter.next();
-        }
-
-        // Use the intermediate representation to return the struct
-        std::result::Result::Ok(OpGetRequest {
-            property: intermediate_rep.property.into_iter().next().ok_or_else(|| "property missing in OpGetRequest".to_string())?,
-        })
+        std::result::Result::Ok(ExampleResponse(items))
     }
 }
 
-// Methods for converting between header::IntoHeaderValue<OpGetRequest> and hyper::header::HeaderValue
+
+// Methods for converting between header::IntoHeaderValue<ExampleResponse> and hyper::header::HeaderValue
 
 #[cfg(any(feature = "client", feature = "server"))]
-impl std::convert::TryFrom<header::IntoHeaderValue<OpGetRequest>> for hyper::header::HeaderValue {
+impl std::convert::TryFrom<header::IntoHeaderValue<ExampleResponse>> for hyper::header::HeaderValue {
     type Error = String;
 
-    fn try_from(hdr_value: header::IntoHeaderValue<OpGetRequest>) -> std::result::Result<Self, Self::Error> {
+    fn try_from(hdr_value: header::IntoHeaderValue<ExampleResponse>) -> std::result::Result<Self, Self::Error> {
         let hdr_value = hdr_value.to_string();
         match hyper::header::HeaderValue::from_str(&hdr_value) {
              std::result::Result::Ok(value) => std::result::Result::Ok(value),
              std::result::Result::Err(e) => std::result::Result::Err(
-                 format!("Invalid header value for OpGetRequest - value: {} is invalid {}",
+                 format!("Invalid header value for ExampleResponse - value: {} is invalid {}",
                      hdr_value, e))
         }
     }
 }
 
 #[cfg(any(feature = "client", feature = "server"))]
-impl std::convert::TryFrom<hyper::header::HeaderValue> for header::IntoHeaderValue<OpGetRequest> {
+impl std::convert::TryFrom<hyper::header::HeaderValue> for header::IntoHeaderValue<ExampleResponse> {
     type Error = String;
 
     fn try_from(hdr_value: hyper::header::HeaderValue) -> std::result::Result<Self, Self::Error> {
         match hdr_value.to_str() {
              std::result::Result::Ok(value) => {
-                    match <OpGetRequest as std::str::FromStr>::from_str(value) {
+                    match <ExampleResponse as std::str::FromStr>::from_str(value) {
                         std::result::Result::Ok(value) => std::result::Result::Ok(header::IntoHeaderValue(value)),
                         std::result::Result::Err(err) => std::result::Result::Err(
-                            format!("Unable to convert header value '{}' into OpGetRequest - {}",
+                            format!("Unable to convert header value '{}' into ExampleResponse - {}",
                                 value, err))
                     }
              },

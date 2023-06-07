@@ -7,7 +7,7 @@ public class Module extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(PetApiControllerImpInterface.class).to(PetApiControllerImp.class);
+        bind(DefaultApiControllerImpInterface.class).to(DefaultApiControllerImp.class);
         bind(SecurityAPIUtils.class);
     }
 }

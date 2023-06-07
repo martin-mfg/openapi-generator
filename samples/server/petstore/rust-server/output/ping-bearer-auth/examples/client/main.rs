@@ -5,7 +5,7 @@
 use futures::{future, Stream, stream};
 #[allow(unused_imports)]
 use ping_bearer_auth::{Api, ApiNoContext, Client, ContextWrapperExt, models,
-                      PingGetResponse,
+                      RetrieveSomethingResponse,
                      };
 use clap::{App, Arg};
 
@@ -27,7 +27,7 @@ fn main() {
         .arg(Arg::with_name("operation")
             .help("Sets the operation to run")
             .possible_values(&[
-                "PingGet",
+                "RetrieveSomething",
             ])
             .required(true)
             .index(1))
@@ -71,8 +71,8 @@ fn main() {
     let mut rt = tokio::runtime::Runtime::new().unwrap();
 
     match matches.value_of("operation") {
-        Some("PingGet") => {
-            let result = rt.block_on(client.ping_get(
+        Some("RetrieveSomething") => {
+            let result = rt.block_on(client.retrieve_something(
             ));
             info!("{:?} (X-Span-ID: {:?})", result, (client.context() as &dyn Has<XSpanIdString>).get().clone());
         },

@@ -15,9 +15,10 @@ pub const BASE_PATH: &str = "";
 pub const API_VERSION: &str = "0.0.1";
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum OpGetResponse {
-    /// OK
-    OK
+pub enum RetrieveSomethingResponse {
+    /// The response with results
+    TheResponseWithResults
+    (models::ExampleResponse)
 }
 
 /// API
@@ -28,10 +29,9 @@ pub trait Api<C: Send + Sync> {
         Poll::Ready(Ok(()))
     }
 
-    async fn op_get(
+    async fn retrieve_something(
         &self,
-        op_get_request: models::OpGetRequest,
-        context: &C) -> Result<OpGetResponse, ApiError>;
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>;
 
 }
 
@@ -44,10 +44,9 @@ pub trait ApiNoContext<C: Send + Sync> {
 
     fn context(&self) -> &C;
 
-    async fn op_get(
+    async fn retrieve_something(
         &self,
-        op_get_request: models::OpGetRequest,
-        ) -> Result<OpGetResponse, ApiError>;
+        ) -> Result<RetrieveSomethingResponse, ApiError>;
 
 }
 
@@ -74,13 +73,12 @@ impl<T: Api<C> + Send + Sync, C: Clone + Send + Sync> ApiNoContext<C> for Contex
         ContextWrapper::context(self)
     }
 
-    async fn op_get(
+    async fn retrieve_something(
         &self,
-        op_get_request: models::OpGetRequest,
-        ) -> Result<OpGetResponse, ApiError>
+        ) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let context = self.context().clone();
-        self.api().op_get(op_get_request, &context).await
+        self.api().retrieve_something(&context).await
     }
 
 }

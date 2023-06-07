@@ -1,22 +1,16 @@
 import { DynamicModule, HttpService, HttpModule, Module, Global } from '@nestjs/common';
 import { Configuration } from './configuration';
 
-import { PetService } from './api/pet.service';
-import { StoreService } from './api/store.service';
-import { UserService } from './api/user.service';
+import { DefaultService } from './api/default.service';
 
 @Global()
 @Module({
   imports:      [ HttpModule ],
   exports:      [
-    PetService,
-    StoreService,
-    UserService
+    DefaultService
   ],
   providers: [
-    PetService,
-    StoreService,
-    UserService
+    DefaultService
   ]
 })
 export class ApiModule {

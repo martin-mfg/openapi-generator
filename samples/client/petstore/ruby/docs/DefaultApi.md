@@ -1,17 +1,19 @@
 # Petstore::DefaultApi
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**foo_get**](DefaultApi.md#foo_get) | **GET** /foo |  |
+| [**retrieve_something**](DefaultApi.md#retrieve_something) | **GET** /example/someMethod |  |
 
 
-## foo_get
+## retrieve_something
 
-> <FooGetDefaultResponse> foo_get
+> Array&lt;Float&gt; retrieve_something
 
 
+
+get some object
 
 ### Examples
 
@@ -23,28 +25,28 @@ api_instance = Petstore::DefaultApi.new
 
 begin
   
-  result = api_instance.foo_get
+  result = api_instance.retrieve_something
   p result
 rescue Petstore::ApiError => e
-  puts "Error when calling DefaultApi->foo_get: #{e}"
+  puts "Error when calling DefaultApi->retrieve_something: #{e}"
 end
 ```
 
-#### Using the foo_get_with_http_info variant
+#### Using the retrieve_something_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<FooGetDefaultResponse>, Integer, Hash)> foo_get_with_http_info
+> <Array(Array&lt;Float&gt;, Integer, Hash)> retrieve_something_with_http_info
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.foo_get_with_http_info
+  data, status_code, headers = api_instance.retrieve_something_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <FooGetDefaultResponse>
+  p data # => Array&lt;Float&gt;
 rescue Petstore::ApiError => e
-  puts "Error when calling DefaultApi->foo_get_with_http_info: #{e}"
+  puts "Error when calling DefaultApi->retrieve_something_with_http_info: #{e}"
 end
 ```
 
@@ -54,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+**Array&lt;Float&gt;**
 
 ### Authorization
 

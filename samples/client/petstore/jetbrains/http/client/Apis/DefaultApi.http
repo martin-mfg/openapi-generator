@@ -1,0 +1,5 @@
+## DefaultApi
+
+### 
+# @name retrieveSomething
+GET http://localhost/example/someMethod

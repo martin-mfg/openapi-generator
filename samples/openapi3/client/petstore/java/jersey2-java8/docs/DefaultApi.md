@@ -1,18 +1,20 @@
 # DefaultApi
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**fooGet**](DefaultApi.md#fooGet) | **GET** /foo |  |
+| [**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
 
 
 
-## fooGet
+## retrieveSomething
 
-> FooGetDefaultResponse fooGet()
+> List&lt;BigDecimal&gt; retrieveSomething()
 
 
+
+get some object
 
 ### Example
 
@@ -27,14 +29,14 @@ import org.openapitools.client.api.DefaultApi;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("http://petstore.swagger.io:80/v2");
+        defaultClient.setBasePath("http://localhost");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            FooGetDefaultResponse result = apiInstance.fooGet();
+            List<BigDecimal> result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#fooGet");
+            System.err.println("Exception when calling DefaultApi#retrieveSomething");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -50,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+[**List&lt;BigDecimal&gt;**](BigDecimal.md)
 
 ### Authorization
 
@@ -64,5 +66,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0** | response |  -  |
+| **200** | The response with results |  -  |
 

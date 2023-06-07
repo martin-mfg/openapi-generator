@@ -10,7 +10,7 @@ open class ApiClient(val basePath: kotlin.String = defaultBasePath, val accessTo
 
         @JvmStatic
         val defaultBasePath: String by lazy {
-            System.getProperties().getProperty(baseUrlKey, "http://petstore.swagger.io/v2")
+            System.getProperties().getProperty(baseUrlKey, "http://localhost")
         }
     }
 

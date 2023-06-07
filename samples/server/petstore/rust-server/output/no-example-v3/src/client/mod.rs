@@ -36,7 +36,7 @@ const FRAGMENT_ENCODE_SET: &AsciiSet = &percent_encoding::CONTROLS
 const ID_ENCODE_SET: &AsciiSet = &FRAGMENT_ENCODE_SET.add(b'|');
 
 use crate::{Api,
-     OpGetResponse
+     RetrieveSomethingResponse
      };
 
 /// Convert input into a base path, e.g. "http://example:123". Also checks the scheme as it goes.
@@ -380,14 +380,13 @@ impl<S, C> Api<C> for Client<S, C> where
         }
     }
 
-    async fn op_get(
+    async fn retrieve_something(
         &self,
-        param_op_get_request: models::OpGetRequest,
-        context: &C) -> Result<OpGetResponse, ApiError>
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let mut client_service = self.client_service.clone();
         let mut uri = format!(
-            "{}/op",
+            "{}/example/someMethod",
             self.base_path
         );
 
@@ -414,17 +413,6 @@ impl<S, C> Api<C> for Client<S, C> where
                 Err(e) => return Err(ApiError(format!("Unable to create request: {}", e)))
         };
 
-        // Body parameter
-        let body = serde_json::to_string(&param_op_get_request).expect("impossible to fail to serialize");
-
-                *request.body_mut() = Body::from(body);
-
-        let header = "application/json";
-        request.headers_mut().insert(CONTENT_TYPE, match HeaderValue::from_str(header) {
-            Ok(h) => h,
-            Err(e) => return Err(ApiError(format!("Unable to create header: {} - {}", header, e)))
-        });
-
         let header = HeaderValue::from_str(Has::<XSpanIdString>::get(context).0.as_str());
         request.headers_mut().insert(HeaderName::from_static("x-span-id"), match header {
             Ok(h) => h,
@@ -436,8 +424,17 @@ impl<S, C> Api<C> for Client<S, C> where
 
         match response.status().as_u16() {
             200 => {
-                Ok(
-                    OpGetResponse::OK
+                let body = response.into_body();
+                let body = body
+                        .into_raw()
+                        .map_err(|e| ApiError(format!("Failed to read response: {}", e))).await?;
+                let body = str::from_utf8(&body)
+                    .map_err(|e| ApiError(format!("Response was not valid UTF8: {}", e)))?;
+                let body = serde_json::from_str::<models::ExampleResponse>(body).map_err(|e| {
+                    ApiError(format!("Response body did not match the schema: {}", e))
+                })?;
+                Ok(RetrieveSomethingResponse::TheResponseWithResults
+                    (body)
                 )
             }
             code => {

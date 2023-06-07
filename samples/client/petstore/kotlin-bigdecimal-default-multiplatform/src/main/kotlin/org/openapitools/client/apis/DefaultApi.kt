@@ -15,7 +15,6 @@
 
 package org.openapitools.client.apis
 
-import org.openapitools.client.models.Apa
 
 import org.openapitools.client.infrastructure.*
 import io.ktor.client.HttpClientConfig
@@ -36,34 +35,44 @@ open class DefaultApi(
 
     /**
      * 
-     * 
-     * @param apa 
-     * @return void
+     * get some object
+     * @return kotlin.collections.List<kotlin.Double>
      */
-    open suspend fun testPost(apa: Apa): HttpResponse<Unit> {
+    @Suppress("UNCHECKED_CAST")
+    open suspend fun retrieveSomething(): HttpResponse<kotlin.collections.List<kotlin.Double>> {
 
         val localVariableAuthNames = listOf<String>()
 
-        val localVariableBody = apa
+        val localVariableBody = 
+            io.ktor.client.utils.EmptyContent
 
         val localVariableQuery = mutableMapOf<String, List<String>>()
         val localVariableHeaders = mutableMapOf<String, String>()
 
         val localVariableConfig = RequestConfig<kotlin.Any?>(
-            RequestMethod.POST,
-            "/test",
+            RequestMethod.GET,
+            "/example/someMethod",
             query = localVariableQuery,
             headers = localVariableHeaders,
             requiresAuthentication = false,
         )
 
-        return jsonRequest(
+        return request(
             localVariableConfig,
             localVariableBody,
             localVariableAuthNames
-        ).wrap()
+        ).wrap<RetrieveSomethingResponse>().map { value }
     }
 
-
+    @Serializable
+    private class RetrieveSomethingResponse(val value: List<kotlin.Double>) {
+        @Serializer(RetrieveSomethingResponse::class)
+        companion object : KSerializer<RetrieveSomethingResponse> {
+            private val serializer: KSerializer<List<kotlin.Double>> = serializer<List<kotlin.Double>>()
+            override val descriptor = serializer.descriptor
+            override fun serialize(encoder: Encoder, obj: RetrieveSomethingResponse) = serializer.serialize(encoder, obj.value)
+            override fun deserialize(decoder: Decoder) = RetrieveSomethingResponse(serializer.deserialize(decoder))
+        }
+    }
 
 }

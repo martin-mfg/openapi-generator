@@ -1,6 +1,6 @@
-# Auto-Generated OpenAPI Bindings to `OpenAPIPetstore`
+# Auto-Generated OpenAPI Bindings to `SomeExample`
 
-The library in `lib` provides auto-generated-from-OpenAPI bindings to the OpenAPIPetstore API.
+The library in `lib` provides auto-generated-from-OpenAPI bindings to the SomeExample API.
 
 ## Installation
 
@@ -19,22 +19,22 @@ packages:
 
 ## Main Interface
 
-The main interface to this library is in the `OpenAPIPetstore.API` module, which exports the OpenAPIPetstoreBackend type. The OpenAPIPetstoreBackend
+The main interface to this library is in the `SomeExample.API` module, which exports the SomeExampleBackend type. The SomeExampleBackend
 type can be used to create and define servers and clients for the API.
 
 ## Creating a Client
 
-A client can be created via the `createOpenAPIPetstoreClient` function, which will generate a function for every endpoint of the API.
-Then these functions can be invoked with `runOpenAPIPetstoreClientWithManager` or more conveniently with `callOpenAPIPetstoreClient`
+A client can be created via the `createSomeExampleClient` function, which will generate a function for every endpoint of the API.
+Then these functions can be invoked with `runSomeExampleClientWithManager` or more conveniently with `callSomeExampleClient`
 (depending if you want an `Either` back or you want to catch) to access the API endpoint they refer to, if the API is served
 at the `url` you specified.
 
-For example, if `localhost:8080` is serving the OpenAPIPetstore API, you can write:
+For example, if `localhost:8080` is serving the SomeExample API, you can write:
 
 ```haskell
 {-# LANGUAGE RecordWildCards #-}
 
-import OpenAPIPetstore.API as API
+import SomeExample.API as API
 
 import           Network.HTTP.Client     (newManager)
 import           Network.HTTP.Client.TLS (tlsManagerSettings)
@@ -50,42 +50,42 @@ main = do
   manager <- newManager tlsManagerSettings
 
   -- Create the client (all endpoint functions will be available)
-  OpenAPIPetstoreBackend{..} <- API.createOpenAPIPetstoreClient
+  SomeExampleBackend{..} <- API.createSomeExampleClient
 
-  -- Any OpenAPIPetstore API call can go here, e.g. here we call `getSomeEndpoint`
-  API.callOpenAPIPetstore (mkClientEnv manager url) getSomeEndpoint
+  -- Any SomeExample API call can go here, e.g. here we call `getSomeEndpoint`
+  API.callSomeExample (mkClientEnv manager url) getSomeEndpoint
 ```
 
 ## Creating a Server
 
-In order to create a server, you must use the `runOpenAPIPetstoreMiddlewareServer` function. However, you unlike the client, in which case you *got* a `OpenAPIPetstoreBackend`
-from the library, you must instead *provide* a `OpenAPIPetstoreBackend`. For example, if you have defined handler functions for all the
-functions in `OpenAPIPetstore.Handlers`, you can write:
+In order to create a server, you must use the `runSomeExampleMiddlewareServer` function. However, you unlike the client, in which case you *got* a `SomeExampleBackend`
+from the library, you must instead *provide* a `SomeExampleBackend`. For example, if you have defined handler functions for all the
+functions in `SomeExample.Handlers`, you can write:
 
 ```haskell
 {-# LANGUAGE RecordWildCards #-}
 
-import OpenAPIPetstore.API
+import SomeExample.API
 -- required dependency: wai
 import Network.Wai (Middleware)
 -- required dependency: wai-extra
 import Network.Wai.Middleware.RequestLogger (logStdout)
 
--- A module you wrote yourself, containing all handlers needed for the OpenAPIPetstoreBackend type.
-import OpenAPIPetstore.Handlers
+-- A module you wrote yourself, containing all handlers needed for the SomeExampleBackend type.
+import SomeExample.Handlers
 
--- If you would like to not use any middlewares you could use runOpenAPIPetstoreServer instead
+-- If you would like to not use any middlewares you could use runSomeExampleServer instead
 
 -- Combined middlewares
 requestMiddlewares :: Middleware
 requestMiddlewares = logStdout
 
--- Run a OpenAPIPetstore server on localhost:8080
+-- Run a SomeExample server on localhost:8080
 main :: IO ()
 main = do
-  let server = OpenAPIPetstoreBackend{..}
+  let server = SomeExampleBackend{..}
       config = Config "http://localhost:8080/"
-  runOpenAPIPetstoreMiddlewareServer config requestMiddlewares server
+  runSomeExampleMiddlewareServer config requestMiddlewares server
 ```
 
 ## Authentication
@@ -107,13 +107,13 @@ newtype Account = Account {unAccount :: Text}
 type instance AuthServerData Protected = Account
 ```
 
-Additionally, you have to provide value for the `OpenAPIPetstoreAuth` type provided by the
-`OpenAPIPetstore.API` module:
+Additionally, you have to provide value for the `SomeExampleAuth` type provided by the
+`SomeExample.API` module:
 
 ```
-auth :: OpenAPIPetstoreAuth
+auth :: SomeExampleAuth
 auth =
-  OpenAPIPetstoreAuth
+  SomeExampleAuth
     { lookupUser = lookupAccount,
       authError = \request -> err401 {errBody = "Missing header"}
     }
@@ -124,5 +124,5 @@ auth =
 functions:
 
 ```
-runOpenAPIPetstoreMiddlewareServer config requestMiddlewares auth server
+runSomeExampleMiddlewareServer config requestMiddlewares auth server
 ```

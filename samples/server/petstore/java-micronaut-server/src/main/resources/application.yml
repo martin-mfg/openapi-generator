@@ -4,7 +4,7 @@ micronaut:
     name: petstore-micronaut-server
   server:
     port: 8080
-    context-path: "/v2/"
+    context-path: "/"
   security:
     # authentication: bearer | cookie | session | idtoken
 

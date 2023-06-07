@@ -1,6 +1,4 @@
-export * from '../models/Response';
 
-import { Response } from '../models/Response';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -25,7 +23,6 @@ let enumsMap: Set<string> = new Set<string>([
 ]);
 
 let typeMap: {[index: string]: any} = {
-    "Response": Response,
 }
 
 export class ObjectSerializer {

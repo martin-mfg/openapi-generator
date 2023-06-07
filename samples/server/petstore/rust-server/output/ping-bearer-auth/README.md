@@ -13,7 +13,7 @@ To see how to make this your own, look here:
 
 [README]((https://openapi-generator.tech))
 
-- API version: 1.0
+- API version: 0.0.1
 
 
 
@@ -61,7 +61,7 @@ cargo run --example server
 To run a client, follow one of the following simple steps:
 
 ```
-cargo run --example client PingGet
+cargo run --example client RetrieveSomething
 ```
 
 ### HTTPS
@@ -91,26 +91,21 @@ See https://doc.rust-lang.org/cargo/reference/manifest.html#the-features-section
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:8080*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pingGet**](docs/default_api.md#pingGet) | **GET** /ping | 
+[**retrieveSomething**](docs/default_api.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
 ## Documentation For Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 ## Documentation For Authorization
+Endpoints do not require authorization.
 
-Authentication schemes defined for the API:
-### bearerAuth
-- **Type**: Bearer token authentication
-
-Example
-```
-```
 
 ## Author
 

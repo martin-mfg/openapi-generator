@@ -22,7 +22,7 @@ public class ApiClient {
     private final HttpRequestFactory httpRequestFactory;
     private final ObjectMapper objectMapper;
 
-    private static final String defaultBasePath = "http://petstore.swagger.io:80/v2";
+    private static final String defaultBasePath = "http://localhost";
 
     // A reasonable default object mapper. Client can pass in a chosen ObjectMapper anyway, this is just for reasonable defaults.
     private static ObjectMapper createDefaultObjectMapper() {
@@ -82,28 +82,8 @@ public class ApiClient {
 
     // Builder pattern to get API instances for this client.
     
-    public AnotherFakeApi anotherFakeApi() {
-        return new AnotherFakeApi(this);
-    }
-    
-    public FakeApi fakeApi() {
-        return new FakeApi(this);
-    }
-    
-    public FakeClassnameTags123Api fakeClassnameTags123Api() {
-        return new FakeClassnameTags123Api(this);
-    }
-    
-    public PetApi petApi() {
-        return new PetApi(this);
-    }
-    
-    public StoreApi storeApi() {
-        return new StoreApi(this);
-    }
-    
-    public UserApi userApi() {
-        return new UserApi(this);
+    public DefaultApi _defaultApi() {
+        return new DefaultApi(this);
     }
     
 }

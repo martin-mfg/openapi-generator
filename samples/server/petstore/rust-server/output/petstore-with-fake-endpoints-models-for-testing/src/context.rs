@@ -104,52 +104,6 @@ impl<T, A, B, C, D, ReqBody> Service<Request<ReqBody>> for AddContext<T, A, B, C
         let context = A::default().push(XSpanIdString::get_or_generate(&request));
         let headers = request.headers();
 
-        {
-            use swagger::auth::Bearer;
-            use std::ops::Deref;
-            if let Some(bearer) = swagger::auth::from_headers::<Bearer>(headers) {
-                let auth_data = AuthData::Bearer(bearer);
-                let context = context.push(Some(auth_data));
-                let context = context.push(None::<Authorization>);
-
-                return self.inner.call((request, context))
-            }
-        }
-        {
-            use swagger::auth::api_key_from_header;
-
-            if let Some(header) = api_key_from_header(headers, "api_key") {
-                let auth_data = AuthData::ApiKey(header);
-                let context = context.push(Some(auth_data));
-                let context = context.push(None::<Authorization>);
-
-                return self.inner.call((request, context))
-            }
-        }
-        {
-            let key = form_urlencoded::parse(request.uri().query().unwrap_or_default().as_bytes())
-                .filter(|e| e.0 == "api_key_query")
-                .map(|e| e.1.clone().into_owned())
-                .next();
-            if let Some(key) = key {
-                let auth_data = AuthData::ApiKey(key);
-                let context = context.push(Some(auth_data));
-                let context = context.push(None::<Authorization>);
-
-                return self.inner.call((request, context))
-            }
-        }
-        {
-            use swagger::auth::Basic;
-            use std::ops::Deref;
-            if let Some(basic) = swagger::auth::from_headers::<Basic>(headers) {
-                let auth_data = AuthData::Basic(basic);
-                let context = context.push(Some(auth_data));
-                let context = context.push(None::<Authorization>);
-
-                return self.inner.call((request, context))
-            }
-        }
 
         let context = context.push(None::<AuthData>);
         let context = context.push(None::<Authorization>);

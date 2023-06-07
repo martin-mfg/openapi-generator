@@ -14,13 +14,13 @@ To run the server from the command line, you can use maven to provision and star
 Please execute the following:
 
 ```
-mvn -Dtomee-embedded-plugin.http=80 package org.apache.tomee.maven:tomee-embedded-maven-plugin:7.0.5:run
+mvn -Dtomee-embedded-plugin.http=8080 package org.apache.tomee.maven:tomee-embedded-maven-plugin:7.0.5:run
 ```
 
 You can then call your server endpoints under:
 
 ```
-http://localhost:80/v2/
+http://localhost:8080/
 ```
 
 Note that if you have configured the `host` to be something other than localhost, the calls through

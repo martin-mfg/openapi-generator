@@ -23,8 +23,8 @@ source /etc/bash-completion.d/petstore-cli\n\
 #
 # Setup prompt
 #
-RUN echo 'export PS1="[OpenAPI Petstore] \$ "' >> ~/.bashrc
-RUN echo 'export PROMPT="[OpenAPI Petstore] \$ "' >> ~/.zshrc
+RUN echo 'export PS1="[Some example] \$ "' >> ~/.bashrc
+RUN echo 'export PROMPT="[Some example] \$ "' >> ~/.zshrc
 
 #
 # Setup a welcome message with basic instruction
@@ -32,14 +32,11 @@ RUN echo 'export PROMPT="[OpenAPI Petstore] \$ "' >> ~/.zshrc
 RUN echo -e 'echo "\
 \n\
 This Docker provides preconfigured environment for running the command\n\
-line REST client for $(tput setaf 6)OpenAPI Petstore$(tput sgr0).\n\
+line REST client for $(tput setaf 6)Some example$(tput sgr0).\n\
 \n\
 For convenience, you can export the following environment variables:\n\
 \n\
 $(tput setaf 3)PETSTORE_HOST$(tput sgr0) - server URL, e.g. https://example.com:8080\n\
-$(tput setaf 3)PETSTORE_API_KEY$(tput sgr0) - access token, e.g. "ASDASHJDG63456asdASSD"\n\
-$(tput setaf 3)PETSTORE_API_KEY$(tput sgr0) - access token, e.g. "ASDASHJDG63456asdASSD"\n\
-$(tput setaf 3)PETSTORE_BASIC_AUTH$(tput sgr0) - basic authentication credentials, e.g.: "username:password"\n\
 \n\
 $(tput setaf 7)Basic usage:$(tput sgr0)\n\
 \n\

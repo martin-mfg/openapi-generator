@@ -7,9 +7,6 @@ configuration.ts
 encoder.ts
 git_push.sh
 index.ts
-model/apple.ts
-model/fruit.ts
-model/grape.ts
 model/models.ts
 param.ts
 variables.ts

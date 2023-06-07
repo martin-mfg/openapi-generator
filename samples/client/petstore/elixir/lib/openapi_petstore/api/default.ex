@@ -10,6 +10,7 @@ defmodule OpenapiPetstore.Api.Default do
   import OpenapiPetstore.RequestBuilder
 
   @doc """
+  get some object
 
   ### Parameters
 
@@ -18,21 +19,21 @@ defmodule OpenapiPetstore.Api.Default do
 
   ### Returns
 
-  - `{:ok, OpenapiPetstore.Model.FooGetDefaultResponse.t}` on success
+  - `{:ok, [%Float{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec foo_get(Tesla.Env.client, keyword()) :: {:ok, OpenapiPetstore.Model.FooGetDefaultResponse.t} | {:error, Tesla.Env.t}
-  def foo_get(connection, _opts \\ []) do
+  @spec retrieve_something(Tesla.Env.client, keyword()) :: {:ok, list(Float.t)} | {:error, Tesla.Env.t}
+  def retrieve_something(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/foo")
+      |> url("/example/someMethod")
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {:default, %OpenapiPetstore.Model.FooGetDefaultResponse{}}
+      {200, []}
     ])
   end
 end

@@ -94,15 +94,7 @@ impl<C> Server<C> {
 
 use rust_server_test::{
     Api,
-    AllOfGetResponse,
-    DummyGetResponse,
-    DummyPutResponse,
-    FileResponseGetResponse,
-    GetStructuredYamlResponse,
-    HtmlPostResponse,
-    PostYamlResponse,
-    RawJsonGetResponse,
-    SoloObjectPostResponse,
+    RetrieveSomethingResponse,
 };
 use rust_server_test::server::MakeService;
 use std::error::Error;
@@ -111,93 +103,12 @@ use swagger::ApiError;
 #[async_trait]
 impl<C> Api<C> for Server<C> where C: Has<XSpanIdString> + Send + Sync
 {
-    async fn all_of_get(
+    async fn retrieve_something(
         &self,
-        context: &C) -> Result<AllOfGetResponse, ApiError>
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let context = context.clone();
-        info!("all_of_get() - X-Span-ID: {:?}", context.get().0.clone());
-        Err(ApiError("Generic failure".into()))
-    }
-
-    /// A dummy endpoint to make the spec valid.
-    async fn dummy_get(
-        &self,
-        context: &C) -> Result<DummyGetResponse, ApiError>
-    {
-        let context = context.clone();
-        info!("dummy_get() - X-Span-ID: {:?}", context.get().0.clone());
-        Err(ApiError("Generic failure".into()))
-    }
-
-    async fn dummy_put(
-        &self,
-        nested_response: models::DummyPutRequest,
-        context: &C) -> Result<DummyPutResponse, ApiError>
-    {
-        let context = context.clone();
-        info!("dummy_put({:?}) - X-Span-ID: {:?}", nested_response, context.get().0.clone());
-        Err(ApiError("Generic failure".into()))
-    }
-
-    /// Get a file
-    async fn file_response_get(
-        &self,
-        context: &C) -> Result<FileResponseGetResponse, ApiError>
-    {
-        let context = context.clone();
-        info!("file_response_get() - X-Span-ID: {:?}", context.get().0.clone());
-        Err(ApiError("Generic failure".into()))
-    }
-
-    async fn get_structured_yaml(
-        &self,
-        context: &C) -> Result<GetStructuredYamlResponse, ApiError>
-    {
-        let context = context.clone();
-        info!("get_structured_yaml() - X-Span-ID: {:?}", context.get().0.clone());
-        Err(ApiError("Generic failure".into()))
-    }
-
-    /// Test HTML handling
-    async fn html_post(
-        &self,
-        body: String,
-        context: &C) -> Result<HtmlPostResponse, ApiError>
-    {
-        let context = context.clone();
-        info!("html_post(\"{}\") - X-Span-ID: {:?}", body, context.get().0.clone());
-        Err(ApiError("Generic failure".into()))
-    }
-
-    async fn post_yaml(
-        &self,
-        value: String,
-        context: &C) -> Result<PostYamlResponse, ApiError>
-    {
-        let context = context.clone();
-        info!("post_yaml(\"{}\") - X-Span-ID: {:?}", value, context.get().0.clone());
-        Err(ApiError("Generic failure".into()))
-    }
-
-    /// Get an arbitrary JSON blob.
-    async fn raw_json_get(
-        &self,
-        context: &C) -> Result<RawJsonGetResponse, ApiError>
-    {
-        let context = context.clone();
-        info!("raw_json_get() - X-Span-ID: {:?}", context.get().0.clone());
-        Err(ApiError("Generic failure".into()))
-    }
-
-    /// Send an arbitrary JSON blob
-    async fn solo_object_post(
-        &self,
-        value: serde_json::Value,
-        context: &C) -> Result<SoloObjectPostResponse, ApiError>
-    {
-        let context = context.clone();
-        info!("solo_object_post({:?}) - X-Span-ID: {:?}", value, context.get().0.clone());
+        info!("retrieve_something() - X-Span-ID: {:?}", context.get().0.clone());
         Err(ApiError("Generic failure".into()))
     }
 

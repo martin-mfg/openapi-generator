@@ -81,13 +81,7 @@ auth_with_prefix(Cfg, Key, Token) ->
 
 update_params_with_auth(Cfg, Headers, QS) ->
     AuthSettings = maps:get(auth, Cfg, #{}),
-    Auths = #{ 'petstore_auth' =>
-                #{type => 'oauth2',
-                  key => <<"Authorization">>,
-                  in => header}, 'api_key' =>
-                #{type => 'apiKey',
-                  key => <<"api_key">>,
-                  in => header}},
+    Auths = #{ },
 
     maps:fold(fun(AuthName, #{type := _Type,
                               in := In,

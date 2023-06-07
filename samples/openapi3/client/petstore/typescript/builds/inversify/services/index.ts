@@ -119,8 +119,6 @@ export class ApiServiceBinder {
      * If you want to only bind some of the apis, you need to do that manually.
      */
     public bindAllApiServices() {
-        this.container.bind(apiServices.AbstractPromisePetApi).to(apis.PromisePetApi).inSingletonScope();
-        this.container.bind(apiServices.AbstractPromiseStoreApi).to(apis.PromiseStoreApi).inSingletonScope();
-        this.container.bind(apiServices.AbstractPromiseUserApi).to(apis.PromiseUserApi).inSingletonScope();
+        this.container.bind(apiServices.AbstractPromiseDefaultApi).to(apis.PromiseDefaultApi).inSingletonScope();
     }
 }

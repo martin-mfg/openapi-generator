@@ -50,14 +50,10 @@ open class ApiClient(
         httpClientEngine?.let { HttpClient(it, clientConfig) } ?: HttpClient(clientConfig)
     }
 
-    private val authentications: kotlin.collections.Map<String, Authentication> by lazy {
-        mapOf(
-                "petstore_auth" to OAuth(), 
-                "api_key" to ApiKeyAuth("header", "api_key"))
-    }
+    private val authentications: kotlin.collections.Map<String, Authentication>? = null
 
     companion object {
-          const val BASE_URL = "http://petstore.swagger.io/v2"
+          const val BASE_URL = "http://localhost"
           val JSON_DEFAULT: ObjectMapper.() -> Unit = {
             configure(SerializationFeature.INDENT_OUTPUT, true)
             setDefaultPrettyPrinter(DefaultPrettyPrinter().apply {
