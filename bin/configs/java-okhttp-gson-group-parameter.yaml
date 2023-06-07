@@ -1,7 +1,7 @@
 generatorName: java
 outputDir: samples/client/petstore/java/okhttp-gson-group-parameter
 library: okhttp-gson
-inputSpec: modules/openapi-generator/src/test/resources/3_0/java/petstore-group-parameter.yaml
+inputSpec: modules/openapi-generator/src/test/resources/experiments.yaml
 templateDir: modules/openapi-generator/src/main/resources/Java
 additionalProperties:
   artifactId: petstore-okhttp-gson-group-parameter

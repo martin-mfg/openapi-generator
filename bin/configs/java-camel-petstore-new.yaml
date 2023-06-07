@@ -1,6 +1,6 @@
 generatorName: java-camel
 outputDir: samples/server/petstore/java-camel
-inputSpec: modules/openapi-generator/src/test/resources/3_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/experiments.yaml
 templateDir: modules/openapi-generator/src/main/resources/java-camel-server
 additionalProperties:
   oas3: "true"

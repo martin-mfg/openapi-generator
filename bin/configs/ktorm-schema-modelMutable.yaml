@@ -1,6 +1,6 @@
 generatorName: ktorm-schema
 outputDir: samples/schema/petstore/ktorm-modelMutable
-inputSpec: modules/openapi-generator/src/test/resources/3_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/experiments.yaml
 templateDir: modules/openapi-generator/src/main/resources/ktorm-schema
 additionalProperties:
   hideGenerationTimestamp: true

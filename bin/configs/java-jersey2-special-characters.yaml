@@ -1,7 +1,7 @@
 generatorName: java
 outputDir: samples/openapi3/client/petstore/java/jersey2-java8-special-characters
 library: jersey2
-inputSpec: modules/openapi-generator/src/test/resources/3_0/schema-with-special-characters.yaml
+inputSpec: modules/openapi-generator/src/test/resources/experiments.yaml
 templateDir: modules/openapi-generator/src/main/resources/Java
 additionalProperties:
   artifactId: petstore-openapi3-jersey2-java8-special-characters

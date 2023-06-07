@@ -1,0 +1,22 @@
+openapi: 3.0.1
+info:
+  title: Some example
+  version: 0.0.1
+paths:
+  /example/someMethod:
+    get:
+      description: get some object
+      operationId: retrieveSomething
+      responses:
+        200:
+          description: The response with results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExampleResponse'
+components:
+  schemas:
+    ExampleResponse:
+      type: array
+      items:
+        type: number
