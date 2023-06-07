@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 ApiResponse.avsc
 ApiResponseStatuses.avsc
 Category.avsc

@@ -1,4 +1,5 @@
 .dockerignore
+.openapi-generator-ignore
 README.md
 pom.xml
 src/gen/java/org/openapitools/api/AnotherFakeApi.java
