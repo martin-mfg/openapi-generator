@@ -1,6 +1,6 @@
 generatorName: typescript-node
 outputDir: samples/client/petstore/typescript-node/npm
-inputSpec: modules/openapi-generator/src/test/resources/2_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/experiments.yaml
 templateDir: modules/openapi-generator/src/main/resources/typescript-node
 additionalProperties:
   npmVersion: 0.0.1

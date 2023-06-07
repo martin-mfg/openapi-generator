@@ -1,6 +1,6 @@
 generatorName: jaxrs-cxf
 outputDir: samples/server/petstore/jaxrs-cxf-annotated-base-path
-inputSpec: modules/openapi-generator/src/test/resources/2_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/experiments.yaml
 templateDir: modules/openapi-generator/src/main/resources/JavaJaxRS/cxf
 additionalProperties:
   artifactId: cxf-annotated-basepath

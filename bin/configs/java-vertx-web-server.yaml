@@ -1,6 +1,6 @@
 generatorName: java-vertx-web
 outputDir: samples/server/petstore/java-vertx-web
-inputSpec: modules/openapi-generator/src/test/resources/3_0/petstore.yaml
+inputSpec: modules/openapi-generator/src/test/resources/experiments.yaml
 templateDir: modules/openapi-generator/src/main/resources/JavaVertXWebServer
 additionalProperties:
   hideGenerationTimestamp: "true"

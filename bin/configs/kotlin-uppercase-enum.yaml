@@ -1,6 +1,6 @@
 generatorName: kotlin
 outputDir: samples/client/petstore/kotlin-uppercase-enum
-inputSpec: modules/openapi-generator/src/test/resources/3_0/issue-4062.yaml
+inputSpec: modules/openapi-generator/src/test/resources/experiments.yaml
 templateDir: modules/openapi-generator/src/main/resources/kotlin-client
 additionalProperties:
   artifactId: kotlin-uppercase-enum
