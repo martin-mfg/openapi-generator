@@ -35,4 +35,3 @@ src/main/java/org/openapitools/client/auth/HttpBasicAuth.java
 src/main/java/org/openapitools/client/auth/HttpBearerAuth.java
 src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java
 src/main/resources/openapi/openapi.yaml
-src/test/java/org/openapitools/client/api/DefaultApiTest.java

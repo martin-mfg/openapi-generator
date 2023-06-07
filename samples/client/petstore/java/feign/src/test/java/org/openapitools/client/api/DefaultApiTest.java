@@ -1,7 +1,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
-import org.openapitools.client.model.FooGetDefaultResponse;
+import java.math.BigDecimal;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -28,11 +28,11 @@ class DefaultApiTest {
     /**
      * 
      *
-     * 
+     * get some object
      */
     @Test
-    void fooGetTest() {
-        // FooGetDefaultResponse response = api.fooGet();
+    void retrieveSomethingTest() {
+        // List<BigDecimal> response = api.retrieveSomething();
 
         // TODO: test validations
     }

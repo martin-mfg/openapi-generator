@@ -18,4 +18,3 @@ settings.gradle
 src/main/java/org/openapitools/api/DefaultApi.java
 src/main/resources/application.yml
 src/main/resources/logback.xml
-src/test/groovy/org/openapitools/api/DefaultApiSpec.groovy

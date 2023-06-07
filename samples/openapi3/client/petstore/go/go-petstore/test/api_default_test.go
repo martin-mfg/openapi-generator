@@ -1,5 +1,5 @@
 /*
-OpenAPI Petstore
+Some example
 
 Testing DefaultAPIService
 
@@ -22,11 +22,11 @@ func Test_petstore_DefaultAPIService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
-	t.Run("Test DefaultAPIService FooGet", func(t *testing.T) {
+	t.Run("Test DefaultAPIService RetrieveSomething", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.DefaultAPI.FooGet(context.Background()).Execute()
+		resp, httpRes, err := apiClient.DefaultAPI.RetrieveSomething(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

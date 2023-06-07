@@ -7,8 +7,10 @@ void main() {
   final instance = Openapi().getDefaultApi();
 
   group(DefaultApi, () {
-    //Future<Fruit> rootGet() async
-    test('test rootGet', () async {
+    // get some object
+    //
+    //Future<BuiltList<num>> retrieveSomething() async
+    test('test retrieveSomething', () async {
       // TODO
     });
 

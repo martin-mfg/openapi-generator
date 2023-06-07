@@ -7,8 +7,10 @@ void main() {
   final instance = Openapi().getDefaultApi();
 
   group(DefaultApi, () {
-    //Future<Example> list() async
-    test('test list', () async {
+    // get some object
+    //
+    //Future<BuiltList<num>> retrieveSomething() async
+    test('test retrieveSomething', () async {
       // TODO
     });
 

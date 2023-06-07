@@ -16,5 +16,4 @@ phpcs.xml.dist
 phpunit.xml.dist
 public/.htaccess
 public/index.php
-tests/Api/DefaultApiTest.php
 tests/BaseModelTest.php

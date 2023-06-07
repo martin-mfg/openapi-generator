@@ -27,7 +27,6 @@ app/openapi_server/swagger/swagger.yaml
 app/openapi_server/swagger/swagger.yaml
 app/openapi_server/test/__init__.py
 app/openapi_server/test/__init__.py
-app/openapi_server/test/test_default_controller.py
 app/openapi_server/typing_utils.py
 app/openapi_server/typing_utils.py
 app/openapi_server/util.py

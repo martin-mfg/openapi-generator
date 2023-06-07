@@ -17,8 +17,10 @@ void main() {
   // final instance = DefaultApi();
 
   group('tests for DefaultApi', () {
-    //Future<FooGetDefaultResponse> fooGet() async
-    test('test fooGet', () async {
+    // get some object
+    //
+    //Future<List<num>> retrieveSomething() async
+    test('test retrieveSomething', () async {
       // TODO
     });
 

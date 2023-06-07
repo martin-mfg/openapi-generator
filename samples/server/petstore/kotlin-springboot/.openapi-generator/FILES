@@ -9,4 +9,3 @@ src/main/kotlin/org/openapitools/api/ExampleApiService.kt
 src/main/kotlin/org/openapitools/api/ExampleApiServiceImpl.kt
 src/main/kotlin/org/openapitools/api/Exceptions.kt
 src/main/resources/application.yaml
-src/test/kotlin/org/openapitools/api/ExampleApiTest.kt

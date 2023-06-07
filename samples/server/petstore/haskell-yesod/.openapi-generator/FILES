@@ -20,6 +20,5 @@ src/Settings/StaticFiles.hs
 src/SomeExample/Types.hs
 stack.yaml
 static/.gitkeep
-test/Handler/DefaultSpec.hs
 test/Spec.hs
 test/TestImport.hs

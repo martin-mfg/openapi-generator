@@ -18,4 +18,3 @@ src/main/java/org/openapitools/Application.java
 src/main/java/org/openapitools/controller/DefaultController.java
 src/main/resources/application.yml
 src/main/resources/logback.xml
-src/test/groovy/org/openapitools/controller/DefaultControllerSpec.groovy
