@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 Model/200Response.sql
 Model/AdditionalPropertiesClass.sql
 Model/AllOfWithSingleRef.sql
