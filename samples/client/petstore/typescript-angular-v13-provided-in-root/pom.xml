@@ -122,7 +122,10 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>npx tsc</executable>
+                            <executable>npx</executable>
+                            <arguments>
+                                <argument>tsc</argument>
+                            </arguments>
                         </configuration>
                     </execution>
                 </executions>
