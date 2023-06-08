@@ -46,7 +46,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>tsc</executable>
+                            <executable>npx tsc</executable>
                         </configuration>
                     </execution>
                 </executions>
