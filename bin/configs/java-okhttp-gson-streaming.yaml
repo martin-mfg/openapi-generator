@@ -7,3 +7,4 @@ additionalProperties:
   artifactId: petstore-okhttp-gson
   hideGenerationTimestamp: "true"
   supportStreaming: true
+  artifactVersion: 0.0.2
