@@ -94,7 +94,7 @@ impl<C> Server<C> {
 
 use no_example_v3::{
     Api,
-    OpGetResponse,
+    RetrieveSomethingResponse,
 };
 use no_example_v3::server::MakeService;
 use std::error::Error;
@@ -103,13 +103,12 @@ use swagger::ApiError;
 #[async_trait]
 impl<C> Api<C> for Server<C> where C: Has<XSpanIdString> + Send + Sync
 {
-    async fn op_get(
+    async fn retrieve_something(
         &self,
-        op_get_request: models::OpGetRequest,
-        context: &C) -> Result<OpGetResponse, ApiError>
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let context = context.clone();
-        info!("op_get({:?}) - X-Span-ID: {:?}", op_get_request, context.get().0.clone());
+        info!("retrieve_something() - X-Span-ID: {:?}", context.get().0.clone());
         Err(ApiError("Generic failure".into()))
     }
 

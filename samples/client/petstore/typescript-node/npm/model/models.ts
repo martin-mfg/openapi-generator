@@ -1,11 +1,6 @@
 import localVarRequest from 'request';
 
-export * from './apiResponse';
-export * from './category';
-export * from './order';
-export * from './pet';
-export * from './tag';
-export * from './user';
+export * from './exampleResponse';
 
 import * as fs from 'fs';
 
@@ -20,12 +15,7 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { ApiResponse } from './apiResponse';
-import { Category } from './category';
-import { Order } from './order';
-import { Pet } from './pet';
-import { Tag } from './tag';
-import { User } from './user';
+import { ExampleResponse } from './exampleResponse';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -40,17 +30,10 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "Order.StatusEnum": Order.StatusEnum,
-        "Pet.StatusEnum": Pet.StatusEnum,
 }
 
 let typeMap: {[index: string]: any} = {
-    "ApiResponse": ApiResponse,
-    "Category": Category,
-    "Order": Order,
-    "Pet": Pet,
-    "Tag": Tag,
-    "User": User,
+    "ExampleResponse": ExampleResponse,
 }
 
 export class ObjectSerializer {

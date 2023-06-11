@@ -4,12 +4,12 @@ defmodule OpenapiPetstore.Mixfile do
   def project do
     [
       app: :openapi_petstore,
-      version: "1.0.0",
+      version: "0.0.1",
       elixir: "~> 1.10",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       package: package(),
-      description: "This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \&quot; \\",
+      description: "dummy description",
       deps: deps()
     ]
   end

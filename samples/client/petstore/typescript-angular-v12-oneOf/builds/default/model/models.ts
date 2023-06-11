@@ -1,3 +1,1 @@
-export * from './apple';
-export * from './fruit';
-export * from './grape';
+export * from './exampleResponse';

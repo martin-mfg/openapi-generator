@@ -5,9 +5,9 @@ namespace App\DTO;
 
 use Articus\DataTransfer\PhpAttribute as DTA;
 
-#[DTA\Strategy("ScalarList", ["type" => "string"])]
+#[DTA\Strategy("ScalarList", ["type" => "bool"])]
 #[DTA\Validator("Collection", ["validators" => [
-    ["name" => "Scalar", "options" => ["type" => "string"]]
+    ["name" => "Scalar", "options" => ["type" => "bool"]]
 ]])]
 class Collection extends \ArrayObject
 {

@@ -12,24 +12,13 @@ use serde::{Serialize, Deserialize};
 type ServiceError = Box<dyn Error + Send + Sync + 'static>;
 
 pub const BASE_PATH: &str = "";
-pub const API_VERSION: &str = "1.0.7";
+pub const API_VERSION: &str = "0.0.1";
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum MultipartRelatedRequestPostResponse {
-    /// OK
-    OK
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum MultipartRequestPostResponse {
-    /// OK
-    OK
-}
-
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum MultipleIdenticalMimeTypesPostResponse {
-    /// OK
-    OK
+pub enum RetrieveSomethingResponse {
+    /// The response with results
+    TheResponseWithResults
+    (models::ExampleResponse)
 }
 
 /// API
@@ -40,26 +29,9 @@ pub trait Api<C: Send + Sync> {
         Poll::Ready(Ok(()))
     }
 
-    async fn multipart_related_request_post(
+    async fn retrieve_something(
         &self,
-        required_binary_field: swagger::ByteArray,
-        object_field: Option<models::MultipartRequestObjectField>,
-        optional_binary_field: Option<swagger::ByteArray>,
-        context: &C) -> Result<MultipartRelatedRequestPostResponse, ApiError>;
-
-    async fn multipart_request_post(
-        &self,
-        string_field: String,
-        binary_field: swagger::ByteArray,
-        optional_string_field: Option<String>,
-        object_field: Option<models::MultipartRequestObjectField>,
-        context: &C) -> Result<MultipartRequestPostResponse, ApiError>;
-
-    async fn multiple_identical_mime_types_post(
-        &self,
-        binary1: Option<swagger::ByteArray>,
-        binary2: Option<swagger::ByteArray>,
-        context: &C) -> Result<MultipleIdenticalMimeTypesPostResponse, ApiError>;
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>;
 
 }
 
@@ -72,26 +44,9 @@ pub trait ApiNoContext<C: Send + Sync> {
 
     fn context(&self) -> &C;
 
-    async fn multipart_related_request_post(
+    async fn retrieve_something(
         &self,
-        required_binary_field: swagger::ByteArray,
-        object_field: Option<models::MultipartRequestObjectField>,
-        optional_binary_field: Option<swagger::ByteArray>,
-        ) -> Result<MultipartRelatedRequestPostResponse, ApiError>;
-
-    async fn multipart_request_post(
-        &self,
-        string_field: String,
-        binary_field: swagger::ByteArray,
-        optional_string_field: Option<String>,
-        object_field: Option<models::MultipartRequestObjectField>,
-        ) -> Result<MultipartRequestPostResponse, ApiError>;
-
-    async fn multiple_identical_mime_types_post(
-        &self,
-        binary1: Option<swagger::ByteArray>,
-        binary2: Option<swagger::ByteArray>,
-        ) -> Result<MultipleIdenticalMimeTypesPostResponse, ApiError>;
+        ) -> Result<RetrieveSomethingResponse, ApiError>;
 
 }
 
@@ -118,37 +73,12 @@ impl<T: Api<C> + Send + Sync, C: Clone + Send + Sync> ApiNoContext<C> for Contex
         ContextWrapper::context(self)
     }
 
-    async fn multipart_related_request_post(
+    async fn retrieve_something(
         &self,
-        required_binary_field: swagger::ByteArray,
-        object_field: Option<models::MultipartRequestObjectField>,
-        optional_binary_field: Option<swagger::ByteArray>,
-        ) -> Result<MultipartRelatedRequestPostResponse, ApiError>
+        ) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let context = self.context().clone();
-        self.api().multipart_related_request_post(required_binary_field, object_field, optional_binary_field, &context).await
-    }
-
-    async fn multipart_request_post(
-        &self,
-        string_field: String,
-        binary_field: swagger::ByteArray,
-        optional_string_field: Option<String>,
-        object_field: Option<models::MultipartRequestObjectField>,
-        ) -> Result<MultipartRequestPostResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().multipart_request_post(string_field, binary_field, optional_string_field, object_field, &context).await
-    }
-
-    async fn multiple_identical_mime_types_post(
-        &self,
-        binary1: Option<swagger::ByteArray>,
-        binary2: Option<swagger::ByteArray>,
-        ) -> Result<MultipleIdenticalMimeTypesPostResponse, ApiError>
-    {
-        let context = self.context().clone();
-        self.api().multiple_identical_mime_types_post(binary1, binary2, &context).await
+        self.api().retrieve_something(&context).await
     }
 
 }

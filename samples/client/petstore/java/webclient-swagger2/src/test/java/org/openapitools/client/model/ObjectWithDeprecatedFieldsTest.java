@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,6 @@ import org.openapitools.client.model.DeprecatedObject;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-
 
 /**
  * Model tests for ObjectWithDeprecatedFields

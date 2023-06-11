@@ -23,7 +23,6 @@ import java.io.IOException;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-
 /**
  * Model tests for ModelApiResponse
  */

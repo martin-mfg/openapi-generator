@@ -2,18 +2,9 @@ QT += network
 
 HEADERS += \
 # Models
-    $${PWD}/PFXApiResponse.h \
-    $${PWD}/PFXCategory.h \
-    $${PWD}/PFXOrder.h \
-    $${PWD}/PFXPet.h \
-    $${PWD}/PFXTag.h \
-    $${PWD}/PFXTestAnyType.h \
-    $${PWD}/PFXUser.h \
+    $${PWD}/PFXExampleResponse.h \
 # APIs
-    $${PWD}/PFXPetApi.h \
-    $${PWD}/PFXPrimitivesApi.h \
-    $${PWD}/PFXStoreApi.h \
-    $${PWD}/PFXUserApi.h \
+    $${PWD}/PFXDefaultApi.h \
 # Others
     $${PWD}/PFXHelpers.h \
     $${PWD}/PFXHttpRequest.h \
@@ -26,18 +17,9 @@ HEADERS += \
 
 SOURCES += \
 # Models
-    $${PWD}/PFXApiResponse.cpp \
-    $${PWD}/PFXCategory.cpp \
-    $${PWD}/PFXOrder.cpp \
-    $${PWD}/PFXPet.cpp \
-    $${PWD}/PFXTag.cpp \
-    $${PWD}/PFXTestAnyType.cpp \
-    $${PWD}/PFXUser.cpp \
+    $${PWD}/PFXExampleResponse.cpp \
 # APIs
-    $${PWD}/PFXPetApi.cpp \
-    $${PWD}/PFXPrimitivesApi.cpp \
-    $${PWD}/PFXStoreApi.cpp \
-    $${PWD}/PFXUserApi.cpp \
+    $${PWD}/PFXDefaultApi.cpp \
 # Others
     $${PWD}/PFXHelpers.cpp \
     $${PWD}/PFXHttpRequest.cpp \

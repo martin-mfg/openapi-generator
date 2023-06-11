@@ -18,8 +18,8 @@ public class SpringDocConfiguration {
         return new OpenAPI()
                 .info(
                         new Info()
-                                .title("ByRefOrValue")
-                                .description("This tests for a oneOf interface representation ")
+                                .title("Some example")
+                                .description("dummy description")
                                 .version("0.0.1")
                 )
         ;

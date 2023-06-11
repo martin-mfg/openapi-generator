@@ -2,7 +2,7 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.ByteArrayObject;
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.HashMap;
 import java.util.List;
@@ -48,12 +48,12 @@ public class DefaultApi {
 
     /**
      * 
-     * 
-     * <p><b>200</b> - 
-     * @return List&lt;ByteArrayObject&gt;
+     * get some object
+     * <p><b>200</b> - The response with results
+     * @return ExampleResponse
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec nullableArrayTestGetRequestCreation() throws WebClientResponseException {
+    private ResponseSpec retrieveSomethingRequestCreation() throws WebClientResponseException {
         Object postBody = null;
         // create path and map variables
         final Map<String, Object> pathParams = new HashMap<String, Object>();
@@ -72,42 +72,42 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<ByteArrayObject> localVarReturnType = new ParameterizedTypeReference<ByteArrayObject>() {};
-        return apiClient.invokeAPI("/nullable-array-test", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
+        return apiClient.invokeAPI("/example/someMethod", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     }
 
     /**
      * 
-     * 
-     * <p><b>200</b> - 
-     * @return List&lt;ByteArrayObject&gt;
+     * get some object
+     * <p><b>200</b> - The response with results
+     * @return ExampleResponse
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Flux<ByteArrayObject> nullableArrayTestGet() throws WebClientResponseException {
-        ParameterizedTypeReference<ByteArrayObject> localVarReturnType = new ParameterizedTypeReference<ByteArrayObject>() {};
-        return nullableArrayTestGetRequestCreation().bodyToFlux(localVarReturnType);
+    public Mono<ExampleResponse> retrieveSomething() throws WebClientResponseException {
+        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
+        return retrieveSomethingRequestCreation().bodyToMono(localVarReturnType);
     }
 
     /**
      * 
-     * 
-     * <p><b>200</b> - 
-     * @return ResponseEntity&lt;List&lt;ByteArrayObject&gt;&gt;
+     * get some object
+     * <p><b>200</b> - The response with results
+     * @return ResponseEntity&lt;ExampleResponse&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<List<ByteArrayObject>>> nullableArrayTestGetWithHttpInfo() throws WebClientResponseException {
-        ParameterizedTypeReference<ByteArrayObject> localVarReturnType = new ParameterizedTypeReference<ByteArrayObject>() {};
-        return nullableArrayTestGetRequestCreation().toEntityList(localVarReturnType);
+    public Mono<ResponseEntity<ExampleResponse>> retrieveSomethingWithHttpInfo() throws WebClientResponseException {
+        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
+        return retrieveSomethingRequestCreation().toEntity(localVarReturnType);
     }
 
     /**
      * 
-     * 
-     * <p><b>200</b> - 
+     * get some object
+     * <p><b>200</b> - The response with results
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec nullableArrayTestGetWithResponseSpec() throws WebClientResponseException {
-        return nullableArrayTestGetRequestCreation();
+    public ResponseSpec retrieveSomethingWithResponseSpec() throws WebClientResponseException {
+        return retrieveSomethingRequestCreation();
     }
 }

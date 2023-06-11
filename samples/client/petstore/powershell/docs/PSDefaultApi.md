@@ -1,25 +1,27 @@
 # PSPetstore.PSPetstore/Api.PSDefaultApi
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-PSFooGet**](PSDefaultApi.md#Invoke-PSFooGet) | **GET** /foo | 
+[**Invoke-PSRetrieveSomething**](PSDefaultApi.md#Invoke-PSRetrieveSomething) | **GET** /example/someMethod | 
 
 
-<a id="Invoke-PSFooGet"></a>
-# **Invoke-PSFooGet**
-> FooGetDefaultResponse Invoke-PSFooGet<br>
+<a id="Invoke-PSRetrieveSomething"></a>
+# **Invoke-PSRetrieveSomething**
+> ExampleResponse Invoke-PSRetrieveSomething<br>
 
 
+
+get some object
 
 ### Example
 ```powershell
 
 try {
-    $Result = Invoke-PSFooGet
+    $Result = Invoke-PSRetrieveSomething
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-PSFooGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-PSRetrieveSomething: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -29,7 +31,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md) (PSCustomObject)
+[**ExampleResponse**](ExampleResponse.md) (PSCustomObject)
 
 ### Authorization
 

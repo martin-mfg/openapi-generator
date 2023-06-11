@@ -1,18 +1,6 @@
-export * from '../models/Cat';
-export * from '../models/Dog';
-export * from '../models/FilePostRequest';
-export * from '../models/PetByAge';
-export * from '../models/PetByType';
-export * from '../models/PetsFilteredPatchRequest';
-export * from '../models/PetsPatchRequest';
+export * from '../models/ExampleResponse';
 
-import { Cat } from '../models/Cat';
-import { Dog , DogBreedEnum   } from '../models/Dog';
-import { FilePostRequest } from '../models/FilePostRequest';
-import { PetByAge } from '../models/PetByAge';
-import { PetByType, PetByTypePetTypeEnum    } from '../models/PetByType';
-import { PetsFilteredPatchRequest  , PetsFilteredPatchRequestPetTypeEnum    } from '../models/PetsFilteredPatchRequest';
-import { PetsPatchRequest   , PetsPatchRequestBreedEnum   } from '../models/PetsPatchRequest';
+import { ExampleResponse } from '../models/ExampleResponse';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -34,20 +22,10 @@ const supportedMediaTypes: { [mediaType: string]: number } = {
 
 
 let enumsMap: Set<string> = new Set<string>([
-    "DogBreedEnum",
-    "PetByTypePetTypeEnum",
-    "PetsFilteredPatchRequestPetTypeEnum",
-    "PetsPatchRequestBreedEnum",
 ]);
 
 let typeMap: {[index: string]: any} = {
-    "Cat": Cat,
-    "Dog": Dog,
-    "FilePostRequest": FilePostRequest,
-    "PetByAge": PetByAge,
-    "PetByType": PetByType,
-    "PetsFilteredPatchRequest": PetsFilteredPatchRequest,
-    "PetsPatchRequest": PetsPatchRequest,
+    "ExampleResponse": ExampleResponse,
 }
 
 export class ObjectSerializer {

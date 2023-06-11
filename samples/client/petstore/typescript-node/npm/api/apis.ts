@@ -1,9 +1,5 @@
-export * from './petApi';
-import { PetApi } from './petApi';
-export * from './storeApi';
-import { StoreApi } from './storeApi';
-export * from './userApi';
-import { UserApi } from './userApi';
+export * from './defaultApi';
+import { DefaultApi } from './defaultApi';
 import * as http from 'http';
 
 export class HttpError extends Error {
@@ -15,4 +11,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [PetApi, StoreApi, UserApi];
+export const APIS = [DefaultApi];

@@ -1,41 +1,33 @@
-openapi: 3.0.3
+openapi: 3.0.1
 info:
-  description: Title
-  title: Title
-  version: 1.0.0
+  description: dummy description
+  title: Some example
+  version: 0.0.1
 servers:
-- url: https
+- url: /
 paths:
-  /user:
+  /example/someMethod:
     get:
+      description: get some object
+      operationId: retrieveSomething
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ReadonlyAndRequiredProperties'
-          description: success
+                $ref: '#/components/schemas/ExampleResponse'
+          description: The response with results
       x-accepts: application/json
 components:
   schemas:
-    ReadonlyAndRequiredProperties:
+    ExampleResponse:
       example:
-        requiredYesReadonlyYes: requiredYesReadonlyYes
-        requiredNoReadonlyYes: requiredNoReadonlyYes
-        requiredYesReadonlyNo: requiredYesReadonlyNo
-        requiredNoReadonlyNo: requiredNoReadonlyNo
+        myOnlyProperty:
+        - true
+        - true
       properties:
-        requiredYesReadonlyYes:
-          readOnly: true
-          type: string
-        requiredYesReadonlyNo:
-          type: string
-        requiredNoReadonlyYes:
-          readOnly: true
-          type: string
-        requiredNoReadonlyNo:
-          type: string
-      required:
-      - requiredYesReadonlyNo
-      - requiredYesReadonlyYes
+        myOnlyProperty:
+          items:
+            type: boolean
+          type: array
       type: object

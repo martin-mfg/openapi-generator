@@ -22,7 +22,7 @@ pub use crate::context;
 type ServiceFuture = BoxFuture<'static, Result<Response<Body>, crate::ServiceError>>;
 
 use crate::{Api,
-     OpGetResponse
+     RetrieveSomethingResponse
 };
 
 mod paths {
@@ -30,11 +30,11 @@ mod paths {
 
     lazy_static! {
         pub static ref GLOBAL_REGEX_SET: regex::RegexSet = regex::RegexSet::new(vec![
-            r"^/op$"
+            r"^/example/someMethod$"
         ])
         .expect("Unable to create global regex set");
     }
-    pub(crate) static ID_OP: usize = 0;
+    pub(crate) static ID_EXAMPLE_SOMEMETHOD: usize = 0;
 }
 
 pub struct MakeService<T, C> where
@@ -139,40 +139,9 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
 
         match method {
 
-            // OpGet - GET /op
-            hyper::Method::GET if path.matched(paths::ID_OP) => {
-                // Body parameters (note that non-required body parameters will ignore garbage
-                // values, rather than causing a 400 response). Produce warning header and logs for
-                // any unused fields.
-                let result = body.into_raw().await;
-                match result {
-                            Ok(body) => {
-                                let mut unused_elements = Vec::new();
-                                let param_op_get_request: Option<models::OpGetRequest> = if !body.is_empty() {
-                                    let deserializer = &mut serde_json::Deserializer::from_slice(&body);
-                                    match serde_ignored::deserialize(deserializer, |path| {
-                                            warn!("Ignoring unknown field in body: {}", path);
-                                            unused_elements.push(path.to_string());
-                                    }) {
-                                        Ok(param_op_get_request) => param_op_get_request,
-                                        Err(e) => return Ok(Response::builder()
-                                                        .status(StatusCode::BAD_REQUEST)
-                                                        .body(Body::from(format!("Couldn't parse body parameter OpGetRequest - doesn't match schema: {}", e)))
-                                                        .expect("Unable to create Bad Request response for invalid body parameter OpGetRequest due to schema")),
-                                    }
-                                } else {
-                                    None
-                                };
-                                let param_op_get_request = match param_op_get_request {
-                                    Some(param_op_get_request) => param_op_get_request,
-                                    None => return Ok(Response::builder()
-                                                        .status(StatusCode::BAD_REQUEST)
-                                                        .body(Body::from("Missing required body parameter OpGetRequest"))
-                                                        .expect("Unable to create Bad Request response for missing body parameter OpGetRequest")),
-                                };
-
-                                let result = api_impl.op_get(
-                                            param_op_get_request,
+            // RetrieveSomething - GET /example/someMethod
+            hyper::Method::GET if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => {
+                                let result = api_impl.retrieve_something(
                                         &context
                                     ).await;
                                 let mut response = Response::new(Body::empty());
@@ -181,18 +150,18 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
                                             HeaderValue::from_str((&context as &dyn Has<XSpanIdString>).get().0.clone().as_str())
                                                 .expect("Unable to create X-Span-ID header value"));
 
-                                        if !unused_elements.is_empty() {
-                                            response.headers_mut().insert(
-                                                HeaderName::from_static("warning"),
-                                                HeaderValue::from_str(format!("Ignoring unknown fields in body: {:?}", unused_elements).as_str())
-                                                    .expect("Unable to create Warning header value"));
-                                        }
-
                                         match result {
                                             Ok(rsp) => match rsp {
-                                                OpGetResponse::OK
+                                                RetrieveSomethingResponse::TheResponseWithResults
+                                                    (body)
                                                 => {
                                                     *response.status_mut() = StatusCode::from_u16(200).expect("Unable to turn 200 into a StatusCode");
+                                                    response.headers_mut().insert(
+                                                        CONTENT_TYPE,
+                                                        HeaderValue::from_str("application/json")
+                                                            .expect("Unable to create Content-Type header for RETRIEVE_SOMETHING_THE_RESPONSE_WITH_RESULTS"));
+                                                    let body = serde_json::to_string(&body).expect("impossible to fail to serialize");
+                                                    *response.body_mut() = Body::from(body);
                                                 },
                                             },
                                             Err(_) => {
@@ -204,15 +173,9 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
                                         }
 
                                         Ok(response)
-                            },
-                            Err(e) => Ok(Response::builder()
-                                                .status(StatusCode::BAD_REQUEST)
-                                                .body(Body::from(format!("Couldn't read body parameter OpGetRequest: {}", e)))
-                                                .expect("Unable to create Bad Request response due to unable to read body parameter OpGetRequest")),
-                        }
             },
 
-            _ if path.matched(paths::ID_OP) => method_not_allowed(),
+            _ if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => method_not_allowed(),
             _ => Ok(Response::builder().status(StatusCode::NOT_FOUND)
                     .body(Body::empty())
                     .expect("Unable to create Not Found response"))
@@ -226,8 +189,8 @@ impl<T> RequestParser<T> for ApiRequestParser {
     fn parse_operation_id(request: &Request<T>) -> Option<&'static str> {
         let path = paths::GLOBAL_REGEX_SET.matches(request.uri().path());
         match *request.method() {
-            // OpGet - GET /op
-            hyper::Method::GET if path.matched(paths::ID_OP) => Some("OpGet"),
+            // RetrieveSomething - GET /example/someMethod
+            hyper::Method::GET if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => Some("RetrieveSomething"),
             _ => None,
         }
     }

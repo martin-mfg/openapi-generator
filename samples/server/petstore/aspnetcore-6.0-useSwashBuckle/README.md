@@ -1,6 +1,6 @@
 # Org.OpenAPITools - ASP.NET Core 6.0 Server
 
-This is a sample server Petstore server. For this sample, you can use the api key `special-key` to test the authorization filters.
+dummy description
 
 ## Upgrade NuGet Packages
 

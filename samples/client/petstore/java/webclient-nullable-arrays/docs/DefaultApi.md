@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**nullableArrayTestGet**](DefaultApi.md#nullableArrayTestGet) | **GET** /nullable-array-test |  |
+| [**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
 
 
 
-## nullableArrayTestGet
+## retrieveSomething
 
-> List&lt;ByteArrayObject&gt; nullableArrayTestGet()
-
-
+> ExampleResponse retrieveSomething()
 
 
+
+get some object
 
 ### Example
 
@@ -33,10 +33,10 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            List<ByteArrayObject> result = apiInstance.nullableArrayTestGet();
+            ExampleResponse result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#nullableArrayTestGet");
+            System.err.println("Exception when calling DefaultApi#retrieveSomething");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List&lt;ByteArrayObject&gt;**](ByteArrayObject.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 
@@ -67,5 +67,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** |  |  -  |
+| **200** | The response with results |  -  |
 

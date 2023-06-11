@@ -4,14 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**operation**](DefaultApi.md#operation) | **GET** / | 
+[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
-<a id="operation"></a>
-# **operation**
-> ModelWithEnumPropertyHavingDefault operation()
+<a id="retrieveSomething"></a>
+# **retrieveSomething**
+> ExampleResponse retrieveSomething()
 
 
+
+get some object
 
 ### Example
 ```kotlin
@@ -21,13 +23,13 @@ Method | HTTP request | Description
 
 val apiInstance = DefaultApi()
 try {
-    val result : ModelWithEnumPropertyHavingDefault = apiInstance.operation()
+    val result : ExampleResponse = apiInstance.retrieveSomething()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DefaultApi#operation")
+    println("4xx response calling DefaultApi#retrieveSomething")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DefaultApi#operation")
+    println("5xx response calling DefaultApi#retrieveSomething")
     e.printStackTrace()
 }
 ```
@@ -37,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ModelWithEnumPropertyHavingDefault**](ModelWithEnumPropertyHavingDefault.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

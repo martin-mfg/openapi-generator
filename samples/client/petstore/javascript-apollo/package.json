@@ -1,8 +1,8 @@
 {
-  "name": "open_api_petstore",
-  "version": "1.0.0",
-  "description": "This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \" \\",
-  "license": "Apache-2.0",
+  "name": "some_example",
+  "version": "0.0.1",
+  "description": "dummy description",
+  "license": "Unlicense",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",

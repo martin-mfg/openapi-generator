@@ -5,7 +5,7 @@
     <artifactId>petstore-resteasy</artifactId>
     <packaging>jar</packaging>
     <name>petstore-resteasy</name>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <scm>
         <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
         <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
@@ -15,7 +15,7 @@
     <licenses>
         <license>
             <name>Unlicense</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <url>http://unlicense.org</url>
             <distribution>repo</distribution>
         </license>
     </licenses>

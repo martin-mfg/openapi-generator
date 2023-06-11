@@ -23,18 +23,18 @@ class SpringFoxConfiguration {
 
     fun apiInfo(): ApiInfo {
         return ApiInfoBuilder()
-            .title("OpenAPI Petstore")
-            .description("This is a sample server Petstore server. For this sample, you can use the api key `special-key` to test the authorization filters.")
-            .license("Apache-2.0")
-            .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0.html")
+            .title("Some example")
+            .description("dummy description")
+            .license("")
+            .licenseUrl("")
             .termsOfServiceUrl("")
-            .version("1.0.0")
+            .version("0.0.1")
             .contact(Contact("", "", ""))
             .build()
     }
 
     @Bean
-    fun customImplementation(servletContext: ServletContext, @Value("\${openapi.openAPIPetstore.base-path:/v2}") basePath: String): Docket {
+    fun customImplementation(servletContext: ServletContext, @Value("\${openapi.someExample.base-path:}") basePath: String): Docket {
         return Docket(DocumentationType.SWAGGER_2)
                 .select()
                     .apis(RequestHandlerSelectors.basePackage("org.openapitools.api"))

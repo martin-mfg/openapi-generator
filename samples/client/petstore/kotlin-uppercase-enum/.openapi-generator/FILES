@@ -1,14 +1,14 @@
 README.md
 build.gradle
-docs/EnumApi.md
-docs/PetEnum.md
+docs/DefaultApi.md
+docs/ExampleResponse.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
 gradlew.bat
 proguard-rules.pro
 settings.gradle
-src/main/kotlin/org/openapitools/client/apis/EnumApi.kt
+src/main/kotlin/org/openapitools/client/apis/DefaultApi.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiAbstractions.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiClient.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiResponse.kt
@@ -30,4 +30,4 @@ src/main/kotlin/org/openapitools/client/infrastructure/StringBuilderAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/URIAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/URLAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/UUIDAdapter.kt
-src/main/kotlin/org/openapitools/client/models/PetEnum.kt
+src/main/kotlin/org/openapitools/client/models/ExampleResponse.kt

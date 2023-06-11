@@ -23,7 +23,7 @@ public class ApiClient {
 
   public interface Api {}
 
-  private String basePath = "http://localhost:3000";
+  private String basePath = "http://localhost";
   private Map<String, RequestInterceptor> apiAuthorizations;
   private Feign.Builder feignBuilder;
 

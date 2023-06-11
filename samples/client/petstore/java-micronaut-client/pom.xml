@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.openapitools</groupId>
     <artifactId>petstore-micronaut</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <packaging>${packaging}</packaging>
 
     <parent>
@@ -40,11 +40,6 @@
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-validation</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.micronaut.xml</groupId>
-            <artifactId>micronaut-jackson-xml</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>

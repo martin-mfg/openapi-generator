@@ -1,10 +1,9 @@
 .gitignore
+.openapi-generator-ignore
 Api.ts
 AuthStorage.ts
-PetApi.ts
+DefaultApi.ts
 README.md
-StoreApi.ts
-UserApi.ts
 git_push.sh
 index.ts
 models.ts

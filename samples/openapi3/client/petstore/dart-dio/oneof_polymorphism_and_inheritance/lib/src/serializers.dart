@@ -14,49 +14,14 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
-import 'package:openapi/src/model/addressable.dart';
-import 'package:openapi/src/model/bar.dart';
-import 'package:openapi/src/model/bar_create.dart';
-import 'package:openapi/src/model/bar_ref.dart';
-import 'package:openapi/src/model/bar_ref_or_value.dart';
-import 'package:openapi/src/model/entity.dart';
-import 'package:openapi/src/model/entity_ref.dart';
-import 'package:openapi/src/model/extensible.dart';
-import 'package:openapi/src/model/foo.dart';
-import 'package:openapi/src/model/foo_ref.dart';
-import 'package:openapi/src/model/foo_ref_or_value.dart';
-import 'package:openapi/src/model/pasta.dart';
-import 'package:openapi/src/model/pizza.dart';
-import 'package:openapi/src/model/pizza_speziale.dart';
+import 'package:openapi/src/model/example_response.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
-  Addressable,$Addressable,
-  Bar,
-  BarCreate,
-  BarRef,
-  BarRefOrValue,
-  Entity,$Entity,
-  EntityRef,$EntityRef,
-  Extensible,$Extensible,
-  Foo,
-  FooRef,
-  FooRefOrValue,
-  Pasta,
-  Pizza,$Pizza,
-  PizzaSpeziale,
+  ExampleResponse,
 ])
 Serializers serializers = (_$serializers.toBuilder()
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(FooRefOrValue)]),
-        () => ListBuilder<FooRefOrValue>(),
-      )
-      ..add(Addressable.serializer)
-      ..add(Entity.serializer)
-      ..add(EntityRef.serializer)
-      ..add(Extensible.serializer)
-      ..add(Pizza.serializer)
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())
       ..add(const DateSerializer())

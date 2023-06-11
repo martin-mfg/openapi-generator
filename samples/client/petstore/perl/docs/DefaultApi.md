@@ -5,17 +5,19 @@
 use WWW::OpenAPIClient::Object::DefaultApi;
 ```
 
-All URIs are relative to *http://petstore.swagger.io:80/v2*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**foo_get**](DefaultApi.md#foo_get) | **GET** /foo | 
+[**retrieve_something**](DefaultApi.md#retrieve_something) | **GET** /example/someMethod | 
 
 
-# **foo_get**
-> FooGetDefaultResponse foo_get()
+# **retrieve_something**
+> ExampleResponse retrieve_something()
 
 
+
+get some object
 
 ### Example
 ```perl
@@ -26,11 +28,11 @@ my $api_instance = WWW::OpenAPIClient::DefaultApi->new(
 
 
 eval {
-    my $result = $api_instance->foo_get();
+    my $result = $api_instance->retrieve_something();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DefaultApi->foo_get: $@\n";
+    warn "Exception when calling DefaultApi->retrieve_something: $@\n";
 }
 ```
 
@@ -39,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FooGetDefaultResponse**](FooGetDefaultResponse.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

@@ -5,17 +5,19 @@
 import 'package:openapi/api.dart';
 ```
 
-All URIs are relative to *http://api.example.xyz/v1*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list**](DefaultApi.md#list) | **GET** /example | 
+[**retrieveSomething**](DefaultApi.md#retrievesomething) | **GET** /example/someMethod | 
 
 
-# **list**
-> Example list()
+# **retrieveSomething**
+> ExampleResponse retrieveSomething()
 
 
+
+get some object
 
 ### Example
 ```dart
@@ -24,10 +26,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getDefaultApi();
 
 try {
-    final response = api.list();
+    final response = api.retrieveSomething();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DefaultApi->list: $e\n');
+    print('Exception when calling DefaultApi->retrieveSomething: $e\n');
 }
 ```
 
@@ -36,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Example**](Example.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

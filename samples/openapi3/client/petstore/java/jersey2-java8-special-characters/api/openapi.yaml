@@ -1,52 +1,34 @@
-openapi: 3.0.3
+openapi: 3.0.1
 info:
-  description: test
-  title: test
-  version: 1.0.0
+  description: dummy description
+  title: Some example
+  version: 0.0.1
 servers:
 - url: /
 paths:
-  /test:
-    post:
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/MySchemaName._-Characters'
+  /example/someMethod:
+    get:
+      description: get some object
+      operationId: retrieveSomething
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MySchemaName._-Characters'
-          description: the response
-      x-content-type: application/json
+                $ref: '#/components/schemas/ExampleResponse'
+          description: The response with results
       x-accepts: application/json
 components:
   schemas:
-    Parent:
-      discriminator:
-        propertyName: objectType
+    ExampleResponse:
+      example:
+        myOnlyProperty:
+        - true
+        - true
       properties:
-        objectType:
-          type: string
-    ChildSchema:
-      allOf:
-      - $ref: '#/components/schemas/Parent'
-      - properties:
-          prop1:
-            type: string
-        type: object
-      description: A schema that does not have any special character.
-    MySchemaName._-Characters:
-      allOf:
-      - $ref: '#/components/schemas/Parent'
-      - properties:
-          prop2:
-            type: string
-        type: object
-      description: "A schema name that has letters, numbers, punctuation and non-ASCII\
-        \ characters. The sanitization rules should make it possible to generate a\
-        \ language-specific classname with allowed characters in that programming\
-        \ language."
+        myOnlyProperty:
+          items:
+            type: boolean
+          type: array
+      type: object
 

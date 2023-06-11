@@ -11,7 +11,7 @@
 part of openapi.api;
 
 class ApiClient {
-  ApiClient({this.basePath = 'http://petstore.swagger.io/v2', this.authentication,});
+  ApiClient({this.basePath = 'http://localhost', this.authentication,});
 
   final String basePath;
   final Authentication? authentication;
@@ -181,18 +181,8 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
-        case 'ApiResponse':
-          return ApiResponse.fromJson(value);
-        case 'Category':
-          return Category.fromJson(value);
-        case 'Order':
-          return Order.fromJson(value);
-        case 'Pet':
-          return Pet.fromJson(value);
-        case 'Tag':
-          return Tag.fromJson(value);
-        case 'User':
-          return User.fromJson(value);
+        case 'ExampleResponse':
+          return ExampleResponse.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

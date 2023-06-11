@@ -1,4 +1,2 @@
-Apis/PetApi.http
-Apis/StoreApi.http
-Apis/UserApi.http
+Apis/DefaultApi.http
 README.md

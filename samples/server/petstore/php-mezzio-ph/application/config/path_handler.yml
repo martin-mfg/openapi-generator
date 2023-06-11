@@ -9,21 +9,8 @@ dependencies:
 
 Articus\PathHandler\RouteInjectionFactory:
   paths:
-    '/v2':
-    - App\Handler\Pet
-    - App\Handler\PetFindByStatus
-    - App\Handler\PetFindByTags
-    - App\Handler\PetPetId
-    - App\Handler\PetPetIdUploadImage
-    - App\Handler\StoreInventory
-    - App\Handler\StoreOrder
-    - App\Handler\StoreOrderOrderId
-    - App\Handler\User
-    - App\Handler\UserCreateWithArray
-    - App\Handler\UserCreateWithList
-    - App\Handler\UserLogin
-    - App\Handler\UserLogout
-    - App\Handler\UserUsername
+    '':
+    - App\Handler\ExampleSomeMethod
 
 Articus\PathHandler\Handler\PluginManager:
   abstract_factories:
@@ -42,17 +29,4 @@ Articus\PathHandler\Handler\PluginManager:
 #  invokables:
 
 Laminas\ServiceManager\AbstractFactory\ConfigAbstractFactory:
-  App\Handler\Pet: []
-  App\Handler\PetFindByStatus: []
-  App\Handler\PetFindByTags: []
-  App\Handler\PetPetId: []
-  App\Handler\PetPetIdUploadImage: []
-  App\Handler\StoreInventory: []
-  App\Handler\StoreOrder: []
-  App\Handler\StoreOrderOrderId: []
-  App\Handler\User: []
-  App\Handler\UserCreateWithArray: []
-  App\Handler\UserCreateWithList: []
-  App\Handler\UserLogin: []
-  App\Handler\UserLogout: []
-  App\Handler\UserUsername: []
+  App\Handler\ExampleSomeMethod: []

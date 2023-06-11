@@ -2,7 +2,7 @@ import { ResponseContext, RequestContext, HttpFile } from '../http/http';
 import { Configuration} from '../configuration'
 import { Observable, of, from } from '../rxjsStub';
 import {mergeMap, map} from  '../rxjsStub';
-import { Response } from '../models/Response';
+import { ExampleResponse } from '../models/ExampleResponse';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
 export class ObservableDefaultApi {
@@ -21,9 +21,10 @@ export class ObservableDefaultApi {
     }
 
     /**
+     * get some object
      */
-    public uniqueItems(_options?: Configuration): Observable<Response> {
-        const requestContextPromise = this.requestFactory.uniqueItems(_options);
+    public retrieveSomething(_options?: Configuration): Observable<ExampleResponse> {
+        const requestContextPromise = this.requestFactory.retrieveSomething(_options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -37,7 +38,7 @@ export class ObservableDefaultApi {
                 for (let middleware of this.configuration.middleware) {
                     middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
                 }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.uniqueItems(rsp)));
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.retrieveSomething(rsp)));
             }));
     }
 

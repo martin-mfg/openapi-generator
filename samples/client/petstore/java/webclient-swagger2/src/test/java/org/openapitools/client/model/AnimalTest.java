@@ -21,10 +21,10 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-
 
 /**
  * Model tests for Animal

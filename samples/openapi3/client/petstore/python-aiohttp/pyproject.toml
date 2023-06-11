@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "petstore_api"
 version = "1.0.0"
-description = "OpenAPI Petstore"
+description = "Some example"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
-license = "Apache-2.0"
+license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
-keywords = ["OpenAPI", "OpenAPI-Generator", "OpenAPI Petstore"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "Some example"]
 include = ["petstore_api/py.typed"]
 
 [tool.poetry.dependencies]
@@ -15,8 +15,6 @@ python = "^3.7"
 urllib3 = ">= 1.25.3"
 python-dateutil = ">=2.8.2"
 aiohttp = ">= 3.8.4"
-pem = ">= 19.3.0"
-pycryptodome = ">= 3.9.0"
 pydantic = "^1.10.5, <2"
 aenum = ">=3.1.11"
 

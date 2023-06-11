@@ -1,41 +1,33 @@
 openapi: 3.0.1
 info:
-  title: fruity
+  description: dummy description
+  title: Some example
   version: 0.0.1
 servers:
 - url: /
 paths:
-  /:
+  /example/someMethod:
     get:
+      description: get some object
+      operationId: retrieveSomething
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/fruit'
-          description: desc
+                $ref: '#/components/schemas/ExampleResponse'
+          description: The response with results
 components:
   schemas:
-    fruit:
+    ExampleResponse:
       example:
-        color: color
-      oneOf:
-      - $ref: '#/components/schemas/apple'
-      - $ref: '#/components/schemas/banana'
+        myOnlyProperty:
+        - true
+        - true
       properties:
-        color:
-          type: string
-      title: fruit
-    apple:
-      properties:
-        kind:
-          type: string
-      title: apple
-      type: object
-    banana:
-      properties:
-        count:
-          type: number
-      title: banana
+        myOnlyProperty:
+          items:
+            type: boolean
+          type: array
       type: object
 

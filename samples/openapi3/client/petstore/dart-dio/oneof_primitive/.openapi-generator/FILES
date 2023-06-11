@@ -1,9 +1,8 @@
 .gitignore
 README.md
 analysis_options.yaml
-doc/Child.md
 doc/DefaultApi.md
-doc/Example.md
+doc/ExampleResponse.md
 lib/openapi.dart
 lib/src/api.dart
 lib/src/api/default_api.dart
@@ -14,8 +13,7 @@ lib/src/auth/basic_auth.dart
 lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
-lib/src/model/child.dart
 lib/src/model/date.dart
-lib/src/model/example.dart
+lib/src/model/example_response.dart
 lib/src/serializers.dart
 pubspec.yaml

@@ -7,8 +7,10 @@ void main() {
   final instance = Openapi().getDefaultApi();
 
   group(DefaultApi, () {
-    //Future<FooGetDefaultResponse> fooGet() async
-    test('test fooGet', () async {
+    // get some object
+    //
+    //Future<ExampleResponse> retrieveSomething() async
+    test('test retrieveSomething', () async {
       // TODO
     });
 

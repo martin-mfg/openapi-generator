@@ -11,9 +11,9 @@
     </parent>
     <groupId>org.openapitools</groupId>
     <artifactId>petstore-helidon-server-se</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <name>petstore-helidon-server-se</name>
-    <description>This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \&quot; \\</description>
+    <description>dummy description</description>
 
     <properties>
         <mainClass>org.openapitools.server.Main</mainClass>

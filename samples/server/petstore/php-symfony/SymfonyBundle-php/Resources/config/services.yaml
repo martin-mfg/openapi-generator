@@ -21,26 +21,8 @@ services:
         arguments:
             - '@validator'
 
-    open_api_server.controller.pet:
-        class: OpenAPI\Server\Controller\PetController
-        calls:
-         - [setSerializer, ['@open_api_server.service.serializer']]
-         - [setValidator,  ['@open_api_server.service.validator']]
-         - [setApiServer,  ['@open_api_server.api.api_server']]
-         - [setContainer,  ['@service_container']]
-        tags: ['controller.service_arguments']
-
-    open_api_server.controller.store:
-        class: OpenAPI\Server\Controller\StoreController
-        calls:
-         - [setSerializer, ['@open_api_server.service.serializer']]
-         - [setValidator,  ['@open_api_server.service.validator']]
-         - [setApiServer,  ['@open_api_server.api.api_server']]
-         - [setContainer,  ['@service_container']]
-        tags: ['controller.service_arguments']
-
-    open_api_server.controller.user:
-        class: OpenAPI\Server\Controller\UserController
+    open_api_server.controller.default:
+        class: OpenAPI\Server\Controller\DefaultController
         calls:
          - [setSerializer, ['@open_api_server.service.serializer']]
          - [setValidator,  ['@open_api_server.service.validator']]

@@ -2,6 +2,7 @@ openapi: 3.0.1
 info:
   title: Some example
   version: 0.0.1
+  description: dummy description
 paths:
   /example/someMethod:
     get:

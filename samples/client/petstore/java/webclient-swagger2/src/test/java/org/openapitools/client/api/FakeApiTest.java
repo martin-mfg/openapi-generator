@@ -16,6 +16,7 @@ package org.openapitools.client.api;
 import java.math.BigDecimal;
 import org.openapitools.client.model.Client;
 import org.openapitools.client.model.EnumClass;
+import org.openapitools.client.model.FakeBigDecimalMap200Response;
 import java.io.File;
 import org.openapitools.client.model.FileSchemaTestClass;
 import org.openapitools.client.model.HealthCheckResult;
@@ -42,6 +43,18 @@ public class FakeApiTest {
 
     private final FakeApi api = new FakeApi();
 
+    
+    /**
+     * 
+     *
+     * for Java apache and Java native, test toUrlQueryString for maps with BegDecimal keys
+     */
+    @Test
+    public void fakeBigDecimalMapTest()  {
+        FakeBigDecimalMap200Response response = api.fakeBigDecimalMap().block();
+
+        // TODO: test validations
+    }
     
     /**
      * Health check endpoint

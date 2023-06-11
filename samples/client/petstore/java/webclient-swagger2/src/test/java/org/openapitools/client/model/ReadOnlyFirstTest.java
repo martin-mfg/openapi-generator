@@ -18,10 +18,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-
 
 /**
  * Model tests for ReadOnlyFirst

@@ -1,7 +1,7 @@
+.openapi-generator-ignore
 apis/DefaultApi.ts
 apis/index.ts
 index.ts
-models/Club.ts
-models/Owner.ts
+models/ExampleResponse.ts
 models/index.ts
 runtime.ts

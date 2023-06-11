@@ -6,7 +6,7 @@
 --
 -- 1. Start up GHCi
 --
--- $ stack ghci open-api-petstore:lib --no-load --work-dir .stack-work-devel
+-- $ stack ghci some-example:lib --no-load --work-dir .stack-work-devel
 --
 -- 2. Load this module
 --

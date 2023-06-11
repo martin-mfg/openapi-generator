@@ -4,14 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**idsGet**](DefaultApi.md#idsGet) | **GET** /{ids} | 
+[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
-<a id="idsGet"></a>
-# **idsGet**
-> idsGet(ids)
+<a id="retrieveSomething"></a>
+# **retrieveSomething**
+> ExampleResponse retrieveSomething()
 
 
+
+get some object
 
 ### Example
 ```kotlin
@@ -20,27 +22,24 @@ Method | HTTP request | Description
 //import org.openapitools.client.models.*
 
 val apiInstance = DefaultApi()
-val ids : kotlin.collections.List<kotlin.String> =  // kotlin.collections.List<kotlin.String> | 
 try {
-    apiInstance.idsGet(ids)
+    val result : ExampleResponse = apiInstance.retrieveSomething()
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DefaultApi#idsGet")
+    println("4xx response calling DefaultApi#retrieveSomething")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DefaultApi#idsGet")
+    println("5xx response calling DefaultApi#retrieveSomething")
     e.printStackTrace()
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ids** | [**kotlin.collections.List&lt;kotlin.String&gt;**](kotlin.String.md)|  |
+This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 
@@ -49,5 +48,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 

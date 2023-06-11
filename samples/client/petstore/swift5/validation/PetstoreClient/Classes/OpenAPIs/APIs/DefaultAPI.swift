@@ -18,8 +18,8 @@ open class DefaultAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func rootGet(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ data: Banana?, _ error: Error?) -> Void)) -> RequestTask {
-        return rootGetWithRequestBuilder().execute(apiResponseQueue) { result in
+    open class func retrieveSomething(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ data: ExampleResponse?, _ error: Error?) -> Void)) -> RequestTask {
+        return retrieveSomethingWithRequestBuilder().execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
                 completion(response.body, nil)
@@ -30,11 +30,12 @@ open class DefaultAPI {
     }
 
     /**
-     - GET /
-     - returns: RequestBuilder<Banana> 
+     - GET /example/someMethod
+     - get some object
+     - returns: RequestBuilder<ExampleResponse> 
      */
-    open class func rootGetWithRequestBuilder() -> RequestBuilder<Banana> {
-        let localVariablePath = "/"
+    open class func retrieveSomethingWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+        let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
 
@@ -46,7 +47,7 @@ open class DefaultAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<Banana>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<ExampleResponse>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: false)
     }

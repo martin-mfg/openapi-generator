@@ -1,6 +1,6 @@
 package org.openapitools.server.api;
 
-import org.openapitools.server.model.FooGetDefaultResponse;
+import org.openapitools.server.model.ExampleResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.helidon.webserver.Routing;
@@ -16,15 +16,15 @@ public interface DefaultService extends Service {
      */
     @Override
     default void update(Routing.Rules rules) {
-        rules.get("/foo", this::fooGet);
+        rules.get("/example/someMethod", this::retrieveSomething);
     }
 
 
     /**
-     * GET /foo.
+     * GET /example/someMethod.
      * @param request the server request
      * @param response the server response
      */
-    void fooGet(ServerRequest request, ServerResponse response);
+    void retrieveSomething(ServerRequest request, ServerResponse response);
 
 }

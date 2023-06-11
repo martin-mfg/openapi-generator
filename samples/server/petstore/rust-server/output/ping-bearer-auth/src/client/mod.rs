@@ -36,7 +36,7 @@ const FRAGMENT_ENCODE_SET: &AsciiSet = &percent_encoding::CONTROLS
 const ID_ENCODE_SET: &AsciiSet = &FRAGMENT_ENCODE_SET.add(b'|');
 
 use crate::{Api,
-     PingGetResponse
+     RetrieveSomethingResponse
      };
 
 /// Convert input into a base path, e.g. "http://example:123". Also checks the scheme as it goes.
@@ -370,7 +370,7 @@ impl<S, C> Api<C> for Client<S, C> where
        Response=Response<Body>> + Clone + Sync + Send + 'static,
     S::Future: Send + 'static,
     S::Error: Into<crate::ServiceError> + fmt::Display,
-    C: Has<XSpanIdString> + Has<Option<AuthData>> + Clone + Send + Sync + 'static,
+    C: Has<XSpanIdString>  + Clone + Send + Sync + 'static,
 {
     fn poll_ready(&self, cx: &mut Context) -> Poll<Result<(), crate::ServiceError>> {
         match self.client_service.clone().poll_ready(cx) {
@@ -380,13 +380,13 @@ impl<S, C> Api<C> for Client<S, C> where
         }
     }
 
-    async fn ping_get(
+    async fn retrieve_something(
         &self,
-        context: &C) -> Result<PingGetResponse, ApiError>
+        context: &C) -> Result<RetrieveSomethingResponse, ApiError>
     {
         let mut client_service = self.client_service.clone();
         let mut uri = format!(
-            "{}/ping",
+            "{}/example/someMethod",
             self.base_path
         );
 
@@ -419,32 +419,22 @@ impl<S, C> Api<C> for Client<S, C> where
             Err(e) => return Err(ApiError(format!("Unable to create X-Span ID header value: {}", e)))
         });
 
-        #[allow(clippy::collapsible_match)]
-        if let Some(auth_data) = Has::<Option<AuthData>>::get(context).as_ref() {
-            // Currently only authentication with Basic and Bearer are supported
-            #[allow(clippy::single_match, clippy::match_single_binding)]
-            match auth_data {
-                &AuthData::Bearer(ref bearer_header) => {
-                    let auth = swagger::auth::Header(bearer_header.clone());
-                    let header = match HeaderValue::from_str(&format!("{}", auth)) {
-                        Ok(h) => h,
-                        Err(e) => return Err(ApiError(format!("Unable to create Authorization header: {}", e)))
-                    };
-                    request.headers_mut().insert(
-                        hyper::header::AUTHORIZATION,
-                        header);
-                },
-                _ => {}
-            }
-        }
-
         let response = client_service.call((request, context.clone()))
             .map_err(|e| ApiError(format!("No response received: {}", e))).await?;
 
         match response.status().as_u16() {
-            201 => {
-                Ok(
-                    PingGetResponse::OK
+            200 => {
+                let body = response.into_body();
+                let body = body
+                        .into_raw()
+                        .map_err(|e| ApiError(format!("Failed to read response: {}", e))).await?;
+                let body = str::from_utf8(&body)
+                    .map_err(|e| ApiError(format!("Response was not valid UTF8: {}", e)))?;
+                let body = serde_json::from_str::<models::ExampleResponse>(body).map_err(|e| {
+                    ApiError(format!("Response body did not match the schema: {}", e))
+                })?;
+                Ok(RetrieveSomethingResponse::TheResponseWithResults
+                    (body)
                 )
             }
             code => {

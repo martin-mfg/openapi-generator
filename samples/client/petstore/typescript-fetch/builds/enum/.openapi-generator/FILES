@@ -1,9 +1,7 @@
+.openapi-generator-ignore
 apis/DefaultApi.ts
 apis/index.ts
 index.ts
-models/EnumPatternObject.ts
-models/FakeEnumRequestGetInline200Response.ts
-models/NumberEnum.ts
-models/StringEnum.ts
+models/ExampleResponse.ts
 models/index.ts
 runtime.ts

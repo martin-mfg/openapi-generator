@@ -1,13 +1,7 @@
 import { ResponseContext, RequestContext, HttpFile } from '../http/http';
 import { Configuration} from '../configuration'
 
-import { Cat } from '../models/Cat';
-import { Dog } from '../models/Dog';
-import { FilePostRequest } from '../models/FilePostRequest';
-import { PetByAge } from '../models/PetByAge';
-import { PetByType } from '../models/PetByType';
-import { PetsFilteredPatchRequest } from '../models/PetsFilteredPatchRequest';
-import { PetsPatchRequest } from '../models/PetsPatchRequest';
+import { ExampleResponse } from '../models/ExampleResponse';
 import { ObservableDefaultApi } from './ObservableAPI';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
@@ -23,26 +17,10 @@ export class PromiseDefaultApi {
     }
 
     /**
-     * @param filePostRequest 
+     * get some object
      */
-    public filePost(filePostRequest?: FilePostRequest, _options?: Configuration): Promise<void> {
-        const result = this.api.filePost(filePostRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * @param petsFilteredPatchRequest 
-     */
-    public petsFilteredPatch(petsFilteredPatchRequest?: PetsFilteredPatchRequest, _options?: Configuration): Promise<void> {
-        const result = this.api.petsFilteredPatch(petsFilteredPatchRequest, _options);
-        return result.toPromise();
-    }
-
-    /**
-     * @param petsPatchRequest 
-     */
-    public petsPatch(petsPatchRequest?: PetsPatchRequest, _options?: Configuration): Promise<void> {
-        const result = this.api.petsPatch(petsPatchRequest, _options);
+    public retrieveSomething(_options?: Configuration): Promise<ExampleResponse> {
+        const result = this.api.retrieveSomething(_options);
         return result.toPromise();
     }
 

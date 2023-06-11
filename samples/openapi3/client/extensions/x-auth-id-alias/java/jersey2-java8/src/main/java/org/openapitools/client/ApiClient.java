@@ -76,47 +76,15 @@ public class ApiClient extends JavaTimeFormatter {
 
   protected Map<String, String> defaultHeaderMap = new HashMap<>();
   protected Map<String, String> defaultCookieMap = new HashMap<>();
-  protected String basePath = "http://petstore.swagger.io:80/v2";
+  protected String basePath = "http://localhost";
   protected String userAgent;
   private static final Logger log = Logger.getLogger(ApiClient.class.getName());
 
   protected List<ServerConfiguration> servers = new ArrayList<>(Arrays.asList(
           new ServerConfiguration(
-                  "http://{server}.swagger.io:{port}/v2",
-                  "petstore server",
-                  Stream.<Entry<String, ServerVariable>>of(
-                          new SimpleEntry<>("server", new ServerVariable(
-                                  "No description provided",
-                                  "petstore",
-                                  new LinkedHashSet<>(Arrays.asList(
-                                          "petstore",
-                                          "qa-petstore",
-                                          "dev-petstore"
-                                  ))
-                          )),
-                          new SimpleEntry<>("port", new ServerVariable(
-                                  "No description provided",
-                                  "80",
-                                  new LinkedHashSet<>(Arrays.asList(
-                                          "80",
-                                          "8080"
-                                  ))
-                          ))
-                  ).collect(Collectors.toMap(Entry::getKey, Entry::getValue, (a, b) -> a, LinkedHashMap::new))
-          ),
-          new ServerConfiguration(
-                  "https://localhost:8080/{version}",
-                  "The local server",
-                  Stream.<Entry<String, ServerVariable>>of(
-                          new SimpleEntry<>("version", new ServerVariable(
-                                  "No description provided",
-                                  "v2",
-                                  new LinkedHashSet<>(Arrays.asList(
-                                          "v1",
-                                          "v2"
-                                  ))
-                          ))
-                  ).collect(Collectors.toMap(Entry::getKey, Entry::getValue, (a, b) -> a, LinkedHashMap::new))
+                  "",
+                  "No description provided",
+                  new LinkedHashMap<>()
           )
   ));
   protected Integer serverIndex = 0;
@@ -157,33 +125,16 @@ public class ApiClient extends JavaTimeFormatter {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("OpenAPI-Generator/1.0.0/java");
+    setUserAgent("OpenAPI-Generator/0.0.1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<>();
     Authentication auth = null;
-    if (authMap != null) {
-      auth = authMap.get("api_key");
-    }
-    if (auth instanceof ApiKeyAuth) {
-      authentications.put("api_key", auth);
-    } else {
-      authentications.put("api_key", new ApiKeyAuth("header", "X-Api-Key"));
-    }
-    if (authMap != null) {
-      auth = authMap.get("api_key_query");
-    }
-    if (auth instanceof ApiKeyAuth) {
-      authentications.put("api_key_query", auth);
-    } else {
-      authentications.put("api_key_query", new ApiKeyAuth("query", "api_key"));
-    }
     // Prevent the authentications from being modified.
     authentications = Collections.unmodifiableMap(authentications);
 
     // Setup authentication lookup (key: authentication alias, value: authentication name)
     authenticationLookup = new HashMap<>();
-    authenticationLookup.put("api_key_query", "api_key");
   }
 
   /**

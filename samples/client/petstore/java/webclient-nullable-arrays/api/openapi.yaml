@@ -1,53 +1,34 @@
-openapi: 3.0.0
+openapi: 3.0.1
 info:
-  description: byte Array error in equal method
-  title: 'Minimal Example '
-  version: v1
+  description: dummy description
+  title: Some example
+  version: 0.0.1
 servers:
 - url: /
 paths:
-  /nullable-array-test:
+  /example/someMethod:
     get:
-      description: ""
-      operationId: ""
-      parameters: []
+      description: get some object
+      operationId: retrieveSomething
       responses:
         "200":
           content:
             application/json:
               schema:
-                items:
-                  $ref: '#/components/schemas/ByteArrayObject'
-                type: array
-          description: ""
-      summary: ""
+                $ref: '#/components/schemas/ExampleResponse'
+          description: The response with results
       x-accepts: application/json
 components:
   schemas:
-    ByteArrayObject:
+    ExampleResponse:
       example:
-        nullableArray: nullableArray
-        nullableString: nullableString
-        normalArray: normalArray
-        stringField: stringField
-        intField: 0.8008281904610115
+        myOnlyProperty:
+        - true
+        - true
       properties:
-        nullableArray:
-          description: byte array.
-          format: byte
-          nullable: true
-          type: string
-        normalArray:
-          description: byte array.
-          format: byte
-          type: string
-        nullableString:
-          nullable: true
-          type: string
-        stringField:
-          type: string
-        intField:
-          format: int32
-          type: number
+        myOnlyProperty:
+          items:
+            type: boolean
+          type: array
       type: object
 

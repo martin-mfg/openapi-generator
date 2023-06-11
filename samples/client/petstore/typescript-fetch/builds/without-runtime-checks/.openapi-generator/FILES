@@ -1,10 +1,9 @@
 .gitignore
 .npmignore
+.openapi-generator-ignore
 README.md
 package.json
-src/apis/PetApi.ts
-src/apis/StoreApi.ts
-src/apis/UserApi.ts
+src/apis/DefaultApi.ts
 src/apis/index.ts
 src/index.ts
 src/models/index.ts

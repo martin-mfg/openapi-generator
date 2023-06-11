@@ -1,4 +1,4 @@
-name:    open-api-petstore
+name:    some-example
 version: "0.0.0"
 
 dependencies:
@@ -44,7 +44,7 @@ library:
 
 # Runnable executable for our application
 executables:
-  open-api-petstore:
+  some-example:
     main: main.hs
     source-dirs: app
     ghc-options:
@@ -52,19 +52,19 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - open-api-petstore
+    - some-example
     when:
     - condition: flag(library-only)
       buildable: false
 
 # Test suite
 tests:
-  open-api-petstore-test:
+  some-example-test:
     main: Spec.hs
     source-dirs: test
     ghc-options: -Wall
     dependencies:
-    - open-api-petstore
+    - some-example
     - hspec >=2.0.0
     - yesod-test
 

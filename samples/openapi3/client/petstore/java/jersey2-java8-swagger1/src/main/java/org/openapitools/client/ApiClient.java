@@ -11,7 +11,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import com.github.scribejava.core.model.OAuth2AccessToken;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
 import org.glassfish.jersey.client.HttpUrlConnectorProvider;
@@ -67,7 +66,6 @@ import org.openapitools.client.auth.Authentication;
 import org.openapitools.client.auth.HttpBasicAuth;
 import org.openapitools.client.auth.HttpBearerAuth;
 import org.openapitools.client.auth.ApiKeyAuth;
-import org.openapitools.client.auth.OAuth;
 
 /**
  * <p>ApiClient class.</p>
@@ -78,13 +76,13 @@ public class ApiClient extends JavaTimeFormatter {
 
   protected Map<String, String> defaultHeaderMap = new HashMap<>();
   protected Map<String, String> defaultCookieMap = new HashMap<>();
-  protected String basePath = "http://petstore.swagger.io/v2";
+  protected String basePath = "http://localhost";
   protected String userAgent;
   private static final Logger log = Logger.getLogger(ApiClient.class.getName());
 
   protected List<ServerConfiguration> servers = new ArrayList<>(Arrays.asList(
           new ServerConfiguration(
-                  "http://petstore.swagger.io/v2",
+                  "",
                   "No description provided",
                   new LinkedHashMap<>()
           )
@@ -127,27 +125,11 @@ public class ApiClient extends JavaTimeFormatter {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("OpenAPI-Generator/1.0.0/java");
+    setUserAgent("OpenAPI-Generator/0.0.1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<>();
     Authentication auth = null;
-    if (authMap != null) {
-      auth = authMap.get("petstore_auth");
-    }
-    if (auth instanceof OAuth) {
-      authentications.put("petstore_auth", auth);
-    } else {
-      authentications.put("petstore_auth", new OAuth(basePath, ""));
-    }
-    if (authMap != null) {
-      auth = authMap.get("api_key");
-    }
-    if (auth instanceof ApiKeyAuth) {
-      authentications.put("api_key", auth);
-    } else {
-      authentications.put("api_key", new ApiKeyAuth("header", "api_key"));
-    }
     // Prevent the authentications from being modified.
     authentications = Collections.unmodifiableMap(authentications);
 
@@ -201,7 +183,6 @@ public class ApiClient extends JavaTimeFormatter {
    */
   public ApiClient setBasePath(String basePath) {
     this.basePath = basePath;
-    setOauthBasePath(basePath);
     return this;
   }
 
@@ -271,14 +252,6 @@ public class ApiClient extends JavaTimeFormatter {
   private void updateBasePath() {
     if (serverIndex != null) {
         setBasePath(servers.get(serverIndex).URL(serverVariables));
-    }
-  }
-
-  private void setOauthBasePath(String basePath) {
-    for(Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).setBasePath(basePath);
-      }
     }
   }
 
@@ -401,104 +374,6 @@ public class ApiClient extends JavaTimeFormatter {
       }
     }
     throw new RuntimeException("No Bearer authentication configured!");
-  }
-
-  /**
-   * Helper method to set access token for the first OAuth2 authentication.
-   *
-   * @param accessToken Access token
-   * @return a {@link org.openapitools.client.ApiClient} object.
-   */
-  public ApiClient setAccessToken(String accessToken) {
-    for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).setAccessToken(accessToken);
-        return this;
-      }
-    }
-    throw new RuntimeException("No OAuth2 authentication configured!");
-  }
-
-  /**
-   * Helper method to set the credentials for the first OAuth2 authentication.
-   *
-   * @param clientId the client ID
-   * @param clientSecret the client secret
-   * @return a {@link org.openapitools.client.ApiClient} object.
-   */
-  public ApiClient setOauthCredentials(String clientId, String clientSecret) {
-    for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).setCredentials(clientId, clientSecret, isDebugging());
-        return this;
-      }
-    }
-    throw new RuntimeException("No OAuth2 authentication configured!");
-  }
-
-  /**
-   * Helper method to set the credentials of a public client for the first OAuth2 authentication.
-   *
-   * @param clientId the client ID
-   * @return a {@link org.openapitools.client.ApiClient} object.
-   */
-  public ApiClient setOauthCredentialsForPublicClient(String clientId) {
-    for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).setCredentialsForPublicClient(clientId, isDebugging());
-        return this;
-      }
-    }
-    throw new RuntimeException("No OAuth2 authentication configured!");
-  }
-
-  /**
-   * Helper method to set the password flow for the first OAuth2 authentication.
-   *
-   * @param username the user name
-   * @param password the user password
-   * @return a {@link org.openapitools.client.ApiClient} object.
-   */
-  public ApiClient setOauthPasswordFlow(String username, String password) {
-    for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).usePasswordFlow(username, password);
-        return this;
-      }
-    }
-    throw new RuntimeException("No OAuth2 authentication configured!");
-  }
-
-  /**
-   * Helper method to set the authorization code flow for the first OAuth2 authentication.
-   *
-   * @param code the authorization code
-   * @return a {@link org.openapitools.client.ApiClient} object.
-   */
-  public ApiClient setOauthAuthorizationCodeFlow(String code) {
-    for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).useAuthorizationCodeFlow(code);
-        return this;
-      }
-    }
-    throw new RuntimeException("No OAuth2 authentication configured!");
-  }
-
-  /**
-   * Helper method to set the scopes for the first OAuth2 authentication.
-   *
-   * @param scope the oauth scope
-   * @return a {@link org.openapitools.client.ApiClient} object.
-   */
-  public ApiClient setOauthScope(String scope) {
-    for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).setScope(scope);
-        return this;
-      }
-    }
-    throw new RuntimeException("No OAuth2 authentication configured!");
   }
 
   /**
@@ -1166,22 +1041,6 @@ public class ApiClient extends JavaTimeFormatter {
       response = sendRequest(method, invocationBuilder, entity);
 
       final int statusCode = response.getStatusInfo().getStatusCode();
-
-      // If OAuth is used and a status 401 is received, renew the access token and retry the request
-      if (authNames != null && statusCode == Status.UNAUTHORIZED.getStatusCode()) {
-        for (String authName : authNames) {
-          Authentication authentication = authentications.get(authName);
-          if (authentication instanceof OAuth) {
-            OAuth2AccessToken accessToken = ((OAuth) authentication).renewAccessToken();
-            if (accessToken != null) {
-              invocationBuilder.header("Authorization", null);
-              invocationBuilder.header("Authorization", "Bearer " + accessToken.getAccessToken());
-              response = sendRequest(method, invocationBuilder, entity);
-            }
-            break;
-          }
-        }
-      }
 
       Map<String, List<String>> responseHeaders = buildResponseHeaders(response);
 

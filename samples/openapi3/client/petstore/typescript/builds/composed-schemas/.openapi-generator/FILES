@@ -1,4 +1,5 @@
 .gitignore
+.openapi-generator-ignore
 DefaultApi.md
 README.md
 apis/DefaultApi.ts
@@ -11,14 +12,8 @@ http/http.ts
 http/isomorphic-fetch.ts
 index.ts
 middleware.ts
-models/Cat.ts
-models/Dog.ts
-models/FilePostRequest.ts
+models/ExampleResponse.ts
 models/ObjectSerializer.ts
-models/PetByAge.ts
-models/PetByType.ts
-models/PetsFilteredPatchRequest.ts
-models/PetsPatchRequest.ts
 models/all.ts
 package.json
 rxjsStub.ts

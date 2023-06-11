@@ -1,6 +1,6 @@
 # Rust API for rust-server-test
 
-This spec is for testing rust-server-specific things
+dummy description
 
 ## Overview
 
@@ -13,7 +13,7 @@ To see how to make this your own, look here:
 
 [README]((https://openapi-generator.tech))
 
-- API version: 2.3.4
+- API version: 0.0.1
 
 
 
@@ -61,13 +61,7 @@ cargo run --example server
 To run a client, follow one of the following simple steps:
 
 ```
-cargo run --example client AllOfGet
-cargo run --example client DummyGet
-cargo run --example client FileResponseGet
-cargo run --example client GetStructuredYaml
-cargo run --example client HtmlPost
-cargo run --example client PostYaml
-cargo run --example client RawJsonGet
+cargo run --example client RetrieveSomething
 ```
 
 ### HTTPS
@@ -101,27 +95,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AllOf_Get**](docs/default_api.md#AllOf_Get) | **GET** /allOf | 
-[**dummyGet**](docs/default_api.md#dummyGet) | **GET** /dummy | A dummy endpoint to make the spec valid.
-[**dummyPut**](docs/default_api.md#dummyPut) | **PUT** /dummy | 
-[**file_responseGet**](docs/default_api.md#file_responseGet) | **GET** /file_response | Get a file
-[**getStructuredYaml**](docs/default_api.md#getStructuredYaml) | **GET** /get-structured-yaml | 
-[**htmlPost**](docs/default_api.md#htmlPost) | **POST** /html | Test HTML handling
-[**post_yaml**](docs/default_api.md#post_yaml) | **POST** /post-yaml | 
-[**raw_jsonGet**](docs/default_api.md#raw_jsonGet) | **GET** /raw_json | Get an arbitrary JSON blob.
-[**solo_objectPost**](docs/default_api.md#solo_objectPost) | **POST** /solo-object | Send an arbitrary JSON blob
+[**retrieveSomething**](docs/default_api.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
 ## Documentation For Models
 
- - [ANullableContainer](docs/ANullableContainer.md)
- - [AdditionalPropertiesObject](docs/AdditionalPropertiesObject.md)
- - [AllOfObject](docs/AllOfObject.md)
- - [BaseAllOf](docs/BaseAllOf.md)
- - [DummyPutRequest](docs/DummyPutRequest.md)
- - [GetYamlResponse](docs/GetYamlResponse.md)
- - [ObjectOfObjects](docs/ObjectOfObjects.md)
- - [ObjectOfObjectsInner](docs/ObjectOfObjectsInner.md)
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 ## Documentation For Authorization

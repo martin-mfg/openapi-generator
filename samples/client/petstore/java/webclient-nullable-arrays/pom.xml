@@ -5,7 +5,7 @@
     <artifactId>petstore-webclient-nullable-arrays</artifactId>
     <packaging>jar</packaging>
     <name>petstore-webclient-nullable-arrays</name>
-    <version>v1</version>
+    <version>0.0.1</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

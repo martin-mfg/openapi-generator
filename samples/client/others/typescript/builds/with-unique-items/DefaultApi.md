@@ -1,15 +1,16 @@
 # .DefaultApi
 
-All URIs are relative to *http://localhost:3000*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniqueItems**](DefaultApi.md#uniqueItems) | **GET** /unique-items | 
+[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
 
 
-# **uniqueItems**
-> Response uniqueItems()
+# **retrieveSomething**
+> ExampleResponse retrieveSomething()
 
+get some object
 
 ### Example
 
@@ -23,7 +24,7 @@ const apiInstance = new .DefaultApi(configuration);
 
 let body:any = {};
 
-apiInstance.uniqueItems(body).then((data:any) => {
+apiInstance.retrieveSomething(body).then((data:any) => {
   console.log('API called successfully. Returned data: ' + data);
 }).catch((error:any) => console.error(error));
 ```
@@ -35,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Response**
+**ExampleResponse**
 
 ### Authorization
 
@@ -50,7 +51,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**200** | The response with results |  -  |
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

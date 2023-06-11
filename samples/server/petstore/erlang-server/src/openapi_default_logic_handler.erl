@@ -3,11 +3,7 @@
 -behaviour(openapi_logic_handler).
 
 -export([handle_request/3]).
--export([authorize_api_key/2]).
 
--spec authorize_api_key(OperationID :: openapi_api:operation_id(), ApiKey :: binary()) -> {true, #{}}.
-
-authorize_api_key(_, _) -> {true, #{}}.
 
 -spec handle_request(
     OperationID :: openapi_api:operation_id(),

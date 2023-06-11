@@ -1,6 +1,6 @@
 # OpenapiPetstore
 
-This spec is mainly for testing Petstore server and contains fake endpoints, models. Please do not use this for any other purpose. Special characters: \&quot; \\
+dummy description
 
 ## Building
 
@@ -18,7 +18,7 @@ your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:openapi_petstore, "~> 1.0.0"}]
+  [{:openapi_petstore, "~> 0.0.1"}]
 end
 ```
 
@@ -31,14 +31,14 @@ You can override the URL of your server (e.g. if you have a separate development
 configuration files).
 
 ```elixir
-config :openapi_petstore, base_url: "http://petstore.swagger.io:80/v2"
+config :openapi_petstore, base_url: "http://localhost"
 ```
 
 Multiple clients for the same API with different URLs can be created passing different `base_url`s when calling
 `OpenapiPetstore.Connection.new/1`:
 
 ```elixir
-client = OpenapiPetstore.Connection.new(base_url: "http://petstore.swagger.io:80/v2")
+client = OpenapiPetstore.Connection.new(base_url: "http://localhost")
 ```
 
 [exdoc]: https://github.com/elixir-lang/ex_doc

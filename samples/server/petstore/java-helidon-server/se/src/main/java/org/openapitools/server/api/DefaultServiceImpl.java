@@ -1,6 +1,6 @@
 package org.openapitools.server.api;
 
-import org.openapitools.server.model.FooGetDefaultResponse;
+import org.openapitools.server.model.ExampleResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.logging.Logger;
 
@@ -14,7 +14,7 @@ public class DefaultServiceImpl implements DefaultService {
     private static final ObjectMapper MAPPER = JsonProvider.objectMapper();
 
 
-    public void fooGet(ServerRequest request, ServerResponse response) {
+    public void retrieveSomething(ServerRequest request, ServerResponse response) {
         response.status(HTTP_CODE_NOT_IMPLEMENTED).send();
     }
 

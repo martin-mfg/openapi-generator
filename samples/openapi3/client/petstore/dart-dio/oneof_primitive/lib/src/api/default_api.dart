@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/model/example.dart';
+import 'package:openapi/src/model/example_response.dart';
 
 class DefaultApi {
 
@@ -17,8 +17,8 @@ class DefaultApi {
 
   const DefaultApi(this._dio, this._serializers);
 
-  /// list
-  /// 
+  /// retrieveSomething
+  /// get some object
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -28,9 +28,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [Example] as data
+  /// Returns a [Future] containing a [Response] with a [ExampleResponse] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<Example>> list({ 
+  Future<Response<ExampleResponse>> retrieveSomething({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -38,7 +38,7 @@ class DefaultApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/example';
+    final _path = r'/example/someMethod';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -59,14 +59,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    Example? _responseData;
+    ExampleResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(Example),
-      ) as Example;
+        specifiedType: const FullType(ExampleResponse),
+      ) as ExampleResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -78,7 +78,7 @@ class DefaultApi {
       );
     }
 
-    return Response<Example>(
+    return Response<ExampleResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
