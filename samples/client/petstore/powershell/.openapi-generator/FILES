@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 Build.ps1
 README.md
 appveyor.yml
