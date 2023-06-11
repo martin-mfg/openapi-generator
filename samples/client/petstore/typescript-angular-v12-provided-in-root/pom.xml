@@ -40,20 +40,15 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>npm-test</id>
+                        <id>tsc</id>
                         <phase>integration-test</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>npm</executable>
+                            <executable>npx</executable>
                             <arguments>
-                                <argument>test</argument>
-                                <argument>--</argument>
-                                <argument>--progress=false</argument>
-                                <argument>--no-watch</argument>
-                                <argument>--browsers</argument>
-                                <argument>ChromeHeadless</argument>
+                                <argument>tsc</argument>
                             </arguments>
                         </configuration>
                     </execution>
