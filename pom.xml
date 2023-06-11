@@ -1057,6 +1057,9 @@
                     <value>java</value>
                 </property>
             </activation>
+            <modules>
+                <module>samples/client/petstore/go</module>
+            </modules>
         </profile>
         <profile>
             <id>springboot-beanvalidation</id>
@@ -1286,6 +1289,8 @@
                 <!-- servers -->
                 <!--<module>samples/server/petstore/haskell-servant</module>-->
                 <!-- test Go projects -->
+                <module>samples/client/petstore/go</module>
+                <module>samples/openapi3/client/petstore/go</module>
                 <!-- comment out due to Go version
                 <module>samples/server/petstore/go-gin-api-server</module>-->
             </modules>
