@@ -42,6 +42,6 @@ public interface DefaultApi  {
 
     @GET
     
-    @Produces({ "/" })
+    @Produces({ "*/*" })
     ExampleResponse retrieveSomething() throws ApiException, ProcessingException;
 }
