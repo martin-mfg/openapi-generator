@@ -15,6 +15,7 @@ lib/petstore/api_error.rb
 lib/petstore/configuration.rb
 lib/petstore/version.rb
 petstore.gemspec
+spec/api/default_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
 spec/spec_helper.rb
