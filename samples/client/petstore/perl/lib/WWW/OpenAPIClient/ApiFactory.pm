@@ -126,6 +126,3 @@ sub classname_for {
 
 
 1;
-
-
-1;

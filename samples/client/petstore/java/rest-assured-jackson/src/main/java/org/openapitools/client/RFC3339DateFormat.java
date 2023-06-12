@@ -54,5 +54,4 @@ public class RFC3339DateFormat extends DateFormat {
   public Object clone() {
     return super.clone();
   }
-}  }
 }

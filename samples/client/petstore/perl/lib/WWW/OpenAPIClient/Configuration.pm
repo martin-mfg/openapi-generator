@@ -168,6 +168,3 @@ sub accept_tokens {
 }
 
 1;
-
-
-1;

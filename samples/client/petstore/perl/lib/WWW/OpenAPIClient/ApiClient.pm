@@ -385,6 +385,3 @@ sub _global_auth_setup {
 }
 
 1;
-
-
-1;

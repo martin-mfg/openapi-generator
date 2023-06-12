@@ -284,5 +284,3 @@ Class | Method | HTTP request | Description
 # DOCUMENTATION FOR AUTHORIZATION
 Endpoints do not require authorization.
 
-on.
-
