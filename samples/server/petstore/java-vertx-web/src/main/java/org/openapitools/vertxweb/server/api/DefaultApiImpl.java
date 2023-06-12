@@ -1,5 +1,6 @@
 package org.openapitools.vertxweb.server.api;
 
+import org.openapitools.vertxweb.server.model.ExampleResponse;
 
 import org.openapitools.vertxweb.server.ApiResponse;
 
@@ -13,7 +14,7 @@ import java.util.Map;
 // Implement this class
 
 public class DefaultApiImpl implements DefaultApi {
-    public Future<ApiResponse<Integer>> retrieveSomething() {
+    public Future<ApiResponse<ExampleResponse>> retrieveSomething() {
         return Future.failedFuture(new HttpException(501));
     }
 

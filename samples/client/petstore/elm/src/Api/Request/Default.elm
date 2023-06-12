@@ -26,7 +26,7 @@ import Json.Encode
 
 {-| get some object
 -}
-retrieveSomething : Api.Request Int
+retrieveSomething : Api.Request Api.Data.ExampleResponse
 retrieveSomething =
     Api.request
         "GET"
@@ -35,5 +35,5 @@ retrieveSomething =
         []
         []
         Nothing
-        Json.Decode.int
+        Api.Data.exampleResponseDecoder
 

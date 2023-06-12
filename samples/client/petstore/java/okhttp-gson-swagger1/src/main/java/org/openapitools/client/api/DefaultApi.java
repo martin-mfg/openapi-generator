@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.openapitools.client.model.ExampleResponse;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -136,7 +137,7 @@ public class DefaultApi {
     /**
      * 
      * get some object
-     * @return Integer
+     * @return ExampleResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -144,15 +145,15 @@ public class DefaultApi {
         <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
      */
-    public Integer retrieveSomething() throws ApiException {
-        ApiResponse<Integer> localVarResp = retrieveSomethingWithHttpInfo();
+    public ExampleResponse retrieveSomething() throws ApiException {
+        ApiResponse<ExampleResponse> localVarResp = retrieveSomethingWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * 
      * get some object
-     * @return ApiResponse&lt;Integer&gt;
+     * @return ApiResponse&lt;ExampleResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -160,9 +161,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Integer> retrieveSomethingWithHttpInfo() throws ApiException {
+    public ApiResponse<ExampleResponse> retrieveSomethingWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = retrieveSomethingValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<Integer>(){}.getType();
+        Type localVarReturnType = new TypeToken<ExampleResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -178,10 +179,10 @@ public class DefaultApi {
         <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call retrieveSomethingAsync(final ApiCallback<Integer> _callback) throws ApiException {
+    public okhttp3.Call retrieveSomethingAsync(final ApiCallback<ExampleResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = retrieveSomethingValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<Integer>(){}.getType();
+        Type localVarReturnType = new TypeToken<ExampleResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

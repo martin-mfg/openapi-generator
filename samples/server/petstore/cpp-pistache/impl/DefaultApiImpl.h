@@ -29,11 +29,12 @@
 #include <DefaultApi.h>
 
 
+#include "ExampleResponse.h"
 
 namespace org::openapitools::server::api
 {
 
-
+using namespace org::openapitools::server::model;
 
 class  DefaultApiImpl : public org::openapitools::server::api::DefaultApi {
 public:

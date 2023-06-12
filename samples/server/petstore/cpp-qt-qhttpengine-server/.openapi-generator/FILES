@@ -10,6 +10,8 @@ server/src/handlers/OAIDefaultApiHandler.cpp
 server/src/handlers/OAIDefaultApiHandler.h
 server/src/main.cpp
 server/src/models/OAIEnum.h
+server/src/models/OAIExampleResponse.cpp
+server/src/models/OAIExampleResponse.h
 server/src/models/OAIHelpers.cpp
 server/src/models/OAIHelpers.h
 server/src/models/OAIHttpFileElement.cpp

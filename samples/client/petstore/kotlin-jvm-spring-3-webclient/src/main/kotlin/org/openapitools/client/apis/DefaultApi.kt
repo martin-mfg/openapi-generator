@@ -25,6 +25,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.http.MediaType
 import reactor.core.publisher.Mono
 
+import org.openapitools.client.models.ExampleResponse
 import org.openapitools.client.infrastructure.*
 
 class DefaultApi(client: WebClient) : ApiClient(client) {
@@ -40,15 +41,15 @@ class DefaultApi(client: WebClient) : ApiClient(client) {
 
 
     @Throws(WebClientResponseException::class)
-    fun retrieveSomething(): Mono<kotlin.Int> {
+    fun retrieveSomething(): Mono<ExampleResponse> {
         return retrieveSomethingWithHttpInfo()
             .map { it.body }
     }
 
     @Throws(WebClientResponseException::class)
-    fun retrieveSomethingWithHttpInfo(): Mono<ResponseEntity<kotlin.Int>> {
+    fun retrieveSomethingWithHttpInfo(): Mono<ResponseEntity<ExampleResponse>> {
         val localVariableConfig = retrieveSomethingRequestConfig()
-        return request<Unit, kotlin.Int>(
+        return request<Unit, ExampleResponse>(
             localVariableConfig
         )
     }

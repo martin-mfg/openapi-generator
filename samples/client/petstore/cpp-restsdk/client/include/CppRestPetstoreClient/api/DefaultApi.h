@@ -21,7 +21,8 @@
 
 
 #include "CppRestPetstoreClient/ApiClient.h"
-#include "CppRestPetstoreClient/ModelBase.h"
+
+#include "CppRestPetstoreClient/model/ExampleResponse.h"
 #include <boost/optional.hpp>
 
 namespace org {
@@ -47,7 +48,7 @@ public:
     /// <remarks>
     /// get some object
     /// </remarks>
-    pplx::task<int32_t> retrieveSomething(
+    pplx::task<std::shared_ptr<ExampleResponse>> retrieveSomething(
     ) const;
 
 protected:

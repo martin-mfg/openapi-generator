@@ -31,3 +31,4 @@ from petstore_api.exceptions import ApiAttributeError
 from petstore_api.exceptions import ApiException
 
 # import models into sdk package
+from petstore_api.models.example_response import ExampleResponse

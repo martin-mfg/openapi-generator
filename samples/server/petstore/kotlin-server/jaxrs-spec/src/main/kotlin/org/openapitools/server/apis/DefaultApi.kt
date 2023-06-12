@@ -1,5 +1,6 @@
 package org.openapitools.server.apis;
 
+import org.openapitools.server.models.ExampleResponse
 
 import javax.ws.rs.*
 import javax.ws.rs.core.Response

@@ -24,7 +24,7 @@ pub enum RetrieveSomethingError {
 
 
 /// get some object
-pub fn retrieve_something(configuration: &configuration::Configuration, ) -> Result<i32, Error<RetrieveSomethingError>> {
+pub fn retrieve_something(configuration: &configuration::Configuration, ) -> Result<crate::models::ExampleResponse, Error<RetrieveSomethingError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

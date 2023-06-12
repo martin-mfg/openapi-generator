@@ -13,6 +13,7 @@
 
 
 import ApiClient from './ApiClient';
+import ExampleResponse from './model/ExampleResponse';
 import DefaultApi from './api/DefaultApi';
 
 
@@ -53,6 +54,12 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
+
+    /**
+     * The ExampleResponse model constructor.
+     * @property {module:model/ExampleResponse}
+     */
+    ExampleResponse,
 
     /**
     * The DefaultApi service constructor.

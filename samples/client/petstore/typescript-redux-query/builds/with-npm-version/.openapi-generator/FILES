@@ -5,5 +5,7 @@ package.json
 src/apis/DefaultApi.ts
 src/apis/index.ts
 src/index.ts
+src/models/ExampleResponse.ts
+src/models/index.ts
 src/runtime.ts
 tsconfig.json

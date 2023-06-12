@@ -92,7 +92,7 @@ public class DefaultApiExample {
         
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            Integer result = apiInstance.retrieveSomething();
+            ExampleResponse result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -117,6 +117,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

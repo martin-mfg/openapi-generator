@@ -19,6 +19,7 @@ import warnings
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
+from petstore_api.models.example_response import ExampleResponse
 
 from petstore_api.api_client import ApiClient
 from petstore_api.api_response import ApiResponse
@@ -41,7 +42,7 @@ class DefaultApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def retrieve_something(self, **kwargs) -> int:  # noqa: E501
+    def retrieve_something(self, **kwargs) -> ExampleResponse:  # noqa: E501
         """retrieve_something  # noqa: E501
 
         get some object  # noqa: E501
@@ -60,7 +61,7 @@ class DefaultApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: int
+        :rtype: ExampleResponse
         """
         kwargs['_return_http_data_only'] = True
         if '_preload_content' in kwargs:
@@ -100,7 +101,7 @@ class DefaultApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(int, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(ExampleResponse, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -151,7 +152,7 @@ class DefaultApi(object):
         _auth_settings = []  # noqa: E501
 
         _response_types_map = {
-            '200': "int",
+            '200': "ExampleResponse",
         }
 
         return self.api_client.call_api(

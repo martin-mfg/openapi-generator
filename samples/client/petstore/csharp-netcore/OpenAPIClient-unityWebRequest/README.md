@@ -64,7 +64,7 @@ namespace Org.OpenAPIToolsExample
 
             try
             {
-                int result = await apiInstance.RetrieveSomethingAsync();
+                ExampleResponse result = await apiInstance.RetrieveSomethingAsync();
                 Debug.Log(result);
                 Debug.Log("Done!");
             }
@@ -93,6 +93,7 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.ExampleResponse](ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

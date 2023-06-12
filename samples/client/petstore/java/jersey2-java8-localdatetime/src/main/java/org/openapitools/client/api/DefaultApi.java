@@ -8,6 +8,7 @@ import org.openapitools.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,7 +49,7 @@ public class DefaultApi {
   /**
    * 
    * get some object
-   * @return Integer
+   * @return ExampleResponse
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -56,14 +57,14 @@ public class DefaultApi {
        <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
    */
-  public Integer retrieveSomething() throws ApiException {
+  public ExampleResponse retrieveSomething() throws ApiException {
     return retrieveSomethingWithHttpInfo().getData();
   }
 
   /**
    * 
    * get some object
-   * @return ApiResponse&lt;Integer&gt;
+   * @return ApiResponse&lt;ExampleResponse&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -71,10 +72,10 @@ public class DefaultApi {
        <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<Integer> retrieveSomethingWithHttpInfo() throws ApiException {
+  public ApiResponse<ExampleResponse> retrieveSomethingWithHttpInfo() throws ApiException {
     String localVarAccept = apiClient.selectHeaderAccept("/");
     String localVarContentType = apiClient.selectHeaderContentType();
-    GenericType<Integer> localVarReturnType = new GenericType<Integer>() {};
+    GenericType<ExampleResponse> localVarReturnType = new GenericType<ExampleResponse>() {};
     return apiClient.invokeAPI("DefaultApi.retrieveSomething", "/example/someMethod", "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                null, localVarReturnType, false);

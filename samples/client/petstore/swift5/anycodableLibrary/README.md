@@ -30,6 +30,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [PrefixExampleResponseSuffix](docs/PrefixExampleResponseSuffix.md)
 
 
 <a id="documentation-for-authorization"></a>

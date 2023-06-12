@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## retrieve_something
 
-> i32 retrieve_something()
+> crate::models::ExampleResponse retrieve_something()
 
 
 get some object
@@ -21,7 +21,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**i32**
+[**crate::models::ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

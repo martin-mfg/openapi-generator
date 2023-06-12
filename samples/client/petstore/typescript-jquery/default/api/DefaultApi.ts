@@ -50,7 +50,7 @@ export class DefaultApi {
      * get some object
      */
     public retrieveSomething(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: number;  },
+    { response: JQueryXHR; body: models.ExampleResponse;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/example/someMethod';
@@ -89,11 +89,11 @@ export class DefaultApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: number;  },
+            { response: JQueryXHR; body: models.ExampleResponse;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: number, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: models.ExampleResponse, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})

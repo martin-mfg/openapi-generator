@@ -6,6 +6,7 @@ api/openapi.yaml
 build.gradle
 build.sbt
 docs/DefaultApi.md
+docs/ExampleResponse.md
 git_push.sh
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -24,3 +25,4 @@ src/main/java/org/openapitools/client/ServerConfiguration.java
 src/main/java/org/openapitools/client/ServerVariable.java
 src/main/java/org/openapitools/client/api/DefaultApi.java
 src/main/java/org/openapitools/client/api/Oper.java
+src/main/java/org/openapitools/client/model/ExampleResponse.java

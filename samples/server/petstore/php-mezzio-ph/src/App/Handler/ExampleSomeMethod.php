@@ -23,9 +23,9 @@ class ExampleSomeMethod
      *
      * @throws PHException\HttpCode 501 if the method is not implemented
      *
-     * @return int
+     * @return \App\DTO\ExampleResponse
      */
-    public function retrieveSomething(ServerRequestInterface $request): int
+    public function retrieveSomething(ServerRequestInterface $request): \App\DTO\ExampleResponse
     {
         //TODO implement method
         throw new PHException\HttpCode(501, "Not implemented");

@@ -14,12 +14,17 @@
 
 import { HttpMethods, QueryConfig, ResponseBody, ResponseText } from 'redux-query';
 import * as runtime from '../runtime';
+import {
+    ExampleResponse,
+    ExampleResponseFromJSON,
+    ExampleResponseToJSON,
+} from '../models';
 
 
 /**
  * get some object
  */
-function retrieveSomethingRaw<T>( requestConfig: runtime.TypedQueryConfig<T, number> = {}): QueryConfig<T> {
+function retrieveSomethingRaw<T>( requestConfig: runtime.TypedQueryConfig<T, ExampleResponse> = {}): QueryConfig<T> {
     let queryParameters = null;
 
 
@@ -45,7 +50,7 @@ function retrieveSomethingRaw<T>( requestConfig: runtime.TypedQueryConfig<T, num
 
     const { transform: requestTransform } = requestConfig;
     if (requestTransform) {
-        throw "OH NO";
+        config.transform = (body: ResponseBody, text: ResponseBody) => requestTransform(ExampleResponseFromJSON(body), text);
     }
 
     return config;
@@ -54,7 +59,7 @@ function retrieveSomethingRaw<T>( requestConfig: runtime.TypedQueryConfig<T, num
 /**
 * get some object
 */
-export function retrieveSomething<T>( requestConfig?: runtime.TypedQueryConfig<T, number>): QueryConfig<T> {
+export function retrieveSomething<T>( requestConfig?: runtime.TypedQueryConfig<T, ExampleResponse>): QueryConfig<T> {
     return retrieveSomethingRaw( requestConfig);
 }
 

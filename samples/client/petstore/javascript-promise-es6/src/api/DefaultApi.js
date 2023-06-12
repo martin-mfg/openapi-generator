@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ExampleResponse from '../model/ExampleResponse';
 
 /**
 * Default service.
@@ -36,7 +37,7 @@ export default class DefaultApi {
 
     /**
      * get some object
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ExampleResponse} and HTTP response
      */
     retrieveSomethingWithHttpInfo() {
       let postBody = null;
@@ -53,7 +54,7 @@ export default class DefaultApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['/'];
-      let returnType = 'Number';
+      let returnType = ExampleResponse;
       return this.apiClient.callApi(
         '/example/someMethod', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -63,7 +64,7 @@ export default class DefaultApi {
 
     /**
      * get some object
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ExampleResponse}
      */
     retrieveSomething() {
       return this.retrieveSomethingWithHttpInfo()

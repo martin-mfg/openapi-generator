@@ -26,13 +26,21 @@ import io.ktor.server.resources.head
 import io.ktor.server.resources.patch
 import io.ktor.server.routing.*
 import org.openapitools.server.infrastructure.ApiPrincipal
+import org.openapitools.server.models.ExampleResponse
 
 fun Route.DefaultApi() {
     val gson = Gson()
     val empty = mutableMapOf<String, Any?>()
 
     get<Paths.retrieveSomething> {
-        call.respond(HttpStatusCode.NotImplemented)
+        val exampleContentType = "/"
+        val exampleContentString = """Custom MIME type example not yet supported: /"""
+        
+        when (exampleContentType) {
+            "application/json" -> call.respond(gson.fromJson(exampleContentString, empty::class.java))
+            "application/xml" -> call.respondText(exampleContentString, ContentType.Text.Xml)
+            else -> call.respondText(exampleContentString)
+        }
     }
 
 }

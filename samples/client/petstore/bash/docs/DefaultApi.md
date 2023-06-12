@@ -26,7 +26,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**integer**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

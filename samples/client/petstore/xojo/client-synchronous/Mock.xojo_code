@@ -18,10 +18,10 @@ Public Class Mock
 		  //
 		  // - GET /example/someMethod
 		  // - get some object
-		  // - defaultResponse: 0
+		  // - defaultResponse: Nil
 		  //
 		  //
-		  Dim RetrieveSomethingData As Integer
+		  Dim RetrieveSomethingData As XojoOpenAPIClientSynchronous.Models.ExampleResponse
 		  If api.RetrieveSomething(error, RetrieveSomethingData) Then
 		    Print("[+] DefaultApi.RetrieveSomething successful.")
 		  Else

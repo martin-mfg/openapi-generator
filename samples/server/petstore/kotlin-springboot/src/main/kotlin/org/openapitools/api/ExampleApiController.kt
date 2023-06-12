@@ -1,5 +1,6 @@
 package org.openapitools.api
 
+import org.openapitools.model.ExampleResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -33,7 +34,7 @@ class ExampleApiController(@Autowired(required = true) val service: ExampleApiSe
         value = ["/example/someMethod"],
         produces = ["/"]
     )
-    fun retrieveSomething(): ResponseEntity<kotlin.Int> {
+    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
         return ResponseEntity(service.retrieveSomething(), HttpStatus.valueOf(200))
     }
 }

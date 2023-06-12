@@ -1,4 +1,6 @@
 README.md
+lib/Models/ExampleResponse.cpp
+lib/Models/ExampleResponse.h
 lib/Models/Helpers.cpp
 lib/Models/Helpers.h
 lib/service/DefaultApi.cpp

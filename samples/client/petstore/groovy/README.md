@@ -36,7 +36,7 @@ def apiInstance = new DefaultApi()
 apiInstance.retrieveSomething()
     {
     // on success
-    def result = (Integer)it
+    def result = (ExampleResponse)it
     println result
     
 }

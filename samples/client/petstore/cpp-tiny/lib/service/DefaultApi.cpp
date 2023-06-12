@@ -5,7 +5,7 @@ using namespace Tiny;
 
 
         Response<
-            int
+            ExampleResponse
         >
         DefaultApi::
         retrieveSomething(
@@ -36,13 +36,11 @@ using namespace Tiny;
 
 
 
-            bourne::json jsonPayload(output_string);
-            int obj;
-            jsonToValue(&obj, jsonPayload, "int");
+
+            ExampleResponse obj(output_string);
 
 
-
-            Response<int> response(obj, httpCode);
+            Response<ExampleResponse> response(obj, httpCode);
             return response;
         }
 

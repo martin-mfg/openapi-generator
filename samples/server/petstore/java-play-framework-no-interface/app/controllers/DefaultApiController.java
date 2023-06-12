@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.ExampleResponse;
 
 import com.typesafe.config.Config;
 import play.mvc.Controller;
@@ -40,7 +41,12 @@ public class DefaultApiController extends Controller {
 
     @ApiAction
     public Result retrieveSomething(Http.Request request) throws Exception {
-                Integer obj = imp.retrieveSomething(request);
+                ExampleResponse obj = imp.retrieveSomething(request);
+
+        if (configuration.getBoolean("useOutputBeanValidation")) {
+            OpenAPIUtils.validate(obj);
+        }
+
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);

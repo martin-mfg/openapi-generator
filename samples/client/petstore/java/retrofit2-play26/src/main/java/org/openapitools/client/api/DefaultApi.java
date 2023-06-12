@@ -9,6 +9,7 @@ import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import okhttp3.MultipartBody;
 
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,10 +23,10 @@ public interface DefaultApi {
   /**
    * 
    * get some object
-   * @return Call&lt;Integer&gt;
+   * @return Call&lt;ExampleResponse&gt;
    */
   @GET("example/someMethod")
-  CompletionStage<Response<Integer>> retrieveSomething();
+  CompletionStage<Response<ExampleResponse>> retrieveSomething();
     
 
 }

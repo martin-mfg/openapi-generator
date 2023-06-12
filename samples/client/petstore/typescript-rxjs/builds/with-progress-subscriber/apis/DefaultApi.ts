@@ -15,6 +15,9 @@ import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts } from '../runtime';
+import type {
+    ExampleResponse,
+} from '../models';
 
 /**
  * no description
@@ -24,11 +27,11 @@ export class DefaultApi extends BaseAPI {
     /**
      * get some object
      */
-    retrieveSomething(): Observable<number>
-    retrieveSomething(opts?: Pick<OperationOpts, 'progressSubscriber'>): Observable<number>
-    retrieveSomething(opts?: OperationOpts): Observable<AjaxResponse<number>>
-    retrieveSomething(opts?: OperationOpts): Observable<number | AjaxResponse<number>> {
-        return this.request<number>({
+    retrieveSomething(): Observable<ExampleResponse>
+    retrieveSomething(opts?: Pick<OperationOpts, 'progressSubscriber'>): Observable<ExampleResponse>
+    retrieveSomething(opts?: OperationOpts): Observable<AjaxResponse<ExampleResponse>>
+    retrieveSomething(opts?: OperationOpts): Observable<ExampleResponse | AjaxResponse<ExampleResponse>> {
+        return this.request<ExampleResponse>({
             url: '/example/someMethod',
             method: 'GET',
             progressSubscriber: opts?.progressSubscriber,

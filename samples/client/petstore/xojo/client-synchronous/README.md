@@ -68,6 +68,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [XojoOpenAPIClientSynchronous.Models.ExampleResponse](ExampleResponse.md)
 
 
 ## Documentation For Authorization

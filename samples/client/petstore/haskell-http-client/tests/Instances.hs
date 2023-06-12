@@ -113,6 +113,14 @@ arbitraryReducedMaybeValue n = do
 
 -- * Models
 
+instance Arbitrary ExampleResponse where
+  arbitrary = sized genExampleResponse
+
+genExampleResponse :: Int -> Gen ExampleResponse
+genExampleResponse n =
+  ExampleResponse
+    <$> arbitraryReducedMaybe n -- exampleResponseMyOnlyProperty :: Maybe [Bool]
+  
 
 
 

@@ -12,6 +12,7 @@
 
 package org.openapitools.server.api;
 
+import org.openapitools.server.model.ExampleResponse;
 
 import jakarta.ws.rs.*;
 
@@ -28,8 +29,8 @@ public class DefaultServiceImpl implements DefaultService {
 
     @GET
     @Produces({ "/" })
-    public Integer retrieveSomething() {
-        Integer result = new Integer(0); // Replace with correct business logic.
+    public ExampleResponse retrieveSomething() {
+        ExampleResponse result = null; // Replace with correct business logic.
         return result;
     }
 }

@@ -1,9 +1,9 @@
 /*
- * Some example
+ * 
  *
  * dummy description
  *
- * OpenAPI document version: 0.0.1
+ * OpenAPI document version: 
  * 
  *
  * AUTO-GENERATED FILE, DO NOT MODIFY!

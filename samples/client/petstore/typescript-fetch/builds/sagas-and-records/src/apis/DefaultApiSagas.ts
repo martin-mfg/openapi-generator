@@ -19,6 +19,11 @@ import {all, fork, put, takeLatest} from "redux-saga/effects";
 import {apiCall, createSagaAction as originalCreateSagaAction, BaseEntitySupportPayloadApiAction, BasePayloadApiAction, NormalizedRecordEntities, normalizedEntities} from "../runtimeSagasAndRecords";
 import {Action} from "redux-ts-simple";
 
+import {
+    ExampleResponse,
+    ExampleResponseRecord,
+    exampleResponseRecordUtils,
+} from '../models/index';
 
 const createSagaAction = <T>(type: string) => originalCreateSagaAction<T>(type, {namespace: "api_defaultApi"});
 
@@ -38,7 +43,7 @@ export interface PayloadRetrieveSomething extends BasePayloadApiAction {
 
 
 export const retrieveSomethingRequest = createSagaAction<void>("retrieveSomethingRequest");
-export const retrieveSomethingSuccess = createSagaAction<number>("retrieveSomethingSuccess");
+export const retrieveSomethingSuccess = createSagaAction<void>("retrieveSomethingSuccess");
 export const retrieveSomethingFailure = createSagaAction<{error: any, requestPayload: PayloadRetrieveSomething}>("retrieveSomethingFailure");
 
 export const retrieveSomething = createSagaAction<PayloadRetrieveSomething>("retrieveSomething");
@@ -53,13 +58,12 @@ export function *retrieveSomethingSagaImp(_action_: Action<PayloadRetrieveSometh
 
         yield put(retrieveSomethingRequest());
 
-        const response: Required<number> = yield apiCall(Api.defaultApi, Api.defaultApi.retrieveSomething,
+        const response: Required<ExampleResponse> = yield apiCall(Api.defaultApi, Api.defaultApi.retrieveSomething,
         );
 
-        let successReturnValue: any = undefined;
-            yield put(retrieveSomethingSuccess(response));
+            yield put(retrieveSomethingSuccess());
 
-        return response;
+        return undefined;
     } catch (error) {
         if (markErrorsAsHandled) {error.wasHandled = true; }
         yield put(retrieveSomethingFailure({error, requestPayload: _action_.payload}));

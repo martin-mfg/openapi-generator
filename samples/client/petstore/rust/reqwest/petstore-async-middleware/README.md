@@ -30,6 +30,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 To get access to the crate's generated documentation, use:

@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

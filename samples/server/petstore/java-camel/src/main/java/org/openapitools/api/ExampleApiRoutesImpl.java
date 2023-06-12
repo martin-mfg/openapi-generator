@@ -25,6 +25,8 @@ public class ExampleApiRoutesImpl extends RouteBuilder {
                 .when(simple("${body} != null"))
                     .log(LoggingLevel.INFO, "BODY TYPE: ${body.getClass().getName()}")
             .end()
-            .log(LoggingLevel.INFO, "HEADERS: ${headers}");
+            .log(LoggingLevel.INFO, "HEADERS: ${headers}")
+            .setBody(constant("Custom MIME type example not yet supported: /"))
+            .unmarshal().json(JsonLibrary.Jackson, ExampleResponse.class);
     }
 }

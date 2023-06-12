@@ -18,7 +18,7 @@
             "content" : {
               "/" : {
                 "schema" : {
-                  "type" : "integer"
+                  "$ref" : "#/components/schemas/ExampleResponse"
                 }
               }
             },
@@ -29,6 +29,18 @@
     }
   },
   "components" : {
-    "schemas" : { }
+    "schemas" : {
+      "ExampleResponse" : {
+        "properties" : {
+          "myOnlyProperty" : {
+            "items" : {
+              "type" : "boolean"
+            },
+            "type" : "array"
+          }
+        },
+        "type" : "object"
+      }
+    }
   }
 }

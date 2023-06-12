@@ -17,6 +17,7 @@ require 'petstore/version'
 require 'petstore/configuration'
 
 # Models
+Petstore.autoload :ExampleResponse, 'petstore/models/example_response'
 
 # APIs
 Petstore.autoload :DefaultApi, 'petstore/api/default_api'

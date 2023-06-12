@@ -15,6 +15,7 @@ import { HttpClient } from 'aurelia-http-client';
 import { Api } from './Api';
 import { AuthStorage } from './AuthStorage';
 import {
+  ExampleResponse,
 } from './models';
 
 /**
@@ -42,7 +43,7 @@ export class DefaultApi extends Api {
   /**
    * get some object
    */
-  async retrieveSomething(): Promise<number> {
+  async retrieveSomething(): Promise<ExampleResponse> {
     // Verify required parameters are set
 
     // Create URL to call

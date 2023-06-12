@@ -14,7 +14,7 @@
 
 // get some object
 //
-int*
+example_response_t*
 DefaultAPI_retrieveSomething(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
@@ -46,9 +46,15 @@ DefaultAPI_retrieveSomething(apiClient_t *apiClient)
     //if (apiClient->response_code == 200) {
     //    printf("%s\n","The response with results");
     //}
-    //primitive return type simple
-    int* elementToReturn =  strdup((int*)apiClient->dataReceived);
+    //nonprimitive not container
+    cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    example_response_t *elementToReturn = example_response_parseFromJSON(DefaultAPIlocalVarJSON);
+    cJSON_Delete(DefaultAPIlocalVarJSON);
+    if(elementToReturn == NULL) {
+        // return 0;
+    }
 
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;

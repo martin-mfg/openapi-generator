@@ -14,6 +14,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ExampleResponse from '../model/ExampleResponse';
 
 /**
 * Default service.
@@ -35,7 +36,7 @@ export default class DefaultApi extends ApiClient {
     /**
      * get some object
      * @param requestInit Dynamic configuration. @see {@link https://github.com/apollographql/apollo-server/pull/1277}
-     * @return {Promise<Number>}
+     * @return {Promise<module:model/ExampleResponse>}
      */
     async retrieveSomething(requestInit) {
       let postBody = null;
@@ -53,7 +54,7 @@ export default class DefaultApi extends ApiClient {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['/'];
-      let returnType = 'Number';
+      let returnType = ExampleResponse;
 
       return this.callApi(
         '/example/someMethod', 'GET',

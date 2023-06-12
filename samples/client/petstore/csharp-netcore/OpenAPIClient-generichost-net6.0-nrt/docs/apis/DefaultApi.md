@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="retrievesomething"></a>
 # **RetrieveSomething**
-> int RetrieveSomething ()
+> ExampleResponse RetrieveSomething ()
 
 
 
@@ -34,7 +34,7 @@ namespace Example
 
             try
             {
-                int result = apiInstance.RetrieveSomething();
+                ExampleResponse result = apiInstance.RetrieveSomething();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -54,7 +54,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<int> response = apiInstance.RetrieveSomethingWithHttpInfo();
+    ApiResponse<ExampleResponse> response = apiInstance.RetrieveSomethingWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -71,7 +71,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-**int**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

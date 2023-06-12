@@ -25,6 +25,7 @@ Class | Method
 
 ## Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="authorization"></a>

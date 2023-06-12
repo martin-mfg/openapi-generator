@@ -8,7 +8,9 @@
 #
 
 # Models
+import petstore/models/model_example_response
 
+export model_example_response
 
 # APIs
 import petstore/apis/api_default

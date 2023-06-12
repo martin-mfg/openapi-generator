@@ -1,4 +1,4 @@
-# SomeExample.ExampleResponse
+# OpenapiJsClient.ExampleResponse
 
 ## Properties
 

@@ -27,7 +27,7 @@ type ApiRetrieveSomethingRequest struct {
 	ApiService *DefaultAPIService
 }
 
-func (r ApiRetrieveSomethingRequest) Execute() (int32, *http.Response, error) {
+func (r ApiRetrieveSomethingRequest) Execute() (*ExampleResponse, *http.Response, error) {
 	return r.ApiService.RetrieveSomethingExecute(r)
 }
 
@@ -47,13 +47,13 @@ func (a *DefaultAPIService) RetrieveSomething(ctx context.Context) ApiRetrieveSo
 }
 
 // Execute executes the request
-//  @return int32
-func (a *DefaultAPIService) RetrieveSomethingExecute(r ApiRetrieveSomethingRequest) (int32, *http.Response, error) {
+//  @return ExampleResponse
+func (a *DefaultAPIService) RetrieveSomethingExecute(r ApiRetrieveSomethingRequest) (*ExampleResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  int32
+		localVarReturnValue  *ExampleResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.RetrieveSomething")

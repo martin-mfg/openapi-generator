@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.ExampleResponse;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -33,6 +34,6 @@ public interface DefaultApi  {
     @Produces({ "/" })
     @ApiOperation(value = "", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = Integer.class) })
-    public Integer retrieveSomething();
+        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class) })
+    public ExampleResponse retrieveSomething();
 }

@@ -17,6 +17,7 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
+import org.openapitools.client.model.ExampleResponse;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -84,10 +85,10 @@ public class DefaultApi {
   /**
    * 
    * get some object
-   * @return CompletableFuture&lt;Integer&gt;
+   * @return CompletableFuture&lt;ExampleResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<Integer> retrieveSomething() throws ApiException {
+  public CompletableFuture<ExampleResponse> retrieveSomething() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = retrieveSomethingRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -99,7 +100,7 @@ public class DefaultApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<Integer>() {})
+                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<ExampleResponse>() {})
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -114,10 +115,10 @@ public class DefaultApi {
   /**
    * 
    * get some object
-   * @return CompletableFuture&lt;ApiResponse&lt;Integer&gt;&gt;
+   * @return CompletableFuture&lt;ApiResponse&lt;ExampleResponse&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<Integer>> retrieveSomethingWithHttpInfo() throws ApiException {
+  public CompletableFuture<ApiResponse<ExampleResponse>> retrieveSomethingWithHttpInfo() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = retrieveSomethingRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -132,10 +133,10 @@ public class DefaultApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  new ApiResponse<Integer>(
+                  new ApiResponse<ExampleResponse>(
                       localVarResponse.statusCode(),
                       localVarResponse.headers().map(),
-                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<Integer>() {}))
+                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<ExampleResponse>() {}))
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));

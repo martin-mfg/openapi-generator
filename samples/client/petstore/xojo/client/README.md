@@ -72,6 +72,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [OpenAPIClient.Models.ExampleResponse](ExampleResponse.md)
 
 
 ## Documentation For Authorization

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **retrieveSomething**
 ```swift
-    open class func retrieveSomething() -> Observable<Int>
+    open class func retrieveSomething() -> Observable<ExampleResponse>
 ```
 
 
@@ -30,7 +30,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Int**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

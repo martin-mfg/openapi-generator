@@ -8,6 +8,7 @@ Controller/Controller.php
 Controller/DefaultController.php
 DependencyInjection/Compiler/OpenAPIServerApiPass.php
 DependencyInjection/OpenAPIServerExtension.php
+Model/ExampleResponse.php
 OpenAPIServerBundle.php
 README.md
 Resources/config/routing.yaml
@@ -25,5 +26,6 @@ Tests/test_config.yaml
 autoload.php
 composer.json
 docs/Api/DefaultApiInterface.md
+docs/Model/ExampleResponse.md
 git_push.sh
 phpunit.xml.dist

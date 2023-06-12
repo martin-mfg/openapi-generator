@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieve_something**
-> integer retrieve_something()
+> ExampleResponse retrieve_something()
 
 
 
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**integer**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

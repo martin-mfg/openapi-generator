@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **retrieveSomething**
 ```swift
-    internal class func retrieveSomething(completion: @escaping (_ data: Int?, _ error: Error?) -> Void)
+    internal class func retrieveSomething(completion: @escaping (_ data: ExampleResponse?, _ error: Error?) -> Void)
 ```
 
 
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Int**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

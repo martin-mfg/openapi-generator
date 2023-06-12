@@ -10,7 +10,7 @@ Method | HTTP request | Description
 # **retrieveSomething**
 ```objc
 -(NSURLSessionTask*) retrieveSomethingWithCompletionHandler: 
-        (void (^)(NSNumber* output, NSError* error)) handler;
+        (void (^)(SWGExampleResponse* output, NSError* error)) handler;
 ```
 
 
@@ -24,7 +24,7 @@ get some object
 SWGDefaultApi*apiInstance = [[SWGDefaultApi alloc] init];
 
 [apiInstance retrieveSomethingWithCompletionHandler: 
-          ^(NSNumber* output, NSError* error) {
+          ^(SWGExampleResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**NSNumber***
+[**SWGExampleResponse***](SWGExampleResponse.md)
 
 ### Authorization
 

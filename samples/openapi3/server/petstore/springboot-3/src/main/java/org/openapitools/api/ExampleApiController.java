@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.ExampleResponse;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,6 +4,7 @@ import org.openapitools.client.ApiClient;
 import org.openapitools.client.EncodingUtils;
 import org.openapitools.client.model.ApiResponse;
 
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,13 +19,13 @@ public interface DefaultApi extends ApiClient.Api {
   /**
    * 
    * get some object
-   * @return Integer
+   * @return ExampleResponse
    */
   @RequestLine("GET /example/someMethod")
   @Headers({
     "Accept: /",
   })
-  Integer retrieveSomething();
+  ExampleResponse retrieveSomething();
 
   /**
    * 
@@ -36,7 +37,7 @@ public interface DefaultApi extends ApiClient.Api {
   @Headers({
     "Accept: /",
   })
-  ApiResponse<Integer> retrieveSomethingWithHttpInfo();
+  ApiResponse<ExampleResponse> retrieveSomethingWithHttpInfo();
 
 
 }

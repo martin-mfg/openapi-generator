@@ -14,6 +14,13 @@
 
 
 import * as runtime from '../runtime';
+import type {
+  ExampleResponse,
+} from '../models/index';
+import {
+    ExampleResponseFromJSON,
+    ExampleResponseToJSON,
+} from '../models/index';
 
 /**
  * DefaultApi - interface
@@ -28,12 +35,12 @@ export interface DefaultApiInterface {
      * @throws {RequiredError}
      * @memberof DefaultApiInterface
      */
-    retrieveSomethingRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<number>>;
+    retrieveSomethingRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ExampleResponse>>;
 
     /**
      * get some object
      */
-    retrieveSomething(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<number>;
+    retrieveSomething(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ExampleResponse>;
 
 }
 
@@ -45,7 +52,7 @@ export class DefaultApi extends runtime.BaseAPI implements DefaultApiInterface {
     /**
      * get some object
      */
-    async retrieveSomethingRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<number>> {
+    async retrieveSomethingRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ExampleResponse>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -57,17 +64,13 @@ export class DefaultApi extends runtime.BaseAPI implements DefaultApiInterface {
             query: queryParameters,
         }, initOverrides);
 
-        if (this.isJsonMime(response.headers.get('content-type'))) {
-            return new runtime.JSONApiResponse<number>(response);
-        } else {
-            return new runtime.TextApiResponse(response) as any;
-        }
+        return new runtime.JSONApiResponse(response, (jsonValue) => ExampleResponseFromJSON(jsonValue));
     }
 
     /**
      * get some object
      */
-    async retrieveSomething(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<number> {
+    async retrieveSomething(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ExampleResponse> {
         const response = await this.retrieveSomethingRaw(initOverrides);
         return await response.value();
     }

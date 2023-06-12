@@ -75,6 +75,7 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [ExampleResponse](docs/Model/ExampleResponse.md)
 
 ## Authorization
 Endpoints do not require authorization.

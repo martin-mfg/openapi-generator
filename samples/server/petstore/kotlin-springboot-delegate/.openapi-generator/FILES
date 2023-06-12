@@ -10,5 +10,6 @@ src/main/kotlin/org/openapitools/api/ExampleApi.kt
 src/main/kotlin/org/openapitools/api/ExampleApiController.kt
 src/main/kotlin/org/openapitools/api/ExampleApiDelegate.kt
 src/main/kotlin/org/openapitools/api/Exceptions.kt
+src/main/kotlin/org/openapitools/model/ExampleResponse.kt
 src/main/resources/application.yaml
 src/main/resources/openapi.yaml

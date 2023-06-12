@@ -1,5 +1,6 @@
 package com.puppies.store.apis;
 
+import apimodels.ExampleResponse;
 
 import com.typesafe.config.Config;
 import play.mvc.Controller;

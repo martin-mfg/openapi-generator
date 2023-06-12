@@ -1,5 +1,6 @@
 package org.openapitools.server.api;
 
+import org.openapitools.server.model.ExampleResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.logging.Logger;
 

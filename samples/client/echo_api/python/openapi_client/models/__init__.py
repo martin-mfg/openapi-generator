@@ -14,3 +14,4 @@
 
 
 # import models into model package
+from openapi_client.models.example_response import ExampleResponse

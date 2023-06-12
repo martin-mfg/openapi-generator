@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.ExampleResponse;
 import org.openapitools.api.ExampleApiService;
 
 import javax.ws.rs.*;
@@ -38,9 +39,9 @@ public class ExampleApi  {
     
     
     @Produces({ "/" })
-    @ApiOperation(value = "", notes = "get some object", response = Integer.class, tags={  })
+    @ApiOperation(value = "", notes = "get some object", response = ExampleResponse.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = Integer.class) })
+        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class) })
     public Response retrieveSomething() {
         return delegate.retrieveSomething(securityContext);
     }

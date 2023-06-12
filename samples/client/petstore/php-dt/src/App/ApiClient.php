@@ -48,6 +48,7 @@ class ApiClient extends OAGAC\AbstractApiClient
         {
             case 200:
                 /* The response with results */
+                $responseContent = new \App\DTO\ExampleResponse();
                 break;
         }
         $this->parseBody($response, $responseContent);
@@ -56,7 +57,7 @@ class ApiClient extends OAGAC\AbstractApiClient
 
     /**
      * @param string $responseMediaType
-     * @return int
+     * @return \App\DTO\ExampleResponse
      * @throws ClientExceptionInterface
      * @throws DT\Exception\InvalidData
      * @throws OAGAC\Exception\InvalidResponseBodySchema
@@ -64,7 +65,7 @@ class ApiClient extends OAGAC\AbstractApiClient
      */
     public function retrieveSomethingResult(
         string $responseMediaType = '/'
-    ): int
+    ): \App\DTO\ExampleResponse
     {
         return $this->getSuccessfulContent(...$this->retrieveSomething($responseMediaType));
     }

@@ -11,6 +11,7 @@
  */
 package org.openapitools.client.api
 
+import org.openapitools.client.model.ExampleResponse
 import org.openapitools.client.core.JsonSupport._
 import sttp.client3._
 import sttp.model.Method
@@ -26,13 +27,13 @@ class DefaultApi(baseUrl: String) {
    * get some object
    * 
    * Expected answers:
-   *   code 200 : Int (The response with results)
+   *   code 200 : ExampleResponse (The response with results)
    */
   def retrieveSomething(
-): Request[Either[ResponseException[String, Exception], Int], Any] =
+): Request[Either[ResponseException[String, Exception], ExampleResponse], Any] =
     basicRequest
       .method(Method.GET, uri"$baseUrl/example/someMethod")
       .contentType("application/json")
-      .response(asJson[Int])
+      .response(asJson[ExampleResponse])
 
 }

@@ -25,5 +25,8 @@ SwaggerClient/Core/SWGResponseDeserializer.h
 SwaggerClient/Core/SWGResponseDeserializer.m
 SwaggerClient/Core/SWGSanitizer.h
 SwaggerClient/Core/SWGSanitizer.m
+SwaggerClient/Model/SWGExampleResponse.h
+SwaggerClient/Model/SWGExampleResponse.m
 docs/SWGDefaultApi.md
+docs/SWGExampleResponse.md
 git_push.sh

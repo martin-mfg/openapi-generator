@@ -32,7 +32,7 @@ void OAIDefaultApiHandler::retrieveSomething() {
     auto reqObj = qobject_cast<OAIDefaultApiRequest*>(sender());
     if( reqObj != nullptr )
     {
-        qint32 res;
+        OAIExampleResponse res;
         reqObj->retrieveSomethingResponse(res);
     }
 }

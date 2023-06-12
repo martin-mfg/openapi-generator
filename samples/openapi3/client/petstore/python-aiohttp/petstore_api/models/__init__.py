@@ -14,3 +14,4 @@
 
 
 # import models into model package
+from petstore_api.models.example_response import ExampleResponse

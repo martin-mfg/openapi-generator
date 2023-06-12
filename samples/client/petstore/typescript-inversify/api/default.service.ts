@@ -20,6 +20,7 @@ import { IAPIConfiguration } from '../IAPIConfiguration';
 import { Headers } from '../Headers';
 import HttpResponse from '../HttpResponse';
 
+import { ExampleResponse } from '../model/exampleResponse';
 
 import { COLLECTION_FORMATS }  from '../variables';
 
@@ -40,15 +41,15 @@ export class DefaultService {
      * get some object
      
      */
-    public retrieveSomething(observe?: 'body', headers?: Headers): Observable<number>;
-    public retrieveSomething(observe?: 'response', headers?: Headers): Observable<HttpResponse<number>>;
+    public retrieveSomething(observe?: 'body', headers?: Headers): Observable<ExampleResponse>;
+    public retrieveSomething(observe?: 'response', headers?: Headers): Observable<HttpResponse<ExampleResponse>>;
     public retrieveSomething(observe: any = 'body', headers: Headers = {}): Observable<any> {
         headers['Accept'] = '/';
 
-        const response: Observable<HttpResponse<number>> = this.httpClient.get(`${this.basePath}/example/someMethod`, headers);
+        const response: Observable<HttpResponse<ExampleResponse>> = this.httpClient.get(`${this.basePath}/example/someMethod`, headers);
         if (observe === 'body') {
                return response.pipe(
-                   map((httpResponse: HttpResponse) => <number>(httpResponse.response))
+                   map((httpResponse: HttpResponse) => <ExampleResponse>(httpResponse.response))
                );
         }
         return response;

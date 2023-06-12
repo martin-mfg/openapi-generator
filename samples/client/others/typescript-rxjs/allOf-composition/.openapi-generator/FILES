@@ -2,6 +2,7 @@
 apis/DefaultApi.ts
 apis/index.ts
 index.ts
+models/ExampleResponse.ts
 models/index.ts
 runtime.ts
 servers.ts

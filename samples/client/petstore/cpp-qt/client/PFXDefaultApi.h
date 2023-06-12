@@ -17,6 +17,7 @@
 #include "PFXServerConfiguration.h"
 #include "PFXOauth.h"
 
+#include "PFXExampleResponse.h"
 #include <QString>
 
 #include <QObject>
@@ -85,11 +86,11 @@ private:
 
 signals:
 
-    void retrieveSomethingSignal(qint32 summary);
+    void retrieveSomethingSignal(PFXExampleResponse summary);
 
-    void retrieveSomethingSignalFull(PFXHttpRequestWorker *worker, qint32 summary);
+    void retrieveSomethingSignalFull(PFXHttpRequestWorker *worker, PFXExampleResponse summary);
 
-    void retrieveSomethingSignalE(qint32 summary, QNetworkReply::NetworkError error_type, QString error_str);
+    void retrieveSomethingSignalE(PFXExampleResponse summary, QNetworkReply::NetworkError error_type, QString error_str);
 
     void retrieveSomethingSignalEFull(PFXHttpRequestWorker *worker, QNetworkReply::NetworkError error_type, QString error_str);
 

@@ -1,6 +1,7 @@
 import { ResponseContext, RequestContext, HttpFile } from '../http/http';
 import { Configuration} from '../configuration'
 
+import { ExampleResponse } from '../models/ExampleResponse';
 import { ObservableDefaultApi } from './ObservableAPI';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
@@ -18,7 +19,7 @@ export class PromiseDefaultApi {
     /**
      * get some object
      */
-    public retrieveSomething(_options?: Configuration): Promise<number> {
+    public retrieveSomething(_options?: Configuration): Promise<ExampleResponse> {
         const result = this.api.retrieveSomething(_options);
         return result.toPromise();
     }

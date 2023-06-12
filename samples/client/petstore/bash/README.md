@@ -108,6 +108,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 ## Documentation For Authorization

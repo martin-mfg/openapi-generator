@@ -12,6 +12,7 @@
 
 package org.openapitools.server.api;
 
+import org.openapitools.server.model.ExampleResponse;
 
 import jakarta.ws.rs.*;
 
@@ -27,5 +28,5 @@ public interface DefaultService {
 
     @GET
     @Produces({ "/" })
-    Integer retrieveSomething();
+    ExampleResponse retrieveSomething();
 }

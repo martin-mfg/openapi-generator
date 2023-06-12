@@ -12,6 +12,7 @@
 
 package org.openapitools.client.api;
 
+import org.openapitools.client.model.ExampleResponse;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -42,5 +43,5 @@ public interface DefaultApi  {
     @GET
     
     @Produces({ "/" })
-    Integer retrieveSomething() throws ApiException, ProcessingException;
+    ExampleResponse retrieveSomething() throws ApiException, ProcessingException;
 }

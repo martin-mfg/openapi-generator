@@ -39,6 +39,7 @@ namespace Org.OpenAPITools.Client
             _jsonOptions.Converters.Add(new JsonStringEnumConverter());
             _jsonOptions.Converters.Add(new DateTimeJsonConverter());
             _jsonOptions.Converters.Add(new DateTimeNullableJsonConverter());
+            _jsonOptions.Converters.Add(new ExampleResponseJsonConverter());
             _services.AddSingleton(new JsonSerializerOptionsProvider(_jsonOptions));
             _services.AddSingleton<IApiFactory, ApiFactory>();
             _services.AddTransient<IDefaultApi, DefaultApi>();

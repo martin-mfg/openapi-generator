@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.ExampleResponse;
 
 import com.google.inject.Inject;
 import com.typesafe.config.Config;
@@ -24,13 +25,13 @@ public abstract class DefaultApiControllerImpInterface {
     private ObjectMapper mapper = new ObjectMapper();
 
     public Result retrieveSomethingHttp(Http.Request request) throws Exception {
-        Integer obj = retrieveSomething(request);
+        ExampleResponse obj = retrieveSomething(request);
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);
 
     }
 
-    public abstract Integer retrieveSomething(Http.Request request) throws Exception;
+    public abstract ExampleResponse retrieveSomething(Http.Request request) throws Exception;
 
 }

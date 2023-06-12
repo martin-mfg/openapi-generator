@@ -20,7 +20,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-Int32
+ExampleResponse
 #>
 function Invoke-PSRetrieveSomething {
     [CmdletBinding()]
@@ -57,7 +57,7 @@ function Invoke-PSRetrieveSomething {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "Int32" `
+                                -ReturnType "ExampleResponse" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

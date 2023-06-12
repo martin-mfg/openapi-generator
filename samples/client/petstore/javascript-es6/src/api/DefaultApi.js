@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ExampleResponse from '../model/ExampleResponse';
 
 /**
 * Default service.
@@ -37,14 +38,14 @@ export default class DefaultApi {
      * Callback function to receive the result of the retrieveSomething operation.
      * @callback module:api/DefaultApi~retrieveSomethingCallback
      * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
+     * @param {module:model/ExampleResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * get some object
      * @param {module:api/DefaultApi~retrieveSomethingCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * data is of type: {@link module:model/ExampleResponse}
      */
     retrieveSomething(callback) {
       let postBody = null;
@@ -61,7 +62,7 @@ export default class DefaultApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['/'];
-      let returnType = 'Number';
+      let returnType = ExampleResponse;
       return this.apiClient.callApi(
         '/example/someMethod', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

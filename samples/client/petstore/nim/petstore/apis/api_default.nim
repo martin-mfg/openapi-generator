@@ -18,6 +18,7 @@ import tables
 import typetraits
 import uri
 
+import ../models/model_example_response
 
 const basepath = "http://localhost"
 
@@ -37,9 +38,9 @@ template constructResult[T](response: Response): untyped =
     (none(T.typedesc), response)
 
 
-proc retrieveSomething*(httpClient: HttpClient): (Option[int], Response) =
+proc retrieveSomething*(httpClient: HttpClient): (Option[ExampleResponse], Response) =
   ## 
 
   let response = httpClient.get(basepath & "/example/someMethod")
-  constructResult[int](response)
+  constructResult[ExampleResponse](response)
 

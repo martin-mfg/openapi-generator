@@ -6,3 +6,4 @@ src/main/kotlin/org/openapitools/api/DefaultApi.kt
 src/main/kotlin/org/openapitools/api/DefaultApiClient.kt
 src/main/kotlin/org/openapitools/configuration/ApiKeyRequestInterceptor.kt
 src/main/kotlin/org/openapitools/configuration/ClientConfiguration.kt
+src/main/kotlin/org/openapitools/model/ExampleResponse.kt

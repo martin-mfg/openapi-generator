@@ -3,6 +3,7 @@ build.gradle
 pom.xml
 settings.gradle
 src/gen/java/org/openapitools/api/ExampleApi.java
+src/gen/java/org/openapitools/model/ExampleResponse.java
 src/main/java/org/openapitools/api/JacksonConfig.java
 src/main/java/org/openapitools/api/RestApplication.java
 src/main/java/org/openapitools/api/impl/ExampleApiServiceImpl.java

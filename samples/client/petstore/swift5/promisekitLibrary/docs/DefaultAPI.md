@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **retrieveSomething**
 ```swift
-    open class func retrieveSomething() -> Promise<Int>
+    open class func retrieveSomething() -> Promise<ExampleResponse>
 ```
 
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Int**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

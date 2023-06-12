@@ -35,17 +35,18 @@ namespace Org.OpenAPITools.Controllers
         [Route("/example/someMethod")]
         [ValidateModelState]
         [SwaggerOperation("RetrieveSomething")]
-        [SwaggerResponse(statusCode: 200, type: typeof(int), description: "The response with results")]
+        [SwaggerResponse(statusCode: 200, type: typeof(ExampleResponse), description: "The response with results")]
         public virtual IActionResult RetrieveSomething()
         {
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200, default(int));
+            // return StatusCode(200, default(ExampleResponse));
             string exampleJson = null;
+            exampleJson = "Custom MIME type example not yet supported: /";
             
             var example = exampleJson != null
-            ? JsonSerializer.Deserialize<int>(exampleJson)
-            : default(int);
+            ? JsonSerializer.Deserialize<ExampleResponse>(exampleJson)
+            : default(ExampleResponse);
             //TODO: Change the data returned
             return new ObjectResult(example);
         }

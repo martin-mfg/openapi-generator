@@ -14,4 +14,13 @@ paths:
           content:
             "/":
               schema:
-                type: integer
+                $ref: '#/components/schemas/ExampleResponse'
+components:
+  schemas:
+    ExampleResponse:
+      type: object
+      properties:
+        myOnlyProperty:
+          type: array
+          items:
+            type: boolean

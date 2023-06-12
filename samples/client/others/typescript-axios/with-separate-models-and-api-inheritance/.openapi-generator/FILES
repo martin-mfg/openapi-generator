@@ -7,4 +7,5 @@ common.ts
 configuration.ts
 git_push.sh
 index.ts
+model/example-response.ts
 model/index.ts

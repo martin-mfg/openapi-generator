@@ -61,8 +61,8 @@ namespace YourProject
         {
             var host = CreateHostBuilder(args).Build();
             var api = host.Services.GetRequiredService<IDefaultApi>();
-            ApiResponse<int> response = await api.RetrieveSomethingAsync("todo");
-            int model = response.AsModel();
+            ApiResponse<ExampleResponse> response = await api.RetrieveSomethingAsync("todo");
+            ExampleResponse model = response.AsModel();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) => Host.CreateDefaultBuilder(args)

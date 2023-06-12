@@ -13,6 +13,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiResponse;
+import org.openapitools.client.model.ExampleResponse;
 
 /**
  * 
@@ -21,6 +22,6 @@ import org.openapitools.client.ApiResponse;
  */
 public interface DefaultApi {
 
-  ApiResponse<Integer> retrieveSomething();
+  ApiResponse<ExampleResponse> retrieveSomething();
 
 }

@@ -91,7 +91,7 @@ namespace Example
 
             try
             {
-                int result = apiInstance.RetrieveSomething();
+                ExampleResponse result = apiInstance.RetrieveSomething();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

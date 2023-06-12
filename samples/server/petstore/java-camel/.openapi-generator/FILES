@@ -7,4 +7,5 @@ src/main/java/org/openapitools/ValidationErrorProcessor.java
 src/main/java/org/openapitools/api/ExampleApi.java
 src/main/java/org/openapitools/api/ExampleApiRoutesImpl.java
 src/main/java/org/openapitools/api/ExampleApiValidator.java
+src/main/java/org/openapitools/model/ExampleResponse.java
 src/main/resources/application.properties

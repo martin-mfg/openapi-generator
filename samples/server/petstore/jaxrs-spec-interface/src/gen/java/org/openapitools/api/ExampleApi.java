@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.ExampleResponse;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -21,6 +22,6 @@ public interface ExampleApi {
     @Produces({ "/" })
     @ApiOperation(value = "", notes = "get some object", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = Integer.class) })
-    Integer retrieveSomething();
+        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class) })
+    ExampleResponse retrieveSomething();
 }

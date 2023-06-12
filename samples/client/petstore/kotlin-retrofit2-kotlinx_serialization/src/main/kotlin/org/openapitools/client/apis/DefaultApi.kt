@@ -7,6 +7,7 @@ import okhttp3.RequestBody
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+import org.openapitools.client.models.ExampleResponse
 
 interface DefaultApi {
     /**
@@ -15,9 +16,9 @@ interface DefaultApi {
      * Responses:
      *  - 200: The response with results
      *
-     * @return [Call]<[kotlin.Int]>
+     * @return [Call]<[ExampleResponse]>
      */
     @GET("example/someMethod")
-    fun retrieveSomething(): Call<kotlin.Int>
+    fun retrieveSomething(): Call<ExampleResponse>
 
 }

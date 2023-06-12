@@ -29,6 +29,7 @@ import io.helidon.webclient.WebClientResponse;
 
 import org.openapitools.client.ApiClient;
 
+import org.openapitools.client.model.ExampleResponse;
 
 /**
  * 
@@ -39,7 +40,7 @@ public class DefaultApiImpl implements DefaultApi {
 
   private final ApiClient apiClient;
 
-  protected static final GenericType<Integer> RESPONSE_TYPE_retrieveSomething = ResponseType.create(Integer.class);
+  protected static final GenericType<ExampleResponse> RESPONSE_TYPE_retrieveSomething = ResponseType.create(ExampleResponse.class);
 
   /**
    * Creates a new instance of DefaultApiImpl initialized with the specified {@link ApiClient}.
@@ -54,7 +55,7 @@ public class DefaultApiImpl implements DefaultApi {
   }
 
   @Override
-  public ApiResponse<Integer> retrieveSomething() {
+  public ApiResponse<ExampleResponse> retrieveSomething() {
     WebClientRequestBuilder webClientRequestBuilder = retrieveSomethingRequestBuilder();
     return retrieveSomethingSubmit(webClientRequestBuilder);
   }
@@ -80,9 +81,9 @@ public class DefaultApiImpl implements DefaultApi {
    * Optional customization point for subclasses.
    *
    * @param webClientRequestBuilder the request builder to use for submitting the request
-   * @return {@code ApiResponse<Integer>} for the submitted request
+   * @return {@code ApiResponse<ExampleResponse>} for the submitted request
    */
-  protected ApiResponse<Integer> retrieveSomethingSubmit(WebClientRequestBuilder webClientRequestBuilder) {
+  protected ApiResponse<ExampleResponse> retrieveSomethingSubmit(WebClientRequestBuilder webClientRequestBuilder) {
     Single<WebClientResponse> webClientResponse = webClientRequestBuilder.submit();
     return ApiResponse.create(RESPONSE_TYPE_retrieveSomething, webClientResponse);
   }

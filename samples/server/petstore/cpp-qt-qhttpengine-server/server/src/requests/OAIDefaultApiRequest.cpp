@@ -61,20 +61,22 @@ void OAIDefaultApiRequest::retrieveSomethingRequest(){
 
 
 
-void OAIDefaultApiRequest::retrieveSomethingResponse(const qint32& res){
+void OAIDefaultApiRequest::retrieveSomethingResponse(const OAIExampleResponse& res){
     setSocketResponseHeaders();
-    socket->write(::OpenAPI::toStringValue(res).toUtf8());
+    QJsonDocument resDoc(::OpenAPI::toJsonValue(res).toObject());
+    socket->writeJson(resDoc);
     if(socket->isOpen()){
         socket->close();
     }
 }
 
 
-void OAIDefaultApiRequest::retrieveSomethingError(const qint32& res, QNetworkReply::NetworkError error_type, QString& error_str){
+void OAIDefaultApiRequest::retrieveSomethingError(const OAIExampleResponse& res, QNetworkReply::NetworkError error_type, QString& error_str){
     Q_UNUSED(error_type); // TODO: Remap error_type to QHttpEngine::Socket errors
     setSocketResponseHeaders();
     Q_UNUSED(error_str);  // response will be used instead of error string
-    socket->write(::OpenAPI::toStringValue(res).toUtf8());
+    QJsonDocument resDoc(::OpenAPI::toJsonValue(res).toObject());
+    socket->writeJson(resDoc);
     if(socket->isOpen()){
         socket->close();
     }

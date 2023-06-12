@@ -13,6 +13,7 @@
 
 package org.openapitools.client.api;
 
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -77,7 +78,7 @@ public class DefaultApi {
      * 
      * get some object
      *
-     * return Integer
+     * return ExampleResponse
      */
     public static class RetrieveSomethingOper implements Oper {
 
@@ -107,10 +108,10 @@ public class DefaultApi {
         /**
          * GET /example/someMethod
          * @param handler handler
-         * @return Integer
+         * @return ExampleResponse
          */
-        public Integer executeAs(Function<Response, Response> handler) {
-            TypeRef<Integer> type = new TypeRef<Integer>(){};
+        public ExampleResponse executeAs(Function<Response, Response> handler) {
+            TypeRef<ExampleResponse> type = new TypeRef<ExampleResponse>(){};
             return execute(handler).as(type);
         }
 

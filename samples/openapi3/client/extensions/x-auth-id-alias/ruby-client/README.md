@@ -78,6 +78,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [XAuthIDAlias::ExampleResponse](docs/ExampleResponse.md)
 
 
 ## Documentation for Authorization

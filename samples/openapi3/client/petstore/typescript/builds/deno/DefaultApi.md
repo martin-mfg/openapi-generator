@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieveSomething**
-> number retrieveSomething()
+> ExampleResponse retrieveSomething()
 
 get some object
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**number**
+**ExampleResponse**
 
 ### Authorization
 

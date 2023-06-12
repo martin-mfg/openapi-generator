@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.ExampleResponseDto;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -40,19 +41,28 @@ public interface ExampleApi {
         value = "",
         nickname = "retrieveSomething",
         notes = "get some object",
-        response = Integer.class
+        response = ExampleResponseDto.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "The response with results", response = Integer.class)
+        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponseDto.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "/" }
     )
-    default ResponseEntity<Integer> retrieveSomething(
+    default ResponseEntity<ExampleResponseDto> retrieveSomething(
         
     ) {
+        getRequest().ifPresent(request -> {
+            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {
+                    String exampleString = "Custom MIME type example not yet supported: /";
+                    ApiUtil.setExampleResponse(request, "/", exampleString);
+                    break;
+                }
+            }
+        });
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

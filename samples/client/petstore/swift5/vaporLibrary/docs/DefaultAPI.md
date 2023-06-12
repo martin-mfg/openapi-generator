@@ -45,8 +45,8 @@ This endpoint does not need any parameter.
 
 ```swift
 public enum RetrieveSomething {
-    case http200(value: Int?, raw: ClientResponse)
-    case http0(value: Int?, raw: ClientResponse)
+    case http200(value: ExampleResponse?, raw: ClientResponse)
+    case http0(value: ExampleResponse?, raw: ClientResponse)
 }
 ```
 

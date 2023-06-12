@@ -9,7 +9,9 @@ R/api_client.R
 R/api_exception.R
 R/api_response.R
 R/default_api.R
+R/example_response.R
 README.md
 docs/DefaultApi.md
+docs/ExampleResponse.md
 git_push.sh
 tests/testthat.R

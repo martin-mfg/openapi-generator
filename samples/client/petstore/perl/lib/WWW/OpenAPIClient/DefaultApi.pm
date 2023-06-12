@@ -59,10 +59,10 @@ sub new {
     __PACKAGE__->method_documentation->{ 'retrieve_something' } = {
         summary => '',
         params => $params,
-        returns => 'int',
+        returns => 'ExampleResponse',
         };
 }
-# @return int
+# @return ExampleResponse
 #
 sub retrieve_something {
     my ($self, %args) = @_;
@@ -93,7 +93,7 @@ sub retrieve_something {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('int', $response);
+    my $_response_object = $self->{api_client}->deserialize('ExampleResponse', $response);
     return $_response_object;
 }
 

@@ -69,6 +69,7 @@ Category | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [example_response_t](docs/example_response.md)
 
 
 ## Documentation for Authorization

@@ -16,6 +16,7 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
+local petstore_example_response = require "petstore.model.example_response"
 
 local default_api = {}
 local default_api_mt = {
@@ -77,7 +78,7 @@ function default_api:retrieve_something()
 		if result == nil then
 			return nil, err3
 		end
-		return result, headers
+		return petstore_example_response.cast(result), headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then

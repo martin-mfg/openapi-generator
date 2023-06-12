@@ -6,6 +6,7 @@ api/default.service.ts
 configuration.ts
 git_push.sh
 index.ts
+model/exampleResponse.ts
 model/models.ts
 package.json
 tsconfig.build.json

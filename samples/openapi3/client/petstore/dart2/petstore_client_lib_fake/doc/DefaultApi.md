@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **retrieveSomething**
-> int retrieveSomething()
+> ExampleResponse retrieveSomething()
 
 
 
@@ -38,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**int**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

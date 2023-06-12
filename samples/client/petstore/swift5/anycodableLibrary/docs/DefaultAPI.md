@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **retrieveSomething**
 ```swift
-    open class func retrieveSomething(completion: @escaping (_ data: Int?, _ error: Error?) -> Void)
+    open class func retrieveSomething(completion: @escaping (_ data: PrefixExampleResponseSuffix?, _ error: Error?) -> Void)
 ```
 
 
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Int**
+[**PrefixExampleResponseSuffix**](PrefixExampleResponseSuffix.md)
 
 ### Authorization
 

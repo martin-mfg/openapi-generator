@@ -24,6 +24,7 @@ import com.google.gson.JsonElement;
 import io.gsonfire.GsonFireBuilder;
 import io.gsonfire.TypeSelector;
 
+import org.openapitools.client.model.*;
 
 import java.io.IOException;
 import java.io.StringReader;

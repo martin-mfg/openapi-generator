@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.ExampleResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -29,7 +30,16 @@ public interface ExampleApiDelegate {
      * @return The response with results (status code 200)
      * @see ExampleApi#retrieveSomething
      */
-    default Integer retrieveSomething() {
+    default ExampleResponse retrieveSomething() {
+        getRequest().ifPresent(request -> {
+            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {
+                    String exampleString = "Custom MIME type example not yet supported: /";
+                    ApiUtil.setExampleResponse(request, "/", exampleString);
+                    break;
+                }
+            }
+        });
         throw new IllegalArgumentException("Not implemented");
 
     }

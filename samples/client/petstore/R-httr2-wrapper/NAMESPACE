@@ -16,6 +16,7 @@ export(ApiResponse)
 export(ApiException)
 
 # Models
+export(ExampleResponse)
 
 # APIs
 export(DefaultApi)

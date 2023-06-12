@@ -35,7 +35,7 @@ DefaultApi::~DefaultApi()
 {
 }
 
-pplx::task<int32_t> DefaultApi::retrieveSomething() const
+pplx::task<std::shared_ptr<ExampleResponse>> DefaultApi::retrieveSomething() const
 {
 
 
@@ -136,7 +136,7 @@ pplx::task<int32_t> DefaultApi::retrieveSomething() const
     })
     .then([=](utility::string_t localVarResponse)
     {
-        int32_t localVarResult(0);
+        std::shared_ptr<ExampleResponse> localVarResult(new ExampleResponse());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {

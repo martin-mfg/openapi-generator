@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.ExampleResponse;
 
 import play.mvc.Http;
 import java.util.List;
@@ -11,9 +12,9 @@ import play.libs.Files.TemporaryFile;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen")
 public class DefaultApiControllerImp extends DefaultApiControllerImpInterface {
     @Override
-    public Integer retrieveSomething(Http.Request request) throws Exception {
+    public ExampleResponse retrieveSomething(Http.Request request) throws Exception {
         //Do your magic!!!
-        return new Integer();
+        return new ExampleResponse();
     }
 
 }

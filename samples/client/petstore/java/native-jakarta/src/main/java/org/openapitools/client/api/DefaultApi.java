@@ -17,6 +17,7 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
+import org.openapitools.client.model.ExampleResponse;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -83,21 +84,21 @@ public class DefaultApi {
   /**
    * 
    * get some object
-   * @return Integer
+   * @return ExampleResponse
    * @throws ApiException if fails to make API call
    */
-  public Integer retrieveSomething() throws ApiException {
-    ApiResponse<Integer> localVarResponse = retrieveSomethingWithHttpInfo();
+  public ExampleResponse retrieveSomething() throws ApiException {
+    ApiResponse<ExampleResponse> localVarResponse = retrieveSomethingWithHttpInfo();
     return localVarResponse.getData();
   }
 
   /**
    * 
    * get some object
-   * @return ApiResponse&lt;Integer&gt;
+   * @return ApiResponse&lt;ExampleResponse&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<Integer> retrieveSomethingWithHttpInfo() throws ApiException {
+  public ApiResponse<ExampleResponse> retrieveSomethingWithHttpInfo() throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = retrieveSomethingRequestBuilder();
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -110,10 +111,10 @@ public class DefaultApi {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("retrieveSomething", localVarResponse);
         }
-        return new ApiResponse<Integer>(
+        return new ApiResponse<ExampleResponse>(
           localVarResponse.statusCode(),
           localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<Integer>() {}) // closes the InputStream
+          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<ExampleResponse>() {}) // closes the InputStream
         );
       } finally {
       }

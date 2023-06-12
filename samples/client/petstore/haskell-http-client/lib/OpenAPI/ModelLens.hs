@@ -35,3 +35,12 @@ import qualified Prelude as P
 import OpenAPI.Model
 import OpenAPI.Core
 
+
+-- * ExampleResponse
+
+-- | 'exampleResponseMyOnlyProperty' Lens
+exampleResponseMyOnlyPropertyL :: Lens_' ExampleResponse (Maybe [Bool])
+exampleResponseMyOnlyPropertyL f ExampleResponse{..} = (\exampleResponseMyOnlyProperty -> ExampleResponse { exampleResponseMyOnlyProperty, ..} ) <$> f exampleResponseMyOnlyProperty
+{-# INLINE exampleResponseMyOnlyPropertyL #-}
+
+

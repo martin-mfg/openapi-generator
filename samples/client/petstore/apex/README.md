@@ -46,7 +46,7 @@ OASDefaultApi api = new OASDefaultApi();
 
 try {
     // cross your fingers
-    Integer result = api.retrieveSomething();
+    OASExampleResponse result = api.retrieveSomething();
     System.debug(result);
 } catch (OAS.ApiException e) {
     // ...handle your exceptions
@@ -64,6 +64,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [OASExampleResponse](OASExampleResponse.md)
 
 
 ## Documentation for Authorization

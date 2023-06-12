@@ -1,5 +1,7 @@
 README.md
 docs/DefaultApi.md
+docs/ExampleResponse.md
 src/PetStoreClient.jl
 src/apis/api_DefaultApi.jl
 src/modelincludes.jl
+src/models/model_ExampleResponse.jl

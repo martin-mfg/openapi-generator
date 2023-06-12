@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## retrieveSomething
 
-> Number retrieveSomething()
+> ExampleResponse retrieveSomething()
 
 
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Number**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

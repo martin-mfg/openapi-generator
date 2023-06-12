@@ -4,6 +4,7 @@
 {-# OPTIONS_GHC -fno-warn-unused-binds -fno-warn-unused-imports #-}
 
 module API.Types (
+  ExampleResponse (..),
   ) where
 
 import ClassyPrelude.Yesod
@@ -16,6 +17,17 @@ import qualified Data.Text as T
 import qualified Data.Map as Map
 import GHC.Generics (Generic)
 import Data.Function ((&))
+
+
+-- | 
+data ExampleResponse = ExampleResponse
+  { exampleResponseMyOnlyProperty :: Maybe [Bool] -- ^ 
+  } deriving (Show, Eq, Generic)
+
+instance FromJSON ExampleResponse where
+  parseJSON = genericParseJSON (removeFieldLabelPrefix True "exampleResponse")
+instance ToJSON ExampleResponse where
+  toJSON = genericToJSON (removeFieldLabelPrefix False "exampleResponse")
 
 
 uncapitalize :: String -> String

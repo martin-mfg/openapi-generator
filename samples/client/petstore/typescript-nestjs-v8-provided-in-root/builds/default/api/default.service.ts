@@ -15,6 +15,7 @@ import { Inject, Injectable, Optional } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
 import { Observable } from 'rxjs';
+import { ExampleResponse } from '../model/exampleResponse';
 import { Configuration } from '../configuration';
 
 
@@ -45,7 +46,7 @@ export class DefaultService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public retrieveSomething(): Observable<AxiosResponse<number>>;
+    public retrieveSomething(): Observable<AxiosResponse<ExampleResponse>>;
     public retrieveSomething(): Observable<any> {
 
         let headers = {...this.defaultHeaders};
@@ -62,7 +63,7 @@ export class DefaultService {
         // to determine the Content-Type header
         const consumes: string[] = [
         ];
-        return this.httpClient.get<number>(`${this.basePath}/example/someMethod`,
+        return this.httpClient.get<ExampleResponse>(`${this.basePath}/example/someMethod`,
             {
                 withCredentials: this.configuration.withCredentials,
                 headers: headers

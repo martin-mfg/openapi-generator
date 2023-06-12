@@ -18,6 +18,8 @@ import { HttpClient, HttpHeaders, HttpParams,
 import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
+// @ts-ignore
+import { ExampleResponse } from '../model/exampleResponse';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -83,9 +85,9 @@ export class DefaultService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public retrieveSomething(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '/', context?: HttpContext}): Observable<number>;
-    public retrieveSomething(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '/', context?: HttpContext}): Observable<HttpResponse<number>>;
-    public retrieveSomething(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '/', context?: HttpContext}): Observable<HttpEvent<number>>;
+    public retrieveSomething(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '/', context?: HttpContext}): Observable<ExampleResponse>;
+    public retrieveSomething(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '/', context?: HttpContext}): Observable<HttpResponse<ExampleResponse>>;
+    public retrieveSomething(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '/', context?: HttpContext}): Observable<HttpEvent<ExampleResponse>>;
     public retrieveSomething(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '/', context?: HttpContext}): Observable<any> {
 
         let localVarHeaders = this.defaultHeaders;
@@ -120,7 +122,7 @@ export class DefaultService {
         }
 
         let localVarPath = `/example/someMethod`;
-        return this.httpClient.request<number>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<ExampleResponse>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 responseType: <any>responseType_,

@@ -4,6 +4,8 @@ client/Config.cmake.in
 client/PFXDefaultApi.cpp
 client/PFXDefaultApi.h
 client/PFXEnum.h
+client/PFXExampleResponse.cpp
+client/PFXExampleResponse.h
 client/PFXHelpers.cpp
 client/PFXHelpers.h
 client/PFXHttpFileElement.cpp

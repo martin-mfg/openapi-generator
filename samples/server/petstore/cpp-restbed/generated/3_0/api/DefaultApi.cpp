@@ -158,7 +158,7 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
     const auto request = session->get_request();
     
     int status_code = 500;
-    int32_t resultObject = 0;
+    ExampleResponse resultObject = ExampleResponse{};
     std::string result = "";
     
     try {
@@ -188,6 +188,7 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
             responseHeaders.insert(std::make_pair("Accept", acceptTypes));
         }
     
+        result = resultObject.toJsonString();
         returnResponse(session, 200, result.empty() ? "{}" : result, responseHeaders);
         return;
     }
@@ -195,7 +196,7 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
 }
 
 
-std::pair<int, int32_t> ExampleSomeMethodResource::handler_GET(
+std::pair<int, ExampleResponse> ExampleSomeMethodResource::handler_GET(
         )
 {
     return handler_GET_func();

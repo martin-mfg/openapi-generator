@@ -11,6 +11,7 @@
  */
 package org.openapitools.client.api
 
+import org.openapitools.client.model.ExampleResponse
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -26,11 +27,11 @@ class DefaultApi(baseUrl: String) {
    * get some object
    * 
    * Expected answers:
-   *   code 200 : Int (The response with results)
+   *   code 200 : ExampleResponse (The response with results)
    */
-  def retrieveSomething(): ApiRequest[Int] =
-    ApiRequest[Int](ApiMethods.GET, baseUrl, "/example/someMethod", "application/json")
-      .withSuccessResponse[Int](200)
+  def retrieveSomething(): ApiRequest[ExampleResponse] =
+    ApiRequest[ExampleResponse](ApiMethods.GET, baseUrl, "/example/someMethod", "application/json")
+      .withSuccessResponse[ExampleResponse](200)
       
 
 

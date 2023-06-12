@@ -27,6 +27,19 @@ import type { RequestArgs } from './base';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
+/**
+ * 
+ * @export
+ * @interface ExampleResponse
+ */
+export interface ExampleResponse {
+    /**
+     * 
+     * @type {Array<boolean>}
+     * @memberof ExampleResponse
+     */
+    'myOnlyProperty'?: Array<boolean>;
+}
 
 /**
  * DefaultApi - axios parameter creator
@@ -78,7 +91,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveSomething(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
+        async retrieveSomething(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExampleResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveSomething(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -97,7 +110,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveSomething(options?: any): AxiosPromise<number> {
+        retrieveSomething(options?: any): AxiosPromise<ExampleResponse> {
             return localVarFp.retrieveSomething(options).then((request) => request(axios, basePath));
         },
     };

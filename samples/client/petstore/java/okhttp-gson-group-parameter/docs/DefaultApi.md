@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 <a id="retrieveSomething"></a>
 # **retrieveSomething**
-> Integer retrieveSomething().execute();
+> ExampleResponse retrieveSomething().execute();
 
 
 
@@ -31,7 +31,7 @@ public class Example {
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     try {
-      Integer result = apiInstance.retrieveSomething()
+      ExampleResponse result = apiInstance.retrieveSomething()
             .execute();
       System.out.println(result);
     } catch (ApiException e) {
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Integer**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

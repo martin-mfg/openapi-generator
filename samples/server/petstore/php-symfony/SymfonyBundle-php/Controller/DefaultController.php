@@ -36,6 +36,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraints as Assert;
 use OpenAPI\Server\Api\DefaultApiInterface;
+use OpenAPI\Server\Model\ExampleResponse;
 
 /**
  * DefaultController Class Doc Comment

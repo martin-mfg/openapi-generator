@@ -13,13 +13,10 @@ syntax = "proto3";
 package petstore.services.defaultservice;
 
 import "google/protobuf/empty.proto";
+import public "models/example_response.proto";
 
 service DefaultService {
-  rpc RetrieveSomething (google.protobuf.Empty) returns (RetrieveSomethingResponse);
+  rpc RetrieveSomething (google.protobuf.Empty) returns (ExampleResponse);
 
-}
-
-message RetrieveSomethingResponse {
-  int32 data = 1;
 }
 

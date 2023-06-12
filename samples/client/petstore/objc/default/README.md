@@ -41,6 +41,7 @@ Import the following:
 #import <SwaggerClient/SWGApiClient.h>
 #import <SwaggerClient/SWGDefaultConfiguration.h>
 // load models
+#import <SwaggerClient/SWGExampleResponse.h>
 // load API classes for accessing endpoints
 #import <SwaggerClient/SWGDefaultApi.h>
 
@@ -61,7 +62,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 SWGDefaultApi *apiInstance = [[SWGDefaultApi alloc] init];
 
 [apiInstance retrieveSomethingWithCompletionHandler: 
-              ^(NSNumber* output, NSError* error) {
+              ^(SWGExampleResponse* output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -83,6 +84,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [SWGExampleResponse](docs/SWGExampleResponse.md)
 
 
 ## Documentation For Authorization

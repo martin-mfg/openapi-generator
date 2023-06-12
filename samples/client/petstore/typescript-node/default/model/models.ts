@@ -1,5 +1,6 @@
 import localVarRequest from 'request';
 
+export * from './exampleResponse';
 
 import * as fs from 'fs';
 
@@ -14,6 +15,7 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { ExampleResponse } from './exampleResponse';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -31,6 +33,7 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
+    "ExampleResponse": ExampleResponse,
 }
 
 export class ObjectSerializer {

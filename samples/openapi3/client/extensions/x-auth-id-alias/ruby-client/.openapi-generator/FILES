@@ -7,12 +7,14 @@ Gemfile
 README.md
 Rakefile
 docs/DefaultApi.md
+docs/ExampleResponse.md
 git_push.sh
 lib/x_auth_id_alias.rb
 lib/x_auth_id_alias/api/default_api.rb
 lib/x_auth_id_alias/api_client.rb
 lib/x_auth_id_alias/api_error.rb
 lib/x_auth_id_alias/configuration.rb
+lib/x_auth_id_alias/models/example_response.rb
 lib/x_auth_id_alias/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb

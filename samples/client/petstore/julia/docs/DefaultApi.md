@@ -8,8 +8,8 @@ Method | HTTP request | Description
 
 
 # **retrieve_something**
-> retrieve_something(_api::DefaultApi; _mediaType=nothing) -> Int64, OpenAPI.Clients.ApiResponse <br/>
-> retrieve_something(_api::DefaultApi, response_stream::Channel; _mediaType=nothing) -> Channel{ Int64 }, OpenAPI.Clients.ApiResponse
+> retrieve_something(_api::DefaultApi; _mediaType=nothing) -> ExampleResponse, OpenAPI.Clients.ApiResponse <br/>
+> retrieve_something(_api::DefaultApi, response_stream::Channel; _mediaType=nothing) -> Channel{ ExampleResponse }, OpenAPI.Clients.ApiResponse
 
 
 
@@ -20,7 +20,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Int64**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

@@ -4,6 +4,7 @@ pom.xml
 src/gen/java/org/openapitools/api/ExampleApi.java
 src/gen/java/org/openapitools/api/RestApplication.java
 src/gen/java/org/openapitools/api/RestResourceRoot.java
+src/gen/java/org/openapitools/model/ExampleResponse.java
 src/main/docker/Dockerfile.jvm
 src/main/docker/Dockerfile.native
 src/main/openapi/openapi.yaml

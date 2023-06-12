@@ -14,6 +14,7 @@
 package org.openapitools.client.api;
 
 import com.google.gson.reflect.TypeToken;
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -78,7 +79,7 @@ public class DefaultApi {
      * 
      * get some object
      *
-     * return Integer
+     * return ExampleResponse
      */
     public static class RetrieveSomethingOper implements Oper {
 
@@ -108,10 +109,10 @@ public class DefaultApi {
         /**
          * GET /example/someMethod
          * @param handler handler
-         * @return Integer
+         * @return ExampleResponse
          */
-        public Integer executeAs(Function<Response, Response> handler) {
-            Type type = new TypeToken<Integer>(){}.getType();
+        public ExampleResponse executeAs(Function<Response, Response> handler) {
+            Type type = new TypeToken<ExampleResponse>(){}.getType();
             return execute(handler).as(type);
         }
 

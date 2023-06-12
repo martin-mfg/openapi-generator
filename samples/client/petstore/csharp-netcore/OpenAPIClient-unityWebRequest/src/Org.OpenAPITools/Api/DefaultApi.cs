@@ -12,6 +12,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Api
 {
@@ -29,8 +30,8 @@ namespace Org.OpenAPITools.Api
         /// get some object
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>int</returns>
-        int RetrieveSomething();
+        /// <returns>ExampleResponse</returns>
+        ExampleResponse RetrieveSomething();
 
         /// <summary>
         /// 
@@ -39,8 +40,8 @@ namespace Org.OpenAPITools.Api
         /// get some object
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of int</returns>
-        ApiResponse<int> RetrieveSomethingWithHttpInfo();
+        /// <returns>ApiResponse of ExampleResponse</returns>
+        ApiResponse<ExampleResponse> RetrieveSomethingWithHttpInfo();
         #endregion Synchronous Operations
     }
 
@@ -58,8 +59,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of int</returns>
-        System.Threading.Tasks.Task<int> RetrieveSomethingAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ExampleResponse</returns>
+        System.Threading.Tasks.Task<ExampleResponse> RetrieveSomethingAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -69,8 +70,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (int)</returns>
-        System.Threading.Tasks.Task<ApiResponse<int>> RetrieveSomethingWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ExampleResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExampleResponse>> RetrieveSomethingWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -219,10 +220,10 @@ namespace Org.OpenAPITools.Api
         ///  get some object
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>int</returns>
-        public int RetrieveSomething()
+        /// <returns>ExampleResponse</returns>
+        public ExampleResponse RetrieveSomething()
         {
-            Org.OpenAPITools.Client.ApiResponse<int> localVarResponse = RetrieveSomethingWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<ExampleResponse> localVarResponse = RetrieveSomethingWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -230,8 +231,8 @@ namespace Org.OpenAPITools.Api
         ///  get some object
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of int</returns>
-        public Org.OpenAPITools.Client.ApiResponse<int> RetrieveSomethingWithHttpInfo()
+        /// <returns>ApiResponse of ExampleResponse</returns>
+        public Org.OpenAPITools.Client.ApiResponse<ExampleResponse> RetrieveSomethingWithHttpInfo()
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -252,7 +253,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<int>("/example/someMethod", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ExampleResponse>("/example/someMethod", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -268,14 +269,14 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of int</returns>
-        public async System.Threading.Tasks.Task<int> RetrieveSomethingAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ExampleResponse</returns>
+        public async System.Threading.Tasks.Task<ExampleResponse> RetrieveSomethingAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var task = RetrieveSomethingWithHttpInfoAsync(cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
-            Org.OpenAPITools.Client.ApiResponse<int> localVarResponse = await task.ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<ExampleResponse> localVarResponse = await task.ConfigureAwait(false);
 #else
-            Org.OpenAPITools.Client.ApiResponse<int> localVarResponse = await task;
+            Org.OpenAPITools.Client.ApiResponse<ExampleResponse> localVarResponse = await task;
 #endif
             return localVarResponse.Data;
         }
@@ -285,8 +286,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (int)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<int>> RetrieveSomethingWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ExampleResponse)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ExampleResponse>> RetrieveSomethingWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -310,7 +311,7 @@ namespace Org.OpenAPITools.Api
 
             // make the HTTP request
 
-            var task = this.AsynchronousClient.GetAsync<int>("/example/someMethod", localVarRequestOptions, this.Configuration, cancellationToken);
+            var task = this.AsynchronousClient.GetAsync<ExampleResponse>("/example/someMethod", localVarRequestOptions, this.Configuration, cancellationToken);
 
 #if UNITY_EDITOR || !UNITY_WEBGL
             var localVarResponse = await task.ConfigureAwait(false);

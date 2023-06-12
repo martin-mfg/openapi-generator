@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieve_something**
-> retrieve_something(req::HTTP.Request;) -> Int64
+> retrieve_something(req::HTTP.Request;) -> ExampleResponse
 
 
 
@@ -19,7 +19,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Int64**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

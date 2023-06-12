@@ -69,6 +69,34 @@ import qualified Prelude as P
 -- * Models
 
 
+-- ** ExampleResponse
+-- | ExampleResponse
+data ExampleResponse = ExampleResponse
+  { exampleResponseMyOnlyProperty :: !(Maybe [Bool]) -- ^ "myOnlyProperty"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON ExampleResponse
+instance A.FromJSON ExampleResponse where
+  parseJSON = A.withObject "ExampleResponse" $ \o ->
+    ExampleResponse
+      <$> (o .:? "myOnlyProperty")
+
+-- | ToJSON ExampleResponse
+instance A.ToJSON ExampleResponse where
+  toJSON ExampleResponse {..} =
+   _omitNulls
+      [ "myOnlyProperty" .= exampleResponseMyOnlyProperty
+      ]
+
+
+-- | Construct a value of type 'ExampleResponse' (by applying it's required fields, if any)
+mkExampleResponse
+  :: ExampleResponse
+mkExampleResponse =
+  ExampleResponse
+  { exampleResponseMyOnlyProperty = Nothing
+  }
+
 
 
 

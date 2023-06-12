@@ -11,7 +11,7 @@ Method | HTTP request | Description
 <a id="retrieveSomething"></a>
 # **retrieveSomething**
 ```java
-Mono<Integer> DefaultController.retrieveSomething()
+Mono<ExampleResponse> DefaultController.retrieveSomething()
 ```
 
 
@@ -20,7 +20,7 @@ get some object
 
 
 ### Return type
-`Integer`
+[**ExampleResponse**](../../docs/models/ExampleResponse.md)
 
 
 ### HTTP request headers

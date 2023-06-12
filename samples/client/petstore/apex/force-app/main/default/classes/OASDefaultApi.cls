@@ -28,14 +28,14 @@ public class OASDefaultApi {
     /**
      * 
      * get some object
-     * @return Integer
+     * @return OASExampleResponse
      * @throws OAS.ApiException if fails to make API call
      */
-    public Integer retrieveSomething() {
+    public OASExampleResponse retrieveSomething() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (Integer) client.invoke(
+        return (OASExampleResponse) client.invoke(
             'GET', '/example/someMethod', '',
             query, form,
             new Map<String, Object>(),
@@ -43,7 +43,7 @@ public class OASDefaultApi {
             new List<String>{ '/' },
             new List<String>(),
             new List<String>(),
-            Integer.class
+            OASExampleResponse.class
         );
     }
 }

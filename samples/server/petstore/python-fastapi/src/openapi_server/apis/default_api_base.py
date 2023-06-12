@@ -2,6 +2,7 @@
 
 from typing import ClassVar, Dict, List, Tuple  # noqa: F401
 
+from openapi_server.models.example_response import ExampleResponse
 
 
 class BaseDefaultApi:
@@ -12,6 +13,6 @@ class BaseDefaultApi:
         BaseDefaultApi.subclasses = BaseDefaultApi.subclasses + (cls,)
     def retrieve_something(
         self,
-    ) -> int:
+    ) -> ExampleResponse:
         """get some object"""
         ...

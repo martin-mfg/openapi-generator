@@ -31,7 +31,7 @@ namespace Org.OpenAPITools.Controllers
         [HttpGet]
         [Route("/example/someMethod")]
         [ValidateModelState]
-        [ProducesResponseType(statusCode: 200, type: typeof(int))]
+        [ProducesResponseType(statusCode: 200, type: typeof(ExampleResponse))]
         public abstract IActionResult RetrieveSomething();
     }
 }

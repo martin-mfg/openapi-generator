@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.ExampleResponse;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -51,7 +52,7 @@ public interface ExampleApi {
         description = "get some object",
         responses = {
             @ApiResponse(responseCode = "200", description = "The response with results", content = {
-                @Content(mediaType = "/", schema = @Schema(implementation = Integer.class))
+                @Content(mediaType = "/", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
     )
@@ -60,9 +61,18 @@ public interface ExampleApi {
         value = "/example/someMethod",
         produces = { "/" }
     )
-    default ResponseEntity<Integer> retrieveSomething(
+    default ResponseEntity<ExampleResponse> retrieveSomething(
         
     ) {
+        getRequest().ifPresent(request -> {
+            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {
+                    String exampleString = "Custom MIME type example not yet supported: /";
+                    ApiUtil.setExampleResponse(request, "/", exampleString);
+                    break;
+                }
+            }
+        });
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

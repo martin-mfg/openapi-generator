@@ -10,6 +10,7 @@ import {canConsumeForm, isCodeInRange} from '../util';
 import {SecurityAuthentication} from '../auth/auth';
 
 
+import { ExampleResponse } from '../models/ExampleResponse';
 
 /**
  * no description
@@ -50,22 +51,22 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to retrieveSomething
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async retrieveSomething(response: ResponseContext): Promise<number > {
+     public async retrieveSomething(response: ResponseContext): Promise<ExampleResponse > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
-            const body: number = ObjectSerializer.deserialize(
+            const body: ExampleResponse = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "number", ""
-            ) as number;
+                "ExampleResponse", ""
+            ) as ExampleResponse;
             return body;
         }
 
         // Work around for missing responses in specification, e.g. for petstore.yaml
         if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
-            const body: number = ObjectSerializer.deserialize(
+            const body: ExampleResponse = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "number", ""
-            ) as number;
+                "ExampleResponse", ""
+            ) as ExampleResponse;
             return body;
         }
 

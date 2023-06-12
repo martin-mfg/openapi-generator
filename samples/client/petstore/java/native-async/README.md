@@ -85,7 +85,7 @@ public class DefaultApiExample {
         // overriding the host and port, timeout, etc.
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<Integer> result = apiInstance.retrieveSomething();
+            CompletableFuture<ExampleResponse> result = apiInstance.retrieveSomething();
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -111,6 +111,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieve_something**
-> int retrieve_something()
+> ExampleResponse retrieve_something()
 
 
 
@@ -20,6 +20,7 @@ get some object
 import time
 import os
 import openapi_client
+from openapi_client.models.example_response import ExampleResponse
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -49,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**int**
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

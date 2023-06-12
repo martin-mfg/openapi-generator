@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="Invoke-PSRetrieveSomething"></a>
 # **Invoke-PSRetrieveSomething**
-> Int32 Invoke-PSRetrieveSomething<br>
+> ExampleResponse Invoke-PSRetrieveSomething<br>
 
 
 
@@ -31,7 +31,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Int32**
+[**ExampleResponse**](ExampleResponse.md) (PSCustomObject)
 
 ### Authorization
 

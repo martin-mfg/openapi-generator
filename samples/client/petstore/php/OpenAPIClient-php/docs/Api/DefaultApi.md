@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `retrieveSomething()`
 
 ```php
-retrieveSomething(): int
+retrieveSomething(): \OpenAPI\Client\Model\ExampleResponse
 ```
 
 
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**int**
+[**\OpenAPI\Client\Model\ExampleResponse**](../Model/ExampleResponse.md)
 
 ### Authorization
 

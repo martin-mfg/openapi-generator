@@ -2,6 +2,7 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -48,10 +49,10 @@ public class DefaultApi {
      * 
      * get some object
      * <p><b>200</b> - The response with results
-     * @return Integer
+     * @return ExampleResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Integer retrieveSomething() throws RestClientException {
+    public ExampleResponse retrieveSomething() throws RestClientException {
         return retrieveSomethingWithHttpInfo().getBody();
     }
 
@@ -59,10 +60,10 @@ public class DefaultApi {
      * 
      * get some object
      * <p><b>200</b> - The response with results
-     * @return ResponseEntity&lt;Integer&gt;
+     * @return ResponseEntity&lt;ExampleResponse&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Integer> retrieveSomethingWithHttpInfo() throws RestClientException {
+    public ResponseEntity<ExampleResponse> retrieveSomethingWithHttpInfo() throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -80,7 +81,7 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<Integer> localReturnType = new ParameterizedTypeReference<Integer>() {};
+        ParameterizedTypeReference<ExampleResponse> localReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
         return apiClient.invokeAPI("/example/someMethod", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

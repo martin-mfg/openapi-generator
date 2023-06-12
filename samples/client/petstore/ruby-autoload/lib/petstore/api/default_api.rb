@@ -21,7 +21,7 @@ module Petstore
     end
     # get some object
     # @param [Hash] opts the optional parameters
-    # @return [Integer]
+    # @return [ExampleResponse]
     def retrieve_something(opts = {})
       data, _status_code, _headers = retrieve_something_with_http_info(opts)
       data
@@ -29,7 +29,7 @@ module Petstore
 
     # get some object
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Integer, Integer, Hash)>] Integer data, response status code and response headers
+    # @return [Array<(ExampleResponse, Integer, Hash)>] ExampleResponse data, response status code and response headers
     def retrieve_something_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: DefaultApi.retrieve_something ...'
@@ -52,7 +52,7 @@ module Petstore
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Integer'
+      return_type = opts[:debug_return_type] || 'ExampleResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []

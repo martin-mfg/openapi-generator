@@ -7,6 +7,7 @@ src/main/java/org/openapitools/api/ExampleApi.java
 src/main/java/org/openapitools/api/ExampleApiController.java
 src/main/java/org/openapitools/configuration/HomeController.java
 src/main/java/org/openapitools/configuration/SpringFoxConfiguration.java
+src/main/java/org/openapitools/model/ExampleResponse.java
 src/main/resources/application.properties
 src/main/resources/openapi.yaml
 src/main/resources/static/swagger-ui.html

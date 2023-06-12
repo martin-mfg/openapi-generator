@@ -21,6 +21,8 @@ import globalAxios from 'axios';
 import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObject, setBearerAuthToObject, setOAuthToObject, setSearchParams, serializeDataIfNeeded, toPathString, createRequestFunction } from '../common';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
+// @ts-ignore
+import { ExampleResponse } from '../model';
 /**
  * DefaultApi - axios parameter creator
  * @export
@@ -71,7 +73,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveSomething(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>> {
+        async retrieveSomething(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExampleResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveSomething(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -90,7 +92,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveSomething(options?: any): AxiosPromise<number> {
+        retrieveSomething(options?: any): AxiosPromise<ExampleResponse> {
             return localVarFp.retrieveSomething(options).then((request) => request(axios, basePath));
         },
     };

@@ -77,6 +77,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 ## Documentation for Authorization

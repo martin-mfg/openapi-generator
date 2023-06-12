@@ -11,6 +11,7 @@ lib/App/RegisterMiddlewares.php
 lib/App/RegisterRoutes.php
 lib/App/ResponseEmitter.php
 lib/BaseModel.php
+lib/Model/ExampleResponse.php
 logs/.htaccess
 phpcs.xml.dist
 phpunit.xml.dist

@@ -2,6 +2,7 @@ import { ResponseContext, RequestContext, HttpFile } from '../http/http.ts';
 import { Configuration} from '../configuration.ts'
 import { Observable, of, from } from '../rxjsStub.ts';
 import {mergeMap, map} from  '../rxjsStub.ts';
+import { ExampleResponse } from '../models/ExampleResponse.ts';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi.ts";
 export class ObservableDefaultApi {
@@ -22,7 +23,7 @@ export class ObservableDefaultApi {
     /**
      * get some object
      */
-    public retrieveSomething(_options?: Configuration): Observable<number> {
+    public retrieveSomething(_options?: Configuration): Observable<ExampleResponse> {
         const requestContextPromise = this.requestFactory.retrieveSomething(_options);
 
         // build promise chain

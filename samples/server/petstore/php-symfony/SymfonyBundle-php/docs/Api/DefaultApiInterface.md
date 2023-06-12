@@ -19,7 +19,7 @@ services:
 ```
 
 ## **retrieveSomething**
-> int retrieveSomething()
+> OpenAPI\Server\Model\ExampleResponse retrieveSomething()
 
 
 
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**int**
+[**OpenAPI\Server\Model\ExampleResponse**](../Model/ExampleResponse.md)
 
 ### Authorization
 

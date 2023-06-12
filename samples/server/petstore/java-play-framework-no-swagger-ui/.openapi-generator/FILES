@@ -1,6 +1,7 @@
 LICENSE
 README
 app/Module.java
+app/apimodels/ExampleResponse.java
 app/controllers/DefaultApiController.java
 app/controllers/DefaultApiControllerImp.java
 app/controllers/DefaultApiControllerImpInterface.java

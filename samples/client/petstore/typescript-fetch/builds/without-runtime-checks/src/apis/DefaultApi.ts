@@ -14,6 +14,9 @@
 
 
 import * as runtime from '../runtime';
+import type {
+  ExampleResponse,
+} from '../models/index';
 
 /**
  * 
@@ -23,7 +26,7 @@ export class DefaultApi extends runtime.BaseAPI {
     /**
      * get some object
      */
-    async retrieveSomethingRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<number>> {
+    async retrieveSomethingRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ExampleResponse>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -35,17 +38,13 @@ export class DefaultApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        if (this.isJsonMime(response.headers.get('content-type'))) {
-            return new runtime.JSONApiResponse<number>(response);
-        } else {
-            return new runtime.TextApiResponse(response) as any;
-        }
+        return new runtime.JSONApiResponse(response);
     }
 
     /**
      * get some object
      */
-    async retrieveSomething(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<number> {
+    async retrieveSomething(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ExampleResponse> {
         const response = await this.retrieveSomethingRaw(initOverrides);
         return await response.value();
     }

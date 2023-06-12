@@ -124,6 +124,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [OpenapiJsClient.ExampleResponse](docs/ExampleResponse.md)
 
 
 ## Documentation for Authorization

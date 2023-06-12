@@ -18,14 +18,14 @@ module Petstore
       @api_client = api_client
     end
     # get some object
-    # @return [Int32]
+    # @return [ExampleResponse]
     def retrieve_something()
       data, _status_code, _headers = retrieve_something_with_http_info()
       data
     end
 
     # get some object
-    # @return [Array<(Int32, Integer, Hash)>] Int32 data, response status code and response headers
+    # @return [Array<(ExampleResponse, Integer, Hash)>] ExampleResponse data, response status code and response headers
     def retrieve_something_with_http_info()
       if @api_client.config.debugging
         Log.debug {"Calling API: DefaultApi.retrieve_something ..."}
@@ -48,7 +48,7 @@ module Petstore
       post_body = nil
 
       # return_type
-      return_type = "Int32"
+      return_type = "ExampleResponse"
 
       # auth_names
       auth_names = [] of String
@@ -65,7 +65,7 @@ module Petstore
       if @api_client.config.debugging
         Log.debug {"API called: DefaultApi#retrieve_something\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"}
       end
-      return Int32.from_json(data), status_code, headers
+      return ExampleResponse.from_json(data), status_code, headers
     end
   end
 end

@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "SWGExampleResponse.h"
 #import "SWGApi.h"
 
 /**
@@ -28,9 +29,9 @@ extern NSInteger kSWGDefaultApiMissingParamErrorCode;
 /// 
 ///  code:200 message:"The response with results"
 ///
-/// @return NSNumber*
+/// @return SWGExampleResponse*
 -(NSURLSessionTask*) retrieveSomethingWithCompletionHandler: 
-    (void (^)(NSNumber* output, NSError* error)) handler;
+    (void (^)(SWGExampleResponse* output, NSError* error)) handler;
 
 
 

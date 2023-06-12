@@ -7,6 +7,7 @@ import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.core.Completable
 import com.squareup.moshi.Json
 
+import org.openapitools.client.models.ExampleResponse
 
 interface DefaultApi {
     /**
@@ -15,9 +16,9 @@ interface DefaultApi {
      * Responses:
      *  - 200: The response with results
      *
-     * @return [Call]<[kotlin.Int]>
+     * @return [Call]<[ExampleResponse]>
      */
     @GET("example/someMethod")
-    fun retrieveSomething(): Single<kotlin.Int>
+    fun retrieveSomething(): Single<ExampleResponse>
 
 }

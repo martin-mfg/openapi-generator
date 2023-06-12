@@ -15,8 +15,17 @@ paths:
           content:
             /:
               schema:
-                type: integer
+                $ref: '#/components/schemas/ExampleResponse'
           description: The response with results
       x-openapi-router-controller: openapi_server.controllers.default_controller
 components:
-  schemas: {}
+  schemas:
+    ExampleResponse:
+      properties:
+        myOnlyProperty:
+          items:
+            type: boolean
+          title: myOnlyProperty
+          type: array
+      title: ExampleResponse
+      type: object

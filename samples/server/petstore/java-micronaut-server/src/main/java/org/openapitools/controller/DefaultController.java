@@ -18,6 +18,7 @@ import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.exceptions.HttpStatusException;
+import org.openapitools.model.ExampleResponse;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,19 +42,19 @@ public class DefaultController {
     /**
      * get some object
      *
-     * @return Integer
+     * @return ExampleResponse
      */
     @Operation(
         operationId = "retrieveSomething",
         responses = {
             @ApiResponse(responseCode = "200", description = "The response with results", content = {
-                @Content(mediaType = "/", schema = @Schema(implementation = Integer.class))
+                @Content(mediaType = "/", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
     )
     @Get(uri="/example/someMethod")
     @Produces(value = {"/"})
-    public Mono<Integer> retrieveSomething() {
+    public Mono<ExampleResponse> retrieveSomething() {
         // TODO implement retrieveSomething();
         return Mono.error(new HttpStatusException(HttpStatus.NOT_IMPLEMENTED, null));
     }

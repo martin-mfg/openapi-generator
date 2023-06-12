@@ -1,5 +1,6 @@
 LICENSE
 README
+app/apimodels/ExampleResponse.java
 app/controllers/ApiDocController.java
 app/controllers/DefaultApiController.java
 app/controllers/DefaultApiControllerImp.java

@@ -20,6 +20,7 @@ import org.openapitools.client.Configuration;
 import org.openapitools.client.model.*;
 import org.openapitools.client.Pair;
 
+import org.openapitools.client.model.ExampleResponse;
 
 
 import java.util.ArrayList;
@@ -50,10 +51,10 @@ public class DefaultApi {
   /**
    * 
    * get some object
-   * @return Integer
+   * @return ExampleResponse
    * @throws ApiException if fails to make API call
    */
-  public Integer retrieveSomething() throws ApiException {
+  public ExampleResponse retrieveSomething() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -82,7 +83,7 @@ public class DefaultApi {
 
     String[] localVarAuthNames = new String[] {  };
 
-    GenericType<Integer> localVarReturnType = new GenericType<Integer>() {};
+    GenericType<ExampleResponse> localVarReturnType = new GenericType<ExampleResponse>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 }

@@ -1,5 +1,5 @@
 --
--- Some example.
+-- .
 -- Prepared SQL queries for 'ExampleResponse' definition.
 --
 

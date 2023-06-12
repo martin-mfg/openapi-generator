@@ -2,4 +2,5 @@ README.md
 config.nim
 petstore.nim
 petstore/apis/api_default.nim
+petstore/models/model_example_response.nim
 sample_client.nim

@@ -36,4 +36,5 @@ All URIs are relative to http://localhosthttp://localhost
 ## What are the Model files for the data structures/objects?
 |Class | Description|
 |------------- | -------------|
+|*ExampleResponse* | |
 

@@ -31,6 +31,7 @@
 #include <corvusoft/restbed/service.hpp>
 #include <corvusoft/restbed/settings.hpp>
 
+#include "ExampleResponse.h"
 
 namespace org {
 namespace openapitools {
@@ -78,9 +79,9 @@ public:
     /////////////////////////////////////////////////////
     // Set these to implement the server functionality //
     /////////////////////////////////////////////////////
-    std::function<std::pair<int, int32_t>(
+    std::function<std::pair<int, ExampleResponse>(
         )> handler_GET_func =
-            []() -> std::pair<int, int32_t>
+            []() -> std::pair<int, ExampleResponse>
                 { throw DefaultApiException(501, "Not implemented"); };
 
 
@@ -90,7 +91,7 @@ protected:
     // override these to implement the server functionality //
     //////////////////////////////////////////////////////////
 
-    virtual std::pair<int, int32_t> handler_GET(
+    virtual std::pair<int, ExampleResponse> handler_GET(
         );
 
 

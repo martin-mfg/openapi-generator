@@ -249,8 +249,7 @@ void PFXDefaultApi::retrieveSomethingCallback(PFXHttpRequestWorker *worker) {
     if (worker->error_type != QNetworkReply::NoError) {
         error_str = QString("%1, %2").arg(worker->error_str, QString(worker->response));
     }
-    qint32 output;
-    ::test_namespace::fromStringValue(QString(worker->response), output);
+    PFXExampleResponse output(QString(worker->response));
     worker->deleteLater();
 
     if (worker->error_type == QNetworkReply::NoError) {

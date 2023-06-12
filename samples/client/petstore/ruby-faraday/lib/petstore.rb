@@ -17,6 +17,7 @@ require 'petstore/version'
 require 'petstore/configuration'
 
 # Models
+require 'petstore/models/example_response'
 
 # APIs
 require 'petstore/api/default_api'

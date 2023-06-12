@@ -5,4 +5,6 @@ README.md
 api/DefaultApi.cpp
 api/DefaultApi.h
 git_push.sh
+model/ExampleResponse.cpp
+model/ExampleResponse.h
 model/helpers.h

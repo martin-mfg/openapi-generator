@@ -60,6 +60,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [PSPetstore/Model.ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

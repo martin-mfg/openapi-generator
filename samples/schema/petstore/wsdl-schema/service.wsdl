@@ -4,10 +4,15 @@
     <xs:schema xmlns:tns="http://localhost/soap/ServiceV1/model" targetNamespace="http://localhost/soap/ServiceV1/model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="GetExampleSomemethod_RequestMessage" type="schemas:GetExampleSomemethod_RequestMessage" />
       <xs:element name="GetExampleSomemethod_ResponseMessage" type="schemas:GetExampleSomemethod_ResponseMessage" />
+      <xs:complexType name="ExampleResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="myOnlyProperty" type="schemas:boolean" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="GetExampleSomemethod_RequestMessage" />
       <xs:complexType name="GetExampleSomemethod_ResponseMessage">
         <xs:sequence>
-          <xs:element minOccurs="1" name="Integer" type="schemas:Integer">
+          <xs:element minOccurs="1" name="ExampleResponse" type="schemas:ExampleResponse">
             <xs:annotation>
               <xs:documentation>The response with results</xs:documentation>
             </xs:annotation>

@@ -38,7 +38,7 @@ More information can be found inside [Inversion of Control guide section](https:
 <a id="retrieveSomething"></a>
 # **retrieveSomething**
 ```java
-Mono<Integer> DefaultApi.retrieveSomething()
+Mono<ExampleResponse> DefaultApi.retrieveSomething()
 ```
 
 
@@ -48,7 +48,7 @@ get some object
 
 
 ### Return type
-`Integer`
+[**ExampleResponse**](ExampleResponse.md)
 
 
 

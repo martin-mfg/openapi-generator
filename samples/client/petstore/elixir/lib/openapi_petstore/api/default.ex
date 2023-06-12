@@ -19,10 +19,10 @@ defmodule OpenapiPetstore.Api.Default do
 
   ### Returns
 
-  - `{:ok, integer()}` on success
+  - `{:ok, OpenapiPetstore.Model.ExampleResponse.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec retrieve_something(Tesla.Env.client, keyword()) :: {:ok, Integer.t} | {:error, Tesla.Env.t}
+  @spec retrieve_something(Tesla.Env.client, keyword()) :: {:ok, OpenapiPetstore.Model.ExampleResponse.t} | {:error, Tesla.Env.t}
   def retrieve_something(connection, _opts \\ []) do
     request =
       %{}
@@ -33,7 +33,7 @@ defmodule OpenapiPetstore.Api.Default do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, %OpenapiPetstore.Model.ExampleResponse{}}
     ])
   end
 end

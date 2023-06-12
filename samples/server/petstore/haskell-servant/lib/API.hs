@@ -123,7 +123,7 @@ formatSeparatedQueryList char = T.intercalate (T.singleton char) . map toQueryPa
 
 -- | Servant type-level API, generated from the OpenAPI spec for .
 type API
-    =    "example" :> "someMethod" :> Verb 'GET 200 '[JSON] Int -- 'retrieveSomething' route
+    =    "example" :> "someMethod" :> Verb 'GET 200 '[JSON] ExampleResponse -- 'retrieveSomething' route
     :<|> Raw
 
 
@@ -144,7 +144,7 @@ newtype ClientError = ClientError ClientError
 -- is a backend that executes actions by sending HTTP requests (see @createClient@). Alternatively, provided
 -- a backend, the API can be served using @runMiddlewareServer@.
 data Backend m = Backend
-  { retrieveSomething :: m Int{- ^ get some object -}
+  { retrieveSomething :: m ExampleResponse{- ^ get some object -}
   }
 
 

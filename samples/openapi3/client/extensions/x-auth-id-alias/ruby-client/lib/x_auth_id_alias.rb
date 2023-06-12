@@ -17,6 +17,7 @@ require 'x_auth_id_alias/version'
 require 'x_auth_id_alias/configuration'
 
 # Models
+require 'x_auth_id_alias/models/example_response'
 
 # APIs
 require 'x_auth_id_alias/api/default_api'

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ```c
 // get some object
 //
-int* DefaultAPI_retrieveSomething(apiClient_t *apiClient);
+example_response_t* DefaultAPI_retrieveSomething(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -21,8 +21,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-int*
-
+[example_response_t](example_response.md) *
 
 
 ### Authorization

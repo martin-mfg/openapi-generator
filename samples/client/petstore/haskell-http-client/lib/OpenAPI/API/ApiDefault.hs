@@ -64,7 +64,7 @@ import qualified Prelude as P
 -- get some object
 -- 
 retrieveSomething
-  :: OpenAPIRequest RetrieveSomething MimeNoContent Int Mime
+  :: OpenAPIRequest RetrieveSomething MimeNoContent ExampleResponse Mime
 retrieveSomething =
   _mkRequest "GET" ["/example/someMethod"]
 

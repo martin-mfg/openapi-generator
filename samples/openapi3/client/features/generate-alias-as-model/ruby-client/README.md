@@ -78,6 +78,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [Petstore::ExampleResponse](docs/ExampleResponse.md)
 
 
 ## Documentation for Authorization

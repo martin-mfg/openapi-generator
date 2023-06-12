@@ -47,6 +47,7 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+ - [ExampleResponse](docs/ExampleResponse.md)
 
 
 

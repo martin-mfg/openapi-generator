@@ -1,5 +1,6 @@
 package org.openapitools.api
 
+import org.openapitools.model.ExampleResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -20,7 +21,15 @@ interface ExampleApiDelegate {
     /**
      * @see ExampleApi#retrieveSomething
      */
-    fun retrieveSomething(): ResponseEntity<kotlin.Int> {
+    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
+        getRequest().ifPresent { request ->
+            for (mediaType in MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {
+                    ApiUtil.setExampleResponse(request, "/", "Custom MIME type example not yet supported: /")
+                    break
+                }
+            }
+        }
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
 
     }

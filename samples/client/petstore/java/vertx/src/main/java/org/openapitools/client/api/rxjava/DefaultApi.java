@@ -1,5 +1,6 @@
 package org.openapitools.client.api.rxjava;
 
+import org.openapitools.client.model.ExampleResponse;
 import org.openapitools.client.ApiClient;
 
 import java.util.*;
@@ -26,7 +27,7 @@ public class DefaultApi {
     * get some object
     * @param resultHandler Asynchronous result handler
     */
-    public void retrieveSomething(Handler<AsyncResult<Integer>> resultHandler) {
+    public void retrieveSomething(Handler<AsyncResult<ExampleResponse>> resultHandler) {
         delegate.retrieveSomething(resultHandler);
     }
 
@@ -36,7 +37,7 @@ public class DefaultApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void retrieveSomething(ApiClient.AuthInfo authInfo, Handler<AsyncResult<Integer>> resultHandler) {
+    public void retrieveSomething(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
         delegate.retrieveSomething(authInfo, resultHandler);
     }
 
@@ -45,7 +46,7 @@ public class DefaultApi {
     * get some object
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Integer> rxRetrieveSomething() {
+    public Single<ExampleResponse> rxRetrieveSomething() {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.retrieveSomething(fut)
         ));
@@ -57,7 +58,7 @@ public class DefaultApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<Integer> rxRetrieveSomething(ApiClient.AuthInfo authInfo) {
+    public Single<ExampleResponse> rxRetrieveSomething(ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.retrieveSomething(authInfo, fut)
         ));

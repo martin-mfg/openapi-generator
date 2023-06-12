@@ -4,6 +4,7 @@ import org.openapitools.api.*;
 import org.openapitools.model.*;
 
 
+import org.openapitools.model.ExampleResponse;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;

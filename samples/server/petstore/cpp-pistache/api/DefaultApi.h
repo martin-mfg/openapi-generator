@@ -24,10 +24,11 @@
 #include <pistache/http.h>
 #include <pistache/router.h>
 #include <pistache/http_headers.h>
-#include <nlohmann/json.hpp>
+
 #include <optional>
 #include <utility>
 
+#include "ExampleResponse.h"
 
 namespace org::openapitools::server::api
 {

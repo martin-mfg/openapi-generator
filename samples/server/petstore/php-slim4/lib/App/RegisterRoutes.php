@@ -54,7 +54,7 @@ class RegisterRoutes
   "content" : {
     "/" : {
       "schema" : {
-        "type" : "integer"
+        "$ref" : "#/components/schemas/ExampleResponse"
       }
     }
   }

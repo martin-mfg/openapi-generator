@@ -157,5 +157,6 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+* OpenAPIServer\Model\ExampleResponse
 
 

@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 ## retrieveSomething
 
-> Integer retrieveSomething()
+> ExampleResponse retrieveSomething()
 
 
 
@@ -34,7 +34,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            Integer result = apiInstance.retrieveSomething();
+            ExampleResponse result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Integer**
+[**ExampleResponse**](ExampleResponse.md)
 
 
 ### Authorization
@@ -72,7 +72,7 @@ No authorization required
 
 ## retrieveSomethingWithHttpInfo
 
-> ApiResponse<Integer> retrieveSomething retrieveSomethingWithHttpInfo()
+> ApiResponse<ExampleResponse> retrieveSomething retrieveSomethingWithHttpInfo()
 
 
 
@@ -96,7 +96,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ApiResponse<Integer> response = apiInstance.retrieveSomethingWithHttpInfo();
+            ApiResponse<ExampleResponse> response = apiInstance.retrieveSomethingWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -117,7 +117,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiResponse<**Integer**>
+ApiResponse<[**ExampleResponse**](ExampleResponse.md)>
 
 
 ### Authorization

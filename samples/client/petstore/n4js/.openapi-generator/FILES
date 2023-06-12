@@ -1,3 +1,4 @@
 README.md
 api/ApiHelper.n4js
 api/DefaultApi.n4js
+model/ExampleResponse.n4jsd

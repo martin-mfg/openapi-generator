@@ -25,7 +25,14 @@ SwaggerClient/Core/SWGResponseDeserializer.h
 SwaggerClient/Core/SWGResponseDeserializer.m
 SwaggerClient/Core/SWGSanitizer.h
 SwaggerClient/Core/SWGSanitizer.m
+SwaggerClient/Model/SWGExampleResponse.h
+SwaggerClient/Model/SWGExampleResponse.m
+SwaggerClient/Model/SWGExampleResponseManagedObject.h
+SwaggerClient/Model/SWGExampleResponseManagedObject.m
+SwaggerClient/Model/SWGExampleResponseManagedObjectBuilder.h
+SwaggerClient/Model/SWGExampleResponseManagedObjectBuilder.m
 SwaggerClient/Model/SWGModel.xcdatamodeld/.xccurrentversion
 SwaggerClient/Model/SWGModel.xcdatamodeld/SWGModel.xcdatamodel/contents
 docs/SWGDefaultApi.md
+docs/SWGExampleResponse.md
 git_push.sh

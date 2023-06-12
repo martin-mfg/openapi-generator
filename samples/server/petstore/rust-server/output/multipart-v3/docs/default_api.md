@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieveSomething**
-> i32 retrieveSomething()
+> models::ExampleResponse retrieveSomething()
 
 
 get some object
@@ -18,7 +18,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**i32**](integer.md)
+[**models::ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 
