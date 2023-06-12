@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RetrieveSomething**](DefaultApi.md#RetrieveSomething) | **GET** /example/someMethod | 
+[**ExampleSomeMethodGet**](DefaultApi.md#ExampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
-# **RetrieveSomething**
-> ExampleResponse RetrieveSomething()
+# **ExampleSomeMethodGet**
+> ExampleResponse ExampleSomeMethodGet()
 
 
 
-get some object
+
 
 ### Example
 ```R
@@ -22,13 +22,13 @@ library(petstore)
 api_instance <- DefaultApi$new()
 result <- tryCatch(
              # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-             # api_instance$RetrieveSomething(data_file = "result.txt"),
-             api_instance$RetrieveSomething(),
+             # api_instance$ExampleSomeMethodGet(data_file = "result.txt"),
+             api_instance$ExampleSomeMethodGet(),
              ApiException = function(ex) ex
           )
 # In case of error, print the error object
 if (!is.null(result$ApiException)) {
-  print("Exception occurs when calling `RetrieveSomething`:")
+  print("Exception occurs when calling `ExampleSomeMethodGet`:")
   dput(result$ApiException$toString())
   # error object
   dput(result$ApiException$error_object$toJSONString())
@@ -59,5 +59,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The response with results |  -  |
+| **200** |  |  -  |
 

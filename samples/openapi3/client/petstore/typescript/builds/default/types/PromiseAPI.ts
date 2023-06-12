@@ -17,10 +17,10 @@ export class PromiseDefaultApi {
     }
 
     /**
-     * get some object
+     * 
      */
-    public retrieveSomething(_options?: Configuration): Promise<ExampleResponse> {
-        const result = this.api.retrieveSomething(_options);
+    public exampleSomeMethodGet(_options?: Configuration): Promise<ExampleResponse> {
+        const result = this.api.exampleSomeMethodGet(_options);
         return result.toPromise();
     }
 

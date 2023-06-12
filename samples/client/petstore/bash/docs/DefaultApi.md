@@ -4,20 +4,20 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
 
-## retrieveSomething
+## exampleSomeMethodGet
 
 
 
-get some object
+
 
 ### Example
 
 ```bash
-petstore-cli retrieveSomething
+petstore-cli exampleSomeMethodGet
 ```
 
 ### Parameters

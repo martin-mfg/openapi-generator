@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**retrieve_something**](DefaultApi.md#retrieve_something) | **GET** /example/someMethod |  |
+| [**example_some_method_get**](DefaultApi.md#example_some_method_get) | **GET** /example/someMethod |  |
 
 
-## retrieve_something
+## example_some_method_get
 
-> <ExampleResponse> retrieve_something
+> <ExampleResponse> example_some_method_get
 
 
 
-get some object
+
 
 ### Examples
 
@@ -25,28 +25,28 @@ api_instance = DynamicServers::DefaultApi.new
 
 begin
   
-  result = api_instance.retrieve_something
+  result = api_instance.example_some_method_get
   p result
 rescue DynamicServers::ApiError => e
-  puts "Error when calling DefaultApi->retrieve_something: #{e}"
+  puts "Error when calling DefaultApi->example_some_method_get: #{e}"
 end
 ```
 
-#### Using the retrieve_something_with_http_info variant
+#### Using the example_some_method_get_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ExampleResponse>, Integer, Hash)> retrieve_something_with_http_info
+> <Array(<ExampleResponse>, Integer, Hash)> example_some_method_get_with_http_info
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.retrieve_something_with_http_info
+  data, status_code, headers = api_instance.example_some_method_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ExampleResponse>
 rescue DynamicServers::ApiError => e
-  puts "Error when calling DefaultApi->retrieve_something_with_http_info: #{e}"
+  puts "Error when calling DefaultApi->example_some_method_get_with_http_info: #{e}"
 end
 ```
 

@@ -5,6 +5,9 @@ namespace App\DTO;
 
 use Articus\DataTransfer\PhpAttribute as DTA;
 
+/**
+ * 
+ */
 class ExampleResponse
 {
     #[DTA\Data(field: "myOnlyProperty", nullable: true)]

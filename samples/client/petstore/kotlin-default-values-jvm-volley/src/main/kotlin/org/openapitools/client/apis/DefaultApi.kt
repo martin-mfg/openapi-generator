@@ -35,10 +35,10 @@ class DefaultApi (
 
     /**
      * 
-     * get some object
+     * 
      * @return ExampleResponse
      */
-    suspend fun retrieveSomething(): ExampleResponse? {
+    suspend fun exampleSomeMethodGet(): ExampleResponse? {
         val body: Any? = null
 
         val contentTypes : Array<String> = arrayOf()

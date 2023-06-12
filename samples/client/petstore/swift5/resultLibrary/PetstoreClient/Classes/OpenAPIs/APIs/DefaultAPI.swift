@@ -18,8 +18,8 @@ open class DefaultAPI {
      - parameter completion: completion handler to receive the result
      */
     @discardableResult
-    open class func retrieveSomething(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ result: Swift.Result<ExampleResponse, ErrorResponse>) -> Void)) -> RequestTask {
-        return retrieveSomethingWithRequestBuilder().execute(apiResponseQueue) { result in
+    open class func exampleSomeMethodGet(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ result: Swift.Result<ExampleResponse, ErrorResponse>) -> Void)) -> RequestTask {
+        return exampleSomeMethodGetWithRequestBuilder().execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
                 completion(.success(response.body))
@@ -31,10 +31,10 @@ open class DefaultAPI {
 
     /**
      - GET /example/someMethod
-     - get some object
+     - 
      - returns: RequestBuilder<ExampleResponse> 
      */
-    open class func retrieveSomethingWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+    open class func exampleSomeMethodGetWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil

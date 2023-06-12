@@ -8,12 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.*;
 
+/**
+ * 
+ **/
 
 import io.swagger.annotations.*;
 import java.util.Objects;
 
 
-
+@ApiModel(description = "")
 public class ExampleResponse   {
   
   private List<Boolean> myOnlyProperty;

@@ -21,8 +21,8 @@ open class DefaultAPI {
      */
     #if canImport(Combine)
     @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-    open class func retrieveSomething() -> AnyPublisher<ExampleResponse, Error> {
-        let requestBuilder = retrieveSomethingWithRequestBuilder()
+    open class func exampleSomeMethodGet() -> AnyPublisher<ExampleResponse, Error> {
+        let requestBuilder = exampleSomeMethodGetWithRequestBuilder()
         let requestTask = requestBuilder.requestTask
         return Future<ExampleResponse, Error> { promise in
             requestBuilder.execute { result in
@@ -43,10 +43,10 @@ open class DefaultAPI {
 
     /**
      - GET /example/someMethod
-     - get some object
+     - 
      - returns: RequestBuilder<ExampleResponse> 
      */
-    open class func retrieveSomethingWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+    open class func exampleSomeMethodGetWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil

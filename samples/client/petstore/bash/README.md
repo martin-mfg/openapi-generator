@@ -103,7 +103,7 @@ All URIs are relative to **
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**retrieveSomething**](docs/DefaultApi.md#retrievesomething) | **GET** /example/someMethod | 
+*DefaultApi* | [**exampleSomeMethodGet**](docs/DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
 
 
 ## Documentation For Models

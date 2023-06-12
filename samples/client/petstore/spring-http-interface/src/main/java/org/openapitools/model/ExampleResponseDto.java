@@ -16,7 +16,7 @@ import java.util.*;
 import jakarta.annotation.Generated;
 
 /**
- * ExampleResponseDto
+ * 
  */
 
 @JsonTypeName("ExampleResponse")

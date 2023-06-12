@@ -18,9 +18,9 @@ open class DefaultAPI {
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - returns: Observable<ExampleResponse>
      */
-    open class func retrieveSomething(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue) -> Observable<ExampleResponse> {
+    open class func exampleSomeMethodGet(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue) -> Observable<ExampleResponse> {
         return Observable.create { observer -> Disposable in
-            let requestTask = retrieveSomethingWithRequestBuilder().execute(apiResponseQueue) { result in
+            let requestTask = exampleSomeMethodGetWithRequestBuilder().execute(apiResponseQueue) { result in
                 switch result {
                 case let .success(response):
                     observer.onNext(response.body)
@@ -38,10 +38,10 @@ open class DefaultAPI {
 
     /**
      - GET /example/someMethod
-     - get some object
+     - 
      - returns: RequestBuilder<ExampleResponse> 
      */
-    open class func retrieveSomethingWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+    open class func exampleSomeMethodGetWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil

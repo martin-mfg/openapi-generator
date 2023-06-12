@@ -2,8 +2,8 @@
 # Do not modify this file directly. Modify the OpenAPI specification instead.
 
 
-function retrieve_something_read(handler)
-    function retrieve_something_read_handler(req::HTTP.Request)
+function example_some_method_get_read(handler)
+    function example_some_method_get_read_handler(req::HTTP.Request)
         openapi_params = Dict{String,Any}()
         req.context[:openapi_params] = openapi_params
 
@@ -11,18 +11,18 @@ function retrieve_something_read(handler)
     end
 end
 
-function retrieve_something_validate(handler)
-    function retrieve_something_validate_handler(req::HTTP.Request)
+function example_some_method_get_validate(handler)
+    function example_some_method_get_validate_handler(req::HTTP.Request)
         openapi_params = req.context[:openapi_params]
         
         return handler(req)
     end
 end
 
-function retrieve_something_invoke(impl; post_invoke=nothing)
-    function retrieve_something_invoke_handler(req::HTTP.Request)
+function example_some_method_get_invoke(impl; post_invoke=nothing)
+    function example_some_method_get_invoke_handler(req::HTTP.Request)
         openapi_params = req.context[:openapi_params]
-        ret = impl.retrieve_something(req::HTTP.Request;)
+        ret = impl.example_some_method_get(req::HTTP.Request;)
         resp = OpenAPI.Servers.server_response(ret)
         return (post_invoke === nothing) ? resp : post_invoke(req, resp)
     end
@@ -30,6 +30,6 @@ end
 
 
 function registerDefaultApi(router::HTTP.Router, impl; path_prefix::String="", optional_middlewares...)
-    HTTP.register!(router, "GET", path_prefix * "/example/someMethod", OpenAPI.Servers.middleware(impl, retrieve_something_read, retrieve_something_validate, retrieve_something_invoke; optional_middlewares...))
+    HTTP.register!(router, "GET", path_prefix * "/example/someMethod", OpenAPI.Servers.middleware(impl, example_some_method_get_read, example_some_method_get_validate, example_some_method_get_invoke; optional_middlewares...))
     return router
 end

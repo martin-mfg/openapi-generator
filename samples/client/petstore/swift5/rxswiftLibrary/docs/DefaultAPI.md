@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultAPI.md#retrievesomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultAPI.md#examplesomemethodget) | **GET** /example/someMethod | 
 
 
-# **retrieveSomething**
+# **exampleSomeMethodGet**
 ```swift
-    open class func retrieveSomething() -> Observable<ExampleResponse>
+    open class func exampleSomeMethodGet() -> Observable<ExampleResponse>
 ```
 
 
 
-get some object
+
 
 ### Example
 ```swift

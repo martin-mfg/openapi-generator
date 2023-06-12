@@ -12,10 +12,10 @@
 }while(0)
 
 
-// get some object
+// 
 //
 example_response_t*
-DefaultAPI_retrieveSomething(apiClient_t *apiClient)
+DefaultAPI_exampleSomeMethodGet(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -44,7 +44,7 @@ DefaultAPI_retrieveSomething(apiClient_t *apiClient)
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","The response with results");
+    //    printf("%s\n","");
     //}
     //nonprimitive not container
     cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);

@@ -29,28 +29,28 @@ public interface ExampleApi {
 
     /**
      * GET /example/someMethod
-     * get some object
+     * 
      *
-     * @return The response with results (status code 200)
+     * @return  (status code 200)
      */
     @ApiOperation(
         value = "",
-        nickname = "retrieveSomething",
-        notes = "get some object",
+        nickname = "exampleSomeMethodGet",
+        notes = "",
         response = ExampleResponse.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "", response = ExampleResponse.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "/" }
     )
-    default ResponseEntity<ExampleResponse> retrieveSomething(
+    default ResponseEntity<ExampleResponse> exampleSomeMethodGet(
         
     ) {
-        return getDelegate().retrieveSomething();
+        return getDelegate().exampleSomeMethodGet();
     }
 
 }

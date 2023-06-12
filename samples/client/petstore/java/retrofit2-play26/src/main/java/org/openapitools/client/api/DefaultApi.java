@@ -22,11 +22,11 @@ import retrofit2.Response;
 public interface DefaultApi {
   /**
    * 
-   * get some object
+   * 
    * @return Call&lt;ExampleResponse&gt;
    */
   @GET("example/someMethod")
-  CompletionStage<Response<ExampleResponse>> retrieveSomething();
+  CompletionStage<Response<ExampleResponse>> exampleSomeMethodGet();
     
 
 }

@@ -40,15 +40,15 @@ public interface DefaultApi {
 
     /**
      * GET /example/someMethod
-     * get some object
+     * 
      *
-     * @return The response with results (status code 200)
+     * @return  (status code 200)
      */
     @Operation(
-        operationId = "retrieveSomething",
-        description = "get some object",
+        operationId = "exampleSomeMethodGet",
+        description = "",
         responses = {
-            @ApiResponse(responseCode = "200", description = "The response with results", content = {
+            @ApiResponse(responseCode = "200", description = "", content = {
                 @Content(mediaType = "/", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
@@ -58,7 +58,7 @@ public interface DefaultApi {
         value = "/example/someMethod",
         produces = "/"
     )
-    CompletableFuture<ResponseEntity<ExampleResponse>> retrieveSomething(
+    CompletableFuture<ResponseEntity<ExampleResponse>> exampleSomeMethodGet(
         
     );
 

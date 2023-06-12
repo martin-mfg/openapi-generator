@@ -36,8 +36,8 @@ public class DefaultApiController extends Controller {
     }
 
     
-    public Result retrieveSomething(Http.Request request) throws Exception {
-        return imp.retrieveSomethingHttp(request);
+    public Result exampleSomeMethodGet(Http.Request request) throws Exception {
+        return imp.exampleSomeMethodGetHttp(request);
     }
 
 }

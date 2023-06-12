@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
+| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
 
 
-<a id="retrieveSomething"></a>
-# **retrieveSomething**
-> ExampleResponse retrieveSomething().execute();
+<a id="exampleSomeMethodGet"></a>
+# **exampleSomeMethodGet**
+> ExampleResponse exampleSomeMethodGet().execute();
 
 
 
-get some object
+
 
 ### Example
 ```java
@@ -31,11 +31,11 @@ public class Example {
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     try {
-      ExampleResponse result = apiInstance.retrieveSomething()
+      ExampleResponse result = apiInstance.exampleSomeMethodGet()
             .execute();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DefaultApi#retrieveSomething");
+      System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -64,5 +64,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The response with results |  -  |
+| **200** |  |  -  |
 

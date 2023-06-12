@@ -2,6 +2,8 @@ package org.openapitools.server.model
 
 
 /**
+ * 
+ *
  * @param myOnlyProperty  for example: ''null''
 */
 final case class ExampleResponse (

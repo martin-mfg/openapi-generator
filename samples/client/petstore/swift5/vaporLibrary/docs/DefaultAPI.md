@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultAPI.md#retrievesomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultAPI.md#examplesomemethodget) | **GET** /example/someMethod | 
 
 
-# **retrieveSomething**
+# **exampleSomeMethodGet**
 ```swift
-    open class func retrieveSomething(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<RetrieveSomething>
+    open class func exampleSomeMethodGet(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<ExampleSomeMethodGet>
 ```
 
 
 
-get some object
+
 
 ### Example
 ```swift
@@ -22,7 +22,7 @@ get some object
 import PetstoreClient
 
 
-DefaultAPI.retrieveSomething().whenComplete { result in
+DefaultAPI.exampleSomeMethodGet().whenComplete { result in
     switch result {
     case .failure(let error):
     // process error
@@ -41,10 +41,10 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-#### RetrieveSomething
+#### ExampleSomeMethodGet
 
 ```swift
-public enum RetrieveSomething {
+public enum ExampleSomeMethodGet {
     case http200(value: ExampleResponse?, raw: ClientResponse)
     case http0(value: ExampleResponse?, raw: ClientResponse)
 }

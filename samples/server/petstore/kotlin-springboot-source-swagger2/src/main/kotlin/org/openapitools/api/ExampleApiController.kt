@@ -35,17 +35,17 @@ class ExampleApiController(@Autowired(required = true) val service: ExampleApiSe
 
     @Operation(
         summary = "",
-        operationId = "retrieveSomething",
-        description = """get some object""",
+        operationId = "exampleSomeMethodGet",
+        description = """""",
         responses = [
-            ApiResponse(responseCode = "200", description = "The response with results", content = [Content(schema = Schema(implementation = ExampleResponse::class))]) ]
+            ApiResponse(responseCode = "200", description = "", content = [Content(schema = Schema(implementation = ExampleResponse::class))]) ]
     )
     @RequestMapping(
         method = [RequestMethod.GET],
         value = ["/example/someMethod"],
         produces = ["/"]
     )
-    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
-        return ResponseEntity(service.retrieveSomething(), HttpStatus.valueOf(200))
+    fun exampleSomeMethodGet(): ResponseEntity<ExampleResponse> {
+        return ResponseEntity(service.exampleSomeMethodGet(), HttpStatus.valueOf(200))
     }
 }

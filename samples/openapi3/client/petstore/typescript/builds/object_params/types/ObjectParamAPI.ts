@@ -6,7 +6,7 @@ import { ExampleResponse } from '../models/ExampleResponse';
 import { ObservableDefaultApi } from "./ObservableAPI";
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
 
-export interface DefaultApiRetrieveSomethingRequest {
+export interface DefaultApiExampleSomeMethodGetRequest {
 }
 
 export class ObjectDefaultApi {
@@ -17,11 +17,11 @@ export class ObjectDefaultApi {
     }
 
     /**
-     * get some object
+     * 
      * @param param the request object
      */
-    public retrieveSomething(param: DefaultApiRetrieveSomethingRequest = {}, options?: Configuration): Promise<ExampleResponse> {
-        return this.api.retrieveSomething( options).toPromise();
+    public exampleSomeMethodGet(param: DefaultApiExampleSomeMethodGetRequest = {}, options?: Configuration): Promise<ExampleResponse> {
+        return this.api.exampleSomeMethodGet( options).toPromise();
     }
 
 }

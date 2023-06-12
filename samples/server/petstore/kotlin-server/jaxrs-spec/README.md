@@ -34,7 +34,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**retrieveSomething**](docs/DefaultApi.md#retrievesomething) | **GET** /example/someMethod | 
+*DefaultApi* | [**exampleSomeMethodGet**](docs/DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
 
 
 <a id="documentation-for-models"></a>

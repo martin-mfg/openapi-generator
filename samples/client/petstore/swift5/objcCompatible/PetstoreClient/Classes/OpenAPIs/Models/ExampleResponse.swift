@@ -10,6 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
+/**  */
 @objcMembers public class ExampleResponse: NSObject, Codable, JSONEncodable {
 
     public var myOnlyProperty: [Bool]?

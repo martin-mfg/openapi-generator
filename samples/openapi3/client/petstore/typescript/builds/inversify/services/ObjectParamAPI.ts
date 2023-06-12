@@ -7,9 +7,9 @@ import type { ExampleResponse } from '../models/ExampleResponse';
 
 export abstract class AbstractObjectDefaultApi {
     /**
-     * get some object
+     * 
      * @param param the request object
      */
-    public abstract retrieveSomething(param: req.DefaultApiRetrieveSomethingRequest, options?: Configuration): Promise<ExampleResponse>;
+    public abstract exampleSomeMethodGet(param: req.DefaultApiExampleSomeMethodGetRequest, options?: Configuration): Promise<ExampleResponse>;
 
 }

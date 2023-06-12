@@ -64,7 +64,7 @@ All URIs are relative to *http://localhost*
 
 Category | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultAPI* | [**DefaultAPI_retrieveSomething**](docs/DefaultAPI.md#DefaultAPI_retrieveSomething) | **GET** /example/someMethod | 
+*DefaultAPI* | [**DefaultAPI_exampleSomeMethodGet**](docs/DefaultAPI.md#DefaultAPI_exampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
 ## Documentation for Models

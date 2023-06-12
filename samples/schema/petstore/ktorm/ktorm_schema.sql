@@ -2,10 +2,11 @@
 
 -- --------------------------------------------------------------------------
 -- Table structure for table `ExampleResponse` generated from model 'exampleResponse'
+-- 
 --
 
 CREATE TABLE IF NOT EXISTS `ExampleResponse` (
-); 
+);  /**/
 
 -- --------------------------------------------------------------------------
 -- Table structure for table `ExampleResponseMyOnlyProperty` generated from model 'ExampleResponseMyOnlyProperty'

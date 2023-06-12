@@ -33,25 +33,25 @@ public interface ExampleApi {
 
     /**
      * GET /example/someMethod
-     * get some object
+     * 
      *
-     * @return The response with results (status code 200)
+     * @return  (status code 200)
      */
     @ApiOperation(
         value = "",
-        nickname = "retrieveSomething",
-        notes = "get some object",
+        nickname = "exampleSomeMethodGet",
+        notes = "",
         response = ExampleResponseDto.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponseDto.class)
+        @ApiResponse(code = 200, message = "", response = ExampleResponseDto.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "/" }
     )
-    default ResponseEntity<ExampleResponseDto> retrieveSomething(
+    default ResponseEntity<ExampleResponseDto> exampleSomeMethodGet(
         
     ) {
         getRequest().ifPresent(request -> {

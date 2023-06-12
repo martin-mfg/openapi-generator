@@ -36,7 +36,7 @@ const FRAGMENT_ENCODE_SET: &AsciiSet = &percent_encoding::CONTROLS
 const ID_ENCODE_SET: &AsciiSet = &FRAGMENT_ENCODE_SET.add(b'|');
 
 use crate::{Api,
-     RetrieveSomethingResponse
+     ExampleSomeMethodGetResponse
      };
 
 /// Convert input into a base path, e.g. "http://example:123". Also checks the scheme as it goes.
@@ -380,9 +380,9 @@ impl<S, C> Api<C> for Client<S, C> where
         }
     }
 
-    async fn retrieve_something(
+    async fn example_some_method_get(
         &self,
-        context: &C) -> Result<RetrieveSomethingResponse, ApiError>
+        context: &C) -> Result<ExampleSomeMethodGetResponse, ApiError>
     {
         let mut client_service = self.client_service.clone();
         let mut uri = format!(
@@ -431,7 +431,7 @@ impl<S, C> Api<C> for Client<S, C> where
                 let body = str::from_utf8(&body)
                     .map_err(|e| ApiError(format!("Response was not valid UTF8: {}", e)))?;
                 let body = body.to_string();
-                Ok(RetrieveSomethingResponse::TheResponseWithResults
+                Ok(ExampleSomeMethodGetResponse::Status200
                     (body)
                 )
             }

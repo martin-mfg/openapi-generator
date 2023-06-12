@@ -15,10 +15,10 @@ open class DefaultAPI {
 
     /**
      GET /example/someMethod
-     get some object
+     
      - returns: `EventLoopFuture` of `ClientResponse` 
      */
-    open class func retrieveSomethingRaw(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<ClientResponse> {
+    open class func exampleSomeMethodGetRaw(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<ClientResponse> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
 
@@ -35,18 +35,18 @@ open class DefaultAPI {
         }
     }
 
-    public enum RetrieveSomething {
+    public enum ExampleSomeMethodGet {
         case http200(value: ExampleResponse, raw: ClientResponse)
         case http0(raw: ClientResponse)
     }
 
     /**
      GET /example/someMethod
-     get some object
-     - returns: `EventLoopFuture` of `RetrieveSomething` 
+     
+     - returns: `EventLoopFuture` of `ExampleSomeMethodGet` 
      */
-    open class func retrieveSomething(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<RetrieveSomething> {
-        return retrieveSomethingRaw(headers: headers, beforeSend: beforeSend).flatMapThrowing { response -> RetrieveSomething in
+    open class func exampleSomeMethodGet(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<ExampleSomeMethodGet> {
+        return exampleSomeMethodGetRaw(headers: headers, beforeSend: beforeSend).flatMapThrowing { response -> ExampleSomeMethodGet in
             switch response.status.code {
             case 200:
                 return .http200(value: try response.content.decode(ExampleResponse.self, using: Configuration.contentConfiguration.requireDecoder(for: ExampleResponse.defaultContentType)), raw: response)

@@ -6,6 +6,6 @@ import { ExampleResponse } from "../models/ExampleResponse";
 
 
 export abstract class AbstractObservableDefaultApi {
-    public abstract retrieveSomething(options?: Configuration): Observable<ExampleResponse>;
+    public abstract exampleSomeMethodGet(options?: Configuration): Observable<ExampleResponse>;
 
 }

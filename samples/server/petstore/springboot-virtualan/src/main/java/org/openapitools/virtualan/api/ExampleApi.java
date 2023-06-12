@@ -46,16 +46,16 @@ public interface ExampleApi {
 
     /**
      * GET /example/someMethod
-     * get some object
+     * 
      *
-     * @return The response with results (status code 200)
+     * @return  (status code 200)
      */
     @ApiVirtual
     @Operation(
-        operationId = "retrieveSomething",
-        description = "get some object",
+        operationId = "exampleSomeMethodGet",
+        description = "",
         responses = {
-            @ApiResponse(responseCode = "200", description = "The response with results", content = {
+            @ApiResponse(responseCode = "200", description = "", content = {
                 @Content(mediaType = "/", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
@@ -65,7 +65,7 @@ public interface ExampleApi {
         value = "/example/someMethod",
         produces = { "/" }
     )
-    default ResponseEntity<ExampleResponse> retrieveSomething(
+    default ResponseEntity<ExampleResponse> exampleSomeMethodGet(
         
     ) {
         getRequest().ifPresent(request -> {

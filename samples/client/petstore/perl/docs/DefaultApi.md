@@ -9,15 +9,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieve_something**](DefaultApi.md#retrieve_something) | **GET** /example/someMethod | 
+[**example_some_method_get**](DefaultApi.md#example_some_method_get) | **GET** /example/someMethod | 
 
 
-# **retrieve_something**
-> ExampleResponse retrieve_something()
+# **example_some_method_get**
+> ExampleResponse example_some_method_get()
 
 
 
-get some object
+
 
 ### Example
 ```perl
@@ -28,11 +28,11 @@ my $api_instance = WWW::OpenAPIClient::DefaultApi->new(
 
 
 eval {
-    my $result = $api_instance->retrieve_something();
+    my $result = $api_instance->example_some_method_get();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DefaultApi->retrieve_something: $@\n";
+    warn "Exception when calling DefaultApi->example_some_method_get: $@\n";
 }
 ```
 

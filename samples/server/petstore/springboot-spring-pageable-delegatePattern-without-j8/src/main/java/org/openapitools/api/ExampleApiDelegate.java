@@ -26,12 +26,12 @@ public interface ExampleApiDelegate {
 
     /**
      * GET /example/someMethod
-     * get some object
+     * 
      *
-     * @return The response with results (status code 200)
-     * @see ExampleApi#retrieveSomething
+     * @return  (status code 200)
+     * @see ExampleApi#exampleSomeMethodGet
      */
-    default ResponseEntity<ExampleResponse> retrieveSomething() {
+    default ResponseEntity<ExampleResponse> exampleSomeMethodGet() {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {

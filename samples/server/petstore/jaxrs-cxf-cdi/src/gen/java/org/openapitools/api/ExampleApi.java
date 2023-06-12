@@ -39,10 +39,10 @@ public class ExampleApi  {
     
     
     @Produces({ "/" })
-    @ApiOperation(value = "", notes = "get some object", response = ExampleResponse.class, tags={  })
+    @ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class) })
-    public Response retrieveSomething() {
-        return delegate.retrieveSomething(securityContext);
+        @ApiResponse(code = 200, message = "", response = ExampleResponse.class) })
+    public Response exampleSomeMethodGet() {
+        return delegate.exampleSomeMethodGet(securityContext);
     }
 }

@@ -58,12 +58,12 @@ cleanup() -> ok.
 initial_state() -> #{}.
 
 %%==============================================================================
-%% retrieve_something
+%% example_some_method_get
 %%==============================================================================
 
-retrieve_something() ->
-  petstore_api:retrieve_something().
+example_some_method_get() ->
+  petstore_api:example_some_method_get().
 
-retrieve_something_args(_S) ->
+example_some_method_get_args(_S) ->
   [].
 

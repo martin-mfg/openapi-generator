@@ -47,7 +47,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
     /**
      * 
-     * get some object
+     * 
      * @return ExampleResponse or null
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -57,8 +57,8 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun retrieveSomething() : ExampleResponse? {
-        val localVarResponse = retrieveSomethingWithHttpInfo()
+    fun exampleSomeMethodGet() : ExampleResponse? {
+        val localVarResponse = exampleSomeMethodGetWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as ExampleResponse?
@@ -77,15 +77,15 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
     /**
      * 
-     * get some object
+     * 
      * @return ApiResponse<ExampleResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun retrieveSomethingWithHttpInfo() : ApiResponse<ExampleResponse?> {
-        val localVariableConfig = retrieveSomethingRequestConfig()
+    fun exampleSomeMethodGetWithHttpInfo() : ApiResponse<ExampleResponse?> {
+        val localVariableConfig = exampleSomeMethodGetRequestConfig()
 
         return request<Unit, ExampleResponse>(
             localVariableConfig
@@ -93,11 +93,11 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     }
 
     /**
-     * To obtain the request config of the operation retrieveSomething
+     * To obtain the request config of the operation exampleSomeMethodGet
      *
      * @return RequestConfig
      */
-    fun retrieveSomethingRequestConfig() : RequestConfig<Unit> {
+    fun exampleSomeMethodGetRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

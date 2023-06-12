@@ -1,14 +1,14 @@
 #tag Class
 Protected Class DefaultApi
 	#tag Method, Flags = &h0
-		Sub RetrieveSomething()
-		  // Operation retrieveSomething
+		Sub ExampleSomeMethodGet()
+		  // Operation 
 		  // - 
 		  //
-		  // Invokes DefaultApiCallbackHandler.RetrieveSomethingCallback(ExampleResponse) on completion. 
+		  // Invokes DefaultApiCallbackHandler.ExampleSomeMethodGetCallback(ExampleResponse) on completion. 
 		  //
 		  // - GET /example/someMethod
-		  // - get some object
+		  // - 
 		  // - defaultResponse: Nil
 		  //
 		  //
@@ -24,8 +24,8 @@ Protected Class DefaultApi
 		  
 		  
 		  
-		  AddHandler localVarHTTPSocket.PageReceived, addressof me.RetrieveSomething_handler
-		  AddHandler localVarHTTPSocket.Error, addressof Me.RetrieveSomething_error
+		  AddHandler localVarHTTPSocket.PageReceived, addressof me.ExampleSomeMethodGet_handler
+		  AddHandler localVarHTTPSocket.Error, addressof Me.ExampleSomeMethodGet_error
 		  
 		  
 		  localVarHTTPSocket.SendRequest("GET", Me.BasePath + localVarPath)
@@ -38,7 +38,7 @@ Protected Class DefaultApi
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function RetrieveSomethingPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As OpenAPIClient.OpenAPIClientException, Content As String, ByRef outData As OpenAPIClient.Models.ExampleResponse) As Boolean
+		Private Function ExampleSomeMethodGetPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As OpenAPIClient.OpenAPIClientException, Content As String, ByRef outData As OpenAPIClient.Models.ExampleResponse) As Boolean
 		  Dim contentType As String = Headers.Value("Content-Type")
 		  Dim contentEncoding As TextEncoding = OpenAPIClient.EncodingFromContentType(contentType)
 		  Content = DefineEncoding(Content, contentEncoding)
@@ -95,17 +95,17 @@ Protected Class DefaultApi
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Sub RetrieveSomething_error(sender As HTTPSecureSocket, Code As Integer)
+		Private Sub ExampleSomeMethodGet_error(sender As HTTPSecureSocket, Code As Integer)
 		  If sender <> nil Then sender.Close()
 
 		  Dim error As New OpenAPIClient.OpenAPIClientException(Code)
 		  Dim data As OpenAPIClient.Models.ExampleResponse
-		  CallbackHandler.RetrieveSomethingCallback(error, data)
+		  CallbackHandler.ExampleSomeMethodGetCallback(error, data)
 		End Sub
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Sub RetrieveSomething_handler(sender As HTTPSecureSocket, URL As String, HTTPStatus As Integer, Headers As InternetHeaders, Content As String)
+		Private Sub ExampleSomeMethodGet_handler(sender As HTTPSecureSocket, URL As String, HTTPStatus As Integer, Headers As InternetHeaders, Content As String)
 		  #Pragma Unused URL
 		  
 
@@ -114,9 +114,9 @@ Protected Class DefaultApi
 		  Dim error As New OpenAPIClient.OpenAPIClientException(HTTPStatus, "", Content)
 		  
 		  Dim data As OpenAPIClient.Models.ExampleResponse
-		  Call RetrieveSomethingPrivateFuncDeserializeResponse(HTTPStatus, Headers, error, Content, data)
+		  Call ExampleSomeMethodGetPrivateFuncDeserializeResponse(HTTPStatus, Headers, error, Content, data)
 		  
-		  CallbackHandler.RetrieveSomethingCallback(error, data)
+		  CallbackHandler.ExampleSomeMethodGetCallback(error, data)
 		End Sub
 	#tag EndMethod
 

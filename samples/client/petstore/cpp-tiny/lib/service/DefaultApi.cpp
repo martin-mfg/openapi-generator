@@ -8,7 +8,7 @@ using namespace Tiny;
             ExampleResponse
         >
         DefaultApi::
-        retrieveSomething(
+        exampleSomeMethodGet(
         )
         {
             std::string url = basepath + "/example/someMethod"; //

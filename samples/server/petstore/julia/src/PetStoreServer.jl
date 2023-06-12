@@ -7,9 +7,9 @@ Encapsulates generated server code for PetStoreServer
 
 The following server methods must be implemented:
 
-- **retrieve_something**
+- **example_some_method_get**
     - *invocation:* GET /example/someMethod
-    - *signature:* retrieve_something(req::HTTP.Request;) -> ExampleResponse
+    - *signature:* example_some_method_get(req::HTTP.Request;) -> ExampleResponse
 """
 module PetStoreServer
 

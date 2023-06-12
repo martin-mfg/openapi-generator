@@ -38,8 +38,8 @@ public class DefaultApiController extends Controller {
     }
 
     @ApiAction
-    public Result retrieveSomething(Http.Request request)  {
-        return imp.retrieveSomethingHttp(request);
+    public Result exampleSomeMethodGet(Http.Request request)  {
+        return imp.exampleSomeMethodGetHttp(request);
     }
 
 }

@@ -47,23 +47,23 @@ public class DefaultApi {
 
     /**
      * 
-     * get some object
-     * <p><b>200</b> - The response with results
+     * 
+     * <p><b>200</b> - 
      * @return ExampleResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ExampleResponse retrieveSomething() throws RestClientException {
-        return retrieveSomethingWithHttpInfo().getBody();
+    public ExampleResponse exampleSomeMethodGet() throws RestClientException {
+        return exampleSomeMethodGetWithHttpInfo().getBody();
     }
 
     /**
      * 
-     * get some object
-     * <p><b>200</b> - The response with results
+     * 
+     * <p><b>200</b> - 
      * @return ResponseEntity&lt;ExampleResponse&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ExampleResponse> retrieveSomethingWithHttpInfo() throws RestClientException {
+    public ResponseEntity<ExampleResponse> exampleSomeMethodGetWithHttpInfo() throws RestClientException {
         Object localVarPostBody = null;
         
 

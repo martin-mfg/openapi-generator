@@ -4,18 +4,18 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**retrieveSomething()**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
+| [**exampleSomeMethodGet()**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
 
 
-## `retrieveSomething()`
+## `exampleSomeMethodGet()`
 
 ```php
-retrieveSomething(): \OpenAPI\Client\Model\ExampleResponse
+exampleSomeMethodGet(): \OpenAPI\Client\Model\ExampleResponse
 ```
 
 
 
-get some object
+
 
 ### Example
 
@@ -32,10 +32,10 @@ $apiInstance = new OpenAPI\Client\Api\DefaultApi(
 );
 
 try {
-    $result = $apiInstance->retrieveSomething();
+    $result = $apiInstance->exampleSomeMethodGet();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->retrieveSomething: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->exampleSomeMethodGet: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

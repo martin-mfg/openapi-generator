@@ -25,7 +25,7 @@ class ExampleSomeMethod
      *
      * @return \App\DTO\ExampleResponse
      */
-    public function retrieveSomething(ServerRequestInterface $request): \App\DTO\ExampleResponse
+    public function exampleSomeMethodGet(ServerRequestInterface $request): \App\DTO\ExampleResponse
     {
         //TODO implement method
         throw new PHException\HttpCode(501, "Not implemented");

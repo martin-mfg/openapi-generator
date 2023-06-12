@@ -10,6 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
+/**  */
 internal struct ExampleResponse: Codable, JSONEncodable, Hashable {
 
     internal var myOnlyProperty: [Bool]?

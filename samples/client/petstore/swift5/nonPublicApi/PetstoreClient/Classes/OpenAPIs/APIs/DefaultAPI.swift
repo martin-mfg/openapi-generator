@@ -18,8 +18,8 @@ internal class DefaultAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    internal class func retrieveSomething(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ data: ExampleResponse?, _ error: Error?) -> Void)) -> RequestTask {
-        return retrieveSomethingWithRequestBuilder().execute(apiResponseQueue) { result in
+    internal class func exampleSomeMethodGet(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ data: ExampleResponse?, _ error: Error?) -> Void)) -> RequestTask {
+        return exampleSomeMethodGetWithRequestBuilder().execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
                 completion(response.body, nil)
@@ -31,10 +31,10 @@ internal class DefaultAPI {
 
     /**
      - GET /example/someMethod
-     - get some object
+     - 
      - returns: RequestBuilder<ExampleResponse> 
      */
-    internal class func retrieveSomethingWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+    internal class func exampleSomeMethodGetWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil

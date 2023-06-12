@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** example/someMethod | 
+[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** example/someMethod | 
 
 
 
 
 
-get some object
+
 
 ### Example
 ```kotlin
@@ -22,7 +22,7 @@ get some object
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DefaultApi::class.java)
 
-val result : ExampleResponse = webService.retrieveSomething()
+val result : ExampleResponse = webService.exampleSomeMethodGet()
 ```
 
 ### Parameters

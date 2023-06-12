@@ -15,8 +15,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
-
-
+/**
+ * 
+ **/
+@ApiModel(description = "")
 @org.eclipse.microprofile.openapi.annotations.media.Schema(description="")
 @JsonTypeName("ExampleResponse")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")

@@ -7,7 +7,7 @@ import java.util.Set;
 import javax.validation.*;
 import java.util.Objects;
 /**
- * ExampleResponse
+ * 
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen")
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})

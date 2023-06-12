@@ -29,12 +29,12 @@ public class ExampleApi extends RouteBuilder {
         rest()
             .get("/example/someMethod")
                 .description("")
-                .id("retrieveSomethingApi")
+                .id("exampleSomeMethodGetApi")
                 .clientRequestValidation(false)
                 .bindingMode(RestBindingMode.off)
                 .produces("/")
                 .outType(ExampleResponse.class)
-                .to("direct:validate-retrieveSomething");
+                .to("direct:validate-exampleSomeMethodGet");
         
     }
 }

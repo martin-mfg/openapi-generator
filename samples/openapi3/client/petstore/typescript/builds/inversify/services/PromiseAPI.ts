@@ -5,6 +5,6 @@ import { ExampleResponse } from "../models/ExampleResponse";
 
 
 export abstract class AbstractPromiseDefaultApi {
-    public abstract retrieveSomething(options?: Configuration): Promise<ExampleResponse>;
+    public abstract exampleSomeMethodGet(options?: Configuration): Promise<ExampleResponse>;
 
 }

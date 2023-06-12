@@ -11,7 +11,7 @@ import java.util.List;
 import javax.validation.constraints.*;
 import io.swagger.annotations.*;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen")
+@ApiModel(description="")@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen")
 public class ExampleResponse   {
   
   private List<Boolean> myOnlyProperty;

@@ -1,15 +1,14 @@
 -module(petstore_api).
 
--export([ retrieve_something/0
+-export([ example_some_method_get/0
         ]).
 
 -define(BASE_URL, "").
 
 %% @doc 
-%% get some object
--spec retrieve_something() ->
+-spec example_some_method_get() ->
   petstore_utils:response().
-retrieve_something() ->
+example_some_method_get() ->
   Method      = get,
   Host        = application:get_env(petstore, host, "http://localhost:8080"),
   Path        = ["/example/someMethod"],

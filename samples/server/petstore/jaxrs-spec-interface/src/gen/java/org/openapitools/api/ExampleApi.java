@@ -20,8 +20,8 @@ public interface ExampleApi {
 
     @GET
     @Produces({ "/" })
-    @ApiOperation(value = "", notes = "get some object", tags={  })
+    @ApiOperation(value = "", notes = "", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class) })
-    ExampleResponse retrieveSomething();
+        @ApiResponse(code = 200, message = "", response = ExampleResponse.class) })
+    ExampleResponse exampleSomeMethodGet();
 }

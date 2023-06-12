@@ -296,7 +296,7 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "retrieveSomething[]" \
+            "exampleSomeMethodGet[]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -304,7 +304,7 @@ case $state in
     ;;
   args)
     case $line[1] in
-      retrieveSomething)
+      exampleSomeMethodGet)
         local -a _op_arguments
         _op_arguments=(
                               )

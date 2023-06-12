@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
 
-## retrieveSomething
+## exampleSomeMethodGet
 
-> ExampleResponse retrieveSomething()
+> ExampleResponse exampleSomeMethodGet()
 
 
 
-get some object
+
 
 ### Example
 
@@ -22,7 +22,7 @@ get some object
 import OpenapiJsClient from 'openapi-js-client';
 
 let apiInstance = new OpenapiJsClient.DefaultApi();
-apiInstance.retrieveSomething().then((data) => {
+apiInstance.exampleSomeMethodGet().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

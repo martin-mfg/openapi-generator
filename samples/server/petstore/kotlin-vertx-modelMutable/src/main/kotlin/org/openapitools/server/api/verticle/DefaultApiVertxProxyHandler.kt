@@ -64,7 +64,7 @@ class DefaultApiVertxProxyHandler(private val vertx: Vertx, private val service:
             val context = OperationRequest(contextSerialized)
             when (action) {
         
-                "retrieveSomething" -> {
+                "exampleSomeMethodGet" -> {
                 }
         
             }

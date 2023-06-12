@@ -51,10 +51,10 @@ NSInteger kSWGDefaultApiMissingParamErrorCode = 234513;
 
 ///
 /// 
-/// get some object
+/// 
 ///  @returns SWGExampleResponse*
 ///
--(NSURLSessionTask*) retrieveSomethingWithCompletionHandler: 
+-(NSURLSessionTask*) exampleSomeMethodGetWithCompletionHandler: 
     (void (^)(SWGExampleResponse* output, NSError* error)) handler {
     NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/example/someMethod"];
 

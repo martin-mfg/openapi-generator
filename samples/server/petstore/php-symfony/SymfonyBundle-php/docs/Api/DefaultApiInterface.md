@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultApiInterface.md#retrieveSomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultApiInterface.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
 ## Service Declaration
@@ -18,12 +18,12 @@ services:
     # ...
 ```
 
-## **retrieveSomething**
-> OpenAPI\Server\Model\ExampleResponse retrieveSomething()
+## **exampleSomeMethodGet**
+> OpenAPI\Server\Model\ExampleResponse exampleSomeMethodGet()
 
 
 
-get some object
+
 
 ### Example Implementation
 ```php
@@ -40,9 +40,9 @@ class DefaultApi implements DefaultApiInterface
     // ...
 
     /**
-     * Implementation of DefaultApiInterface#retrieveSomething
+     * Implementation of DefaultApiInterface#exampleSomeMethodGet
      */
-    public function retrieveSomething(int &$responseCode, array &$responseHeaders): array|object|null
+    public function exampleSomeMethodGet(int &$responseCode, array &$responseHeaders): array|object|null
     {
         // Implement the operation ...
     }

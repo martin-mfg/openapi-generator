@@ -1,17 +1,16 @@
 -module(petstore_default_api).
 
--export([retrieve_something/1, retrieve_something/2]).
+-export([example_some_method_get/1, example_some_method_get/2]).
 
 -define(BASE_URL, <<"">>).
 
 %% @doc 
-%% get some object
--spec retrieve_something(ctx:ctx()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
-retrieve_something(Ctx) ->
-    retrieve_something(Ctx, #{}).
+-spec example_some_method_get(ctx:ctx()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
+example_some_method_get(Ctx) ->
+    example_some_method_get(Ctx, #{}).
 
--spec retrieve_something(ctx:ctx(), maps:map()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
-retrieve_something(Ctx, Optional) ->
+-spec example_some_method_get(ctx:ctx(), maps:map()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
+example_some_method_get(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(petstore_api, config, #{})),
 

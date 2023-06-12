@@ -1,7 +1,7 @@
 {
   "openapi" : "3.0.0",
   "info" : {
-    "description" : "dummy description",
+    "description" : "",
     "title" : "",
     "version" : ""
   },
@@ -11,8 +11,8 @@
   "paths" : {
     "/example/someMethod" : {
       "get" : {
-        "description" : "get some object",
-        "operationId" : "retrieveSomething",
+        "description" : "",
+        "operationId" : "",
         "responses" : {
           "200" : {
             "content" : {
@@ -22,7 +22,7 @@
                 }
               }
             },
-            "description" : "The response with results"
+            "description" : ""
           }
         }
       }
@@ -31,6 +31,7 @@
   "components" : {
     "schemas" : {
       "ExampleResponse" : {
+        "description" : "",
         "properties" : {
           "myOnlyProperty" : {
             "items" : {

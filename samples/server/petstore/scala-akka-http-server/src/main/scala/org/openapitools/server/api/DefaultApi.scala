@@ -21,7 +21,7 @@ class DefaultApi(
   lazy val route: Route =
     path("example" / "someMethod") { 
       get {  
-            defaultService.retrieveSomething()
+            defaultService.exampleSomeMethodGet()
       }
     }
 }
@@ -29,12 +29,12 @@ class DefaultApi(
 
 trait DefaultApiService {
 
-  def retrieveSomething200(responseExampleResponse: ExampleResponse)(implicit toEntityMarshallerExampleResponse: ToEntityMarshaller[ExampleResponse]): Route =
+  def exampleSomeMethodGet200(responseExampleResponse: ExampleResponse)(implicit toEntityMarshallerExampleResponse: ToEntityMarshaller[ExampleResponse]): Route =
     complete((200, responseExampleResponse))
   /**
-   * Code: 200, Message: The response with results, DataType: ExampleResponse
+   * Code: 200, Message: , DataType: ExampleResponse
    */
-  def retrieveSomething()
+  def exampleSomeMethodGet()
       (implicit toEntityMarshallerExampleResponse: ToEntityMarshaller[ExampleResponse]): Route
 
 }

@@ -1,5 +1,6 @@
 package org.openapitools.model;
 
+import io.swagger.annotations.ApiModel;
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.*;
@@ -9,6 +10,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+  * 
+ **/
+@ApiModel(description="")
 
 public class ExampleResponse  {
   

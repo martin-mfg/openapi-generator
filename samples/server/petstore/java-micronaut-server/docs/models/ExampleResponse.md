@@ -2,6 +2,8 @@
 
 # ExampleResponse
 
+
+
 The class is defined in **[ExampleResponse.java](../../src/main/java/org/openapitools/model/ExampleResponse.java)**
 
 ## Properties

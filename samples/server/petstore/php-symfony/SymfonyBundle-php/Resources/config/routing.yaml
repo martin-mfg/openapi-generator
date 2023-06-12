@@ -3,9 +3,9 @@
 # Do not edit the class manually.
 
 # default
-open_api_server_default_retrievesomething:
+open_api_server_default_examplesomemethodget:
     path:     /example/someMethod
     methods:  [GET]
     defaults:
-        _controller: open_api_server.controller.default::retrieveSomethingAction
+        _controller: open_api_server.controller.default::exampleSomeMethodGetAction
 

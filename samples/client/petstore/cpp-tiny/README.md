@@ -30,7 +30,7 @@ All URIs are relative to http://localhosthttp://localhost
 ### DefaultApi
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|*retrieveSomething* | *GET* /example/someMethod | .|
+|*exampleSomeMethodGet* | *GET* /example/someMethod | .|
 
 
 ## What are the Model files for the data structures/objects?

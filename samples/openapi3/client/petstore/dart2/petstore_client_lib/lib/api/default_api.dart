@@ -16,10 +16,10 @@ class DefaultApi {
 
   final ApiClient apiClient;
 
-  /// get some object
+  /// 
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> retrieveSomethingWithHttpInfo() async {
+  Future<Response> exampleSomeMethodGetWithHttpInfo() async {
     // ignore: prefer_const_declarations
     final path = r'/example/someMethod';
 
@@ -44,9 +44,9 @@ class DefaultApi {
     );
   }
 
-  /// get some object
-  Future<ExampleResponse?> retrieveSomething() async {
-    final response = await retrieveSomethingWithHttpInfo();
+  /// 
+  Future<ExampleResponse?> exampleSomeMethodGet() async {
+    final response = await exampleSomeMethodGetWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

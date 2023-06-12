@@ -15,7 +15,7 @@ import java.util.*;
 import jakarta.annotation.Generated;
 
 /**
- * ExampleResponse
+ * 
  */
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")

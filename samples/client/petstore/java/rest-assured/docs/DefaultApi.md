@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
+| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
 
 
-<a id="retrieveSomething"></a>
-# **retrieveSomething**
-> ExampleResponse retrieveSomething()
+<a id="exampleSomeMethodGet"></a>
+# **exampleSomeMethodGet**
+> ExampleResponse exampleSomeMethodGet()
 
 
 
-get some object
+
 
 ### Example
 ```java
@@ -26,7 +26,7 @@ DefaultApi api = ApiClient.api(ApiClient.Config.apiConfig().withReqSpecSupplier(
                 () -> new RequestSpecBuilder()
                         .setBaseUri("http://localhost")))._default();
 
-api.retrieveSomething().execute(r -> r.prettyPeek());
+api.exampleSomeMethodGet().execute(r -> r.prettyPeek());
 ```
 
 ### Parameters

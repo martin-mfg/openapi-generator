@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieve_something**](DefaultApi.md#retrieve_something) | **GET** /example/someMethod | 
+[**example_some_method_get**](DefaultApi.md#example_some_method_get) | **GET** /example/someMethod | 
 
 
-# **retrieve_something**
-> ExampleResponse retrieve_something()
+# **example_some_method_get**
+> ExampleResponse example_some_method_get()
 
 
 
-get some object
+
 
 ### Example
 
@@ -37,11 +37,11 @@ async with petstore_api.ApiClient(configuration) as api_client:
     api_instance = petstore_api.DefaultApi(api_client)
 
     try:
-        api_response = await api_instance.retrieve_something()
-        print("The response of DefaultApi->retrieve_something:\n")
+        api_response = await api_instance.example_some_method_get()
+        print("The response of DefaultApi->example_some_method_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->retrieve_something: %s\n" % e)
+        print("Exception when calling DefaultApi->example_some_method_get: %s\n" % e)
 ```
 
 
@@ -64,7 +64,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | The response with results |  -  |
+**200** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -19,8 +19,8 @@ public class ExampleApiRoutesImpl extends RouteBuilder {
         /**
         GET /example/someMethod
         **/
-        from("direct:retrieveSomething")
-            .id("retrieveSomething")
+        from("direct:exampleSomeMethodGet")
+            .id("exampleSomeMethodGet")
             .choice()
                 .when(simple("${body} != null"))
                     .log(LoggingLevel.INFO, "BODY TYPE: ${body.getClass().getName()}")

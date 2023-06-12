@@ -5,8 +5,8 @@ import (
     "net/http"
 )
 
-// RetrieveSomething - 
-func (c *Container) RetrieveSomething(ctx echo.Context) error {
+// ExampleSomeMethodGet - 
+func (c *Container) ExampleSomeMethodGet(ctx echo.Context) error {
     return ctx.JSON(http.StatusOK, models.HelloWorld {
         Message: "Hello World",
     })

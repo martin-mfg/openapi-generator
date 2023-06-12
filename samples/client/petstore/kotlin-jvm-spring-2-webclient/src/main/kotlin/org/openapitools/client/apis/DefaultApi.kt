@@ -41,20 +41,20 @@ class DefaultApi(client: WebClient) : ApiClient(client) {
 
 
     @Throws(WebClientResponseException::class)
-    fun retrieveSomething(): Mono<ExampleResponse> {
-        return retrieveSomethingWithHttpInfo()
+    fun exampleSomeMethodGet(): Mono<ExampleResponse> {
+        return exampleSomeMethodGetWithHttpInfo()
             .map { it.body }
     }
 
     @Throws(WebClientResponseException::class)
-    fun retrieveSomethingWithHttpInfo(): Mono<ResponseEntity<ExampleResponse>> {
-        val localVariableConfig = retrieveSomethingRequestConfig()
+    fun exampleSomeMethodGetWithHttpInfo(): Mono<ResponseEntity<ExampleResponse>> {
+        val localVariableConfig = exampleSomeMethodGetRequestConfig()
         return request<Unit, ExampleResponse>(
             localVariableConfig
         )
     }
 
-    fun retrieveSomethingRequestConfig() : RequestConfig<Unit> {
+    fun exampleSomeMethodGetRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

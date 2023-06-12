@@ -20,11 +20,11 @@ public class ExampleApi {
 
     @GET
     @Produces({ "/" })
-    @ApiOperation(value = "", notes = "get some object", response = ExampleResponse.class, tags={  })
+    @ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "", response = ExampleResponse.class)
     })
-    public Response retrieveSomething() {
+    public Response exampleSomeMethodGet() {
         return Response.ok().entity("magic!").build();
     }
 }

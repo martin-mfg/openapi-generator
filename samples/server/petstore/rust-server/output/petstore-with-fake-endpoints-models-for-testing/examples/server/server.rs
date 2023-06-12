@@ -94,7 +94,7 @@ impl<C> Server<C> {
 
 use petstore_with_fake_endpoints_models_for_testing::{
     Api,
-    RetrieveSomethingResponse,
+    ExampleSomeMethodGetResponse,
 };
 use petstore_with_fake_endpoints_models_for_testing::server::MakeService;
 use std::error::Error;
@@ -103,12 +103,12 @@ use swagger::ApiError;
 #[async_trait]
 impl<C> Api<C> for Server<C> where C: Has<XSpanIdString> + Send + Sync
 {
-    async fn retrieve_something(
+    async fn example_some_method_get(
         &self,
-        context: &C) -> Result<RetrieveSomethingResponse, ApiError>
+        context: &C) -> Result<ExampleSomeMethodGetResponse, ApiError>
     {
         let context = context.clone();
-        info!("retrieve_something() - X-Span-ID: {:?}", context.get().0.clone());
+        info!("example_some_method_get() - X-Span-ID: {:?}", context.get().0.clone());
         Err(ApiError("Generic failure".into()))
     }
 

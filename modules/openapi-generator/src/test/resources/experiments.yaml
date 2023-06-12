@@ -2,15 +2,15 @@ openapi: 3.0.0
 info:
   title: ''
   version: ""
-  description: dummy description
+  description: ""
 paths:
   /example/someMethod:
     get:
-      description: get some object
-      operationId: retrieveSomething
+      description: ""
+      operationId: ""
       responses:
         200:
-          description: The response with results
+          description: ""
           content:
             "/":
               schema:
@@ -19,6 +19,7 @@ components:
   schemas:
     ExampleResponse:
       type: object
+      description: ""
       properties:
         myOnlyProperty:
           type: array

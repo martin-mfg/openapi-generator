@@ -31,12 +31,12 @@ public interface ExampleApiDelegate {
 
     /**
      * GET /example/someMethod
-     * get some object
+     * 
      *
-     * @return The response with results (status code 200)
-     * @see ExampleApi#retrieveSomething
+     * @return  (status code 200)
+     * @see ExampleApi#exampleSomeMethodGet
      */
-    default Mono<ResponseEntity<ExampleResponse>> retrieveSomething(ServerWebExchange exchange) {
+    default Mono<ResponseEntity<ExampleResponse>> exampleSomeMethodGet(ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
         for (MediaType mediaType : exchange.getRequest().getHeaders().getAccept()) {

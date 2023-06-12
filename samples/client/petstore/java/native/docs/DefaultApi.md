@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
-| [**retrieveSomethingWithHttpInfo**](DefaultApi.md#retrieveSomethingWithHttpInfo) | **GET** /example/someMethod |  |
+| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
+| [**exampleSomeMethodGetWithHttpInfo**](DefaultApi.md#exampleSomeMethodGetWithHttpInfo) | **GET** /example/someMethod |  |
 
 
 
-## retrieveSomething
+## exampleSomeMethodGet
 
-> ExampleResponse retrieveSomething()
+> ExampleResponse exampleSomeMethodGet()
 
 
 
-get some object
+
 
 ### Example
 
@@ -34,10 +34,10 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ExampleResponse result = apiInstance.retrieveSomething();
+            ExampleResponse result = apiInstance.exampleSomeMethodGet();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#retrieveSomething");
+            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -68,15 +68,15 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The response with results |  -  |
+| **200** |  |  -  |
 
-## retrieveSomethingWithHttpInfo
+## exampleSomeMethodGetWithHttpInfo
 
-> ApiResponse<ExampleResponse> retrieveSomething retrieveSomethingWithHttpInfo()
+> ApiResponse<ExampleResponse> exampleSomeMethodGet exampleSomeMethodGetWithHttpInfo()
 
 
 
-get some object
+
 
 ### Example
 
@@ -96,12 +96,12 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ApiResponse<ExampleResponse> response = apiInstance.retrieveSomethingWithHttpInfo();
+            ApiResponse<ExampleResponse> response = apiInstance.exampleSomeMethodGetWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#retrieveSomething");
+            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -132,5 +132,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The response with results |  -  |
+| **200** |  |  -  |
 

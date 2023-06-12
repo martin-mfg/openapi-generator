@@ -26,12 +26,12 @@ public:
     /**
     * .
     *
-    * get some object
+    * 
     */
     Response<
                 ExampleResponse
         >
-    retrieveSomething(
+    exampleSomeMethodGet(
     );
 }; 
 

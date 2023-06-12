@@ -2,7 +2,7 @@
 	"info": {
 		"name": "",
 		"description": {
-		    "content": "dummy description",
+		    "content": "",
 		    "type": "text/markdown"
 		},
 		"version": "",
@@ -14,10 +14,10 @@
 	            "item": [
 	                        {
     "name": "/example/someMethod",
-                "description": "get some object",
+                "description": "",
                  "item": [
                             {
-                                "name": "retrieveSomething",
+                                "name": "exampleSomeMethodGet",
                                 "request": {
                                     "method": "GET",
                                     "header": [
@@ -49,7 +49,7 @@
                                         "query": [
                                         ]
                                     },
-                                    "description": "get some object"
+                                    "description": ""
                                 }
                             }
                             ]

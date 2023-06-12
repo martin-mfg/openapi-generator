@@ -152,7 +152,7 @@ For instance, when abstract class located at `./lib/Api/AbstractPetApi.php` you 
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AbstractDefaultApi* | **retrieveSomething** | **GET** /example/someMethod | 
+*AbstractDefaultApi* | **exampleSomeMethodGet** | **GET** /example/someMethod | 
 
 
 ## Models

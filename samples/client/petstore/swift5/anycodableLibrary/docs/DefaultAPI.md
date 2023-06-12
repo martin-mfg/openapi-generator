@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultAPI.md#retrievesomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultAPI.md#examplesomemethodget) | **GET** /example/someMethod | 
 
 
-# **retrieveSomething**
+# **exampleSomeMethodGet**
 ```swift
-    open class func retrieveSomething(completion: @escaping (_ data: PrefixExampleResponseSuffix?, _ error: Error?) -> Void)
+    open class func exampleSomeMethodGet(completion: @escaping (_ data: PrefixExampleResponseSuffix?, _ error: Error?) -> Void)
 ```
 
 
 
-get some object
+
 
 ### Example
 ```swift
@@ -22,7 +22,7 @@ get some object
 import PetstoreClient
 
 
-DefaultAPI.retrieveSomething() { (response, error) in
+DefaultAPI.exampleSomeMethodGet() { (response, error) in
     guard error == nil else {
         print(error)
         return

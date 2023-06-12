@@ -11,6 +11,7 @@ import AnyCodable
 #endif
 import Vapor
 
+/**  */
 public final class ExampleResponse: Content, Hashable {
 
     public var myOnlyProperty: [Bool]?

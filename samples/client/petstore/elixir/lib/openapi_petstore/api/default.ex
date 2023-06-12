@@ -10,7 +10,7 @@ defmodule OpenapiPetstore.Api.Default do
   import OpenapiPetstore.RequestBuilder
 
   @doc """
-  get some object
+  
 
   ### Parameters
 
@@ -22,8 +22,8 @@ defmodule OpenapiPetstore.Api.Default do
   - `{:ok, OpenapiPetstore.Model.ExampleResponse.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec retrieve_something(Tesla.Env.client, keyword()) :: {:ok, OpenapiPetstore.Model.ExampleResponse.t} | {:error, Tesla.Env.t}
-  def retrieve_something(connection, _opts \\ []) do
+  @spec example_some_method_get(Tesla.Env.client, keyword()) :: {:ok, OpenapiPetstore.Model.ExampleResponse.t} | {:error, Tesla.Env.t}
+  def example_some_method_get(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)

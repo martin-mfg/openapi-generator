@@ -8,9 +8,9 @@
 #include "../model/example_response.h"
 
 
-// get some object
+// 
 //
 example_response_t*
-DefaultAPI_retrieveSomething(apiClient_t *apiClient);
+DefaultAPI_exampleSomeMethodGet(apiClient_t *apiClient);
 
 

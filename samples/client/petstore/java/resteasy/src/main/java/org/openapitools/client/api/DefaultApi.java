@@ -36,11 +36,11 @@ public class DefaultApi {
 
   /**
    * 
-   * get some object
+   * 
    * @return a {@code ExampleResponse}
    * @throws ApiException if fails to make API call
    */
-  public ExampleResponse retrieveSomething() throws ApiException {
+  public ExampleResponse exampleSomeMethodGet() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables

@@ -9,15 +9,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultApi.md#retrievesomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
 
 
-# **retrieveSomething**
-> ExampleResponse retrieveSomething()
+# **exampleSomeMethodGet**
+> ExampleResponse exampleSomeMethodGet()
 
 
 
-get some object
+
 
 ### Example
 ```dart
@@ -26,10 +26,10 @@ import 'package:openapi/api.dart';
 final api_instance = DefaultApi();
 
 try {
-    final result = api_instance.retrieveSomething();
+    final result = api_instance.exampleSomeMethodGet();
     print(result);
 } catch (e) {
-    print('Exception when calling DefaultApi->retrieveSomething: $e\n');
+    print('Exception when calling DefaultApi->exampleSomeMethodGet: $e\n');
 }
 ```
 

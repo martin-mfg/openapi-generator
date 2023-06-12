@@ -32,18 +32,18 @@ public class DefaultApiHandler {
     }
 
     public void mount(RouterBuilder builder) {
-        builder.operation("retrieveSomething").handler(this::retrieveSomething);
+        builder.operation("exampleSomeMethodGet").handler(this::exampleSomeMethodGet);
     }
 
-    private void retrieveSomething(RoutingContext routingContext) {
-        logger.info("retrieveSomething()");
+    private void exampleSomeMethodGet(RoutingContext routingContext) {
+        logger.info("exampleSomeMethodGet()");
 
         // Param extraction
         RequestParameters requestParameters = routingContext.get(ValidationHandler.REQUEST_CONTEXT_KEY);
 
 
 
-        api.retrieveSomething()
+        api.exampleSomeMethodGet()
             .onSuccess(apiResponse -> {
                 routingContext.response().setStatusCode(apiResponse.getStatusCode());
                 if (apiResponse.hasData()) {

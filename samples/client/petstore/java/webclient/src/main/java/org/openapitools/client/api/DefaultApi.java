@@ -48,12 +48,12 @@ public class DefaultApi {
 
     /**
      * 
-     * get some object
-     * <p><b>200</b> - The response with results
+     * 
+     * <p><b>200</b> - 
      * @return ExampleResponse
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec retrieveSomethingRequestCreation() throws WebClientResponseException {
+    private ResponseSpec exampleSomeMethodGetRequestCreation() throws WebClientResponseException {
         Object postBody = null;
         // create path and map variables
         final Map<String, Object> pathParams = new HashMap<String, Object>();
@@ -78,36 +78,36 @@ public class DefaultApi {
 
     /**
      * 
-     * get some object
-     * <p><b>200</b> - The response with results
+     * 
+     * <p><b>200</b> - 
      * @return ExampleResponse
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ExampleResponse> retrieveSomething() throws WebClientResponseException {
+    public Mono<ExampleResponse> exampleSomeMethodGet() throws WebClientResponseException {
         ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
-        return retrieveSomethingRequestCreation().bodyToMono(localVarReturnType);
+        return exampleSomeMethodGetRequestCreation().bodyToMono(localVarReturnType);
     }
 
     /**
      * 
-     * get some object
-     * <p><b>200</b> - The response with results
+     * 
+     * <p><b>200</b> - 
      * @return ResponseEntity&lt;ExampleResponse&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<ExampleResponse>> retrieveSomethingWithHttpInfo() throws WebClientResponseException {
+    public Mono<ResponseEntity<ExampleResponse>> exampleSomeMethodGetWithHttpInfo() throws WebClientResponseException {
         ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
-        return retrieveSomethingRequestCreation().toEntity(localVarReturnType);
+        return exampleSomeMethodGetRequestCreation().toEntity(localVarReturnType);
     }
 
     /**
      * 
-     * get some object
-     * <p><b>200</b> - The response with results
+     * 
+     * <p><b>200</b> - 
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec retrieveSomethingWithResponseSpec() throws WebClientResponseException {
-        return retrieveSomethingRequestCreation();
+    public ResponseSpec exampleSomeMethodGetWithResponseSpec() throws WebClientResponseException {
+        return exampleSomeMethodGetRequestCreation();
     }
 }

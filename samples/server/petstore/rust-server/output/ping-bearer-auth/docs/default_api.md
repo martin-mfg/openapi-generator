@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-**retrieveSomething**](default_api.md#retrieveSomething) | **GET** /example/someMethod | 
+****](default_api.md#) | **GET** /example/someMethod | 
 
 
-# **retrieveSomething**
-> models::ExampleResponse retrieveSomething()
+# ****
+> models::ExampleResponse ()
 
 
-get some object
+
 
 ### Required Parameters
 This endpoint does not need any parameter.

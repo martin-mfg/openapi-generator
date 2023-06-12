@@ -16,7 +16,7 @@ import java.util.*;
 import javax.annotation.Generated;
 
 /**
- * ExampleResponse
+ * 
  */
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")

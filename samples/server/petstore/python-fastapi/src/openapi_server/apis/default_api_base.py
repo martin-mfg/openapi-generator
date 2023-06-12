@@ -11,8 +11,8 @@ class BaseDefaultApi:
     def __init_subclass__(cls, **kwargs):
         super().__init_subclass__(**kwargs)
         BaseDefaultApi.subclasses = BaseDefaultApi.subclasses + (cls,)
-    def retrieve_something(
+    def example_some_method_get(
         self,
     ) -> ExampleResponse:
-        """get some object"""
+        """"""
         ...

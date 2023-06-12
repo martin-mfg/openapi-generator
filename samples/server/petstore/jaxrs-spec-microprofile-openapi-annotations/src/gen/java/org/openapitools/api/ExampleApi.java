@@ -28,19 +28,19 @@ public class ExampleApi {
 
     @GET
     @Produces({ "/" })
-    @ApiOperation(value = "", notes = "get some object", response = ExampleResponse.class, tags={  })
+    @ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "", response = ExampleResponse.class)
     })
     
-    @org.eclipse.microprofile.openapi.annotations.Operation(operationId = "retrieveSomething", summary = "", description = "get some object")
+    @org.eclipse.microprofile.openapi.annotations.Operation(operationId = "exampleSomeMethodGet", summary = "", description = "")
     
     @org.eclipse.microprofile.openapi.annotations.responses.APIResponses(value = { 
-            @org.eclipse.microprofile.openapi.annotations.responses.APIResponse(responseCode = "200", description = "The response with results",  content = { 
+            @org.eclipse.microprofile.openapi.annotations.responses.APIResponse(responseCode = "200", description = "",  content = { 
                 @org.eclipse.microprofile.openapi.annotations.media.Content(mediaType="/", schema = @org.eclipse.microprofile.openapi.annotations.media.Schema(implementation = ExampleResponse.class))
             })
         })
-    public Response retrieveSomething() {
+    public Response exampleSomeMethodGet() {
         return Response.ok().entity("magic!").build();
     }
 }

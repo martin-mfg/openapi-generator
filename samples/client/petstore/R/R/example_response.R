@@ -1,7 +1,7 @@
 #' Create a new ExampleResponse
 #'
 #' @description
-#' ExampleResponse Class
+#' 
 #'
 #' @docType class
 #' @title ExampleResponse

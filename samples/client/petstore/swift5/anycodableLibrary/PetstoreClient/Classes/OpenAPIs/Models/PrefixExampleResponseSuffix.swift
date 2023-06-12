@@ -10,6 +10,7 @@ import Foundation
 import AnyCodable
 #endif
 
+/**  */
 public struct PrefixExampleResponseSuffix: Codable, JSONEncodable, Hashable {
 
     public var myOnlyProperty: [Bool]?

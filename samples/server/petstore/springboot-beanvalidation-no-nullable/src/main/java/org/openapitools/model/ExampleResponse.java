@@ -17,9 +17,10 @@ import java.util.*;
 import javax.annotation.Generated;
 
 /**
- * ExampleResponse
+ * 
  */
 
+@ApiModel(description = "")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ExampleResponse {
 

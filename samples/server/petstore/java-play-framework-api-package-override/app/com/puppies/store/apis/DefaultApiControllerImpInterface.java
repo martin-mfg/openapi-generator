@@ -26,8 +26,8 @@ public abstract class DefaultApiControllerImpInterface {
     @Inject private SecurityAPIUtils securityAPIUtils;
     private ObjectMapper mapper = new ObjectMapper();
 
-    public Result retrieveSomethingHttp(Http.Request request) throws Exception {
-        ExampleResponse obj = retrieveSomething(request);
+    public Result exampleSomeMethodGetHttp(Http.Request request) throws Exception {
+        ExampleResponse obj = exampleSomeMethodGet(request);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
             OpenAPIUtils.validate(obj);
@@ -39,6 +39,6 @@ public abstract class DefaultApiControllerImpInterface {
 
     }
 
-    public abstract ExampleResponse retrieveSomething(Http.Request request) throws Exception;
+    public abstract ExampleResponse exampleSomeMethodGet(Http.Request request) throws Exception;
 
 }

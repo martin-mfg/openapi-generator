@@ -7,7 +7,7 @@ import           Import
 
 -- | 
 --
--- get some object
--- operationId: retrieveSomething
+-- 
+-- operationId: exampleSomeMethodGet
 getExampleSomeMethodR :: Handler Value
 getExampleSomeMethodR = notImplemented

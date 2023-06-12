@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
-<a id="retrieveSomething"></a>
-# **retrieveSomething**
-> ExampleResponse retrieveSomething()
+<a id="exampleSomeMethodGet"></a>
+# **exampleSomeMethodGet**
+> ExampleResponse exampleSomeMethodGet()
 
 
 
-get some object
+
 
 ### Example
 ```kotlin
@@ -23,13 +23,13 @@ get some object
 
 val apiInstance = DefaultApi()
 try {
-    val result : ExampleResponse? = apiInstance.retrieveSomething()
+    val result : ExampleResponse? = apiInstance.exampleSomeMethodGet()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DefaultApi#retrieveSomething")
+    println("4xx response calling DefaultApi#exampleSomeMethodGet")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DefaultApi#retrieveSomething")
+    println("5xx response calling DefaultApi#exampleSomeMethodGet")
     e.printStackTrace()
 }
 ```

@@ -4,12 +4,12 @@ import type { HttpFile, RequestContext, ResponseContext } from "../http/http";
 import { ExampleResponse } from "../models/ExampleResponse";
 
 export abstract class AbstractDefaultApiRequestFactory {
-    public abstract retrieveSomething(options?: Configuration): Promise<RequestContext>;
+    public abstract exampleSomeMethodGet(options?: Configuration): Promise<RequestContext>;
 
 }
 
 
 export abstract class AbstractDefaultApiResponseProcessor {
-     public abstract retrieveSomething(response: ResponseContext): Promise<ExampleResponse >;
+     public abstract exampleSomeMethodGet(response: ResponseContext): Promise<ExampleResponse >;
 
 }

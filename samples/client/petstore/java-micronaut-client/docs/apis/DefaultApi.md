@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
+| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
 
 
 ## Creating DefaultApi
@@ -35,15 +35,15 @@ Note that the class needs to be annotated with one of Micronaut's [scope annotat
 
 More information can be found inside [Inversion of Control guide section](https://docs.micronaut.io/latest/guide/#ioc).
 
-<a id="retrieveSomething"></a>
-# **retrieveSomething**
+<a id="exampleSomeMethodGet"></a>
+# **exampleSomeMethodGet**
 ```java
-Mono<ExampleResponse> DefaultApi.retrieveSomething()
+Mono<ExampleResponse> DefaultApi.exampleSomeMethodGet()
 ```
 
 
 
-get some object
+
 
 
 

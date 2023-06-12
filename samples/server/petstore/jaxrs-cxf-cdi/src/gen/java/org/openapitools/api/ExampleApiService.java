@@ -17,5 +17,5 @@ import javax.ws.rs.core.SecurityContext;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen")
 public interface ExampleApiService {
-      public Response retrieveSomething(SecurityContext securityContext);
+      public Response exampleSomeMethodGet(SecurityContext securityContext);
 }

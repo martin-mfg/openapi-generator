@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
-[**retrieveSomethingWithHttpInfo**](DefaultApi.md#retrieveSomethingWithHttpInfo) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
+[**exampleSomeMethodGetWithHttpInfo**](DefaultApi.md#exampleSomeMethodGetWithHttpInfo) | **GET** /example/someMethod | 
 
 
 
-## retrieveSomething
+## exampleSomeMethodGet
 
-> retrieveSomething(): ApiRequest[ExampleResponse]
+> exampleSomeMethodGet(): ApiRequest[ExampleResponse]
 
 
 
-get some object
+
 
 ### Example
 
@@ -37,7 +37,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DefaultApi("http://localhost")    
-    val request = apiInstance.retrieveSomething()
+    val request = apiInstance.exampleSomeMethodGet()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -47,14 +47,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling DefaultApi#retrieveSomething")
+            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling DefaultApi#retrieveSomething")
+            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet")
             exception.printStackTrace();
     }
 }
@@ -81,5 +81,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The response with results |  -  |
+| **200** |  |  -  |
 

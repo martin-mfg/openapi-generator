@@ -123,7 +123,7 @@ formatSeparatedQueryList char = T.intercalate (T.singleton char) . map toQueryPa
 
 -- | Servant type-level API, generated from the OpenAPI spec for .
 type API
-    =    "example" :> "someMethod" :> Verb 'GET 200 '[JSON] ExampleResponse -- 'retrieveSomething' route
+    =    "example" :> "someMethod" :> Verb 'GET 200 '[JSON] ExampleResponse -- 'exampleSomeMethodGet' route
     :<|> Raw
 
 
@@ -144,7 +144,7 @@ newtype ClientError = ClientError ClientError
 -- is a backend that executes actions by sending HTTP requests (see @createClient@). Alternatively, provided
 -- a backend, the API can be served using @runMiddlewareServer@.
 data Backend m = Backend
-  { retrieveSomething :: m ExampleResponse{- ^ get some object -}
+  { exampleSomeMethodGet :: m ExampleResponse{- ^  -}
   }
 
 
@@ -169,7 +169,7 @@ instance MonadIO Client where
 createClient :: Backend Client
 createClient = Backend{..}
   where
-    ((coerce -> retrieveSomething) :<|>
+    ((coerce -> exampleSomeMethodGet) :<|>
      _) = client (Proxy :: Proxy API)
 
 -- | Run requests in the Client monad.
@@ -224,7 +224,7 @@ serverWaiApplication backend = serveWithContextT (Proxy :: Proxy API) context id
   where
     context = serverContext
     serverFromBackend Backend{..} =
-      (coerce retrieveSomething :<|>
+      (coerce exampleSomeMethodGet :<|>
        serveDirectoryFileServer "static")
 
 

@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieve_something**](DefaultApi.md#retrieve_something) | **GET** /example/someMethod | 
+[**example_some_method_get**](DefaultApi.md#example_some_method_get) | **GET** /example/someMethod | 
 
 
 
-## retrieve_something
+## example_some_method_get
 
-> crate::models::ExampleResponse retrieve_something()
+> crate::models::ExampleResponse example_some_method_get()
 
 
-get some object
+
 
 ### Parameters
 

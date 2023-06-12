@@ -38,7 +38,7 @@ interface DefaultApi {
             value = ["/example/someMethod"],
             produces = ["/"]
     )
-    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
+    fun exampleSomeMethodGet(): ResponseEntity<ExampleResponse> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
     }
 }

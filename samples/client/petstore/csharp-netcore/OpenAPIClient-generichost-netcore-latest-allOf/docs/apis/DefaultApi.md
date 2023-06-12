@@ -4,15 +4,13 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**RetrieveSomething**](DefaultApi.md#retrievesomething) | **GET** /example/someMethod |  |
+| [**ExampleSomeMethodGet**](DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod |  |
 
-<a id="retrievesomething"></a>
-# **RetrieveSomething**
-> ExampleResponse RetrieveSomething ()
+<a id="examplesomemethodget"></a>
+# **ExampleSomeMethodGet**
+> ExampleResponse ExampleSomeMethodGet ()
 
 
-
-get some object
 
 ### Example
 ```csharp
@@ -24,7 +22,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class RetrieveSomethingExample
+    public class ExampleSomeMethodGetExample
     {
         public static void Main()
         {
@@ -34,12 +32,12 @@ namespace Example
 
             try
             {
-                ExampleResponse result = apiInstance.RetrieveSomething();
+                ExampleResponse result = apiInstance.ExampleSomeMethodGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DefaultApi.RetrieveSomething: " + e.Message);
+                Debug.Print("Exception when calling DefaultApi.ExampleSomeMethodGet: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -48,20 +46,20 @@ namespace Example
 }
 ```
 
-#### Using the RetrieveSomethingWithHttpInfo variant
+#### Using the ExampleSomeMethodGetWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    ApiResponse<ExampleResponse> response = apiInstance.RetrieveSomethingWithHttpInfo();
+    ApiResponse<ExampleResponse> response = apiInstance.ExampleSomeMethodGetWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DefaultApi.RetrieveSomethingWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DefaultApi.ExampleSomeMethodGetWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -86,7 +84,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The response with results |  -  |
+| **200** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

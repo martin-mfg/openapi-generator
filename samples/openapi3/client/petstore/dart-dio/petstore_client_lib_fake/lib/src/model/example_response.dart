@@ -9,7 +9,7 @@ import 'package:built_value/serializer.dart';
 
 part 'example_response.g.dart';
 
-/// ExampleResponse
+/// 
 ///
 /// Properties:
 /// * [myOnlyProperty] 

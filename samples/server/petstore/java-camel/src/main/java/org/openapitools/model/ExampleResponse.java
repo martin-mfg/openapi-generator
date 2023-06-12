@@ -21,9 +21,10 @@ import java.util.*;
 import javax.annotation.Generated;
 
 /**
- * ExampleResponse
+ * 
  */
 
+@Schema(name = "ExampleResponse", description = "")
 @JacksonXmlRootElement(localName = "ExampleResponse")
 @XmlRootElement(name = "ExampleResponse")
 @XmlAccessorType(XmlAccessType.FIELD)

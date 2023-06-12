@@ -5,10 +5,10 @@ from app.openapi_server.models.example_response import ExampleResponse  # noqa: 
 from openapi_server import util
 
 
-def retrieve_something():  # noqa: E501
-    """retrieve_something
+def example_some_method_get():  # noqa: E501
+    """example_some_method_get
 
-    get some object # noqa: E501
+     # noqa: E501
 
 
     :rtype: ExampleResponse

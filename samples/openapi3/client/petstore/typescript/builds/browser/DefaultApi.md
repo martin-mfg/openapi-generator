@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
-# **retrieveSomething**
-> ExampleResponse retrieveSomething()
+# **exampleSomeMethodGet**
+> ExampleResponse exampleSomeMethodGet()
 
-get some object
+
 
 ### Example
 
@@ -24,7 +24,7 @@ const apiInstance = new petstore.DefaultApi(configuration);
 
 let body:any = {};
 
-apiInstance.retrieveSomething(body).then((data:any) => {
+apiInstance.exampleSomeMethodGet(body).then((data:any) => {
   console.log('API called successfully. Returned data: ' + data);
 }).catch((error:any) => console.error(error));
 ```
@@ -51,7 +51,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | The response with results |  -  |
+**200** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

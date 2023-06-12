@@ -21,11 +21,11 @@ import java.util.Set;
 public interface DefaultApi {
   /**
    * 
-   * get some object
+   * 
    * @return Observable&lt;ExampleResponse&gt;
    */
   @GET("example/someMethod")
-  Observable<ExampleResponse> retrieveSomething();
+  Observable<ExampleResponse> exampleSomeMethodGet();
     
 
 }

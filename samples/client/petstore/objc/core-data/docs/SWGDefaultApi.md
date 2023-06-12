@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](SWGDefaultApi.md#retrievesomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](SWGDefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
 
 
-# **retrieveSomething**
+# **exampleSomeMethodGet**
 ```objc
--(NSURLSessionTask*) retrieveSomethingWithCompletionHandler: 
+-(NSURLSessionTask*) exampleSomeMethodGetWithCompletionHandler: 
         (void (^)(SWGExampleResponse* output, NSError* error)) handler;
 ```
 
 
 
-get some object
+
 
 ### Example
 ```objc
@@ -23,13 +23,13 @@ get some object
 
 SWGDefaultApi*apiInstance = [[SWGDefaultApi alloc] init];
 
-[apiInstance retrieveSomethingWithCompletionHandler: 
+[apiInstance exampleSomeMethodGetWithCompletionHandler: 
           ^(SWGExampleResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling SWGDefaultApi->retrieveSomething: %@", error);
+                            NSLog(@"Error calling SWGDefaultApi->exampleSomeMethodGet: %@", error);
                         }
                     }];
 ```

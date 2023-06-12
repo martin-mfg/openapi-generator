@@ -17,9 +17,9 @@ import java.util.Map
 
 interface DefaultApi  {
     fun init(vertx:Vertx,config:JsonObject)
-    /* retrieveSomething
+    /* exampleSomeMethodGet
      *  */
-    suspend fun retrieveSomething(context:OperationRequest):Response<ExampleResponse>
+    suspend fun exampleSomeMethodGet(context:OperationRequest):Response<ExampleResponse>
     companion object {
         const val address = "DefaultApi-service"
         suspend fun createRouterFactory(vertx: Vertx,path:String): io.vertx.ext.web.api.contract.openapi3.OpenAPI3RouterFactory {

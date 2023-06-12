@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RetrieveSomething**](DefaultAPI.md#RetrieveSomething) | **Get** /example/someMethod | 
+[**ExampleSomeMethodGet**](DefaultAPI.md#ExampleSomeMethodGet) | **Get** /example/someMethod | 
 
 
 
-## RetrieveSomething
+## ExampleSomeMethodGet
 
-> ExampleResponse RetrieveSomething(ctx).Execute()
+> ExampleResponse ExampleSomeMethodGet(ctx).Execute()
 
 
 
@@ -32,13 +32,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultAPI.RetrieveSomething(context.Background()).Execute()
+    resp, r, err := apiClient.DefaultAPI.ExampleSomeMethodGet(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.RetrieveSomething``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.ExampleSomeMethodGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RetrieveSomething`: ExampleResponse
-    fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.RetrieveSomething`: %v\n", resp)
+    // response from `ExampleSomeMethodGet`: ExampleResponse
+    fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.ExampleSomeMethodGet`: %v\n", resp)
 }
 ```
 
@@ -48,7 +48,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiRetrieveSomethingRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiExampleSomeMethodGetRequest struct via the builder pattern
 
 
 ### Return type

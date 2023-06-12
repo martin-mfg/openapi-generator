@@ -42,20 +42,20 @@ public class DefaultApiImpl implements DefaultApi {
 
     /**
     * 
-    * get some object
+    * 
     * @param resultHandler Asynchronous result handler
     */
-    public void retrieveSomething(Handler<AsyncResult<ExampleResponse>> resultHandler) {
-        retrieveSomething(null, resultHandler);
+    public void exampleSomeMethodGet(Handler<AsyncResult<ExampleResponse>> resultHandler) {
+        exampleSomeMethodGet(null, resultHandler);
     }
 
     /**
     * 
-    * get some object
+    * 
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void retrieveSomething(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
+    public void exampleSomeMethodGet(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
         Object localVarBody = null;
         
         // create path and map variables

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
+/**
+ * 
+ */
 public class ExampleResponse   {
 
     private List<Boolean> myOnlyProperty;

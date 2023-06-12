@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**retrieveSomething**](DefaultApi.md#retrieveSomething) | **GET** /example/someMethod |  |
+| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
 
 
 
-## retrieveSomething
+## exampleSomeMethodGet
 
-> ExampleResponse retrieveSomething()
+> ExampleResponse exampleSomeMethodGet()
 
 
 
-get some object
+
 
 ### Parameters
 
@@ -37,5 +37,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The response with results |  -  |
+| **200** |  |  -  |
 

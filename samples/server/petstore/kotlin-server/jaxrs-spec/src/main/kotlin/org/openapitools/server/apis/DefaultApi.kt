@@ -16,7 +16,7 @@ class DefaultApi {
 
     @GET
     @Produces("/")
-    suspend fun retrieveSomething(): Response {
+    suspend fun exampleSomeMethodGet(): Response {
         return Response.ok().entity("magic!").build();
     }
 }

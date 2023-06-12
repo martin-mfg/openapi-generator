@@ -34,7 +34,7 @@ class ExampleApiController(@Autowired(required = true) val service: ExampleApiSe
         value = ["/example/someMethod"],
         produces = ["/"]
     )
-    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
-        return ResponseEntity(service.retrieveSomething(), HttpStatus.valueOf(200))
+    fun exampleSomeMethodGet(): ResponseEntity<ExampleResponse> {
+        return ResponseEntity(service.exampleSomeMethodGet(), HttpStatus.valueOf(200))
     }
 }

@@ -15,9 +15,9 @@ pub const BASE_PATH: &str = "";
 pub const API_VERSION: &str = "";
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum RetrieveSomethingResponse {
-    /// The response with results
-    TheResponseWithResults
+pub enum ExampleSomeMethodGetResponse {
+    /// 
+    Status200
     (String)
 }
 
@@ -29,9 +29,9 @@ pub trait Api<C: Send + Sync> {
         Poll::Ready(Ok(()))
     }
 
-    async fn retrieve_something(
+    async fn example_some_method_get(
         &self,
-        context: &C) -> Result<RetrieveSomethingResponse, ApiError>;
+        context: &C) -> Result<ExampleSomeMethodGetResponse, ApiError>;
 
 }
 
@@ -44,9 +44,9 @@ pub trait ApiNoContext<C: Send + Sync> {
 
     fn context(&self) -> &C;
 
-    async fn retrieve_something(
+    async fn example_some_method_get(
         &self,
-        ) -> Result<RetrieveSomethingResponse, ApiError>;
+        ) -> Result<ExampleSomeMethodGetResponse, ApiError>;
 
 }
 
@@ -73,12 +73,12 @@ impl<T: Api<C> + Send + Sync, C: Clone + Send + Sync> ApiNoContext<C> for Contex
         ContextWrapper::context(self)
     }
 
-    async fn retrieve_something(
+    async fn example_some_method_get(
         &self,
-        ) -> Result<RetrieveSomethingResponse, ApiError>
+        ) -> Result<ExampleSomeMethodGetResponse, ApiError>
     {
         let context = self.context().clone();
-        self.api().retrieve_something(&context).await
+        self.api().example_some_method_get(&context).await
     }
 
 }

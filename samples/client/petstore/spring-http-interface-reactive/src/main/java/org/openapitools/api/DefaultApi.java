@@ -26,16 +26,16 @@ public interface DefaultApi {
 
     /**
      * GET /example/someMethod
-     * get some object
+     * 
      *
-     * @return The response with results (status code 200)
+     * @return  (status code 200)
      */
     @HttpExchange(
         method = "GET",
         value = "/example/someMethod",
         accept = "/"
     )
-    Mono<ResponseEntity<ExampleResponse>> retrieveSomething(
+    Mono<ResponseEntity<ExampleResponse>> exampleSomeMethodGet(
         
     );
 

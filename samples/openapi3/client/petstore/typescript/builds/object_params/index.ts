@@ -8,5 +8,5 @@ export * from "./servers";
 export { RequiredError } from "./apis/baseapi";
 
 export { PromiseMiddleware as Middleware } from './middleware';
-export { DefaultApiRetrieveSomethingRequest, ObjectDefaultApi as DefaultApi } from './types/ObjectParamAPI';
+export { DefaultApiExampleSomeMethodGetRequest, ObjectDefaultApi as DefaultApi } from './types/ObjectParamAPI';
 

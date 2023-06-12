@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DefaultAPI_retrieveSomething**](DefaultAPI.md#DefaultAPI_retrieveSomething) | **GET** /example/someMethod | 
+[**DefaultAPI_exampleSomeMethodGet**](DefaultAPI.md#DefaultAPI_exampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
-# **DefaultAPI_retrieveSomething**
+# **DefaultAPI_exampleSomeMethodGet**
 ```c
-// get some object
+// 
 //
-example_response_t* DefaultAPI_retrieveSomething(apiClient_t *apiClient);
+example_response_t* DefaultAPI_exampleSomeMethodGet(apiClient_t *apiClient);
 ```
 
 ### Parameters

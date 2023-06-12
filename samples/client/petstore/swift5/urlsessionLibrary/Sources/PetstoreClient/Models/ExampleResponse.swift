@@ -15,6 +15,7 @@ public typealias ExampleResponse = PetstoreClientAPI.ExampleResponse
 
 extension PetstoreClientAPI {
 
+/**  */
 public final class ExampleResponse: Codable, JSONEncodable, Hashable {
 
     public var myOnlyProperty: [Bool]?

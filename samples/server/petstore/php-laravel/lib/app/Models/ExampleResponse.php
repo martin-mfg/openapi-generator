@@ -6,6 +6,7 @@ namespace app\Models;
 
 /**
  * ExampleResponse
+ * @description 
  */
 class ExampleResponse {
 

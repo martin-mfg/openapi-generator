@@ -18,5 +18,5 @@ import javax.ws.rs.core.SecurityContext;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen")
 public abstract class ExampleApiService {
-    public abstract Response retrieveSomething() throws NotFoundException;
+    public abstract Response exampleSomeMethodGet() throws NotFoundException;
 }

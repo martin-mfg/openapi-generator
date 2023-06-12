@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieve_something**](DefaultApi.md#retrieve_something) | **GET** /example/someMethod | 
+[**example_some_method_get**](DefaultApi.md#example_some_method_get) | **GET** /example/someMethod | 
 
 
-# **retrieve_something**
-> retrieve_something(req::HTTP.Request;) -> ExampleResponse
+# **example_some_method_get**
+> example_some_method_get(req::HTTP.Request;) -> ExampleResponse
 
 
 
-get some object
+
 
 ### Required Parameters
 This endpoint does not need any parameter.

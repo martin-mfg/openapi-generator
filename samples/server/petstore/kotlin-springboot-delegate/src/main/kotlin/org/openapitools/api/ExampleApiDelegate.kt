@@ -19,9 +19,9 @@ interface ExampleApiDelegate {
     fun getRequest(): Optional<NativeWebRequest> = Optional.empty()
 
     /**
-     * @see ExampleApi#retrieveSomething
+     * @see ExampleApi#exampleSomeMethodGet
      */
-    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
+    fun exampleSomeMethodGet(): ResponseEntity<ExampleResponse> {
         getRequest().ifPresent { request ->
             for (mediaType in MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {

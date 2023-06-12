@@ -9,8 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ExampleResponse
+ * 
  */
+@ApiModel(description = "")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen")
 public class ExampleResponse   {
   @JsonProperty("myOnlyProperty")

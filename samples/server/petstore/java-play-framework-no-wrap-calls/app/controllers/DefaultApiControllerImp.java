@@ -13,7 +13,7 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen")
 public class DefaultApiControllerImp extends DefaultApiControllerImpInterface {
     @Override
-    public ExampleResponse retrieveSomething(Http.Request request) throws Exception {
+    public ExampleResponse exampleSomeMethodGet(Http.Request request) throws Exception {
         //Do your magic!!!
         return new ExampleResponse();
     }

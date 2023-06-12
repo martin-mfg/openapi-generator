@@ -6,17 +6,17 @@ The controller class is defined in **[DefaultController.java](../../src/main/jav
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveSomething**](#retrieveSomething) | **GET** /example/someMethod | 
+[**exampleSomeMethodGet**](#exampleSomeMethodGet) | **GET** /example/someMethod | 
 
-<a id="retrieveSomething"></a>
-# **retrieveSomething**
+<a id="exampleSomeMethodGet"></a>
+# **exampleSomeMethodGet**
 ```java
-Mono<ExampleResponse> DefaultController.retrieveSomething()
+Mono<ExampleResponse> DefaultController.exampleSomeMethodGet()
 ```
 
 
 
-get some object
+
 
 
 ### Return type

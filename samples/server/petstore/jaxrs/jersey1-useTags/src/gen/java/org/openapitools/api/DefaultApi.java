@@ -37,12 +37,12 @@ public class DefaultApi  {
     
     
     @Produces({ "/" })
-    @io.swagger.annotations.ApiOperation(value = "", notes = "get some object", response = ExampleResponse.class, tags={  })
+    @io.swagger.annotations.ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class) })
-    public Response retrieveSomething(
+        @io.swagger.annotations.ApiResponse(code = 200, message = "", response = ExampleResponse.class) })
+    public Response exampleSomeMethodGet(
         @Context SecurityContext securityContext)
     throws NotFoundException {
-        return delegate.retrieveSomething(securityContext);
+        return delegate.exampleSomeMethodGet(securityContext);
     }
 }

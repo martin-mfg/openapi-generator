@@ -4,24 +4,24 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-PSRetrieveSomething**](PSDefaultApi.md#Invoke-PSRetrieveSomething) | **GET** /example/someMethod | 
+[**Invoke-PSExampleSomeMethodGet**](PSDefaultApi.md#Invoke-PSExampleSomeMethodGet) | **GET** /example/someMethod | 
 
 
-<a id="Invoke-PSRetrieveSomething"></a>
-# **Invoke-PSRetrieveSomething**
-> ExampleResponse Invoke-PSRetrieveSomething<br>
+<a id="Invoke-PSExampleSomeMethodGet"></a>
+# **Invoke-PSExampleSomeMethodGet**
+> ExampleResponse Invoke-PSExampleSomeMethodGet<br>
 
 
 
-get some object
+
 
 ### Example
 ```powershell
 
 try {
-    $Result = Invoke-PSRetrieveSomething
+    $Result = Invoke-PSExampleSomeMethodGet
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-PSRetrieveSomething: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-PSExampleSomeMethodGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
