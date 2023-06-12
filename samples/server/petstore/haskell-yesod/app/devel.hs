@@ -1,5 +1,5 @@
 {-# LANGUAGE PackageImports #-}
-import "some-example" Application (develMain)
+import "openapi-haskell-yesod-server" Application (develMain)
 import Prelude (IO)
 
 main :: IO ()

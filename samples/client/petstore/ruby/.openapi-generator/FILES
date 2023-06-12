@@ -7,14 +7,12 @@ Gemfile
 README.md
 Rakefile
 docs/DefaultApi.md
-docs/ExampleResponse.md
 git_push.sh
 lib/petstore.rb
 lib/petstore/api/default_api.rb
 lib/petstore/api_client.rb
 lib/petstore/api_error.rb
 lib/petstore/configuration.rb
-lib/petstore/models/example_response.rb
 lib/petstore/version.rb
 petstore.gemspec
 spec/api_client_spec.rb

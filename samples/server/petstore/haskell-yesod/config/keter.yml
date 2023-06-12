@@ -15,8 +15,8 @@ stanzas:
     #
     # The path given is for Stack projects. If you're still using cabal, change
     # to
-    # exec: ../dist/build/some-example/some-example
-    exec: ../dist/bin/some-example
+    # exec: ../dist/build/openapi-haskell-yesod-server/openapi-haskell-yesod-server
+    exec: ../dist/bin/openapi-haskell-yesod-server
 
     # Command line options passed to your application.
     args: []
@@ -25,7 +25,7 @@ stanzas:
       # You can specify one or more hostnames for your application to respond
       # to. The primary hostname will be used for generating your application
       # root.
-      - www.some-example.com
+      - www.openapi-haskell-yesod-server.com
 
     # Enable to force Keter to redirect to https
     # Can be added to any stanza
@@ -34,7 +34,7 @@ stanzas:
   # Static files.
   - type: static-files
     hosts:
-      - static.some-example.com
+      - static.openapi-haskell-yesod-server.com
     root: ../static
 
     # Uncomment to turn on directory listings.
@@ -44,9 +44,9 @@ stanzas:
   - type: redirect
 
     hosts:
-      - some-example.com
+      - openapi-haskell-yesod-server.com
     actions:
-      - host: www.some-example.com
+      - host: www.openapi-haskell-yesod-server.com
         # secure: false
         # port: 80
 

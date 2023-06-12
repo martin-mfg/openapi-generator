@@ -29,7 +29,6 @@ part 'auth/http_bearer_auth.dart';
 
 part 'api/default_api.dart';
 
-part 'model/example_response.dart';
 
 
 const _delimiters = {'csv': ',', 'ssv': ' ', 'tsv': '\t', 'pipes': '|'};

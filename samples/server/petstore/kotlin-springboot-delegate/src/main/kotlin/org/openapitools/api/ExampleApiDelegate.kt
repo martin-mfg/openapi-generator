@@ -1,6 +1,5 @@
 package org.openapitools.api
 
-import org.openapitools.model.ExampleResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -21,15 +20,7 @@ interface ExampleApiDelegate {
     /**
      * @see ExampleApi#retrieveSomething
      */
-    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
-        getRequest().ifPresent { request ->
-            for (mediaType in MediaType.parseMediaTypes(request.getHeader("Accept"))) {
-                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"myOnlyProperty\" : [ true, true ]}")
-                    break
-                }
-            }
-        }
+    fun retrieveSomething(): ResponseEntity<kotlin.Int> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
 
     }

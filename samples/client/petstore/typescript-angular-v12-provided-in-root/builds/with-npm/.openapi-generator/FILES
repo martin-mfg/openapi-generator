@@ -7,7 +7,6 @@ configuration.ts
 encoder.ts
 git_push.sh
 index.ts
-model/exampleResponse.ts
 model/models.ts
 ng-package.json
 package.json

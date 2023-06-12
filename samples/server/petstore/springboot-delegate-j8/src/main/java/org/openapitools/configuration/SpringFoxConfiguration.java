@@ -25,18 +25,18 @@ public class SpringFoxConfiguration {
 
     ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("Some example")
+            .title("")
             .description("dummy description")
             .license("")
             .licenseUrl("http://unlicense.org")
             .termsOfServiceUrl("")
-            .version("0.0.1")
+            .version("")
             .contact(new Contact("","", ""))
             .build();
     }
 
     @Bean
-    public Docket customImplementation(ServletContext servletContext, @Value("${openapi.someExample.base-path:}") String basePath) {
+    public Docket customImplementation(ServletContext servletContext, @Value("${openapi..base-path:}") String basePath) {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                     .apis(RequestHandlerSelectors.basePackage("org.openapitools.api"))

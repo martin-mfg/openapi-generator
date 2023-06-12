@@ -1,7 +1,7 @@
 # scala-akka-petstore-client
 
-Some example
-- API version: 0.0.1
+
+- API version: 
 
 dummy description
 
@@ -114,7 +114,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

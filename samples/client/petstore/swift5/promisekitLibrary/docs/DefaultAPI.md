@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **retrieveSomething**
 ```swift
-    open class func retrieveSomething() -> Promise<ExampleResponse>
+    open class func retrieveSomething() -> Promise<Int>
 ```
 
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**Int**
 
 ### Authorization
 
@@ -45,7 +45,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

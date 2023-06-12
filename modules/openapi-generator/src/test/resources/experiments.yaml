@@ -1,7 +1,7 @@
-openapi: 3.0.1
+openapi: 3.0.0
 info:
-  title: Some example
-  version: 0.0.1
+  title: ''
+  version: ""
   description: dummy description
 paths:
   /example/someMethod:
@@ -12,15 +12,6 @@ paths:
         200:
           description: The response with results
           content:
-            application/json:
+            "/":
               schema:
-                $ref: '#/components/schemas/ExampleResponse'
-components:
-  schemas:
-    ExampleResponse:
-      type: object
-      properties:
-        myOnlyProperty:
-          type: array
-          items:
-            type: boolean
+                type: integer

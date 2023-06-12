@@ -9,6 +9,7 @@ config/routes.yesodroutes
 config/settings.yml
 config/test-settings.yml
 package.yaml
+src/API/Types.hs
 src/Application.hs
 src/Error.hs
 src/Foundation.hs
@@ -17,7 +18,6 @@ src/Import.hs
 src/Import/NoFoundation.hs
 src/Settings.hs
 src/Settings/StaticFiles.hs
-src/SomeExample/Types.hs
 stack.yaml
 static/.gitkeep
 test/Spec.hs

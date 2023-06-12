@@ -2,7 +2,6 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.ExampleResponse;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -49,10 +48,10 @@ public class DefaultApi {
      * 
      * get some object
      * <p><b>200</b> - The response with results
-     * @return ExampleResponse
+     * @return Integer
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ExampleResponse retrieveSomething() throws RestClientException {
+    public Integer retrieveSomething() throws RestClientException {
         return retrieveSomethingWithHttpInfo().getBody();
     }
 
@@ -60,10 +59,10 @@ public class DefaultApi {
      * 
      * get some object
      * <p><b>200</b> - The response with results
-     * @return ResponseEntity&lt;ExampleResponse&gt;
+     * @return ResponseEntity&lt;Integer&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ExampleResponse> retrieveSomethingWithHttpInfo() throws RestClientException {
+    public ResponseEntity<Integer> retrieveSomethingWithHttpInfo() throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -73,7 +72,7 @@ public class DefaultApi {
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/json"
+            "/"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] localVarContentTypes = {  };
@@ -81,7 +80,7 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<ExampleResponse> localReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
+        ParameterizedTypeReference<Integer> localReturnType = new ParameterizedTypeReference<Integer>() {};
         return apiClient.invokeAPI("/example/someMethod", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

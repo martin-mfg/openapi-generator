@@ -12,13 +12,13 @@ use serde::{Serialize, Deserialize};
 type ServiceError = Box<dyn Error + Send + Sync + 'static>;
 
 pub const BASE_PATH: &str = "";
-pub const API_VERSION: &str = "0.0.1";
+pub const API_VERSION: &str = "";
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub enum RetrieveSomethingResponse {
     /// The response with results
     TheResponseWithResults
-    (models::ExampleResponse)
+    (String)
 }
 
 /// API

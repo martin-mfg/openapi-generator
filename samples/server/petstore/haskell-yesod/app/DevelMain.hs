@@ -6,7 +6,7 @@
 --
 -- 1. Start up GHCi
 --
--- $ stack ghci some-example:lib --no-load --work-dir .stack-work-devel
+-- $ stack ghci openapi-haskell-yesod-server:lib --no-load --work-dir .stack-work-devel
 --
 -- 2. Load this module
 --

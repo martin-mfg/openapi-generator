@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 ## retrieveSomething
 
-> CompletableFuture<ExampleResponse> retrieveSomething()
+> CompletableFuture<Integer> retrieveSomething()
 
 
 
@@ -35,7 +35,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<ExampleResponse> result = apiInstance.retrieveSomething();
+            CompletableFuture<Integer> result = apiInstance.retrieveSomething();
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<[**ExampleResponse**](ExampleResponse.md)>
+CompletableFuture<**Integer**>
 
 
 ### Authorization
@@ -64,7 +64,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -73,7 +73,7 @@ No authorization required
 
 ## retrieveSomethingWithHttpInfo
 
-> CompletableFuture<ApiResponse<ExampleResponse>> retrieveSomething retrieveSomethingWithHttpInfo()
+> CompletableFuture<ApiResponse<Integer>> retrieveSomething retrieveSomethingWithHttpInfo()
 
 
 
@@ -98,7 +98,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<ApiResponse<ExampleResponse>> response = apiInstance.retrieveSomethingWithHttpInfo();
+            CompletableFuture<ApiResponse<Integer>> response = apiInstance.retrieveSomethingWithHttpInfo();
             System.out.println("Status code: " + response.get().getStatusCode());
             System.out.println("Response headers: " + response.get().getHeaders());
             System.out.println("Response body: " + response.get().getData());
@@ -126,7 +126,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<ApiResponse<[**ExampleResponse**](ExampleResponse.md)>>
+CompletableFuture<ApiResponse<**Integer**>>
 
 
 ### Authorization
@@ -136,7 +136,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 ### HTTP response details
 | Status code | Description | Response headers |

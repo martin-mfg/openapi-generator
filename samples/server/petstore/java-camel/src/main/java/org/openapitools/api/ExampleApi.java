@@ -30,8 +30,10 @@ public class ExampleApi extends RouteBuilder {
             .get("/example/someMethod")
                 .description("")
                 .id("retrieveSomethingApi")
-                .produces("application/json")
-                .outType(ExampleResponse.class)
+                .clientRequestValidation(false)
+                .bindingMode(RestBindingMode.off)
+                .produces("/")
+                .outType(Integer.class)
                 .to("direct:validate-retrieveSomething");
         
     }

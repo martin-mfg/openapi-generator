@@ -5,12 +5,11 @@
 #include "../external/cJSON.h"
 #include "../include/keyValuePair.h"
 #include "../include/binary.h"
-#include "../model/example_response.h"
 
 
 // get some object
 //
-example_response_t*
+int*
 DefaultAPI_retrieveSomething(apiClient_t *apiClient);
 
 

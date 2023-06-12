@@ -1,4 +1,4 @@
-# php-base - PHP Slim 4 Server library for Some example
+# php-base - PHP Slim 4 Server library for 
 
 * [OpenAPI Generator](https://openapi-generator.tech)
 * [Slim 4 Documentation](https://www.slimframework.com/docs/v4/)
@@ -157,6 +157,5 @@ Class | Method | HTTP request | Description
 
 ## Models
 
-* OpenAPIServer\Model\ExampleResponse
 
 

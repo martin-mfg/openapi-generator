@@ -1,7 +1,7 @@
 # scala-sttp-petstore
 
-Some example
-- API version: 0.0.1
+
+- API version: 
 
 dummy description
 
@@ -70,7 +70,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ExampleResponse](ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

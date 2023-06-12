@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ```c
 // get some object
 //
-example_response_t* DefaultAPI_retrieveSomething(apiClient_t *apiClient);
+int* DefaultAPI_retrieveSomething(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -21,7 +21,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[example_response_t](example_response.md) *
+int*
+
 
 
 ### Authorization
@@ -31,7 +32,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,11 +1,11 @@
 {
 	"info": {
-		"name": "Some example",
+		"name": "",
 		"description": {
 		    "content": "dummy description",
 		    "type": "text/markdown"
 		},
-		"version": "0.0.1",
+		"version": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -23,7 +23,7 @@
                                     "header": [
                                         {
                                             "key": "Accept",
-                                            "value": "application/json"
+                                            "value": "/"
                                         }
                                     ],
                                     "body": {

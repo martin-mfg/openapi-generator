@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponse;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -17,7 +16,7 @@ import javax.validation.Valid;
 
 @org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition(
    info = @org.eclipse.microprofile.openapi.annotations.info.Info(
-        title = "", version="0.0.1", description=""
+        title = "", version="", description=""
    ),
    tags = @org.eclipse.microprofile.openapi.annotations.tags.Tag(name="", description="")
 )
@@ -27,17 +26,17 @@ import javax.validation.Valid;
 public class ExampleApi {
 
     @GET
-    @Produces({ "application/json" })
-    @ApiOperation(value = "", notes = "get some object", response = ExampleResponse.class, tags={  })
+    @Produces({ "/" })
+    @ApiOperation(value = "", notes = "get some object", response = Integer.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "The response with results", response = Integer.class)
     })
     
     @org.eclipse.microprofile.openapi.annotations.Operation(operationId = "retrieveSomething", summary = "", description = "get some object")
     
     @org.eclipse.microprofile.openapi.annotations.responses.APIResponses(value = { 
             @org.eclipse.microprofile.openapi.annotations.responses.APIResponse(responseCode = "200", description = "The response with results",  content = { 
-                @org.eclipse.microprofile.openapi.annotations.media.Content(mediaType="application/json", schema = @org.eclipse.microprofile.openapi.annotations.media.Schema(implementation = ExampleResponse.class))
+                @org.eclipse.microprofile.openapi.annotations.media.Content(mediaType="/", schema = @org.eclipse.microprofile.openapi.annotations.media.Schema(implementation = Integer.class))
             })
         })
     public Response retrieveSomething() {

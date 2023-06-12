@@ -1,7 +1,6 @@
 package org.openapitools.api;
 
 import springfox.documentation.annotations.ApiIgnore;
-import org.openapitools.model.ExampleResponse;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ import javax.annotation.Generated;
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 @Controller
-@RequestMapping("${openapi.someExample.base-path:}")
+@RequestMapping("${openapi..base-path:}")
 public class ExampleApiController implements ExampleApi {
 
     private final ExampleApiDelegate delegate;

@@ -19,7 +19,6 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import org.openapitools.client.models.ExampleResponse
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -49,7 +48,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     /**
      * 
      * get some object
-     * @return ExampleResponse
+     * @return kotlin.Int
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -58,11 +57,11 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun retrieveSomething() : ExampleResponse {
+    fun retrieveSomething() : kotlin.Int {
         val localVarResponse = retrieveSomethingWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ExampleResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.Int
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -79,16 +78,16 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     /**
      * 
      * get some object
-     * @return ApiResponse<ExampleResponse?>
+     * @return ApiResponse<kotlin.Int?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun retrieveSomethingWithHttpInfo() : ApiResponse<ExampleResponse?> {
+    fun retrieveSomethingWithHttpInfo() : ApiResponse<kotlin.Int?> {
         val localVariableConfig = retrieveSomethingRequestConfig()
 
-        return request<Unit, ExampleResponse>(
+        return request<Unit, kotlin.Int>(
             localVariableConfig
         )
     }
@@ -102,8 +101,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
-
+        
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/example/someMethod",

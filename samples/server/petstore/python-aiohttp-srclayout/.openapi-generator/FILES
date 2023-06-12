@@ -9,7 +9,6 @@ src/openapi_server/controllers/default_controller.py
 src/openapi_server/controllers/security_controller_.py
 src/openapi_server/models/__init__.py
 src/openapi_server/models/base_model_.py
-src/openapi_server/models/example_response.py
 src/openapi_server/openapi/openapi.yaml
 src/openapi_server/typing_utils.py
 src/openapi_server/util.py

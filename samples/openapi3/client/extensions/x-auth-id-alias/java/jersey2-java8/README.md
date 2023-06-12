@@ -1,8 +1,8 @@
 # openapi3-extensions-x-auth-id-alias-jersey2-java8
 
-Some example
 
-- API version: 0.0.1
+
+- API version: 
 
 dummy description
 
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>openapi3-extensions-x-auth-id-alias-jersey2-java8</artifactId>
-  <version>0.0.1</version>
+  <version></version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:openapi3-extensions-x-auth-id-alias-jersey2-java8:0.0.1"
+     implementation "org.openapitools:openapi3-extensions-x-auth-id-alias-jersey2-java8:"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/openapi3-extensions-x-auth-id-alias-jersey2-java8-0.0.1.jar`
+- `target/openapi3-extensions-x-auth-id-alias-jersey2-java8-.jar`
 - `target/lib/*.jar`
 
 ## Usage
@@ -117,7 +117,7 @@ public class DefaultApiExample {
         
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ExampleResponse result = apiInstance.retrieveSomething();
+            Integer result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -142,7 +142,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

@@ -1,4 +1,4 @@
-name:    some-example
+name:    openapi-haskell-yesod-server
 version: "0.0.0"
 
 dependencies:
@@ -44,7 +44,7 @@ library:
 
 # Runnable executable for our application
 executables:
-  some-example:
+  openapi-haskell-yesod-server:
     main: main.hs
     source-dirs: app
     ghc-options:
@@ -52,19 +52,19 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - some-example
+    - openapi-haskell-yesod-server
     when:
     - condition: flag(library-only)
       buildable: false
 
 # Test suite
 tests:
-  some-example-test:
+  openapi-haskell-yesod-server-test:
     main: Spec.hs
     source-dirs: test
     ghc-options: -Wall
     dependencies:
-    - some-example
+    - openapi-haskell-yesod-server
     - hspec >=2.0.0
     - yesod-test
 

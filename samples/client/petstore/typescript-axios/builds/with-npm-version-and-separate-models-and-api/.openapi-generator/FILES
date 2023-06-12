@@ -8,7 +8,6 @@ common.ts
 configuration.ts
 git_push.sh
 index.ts
-model/some/levels/deep/example-response.ts
 model/some/levels/deep/index.ts
 package.json
 tsconfig.json

@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.name             = "SwaggerClient"
     s.version          = "1.0.0"
 
-    s.summary          = "Some example"
+    s.summary          = ""
     s.description      = <<-DESC
                          dummy description
                          DESC

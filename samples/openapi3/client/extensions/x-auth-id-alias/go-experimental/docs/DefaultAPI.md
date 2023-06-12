@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## RetrieveSomething
 
-> ExampleResponse RetrieveSomething(ctx).Execute()
+> int32 RetrieveSomething(ctx).Execute()
 
 
 
@@ -37,7 +37,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.RetrieveSomething``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RetrieveSomething`: ExampleResponse
+    // response from `RetrieveSomething`: int32
     fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.RetrieveSomething`: %v\n", resp)
 }
 ```
@@ -53,7 +53,7 @@ Other parameters are passed through a pointer to a apiRetrieveSomethingRequest s
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**int32**
 
 ### Authorization
 
@@ -62,7 +62,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

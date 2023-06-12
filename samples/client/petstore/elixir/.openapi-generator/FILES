@@ -6,7 +6,6 @@ config/runtime.exs
 lib/openapi_petstore/api/default.ex
 lib/openapi_petstore/connection.ex
 lib/openapi_petstore/deserializer.ex
-lib/openapi_petstore/model/example_response.ex
 lib/openapi_petstore/request_builder.ex
 mix.exs
 test/test_helper.exs

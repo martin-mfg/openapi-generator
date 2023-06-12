@@ -27,7 +27,7 @@ else()
     message (STATUS "OpenSSL Not found.")
 endif()
 
-set(pkgName "some_example")
+set(pkgName "")
 
 # this default version can be overridden in PreTarget.cmake
 set(PROJECT_VERSION_MAJOR 0)
@@ -54,7 +54,6 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
-    model/example_response.c
     api/DefaultAPI.c
 
 )
@@ -66,7 +65,6 @@ set(HDRS
     include/keyValuePair.h
     external/cJSON.h
     model/object.h
-    model/example_response.h
     api/DefaultAPI.h
 
 )

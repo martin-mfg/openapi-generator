@@ -9,7 +9,7 @@ The following server methods must be implemented:
 
 - **retrieve_something**
     - *invocation:* GET /example/someMethod
-    - *signature:* retrieve_something(req::HTTP.Request;) -> ExampleResponse
+    - *signature:* retrieve_something(req::HTTP.Request;) -> Int64
 """
 module PetStoreServer
 
@@ -20,7 +20,7 @@ using TimeZones
 using OpenAPI
 using OpenAPI.Servers
 
-const API_VERSION = "0.0.1"
+const API_VERSION = ""
 
 include("modelincludes.jl")
 

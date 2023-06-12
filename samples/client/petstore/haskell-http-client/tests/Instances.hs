@@ -3,8 +3,8 @@
 
 module Instances where
 
-import SomeExample.Model
-import SomeExample.Core
+import OpenAPI.Model
+import OpenAPI.Core
 
 import qualified Data.Aeson as A
 import qualified Data.ByteString.Lazy as BL
@@ -113,14 +113,6 @@ arbitraryReducedMaybeValue n = do
 
 -- * Models
 
-instance Arbitrary ExampleResponse where
-  arbitrary = sized genExampleResponse
-
-genExampleResponse :: Int -> Gen ExampleResponse
-genExampleResponse n =
-  ExampleResponse
-    <$> arbitraryReducedMaybe n -- exampleResponseMyOnlyProperty :: Maybe [Bool]
-  
 
 
 

@@ -18,7 +18,7 @@ your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:openapi_petstore, "~> 0.0.1"}]
+  [{:openapi_petstore, "~> "}]
 end
 ```
 

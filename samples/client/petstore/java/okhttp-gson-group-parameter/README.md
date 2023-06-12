@@ -1,7 +1,7 @@
 # petstore-okhttp-gson-group-parameter
 
-Some example
-- API version: 0.0.1
+
+- API version: 
 
 dummy description
 
@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>petstore-okhttp-gson-group-parameter</artifactId>
-  <version>0.0.1</version>
+  <version></version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -55,7 +55,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:petstore-okhttp-gson-group-parameter:0.0.1"
+     implementation "org.openapitools:petstore-okhttp-gson-group-parameter:"
   }
 ```
 
@@ -69,7 +69,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/petstore-okhttp-gson-group-parameter-0.0.1.jar`
+* `target/petstore-okhttp-gson-group-parameter-.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -92,7 +92,7 @@ public class Example {
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     try {
-      ExampleResponse result = apiInstance.retrieveSomething()
+      Integer result = apiInstance.retrieveSomething()
             .execute();
       System.out.println(result);
     } catch (ApiException e) {
@@ -118,7 +118,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

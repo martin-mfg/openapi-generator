@@ -1,7 +1,6 @@
 README.md
 build.gradle
 docs/DefaultApi.md
-docs/ExampleResponse.md
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -16,7 +15,6 @@ src/main/kotlin/org/openapitools/client/infrastructure/CollectionFormats.kt
 src/main/kotlin/org/openapitools/client/infrastructure/LocalDateAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/LocalDateTimeAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/OffsetDateTimeAdapter.kt
-src/main/kotlin/org/openapitools/client/models/ExampleResponse.kt
 src/main/kotlin/org/openapitools/client/request/GsonRequest.kt
 src/main/kotlin/org/openapitools/client/request/IRequestFactory.kt
 src/main/kotlin/org/openapitools/client/request/RequestFactory.kt

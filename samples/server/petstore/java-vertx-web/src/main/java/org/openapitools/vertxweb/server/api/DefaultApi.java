@@ -1,6 +1,5 @@
 package org.openapitools.vertxweb.server.api;
 
-import org.openapitools.vertxweb.server.model.ExampleResponse;
 
 import org.openapitools.vertxweb.server.ApiResponse;
 
@@ -11,5 +10,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface DefaultApi  {
-    Future<ApiResponse<ExampleResponse>> retrieveSomething();
+    Future<ApiResponse<Integer>> retrieveSomething();
 }

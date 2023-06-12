@@ -1,6 +1,5 @@
 package controllers;
 
-import apimodels.ExampleResponse;
 
 import play.mvc.Http;
 import java.util.List;
@@ -13,9 +12,9 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen")
 public class DefaultApiControllerImp  {
     
-    public ExampleResponse retrieveSomething(Http.Request request) throws Exception {
+    public Integer retrieveSomething(Http.Request request) throws Exception {
         //Do your magic!!!
-        return new ExampleResponse();
+        return new Integer();
     }
 
 }

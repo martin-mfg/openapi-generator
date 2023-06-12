@@ -8,7 +8,6 @@ include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
 add_library(${PROJECT_NAME}
-  PFXExampleResponse.h
   PFXDefaultApi.h
   PFXHelpers.h
   PFXHttpRequest.h
@@ -18,7 +17,6 @@ add_library(${PROJECT_NAME}
   PFXServerConfiguration.h
   PFXServerVariable.h
   PFXOauth.h
-  PFXExampleResponse.cpp
   PFXDefaultApi.cpp
   PFXHelpers.cpp
   PFXHttpRequest.cpp

@@ -9,7 +9,7 @@ To see how to make this your own, look here:
 
 [README]((https://openapi-generator.tech))
 
-- API version: 0.0.1
+- API version: 
 
 ## QHTTPEngine
 

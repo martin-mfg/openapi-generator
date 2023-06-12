@@ -11,4 +11,3 @@ export 'package:openapi/src/model/date.dart';
 
 export 'package:openapi/src/api/default_api.dart';
 
-export 'package:openapi/src/model/example_response.dart';

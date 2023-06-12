@@ -1,6 +1,6 @@
 {
-  "name": "some_example",
-  "version": "0.0.1",
+  "name": "openapi-js-client",
+  "version": "1.0.0",
   "description": "dummy description",
   "license": "Unlicense",
   "main": "dist/index.js",

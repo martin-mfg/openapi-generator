@@ -4,7 +4,6 @@ import { Observable, of, from } from '../rxjsStub';
 import {mergeMap, map} from  '../rxjsStub';
 import { injectable, inject, optional } from "inversify";
 import { AbstractConfiguration } from "../services/configuration";
-import { ExampleResponse } from '../models/ExampleResponse';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
 import { AbstractDefaultApiRequestFactory, AbstractDefaultApiResponseProcessor } from "../apis/DefaultApi.service";
@@ -28,7 +27,7 @@ export class ObservableDefaultApi {
     /**
      * get some object
      */
-    public retrieveSomething(_options?: Configuration): Observable<ExampleResponse> {
+    public retrieveSomething(_options?: Configuration): Observable<number> {
         const requestContextPromise = this.requestFactory.retrieveSomething(_options);
 
         // build promise chain

@@ -12,12 +12,12 @@ This can be used to construct the `OpenAPI.Clients.Client` instance.
 basepath(::Type{ DefaultApi }) = "http://localhost"
 
 const _returntypes_retrieve_something_DefaultApi = Dict{Regex,Type}(
-    Regex("^" * replace("200", "x"=>".") * "\$") => ExampleResponse,
+    Regex("^" * replace("200", "x"=>".") * "\$") => Int64,
 )
 
 function _oacinternal_retrieve_something(_api::DefaultApi; _mediaType=nothing)
     _ctx = OpenAPI.Clients.Ctx(_api.client, "GET", _returntypes_retrieve_something_DefaultApi, "/example/someMethod", [])
-    OpenAPI.Clients.set_header_accept(_ctx, ["application/json", ])
+    OpenAPI.Clients.set_header_accept(_ctx, ["/", ])
     OpenAPI.Clients.set_header_content_type(_ctx, (_mediaType === nothing) ? [] : [_mediaType])
     return _ctx
 end
@@ -26,7 +26,7 @@ end
 
 Params:
 
-Return: ExampleResponse, OpenAPI.Clients.ApiResponse
+Return: Int64, OpenAPI.Clients.ApiResponse
 """
 function retrieve_something(_api::DefaultApi; _mediaType=nothing)
     _ctx = _oacinternal_retrieve_something(_api; _mediaType=_mediaType)

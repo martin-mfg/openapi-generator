@@ -2,7 +2,6 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.ExampleResponse;
 
 import java.util.HashMap;
 import java.util.List;
@@ -50,7 +49,7 @@ public class DefaultApi {
      * 
      * get some object
      * <p><b>200</b> - The response with results
-     * @return ExampleResponse
+     * @return Integer
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
     private ResponseSpec retrieveSomethingRequestCreation() throws WebClientResponseException {
@@ -64,7 +63,7 @@ public class DefaultApi {
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/json"
+            "/"
         };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] localVarContentTypes = { };
@@ -72,7 +71,7 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
+        ParameterizedTypeReference<Integer> localVarReturnType = new ParameterizedTypeReference<Integer>() {};
         return apiClient.invokeAPI("/example/someMethod", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     }
 
@@ -80,11 +79,11 @@ public class DefaultApi {
      * 
      * get some object
      * <p><b>200</b> - The response with results
-     * @return ExampleResponse
+     * @return Integer
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ExampleResponse> retrieveSomething() throws WebClientResponseException {
-        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
+    public Mono<Integer> retrieveSomething() throws WebClientResponseException {
+        ParameterizedTypeReference<Integer> localVarReturnType = new ParameterizedTypeReference<Integer>() {};
         return retrieveSomethingRequestCreation().bodyToMono(localVarReturnType);
     }
 
@@ -92,11 +91,11 @@ public class DefaultApi {
      * 
      * get some object
      * <p><b>200</b> - The response with results
-     * @return ResponseEntity&lt;ExampleResponse&gt;
+     * @return ResponseEntity&lt;Integer&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<ExampleResponse>> retrieveSomethingWithHttpInfo() throws WebClientResponseException {
-        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
+    public Mono<ResponseEntity<Integer>> retrieveSomethingWithHttpInfo() throws WebClientResponseException {
+        ParameterizedTypeReference<Integer> localVarReturnType = new ParameterizedTypeReference<Integer>() {};
         return retrieveSomethingRequestCreation().toEntity(localVarReturnType);
     }
 

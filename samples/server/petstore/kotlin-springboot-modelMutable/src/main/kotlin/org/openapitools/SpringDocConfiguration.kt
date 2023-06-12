@@ -19,9 +19,9 @@ class SpringDocConfiguration {
         return OpenAPI()
             .info(
                 Info()
-                    .title("Some example")
+                    .title("")
                     .description("dummy description")
-                    .version("0.0.1")
+                    .version("")
             )
     }
 }

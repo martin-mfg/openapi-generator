@@ -1,4 +1,4 @@
-# Some example - MicroProfile Rest Client
+#  - MicroProfile Rest Client
 
 dummy description
 

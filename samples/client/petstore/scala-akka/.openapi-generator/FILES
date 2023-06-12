@@ -1,7 +1,6 @@
 README.md
 build.sbt
 docs/DefaultApi.md
-docs/ExampleResponse.md
 pom.xml
 project/build.properties
 src/main/resources/reference.conf
@@ -12,4 +11,3 @@ src/main/scala/org/openapitools/client/core/ApiRequest.scala
 src/main/scala/org/openapitools/client/core/ApiSettings.scala
 src/main/scala/org/openapitools/client/core/Serializers.scala
 src/main/scala/org/openapitools/client/core/requests.scala
-src/main/scala/org/openapitools/client/model/ExampleResponse.scala

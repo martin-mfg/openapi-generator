@@ -26,7 +26,7 @@ After the client library is installed/deployed, you can use it in your Maven pro
 <dependency>
     <groupId>org.openapitools</groupId>
     <artifactId>petstore-java-client-retrofit2-play26</artifactId>
-    <version>0.0.1</version>
+    <version></version>
     <scope>compile</scope>
 </dependency>
 

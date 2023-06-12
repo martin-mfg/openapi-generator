@@ -6,10 +6,8 @@ api_default.go
 client.go
 configuration.go
 docs/DefaultAPI.md
-docs/ExampleResponse.md
 git_push.sh
 go.mod
 go.sum
-model_example_response.go
 response.go
 utils.go

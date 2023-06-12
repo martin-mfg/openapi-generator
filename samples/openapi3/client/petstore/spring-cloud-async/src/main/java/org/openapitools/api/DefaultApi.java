@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponse;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -49,16 +48,16 @@ public interface DefaultApi {
         description = "get some object",
         responses = {
             @ApiResponse(responseCode = "200", description = "The response with results", content = {
-                @Content(mediaType = "application/json", schema = @Schema(implementation = ExampleResponse.class))
+                @Content(mediaType = "/", schema = @Schema(implementation = Integer.class))
             })
         }
     )
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
-        produces = "application/json"
+        produces = "/"
     )
-    CompletableFuture<ResponseEntity<ExampleResponse>> retrieveSomething(
+    CompletableFuture<ResponseEntity<Integer>> retrieveSomething(
         
     );
 

@@ -5,7 +5,7 @@
   <packaging>war</packaging>
   <name>cxf-server-non-spring</name>
   <description>dummy description</description>
-  <version>0.0.1</version>
+  <version></version>
 
 
   <build>

@@ -8,7 +8,6 @@ import org.openapitools.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
-import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -49,7 +48,7 @@ public class DefaultApi {
   /**
    * 
    * get some object
-   * @return ExampleResponse
+   * @return Integer
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -57,14 +56,14 @@ public class DefaultApi {
        <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
    */
-  public ExampleResponse retrieveSomething() throws ApiException {
+  public Integer retrieveSomething() throws ApiException {
     return retrieveSomethingWithHttpInfo().getData();
   }
 
   /**
    * 
    * get some object
-   * @return ApiResponse&lt;ExampleResponse&gt;
+   * @return ApiResponse&lt;Integer&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -72,10 +71,10 @@ public class DefaultApi {
        <tr><td> 200 </td><td> The response with results </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<ExampleResponse> retrieveSomethingWithHttpInfo() throws ApiException {
-    String localVarAccept = apiClient.selectHeaderAccept("application/json");
+  public ApiResponse<Integer> retrieveSomethingWithHttpInfo() throws ApiException {
+    String localVarAccept = apiClient.selectHeaderAccept("/");
     String localVarContentType = apiClient.selectHeaderContentType();
-    GenericType<ExampleResponse> localVarReturnType = new GenericType<ExampleResponse>() {};
+    GenericType<Integer> localVarReturnType = new GenericType<Integer>() {};
     return apiClient.invokeAPI("DefaultApi.retrieveSomething", "/example/someMethod", "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                null, localVarReturnType, false);

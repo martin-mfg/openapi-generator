@@ -1,6 +1,5 @@
 package org.openapitools.server.apis;
 
-import org.openapitools.server.models.ExampleResponse
 
 import javax.ws.rs.*
 import javax.ws.rs.core.Response
@@ -15,7 +14,7 @@ import java.io.InputStream
 class DefaultApi {
 
     @GET
-    @Produces("application/json")
+    @Produces("/")
     suspend fun retrieveSomething(): Response {
         return Response.ok().entity("magic!").build();
     }

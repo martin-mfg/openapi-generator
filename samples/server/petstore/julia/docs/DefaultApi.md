@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieve_something**
-> retrieve_something(req::HTTP.Request;) -> ExampleResponse
+> retrieve_something(req::HTTP.Request;) -> Int64
 
 
 
@@ -19,7 +19,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**Int64**
 
 ### Authorization
 
@@ -28,7 +28,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -5,7 +5,6 @@ import org.openapitools.model.*;
 import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
-import org.openapitools.model.ExampleResponse;
 
 import java.util.List;
 import java.util.Map;
@@ -29,9 +28,9 @@ public interface ExampleApi  {
     @GET
     
     
-    @Produces({ "application/json" })
-    @io.swagger.annotations.ApiOperation(value = "", notes = "get some object", response = ExampleResponse.class, tags={  })
+    @Produces({ "/" })
+    @io.swagger.annotations.ApiOperation(value = "", notes = "get some object", response = Integer.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class) })
+        @io.swagger.annotations.ApiResponse(code = 200, message = "The response with results", response = Integer.class) })
     public Response retrieveSomething(@Context SecurityContext securityContext);
 }

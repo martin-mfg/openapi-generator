@@ -4,7 +4,7 @@
   <artifactId>openapiv3-jaxrs-jersey-petstore-server</artifactId>
   <packaging>jar</packaging>
   <name>openapiv3-jaxrs-jersey-petstore-server</name>
-  <version>0.0.1</version>
+  <version></version>
 
 
   <licenses>

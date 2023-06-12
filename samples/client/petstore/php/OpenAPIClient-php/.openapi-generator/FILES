@@ -4,13 +4,11 @@
 README.md
 composer.json
 docs/Api/DefaultApi.md
-docs/Model/ExampleResponse.md
 git_push.sh
 lib/Api/DefaultApi.php
 lib/ApiException.php
 lib/Configuration.php
 lib/HeaderSelector.php
-lib/Model/ExampleResponse.php
 lib/Model/ModelInterface.php
 lib/ObjectSerializer.php
 phpunit.xml.dist

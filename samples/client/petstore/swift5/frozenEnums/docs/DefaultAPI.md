@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **retrieveSomething**
 ```swift
-    open class func retrieveSomething(completion: @escaping (_ data: ExampleResponse?, _ error: Error?) -> Void)
+    open class func retrieveSomething(completion: @escaping (_ data: Int?, _ error: Error?) -> Void)
 ```
 
 
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**Int**
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

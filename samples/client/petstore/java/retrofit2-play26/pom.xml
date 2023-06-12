@@ -5,7 +5,7 @@
     <artifactId>petstore-java-client-retrofit2-play26</artifactId>
     <packaging>jar</packaging>
     <name>petstore-java-client-retrofit2-play26</name>
-    <version>0.0.1</version>
+    <version></version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

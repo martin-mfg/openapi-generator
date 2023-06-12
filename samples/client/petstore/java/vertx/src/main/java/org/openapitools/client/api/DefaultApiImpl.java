@@ -1,6 +1,5 @@
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.ExampleResponse;
 
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
@@ -45,7 +44,7 @@ public class DefaultApiImpl implements DefaultApi {
     * get some object
     * @param resultHandler Asynchronous result handler
     */
-    public void retrieveSomething(Handler<AsyncResult<ExampleResponse>> resultHandler) {
+    public void retrieveSomething(Handler<AsyncResult<Integer>> resultHandler) {
         retrieveSomething(null, resultHandler);
     }
 
@@ -55,7 +54,7 @@ public class DefaultApiImpl implements DefaultApi {
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void retrieveSomething(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
+    public void retrieveSomething(ApiClient.AuthInfo authInfo, Handler<AsyncResult<Integer>> resultHandler) {
         Object localVarBody = null;
         
         // create path and map variables
@@ -74,10 +73,10 @@ public class DefaultApiImpl implements DefaultApi {
         // TODO: sending files within multipart/form-data is not supported yet (because of vertx web-client)
         Map<String, Object> localVarFormParams = new HashMap<>();
         
-        String[] localVarAccepts = { "application/json" };
+        String[] localVarAccepts = { "/" };
         String[] localVarContentTypes = {  };
         String[] localVarAuthNames = new String[] {  };
-        TypeReference<ExampleResponse> localVarReturnType = new TypeReference<ExampleResponse>() {};
+        TypeReference<Integer> localVarReturnType = new TypeReference<Integer>() {};
         apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccepts, localVarContentTypes, localVarAuthNames, authInfo, localVarReturnType, resultHandler);
     }
 

@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponse;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -19,10 +18,10 @@ import javax.validation.Valid;
 public class ExampleApi {
 
     @GET
-    @Produces({ "application/json" })
-    @ApiOperation(value = "", notes = "get some object", response = ExampleResponse.class, tags={  })
+    @Produces({ "/" })
+    @ApiOperation(value = "", notes = "get some object", response = Integer.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "The response with results", response = Integer.class)
     })
     public Response retrieveSomething() {
         return Response.ok().entity("magic!").build();

@@ -1,7 +1,6 @@
 #import "SWGDefaultApi.h"
 #import "SWGQueryParamCollection.h"
 #import "SWGApiClient.h"
-#import "SWGExampleResponse.h"
 
 
 @interface SWGDefaultApi ()
@@ -52,10 +51,10 @@ NSInteger kSWGDefaultApiMissingParamErrorCode = 234513;
 ///
 /// 
 /// get some object
-///  @returns SWGExampleResponse*
+///  @returns NSNumber*
 ///
 -(NSURLSessionTask*) retrieveSomethingWithCompletionHandler: 
-    (void (^)(SWGExampleResponse* output, NSError* error)) handler {
+    (void (^)(NSNumber* output, NSError* error)) handler {
     NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/example/someMethod"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
@@ -64,7 +63,7 @@ NSInteger kSWGDefaultApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"/"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -93,10 +92,10 @@ NSInteger kSWGDefaultApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"SWGExampleResponse*"
+                              responseType: @"NSNumber*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((SWGExampleResponse*)data, error);
+                                    handler((NSNumber*)data, error);
                                 }
                             }];
 }

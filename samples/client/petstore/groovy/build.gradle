@@ -3,7 +3,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'org.openapitools'
-version = '0.0.1'
+version = ''
 archivesBaseName = 'openapi-gen-groovy'
 
 wrapper {

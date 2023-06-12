@@ -5,7 +5,6 @@
 */
 package org.openapitools.api
 
-import org.openapitools.model.ExampleResponse
 import io.swagger.v3.oas.annotations.*
 import io.swagger.v3.oas.annotations.enums.*
 import io.swagger.v3.oas.annotations.media.*
@@ -44,15 +43,15 @@ interface ExampleApi {
         operationId = "retrieveSomething",
         description = """get some object""",
         responses = [
-            ApiResponse(responseCode = "200", description = "The response with results", content = [Content(schema = Schema(implementation = ExampleResponse::class))])
+            ApiResponse(responseCode = "200", description = "The response with results", content = [Content(schema = Schema(implementation = kotlin.Int::class))])
         ]
     )
     @RequestMapping(
             method = [RequestMethod.GET],
             value = ["/example/someMethod"],
-            produces = ["application/json"]
+            produces = ["/"]
     )
-    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
+    fun retrieveSomething(): ResponseEntity<kotlin.Int> {
         return getDelegate().retrieveSomething()
     }
 }

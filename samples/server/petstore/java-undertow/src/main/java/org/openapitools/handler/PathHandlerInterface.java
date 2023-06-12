@@ -1,9 +1,9 @@
 /*
- * Some example
+ * 
  *
  * dummy description
  *
- * OpenAPI document version: 0.0.1
+ * OpenAPI document version: 
  * 
  *
  * AUTO-GENERATED FILE, DO NOT MODIFY!
@@ -23,8 +23,8 @@ public interface PathHandlerInterface {
      *
      * <p><b>Endpoint</b>: {@link Methods#GET GET} "/example/someMethod" (<i>privileged: false</i>)</p>
      *
-     * <p><b>Produces</b>: [{mediaType=application/json}]</p>
-     * <p><b>Returns</b>: {@link ExampleResponse}</p>
+     * <p><b>Produces</b>: [{mediaType=/}]</p>
+     * <p><b>Returns</b>: {@link Integer}</p>
      *
      * <p><b>Responses</b>:</p>
      * <ul>

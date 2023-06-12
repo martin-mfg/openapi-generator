@@ -1,7 +1,6 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.ExampleResponse
 
 class DefaultApi {
     String basePath = "http://localhost"
@@ -24,7 +23,7 @@ class DefaultApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ExampleResponse.class )
+                    Integer.class )
 
     }
 

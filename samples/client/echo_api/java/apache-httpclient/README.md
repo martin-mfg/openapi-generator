@@ -1,8 +1,8 @@
 # echo-api-apache-httpclient
 
-Some example
 
-- API version: 0.0.1
+
+- API version: 
 
 dummy description
 
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>echo-api-apache-httpclient</artifactId>
-  <version>0.0.1</version>
+  <version></version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools:echo-api-apache-httpclient:0.0.1"
+compile "org.openapitools:echo-api-apache-httpclient:"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/echo-api-apache-httpclient-0.0.1.jar`
+- `target/echo-api-apache-httpclient-.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -85,7 +85,7 @@ public class DefaultApiExample {
         
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ExampleResponse result = apiInstance.retrieveSomething();
+            Integer result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -110,7 +110,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

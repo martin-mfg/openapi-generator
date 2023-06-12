@@ -4,7 +4,7 @@ defmodule OpenapiPetstore.Mixfile do
   def project do
     [
       app: :openapi_petstore,
-      version: "0.0.1",
+      version: "",
       elixir: "~> 1.10",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,

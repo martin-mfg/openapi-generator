@@ -1,11 +1,11 @@
-# Some example - Jetbrains API Client
+#  - Jetbrains API Client
 
 ## OpenAPI File description
 
 dummy description
 
 * API basepath : [http://localhost](http://localhost)
-* Version : 0.0.1
+* Version : 
 
 ## Documentation for API Endpoints
 

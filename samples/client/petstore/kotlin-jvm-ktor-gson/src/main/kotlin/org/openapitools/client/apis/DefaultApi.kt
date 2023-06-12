@@ -15,7 +15,6 @@
 
 package org.openapitools.client.apis
 
-import org.openapitools.client.models.ExampleResponse
 
 import org.openapitools.client.infrastructure.*
 import io.ktor.client.HttpClientConfig
@@ -36,10 +35,10 @@ import java.text.DateFormat
         /**
         * 
         * get some object
-         * @return ExampleResponse
+         * @return kotlin.Int
         */
             @Suppress("UNCHECKED_CAST")
-        open suspend fun retrieveSomething(): HttpResponse<ExampleResponse> {
+        open suspend fun retrieveSomething(): HttpResponse<kotlin.Int> {
 
             val localVariableAuthNames = listOf<String>()
 

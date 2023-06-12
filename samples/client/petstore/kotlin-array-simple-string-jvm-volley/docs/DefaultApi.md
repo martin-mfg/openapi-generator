@@ -22,7 +22,7 @@ get some object
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DefaultApi::class.java)
 
-val result : ExampleResponse = webService.retrieveSomething()
+val result : kotlin.Int = webService.retrieveSomething()
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**kotlin.Int**
 
 ### Authorization
 
@@ -39,5 +39,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 

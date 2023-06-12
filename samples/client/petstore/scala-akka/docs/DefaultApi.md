@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## retrieveSomething
 
-> retrieveSomething(): ApiRequest[ExampleResponse]
+> retrieveSomething(): ApiRequest[Int]
 
 
 
@@ -21,7 +21,6 @@ get some object
 
 ```scala
 // Import classes:
-import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -66,7 +65,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**ExampleResponse**](ExampleResponse.md)]
+ApiRequest[**Int**]
 
 
 ### Authorization
@@ -76,7 +75,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 ### HTTP response details
 | Status code | Description | Response headers |

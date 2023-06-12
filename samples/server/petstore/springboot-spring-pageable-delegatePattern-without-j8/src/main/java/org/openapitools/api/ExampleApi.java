@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponse;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -37,17 +36,17 @@ public interface ExampleApi {
         value = "",
         nickname = "retrieveSomething",
         notes = "get some object",
-        response = ExampleResponse.class
+        response = Integer.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "The response with results", response = Integer.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
-        produces = { "application/json" }
+        produces = { "/" }
     )
-    default ResponseEntity<ExampleResponse> retrieveSomething(
+    default ResponseEntity<Integer> retrieveSomething(
         
     ) {
         return getDelegate().retrieveSomething();

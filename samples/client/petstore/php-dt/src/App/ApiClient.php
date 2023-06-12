@@ -9,9 +9,9 @@ use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * Some example
+ * 
  * dummy description
- * The version of the OpenAPI document: 0.0.1
+ * The version of the OpenAPI document: 
  */
 class ApiClient extends OAGAC\AbstractApiClient
 {
@@ -23,7 +23,7 @@ class ApiClient extends OAGAC\AbstractApiClient
      * @throws DT\Exception\InvalidData
      */
     public function retrieveSomethingRaw(
-        string $responseMediaType = 'application/json'
+        string $responseMediaType = '/'
     ): ResponseInterface
     {
         $request = $this->createRequest('GET', '/example/someMethod', [], []);
@@ -39,7 +39,7 @@ class ApiClient extends OAGAC\AbstractApiClient
      * @throws OAGAC\Exception\InvalidResponseBodySchema
      */
     public function retrieveSomething(
-        string $responseMediaType = 'application/json'
+        string $responseMediaType = '/'
     ): array
     {
         $response = $this->retrieveSomethingRaw($responseMediaType);
@@ -48,7 +48,6 @@ class ApiClient extends OAGAC\AbstractApiClient
         {
             case 200:
                 /* The response with results */
-                $responseContent = new \App\DTO\ExampleResponse();
                 break;
         }
         $this->parseBody($response, $responseContent);
@@ -57,15 +56,15 @@ class ApiClient extends OAGAC\AbstractApiClient
 
     /**
      * @param string $responseMediaType
-     * @return \App\DTO\ExampleResponse
+     * @return int
      * @throws ClientExceptionInterface
      * @throws DT\Exception\InvalidData
      * @throws OAGAC\Exception\InvalidResponseBodySchema
      * @throws OAGAC\Exception\UnsuccessfulResponse
      */
     public function retrieveSomethingResult(
-        string $responseMediaType = 'application/json'
-    ): \App\DTO\ExampleResponse
+        string $responseMediaType = '/'
+    ): int
     {
         return $this->getSuccessfulContent(...$this->retrieveSomething($responseMediaType));
     }

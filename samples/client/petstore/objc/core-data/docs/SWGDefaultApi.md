@@ -10,7 +10,7 @@ Method | HTTP request | Description
 # **retrieveSomething**
 ```objc
 -(NSURLSessionTask*) retrieveSomethingWithCompletionHandler: 
-        (void (^)(SWGExampleResponse* output, NSError* error)) handler;
+        (void (^)(NSNumber* output, NSError* error)) handler;
 ```
 
 
@@ -24,7 +24,7 @@ get some object
 SWGDefaultApi*apiInstance = [[SWGDefaultApi alloc] init];
 
 [apiInstance retrieveSomethingWithCompletionHandler: 
-          ^(SWGExampleResponse* output, NSError* error) {
+          ^(NSNumber* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SWGExampleResponse***](SWGExampleResponse.md)
+**NSNumber***
 
 ### Authorization
 
@@ -48,7 +48,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

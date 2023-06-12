@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="Invoke-PSRetrieveSomething"></a>
 # **Invoke-PSRetrieveSomething**
-> ExampleResponse Invoke-PSRetrieveSomething<br>
+> Int32 Invoke-PSRetrieveSomething<br>
 
 
 
@@ -31,7 +31,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md) (PSCustomObject)
+**Int32**
 
 ### Authorization
 
@@ -40,7 +40,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

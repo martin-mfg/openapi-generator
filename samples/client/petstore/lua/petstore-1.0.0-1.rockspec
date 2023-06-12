@@ -24,6 +24,5 @@ build = {
 	type = "builtin",
 	modules = {
 		["petstore.api.default_api"] = "petstore/api/default_api.lua";
-		["petstore.model.example_response"] = "petstore/model/example_response.lua";
 	}
 }

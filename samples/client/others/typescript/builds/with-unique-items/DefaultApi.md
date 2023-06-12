@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieveSomething**
-> ExampleResponse retrieveSomething()
+> number retrieveSomething()
 
 get some object
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**ExampleResponse**
+**number**
 
 ### Authorization
 
@@ -45,7 +45,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 
 ### HTTP response details

@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.service.annotation.*;
@@ -33,9 +32,9 @@ public interface DefaultApi {
     @HttpExchange(
         method = "GET",
         value = "/example/someMethod",
-        accept = "application/json"
+        accept = "/"
     )
-    Mono<ResponseEntity<ExampleResponse>> retrieveSomething(
+    Mono<ResponseEntity<Integer>> retrieveSomething(
         
     );
 

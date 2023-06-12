@@ -5,7 +5,6 @@
 */
 package org.openapitools.api
 
-import org.openapitools.model.ExampleResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -36,9 +35,9 @@ interface DefaultApi {
     @RequestMapping(
             method = [RequestMethod.GET],
             value = ["/example/someMethod"],
-            produces = ["application/json"]
+            produces = ["/"]
     )
-    fun retrieveSomething(): ResponseEntity<ExampleResponse> {
+    fun retrieveSomething(): ResponseEntity<kotlin.Int> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
     }
 }

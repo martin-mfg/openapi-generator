@@ -6,7 +6,5 @@ api/DefaultApi.h
 impl/DefaultApiImpl.cpp
 impl/DefaultApiImpl.h
 main-api-server.cpp
-model/ExampleResponse.cpp
-model/ExampleResponse.h
 model/Helpers.cpp
 model/Helpers.h

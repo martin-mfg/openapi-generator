@@ -11,7 +11,7 @@ Method | HTTP request | Description
 <a id="retrieveSomething"></a>
 # **retrieveSomething**
 ```java
-Mono<ExampleResponse> DefaultController.retrieveSomething()
+Mono<Integer> DefaultController.retrieveSomething()
 ```
 
 
@@ -20,10 +20,10 @@ get some object
 
 
 ### Return type
-[**ExampleResponse**](../../docs/models/ExampleResponse.md)
+`Integer`
 
 
 ### HTTP request headers
  - **Accepts Content-Type**: Not defined
- - **Produces Content-Type**: `application/json`
+ - **Produces Content-Type**: `/`
 

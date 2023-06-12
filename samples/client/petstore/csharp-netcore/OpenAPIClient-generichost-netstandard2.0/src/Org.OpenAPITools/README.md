@@ -61,8 +61,8 @@ namespace YourProject
         {
             var host = CreateHostBuilder(args).Build();
             var api = host.Services.GetRequiredService<IDefaultApi>();
-            ApiResponse<ExampleResponse> response = await api.RetrieveSomethingAsync("todo");
-            ExampleResponse model = response.AsModel();
+            ApiResponse<int> response = await api.RetrieveSomethingAsync("todo");
+            int model = response.AsModel();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) => Host.CreateDefaultBuilder(args)
@@ -120,8 +120,8 @@ Endpoints do not require authorization.
 - Build package: org.openapitools.codegen.languages.CSharpClientCodegen
 
 ## Api Information
-- appName: Some example
-- appVersion: 0.0.1
+- appName: 
+- appVersion: 
 - appDescription: dummy description
 
 ## [OpenApi Global properties](https://openapi-generator.tech/docs/globals)

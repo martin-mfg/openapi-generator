@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 ## retrieveSomething
 
-> ExampleResponse retrieveSomething()
+> Integer retrieveSomething()
 
 
 
@@ -34,7 +34,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ExampleResponse result = apiInstance.retrieveSomething();
+            Integer result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**Integer**
 
 
 ### Authorization
@@ -63,7 +63,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -72,7 +72,7 @@ No authorization required
 
 ## retrieveSomethingWithHttpInfo
 
-> ApiResponse<ExampleResponse> retrieveSomething retrieveSomethingWithHttpInfo()
+> ApiResponse<Integer> retrieveSomething retrieveSomethingWithHttpInfo()
 
 
 
@@ -96,7 +96,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ApiResponse<ExampleResponse> response = apiInstance.retrieveSomethingWithHttpInfo();
+            ApiResponse<Integer> response = apiInstance.retrieveSomethingWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -117,7 +117,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiResponse<[**ExampleResponse**](ExampleResponse.md)>
+ApiResponse<**Integer**>
 
 
 ### Authorization
@@ -127,7 +127,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 ### HTTP response details
 | Status code | Description | Response headers |

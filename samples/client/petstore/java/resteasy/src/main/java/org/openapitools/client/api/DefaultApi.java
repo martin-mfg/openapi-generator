@@ -7,7 +7,6 @@ import org.openapitools.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
-import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,10 +36,10 @@ public class DefaultApi {
   /**
    * 
    * get some object
-   * @return a {@code ExampleResponse}
+   * @return a {@code Integer}
    * @throws ApiException if fails to make API call
    */
-  public ExampleResponse retrieveSomething() throws ApiException {
+  public Integer retrieveSomething() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -57,7 +56,7 @@ public class DefaultApi {
     
     
     final String[] localVarAccepts = {
-      "application/json"
+      "/"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -68,7 +67,7 @@ public class DefaultApi {
 
     String[] localVarAuthNames = new String[] {  };
 
-    GenericType<ExampleResponse> localVarReturnType = new GenericType<ExampleResponse>() {};
+    GenericType<Integer> localVarReturnType = new GenericType<Integer>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 }

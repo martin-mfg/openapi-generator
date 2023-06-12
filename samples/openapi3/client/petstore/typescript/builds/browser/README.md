@@ -1,4 +1,4 @@
-## ts-petstore-client@0.0.1
+## ts-petstore-client@
 
 This generator creates TypeScript/JavaScript client that utilizes fetch-api.
 
@@ -21,7 +21,7 @@ Navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install ts-petstore-client@0.0.1 --save
+npm install ts-petstore-client@ --save
 ```
 
 _unPublished (not recommended):_

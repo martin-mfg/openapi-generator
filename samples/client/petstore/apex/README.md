@@ -1,4 +1,4 @@
-# Some example API Client
+#  API Client
 
 
 dummy description
@@ -46,7 +46,7 @@ OASDefaultApi api = new OASDefaultApi();
 
 try {
     // cross your fingers
-    OASExampleResponse result = api.retrieveSomething();
+    Integer result = api.retrieveSomething();
     System.debug(result);
 } catch (OAS.ApiException e) {
     // ...handle your exceptions
@@ -64,7 +64,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [OASExampleResponse](OASExampleResponse.md)
 
 
 ## Documentation for Authorization

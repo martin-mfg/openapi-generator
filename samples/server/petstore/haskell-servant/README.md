@@ -1,6 +1,6 @@
-# Auto-Generated OpenAPI Bindings to `SomeExample`
+# Auto-Generated OpenAPI Bindings to ``
 
-The library in `lib` provides auto-generated-from-OpenAPI bindings to the SomeExample API.
+The library in `lib` provides auto-generated-from-OpenAPI bindings to the  API.
 
 ## Installation
 
@@ -19,22 +19,22 @@ packages:
 
 ## Main Interface
 
-The main interface to this library is in the `SomeExample.API` module, which exports the SomeExampleBackend type. The SomeExampleBackend
+The main interface to this library is in the `.API` module, which exports the Backend type. The Backend
 type can be used to create and define servers and clients for the API.
 
 ## Creating a Client
 
-A client can be created via the `createSomeExampleClient` function, which will generate a function for every endpoint of the API.
-Then these functions can be invoked with `runSomeExampleClientWithManager` or more conveniently with `callSomeExampleClient`
+A client can be created via the `createClient` function, which will generate a function for every endpoint of the API.
+Then these functions can be invoked with `runClientWithManager` or more conveniently with `callClient`
 (depending if you want an `Either` back or you want to catch) to access the API endpoint they refer to, if the API is served
 at the `url` you specified.
 
-For example, if `localhost:8080` is serving the SomeExample API, you can write:
+For example, if `localhost:8080` is serving the  API, you can write:
 
 ```haskell
 {-# LANGUAGE RecordWildCards #-}
 
-import SomeExample.API as API
+import .API as API
 
 import           Network.HTTP.Client     (newManager)
 import           Network.HTTP.Client.TLS (tlsManagerSettings)
@@ -50,42 +50,42 @@ main = do
   manager <- newManager tlsManagerSettings
 
   -- Create the client (all endpoint functions will be available)
-  SomeExampleBackend{..} <- API.createSomeExampleClient
+  Backend{..} <- API.createClient
 
-  -- Any SomeExample API call can go here, e.g. here we call `getSomeEndpoint`
-  API.callSomeExample (mkClientEnv manager url) getSomeEndpoint
+  -- Any  API call can go here, e.g. here we call `getSomeEndpoint`
+  API.call (mkClientEnv manager url) getSomeEndpoint
 ```
 
 ## Creating a Server
 
-In order to create a server, you must use the `runSomeExampleMiddlewareServer` function. However, you unlike the client, in which case you *got* a `SomeExampleBackend`
-from the library, you must instead *provide* a `SomeExampleBackend`. For example, if you have defined handler functions for all the
-functions in `SomeExample.Handlers`, you can write:
+In order to create a server, you must use the `runMiddlewareServer` function. However, you unlike the client, in which case you *got* a `Backend`
+from the library, you must instead *provide* a `Backend`. For example, if you have defined handler functions for all the
+functions in `.Handlers`, you can write:
 
 ```haskell
 {-# LANGUAGE RecordWildCards #-}
 
-import SomeExample.API
+import .API
 -- required dependency: wai
 import Network.Wai (Middleware)
 -- required dependency: wai-extra
 import Network.Wai.Middleware.RequestLogger (logStdout)
 
--- A module you wrote yourself, containing all handlers needed for the SomeExampleBackend type.
-import SomeExample.Handlers
+-- A module you wrote yourself, containing all handlers needed for the Backend type.
+import .Handlers
 
--- If you would like to not use any middlewares you could use runSomeExampleServer instead
+-- If you would like to not use any middlewares you could use runServer instead
 
 -- Combined middlewares
 requestMiddlewares :: Middleware
 requestMiddlewares = logStdout
 
--- Run a SomeExample server on localhost:8080
+-- Run a  server on localhost:8080
 main :: IO ()
 main = do
-  let server = SomeExampleBackend{..}
+  let server = Backend{..}
       config = Config "http://localhost:8080/"
-  runSomeExampleMiddlewareServer config requestMiddlewares server
+  runMiddlewareServer config requestMiddlewares server
 ```
 
 ## Authentication
@@ -107,13 +107,13 @@ newtype Account = Account {unAccount :: Text}
 type instance AuthServerData Protected = Account
 ```
 
-Additionally, you have to provide value for the `SomeExampleAuth` type provided by the
-`SomeExample.API` module:
+Additionally, you have to provide value for the `Auth` type provided by the
+`.API` module:
 
 ```
-auth :: SomeExampleAuth
+auth :: Auth
 auth =
-  SomeExampleAuth
+  Auth
     { lookupUser = lookupAccount,
       authError = \request -> err401 {errBody = "Missing header"}
     }
@@ -124,5 +124,5 @@ auth =
 functions:
 
 ```
-runSomeExampleMiddlewareServer config requestMiddlewares auth server
+runMiddlewareServer config requestMiddlewares auth server
 ```

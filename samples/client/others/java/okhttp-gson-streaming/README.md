@@ -1,7 +1,7 @@
 # petstore-okhttp-gson
 
-Some example
-- API version: 0.0.1
+
+- API version: 
 
 dummy description
 
@@ -92,7 +92,7 @@ public class Example {
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     try {
-      ExampleResponse result = apiInstance.retrieveSomething();
+      Integer result = apiInstance.retrieveSomething();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -117,7 +117,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

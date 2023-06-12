@@ -12,13 +12,12 @@ import Test.Hspec.QuickCheck
 import PropMime
 import Instances ()
 
-import SomeExample.Model
-import SomeExample.MimeTypes
+import OpenAPI.Model
+import OpenAPI.MimeTypes
 
 main :: IO ()
 main =
   hspec $ modifyMaxSize (const 10) $ do
     describe "JSON instances" $ do
       pure ()
-      propMimeEq MimeJSON (Proxy :: Proxy ExampleResponse)
       

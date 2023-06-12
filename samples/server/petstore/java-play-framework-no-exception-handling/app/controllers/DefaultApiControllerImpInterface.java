@@ -1,6 +1,5 @@
 package controllers;
 
-import apimodels.ExampleResponse;
 
 import com.google.inject.Inject;
 import com.typesafe.config.Config;
@@ -27,18 +26,13 @@ public abstract class DefaultApiControllerImpInterface {
     private ObjectMapper mapper = new ObjectMapper();
 
     public Result retrieveSomethingHttp(Http.Request request)  {
-        ExampleResponse obj = retrieveSomething(request);
-
-        if (configuration.getBoolean("useOutputBeanValidation")) {
-            OpenAPIUtils.validate(obj);
-        }
-
+        Integer obj = retrieveSomething(request);
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);
 
     }
 
-    public abstract ExampleResponse retrieveSomething(Http.Request request) ;
+    public abstract Integer retrieveSomething(Http.Request request) ;
 
 }

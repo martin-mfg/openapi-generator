@@ -8,7 +8,6 @@
 #include "Helpers.h"
 #include <list>
 
-#include "ExampleResponse.h"
 
 namespace Tiny {
 
@@ -29,7 +28,7 @@ public:
     * get some object
     */
     Response<
-                ExampleResponse
+                int
         >
     retrieveSomething(
     );

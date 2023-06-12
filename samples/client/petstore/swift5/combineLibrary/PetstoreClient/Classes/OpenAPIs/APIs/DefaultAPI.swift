@@ -17,14 +17,14 @@ open class DefaultAPI {
 
     /**
 
-     - returns: AnyPublisher<ExampleResponse, Error>
+     - returns: AnyPublisher<Int, Error>
      */
     #if canImport(Combine)
     @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-    open class func retrieveSomething() -> AnyPublisher<ExampleResponse, Error> {
+    open class func retrieveSomething() -> AnyPublisher<Int, Error> {
         let requestBuilder = retrieveSomethingWithRequestBuilder()
         let requestTask = requestBuilder.requestTask
-        return Future<ExampleResponse, Error> { promise in
+        return Future<Int, Error> { promise in
             requestBuilder.execute { result in
                 switch result {
                 case let .success(response):
@@ -44,9 +44,9 @@ open class DefaultAPI {
     /**
      - GET /example/someMethod
      - get some object
-     - returns: RequestBuilder<ExampleResponse> 
+     - returns: RequestBuilder<Int> 
      */
-    open class func retrieveSomethingWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+    open class func retrieveSomethingWithRequestBuilder() -> RequestBuilder<Int> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
@@ -59,7 +59,7 @@ open class DefaultAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ExampleResponse>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Int>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: false)
     }

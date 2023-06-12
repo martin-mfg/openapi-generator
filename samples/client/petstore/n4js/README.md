@@ -1,6 +1,6 @@
-# Documentation for Some example
+# Documentation for 
 
-- API version: 0.0.1
+- API version: 
 
 dummy description
 

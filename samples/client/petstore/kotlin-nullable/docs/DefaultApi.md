@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="retrieveSomething"></a>
 # **retrieveSomething**
-> ExampleResponse retrieveSomething()
+> kotlin.Int retrieveSomething()
 
 
 
@@ -23,7 +23,7 @@ get some object
 
 val apiInstance = DefaultApi()
 try {
-    val result : ExampleResponse? = apiInstance.retrieveSomething()
+    val result : kotlin.Int? = apiInstance.retrieveSomething()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DefaultApi#retrieveSomething")
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**kotlin.Int**
 
 ### Authorization
 
@@ -48,5 +48,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 

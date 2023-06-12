@@ -1,8 +1,8 @@
 # echo-api-native
 
-Some example
 
-- API version: 0.0.1
+
+- API version: 
 
 dummy description
 
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>echo-api-native</artifactId>
-  <version>0.0.1</version>
+  <version></version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools:echo-api-native:0.0.1"
+compile "org.openapitools:echo-api-native:"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/echo-api-native-0.0.1.jar`
+- `target/echo-api-native-.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -84,7 +84,7 @@ public class DefaultApiExample {
         // overriding the host and port, timeout, etc.
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ExampleResponse result = apiInstance.retrieveSomething();
+            Integer result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -110,7 +110,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

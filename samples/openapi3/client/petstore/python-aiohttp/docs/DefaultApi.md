@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieve_something**
-> ExampleResponse retrieve_something()
+> int retrieve_something()
 
 
 
@@ -20,7 +20,6 @@ get some object
 import time
 import os
 import petstore_api
-from petstore_api.models.example_response import ExampleResponse
 from petstore_api.rest import ApiException
 from pprint import pprint
 
@@ -50,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**int**
 
 ### Authorization
 
@@ -59,7 +58,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 ### HTTP response details
 | Status code | Description | Response headers |

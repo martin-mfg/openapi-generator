@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -38,20 +37,11 @@ public interface ExampleApi {
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
-        produces = { "application/json" }
+        produces = { "/" }
     )
-    default ResponseEntity<ExampleResponse> retrieveSomething(
+    default ResponseEntity<Integer> retrieveSomething(
         
     ) {
-        getRequest().ifPresent(request -> {
-            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
-                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"myOnlyProperty\" : [ true, true ] }";
-                    ApiUtil.setExampleResponse(request, "application/json", exampleString);
-                    break;
-                }
-            }
-        });
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

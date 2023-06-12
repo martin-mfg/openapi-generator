@@ -1,6 +1,5 @@
 package controllers;
 
-import apimodels.ExampleResponse;
 
 import com.google.inject.Inject;
 import com.typesafe.config.Config;
@@ -30,12 +29,7 @@ public abstract class DefaultApiControllerImpInterface {
     private ObjectMapper mapper = new ObjectMapper();
 
     public CompletionStage<Result> retrieveSomethingHttp(Http.Request request) throws Exception {
-        CompletionStage<ExampleResponse> stage = retrieveSomething(request).thenApply(obj -> { 
-
-        if (configuration.getBoolean("useOutputBeanValidation")) {
-            OpenAPIUtils.validate(obj);
-        }
-
+        CompletionStage<Integer> stage = retrieveSomething(request).thenApply(obj -> { 
         return obj;
     });
 return stage.thenApply(obj -> {
@@ -46,6 +40,6 @@ return stage.thenApply(obj -> {
 
     }
 
-    public abstract CompletionStage<ExampleResponse> retrieveSomething(Http.Request request) throws Exception;
+    public abstract CompletionStage<Integer> retrieveSomething(Http.Request request) throws Exception;
 
 }

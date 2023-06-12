@@ -5,5 +5,4 @@ HttpResponse.ts
 IAPIConfiguration.ts
 IHttpClient.ts
 api/default.service.ts
-model/exampleResponse.ts
 variables.ts

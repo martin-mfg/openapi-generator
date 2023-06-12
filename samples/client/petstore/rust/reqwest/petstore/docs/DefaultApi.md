@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## retrieve_something
 
-> crate::models::ExampleResponse retrieve_something()
+> i32 retrieve_something()
 
 
 get some object
@@ -21,7 +21,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**crate::models::ExampleResponse**](ExampleResponse.md)
+**i32**
 
 ### Authorization
 
@@ -30,7 +30,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

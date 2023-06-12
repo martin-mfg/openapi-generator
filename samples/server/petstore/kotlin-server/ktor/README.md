@@ -1,4 +1,4 @@
-# org.openapitools.server - Kotlin Server library for Some example
+# org.openapitools.server - Kotlin Server library for 
 
 dummy description
 
@@ -55,7 +55,6 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [org.openapitools.server.models.ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

@@ -1,7 +1,7 @@
 #tag Interface
 Protected Interface DefaultApiCallbackHandler
 	#tag Method, Flags = &h0
-		Sub RetrieveSomethingCallback(status As OpenAPIClient.OpenAPIClientException, Optional data As OpenAPIClient.Models.ExampleResponse)
+		Sub RetrieveSomethingCallback(status As OpenAPIClient.OpenAPIClientException, Optional data As Integer)
 		  
 		End Sub
 	#tag EndMethod

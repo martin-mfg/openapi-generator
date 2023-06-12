@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## retrieveSomething
 
-> ExampleResponse retrieveSomething()
+> Integer retrieveSomething()
 
 
 
@@ -33,7 +33,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ExampleResponse result = apiInstance.retrieveSomething();
+            Integer result = apiInstance.retrieveSomething();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**Integer**
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 ### HTTP response details
 | Status code | Description | Response headers |

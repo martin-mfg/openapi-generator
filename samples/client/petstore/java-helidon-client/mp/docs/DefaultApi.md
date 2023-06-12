@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## retrieveSomething
 
-> ExampleResponse retrieveSomething()
+> Integer retrieveSomething()
 
 
 
@@ -22,7 +22,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**Integer**
 
 ### Authorization
 
@@ -31,7 +31,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 
 
 ### HTTP response details

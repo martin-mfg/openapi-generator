@@ -621,7 +621,7 @@ public class ApiClient extends JavaTimeFormatter {
     protected WebClient buildWebClient(Vertx vertx, JsonObject config) {
 
         if (!config.containsKey("userAgent")) {
-            config.put("userAgent", "OpenAPI-Generator/0.0.1/java");
+            config.put("userAgent", "OpenAPI-Generator//java");
         }
 
         return WebClient.create(vertx, new WebClientOptions(config));

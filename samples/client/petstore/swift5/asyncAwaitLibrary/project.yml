@@ -7,7 +7,7 @@ targets:
     sources: [PetstoreClient]
     info:
       path: ./Info.plist
-      version: 0.0.1
+      version: 
     settings:
       APPLICATION_EXTENSION_API_ONLY: true
     scheme: {}

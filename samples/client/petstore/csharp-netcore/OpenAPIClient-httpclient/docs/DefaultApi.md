@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="retrievesomething"></a>
 # **RetrieveSomething**
-> ExampleResponse RetrieveSomething ()
+> int RetrieveSomething ()
 
 
 
@@ -38,7 +38,7 @@ namespace Example
 
             try
             {
-                ExampleResponse result = apiInstance.RetrieveSomething();
+                int result = apiInstance.RetrieveSomething();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -58,7 +58,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExampleResponse> response = apiInstance.RetrieveSomethingWithHttpInfo();
+    ApiResponse<int> response = apiInstance.RetrieveSomethingWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -75,7 +75,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**int**
 
 ### Authorization
 
@@ -84,7 +84,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 
 ### HTTP response details

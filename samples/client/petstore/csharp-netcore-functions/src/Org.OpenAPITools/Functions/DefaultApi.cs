@@ -18,14 +18,14 @@ namespace Org.OpenAPITools.Functions
     public partial class DefaultApi
     { 
         [FunctionName("DefaultApi_RetrieveSomething")]
-        public async Task<ActionResult<ExampleResponse>> _RetrieveSomething([HttpTrigger(AuthorizationLevel.Anonymous, "Get", Route = "example/someMethod")]HttpRequest req, ExecutionContext context)
+        public async Task<ActionResult<int>> _RetrieveSomething([HttpTrigger(AuthorizationLevel.Anonymous, "Get", Route = "example/someMethod")]HttpRequest req, ExecutionContext context)
         {
             var method = this.GetType().GetMethod("RetrieveSomething");
             if(method == null)
             {
                 return new StatusCodeResult((int)HttpStatusCode.NotImplemented);
             }
-            return (await ((Task<ExampleResponse>)method.Invoke(this, new object[] { req, context, id })).ConfigureAwait(false));
+            return (await ((Task<int>)method.Invoke(this, new object[] { req, context, id })).ConfigureAwait(false));
         }
     }
 }

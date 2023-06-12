@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponseDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.service.annotation.*;
@@ -29,9 +28,9 @@ public interface DefaultApi {
     @HttpExchange(
         method = "GET",
         value = "/example/someMethod",
-        accept = "application/json"
+        accept = "/"
     )
-    ResponseEntity<ExampleResponseDto> retrieveSomething(
+    ResponseEntity<Integer> retrieveSomething(
         
     );
 

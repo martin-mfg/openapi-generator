@@ -1,7 +1,7 @@
 # okhttp-gson-awsv4signature
 
-Some example
-- API version: 0.0.1
+
+- API version: 
 
 dummy description
 
@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>okhttp-gson-awsv4signature</artifactId>
-  <version>0.0.1</version>
+  <version></version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -55,7 +55,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:okhttp-gson-awsv4signature:0.0.1"
+     implementation "org.openapitools:okhttp-gson-awsv4signature:"
   }
 ```
 
@@ -69,7 +69,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/okhttp-gson-awsv4signature-0.0.1.jar`
+* `target/okhttp-gson-awsv4signature-.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -94,7 +94,7 @@ public class Example {
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     try {
-      ExampleResponse result = apiInstance.retrieveSomething();
+      Integer result = apiInstance.retrieveSomething();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#retrieveSomething");
@@ -119,7 +119,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

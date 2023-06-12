@@ -1,6 +1,4 @@
 README.md
 build.gradle
-docs/ExampleResponse.md
 ktorm_schema.sql
 settings.gradle
-src/main/kotlin/org/openapitools/database/models/ExampleResponse.kt

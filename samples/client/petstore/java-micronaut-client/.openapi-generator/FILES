@@ -6,7 +6,6 @@ README.md
 build.gradle
 docs/apis/DefaultApi.md
 docs/apis/auth.md
-docs/models/ExampleResponse.md
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -17,6 +16,5 @@ mvnw.bat
 pom.xml
 settings.gradle
 src/main/java/org/openapitools/api/DefaultApi.java
-src/main/java/org/openapitools/model/ExampleResponse.java
 src/main/resources/application.yml
 src/main/resources/logback.xml

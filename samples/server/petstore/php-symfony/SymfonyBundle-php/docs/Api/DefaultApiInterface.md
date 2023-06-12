@@ -19,7 +19,7 @@ services:
 ```
 
 ## **retrieveSomething**
-> OpenAPI\Server\Model\ExampleResponse retrieveSomething()
+> int retrieveSomething()
 
 
 
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**OpenAPI\Server\Model\ExampleResponse**](../Model/ExampleResponse.md)
+**int**
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: /
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

@@ -3,7 +3,6 @@ import { Configuration} from '../configuration'
 import { injectable, inject, optional } from "inversify";
 import { AbstractConfiguration } from "../services/configuration";
 
-import { ExampleResponse } from '../models/ExampleResponse';
 import { ObservableDefaultApi } from './ObservableAPI';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
@@ -24,7 +23,7 @@ export class PromiseDefaultApi {
     /**
      * get some object
      */
-    public retrieveSomething(_options?: Configuration): Promise<ExampleResponse> {
+    public retrieveSomething(_options?: Configuration): Promise<number> {
         const result = this.api.retrieveSomething(_options);
         return result.toPromise();
     }

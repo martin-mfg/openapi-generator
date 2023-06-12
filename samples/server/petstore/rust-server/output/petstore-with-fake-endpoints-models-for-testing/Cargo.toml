@@ -1,6 +1,6 @@
 [package]
 name = "petstore-with-fake-endpoints-models-for-testing"
-version = "0.0.1"
+version = ".0.0"
 authors = ["OpenAPI Generator team and contributors"]
 description = "dummy description"
 # Override this license by providing a License Object in the OpenAPI.

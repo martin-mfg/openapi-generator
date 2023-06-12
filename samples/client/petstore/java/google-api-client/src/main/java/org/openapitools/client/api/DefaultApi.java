@@ -2,7 +2,6 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.ExampleResponse;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.google.api.client.http.EmptyContent;
@@ -44,12 +43,12 @@ public class DefaultApi {
   /**
     * get some object
     * <p><b>200</b> - The response with results
-    * @return ExampleResponse
+    * @return Integer
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public ExampleResponse retrieveSomething() throws IOException {
+    public Integer retrieveSomething() throws IOException {
         HttpResponse response = retrieveSomethingForHttpResponse();
-        TypeReference<ExampleResponse> typeRef = new TypeReference<ExampleResponse>() {};
+        TypeReference<Integer> typeRef = new TypeReference<Integer>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 
@@ -57,12 +56,12 @@ public class DefaultApi {
     * get some object
     * <p><b>200</b> - The response with results
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
-    * @return ExampleResponse
+    * @return Integer
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public ExampleResponse retrieveSomething(Map<String, Object> params) throws IOException {
+    public Integer retrieveSomething(Map<String, Object> params) throws IOException {
         HttpResponse response = retrieveSomethingForHttpResponse(params);
-        TypeReference<ExampleResponse> typeRef = new TypeReference<ExampleResponse>() {};
+        TypeReference<Integer> typeRef = new TypeReference<Integer>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 

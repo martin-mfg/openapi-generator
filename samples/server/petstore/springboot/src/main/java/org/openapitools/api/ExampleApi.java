@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponseDto;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -41,28 +40,19 @@ public interface ExampleApi {
         value = "",
         nickname = "retrieveSomething",
         notes = "get some object",
-        response = ExampleResponseDto.class
+        response = Integer.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponseDto.class)
+        @ApiResponse(code = 200, message = "The response with results", response = Integer.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
-        produces = { "application/json" }
+        produces = { "/" }
     )
-    default ResponseEntity<ExampleResponseDto> retrieveSomething(
+    default ResponseEntity<Integer> retrieveSomething(
         
     ) {
-        getRequest().ifPresent(request -> {
-            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
-                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"myOnlyProperty\" : [ true, true ] }";
-                    ApiUtil.setExampleResponse(request, "application/json", exampleString);
-                    break;
-                }
-            }
-        });
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

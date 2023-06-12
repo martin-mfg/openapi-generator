@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>org.openapitools</groupId>
     <artifactId>petstore-spring-cloud</artifactId>
-    <version>0.0.1</version>
+    <version></version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools:petstore-spring-cloud:0.0.1"
+compile "org.openapitools:petstore-spring-cloud:"
 ```
 
 ### Others
@@ -49,5 +49,5 @@ mvn package
 
 Then manually install the following JARs:
 
-* target/petstore-spring-cloud-0.0.1.jar
+* target/petstore-spring-cloud-.jar
 * target/lib/*.jar

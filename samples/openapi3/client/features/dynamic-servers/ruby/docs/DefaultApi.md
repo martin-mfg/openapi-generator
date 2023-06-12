@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 ## retrieve_something
 
-> <ExampleResponse> retrieve_something
+> Integer retrieve_something
 
 
 
@@ -36,7 +36,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ExampleResponse>, Integer, Hash)> retrieve_something_with_http_info
+> <Array(Integer, Integer, Hash)> retrieve_something_with_http_info
 
 ```ruby
 begin
@@ -44,7 +44,7 @@ begin
   data, status_code, headers = api_instance.retrieve_something_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ExampleResponse>
+  p data # => Integer
 rescue DynamicServers::ApiError => e
   puts "Error when calling DefaultApi->retrieve_something_with_http_info: #{e}"
 end
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**Integer**
 
 ### Authorization
 
@@ -65,5 +65,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 

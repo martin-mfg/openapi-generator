@@ -1,7 +1,6 @@
 package org.openapitools.api;
 
 import springfox.documentation.annotations.ApiIgnore;
-import org.openapitools.model.ExampleResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -36,16 +35,9 @@ public interface ExampleApiDelegate {
      * @return The response with results (status code 200)
      * @see ExampleApi#retrieveSomething
      */
-    default Mono<ResponseEntity<ExampleResponse>> retrieveSomething(ServerWebExchange exchange) {
+    default Mono<ResponseEntity<Integer>> retrieveSomething(ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
-        for (MediaType mediaType : exchange.getRequest().getHeaders().getAccept()) {
-            if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                String exampleString = "{ \"myOnlyProperty\" : [ true, true ] }";
-                result = ApiUtil.getExampleResponse(exchange, mediaType, exampleString);
-                break;
-            }
-        }
         return result.then(Mono.empty());
 
     }

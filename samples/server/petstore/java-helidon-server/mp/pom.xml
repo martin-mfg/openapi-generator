@@ -12,7 +12,7 @@
     <artifactId>petstore-helidon-server-mp</artifactId>
     <name>petstore-helidon-server-mp</name>
         <description>dummy description</description>
-    <version>0.0.1</version>
+    <version></version>
     <packaging>jar</packaging>
 
     <properties>

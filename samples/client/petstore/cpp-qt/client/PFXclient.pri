@@ -2,7 +2,6 @@ QT += network
 
 HEADERS += \
 # Models
-    $${PWD}/PFXExampleResponse.h \
 # APIs
     $${PWD}/PFXDefaultApi.h \
 # Others
@@ -17,7 +16,6 @@ HEADERS += \
 
 SOURCES += \
 # Models
-    $${PWD}/PFXExampleResponse.cpp \
 # APIs
     $${PWD}/PFXDefaultApi.cpp \
 # Others

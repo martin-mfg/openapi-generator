@@ -13,7 +13,6 @@ include/CppRestPetstoreClient/ModelBase.h
 include/CppRestPetstoreClient/MultipartFormData.h
 include/CppRestPetstoreClient/Object.h
 include/CppRestPetstoreClient/api/DefaultApi.h
-include/CppRestPetstoreClient/model/ExampleResponse.h
 src/ApiClient.cpp
 src/ApiConfiguration.cpp
 src/ApiException.cpp
@@ -23,4 +22,3 @@ src/ModelBase.cpp
 src/MultipartFormData.cpp
 src/Object.cpp
 src/api/DefaultApi.cpp
-src/model/ExampleResponse.cpp

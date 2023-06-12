@@ -1,5 +1,5 @@
 Package: petstore
-Title: R Package Client for Some example
+Title: R Package Client for 
 Version: 1.0.0
 Author: person("OpenAPI Generator community", email = "team@openapitools.org", role = c("aut", "cre"))
 Maintainer: OpenAPI Generator community <team@openapitools.org>

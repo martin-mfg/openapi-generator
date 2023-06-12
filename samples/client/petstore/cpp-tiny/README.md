@@ -6,7 +6,7 @@ After the client have been generated, you have to change these following variabl
 - src/main.cpp | Change wifi password
 - lib/service/AbstractService.h | Change to your url
 
-# Documentation for Some example 0.0.1 Tiny client cpp (Arduino) 
+# Documentation for   Tiny client cpp (Arduino) 
 
 The project is structured like this:
 ```
@@ -36,5 +36,4 @@ All URIs are relative to http://localhosthttp://localhost
 ## What are the Model files for the data structures/objects?
 |Class | Description|
 |------------- | -------------|
-|*ExampleResponse* | |
 

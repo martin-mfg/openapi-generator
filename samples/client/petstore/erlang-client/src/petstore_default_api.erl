@@ -6,11 +6,11 @@
 
 %% @doc 
 %% get some object
--spec retrieve_something(ctx:ctx()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
+-spec retrieve_something(ctx:ctx()) -> {ok, integer(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
 retrieve_something(Ctx) ->
     retrieve_something(Ctx, #{}).
 
--spec retrieve_something(ctx:ctx(), maps:map()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
+-spec retrieve_something(ctx:ctx(), maps:map()) -> {ok, integer(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
 retrieve_something(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(petstore_api, config, #{})),

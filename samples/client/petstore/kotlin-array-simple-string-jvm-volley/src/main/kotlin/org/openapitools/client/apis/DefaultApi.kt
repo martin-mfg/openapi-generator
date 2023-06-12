@@ -17,7 +17,6 @@ import org.openapitools.client.request.IRequestFactory
 import org.openapitools.client.request.RequestFactory
 import org.openapitools.client.infrastructure.CollectionFormats.*
 
-import org.openapitools.client.models.ExampleResponse
 
 /*
 * If you wish to use a custom http stack with your client you
@@ -36,9 +35,9 @@ class DefaultApi (
     /**
      * 
      * get some object
-     * @return ExampleResponse
+     * @return kotlin.Int
      */
-    suspend fun retrieveSomething(): ExampleResponse? {
+    suspend fun retrieveSomething(): kotlin.Int? {
         val body: Any? = null
 
         val contentTypes : Array<String> = arrayOf()
@@ -64,7 +63,7 @@ class DefaultApi (
         val headerParams: Map<String, String> = mapOf()
 
         return suspendCoroutine { continuation ->
-            val responseListener = Response.Listener<ExampleResponse> { response ->
+            val responseListener = Response.Listener<kotlin.Int> { response ->
                 continuation.resume(response)
             }
 
@@ -72,11 +71,11 @@ class DefaultApi (
                 continuation.resumeWithException(error)
             }
 
-            val responseType = object : TypeToken<ExampleResponse>() {}.type
+            val responseType = object : TypeToken<kotlin.Int>() {}.type
 
             // Call the correct request builder based on whether we have a return type or a body.
             // All other switching on types must be done in code inside the builder
-            val request: Request<ExampleResponse> = requestFactory.build(
+            val request: Request<kotlin.Int> = requestFactory.build(
                     Request.Method.GET,
                     "$basePath$path",
                     body,

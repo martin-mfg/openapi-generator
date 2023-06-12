@@ -1,1 +1,1 @@
-const useragent* = "OpenAPI-Generator/0.0.1/nim"
+const useragent* = "OpenAPI-Generator//nim"

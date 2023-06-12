@@ -5,7 +5,6 @@ import org.openapitools.model.*;
 
 import com.sun.jersey.multipart.FormDataParam;
 
-import org.openapitools.model.ExampleResponse;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;

@@ -3,5 +3,4 @@ api.ts
 api/apis.ts
 api/defaultApi.ts
 git_push.sh
-model/exampleResponse.ts
 model/models.ts

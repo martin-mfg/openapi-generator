@@ -4,7 +4,7 @@
     <artifactId>springboot-delegate-j8</artifactId>
     <packaging>jar</packaging>
     <name>springboot-delegate-j8</name>
-    <version>0.0.1</version>
+    <version></version>
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>

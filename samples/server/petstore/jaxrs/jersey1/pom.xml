@@ -4,7 +4,7 @@
   <artifactId>jaxrs-jersey1-server</artifactId>
   <packaging>jar</packaging>
   <name>jaxrs-jersey1-server</name>
-  <version>0.0.1</version>
+  <version></version>
 
 
   <build>

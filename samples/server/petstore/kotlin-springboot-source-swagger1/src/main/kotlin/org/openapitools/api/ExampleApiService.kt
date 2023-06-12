@@ -1,6 +1,5 @@
 package org.openapitools.api
 
-import org.openapitools.model.ExampleResponse
 
 interface ExampleApiService {
 
@@ -11,5 +10,5 @@ interface ExampleApiService {
      * @return The response with results (status code 200)
      * @see ExampleApi#retrieveSomething
      */
-    fun retrieveSomething(): ExampleResponse
+    fun retrieveSomething(): kotlin.Int
 }

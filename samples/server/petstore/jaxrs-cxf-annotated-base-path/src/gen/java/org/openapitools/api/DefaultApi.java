@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import org.openapitools.model.ExampleResponse;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -20,7 +19,7 @@ import javax.validation.constraints.*;
 import javax.validation.Valid;
 
 /**
- * Some example
+ * 
  *
  * <p>dummy description
  *
@@ -31,9 +30,9 @@ public interface DefaultApi  {
 
     @GET
     
-    @Produces({ "application/json" })
+    @Produces({ "/" })
     @ApiOperation(value = "", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "The response with results", response = ExampleResponse.class) })
-    public ExampleResponse retrieveSomething();
+        @ApiResponse(code = 200, message = "The response with results", response = Integer.class) })
+    public Integer retrieveSomething();
 }

@@ -1,4 +1,4 @@
-# org.openapitools - Kotlin Server library for Some example
+# org.openapitools - Kotlin Server library for 
 
 ## Requires
 
@@ -32,7 +32,6 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [org.openapitools.server.api.model.ExampleResponse](docs/ExampleResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

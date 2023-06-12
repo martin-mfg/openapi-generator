@@ -25,8 +25,6 @@ public class ExampleApiRoutesImpl extends RouteBuilder {
                 .when(simple("${body} != null"))
                     .log(LoggingLevel.INFO, "BODY TYPE: ${body.getClass().getName()}")
             .end()
-            .log(LoggingLevel.INFO, "HEADERS: ${headers}")
-            .setBody(constant("{ \"myOnlyProperty\" : [ true, true ] }"))
-            .unmarshal().json(JsonLibrary.Jackson, ExampleResponse.class);
+            .log(LoggingLevel.INFO, "HEADERS: ${headers}");
     }
 }

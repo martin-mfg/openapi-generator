@@ -4,7 +4,6 @@ README.md
 api/DefaultAPI.c
 api/DefaultAPI.h
 docs/DefaultAPI.md
-docs/example_response.md
 external/cJSON.c
 external/cJSON.h
 external/cJSON.licence
@@ -13,8 +12,6 @@ include/binary.h
 include/keyValuePair.h
 include/list.h
 libcurl.licence
-model/example_response.c
-model/example_response.h
 model/object.c
 model/object.h
 src/apiClient.c

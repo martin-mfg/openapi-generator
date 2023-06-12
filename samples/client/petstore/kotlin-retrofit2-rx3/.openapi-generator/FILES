@@ -1,7 +1,6 @@
 README.md
 build.gradle
 docs/DefaultApi.md
-docs/ExampleResponse.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
@@ -20,4 +19,3 @@ src/main/kotlin/org/openapitools/client/infrastructure/ResponseExt.kt
 src/main/kotlin/org/openapitools/client/infrastructure/Serializer.kt
 src/main/kotlin/org/openapitools/client/infrastructure/URIAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/UUIDAdapter.kt
-src/main/kotlin/org/openapitools/client/models/ExampleResponse.kt

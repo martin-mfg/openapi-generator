@@ -8,5 +8,4 @@ src/main/kotlin/org/openapitools/api/ExampleApiController.kt
 src/main/kotlin/org/openapitools/api/ExampleApiService.kt
 src/main/kotlin/org/openapitools/api/ExampleApiServiceImpl.kt
 src/main/kotlin/org/openapitools/api/Exceptions.kt
-src/main/kotlin/org/openapitools/model/ExampleResponse.kt
 src/main/resources/application.yaml

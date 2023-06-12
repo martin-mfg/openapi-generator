@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `retrieveSomething()`
 
 ```php
-retrieveSomething(): \OpenAPI\Client\Model\ExampleResponse
+retrieveSomething(): int
 ```
 
 
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExampleResponse**](../Model/ExampleResponse.md)
+**int**
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `/`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

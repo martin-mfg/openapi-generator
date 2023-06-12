@@ -12,7 +12,7 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #
-# This is a Bash client for Some example.
+# This is a Bash client for .
 #
 # LICENSE:
 # 
@@ -461,7 +461,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}Some example command line client (API version 0.0.1)${OFF}
+${BOLD}${WHITE} command line client (API version )${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -522,7 +522,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://localhost')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}Some example command line client (API version 0.0.1)${OFF}"
+    echo -e "${BOLD}${WHITE} command line client (API version )${OFF}"
     echo ""
     echo -e "License: "
     echo -e "Contact: "
@@ -542,7 +542,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}Some example command line client (API version 0.0.1)${OFF}"
+    echo -e "${BOLD} command line client (API version )${OFF}"
     echo ""
 }
 

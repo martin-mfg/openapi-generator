@@ -18,10 +18,10 @@ REQUIRES = ["connexion"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Some example",
+    description="",
     author_email="",
     url="",
-    keywords=["Swagger", "Some example"],
+    keywords=["Swagger", ""],
     install_requires=REQUIRES,
     packages=find_packages(),
     package_data={'': ['swagger/swagger.yaml']},

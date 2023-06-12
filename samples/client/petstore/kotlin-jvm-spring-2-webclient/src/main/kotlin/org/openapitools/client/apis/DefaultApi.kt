@@ -25,7 +25,6 @@ import org.springframework.http.ResponseEntity
 import org.springframework.http.MediaType
 import reactor.core.publisher.Mono
 
-import org.openapitools.client.models.ExampleResponse
 import org.openapitools.client.infrastructure.*
 
 class DefaultApi(client: WebClient) : ApiClient(client) {
@@ -41,15 +40,15 @@ class DefaultApi(client: WebClient) : ApiClient(client) {
 
 
     @Throws(WebClientResponseException::class)
-    fun retrieveSomething(): Mono<ExampleResponse> {
+    fun retrieveSomething(): Mono<kotlin.Int> {
         return retrieveSomethingWithHttpInfo()
             .map { it.body }
     }
 
     @Throws(WebClientResponseException::class)
-    fun retrieveSomethingWithHttpInfo(): Mono<ResponseEntity<ExampleResponse>> {
+    fun retrieveSomethingWithHttpInfo(): Mono<ResponseEntity<kotlin.Int>> {
         val localVariableConfig = retrieveSomethingRequestConfig()
-        return request<Unit, ExampleResponse>(
+        return request<Unit, kotlin.Int>(
             localVariableConfig
         )
     }
@@ -58,7 +57,7 @@ class DefaultApi(client: WebClient) : ApiClient(client) {
         val localVariableBody = null
         val localVariableQuery = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
+        localVariableHeaders["Accept"] = "/"
 
         return RequestConfig(
             method = RequestMethod.GET,

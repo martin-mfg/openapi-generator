@@ -1,4 +1,4 @@
-# SomeExample.DefaultApi
+# OpenapiJsClient.DefaultApi
 
 All URIs are relative to *http://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## retrieveSomething
 
-> ExampleResponse retrieveSomething()
+> Number retrieveSomething()
 
 
 
@@ -19,9 +19,9 @@ get some object
 ### Example
 
 ```javascript
-import SomeExample from 'some_example';
+import OpenapiJsClient from 'openapi-js-client';
 
-let apiInstance = new SomeExample.DefaultApi();
+let apiInstance = new OpenapiJsClient.DefaultApi();
 apiInstance.retrieveSomething((error, data, response) => {
   if (error) {
     console.error(error);
@@ -37,7 +37,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+**Number**
 
 ### Authorization
 
@@ -46,5 +46,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: /
 

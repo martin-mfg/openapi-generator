@@ -22,10 +22,10 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="Some example",
+    description="",
     author_email="",
     url="",
-    keywords=["OpenAPI", "Some example"],
+    keywords=["OpenAPI", ""],
     install_requires=REQUIRES,
     packages=find_packages(),
     package_data={'': ['openapi/openapi.yaml']},
