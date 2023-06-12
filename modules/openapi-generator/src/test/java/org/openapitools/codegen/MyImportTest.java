@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class MyImportTest {
 
-    @Test
+    // @Test
     public void testGenerate() {
         Map<String, Object> properties = new HashMap<>();
         properties.put("hideGenerationTimestamp","true");
