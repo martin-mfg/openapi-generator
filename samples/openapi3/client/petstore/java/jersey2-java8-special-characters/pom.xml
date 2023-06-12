@@ -5,7 +5,7 @@
     <artifactId>petstore-openapi3-jersey2-java8-special-characters</artifactId>
     <packaging>jar</packaging>
     <name>petstore-openapi3-jersey2-java8-special-characters</name>
-    <version></version>
+    <version>1.0.0</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

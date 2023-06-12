@@ -5,7 +5,7 @@
   <groupId>org.openapitools</groupId>
   <artifactId>jaxrs-spec-petstore-server</artifactId>
   <name>jaxrs-spec-petstore-server</name>
-  <version></version>
+  <version>1.0.0</version>
 
 
   <properties>

@@ -5,7 +5,7 @@
   <packaging>war</packaging>
   <name>cxf-annotated-basepath</name>
   <description>dummy description</description>
-  <version></version>
+  <version>1.0.0</version>
 
 
   <build>

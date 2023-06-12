@@ -5,7 +5,7 @@
     <artifactId>petstore-resttemplate-withxml</artifactId>
     <packaging>jar</packaging>
     <name>petstore-resttemplate-withxml</name>
-    <version></version>
+    <version>1.0.0</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

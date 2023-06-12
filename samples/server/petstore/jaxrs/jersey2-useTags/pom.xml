@@ -4,7 +4,7 @@
   <artifactId>jaxrs-jersey2-useTags</artifactId>
   <packaging>jar</packaging>
   <name>jaxrs-jersey2-useTags</name>
-  <version></version>
+  <version>1.0.0</version>
 
 
   <licenses>

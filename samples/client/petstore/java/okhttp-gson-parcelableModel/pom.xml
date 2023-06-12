@@ -5,7 +5,7 @@
     <artifactId>petstore-okhttp-gson-parcelableModel</artifactId>
     <packaging>jar</packaging>
     <name>petstore-okhttp-gson-parcelableModel</name>
-    <version></version>
+    <version>1.0.0</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

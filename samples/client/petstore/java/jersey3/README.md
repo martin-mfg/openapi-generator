@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>petstore-jersey3</artifactId>
-  <version></version>
+  <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:petstore-jersey3:"
+     implementation "org.openapitools:petstore-jersey3:1.0.0"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/petstore-jersey3-.jar`
+- `target/petstore-jersey3-1.0.0.jar`
 - `target/lib/*.jar`
 
 ## Getting Started

@@ -18,7 +18,7 @@ mvn package
 
 for build jar, then start your server:
 ```
-java -jar target/java-msf4j-server-.jar
+java -jar target/java-msf4j-server-1.0.0.jar
 ```
 
 Java Microservice listening on default port 9090.

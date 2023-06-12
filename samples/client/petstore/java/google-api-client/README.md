@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>petstore-google-api-client</artifactId>
-  <version></version>
+  <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:petstore-google-api-client:"
+     implementation "org.openapitools:petstore-google-api-client:1.0.0"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/petstore-google-api-client-.jar`
+- `target/petstore-google-api-client-1.0.0.jar`
 - `target/lib/*.jar`
 
 ## Getting Started

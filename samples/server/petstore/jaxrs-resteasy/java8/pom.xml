@@ -5,7 +5,7 @@
     <artifactId>jaxrs-resteasy-java8-server</artifactId>
     <packaging>war</packaging>
     <name>jaxrs-resteasy-java8-server</name>
-    <version></version>
+    <version>1.0.0</version>
 
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>

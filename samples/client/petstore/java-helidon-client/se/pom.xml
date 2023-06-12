@@ -12,7 +12,7 @@
     <artifactId>petstore-helidon-client-se</artifactId>
     <name>petstore-helidon-client-se</name>
         <description>dummy description</description>
-    <version></version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <properties>

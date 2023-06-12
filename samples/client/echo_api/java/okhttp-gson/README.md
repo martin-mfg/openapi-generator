@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>echo-api-okhttp-gson</artifactId>
-  <version></version>
+  <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -55,7 +55,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:echo-api-okhttp-gson:"
+     implementation "org.openapitools:echo-api-okhttp-gson:1.0.0"
   }
 ```
 
@@ -69,7 +69,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/echo-api-okhttp-gson-.jar`
+* `target/echo-api-okhttp-gson-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

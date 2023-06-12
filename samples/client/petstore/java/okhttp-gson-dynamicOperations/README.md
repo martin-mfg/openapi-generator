@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>petstore-okhttp-gson-dynamicoperations</artifactId>
-  <version></version>
+  <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -55,7 +55,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:petstore-okhttp-gson-dynamicoperations:"
+     implementation "org.openapitools:petstore-okhttp-gson-dynamicoperations:1.0.0"
   }
 ```
 
@@ -69,7 +69,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/petstore-okhttp-gson-dynamicoperations-.jar`
+* `target/petstore-okhttp-gson-dynamicoperations-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

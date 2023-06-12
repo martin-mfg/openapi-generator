@@ -11,7 +11,7 @@
     </parent>
     <groupId>org.openapitools</groupId>
     <artifactId>petstore-helidon-server-se</artifactId>
-    <version></version>
+    <version>1.0.0</version>
     <name>petstore-helidon-server-se</name>
     <description>dummy description</description>
 

@@ -26,7 +26,7 @@ After the client library is installed/deployed, you can use it in your Maven pro
 <dependency>
     <groupId>org.openapitools</groupId>
     <artifactId>petstore-rest-assured-jackson</artifactId>
-    <version></version>
+    <version>1.0.0</version>
     <scope>compile</scope>
 </dependency>
 

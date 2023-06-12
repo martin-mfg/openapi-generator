@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>echo-api-apache-httpclient</artifactId>
-  <version></version>
+  <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools:echo-api-apache-httpclient:"
+compile "org.openapitools:echo-api-apache-httpclient:1.0.0"
 ```
 
 ### Others
@@ -63,7 +63,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/echo-api-apache-httpclient-.jar`
+- `target/echo-api-apache-httpclient-1.0.0.jar`
 - `target/lib/*.jar`
 
 ## Getting Started

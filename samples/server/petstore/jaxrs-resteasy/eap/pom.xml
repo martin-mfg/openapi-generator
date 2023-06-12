@@ -5,7 +5,7 @@
     <artifactId>openapi-jaxrs-resteasy-eap-server</artifactId>
     <packaging>war</packaging>
     <name>openapi-jaxrs-resteasy-eap-server</name>
-    <version></version>
+    <version>1.0.0</version>
 
 
     <build>

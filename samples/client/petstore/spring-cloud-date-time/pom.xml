@@ -4,7 +4,7 @@
     <artifactId>spring-cloud-date-time</artifactId>
     <packaging>jar</packaging>
     <name>spring-cloud-date-time</name>
-    <version></version>
+    <version>1.0.0</version>
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>

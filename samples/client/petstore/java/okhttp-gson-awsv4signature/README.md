@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openapitools</groupId>
   <artifactId>okhttp-gson-awsv4signature</artifactId>
-  <version></version>
+  <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -55,7 +55,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:okhttp-gson-awsv4signature:"
+     implementation "org.openapitools:okhttp-gson-awsv4signature:1.0.0"
   }
 ```
 
@@ -69,7 +69,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/okhttp-gson-awsv4signature-.jar`
+* `target/okhttp-gson-awsv4signature-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
