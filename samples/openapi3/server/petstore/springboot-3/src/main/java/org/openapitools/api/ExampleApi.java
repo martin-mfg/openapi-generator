@@ -52,14 +52,14 @@ public interface ExampleApi {
         description = "",
         responses = {
             @ApiResponse(responseCode = "200", description = "", content = {
-                @Content(mediaType = "/", schema = @Schema(implementation = ExampleResponse.class))
+                @Content(mediaType = "*/*", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
     )
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
-        produces = { "/" }
+        produces = { "*/*" }
     )
     default ResponseEntity<ExampleResponse> exampleSomeMethodGet(
         
