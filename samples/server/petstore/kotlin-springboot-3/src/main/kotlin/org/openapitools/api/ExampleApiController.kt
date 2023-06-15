@@ -1,6 +1,6 @@
 package org.openapitools.api
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -34,7 +34,7 @@ class ExampleApiController(@Autowired(required = true) val service: ExampleApiSe
         value = ["/example/someMethod"],
         produces = ["*/*"]
     )
-    fun dummy(): ResponseEntity<Dummy200Response> {
+    fun dummy(): ResponseEntity<ExampleResponse> {
         return ResponseEntity(service.dummy(), HttpStatus.valueOf(200))
     }
 }

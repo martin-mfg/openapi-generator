@@ -1,6 +1,6 @@
 package controllers;
 
-import apimodels.Dummy200Response;
+import apimodels.ExampleResponse;
 
 import com.typesafe.config.Config;
 import play.mvc.Controller;
@@ -41,7 +41,7 @@ public class DefaultApiController extends Controller {
 
     @ApiAction
     public Result dummy(Http.Request request) throws Exception {
-                Dummy200Response obj = imp.dummy(request);
+                ExampleResponse obj = imp.dummy(request);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
             OpenAPIUtils.validate(obj);

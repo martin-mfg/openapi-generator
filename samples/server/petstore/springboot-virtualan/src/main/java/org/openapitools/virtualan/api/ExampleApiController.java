@@ -1,6 +1,6 @@
 package org.openapitools.virtualan.api;
 
-import org.openapitools.virtualan.model.Dummy200Response;
+import org.openapitools.virtualan.model.ExampleResponse;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

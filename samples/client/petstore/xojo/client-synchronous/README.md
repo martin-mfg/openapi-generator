@@ -68,12 +68,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [XojoOpenAPIClientSynchronous.Models.Dummy200Response](Dummy200Response.md)
- - [XojoOpenAPIClientSynchronous.Models.Dummy200ResponseOuterProp](Dummy200ResponseOuterProp.md)
- - [XojoOpenAPIClientSynchronous.Models.Dummy200ResponseOuterPropInnerProp](Dummy200ResponseOuterPropInnerProp.md)
  - [XojoOpenAPIClientSynchronous.Models.ExampleResponse](ExampleResponse.md)
- - [XojoOpenAPIClientSynchronous.Models.Node](Node.md)
- - [XojoOpenAPIClientSynchronous.Models.OtherObject](OtherObject.md)
 
 
 ## Documentation For Authorization

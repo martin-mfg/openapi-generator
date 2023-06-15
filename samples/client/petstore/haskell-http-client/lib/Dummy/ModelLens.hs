@@ -36,61 +36,36 @@ import Dummy.Model
 import Dummy.Core
 
 
--- * Dummy200Response
-
--- | 'dummy200ResponseOuterProp' Lens
-dummy200ResponseOuterPropL :: Lens_' Dummy200Response (Maybe Dummy200ResponseOuterProp)
-dummy200ResponseOuterPropL f Dummy200Response{..} = (\dummy200ResponseOuterProp -> Dummy200Response { dummy200ResponseOuterProp, ..} ) <$> f dummy200ResponseOuterProp
-{-# INLINE dummy200ResponseOuterPropL #-}
-
-
-
--- * Dummy200ResponseOuterProp
-
--- | 'dummy200ResponseOuterPropInnerProp' Lens
-dummy200ResponseOuterPropInnerPropL :: Lens_' Dummy200ResponseOuterProp (Maybe Dummy200ResponseOuterPropInnerProp)
-dummy200ResponseOuterPropInnerPropL f Dummy200ResponseOuterProp{..} = (\dummy200ResponseOuterPropInnerProp -> Dummy200ResponseOuterProp { dummy200ResponseOuterPropInnerProp, ..} ) <$> f dummy200ResponseOuterPropInnerProp
-{-# INLINE dummy200ResponseOuterPropInnerPropL #-}
-
-
-
--- * Dummy200ResponseOuterPropInnerProp
-
--- | 'dummy200ResponseOuterPropInnerPropMyBool' Lens
-dummy200ResponseOuterPropInnerPropMyBoolL :: Lens_' Dummy200ResponseOuterPropInnerProp (Maybe Bool)
-dummy200ResponseOuterPropInnerPropMyBoolL f Dummy200ResponseOuterPropInnerProp{..} = (\dummy200ResponseOuterPropInnerPropMyBool -> Dummy200ResponseOuterPropInnerProp { dummy200ResponseOuterPropInnerPropMyBool, ..} ) <$> f dummy200ResponseOuterPropInnerPropMyBool
-{-# INLINE dummy200ResponseOuterPropInnerPropMyBoolL #-}
-
-
-
 -- * ExampleResponse
 
--- | 'exampleResponseMyOnlyProperty' Lens
-exampleResponseMyOnlyPropertyL :: Lens_' ExampleResponse (Maybe OtherObject)
-exampleResponseMyOnlyPropertyL f ExampleResponse{..} = (\exampleResponseMyOnlyProperty -> ExampleResponse { exampleResponseMyOnlyProperty, ..} ) <$> f exampleResponseMyOnlyProperty
-{-# INLINE exampleResponseMyOnlyPropertyL #-}
+-- | 'exampleResponseEmptyString' Lens
+exampleResponseEmptyStringL :: Lens_' ExampleResponse (Maybe Text)
+exampleResponseEmptyStringL f ExampleResponse{..} = (\exampleResponseEmptyString -> ExampleResponse { exampleResponseEmptyString, ..} ) <$> f exampleResponseEmptyString
+{-# INLINE exampleResponseEmptyStringL #-}
 
+-- | 'exampleResponseNumberString' Lens
+exampleResponseNumberStringL :: Lens_' ExampleResponse (Maybe Text)
+exampleResponseNumberStringL f ExampleResponse{..} = (\exampleResponseNumberString -> ExampleResponse { exampleResponseNumberString, ..} ) <$> f exampleResponseNumberString
+{-# INLINE exampleResponseNumberStringL #-}
 
+-- | 'exampleResponseBoolString' Lens
+exampleResponseBoolStringL :: Lens_' ExampleResponse (Maybe Text)
+exampleResponseBoolStringL f ExampleResponse{..} = (\exampleResponseBoolString -> ExampleResponse { exampleResponseBoolString, ..} ) <$> f exampleResponseBoolString
+{-# INLINE exampleResponseBoolStringL #-}
 
--- * Node
+-- | 'exampleResponseNullString' Lens
+exampleResponseNullStringL :: Lens_' ExampleResponse (Maybe Text)
+exampleResponseNullStringL f ExampleResponse{..} = (\exampleResponseNullString -> ExampleResponse { exampleResponseNullString, ..} ) <$> f exampleResponseNullString
+{-# INLINE exampleResponseNullStringL #-}
 
--- | 'nodeLeft' Lens
-nodeLeftL :: Lens_' Node (Maybe Node)
-nodeLeftL f Node{..} = (\nodeLeft -> Node { nodeLeft, ..} ) <$> f nodeLeft
-{-# INLINE nodeLeftL #-}
+-- | 'exampleResponseABool' Lens
+exampleResponseABoolL :: Lens_' ExampleResponse (Maybe Bool)
+exampleResponseABoolL f ExampleResponse{..} = (\exampleResponseABool -> ExampleResponse { exampleResponseABool, ..} ) <$> f exampleResponseABool
+{-# INLINE exampleResponseABoolL #-}
 
--- | 'nodeRight' Lens
-nodeRightL :: Lens_' Node (Maybe Node)
-nodeRightL f Node{..} = (\nodeRight -> Node { nodeRight, ..} ) <$> f nodeRight
-{-# INLINE nodeRightL #-}
-
-
-
--- * OtherObject
-
--- | 'otherObjectMyOnlyProperty2' Lens
-otherObjectMyOnlyProperty2L :: Lens_' OtherObject (Maybe ExampleResponse)
-otherObjectMyOnlyProperty2L f OtherObject{..} = (\otherObjectMyOnlyProperty2 -> OtherObject { otherObjectMyOnlyProperty2, ..} ) <$> f otherObjectMyOnlyProperty2
-{-# INLINE otherObjectMyOnlyProperty2L #-}
+-- | 'exampleResponseZero' Lens
+exampleResponseZeroL :: Lens_' ExampleResponse (Maybe Int)
+exampleResponseZeroL f ExampleResponse{..} = (\exampleResponseZero -> ExampleResponse { exampleResponseZero, ..} ) <$> f exampleResponseZero
+{-# INLINE exampleResponseZeroL #-}
 
 

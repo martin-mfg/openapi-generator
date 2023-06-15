@@ -12,6 +12,7 @@
 
 
 import { ApiExecuterI, ApiError, checkRequiredParams } from "api/ApiHelper"
+import { ExampleResponse } from 'model/ExampleResponse';
 
 
 
@@ -19,9 +20,9 @@ import { ApiExecuterI, ApiError, checkRequiredParams } from "api/ApiHelper"
 /**
  * dummy
  * @param fe Callback interface that runs the fetch query
- * @response 200 [~Object+] dummy
+ * @response 200 [ExampleResponse] dummy
  */
-export public async function DefaultApi__dummy(fe : ApiExecuterI, ) : Promise<~Object+, Object> {
+export public async function DefaultApi__dummy(fe : ApiExecuterI, ) : Promise<ExampleResponse, Object> {
     checkRequiredParams('dummy', {  });
 
     const _pathParams = { };
@@ -29,7 +30,7 @@ export public async function DefaultApi__dummy(fe : ApiExecuterI, ) : Promise<~O
     const _headerParams = { };
     const _body = undefined;
 
-    return await fe.<~Object+, undefined>exec(
+    return await fe.<ExampleResponse, undefined>exec(
         'GET', '' + '/example/someMethod',
         _pathParams, _queryParams, _headerParams,
         undefined,

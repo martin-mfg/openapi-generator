@@ -92,7 +92,7 @@ public class Example {
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     try {
-      Dummy200Response result = apiInstance.dummy()
+      ExampleResponse result = apiInstance.dummy()
             .execute();
       System.out.println(result);
     } catch (ApiException e) {
@@ -118,12 +118,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Dummy200Response](docs/Dummy200Response.md)
- - [Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
- - [Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [ExampleResponse](docs/ExampleResponse.md)
- - [Node](docs/Node.md)
- - [OtherObject](docs/OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

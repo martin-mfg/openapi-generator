@@ -13,7 +13,6 @@
 -(instancetype)init {
     self = [super init];
     if (self != nil) {
-       _myOnlyPropertyBuilder = [[SWGOtherObjectManagedObjectBuilder alloc] init];
     }
     return self;
 }
@@ -34,12 +33,12 @@
         return;
     }
     NSManagedObjectContext* context = managedObject.managedObjectContext;
-
-    if(!managedObject.myOnlyProperty) {
-        managedObject.myOnlyProperty = [self.myOnlyPropertyBuilder SWGOtherObjectManagedObjectFromSWGOtherObject:object.myOnlyProperty context:managedObject.managedObjectContext];
-    } else {
-        [self.myOnlyPropertyBuilder updateSWGOtherObjectManagedObject:managedObject.myOnlyProperty withSWGOtherObject:object.myOnlyProperty];
-    }
+    managedObject.emptyString = [object.emptyString copy];
+    managedObject.numberString = [object.numberString copy];
+    managedObject.boolString = [object.boolString copy];
+    managedObject.nullString = [object.nullString copy];
+    managedObject.aBool = [object.aBool copy];
+    managedObject.zero = [object.zero copy];
 
 }
 
@@ -53,7 +52,12 @@
 }
 
 -(void)updateSWGExampleResponse:(SWGExampleResponse*)newSWGExampleResponse withSWGExampleResponseManagedObject:(SWGExampleResponseManagedObject*)obj {
-    newSWGExampleResponse.myOnlyProperty = [self.myOnlyPropertyBuilder SWGOtherObjectFromSWGOtherObjectManagedObject:obj.myOnlyProperty];
+    newSWGExampleResponse.emptyString = [obj.emptyString copy];
+    newSWGExampleResponse.numberString = [obj.numberString copy];
+    newSWGExampleResponse.boolString = [obj.boolString copy];
+    newSWGExampleResponse.nullString = [obj.nullString copy];
+    newSWGExampleResponse.aBool = [obj.aBool copy];
+    newSWGExampleResponse.zero = [obj.zero copy];
 }
 
 @end

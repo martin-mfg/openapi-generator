@@ -55,12 +55,52 @@ namespace Org.OpenAPITools.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'MyOnlyProperty'
+        /// Test the property 'EmptyString'
         /// </summary>
         [Test]
-        public void MyOnlyPropertyTest()
+        public void EmptyStringTest()
         {
-            // TODO unit test for the property 'MyOnlyProperty'
+            // TODO unit test for the property 'EmptyString'
+        }
+        /// <summary>
+        /// Test the property 'NumberString'
+        /// </summary>
+        [Test]
+        public void NumberStringTest()
+        {
+            // TODO unit test for the property 'NumberString'
+        }
+        /// <summary>
+        /// Test the property 'BoolString'
+        /// </summary>
+        [Test]
+        public void BoolStringTest()
+        {
+            // TODO unit test for the property 'BoolString'
+        }
+        /// <summary>
+        /// Test the property 'NullString'
+        /// </summary>
+        [Test]
+        public void NullStringTest()
+        {
+            // TODO unit test for the property 'NullString'
+        }
+        /// <summary>
+        /// Test the property 'ABool'
+        /// </summary>
+        [Test]
+        public void ABoolTest()
+        {
+            // TODO unit test for the property 'ABool'
+        }
+        /// <summary>
+        /// Test the property 'Zero'
+        /// </summary>
+        [Test]
+        public void ZeroTest()
+        {
+            // TODO unit test for the property 'Zero'
         }
     }
 }

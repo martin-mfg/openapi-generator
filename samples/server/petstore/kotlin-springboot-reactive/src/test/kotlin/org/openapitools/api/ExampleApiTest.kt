@@ -1,6 +1,6 @@
 package org.openapitools.api
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 import org.junit.jupiter.api.Test
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.test.runBlockingTest
@@ -19,7 +19,7 @@ class ExampleApiTest {
      */
     @Test
     fun dummyTest() = runBlockingTest {
-        val response: ResponseEntity<Dummy200Response> = api.dummy()
+        val response: ResponseEntity<ExampleResponse> = api.dummy()
 
         // TODO: test validations
     }

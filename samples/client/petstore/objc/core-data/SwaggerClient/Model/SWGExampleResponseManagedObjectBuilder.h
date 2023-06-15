@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-#import "SWGOtherObjectManagedObjectBuilder.h"
 
 #import "SWGExampleResponseManagedObject.h"
 #import "SWGExampleResponse.h"
@@ -21,7 +20,6 @@
 
 @interface SWGExampleResponseManagedObjectBuilder : NSObject
 
-@property (nonatomic, strong) SWGOtherObjectManagedObjectBuilder * myOnlyPropertyBuilder;
 
 
 -(SWGExampleResponseManagedObject*)createNewSWGExampleResponseManagedObjectInContext:(NSManagedObjectContext*)context;

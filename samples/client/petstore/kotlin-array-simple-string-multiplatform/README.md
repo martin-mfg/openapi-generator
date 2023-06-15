@@ -41,12 +41,7 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [org.openapitools.client.models.Dummy200Response](docs/Dummy200Response.md)
- - [org.openapitools.client.models.Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
- - [org.openapitools.client.models.Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [org.openapitools.client.models.ExampleResponse](docs/ExampleResponse.md)
- - [org.openapitools.client.models.Node](docs/Node.md)
- - [org.openapitools.client.models.OtherObject](docs/OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

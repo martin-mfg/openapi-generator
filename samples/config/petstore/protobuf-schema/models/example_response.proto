@@ -12,10 +12,19 @@ syntax = "proto3";
 
 package petstore;
 
-import public "models/other_object.proto";
 
 message ExampleResponse {
 
-  OtherObject myOnlyProperty = 225457518;
+  string emptyString = 109372352;
+
+  string numberString = 518638779;
+
+  string boolString = 37277799;
+
+  string nullString = 321884283;
+
+  bool aBool = 91657963;
+
+  int32 zero = 3735208;
 
 }

@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
 
-    <entity name="SWGDummy200ResponseManagedObject" representedClassName="SWGDummy200ResponseManagedObject" syncable="YES">
-        <relationship name="outerProp" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGDummy200ResponseOuterPropManagedObject" syncable="YES"/>
-    </entity>
-    <entity name="SWGDummy200ResponseOuterPropManagedObject" representedClassName="SWGDummy200ResponseOuterPropManagedObject" syncable="YES">
-        <relationship name="innerProp" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGDummy200ResponseOuterPropInnerPropManagedObject" syncable="YES"/>
-    </entity>
-    <entity name="SWGDummy200ResponseOuterPropInnerPropManagedObject" representedClassName="SWGDummy200ResponseOuterPropInnerPropManagedObject" syncable="YES">
-        <attribute name="myBool" optional="YES" attributeType="Boolean" syncable="YES"/>
-    </entity>
     <entity name="SWGExampleResponseManagedObject" representedClassName="SWGExampleResponseManagedObject" syncable="YES">
-        <relationship name="myOnlyProperty" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGOtherObjectManagedObject" syncable="YES"/>
-    </entity>
-    <entity name="SWGNodeManagedObject" representedClassName="SWGNodeManagedObject" syncable="YES">
-        <relationship name="left" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGNodeManagedObject" syncable="YES"/>
-        <relationship name="right" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGNodeManagedObject" syncable="YES"/>
-    </entity>
-    <entity name="SWGOtherObjectManagedObject" representedClassName="SWGOtherObjectManagedObject" syncable="YES">
-        <relationship name="myOnlyProperty2" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGExampleResponseManagedObject" syncable="YES"/>
+        <attribute name="emptyString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numberString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="boolString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nullString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="aBool" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="zero" optional="YES" attributeType="Integer 16" syncable="YES"/>
     </entity>
     
 </model>

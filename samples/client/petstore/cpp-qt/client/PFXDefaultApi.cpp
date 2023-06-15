@@ -249,7 +249,7 @@ void PFXDefaultApi::dummyCallback(PFXHttpRequestWorker *worker) {
     if (worker->error_type != QNetworkReply::NoError) {
         error_str = QString("%1, %2").arg(worker->error_str, QString(worker->response));
     }
-    PFXDummy_200_response output(QString(worker->response));
+    PFXExampleResponse output(QString(worker->response));
     worker->deleteLater();
 
     if (worker->error_type == QNetworkReply::NoError) {

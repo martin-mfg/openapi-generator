@@ -4,12 +4,7 @@
 .travis.yml
 README.md
 docs/DefaultApi.md
-docs/Dummy200Response.md
-docs/Dummy200ResponseOuterProp.md
-docs/Dummy200ResponseOuterPropInnerProp.md
 docs/ExampleResponse.md
-docs/Node.md
-docs/OtherObject.md
 git_push.sh
 openapi_client/__init__.py
 openapi_client/api/__init__.py
@@ -19,12 +14,7 @@ openapi_client/api_response.py
 openapi_client/configuration.py
 openapi_client/exceptions.py
 openapi_client/models/__init__.py
-openapi_client/models/dummy200_response.py
-openapi_client/models/dummy200_response_outer_prop.py
-openapi_client/models/dummy200_response_outer_prop_inner_prop.py
 openapi_client/models/example_response.py
-openapi_client/models/node.py
-openapi_client/models/other_object.py
 openapi_client/py.typed
 openapi_client/rest.py
 pyproject.toml
@@ -33,5 +23,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_example_response.py
 tox.ini

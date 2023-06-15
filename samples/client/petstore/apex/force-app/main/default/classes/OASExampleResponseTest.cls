@@ -68,4 +68,15 @@ private class OASExampleResponseTest {
         System.assertEquals(exampleResponse1.hashCode(), exampleResponse2.hashCode());
         System.assertEquals(exampleResponse3.hashCode(), exampleResponse4.hashCode());
     }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASExampleResponse exampleResponse = new OASExampleResponse();
+        System.assertEquals('', exampleResponse.emptyString);
+        System.assertEquals('42', exampleResponse.numberString);
+        System.assertEquals('false', exampleResponse.boolString);
+        System.assertEquals('null', exampleResponse.nullString);
+        System.assertEquals(false, exampleResponse.aBool);
+        System.assertEquals(0, exampleResponse.zero);
+    }
 }

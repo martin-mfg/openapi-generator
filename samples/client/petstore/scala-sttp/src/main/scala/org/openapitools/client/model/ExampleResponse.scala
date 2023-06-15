@@ -16,6 +16,11 @@ package org.openapitools.client.model
    * dummy
    */
 case class ExampleResponse(
-  myOnlyProperty: Option[OtherObject] = None
+  emptyString: Option[String] = None,
+  numberString: Option[String] = None,
+  boolString: Option[String] = None,
+  nullString: Option[String] = None,
+  aBool: Option[Boolean] = None,
+  zero: Option[Int] = None
 )
 

@@ -18,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import org.openapitools.client.model.OtherObject;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
@@ -39,11 +38,51 @@ public class ExampleResponseTest {
     }
 
     /**
-     * Test the property 'myOnlyProperty'
+     * Test the property 'emptyString'
      */
     @Test
-    public void myOnlyPropertyTest() {
-        // TODO: test myOnlyProperty
+    public void emptyStringTest() {
+        // TODO: test emptyString
+    }
+
+    /**
+     * Test the property 'numberString'
+     */
+    @Test
+    public void numberStringTest() {
+        // TODO: test numberString
+    }
+
+    /**
+     * Test the property 'boolString'
+     */
+    @Test
+    public void boolStringTest() {
+        // TODO: test boolString
+    }
+
+    /**
+     * Test the property 'nullString'
+     */
+    @Test
+    public void nullStringTest() {
+        // TODO: test nullString
+    }
+
+    /**
+     * Test the property 'aBool'
+     */
+    @Test
+    public void aBoolTest() {
+        // TODO: test aBool
+    }
+
+    /**
+     * Test the property 'zero'
+     */
+    @Test
+    public void zeroTest() {
+        // TODO: test zero
     }
 
 }

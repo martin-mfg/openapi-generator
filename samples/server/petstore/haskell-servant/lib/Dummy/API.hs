@@ -123,7 +123,7 @@ formatSeparatedQueryList char = T.intercalate (T.singleton char) . map toQueryPa
 
 -- | Servant type-level API, generated from the OpenAPI spec for Dummy.
 type DummyAPI
-    =    "example" :> "someMethod" :> Verb 'GET 200 '[JSON] Dummy200Response -- 'dummy' route
+    =    "example" :> "someMethod" :> Verb 'GET 200 '[JSON] ExampleResponse -- 'dummy' route
     :<|> Raw
 
 
@@ -144,7 +144,7 @@ newtype DummyClientError = DummyClientError ClientError
 -- is a backend that executes actions by sending HTTP requests (see @createDummyClient@). Alternatively, provided
 -- a backend, the API can be served using @runDummyMiddlewareServer@.
 data DummyBackend m = DummyBackend
-  { dummy :: m Dummy200Response{- ^ dummy -}
+  { dummy :: m ExampleResponse{- ^ dummy -}
   }
 
 

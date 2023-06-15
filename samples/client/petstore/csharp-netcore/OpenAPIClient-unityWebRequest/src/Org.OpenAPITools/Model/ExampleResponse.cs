@@ -33,17 +33,66 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExampleResponse" /> class.
         /// </summary>
-        /// <param name="myOnlyProperty">myOnlyProperty.</param>
-        public ExampleResponse(OtherObject myOnlyProperty = default(OtherObject))
+        /// <param name="emptyString">emptyString (default to &quot;&quot;).</param>
+        /// <param name="numberString">numberString (default to &quot;42&quot;).</param>
+        /// <param name="boolString">boolString (default to &quot;false&quot;).</param>
+        /// <param name="nullString">nullString (default to &quot;null&quot;).</param>
+        /// <param name="aBool">aBool (default to false).</param>
+        /// <param name="zero">zero (default to 0).</param>
+        public ExampleResponse(string emptyString = @"", string numberString = @"42", string boolString = @"false", string nullString = @"null", bool aBool = false, int zero = 0)
         {
-            this.MyOnlyProperty = myOnlyProperty;
+            // use default value if no "emptyString" provided
+            this.EmptyString = emptyString ?? @"";
+            // use default value if no "numberString" provided
+            this.NumberString = numberString ?? @"42";
+            // use default value if no "boolString" provided
+            this.BoolString = boolString ?? @"false";
+            // use default value if no "nullString" provided
+            this.NullString = nullString ?? @"null";
+            this.ABool = aBool;
+            this.Zero = zero;
         }
 
         /// <summary>
-        /// Gets or Sets MyOnlyProperty
+        /// Gets or Sets EmptyString
         /// </summary>
-        [DataMember(Name = "myOnlyProperty", EmitDefaultValue = false)]
-        public OtherObject MyOnlyProperty { get; set; }
+        [DataMember(Name = "emptyString", EmitDefaultValue = false)]
+        public string EmptyString { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NumberString
+        /// </summary>
+        /// <example>42</example>
+        [DataMember(Name = "numberString", EmitDefaultValue = false)]
+        public string NumberString { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BoolString
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name = "boolString", EmitDefaultValue = false)]
+        public string BoolString { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NullString
+        /// </summary>
+        /// <example>null</example>
+        [DataMember(Name = "nullString", EmitDefaultValue = false)]
+        public string NullString { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ABool
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name = "aBool", EmitDefaultValue = true)]
+        public bool ABool { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Zero
+        /// </summary>
+        /// <example>0</example>
+        [DataMember(Name = "zero", EmitDefaultValue = false)]
+        public int Zero { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,7 +102,12 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ExampleResponse {\n");
-            sb.Append("  MyOnlyProperty: ").Append(MyOnlyProperty).Append("\n");
+            sb.Append("  EmptyString: ").Append(EmptyString).Append("\n");
+            sb.Append("  NumberString: ").Append(NumberString).Append("\n");
+            sb.Append("  BoolString: ").Append(BoolString).Append("\n");
+            sb.Append("  NullString: ").Append(NullString).Append("\n");
+            sb.Append("  ABool: ").Append(ABool).Append("\n");
+            sb.Append("  Zero: ").Append(Zero).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,9 +144,32 @@ namespace Org.OpenAPITools.Model
             }
             return 
                 (
-                    this.MyOnlyProperty == input.MyOnlyProperty ||
-                    (this.MyOnlyProperty != null &&
-                    this.MyOnlyProperty.Equals(input.MyOnlyProperty))
+                    this.EmptyString == input.EmptyString ||
+                    (this.EmptyString != null &&
+                    this.EmptyString.Equals(input.EmptyString))
+                ) && 
+                (
+                    this.NumberString == input.NumberString ||
+                    (this.NumberString != null &&
+                    this.NumberString.Equals(input.NumberString))
+                ) && 
+                (
+                    this.BoolString == input.BoolString ||
+                    (this.BoolString != null &&
+                    this.BoolString.Equals(input.BoolString))
+                ) && 
+                (
+                    this.NullString == input.NullString ||
+                    (this.NullString != null &&
+                    this.NullString.Equals(input.NullString))
+                ) && 
+                (
+                    this.ABool == input.ABool ||
+                    this.ABool.Equals(input.ABool)
+                ) && 
+                (
+                    this.Zero == input.Zero ||
+                    this.Zero.Equals(input.Zero)
                 );
         }
 
@@ -105,10 +182,24 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.MyOnlyProperty != null)
+                if (this.EmptyString != null)
                 {
-                    hashCode = (hashCode * 59) + this.MyOnlyProperty.GetHashCode();
+                    hashCode = (hashCode * 59) + this.EmptyString.GetHashCode();
                 }
+                if (this.NumberString != null)
+                {
+                    hashCode = (hashCode * 59) + this.NumberString.GetHashCode();
+                }
+                if (this.BoolString != null)
+                {
+                    hashCode = (hashCode * 59) + this.BoolString.GetHashCode();
+                }
+                if (this.NullString != null)
+                {
+                    hashCode = (hashCode * 59) + this.NullString.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.ABool.GetHashCode();
+                hashCode = (hashCode * 59) + this.Zero.GetHashCode();
                 return hashCode;
             }
         }

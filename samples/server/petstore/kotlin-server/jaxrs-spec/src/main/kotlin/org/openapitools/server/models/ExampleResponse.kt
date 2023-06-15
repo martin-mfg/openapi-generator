@@ -11,20 +11,44 @@
 */
 package org.openapitools.server.models
 
-import org.openapitools.server.models.OtherObject
 import com.fasterxml.jackson.annotation.JsonProperty
 /**
  * dummy
  *
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 
 
 data class ExampleResponse (
 
 
-    @JsonProperty("myOnlyProperty")
-    val myOnlyProperty: OtherObject? = null
+    @JsonProperty("emptyString")
+    val emptyString: kotlin.String? = "",
+
+
+    @JsonProperty("numberString")
+    val numberString: kotlin.String? = "42",
+
+
+    @JsonProperty("boolString")
+    val boolString: kotlin.String? = "false",
+
+
+    @JsonProperty("nullString")
+    val nullString: kotlin.String? = "null",
+
+
+    @JsonProperty("aBool")
+    val aBool: kotlin.Boolean? = false,
+
+
+    @JsonProperty("zero")
+    val zero: kotlin.Int? = 0
 
 )
 

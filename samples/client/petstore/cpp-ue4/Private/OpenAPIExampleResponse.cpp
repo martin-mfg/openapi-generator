@@ -23,9 +23,29 @@ namespace OpenAPI
 void OpenAPIExampleResponse::WriteJson(JsonWriter& Writer) const
 {
 	Writer->WriteObjectStart();
-	if (MyOnlyProperty.IsSet())
+	if (EmptyString.IsSet())
 	{
-		Writer->WriteIdentifierPrefix(TEXT("myOnlyProperty")); WriteJsonValue(Writer, MyOnlyProperty.GetValue());
+		Writer->WriteIdentifierPrefix(TEXT("emptyString")); WriteJsonValue(Writer, EmptyString.GetValue());
+	}
+	if (NumberString.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("numberString")); WriteJsonValue(Writer, NumberString.GetValue());
+	}
+	if (BoolString.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("boolString")); WriteJsonValue(Writer, BoolString.GetValue());
+	}
+	if (NullString.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("nullString")); WriteJsonValue(Writer, NullString.GetValue());
+	}
+	if (ABool.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("aBool")); WriteJsonValue(Writer, ABool.GetValue());
+	}
+	if (Zero.IsSet())
+	{
+		Writer->WriteIdentifierPrefix(TEXT("zero")); WriteJsonValue(Writer, Zero.GetValue());
 	}
 	Writer->WriteObjectEnd();
 }
@@ -38,7 +58,12 @@ bool OpenAPIExampleResponse::FromJson(const TSharedPtr<FJsonValue>& JsonValue)
 
 	bool ParseSuccess = true;
 
-	ParseSuccess &= TryGetJsonValue(*Object, TEXT("myOnlyProperty"), MyOnlyProperty);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("emptyString"), EmptyString);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("numberString"), NumberString);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("boolString"), BoolString);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("nullString"), NullString);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("aBool"), ABool);
+	ParseSuccess &= TryGetJsonValue(*Object, TEXT("zero"), Zero);
 
 	return ParseSuccess;
 }

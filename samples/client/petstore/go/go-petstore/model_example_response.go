@@ -19,7 +19,12 @@ var _ MappedNullable = &ExampleResponse{}
 
 // ExampleResponse dummy
 type ExampleResponse struct {
-	MyOnlyProperty *OtherObject `json:"myOnlyProperty,omitempty"`
+	EmptyString *string `json:"emptyString,omitempty"`
+	NumberString *string `json:"numberString,omitempty"`
+	BoolString *string `json:"boolString,omitempty"`
+	NullString *string `json:"nullString,omitempty"`
+	ABool *bool `json:"aBool,omitempty"`
+	Zero *int32 `json:"zero,omitempty"`
 }
 
 // NewExampleResponse instantiates a new ExampleResponse object
@@ -28,6 +33,18 @@ type ExampleResponse struct {
 // will change when the set of required properties is changed
 func NewExampleResponse() *ExampleResponse {
 	this := ExampleResponse{}
+	var emptyString string = ""
+	this.EmptyString = &emptyString
+	var numberString string = "42"
+	this.NumberString = &numberString
+	var boolString string = "false"
+	this.BoolString = &boolString
+	var nullString string = "null"
+	this.NullString = &nullString
+	var aBool bool = false
+	this.ABool = &aBool
+	var zero int32 = 0
+	this.Zero = &zero
 	return &this
 }
 
@@ -36,39 +53,211 @@ func NewExampleResponse() *ExampleResponse {
 // but it doesn't guarantee that properties required by API are set
 func NewExampleResponseWithDefaults() *ExampleResponse {
 	this := ExampleResponse{}
+	var emptyString string = ""
+	this.EmptyString = &emptyString
+	var numberString string = "42"
+	this.NumberString = &numberString
+	var boolString string = "false"
+	this.BoolString = &boolString
+	var nullString string = "null"
+	this.NullString = &nullString
+	var aBool bool = false
+	this.ABool = &aBool
+	var zero int32 = 0
+	this.Zero = &zero
 	return &this
 }
 
-// GetMyOnlyProperty returns the MyOnlyProperty field value if set, zero value otherwise.
-func (o *ExampleResponse) GetMyOnlyProperty() OtherObject {
-	if o == nil || IsNil(o.MyOnlyProperty) {
-		var ret OtherObject
+// GetEmptyString returns the EmptyString field value if set, zero value otherwise.
+func (o *ExampleResponse) GetEmptyString() string {
+	if o == nil || IsNil(o.EmptyString) {
+		var ret string
 		return ret
 	}
-	return *o.MyOnlyProperty
+	return *o.EmptyString
 }
 
-// GetMyOnlyPropertyOk returns a tuple with the MyOnlyProperty field value if set, nil otherwise
+// GetEmptyStringOk returns a tuple with the EmptyString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExampleResponse) GetMyOnlyPropertyOk() (*OtherObject, bool) {
-	if o == nil || IsNil(o.MyOnlyProperty) {
+func (o *ExampleResponse) GetEmptyStringOk() (*string, bool) {
+	if o == nil || IsNil(o.EmptyString) {
 		return nil, false
 	}
-	return o.MyOnlyProperty, true
+	return o.EmptyString, true
 }
 
-// HasMyOnlyProperty returns a boolean if a field has been set.
-func (o *ExampleResponse) HasMyOnlyProperty() bool {
-	if o != nil && !IsNil(o.MyOnlyProperty) {
+// HasEmptyString returns a boolean if a field has been set.
+func (o *ExampleResponse) HasEmptyString() bool {
+	if o != nil && !IsNil(o.EmptyString) {
 		return true
 	}
 
 	return false
 }
 
-// SetMyOnlyProperty gets a reference to the given OtherObject and assigns it to the MyOnlyProperty field.
-func (o *ExampleResponse) SetMyOnlyProperty(v OtherObject) {
-	o.MyOnlyProperty = &v
+// SetEmptyString gets a reference to the given string and assigns it to the EmptyString field.
+func (o *ExampleResponse) SetEmptyString(v string) {
+	o.EmptyString = &v
+}
+
+// GetNumberString returns the NumberString field value if set, zero value otherwise.
+func (o *ExampleResponse) GetNumberString() string {
+	if o == nil || IsNil(o.NumberString) {
+		var ret string
+		return ret
+	}
+	return *o.NumberString
+}
+
+// GetNumberStringOk returns a tuple with the NumberString field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ExampleResponse) GetNumberStringOk() (*string, bool) {
+	if o == nil || IsNil(o.NumberString) {
+		return nil, false
+	}
+	return o.NumberString, true
+}
+
+// HasNumberString returns a boolean if a field has been set.
+func (o *ExampleResponse) HasNumberString() bool {
+	if o != nil && !IsNil(o.NumberString) {
+		return true
+	}
+
+	return false
+}
+
+// SetNumberString gets a reference to the given string and assigns it to the NumberString field.
+func (o *ExampleResponse) SetNumberString(v string) {
+	o.NumberString = &v
+}
+
+// GetBoolString returns the BoolString field value if set, zero value otherwise.
+func (o *ExampleResponse) GetBoolString() string {
+	if o == nil || IsNil(o.BoolString) {
+		var ret string
+		return ret
+	}
+	return *o.BoolString
+}
+
+// GetBoolStringOk returns a tuple with the BoolString field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ExampleResponse) GetBoolStringOk() (*string, bool) {
+	if o == nil || IsNil(o.BoolString) {
+		return nil, false
+	}
+	return o.BoolString, true
+}
+
+// HasBoolString returns a boolean if a field has been set.
+func (o *ExampleResponse) HasBoolString() bool {
+	if o != nil && !IsNil(o.BoolString) {
+		return true
+	}
+
+	return false
+}
+
+// SetBoolString gets a reference to the given string and assigns it to the BoolString field.
+func (o *ExampleResponse) SetBoolString(v string) {
+	o.BoolString = &v
+}
+
+// GetNullString returns the NullString field value if set, zero value otherwise.
+func (o *ExampleResponse) GetNullString() string {
+	if o == nil || IsNil(o.NullString) {
+		var ret string
+		return ret
+	}
+	return *o.NullString
+}
+
+// GetNullStringOk returns a tuple with the NullString field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ExampleResponse) GetNullStringOk() (*string, bool) {
+	if o == nil || IsNil(o.NullString) {
+		return nil, false
+	}
+	return o.NullString, true
+}
+
+// HasNullString returns a boolean if a field has been set.
+func (o *ExampleResponse) HasNullString() bool {
+	if o != nil && !IsNil(o.NullString) {
+		return true
+	}
+
+	return false
+}
+
+// SetNullString gets a reference to the given string and assigns it to the NullString field.
+func (o *ExampleResponse) SetNullString(v string) {
+	o.NullString = &v
+}
+
+// GetABool returns the ABool field value if set, zero value otherwise.
+func (o *ExampleResponse) GetABool() bool {
+	if o == nil || IsNil(o.ABool) {
+		var ret bool
+		return ret
+	}
+	return *o.ABool
+}
+
+// GetABoolOk returns a tuple with the ABool field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ExampleResponse) GetABoolOk() (*bool, bool) {
+	if o == nil || IsNil(o.ABool) {
+		return nil, false
+	}
+	return o.ABool, true
+}
+
+// HasABool returns a boolean if a field has been set.
+func (o *ExampleResponse) HasABool() bool {
+	if o != nil && !IsNil(o.ABool) {
+		return true
+	}
+
+	return false
+}
+
+// SetABool gets a reference to the given bool and assigns it to the ABool field.
+func (o *ExampleResponse) SetABool(v bool) {
+	o.ABool = &v
+}
+
+// GetZero returns the Zero field value if set, zero value otherwise.
+func (o *ExampleResponse) GetZero() int32 {
+	if o == nil || IsNil(o.Zero) {
+		var ret int32
+		return ret
+	}
+	return *o.Zero
+}
+
+// GetZeroOk returns a tuple with the Zero field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ExampleResponse) GetZeroOk() (*int32, bool) {
+	if o == nil || IsNil(o.Zero) {
+		return nil, false
+	}
+	return o.Zero, true
+}
+
+// HasZero returns a boolean if a field has been set.
+func (o *ExampleResponse) HasZero() bool {
+	if o != nil && !IsNil(o.Zero) {
+		return true
+	}
+
+	return false
+}
+
+// SetZero gets a reference to the given int32 and assigns it to the Zero field.
+func (o *ExampleResponse) SetZero(v int32) {
+	o.Zero = &v
 }
 
 func (o ExampleResponse) MarshalJSON() ([]byte, error) {
@@ -81,8 +270,23 @@ func (o ExampleResponse) MarshalJSON() ([]byte, error) {
 
 func (o ExampleResponse) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.MyOnlyProperty) {
-		toSerialize["myOnlyProperty"] = o.MyOnlyProperty
+	if !IsNil(o.EmptyString) {
+		toSerialize["emptyString"] = o.EmptyString
+	}
+	if !IsNil(o.NumberString) {
+		toSerialize["numberString"] = o.NumberString
+	}
+	if !IsNil(o.BoolString) {
+		toSerialize["boolString"] = o.BoolString
+	}
+	if !IsNil(o.NullString) {
+		toSerialize["nullString"] = o.NullString
+	}
+	if !IsNil(o.ABool) {
+		toSerialize["aBool"] = o.ABool
+	}
+	if !IsNil(o.Zero) {
+		toSerialize["zero"] = o.Zero
 	}
 	return toSerialize, nil
 }

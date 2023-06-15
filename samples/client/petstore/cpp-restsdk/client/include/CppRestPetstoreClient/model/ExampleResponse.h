@@ -21,14 +21,13 @@
 
 #include "CppRestPetstoreClient/ModelBase.h"
 
-#include "CppRestPetstoreClient/model/OtherObject.h"
+#include <cpprest/details/basic_types.h>
 
 namespace org {
 namespace openapitools {
 namespace client {
 namespace model {
 
-class OtherObject;
 
 /// <summary>
 /// dummy
@@ -57,16 +56,71 @@ public:
     /// <summary>
     /// 
     /// </summary>
-    std::shared_ptr<OtherObject> getMyOnlyProperty() const;
-    bool myOnlyPropertyIsSet() const;
-    void unsetMyOnlyProperty();
+    utility::string_t getEmptyString() const;
+    bool emptyStringIsSet() const;
+    void unsetEmptyString();
 
-    void setMyOnlyProperty(const std::shared_ptr<OtherObject>& value);
+    void setEmptyString(const utility::string_t& value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    utility::string_t getNumberString() const;
+    bool numberStringIsSet() const;
+    void unsetNumberString();
+
+    void setNumberString(const utility::string_t& value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    utility::string_t getBoolString() const;
+    bool boolStringIsSet() const;
+    void unsetBoolString();
+
+    void setBoolString(const utility::string_t& value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    utility::string_t getNullString() const;
+    bool nullStringIsSet() const;
+    void unsetNullString();
+
+    void setNullString(const utility::string_t& value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    bool isABool() const;
+    bool aBoolIsSet() const;
+    void unsetABool();
+
+    void setABool(bool value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    int32_t getZero() const;
+    bool zeroIsSet() const;
+    void unsetZero();
+
+    void setZero(int32_t value);
 
 
 protected:
-    std::shared_ptr<OtherObject> m_MyOnlyProperty;
-    bool m_MyOnlyPropertyIsSet;
+    utility::string_t m_EmptyString;
+    bool m_EmptyStringIsSet;
+    utility::string_t m_NumberString;
+    bool m_NumberStringIsSet;
+    utility::string_t m_BoolString;
+    bool m_BoolStringIsSet;
+    utility::string_t m_NullString;
+    bool m_NullStringIsSet;
+    bool m_ABool;
+    bool m_ABoolIsSet;
+    int32_t m_Zero;
+    bool m_ZeroIsSet;
 };
 
 

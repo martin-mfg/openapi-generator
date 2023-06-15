@@ -15,16 +15,16 @@
 import { HttpMethods, QueryConfig, ResponseBody, ResponseText } from 'redux-query';
 import * as runtime from '../runtime';
 import {
-    Dummy200Response,
-    Dummy200ResponseFromJSON,
-    Dummy200ResponseToJSON,
+    ExampleResponse,
+    ExampleResponseFromJSON,
+    ExampleResponseToJSON,
 } from '../models';
 
 
 /**
  * dummy
  */
-function dummyRaw<T>( requestConfig: runtime.TypedQueryConfig<T, Dummy200Response> = {}): QueryConfig<T> {
+function dummyRaw<T>( requestConfig: runtime.TypedQueryConfig<T, ExampleResponse> = {}): QueryConfig<T> {
     let queryParameters = null;
 
 
@@ -50,7 +50,7 @@ function dummyRaw<T>( requestConfig: runtime.TypedQueryConfig<T, Dummy200Respons
 
     const { transform: requestTransform } = requestConfig;
     if (requestTransform) {
-        config.transform = (body: ResponseBody, text: ResponseBody) => requestTransform(Dummy200ResponseFromJSON(body), text);
+        config.transform = (body: ResponseBody, text: ResponseBody) => requestTransform(ExampleResponseFromJSON(body), text);
     }
 
     return config;
@@ -59,7 +59,7 @@ function dummyRaw<T>( requestConfig: runtime.TypedQueryConfig<T, Dummy200Respons
 /**
 * dummy
 */
-export function dummy<T>( requestConfig?: runtime.TypedQueryConfig<T, Dummy200Response>): QueryConfig<T> {
+export function dummy<T>( requestConfig?: runtime.TypedQueryConfig<T, ExampleResponse>): QueryConfig<T> {
     return dummyRaw( requestConfig);
 }
 

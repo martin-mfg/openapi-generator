@@ -1,6 +1,6 @@
 package org.openapitools.api
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import spock.lang.Specification
 import jakarta.inject.Inject
@@ -33,7 +33,7 @@ class DefaultApiSpec extends Specification {
         given:
 
         when:
-        Dummy200Response body = api.dummy().block()
+        ExampleResponse body = api.dummy().block()
 
         then:
         true

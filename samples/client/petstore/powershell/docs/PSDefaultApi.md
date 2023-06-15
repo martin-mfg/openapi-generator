@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="Invoke-PSDummy"></a>
 # **Invoke-PSDummy**
-> Dummy200Response Invoke-PSDummy<br>
+> ExampleResponse Invoke-PSDummy<br>
 
 
 
@@ -31,7 +31,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Dummy200Response**](Dummy200Response.md) (PSCustomObject)
+[**ExampleResponse**](ExampleResponse.md) (PSCustomObject)
 
 ### Authorization
 

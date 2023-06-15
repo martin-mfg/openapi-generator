@@ -85,7 +85,7 @@ public class DefaultApiExample {
         // overriding the host and port, timeout, etc.
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<Dummy200Response> result = apiInstance.dummy();
+            CompletableFuture<ExampleResponse> result = apiInstance.dummy();
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#dummy");
@@ -111,12 +111,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Dummy200Response](docs/Dummy200Response.md)
- - [Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
- - [Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [ExampleResponse](docs/ExampleResponse.md)
- - [Node](docs/Node.md)
- - [OtherObject](docs/OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

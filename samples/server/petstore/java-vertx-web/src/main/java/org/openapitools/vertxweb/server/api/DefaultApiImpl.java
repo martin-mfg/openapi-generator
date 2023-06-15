@@ -1,6 +1,6 @@
 package org.openapitools.vertxweb.server.api;
 
-import org.openapitools.vertxweb.server.model.Dummy200Response;
+import org.openapitools.vertxweb.server.model.ExampleResponse;
 
 import org.openapitools.vertxweb.server.ApiResponse;
 
@@ -14,7 +14,7 @@ import java.util.Map;
 // Implement this class
 
 public class DefaultApiImpl implements DefaultApi {
-    public Future<ApiResponse<Dummy200Response>> dummy() {
+    public Future<ApiResponse<ExampleResponse>> dummy() {
         return Future.failedFuture(new HttpException(501));
     }
 

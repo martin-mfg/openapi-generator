@@ -11,10 +11,6 @@
  * Do not edit the class manually.
  */
 
-import type {
-    OtherObject,
-} from './';
-
 /**
  * dummy
  * @export
@@ -22,8 +18,33 @@ import type {
  */
 export interface ExampleResponse {
     /**
-     * @type {OtherObject}
+     * @type {string}
      * @memberof ExampleResponse
      */
-    myOnlyProperty?: OtherObject;
+    emptyString?: string;
+    /**
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    numberString?: string;
+    /**
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    boolString?: string;
+    /**
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    nullString?: string;
+    /**
+     * @type {boolean}
+     * @memberof ExampleResponse
+     */
+    aBool?: boolean;
+    /**
+     * @type {number}
+     * @memberof ExampleResponse
+     */
+    zero?: number;
 }

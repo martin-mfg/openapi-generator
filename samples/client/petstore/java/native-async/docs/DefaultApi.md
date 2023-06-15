@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 ## dummy
 
-> CompletableFuture<Dummy200Response> dummy()
+> CompletableFuture<ExampleResponse> dummy()
 
 
 
@@ -35,7 +35,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<Dummy200Response> result = apiInstance.dummy();
+            CompletableFuture<ExampleResponse> result = apiInstance.dummy();
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#dummy");
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<[**Dummy200Response**](Dummy200Response.md)>
+CompletableFuture<[**ExampleResponse**](ExampleResponse.md)>
 
 
 ### Authorization
@@ -73,7 +73,7 @@ No authorization required
 
 ## dummyWithHttpInfo
 
-> CompletableFuture<ApiResponse<Dummy200Response>> dummy dummyWithHttpInfo()
+> CompletableFuture<ApiResponse<ExampleResponse>> dummy dummyWithHttpInfo()
 
 
 
@@ -98,7 +98,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<ApiResponse<Dummy200Response>> response = apiInstance.dummyWithHttpInfo();
+            CompletableFuture<ApiResponse<ExampleResponse>> response = apiInstance.dummyWithHttpInfo();
             System.out.println("Status code: " + response.get().getStatusCode());
             System.out.println("Response headers: " + response.get().getHeaders());
             System.out.println("Response body: " + response.get().getData());
@@ -126,7 +126,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<ApiResponse<[**Dummy200Response**](Dummy200Response.md)>>
+CompletableFuture<ApiResponse<[**ExampleResponse**](ExampleResponse.md)>>
 
 
 ### Authorization

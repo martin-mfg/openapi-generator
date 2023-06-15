@@ -9,7 +9,7 @@ void main() {
   group(DefaultApi, () {
     // dummy
     //
-    //Future<Dummy200Response> dummy() async
+    //Future<ExampleResponse> dummy() async
     test('test dummy', () async {
       // TODO
     });

@@ -58,7 +58,12 @@ class ExampleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'my_only_property' => '\OpenAPI\Client\Model\OtherObject'
+        'empty_string' => 'string',
+        'number_string' => 'string',
+        'bool_string' => 'string',
+        'null_string' => 'string',
+        'a_bool' => 'bool',
+        'zero' => 'int'
     ];
 
     /**
@@ -69,7 +74,12 @@ class ExampleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'my_only_property' => null
+        'empty_string' => null,
+        'number_string' => null,
+        'bool_string' => null,
+        'null_string' => null,
+        'a_bool' => null,
+        'zero' => null
     ];
 
     /**
@@ -78,7 +88,12 @@ class ExampleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'my_only_property' => false
+        'empty_string' => false,
+		'number_string' => false,
+		'bool_string' => false,
+		'null_string' => false,
+		'a_bool' => false,
+		'zero' => false
     ];
 
     /**
@@ -167,7 +182,12 @@ class ExampleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'my_only_property' => 'myOnlyProperty'
+        'empty_string' => 'emptyString',
+        'number_string' => 'numberString',
+        'bool_string' => 'boolString',
+        'null_string' => 'nullString',
+        'a_bool' => 'aBool',
+        'zero' => 'zero'
     ];
 
     /**
@@ -176,7 +196,12 @@ class ExampleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'my_only_property' => 'setMyOnlyProperty'
+        'empty_string' => 'setEmptyString',
+        'number_string' => 'setNumberString',
+        'bool_string' => 'setBoolString',
+        'null_string' => 'setNullString',
+        'a_bool' => 'setABool',
+        'zero' => 'setZero'
     ];
 
     /**
@@ -185,7 +210,12 @@ class ExampleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'my_only_property' => 'getMyOnlyProperty'
+        'empty_string' => 'getEmptyString',
+        'number_string' => 'getNumberString',
+        'bool_string' => 'getBoolString',
+        'null_string' => 'getNullString',
+        'a_bool' => 'getABool',
+        'zero' => 'getZero'
     ];
 
     /**
@@ -245,7 +275,12 @@ class ExampleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('my_only_property', $data ?? [], null);
+        $this->setIfExists('empty_string', $data ?? [], '');
+        $this->setIfExists('number_string', $data ?? [], '42');
+        $this->setIfExists('bool_string', $data ?? [], 'false');
+        $this->setIfExists('null_string', $data ?? [], 'null');
+        $this->setIfExists('a_bool', $data ?? [], false);
+        $this->setIfExists('zero', $data ?? [], 0);
     }
 
     /**
@@ -291,28 +326,163 @@ class ExampleResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets my_only_property
+     * Gets empty_string
      *
-     * @return \OpenAPI\Client\Model\OtherObject|null
+     * @return string|null
      */
-    public function getMyOnlyProperty()
+    public function getEmptyString()
     {
-        return $this->container['my_only_property'];
+        return $this->container['empty_string'];
     }
 
     /**
-     * Sets my_only_property
+     * Sets empty_string
      *
-     * @param \OpenAPI\Client\Model\OtherObject|null $my_only_property my_only_property
+     * @param string|null $empty_string empty_string
      *
      * @return self
      */
-    public function setMyOnlyProperty($my_only_property)
+    public function setEmptyString($empty_string)
     {
-        if (is_null($my_only_property)) {
-            throw new \InvalidArgumentException('non-nullable my_only_property cannot be null');
+        if (is_null($empty_string)) {
+            throw new \InvalidArgumentException('non-nullable empty_string cannot be null');
         }
-        $this->container['my_only_property'] = $my_only_property;
+        $this->container['empty_string'] = $empty_string;
+
+        return $this;
+    }
+
+    /**
+     * Gets number_string
+     *
+     * @return string|null
+     */
+    public function getNumberString()
+    {
+        return $this->container['number_string'];
+    }
+
+    /**
+     * Sets number_string
+     *
+     * @param string|null $number_string number_string
+     *
+     * @return self
+     */
+    public function setNumberString($number_string)
+    {
+        if (is_null($number_string)) {
+            throw new \InvalidArgumentException('non-nullable number_string cannot be null');
+        }
+        $this->container['number_string'] = $number_string;
+
+        return $this;
+    }
+
+    /**
+     * Gets bool_string
+     *
+     * @return string|null
+     */
+    public function getBoolString()
+    {
+        return $this->container['bool_string'];
+    }
+
+    /**
+     * Sets bool_string
+     *
+     * @param string|null $bool_string bool_string
+     *
+     * @return self
+     */
+    public function setBoolString($bool_string)
+    {
+        if (is_null($bool_string)) {
+            throw new \InvalidArgumentException('non-nullable bool_string cannot be null');
+        }
+        $this->container['bool_string'] = $bool_string;
+
+        return $this;
+    }
+
+    /**
+     * Gets null_string
+     *
+     * @return string|null
+     */
+    public function getNullString()
+    {
+        return $this->container['null_string'];
+    }
+
+    /**
+     * Sets null_string
+     *
+     * @param string|null $null_string null_string
+     *
+     * @return self
+     */
+    public function setNullString($null_string)
+    {
+        if (is_null($null_string)) {
+            throw new \InvalidArgumentException('non-nullable null_string cannot be null');
+        }
+        $this->container['null_string'] = $null_string;
+
+        return $this;
+    }
+
+    /**
+     * Gets a_bool
+     *
+     * @return bool|null
+     */
+    public function getABool()
+    {
+        return $this->container['a_bool'];
+    }
+
+    /**
+     * Sets a_bool
+     *
+     * @param bool|null $a_bool a_bool
+     *
+     * @return self
+     */
+    public function setABool($a_bool)
+    {
+        if (is_null($a_bool)) {
+            throw new \InvalidArgumentException('non-nullable a_bool cannot be null');
+        }
+        $this->container['a_bool'] = $a_bool;
+
+        return $this;
+    }
+
+    /**
+     * Gets zero
+     *
+     * @return int|null
+     */
+    public function getZero()
+    {
+        return $this->container['zero'];
+    }
+
+    /**
+     * Sets zero
+     *
+     * @param int|null $zero zero
+     *
+     * @return self
+     */
+    public function setZero($zero)
+    {
+        if (is_null($zero)) {
+            throw new \InvalidArgumentException('non-nullable zero cannot be null');
+        }
+        $this->container['zero'] = $zero;
 
         return $this;
     }

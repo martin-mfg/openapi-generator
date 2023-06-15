@@ -11,42 +11,15 @@
  */
 
 
-export interface Dummy200Response {
-  outerProp?: Dummy200ResponseOuterProp;
-}
-
-
-export interface Dummy200ResponseOuterProp {
-  innerProp?: Dummy200ResponseOuterPropInnerProp;
-}
-
-
-export interface Dummy200ResponseOuterPropInnerProp {
-  myBool?: boolean;
-}
-
-
 /**
  * dummy
  */
 export interface ExampleResponse {
-  myOnlyProperty?: OtherObject;
-}
-
-
-/**
- * dummy
- */
-export interface Node {
-  left?: Node;
-  right?: Node;
-}
-
-
-/**
- * dummy
- */
-export interface OtherObject {
-  myOnlyProperty2?: ExampleResponse;
+  emptyString?: string;
+  numberString?: string;
+  boolString?: string;
+  nullString?: string;
+  aBool?: boolean;
+  zero?: number;
 }
 

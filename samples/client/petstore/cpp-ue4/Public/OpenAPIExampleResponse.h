@@ -13,7 +13,6 @@
 #pragma once
 
 #include "OpenAPIBaseModel.h"
-#include "OpenAPIOtherObject.h"
 
 namespace OpenAPI
 {
@@ -30,7 +29,12 @@ public:
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 	void WriteJson(JsonWriter& Writer) const final;
 
-	TOptional<OpenAPIOtherObject> MyOnlyProperty;
+	TOptional<FString> EmptyString;
+	TOptional<FString> NumberString;
+	TOptional<FString> BoolString;
+	TOptional<FString> NullString;
+	TOptional<bool> ABool;
+	TOptional<int32> Zero;
 };
 
 }

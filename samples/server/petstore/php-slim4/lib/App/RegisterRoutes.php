@@ -54,12 +54,10 @@ class RegisterRoutes
   "content" : {
     "*/*" : {
       "schema" : {
-        "$ref" : "#/components/schemas/dummy_200_response"
-      },
-      "x-myextension" : "dummy"
+        "$ref" : "#/components/schemas/ExampleResponse"
+      }
     }
-  },
-  "x-myextension" : "dummy"
+  }
 }',
                 ],
             ],

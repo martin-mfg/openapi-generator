@@ -5,7 +5,7 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.Dummy200ResponseDto;
+import org.openapitools.model.ExampleResponseDto;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -41,23 +41,23 @@ public interface ExampleApi {
         value = "",
         nickname = "dummy",
         notes = "dummy",
-        response = Dummy200ResponseDto.class
+        response = ExampleResponseDto.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "dummy", response = Dummy200ResponseDto.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponseDto.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<Dummy200ResponseDto> dummy(
+    default ResponseEntity<ExampleResponseDto> dummy(
         
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
-                    String exampleString = "{ \"outerProp\" : { \"innerProp\" : { \"myBool\" : true } } }";
+                    String exampleString = "{ \"zero\" : 0, \"numberString\" : \"42\", \"nullString\" : \"null\", \"emptyString\" : \"\", \"boolString\" : \"false\", \"aBool\" : false }";
                     ApiUtil.setExampleResponse(request, "*/*", exampleString);
                     break;
                 }

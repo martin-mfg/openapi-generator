@@ -16,8 +16,33 @@ void main() {
   // final instance = ExampleResponse();
 
   group('test ExampleResponse', () {
-    // OtherObject myOnlyProperty
-    test('to test the property `myOnlyProperty`', () async {
+    // String emptyString (default value: '')
+    test('to test the property `emptyString`', () async {
+      // TODO
+    });
+
+    // String numberString (default value: '42')
+    test('to test the property `numberString`', () async {
+      // TODO
+    });
+
+    // String boolString (default value: 'false')
+    test('to test the property `boolString`', () async {
+      // TODO
+    });
+
+    // String nullString (default value: 'null')
+    test('to test the property `nullString`', () async {
+      // TODO
+    });
+
+    // bool aBool (default value: false)
+    test('to test the property `aBool`', () async {
+      // TODO
+    });
+
+    // int zero (default value: 0)
+    test('to test the property `zero`', () async {
       // TODO
     });
 

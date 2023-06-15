@@ -80,9 +80,54 @@ class ExampleResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "my_only_property"
+     * Test attribute "empty_string"
      */
-    public function testPropertyMyOnlyProperty()
+    public function testPropertyEmptyString()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "number_string"
+     */
+    public function testPropertyNumberString()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "bool_string"
+     */
+    public function testPropertyBoolString()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "null_string"
+     */
+    public function testPropertyNullString()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "a_bool"
+     */
+    public function testPropertyABool()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "zero"
+     */
+    public function testPropertyZero()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

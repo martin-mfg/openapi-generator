@@ -7,5 +7,10 @@
 */
 @implementation SWGExampleResponseManagedObject
 
-@dynamic myOnlyProperty;
+@dynamic emptyString;
+@dynamic numberString;
+@dynamic boolString;
+@dynamic nullString;
+@dynamic aBool;
+@dynamic zero;
 @end

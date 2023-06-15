@@ -4,12 +4,7 @@ api/api.ts
 configuration.ts
 git_push.sh
 index.ts
-model/Dummy200Response.ts
-model/Dummy200ResponseOuterProp.ts
-model/Dummy200ResponseOuterPropInnerProp.ts
 model/ExampleResponse.ts
-model/Node.ts
-model/OtherObject.ts
 model/models.ts
 package.json
 tsconfig.json

@@ -13,21 +13,41 @@ import AnyCodable
 /** dummy */
 public struct PrefixExampleResponseSuffix: Codable, JSONEncodable, Hashable {
 
-    public var myOnlyProperty: PrefixOtherObjectSuffix?
+    public var emptyString: String? = ""
+    public var numberString: String? = "42"
+    public var boolString: String? = "false"
+    public var nullString: String? = "null"
+    public var aBool: Bool? = false
+    public var zero: Int? = 0
 
-    public init(myOnlyProperty: PrefixOtherObjectSuffix? = nil) {
-        self.myOnlyProperty = myOnlyProperty
+    public init(emptyString: String? = "", numberString: String? = "42", boolString: String? = "false", nullString: String? = "null", aBool: Bool? = false, zero: Int? = 0) {
+        self.emptyString = emptyString
+        self.numberString = numberString
+        self.boolString = boolString
+        self.nullString = nullString
+        self.aBool = aBool
+        self.zero = zero
     }
 
     public enum CodingKeys: String, CodingKey, CaseIterable {
-        case myOnlyProperty
+        case emptyString
+        case numberString
+        case boolString
+        case nullString
+        case aBool
+        case zero
     }
 
     // Encodable protocol methods
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encodeIfPresent(myOnlyProperty, forKey: .myOnlyProperty)
+        try container.encodeIfPresent(emptyString, forKey: .emptyString)
+        try container.encodeIfPresent(numberString, forKey: .numberString)
+        try container.encodeIfPresent(boolString, forKey: .boolString)
+        try container.encodeIfPresent(nullString, forKey: .nullString)
+        try container.encodeIfPresent(aBool, forKey: .aBool)
+        try container.encodeIfPresent(zero, forKey: .zero)
     }
 }
 

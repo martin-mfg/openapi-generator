@@ -62,26 +62,89 @@ ptree ExampleResponse::toPropertyTree() const
 {
 	ptree pt;
 	ptree tmp_node;
-	pt.add_child("myOnlyProperty", m_MyOnlyProperty.toPropertyTree());
+	pt.put("emptyString", m_EmptyString);
+	pt.put("numberString", m_NumberString);
+	pt.put("boolString", m_BoolString);
+	pt.put("nullString", m_NullString);
+	pt.put("aBool", m_ABool);
+	pt.put("zero", m_Zero);
 	return pt;
 }
 
 void ExampleResponse::fromPropertyTree(ptree const &pt)
 {
 	ptree tmp_node;
-	if (pt.get_child_optional("myOnlyProperty")) {
-        m_MyOnlyProperty = fromPt<OtherObject>(pt.get_child("myOnlyProperty"));
-	}
+	m_EmptyString = pt.get("emptyString", "");
+	m_NumberString = pt.get("numberString", "42");
+	m_BoolString = pt.get("boolString", "false");
+	m_NullString = pt.get("nullString", "null");
+	m_ABool = pt.get("aBool", false);
+	m_Zero = pt.get("zero", 0);
 }
 
-OtherObject ExampleResponse::getMyOnlyProperty() const
+std::string ExampleResponse::getEmptyString() const
 {
-    return m_MyOnlyProperty;
+    return m_EmptyString;
 }
 
-void ExampleResponse::setMyOnlyProperty(OtherObject value)
+void ExampleResponse::setEmptyString(std::string value)
 {
-    m_MyOnlyProperty = value;
+    m_EmptyString = value;
+}
+
+
+std::string ExampleResponse::getNumberString() const
+{
+    return m_NumberString;
+}
+
+void ExampleResponse::setNumberString(std::string value)
+{
+    m_NumberString = value;
+}
+
+
+std::string ExampleResponse::getBoolString() const
+{
+    return m_BoolString;
+}
+
+void ExampleResponse::setBoolString(std::string value)
+{
+    m_BoolString = value;
+}
+
+
+std::string ExampleResponse::getNullString() const
+{
+    return m_NullString;
+}
+
+void ExampleResponse::setNullString(std::string value)
+{
+    m_NullString = value;
+}
+
+
+bool ExampleResponse::isABool() const
+{
+    return m_ABool;
+}
+
+void ExampleResponse::setABool(bool value)
+{
+    m_ABool = value;
+}
+
+
+int32_t ExampleResponse::getZero() const
+{
+    return m_Zero;
+}
+
+void ExampleResponse::setZero(int32_t value)
+{
+    m_Zero = value;
 }
 
 

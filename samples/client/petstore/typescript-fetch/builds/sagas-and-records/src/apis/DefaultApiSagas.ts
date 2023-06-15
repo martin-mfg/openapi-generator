@@ -20,9 +20,9 @@ import {apiCall, createSagaAction as originalCreateSagaAction, BaseEntitySupport
 import {Action} from "redux-ts-simple";
 
 import {
-    Dummy200Response,
-    Dummy200ResponseRecord,
-    dummy200ResponseRecordUtils,
+    ExampleResponse,
+    ExampleResponseRecord,
+    exampleResponseRecordUtils,
 } from '../models/index';
 
 const createSagaAction = <T>(type: string) => originalCreateSagaAction<T>(type, {namespace: "api_defaultApi"});
@@ -38,13 +38,12 @@ export function *defaultApiAllSagas() {
 
 //region dummy
 
-export interface PayloadDummy extends BaseEntitySupportPayloadApiAction {
+export interface PayloadDummy extends BasePayloadApiAction {
 }
 
 
 export const dummyRequest = createSagaAction<void>("dummyRequest");
-export const dummySuccess = createSagaAction<Dummy200ResponseRecord>("dummySuccess");
-export const dummySuccess_Entities = createSagaAction<NormalizedRecordEntities>("dummySuccess_Entities");
+export const dummySuccess = createSagaAction<void>("dummySuccess");
 export const dummyFailure = createSagaAction<{error: any, requestPayload: PayloadDummy}>("dummyFailure");
 
 export const dummy = createSagaAction<PayloadDummy>("dummy");
@@ -56,25 +55,15 @@ export function *dummySaga() {
 export function *dummySagaImp(_action_: Action<PayloadDummy>) {
     const {markErrorsAsHandled, ..._payloadRest_} = _action_.payload;
     try {
-        const {toEntities, toInlined = !toEntities, ...requestPayload} = _payloadRest_;
 
         yield put(dummyRequest());
 
-        const response: Required<Dummy200Response> = yield apiCall(Api.defaultApi, Api.defaultApi.dummy,
+        const response: Required<ExampleResponse> = yield apiCall(Api.defaultApi, Api.defaultApi.dummy,
         );
 
-        let successReturnValue: any = undefined;
-        if (toEntities) {
-            successReturnValue = dummy200ResponseRecordUtils.fromApiArrayAsEntities([response]);
-            yield put(normalizedEntities(successReturnValue));
-            yield put(dummySuccess_Entities(successReturnValue));
-        }
-        if (toInlined) {
-            successReturnValue = dummy200ResponseRecordUtils.fromApi(response);
-            yield put(dummySuccess(successReturnValue));
-        }
+            yield put(dummySuccess());
 
-        return successReturnValue;
+        return undefined;
     } catch (error) {
         if (markErrorsAsHandled) {error.wasHandled = true; }
         yield put(dummyFailure({error, requestPayload: _action_.payload}));

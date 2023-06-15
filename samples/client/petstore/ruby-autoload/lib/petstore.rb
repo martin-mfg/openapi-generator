@@ -17,12 +17,7 @@ require 'petstore/version'
 require 'petstore/configuration'
 
 # Models
-Petstore.autoload :Dummy200Response, 'petstore/models/dummy200_response'
-Petstore.autoload :Dummy200ResponseOuterProp, 'petstore/models/dummy200_response_outer_prop'
-Petstore.autoload :Dummy200ResponseOuterPropInnerProp, 'petstore/models/dummy200_response_outer_prop_inner_prop'
 Petstore.autoload :ExampleResponse, 'petstore/models/example_response'
-Petstore.autoload :Node, 'petstore/models/node'
-Petstore.autoload :OtherObject, 'petstore/models/other_object'
 
 # APIs
 Petstore.autoload :DefaultApi, 'petstore/api/default_api'

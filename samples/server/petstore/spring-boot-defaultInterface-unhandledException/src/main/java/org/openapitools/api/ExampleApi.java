@@ -5,7 +5,7 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -48,7 +48,7 @@ public interface ExampleApi {
         description = "dummy",
         responses = {
             @ApiResponse(responseCode = "200", description = "dummy", content = {
-                @Content(mediaType = "*/*", schema = @Schema(implementation = Dummy200Response.class))
+                @Content(mediaType = "*/*", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
     )
@@ -57,7 +57,7 @@ public interface ExampleApi {
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    ResponseEntity<Dummy200Response> dummy(
+    ResponseEntity<ExampleResponse> dummy(
         
     ) throws Exception;
 

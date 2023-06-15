@@ -158,7 +158,7 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
     const auto request = session->get_request();
     
     int status_code = 500;
-    Dummy_200_response resultObject = Dummy_200_response{};
+    ExampleResponse resultObject = ExampleResponse{};
     std::string result = "";
     
     try {
@@ -196,7 +196,7 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
 }
 
 
-std::pair<int, Dummy_200_response> ExampleSomeMethodResource::handler_GET(
+std::pair<int, ExampleResponse> ExampleSomeMethodResource::handler_GET(
         )
 {
     return handler_GET_func();

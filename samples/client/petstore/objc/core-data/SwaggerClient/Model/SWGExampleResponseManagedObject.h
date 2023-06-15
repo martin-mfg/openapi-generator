@@ -14,7 +14,6 @@
 */
 
 
-#import "SWGOtherObjectManagedObject.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,7 +21,17 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SWGExampleResponseManagedObject : NSManagedObject
 
 
-@property (nullable, nonatomic, retain) SWGOtherObjectManagedObject* myOnlyProperty;
+@property (nullable, nonatomic, retain) NSString* emptyString;
+
+@property (nullable, nonatomic, retain) NSString* numberString;
+
+@property (nullable, nonatomic, retain) NSString* boolString;
+
+@property (nullable, nonatomic, retain) NSString* nullString;
+
+@property (nullable, nonatomic, retain) NSNumber* aBool;
+
+@property (nullable, nonatomic, retain) NSNumber* zero;
 @end
 
 @interface SWGExampleResponseManagedObject (GeneratedAccessors)

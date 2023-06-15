@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **dummy**
-> Dummy200Response dummy()
+> ExampleResponse dummy()
 
 
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Dummy200Response**](Dummy200Response.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

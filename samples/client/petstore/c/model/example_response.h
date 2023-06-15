@@ -15,17 +15,26 @@
 
 typedef struct example_response_t example_response_t;
 
-#include "other_object.h"
 
 
 
 typedef struct example_response_t {
-    struct other_object_t *my_only_property; //model
+    char *empty_string; // string
+    char *number_string; // string
+    char *bool_string; // string
+    char *null_string; // string
+    int a_bool; //boolean
+    int zero; //numeric
 
 } example_response_t;
 
 example_response_t *example_response_create(
-    other_object_t *my_only_property
+    char *empty_string,
+    char *number_string,
+    char *bool_string,
+    char *null_string,
+    int a_bool,
+    int zero
 );
 
 void example_response_free(example_response_t *example_response);

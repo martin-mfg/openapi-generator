@@ -62,7 +62,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.Dummy();
-            //Assert.IsType<Dummy200Response>(response);
+            //Assert.IsType<ExampleResponse>(response);
         }
     }
 }

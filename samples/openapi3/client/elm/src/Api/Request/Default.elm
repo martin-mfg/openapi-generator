@@ -26,7 +26,7 @@ import Json.Encode
 
 {-| dummy
 -}
-dummy : Api.Request Api.Data.Dummy200Response
+dummy : Api.Request Api.Data.ExampleResponse
 dummy =
     Api.request
         "GET"
@@ -35,5 +35,5 @@ dummy =
         []
         []
         Nothing
-        Api.Data.dummy200ResponseDecoder
+        Api.Data.exampleResponseDecoder
 

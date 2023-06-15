@@ -1,16 +1,6 @@
 README.md
 build.gradle
-docs/Dummy200Response.md
-docs/Dummy200ResponseOuterProp.md
-docs/Dummy200ResponseOuterPropInnerProp.md
 docs/ExampleResponse.md
-docs/Node.md
-docs/OtherObject.md
 ktorm_schema.sql
 settings.gradle
-src/main/kotlin/org/openapitools/database/models/Dummy200Response.kt
-src/main/kotlin/org/openapitools/database/models/Dummy200ResponseOuterProp.kt
-src/main/kotlin/org/openapitools/database/models/Dummy200ResponseOuterPropInnerProp.kt
 src/main/kotlin/org/openapitools/database/models/ExampleResponse.kt
-src/main/kotlin/org/openapitools/database/models/Node.kt
-src/main/kotlin/org/openapitools/database/models/OtherObject.kt

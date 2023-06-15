@@ -1,11 +1,11 @@
 package org.openapitools.api
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 import org.springframework.stereotype.Service
 @Service
 class ExampleApiServiceImpl : ExampleApiService {
 
-    override fun dummy(): Dummy200Response {
+    override fun dummy(): ExampleResponse {
         TODO("Implement me")
     }
 }

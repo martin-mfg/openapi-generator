@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 ## dummy
 
-> Dummy200Response dummy()
+> ExampleResponse dummy()
 
 
 
@@ -34,7 +34,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            Dummy200Response result = apiInstance.dummy();
+            ExampleResponse result = apiInstance.dummy();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#dummy");
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Dummy200Response**](Dummy200Response.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 
 ### Authorization
@@ -72,7 +72,7 @@ No authorization required
 
 ## dummyWithHttpInfo
 
-> ApiResponse<Dummy200Response> dummy dummyWithHttpInfo()
+> ApiResponse<ExampleResponse> dummy dummyWithHttpInfo()
 
 
 
@@ -96,7 +96,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ApiResponse<Dummy200Response> response = apiInstance.dummyWithHttpInfo();
+            ApiResponse<ExampleResponse> response = apiInstance.dummyWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -117,7 +117,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiResponse<[**Dummy200Response**](Dummy200Response.md)>
+ApiResponse<[**ExampleResponse**](ExampleResponse.md)>
 
 
 ### Authorization

@@ -12,7 +12,6 @@
 #include <string>
 #include "bourne/json.hpp"
 #include "Helpers.h"
-#include "OtherObject.h"
 
 namespace Tiny {
 
@@ -48,15 +47,55 @@ public:
 
 	/*! \brief Get 
 	 */
-	OtherObject getMyOnlyProperty();
+	std::string getEmptyString();
 
 	/*! \brief Set 
 	 */
-	void setMyOnlyProperty(OtherObject  myOnlyProperty);
+	void setEmptyString(std::string  emptyString);
+	/*! \brief Get 
+	 */
+	std::string getNumberString();
+
+	/*! \brief Set 
+	 */
+	void setNumberString(std::string  numberString);
+	/*! \brief Get 
+	 */
+	std::string getBoolString();
+
+	/*! \brief Set 
+	 */
+	void setBoolString(std::string  boolString);
+	/*! \brief Get 
+	 */
+	std::string getNullString();
+
+	/*! \brief Set 
+	 */
+	void setNullString(std::string  nullString);
+	/*! \brief Get 
+	 */
+	bool isABool();
+
+	/*! \brief Set 
+	 */
+	void setABool(bool  aBool);
+	/*! \brief Get 
+	 */
+	int getZero();
+
+	/*! \brief Set 
+	 */
+	void setZero(int  zero);
 
 
     private:
-    OtherObject myOnlyProperty;
+    std::string emptyString{};
+    std::string numberString{};
+    std::string boolString{};
+    std::string nullString{};
+    bool aBool{};
+    int zero{};
 };
 }
 

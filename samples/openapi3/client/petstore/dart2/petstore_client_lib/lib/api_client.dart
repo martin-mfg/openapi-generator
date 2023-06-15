@@ -181,18 +181,8 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
-        case 'Dummy200Response':
-          return Dummy200Response.fromJson(value);
-        case 'Dummy200ResponseOuterProp':
-          return Dummy200ResponseOuterProp.fromJson(value);
-        case 'Dummy200ResponseOuterPropInnerProp':
-          return Dummy200ResponseOuterPropInnerProp.fromJson(value);
         case 'ExampleResponse':
           return ExampleResponse.fromJson(value);
-        case 'Node':
-          return Node.fromJson(value);
-        case 'OtherObject':
-          return OtherObject.fromJson(value);
         default:
           dynamic match;
           if (value is List && (match = _regList.firstMatch(targetType)?.group(1)) != null) {

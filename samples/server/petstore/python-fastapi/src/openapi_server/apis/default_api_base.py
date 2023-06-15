@@ -2,7 +2,7 @@
 
 from typing import ClassVar, Dict, List, Tuple  # noqa: F401
 
-from openapi_server.models.dummy200_response import Dummy200Response
+from openapi_server.models.example_response import ExampleResponse
 
 
 class BaseDefaultApi:
@@ -13,6 +13,6 @@ class BaseDefaultApi:
         BaseDefaultApi.subclasses = BaseDefaultApi.subclasses + (cls,)
     def dummy(
         self,
-    ) -> Dummy200Response:
+    ) -> ExampleResponse:
         """dummy"""
         ...

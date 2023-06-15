@@ -22,18 +22,16 @@ import {
     ExampleResponse,
 } from './ExampleResponse';
 
-import {
-    OtherObject,
-} from './OtherObject';
 
-import {
-    OtherObjectRecord,
-    otherObjectRecordUtils
-} from './OtherObjectRecord';
 
 export const ExampleResponseRecordProps = {
     recType: "ExampleResponseApiRecord" as "ExampleResponseApiRecord",
-    myOnlyProperty: (OtherObjectRecord(), null as OtherObjectRecord | null),
+    emptyString: null as string | null,
+    numberString: null as string | null,
+    boolString: null as string | null,
+    nullString: null as string | null,
+    aBool: null as boolean | null,
+    zero: null as number | null,
 };
 
 export type ExampleResponseRecordPropsType = typeof ExampleResponseRecordProps;
@@ -46,13 +44,11 @@ knownRecordFactories.set(ExampleResponseRecordProps.recType, ExampleResponseReco
 class ExampleResponseRecordUtils extends ApiRecordUtils<ExampleResponse, ExampleResponseRecord> {
     public normalize(apiObject: ExampleResponse, asEntity?: boolean): ExampleResponse {
         (apiObject as any).recType = ExampleResponseRecordProps.recType;
-        if (apiObject.myOnlyProperty) { otherObjectRecordUtils.normalize(apiObject.myOnlyProperty); } 
         return apiObject;
     }
 
     public toApi(record: ExampleResponseRecord): ExampleResponse {
         const apiObject = super.toApi(record);
-        if (record.myOnlyProperty) { apiObject.myOnlyProperty = otherObjectRecordUtils.toApi(record.myOnlyProperty); } 
         return apiObject;
     }
 }

@@ -2,10 +2,5 @@ README.md
 rebar.config
 src/petstore.app.src
 src/petstore_default_api.erl
-src/petstore_dummy_200_response.erl
-src/petstore_dummy_200_response_outer_prop.erl
-src/petstore_dummy_200_response_outer_prop_inner_prop.erl
 src/petstore_example_response.erl
-src/petstore_node.erl
-src/petstore_other_object.erl
 src/petstore_utils.erl

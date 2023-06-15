@@ -13,36 +13,56 @@ part of openapi.api;
 class ExampleResponse {
   /// Returns a new [ExampleResponse] instance.
   ExampleResponse({
-    this.myOnlyProperty,
+    this.emptyString = '',
+    this.numberString = '42',
+    this.boolString = 'false',
+    this.nullString = 'null',
+    this.aBool = false,
+    this.zero = 0,
   });
 
-  ///
-  /// Please note: This property should have been non-nullable! Since the specification file
-  /// does not include a default value (using the "default:" property), however, the generated
-  /// source code must fall back to having a nullable type.
-  /// Consider adding a "default:" property in the specification file to hide this note.
-  ///
-  OtherObject? myOnlyProperty;
+  String emptyString;
+
+  String numberString;
+
+  String boolString;
+
+  String nullString;
+
+  bool aBool;
+
+  int zero;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ExampleResponse &&
-     other.myOnlyProperty == myOnlyProperty;
+     other.emptyString == emptyString &&
+     other.numberString == numberString &&
+     other.boolString == boolString &&
+     other.nullString == nullString &&
+     other.aBool == aBool &&
+     other.zero == zero;
 
   @override
   int get hashCode =>
     // ignore: unnecessary_parenthesis
-    (myOnlyProperty == null ? 0 : myOnlyProperty!.hashCode);
+    (emptyString.hashCode) +
+    (numberString.hashCode) +
+    (boolString.hashCode) +
+    (nullString.hashCode) +
+    (aBool.hashCode) +
+    (zero.hashCode);
 
   @override
-  String toString() => 'ExampleResponse[myOnlyProperty=$myOnlyProperty]';
+  String toString() => 'ExampleResponse[emptyString=$emptyString, numberString=$numberString, boolString=$boolString, nullString=$nullString, aBool=$aBool, zero=$zero]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-    if (this.myOnlyProperty != null) {
-      json[r'myOnlyProperty'] = this.myOnlyProperty;
-    } else {
-      json[r'myOnlyProperty'] = null;
-    }
+      json[r'emptyString'] = this.emptyString;
+      json[r'numberString'] = this.numberString;
+      json[r'boolString'] = this.boolString;
+      json[r'nullString'] = this.nullString;
+      json[r'aBool'] = this.aBool;
+      json[r'zero'] = this.zero;
     return json;
   }
 
@@ -65,7 +85,12 @@ class ExampleResponse {
       }());
 
       return ExampleResponse(
-        myOnlyProperty: OtherObject.fromJson(json[r'myOnlyProperty']),
+        emptyString: mapValueOfType<String>(json, r'emptyString') ?? '',
+        numberString: mapValueOfType<String>(json, r'numberString') ?? '42',
+        boolString: mapValueOfType<String>(json, r'boolString') ?? 'false',
+        nullString: mapValueOfType<String>(json, r'nullString') ?? 'null',
+        aBool: mapValueOfType<bool>(json, r'aBool') ?? false,
+        zero: mapValueOfType<int>(json, r'zero') ?? 0,
       );
     }
     return null;

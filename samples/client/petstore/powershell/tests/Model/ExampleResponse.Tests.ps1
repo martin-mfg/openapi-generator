@@ -9,7 +9,7 @@ Describe -tag 'PSPetstore' -name 'PSExampleResponse' {
     Context 'PSExampleResponse' {
         It 'Initialize-PSExampleResponse' {
             # a simple test to create an object
-            #$NewObject = Initialize-PSExampleResponse -MyOnlyProperty "TEST_VALUE"
+            #$NewObject = Initialize-PSExampleResponse -EmptyString "TEST_VALUE" -NumberString "TEST_VALUE" -BoolString "TEST_VALUE" -NullString "TEST_VALUE" -ABool "TEST_VALUE" -Zero "TEST_VALUE"
             #$NewObject | Should -BeOfType ExampleResponse
             #$NewObject.property | Should -Be 0
         }

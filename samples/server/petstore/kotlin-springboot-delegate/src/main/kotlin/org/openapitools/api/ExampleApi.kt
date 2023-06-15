@@ -5,7 +5,7 @@
 */
 package org.openapitools.api
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 import io.swagger.v3.oas.annotations.*
 import io.swagger.v3.oas.annotations.enums.*
 import io.swagger.v3.oas.annotations.media.*
@@ -44,7 +44,7 @@ interface ExampleApi {
         operationId = "dummy",
         description = """dummy""",
         responses = [
-            ApiResponse(responseCode = "200", description = "dummy", content = [Content(schema = Schema(implementation = Dummy200Response::class))])
+            ApiResponse(responseCode = "200", description = "dummy", content = [Content(schema = Schema(implementation = ExampleResponse::class))])
         ]
     )
     @RequestMapping(
@@ -52,7 +52,7 @@ interface ExampleApi {
             value = ["/example/someMethod"],
             produces = ["*/*"]
     )
-    fun dummy(): ResponseEntity<Dummy200Response> {
+    fun dummy(): ResponseEntity<ExampleResponse> {
         return getDelegate().dummy()
     }
 }

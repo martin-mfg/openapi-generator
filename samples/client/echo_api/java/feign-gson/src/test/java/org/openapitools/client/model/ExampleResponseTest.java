@@ -19,7 +19,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.openapitools.client.model.OtherObject;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -37,11 +36,51 @@ class ExampleResponseTest {
     }
 
     /**
-     * Test the property 'myOnlyProperty'
+     * Test the property 'emptyString'
      */
     @Test
-    void myOnlyPropertyTest() {
-        // TODO: test myOnlyProperty
+    void emptyStringTest() {
+        // TODO: test emptyString
+    }
+
+    /**
+     * Test the property 'numberString'
+     */
+    @Test
+    void numberStringTest() {
+        // TODO: test numberString
+    }
+
+    /**
+     * Test the property 'boolString'
+     */
+    @Test
+    void boolStringTest() {
+        // TODO: test boolString
+    }
+
+    /**
+     * Test the property 'nullString'
+     */
+    @Test
+    void nullStringTest() {
+        // TODO: test nullString
+    }
+
+    /**
+     * Test the property 'aBool'
+     */
+    @Test
+    void aBoolTest() {
+        // TODO: test aBool
+    }
+
+    /**
+     * Test the property 'zero'
+     */
+    @Test
+    void zeroTest() {
+        // TODO: test zero
     }
 
 }

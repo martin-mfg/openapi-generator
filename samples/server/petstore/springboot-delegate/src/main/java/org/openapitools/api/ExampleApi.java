@@ -5,7 +5,7 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -37,17 +37,17 @@ public interface ExampleApi {
         value = "",
         nickname = "dummy",
         notes = "dummy",
-        response = Dummy200Response.class
+        response = ExampleResponse.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "dummy", response = Dummy200Response.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<Dummy200Response> dummy(
+    default ResponseEntity<ExampleResponse> dummy(
         
     ) {
         return getDelegate().dummy();

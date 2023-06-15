@@ -11,7 +11,12 @@
     "label": "Details",
     "model": "properties",
     "children": [
-      {"model": "my_only_property" },
+      {"model": "empty_string" },
+      {"model": "number_string" },
+      {"model": "bool_string" },
+      {"model": "null_string" },
+      {"model": "a_bool" },
+      {"model": "zero" },
     ]
   }]
 }

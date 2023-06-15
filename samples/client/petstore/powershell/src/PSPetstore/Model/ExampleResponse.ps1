@@ -14,7 +14,17 @@ No summary available.
 
 dummy
 
-.PARAMETER MyOnlyProperty
+.PARAMETER EmptyString
+No description available.
+.PARAMETER NumberString
+No description available.
+.PARAMETER BoolString
+No description available.
+.PARAMETER NullString
+No description available.
+.PARAMETER ABool
+No description available.
+.PARAMETER Zero
 No description available.
 .OUTPUTS
 
@@ -25,8 +35,23 @@ function Initialize-PSExampleResponse {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipelineByPropertyName = $true)]
-        [PSCustomObject]
-        ${MyOnlyProperty}
+        [String]
+        ${EmptyString} = "",
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${NumberString} = "42",
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${BoolString} = "false",
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${NullString} = "null",
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${ABool} = $false,
+        [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Int32]]
+        ${Zero} = 0
     )
 
     Process {
@@ -35,7 +60,12 @@ function Initialize-PSExampleResponse {
 
 
         $PSO = [PSCustomObject]@{
-            "myOnlyProperty" = ${MyOnlyProperty}
+            "emptyString" = ${EmptyString}
+            "numberString" = ${NumberString}
+            "boolString" = ${BoolString}
+            "nullString" = ${NullString}
+            "aBool" = ${ABool}
+            "zero" = ${Zero}
         }
 
 
@@ -73,21 +103,56 @@ function ConvertFrom-PSJsonToExampleResponse {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in PSExampleResponse
-        $AllProperties = ("myOnlyProperty")
+        $AllProperties = ("emptyString", "numberString", "boolString", "nullString", "aBool", "zero")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
             }
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "myOnlyProperty"))) { #optional property not found
-            $MyOnlyProperty = $null
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "emptyString"))) { #optional property not found
+            $EmptyString = $null
         } else {
-            $MyOnlyProperty = $JsonParameters.PSobject.Properties["myOnlyProperty"].value
+            $EmptyString = $JsonParameters.PSobject.Properties["emptyString"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "numberString"))) { #optional property not found
+            $NumberString = $null
+        } else {
+            $NumberString = $JsonParameters.PSobject.Properties["numberString"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "boolString"))) { #optional property not found
+            $BoolString = $null
+        } else {
+            $BoolString = $JsonParameters.PSobject.Properties["boolString"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "nullString"))) { #optional property not found
+            $NullString = $null
+        } else {
+            $NullString = $JsonParameters.PSobject.Properties["nullString"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "aBool"))) { #optional property not found
+            $ABool = $null
+        } else {
+            $ABool = $JsonParameters.PSobject.Properties["aBool"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "zero"))) { #optional property not found
+            $Zero = $null
+        } else {
+            $Zero = $JsonParameters.PSobject.Properties["zero"].value
         }
 
         $PSO = [PSCustomObject]@{
-            "myOnlyProperty" = ${MyOnlyProperty}
+            "emptyString" = ${EmptyString}
+            "numberString" = ${NumberString}
+            "boolString" = ${BoolString}
+            "nullString" = ${NullString}
+            "aBool" = ${ABool}
+            "zero" = ${Zero}
         }
 
         return $PSO

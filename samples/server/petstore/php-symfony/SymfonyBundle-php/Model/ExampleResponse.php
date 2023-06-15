@@ -45,12 +45,52 @@ use JMS\Serializer\Annotation\SerializedName;
 class ExampleResponse 
 {
         /**
-     * @var OtherObject|null
-     * @SerializedName("myOnlyProperty")
-     * @Assert\Type("OpenAPI\Server\Model\OtherObject")
-     * @Type("OpenAPI\Server\Model\OtherObject")
+     * @var string|null
+     * @SerializedName("emptyString")
+     * @Assert\Type("string")
+     * @Type("string")
      */
-    protected ?OtherObject $myOnlyProperty = null;
+    protected ?string $emptyString = null;
+
+    /**
+     * @var string|null
+     * @SerializedName("numberString")
+     * @Assert\Type("string")
+     * @Type("string")
+     */
+    protected ?string $numberString = null;
+
+    /**
+     * @var string|null
+     * @SerializedName("boolString")
+     * @Assert\Type("string")
+     * @Type("string")
+     */
+    protected ?string $boolString = null;
+
+    /**
+     * @var string|null
+     * @SerializedName("nullString")
+     * @Assert\Type("string")
+     * @Type("string")
+     */
+    protected ?string $nullString = null;
+
+    /**
+     * @var bool|null
+     * @SerializedName("aBool")
+     * @Assert\Type("bool")
+     * @Type("bool")
+     */
+    protected ?bool $aBool = null;
+
+    /**
+     * @var int|null
+     * @SerializedName("zero")
+     * @Assert\Type("int")
+     * @Type("int")
+     */
+    protected ?int $zero = null;
 
     /**
      * Constructor
@@ -58,29 +98,154 @@ class ExampleResponse
      */
     public function __construct(array $data = null)
     {
-        $this->myOnlyProperty = $data['myOnlyProperty'] ?? null;
+        $this->emptyString = $data['emptyString'] ?? null;
+        $this->numberString = $data['numberString'] ?? null;
+        $this->boolString = $data['boolString'] ?? null;
+        $this->nullString = $data['nullString'] ?? null;
+        $this->aBool = $data['aBool'] ?? null;
+        $this->zero = $data['zero'] ?? null;
     }
 
     /**
-     * Gets myOnlyProperty.
+     * Gets emptyString.
      *
-     * @return OtherObject|null
+     * @return string|null
      */
-    public function getMyOnlyProperty(): ?OtherObject
+    public function getEmptyString(): ?string
     {
-        return $this->myOnlyProperty;
+        return $this->emptyString;
     }
 
     /**
-     * Sets myOnlyProperty.
+     * Sets emptyString.
      *
-     * @param OtherObject|null $myOnlyProperty
+     * @param string|null $emptyString
      *
      * @return $this
      */
-    public function setMyOnlyProperty(?OtherObject $myOnlyProperty = null): self
+    public function setEmptyString(?string $emptyString = null): self
     {
-        $this->myOnlyProperty = $myOnlyProperty;
+        $this->emptyString = $emptyString;
+
+        return $this;
+    }
+
+    /**
+     * Gets numberString.
+     *
+     * @return string|null
+     */
+    public function getNumberString(): ?string
+    {
+        return $this->numberString;
+    }
+
+    /**
+     * Sets numberString.
+     *
+     * @param string|null $numberString
+     *
+     * @return $this
+     */
+    public function setNumberString(?string $numberString = null): self
+    {
+        $this->numberString = $numberString;
+
+        return $this;
+    }
+
+    /**
+     * Gets boolString.
+     *
+     * @return string|null
+     */
+    public function getBoolString(): ?string
+    {
+        return $this->boolString;
+    }
+
+    /**
+     * Sets boolString.
+     *
+     * @param string|null $boolString
+     *
+     * @return $this
+     */
+    public function setBoolString(?string $boolString = null): self
+    {
+        $this->boolString = $boolString;
+
+        return $this;
+    }
+
+    /**
+     * Gets nullString.
+     *
+     * @return string|null
+     */
+    public function getNullString(): ?string
+    {
+        return $this->nullString;
+    }
+
+    /**
+     * Sets nullString.
+     *
+     * @param string|null $nullString
+     *
+     * @return $this
+     */
+    public function setNullString(?string $nullString = null): self
+    {
+        $this->nullString = $nullString;
+
+        return $this;
+    }
+
+    /**
+     * Gets aBool.
+     *
+     * @return bool|null
+     */
+    public function isABool(): ?bool
+    {
+        return $this->aBool;
+    }
+
+    /**
+     * Sets aBool.
+     *
+     * @param bool|null $aBool
+     *
+     * @return $this
+     */
+    public function setABool(?bool $aBool = null): self
+    {
+        $this->aBool = $aBool;
+
+        return $this;
+    }
+
+    /**
+     * Gets zero.
+     *
+     * @return int|null
+     */
+    public function getZero(): ?int
+    {
+        return $this->zero;
+    }
+
+    /**
+     * Sets zero.
+     *
+     * @param int|null $zero
+     *
+     * @return $this
+     */
+    public function setZero(?int $zero = null): self
+    {
+        $this->zero = $zero;
 
         return $this;
     }

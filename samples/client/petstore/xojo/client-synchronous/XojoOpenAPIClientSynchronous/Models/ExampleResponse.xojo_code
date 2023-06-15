@@ -2,7 +2,32 @@
 Protected Class ExampleResponse
 
 	#tag Property, Flags = &h0
-		myOnlyProperty As XojoOpenAPIClientSynchronous.Models.OtherObject
+		emptyString As Xoson.O.OptionalString
+	#tag EndProperty
+
+
+	#tag Property, Flags = &h0
+		numberString As Xoson.O.OptionalString
+	#tag EndProperty
+
+
+	#tag Property, Flags = &h0
+		boolString As Xoson.O.OptionalString
+	#tag EndProperty
+
+
+	#tag Property, Flags = &h0
+		nullString As Xoson.O.OptionalString
+	#tag EndProperty
+
+
+	#tag Property, Flags = &h0
+		aBool As Xoson.O.OptionalBoolean
+	#tag EndProperty
+
+
+	#tag Property, Flags = &h0
+		zero As Xoson.O.OptionalInteger
 	#tag EndProperty
 
 
@@ -43,11 +68,51 @@ Protected Class ExampleResponse
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="myOnlyProperty"
+			Name="emptyString"
 			Visible=false
 			Group="Behavior"
 			InitialValue=""
-			Type="OtherObject"
+			Type="String"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="numberString"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="String"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="boolString"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="String"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="nullString"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="String"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="aBool"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="zero"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
 			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior

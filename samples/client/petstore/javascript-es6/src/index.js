@@ -13,12 +13,7 @@
 
 
 import ApiClient from './ApiClient';
-import Dummy200Response from './model/Dummy200Response';
-import Dummy200ResponseOuterProp from './model/Dummy200ResponseOuterProp';
-import Dummy200ResponseOuterPropInnerProp from './model/Dummy200ResponseOuterPropInnerProp';
 import ExampleResponse from './model/ExampleResponse';
-import Node from './model/Node';
-import OtherObject from './model/OtherObject';
 import DefaultApi from './api/DefaultApi';
 
 
@@ -61,40 +56,10 @@ export {
     ApiClient,
 
     /**
-     * The Dummy200Response model constructor.
-     * @property {module:model/Dummy200Response}
-     */
-    Dummy200Response,
-
-    /**
-     * The Dummy200ResponseOuterProp model constructor.
-     * @property {module:model/Dummy200ResponseOuterProp}
-     */
-    Dummy200ResponseOuterProp,
-
-    /**
-     * The Dummy200ResponseOuterPropInnerProp model constructor.
-     * @property {module:model/Dummy200ResponseOuterPropInnerProp}
-     */
-    Dummy200ResponseOuterPropInnerProp,
-
-    /**
      * The ExampleResponse model constructor.
      * @property {module:model/ExampleResponse}
      */
     ExampleResponse,
-
-    /**
-     * The Node model constructor.
-     * @property {module:model/Node}
-     */
-    Node,
-
-    /**
-     * The OtherObject model constructor.
-     * @property {module:model/OtherObject}
-     */
-    OtherObject,
 
     /**
     * The DefaultApi service constructor.

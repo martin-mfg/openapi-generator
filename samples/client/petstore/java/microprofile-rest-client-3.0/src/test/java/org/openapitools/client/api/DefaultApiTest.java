@@ -13,7 +13,7 @@
 
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
@@ -51,7 +51,7 @@ public class DefaultApiTest {
     @Test
     public void dummyTest() {
         // TODO: test validations
-        //Dummy200Response response = api.dummy();
+        //ExampleResponse response = api.dummy();
         //assertNotNull(response);
 
 

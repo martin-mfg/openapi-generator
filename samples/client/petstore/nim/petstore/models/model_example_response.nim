@@ -10,8 +10,12 @@
 import json
 import tables
 
-import model_other_object
 
 type ExampleResponse* = object
   ## dummy
-  myOnlyProperty*: OtherObject
+  emptyString*: string
+  numberString*: string
+  boolString*: string
+  nullString*: string
+  aBool*: bool
+  zero*: int

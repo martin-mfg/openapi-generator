@@ -15,7 +15,7 @@ import { HttpClient } from 'aurelia-http-client';
 import { Api } from './Api';
 import { AuthStorage } from './AuthStorage';
 import {
-  Dummy200Response,
+  ExampleResponse,
 } from './models';
 
 /**
@@ -43,7 +43,7 @@ export class DefaultApi extends Api {
   /**
    * dummy
    */
-  async dummy(): Promise<Dummy200Response> {
+  async dummy(): Promise<ExampleResponse> {
     // Verify required parameters are set
 
     // Create URL to call

@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Dummy200Response from '../model/Dummy200Response';
+import ExampleResponse from '../model/ExampleResponse';
 
 /**
 * Default service.
@@ -38,14 +38,14 @@ export default class DefaultApi {
      * Callback function to receive the result of the dummy operation.
      * @callback module:api/DefaultApi~dummyCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Dummy200Response} data The data returned by the service call.
+     * @param {module:model/ExampleResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * dummy
      * @param {module:api/DefaultApi~dummyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Dummy200Response}
+     * data is of type: {@link module:model/ExampleResponse}
      */
     dummy(callback) {
       let postBody = null;
@@ -62,7 +62,7 @@ export default class DefaultApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['*/*'];
-      let returnType = Dummy200Response;
+      let returnType = ExampleResponse;
       return this.apiClient.callApi(
         '/example/someMethod', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

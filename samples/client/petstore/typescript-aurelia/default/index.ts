@@ -14,10 +14,5 @@ export { Api } from './Api';
 export { AuthStorage } from './AuthStorage';
 export { DefaultApi } from './DefaultApi';
 export {
-  Dummy200Response,
-  Dummy200ResponseOuterProp,
-  Dummy200ResponseOuterPropInnerProp,
   ExampleResponse,
-  Node,
-  OtherObject,
 } from './models';

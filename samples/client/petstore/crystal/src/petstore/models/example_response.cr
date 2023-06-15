@@ -18,12 +18,27 @@ module Petstore
     include JSON::Serializable
 
     # Optional properties
-    @[JSON::Field(key: "myOnlyProperty", type: OtherObject?, nillable: true, emit_null: false)]
-    property my_only_property : OtherObject?
+    @[JSON::Field(key: "emptyString", type: String?, default: "", nillable: true, emit_null: false)]
+    property empty_string : String?
+
+    @[JSON::Field(key: "numberString", type: String?, default: "42", nillable: true, emit_null: false)]
+    property number_string : String?
+
+    @[JSON::Field(key: "boolString", type: String?, default: "false", nillable: true, emit_null: false)]
+    property bool_string : String?
+
+    @[JSON::Field(key: "nullString", type: String?, default: "null", nillable: true, emit_null: false)]
+    property null_string : String?
+
+    @[JSON::Field(key: "aBool", type: Bool?, default: false, nillable: true, emit_null: false)]
+    property a_bool : Bool?
+
+    @[JSON::Field(key: "zero", type: Int32?, default: 0, nillable: true, emit_null: false)]
+    property zero : Int32?
 
     # Initializes the object
     # @param [Hash] attributes Model attributes in the form of hash
-    def initialize(@my_only_property : OtherObject?)
+    def initialize(@empty_string : String?, @number_string : String?, @bool_string : String?, @null_string : String?, @a_bool : Bool?, @zero : Int32?)
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -44,7 +59,12 @@ module Petstore
     def ==(o)
       return true if self.same?(o)
       self.class == o.class &&
-          my_only_property == o.my_only_property
+          empty_string == o.empty_string &&
+          number_string == o.number_string &&
+          bool_string == o.bool_string &&
+          null_string == o.null_string &&
+          a_bool == o.a_bool &&
+          zero == o.zero
     end
 
     # @see the `==` method
@@ -56,7 +76,7 @@ module Petstore
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [my_only_property].hash
+      [empty_string, number_string, bool_string, null_string, a_bool, zero].hash
     end
 
     # Builds the object from hash

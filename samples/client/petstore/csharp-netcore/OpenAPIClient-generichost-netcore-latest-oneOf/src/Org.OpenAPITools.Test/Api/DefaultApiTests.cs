@@ -58,7 +58,7 @@ namespace Org.OpenAPITools.Test.Api
         {
             var response = await _instance.DummyAsync();
             var model = response.AsModel();
-            Assert.IsType<Dummy200Response>(model);
+            Assert.IsType<ExampleResponse>(model);
         }
     }
 }

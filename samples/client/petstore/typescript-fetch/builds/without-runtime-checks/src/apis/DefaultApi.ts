@@ -15,7 +15,7 @@
 
 import * as runtime from '../runtime';
 import type {
-  Dummy200Response,
+  ExampleResponse,
 } from '../models/index';
 
 /**
@@ -26,7 +26,7 @@ export class DefaultApi extends runtime.BaseAPI {
     /**
      * dummy
      */
-    async dummyRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Dummy200Response>> {
+    async dummyRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ExampleResponse>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -44,7 +44,7 @@ export class DefaultApi extends runtime.BaseAPI {
     /**
      * dummy
      */
-    async dummy(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Dummy200Response> {
+    async dummy(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ExampleResponse> {
         const response = await this.dummyRaw(initOverrides);
         return await response.value();
     }

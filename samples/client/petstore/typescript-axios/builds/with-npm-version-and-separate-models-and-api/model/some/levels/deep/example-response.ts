@@ -13,9 +13,6 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { OtherObject } from './other-object';
 
 /**
  * dummy
@@ -25,9 +22,39 @@ import { OtherObject } from './other-object';
 export interface ExampleResponse {
     /**
      * 
-     * @type {OtherObject}
+     * @type {string}
      * @memberof ExampleResponse
      */
-    'myOnlyProperty'?: OtherObject;
+    'emptyString'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    'numberString'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    'boolString'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    'nullString'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ExampleResponse
+     */
+    'aBool'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof ExampleResponse
+     */
+    'zero'?: number;
 }
 

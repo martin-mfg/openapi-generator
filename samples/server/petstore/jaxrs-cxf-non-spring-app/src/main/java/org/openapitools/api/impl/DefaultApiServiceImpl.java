@@ -1,7 +1,7 @@
 package org.openapitools.api.impl;
 
 import org.openapitools.api.*;
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -23,7 +23,7 @@ import io.swagger.annotations.Api;
  *
  */
 public class DefaultApiServiceImpl implements DefaultApi {
-    public Dummy200Response dummy() {
+    public ExampleResponse dummy() {
         // TODO: Implement...
 
         return null;

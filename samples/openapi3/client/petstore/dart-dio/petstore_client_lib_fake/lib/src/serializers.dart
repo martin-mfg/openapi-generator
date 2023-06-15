@@ -14,22 +14,12 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
-import 'package:openapi/src/model/dummy200_response.dart';
-import 'package:openapi/src/model/dummy200_response_outer_prop.dart';
-import 'package:openapi/src/model/dummy200_response_outer_prop_inner_prop.dart';
 import 'package:openapi/src/model/example_response.dart';
-import 'package:openapi/src/model/node.dart';
-import 'package:openapi/src/model/other_object.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
-  Dummy200Response,
-  Dummy200ResponseOuterProp,
-  Dummy200ResponseOuterPropInnerProp,
   ExampleResponse,
-  Node,
-  OtherObject,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..add(const OneOfSerializer())

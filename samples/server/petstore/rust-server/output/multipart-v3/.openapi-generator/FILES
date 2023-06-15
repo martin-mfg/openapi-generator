@@ -3,12 +3,7 @@
 Cargo.toml
 README.md
 api/openapi.yaml
-docs/Dummy200Response.md
-docs/Dummy200ResponseOuterProp.md
-docs/Dummy200ResponseOuterPropInnerProp.md
 docs/ExampleResponse.md
-docs/Node.md
-docs/OtherObject.md
 docs/default_api.md
 examples/ca.pem
 examples/client/main.rs

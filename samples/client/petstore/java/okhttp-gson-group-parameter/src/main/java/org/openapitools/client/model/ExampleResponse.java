@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.openapitools.client.model.OtherObject;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,31 +52,156 @@ import org.openapitools.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ExampleResponse {
-  public static final String SERIALIZED_NAME_MY_ONLY_PROPERTY = "myOnlyProperty";
-  @SerializedName(SERIALIZED_NAME_MY_ONLY_PROPERTY)
-  private OtherObject myOnlyProperty;
+  public static final String SERIALIZED_NAME_EMPTY_STRING = "emptyString";
+  @SerializedName(SERIALIZED_NAME_EMPTY_STRING)
+  private String emptyString = "";
+
+  public static final String SERIALIZED_NAME_NUMBER_STRING = "numberString";
+  @SerializedName(SERIALIZED_NAME_NUMBER_STRING)
+  private String numberString = "42";
+
+  public static final String SERIALIZED_NAME_BOOL_STRING = "boolString";
+  @SerializedName(SERIALIZED_NAME_BOOL_STRING)
+  private String boolString = "false";
+
+  public static final String SERIALIZED_NAME_NULL_STRING = "nullString";
+  @SerializedName(SERIALIZED_NAME_NULL_STRING)
+  private String nullString = "null";
+
+  public static final String SERIALIZED_NAME_A_BOOL = "aBool";
+  @SerializedName(SERIALIZED_NAME_A_BOOL)
+  private Boolean aBool = false;
+
+  public static final String SERIALIZED_NAME_ZERO = "zero";
+  @SerializedName(SERIALIZED_NAME_ZERO)
+  private Integer zero = 0;
 
   public ExampleResponse() {
   }
 
-  public ExampleResponse myOnlyProperty(OtherObject myOnlyProperty) {
+  public ExampleResponse emptyString(String emptyString) {
     
-    this.myOnlyProperty = myOnlyProperty;
+    this.emptyString = emptyString;
     return this;
   }
 
    /**
-   * Get myOnlyProperty
-   * @return myOnlyProperty
+   * Get emptyString
+   * @return emptyString
   **/
   @javax.annotation.Nullable
-  public OtherObject getMyOnlyProperty() {
-    return myOnlyProperty;
+  public String getEmptyString() {
+    return emptyString;
   }
 
 
-  public void setMyOnlyProperty(OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public void setEmptyString(String emptyString) {
+    this.emptyString = emptyString;
+  }
+
+
+  public ExampleResponse numberString(String numberString) {
+    
+    this.numberString = numberString;
+    return this;
+  }
+
+   /**
+   * Get numberString
+   * @return numberString
+  **/
+  @javax.annotation.Nullable
+  public String getNumberString() {
+    return numberString;
+  }
+
+
+  public void setNumberString(String numberString) {
+    this.numberString = numberString;
+  }
+
+
+  public ExampleResponse boolString(String boolString) {
+    
+    this.boolString = boolString;
+    return this;
+  }
+
+   /**
+   * Get boolString
+   * @return boolString
+  **/
+  @javax.annotation.Nullable
+  public String getBoolString() {
+    return boolString;
+  }
+
+
+  public void setBoolString(String boolString) {
+    this.boolString = boolString;
+  }
+
+
+  public ExampleResponse nullString(String nullString) {
+    
+    this.nullString = nullString;
+    return this;
+  }
+
+   /**
+   * Get nullString
+   * @return nullString
+  **/
+  @javax.annotation.Nullable
+  public String getNullString() {
+    return nullString;
+  }
+
+
+  public void setNullString(String nullString) {
+    this.nullString = nullString;
+  }
+
+
+  public ExampleResponse aBool(Boolean aBool) {
+    
+    this.aBool = aBool;
+    return this;
+  }
+
+   /**
+   * Get aBool
+   * @return aBool
+  **/
+  @javax.annotation.Nullable
+  public Boolean getaBool() {
+    return aBool;
+  }
+
+
+  public void setaBool(Boolean aBool) {
+    this.aBool = aBool;
+  }
+
+
+  public ExampleResponse zero(Integer zero) {
+    
+    this.zero = zero;
+    return this;
+  }
+
+   /**
+   * Get zero
+   * @return zero
+  **/
+  @javax.annotation.Nullable
+  public Integer getZero() {
+    return zero;
+  }
+
+
+  public void setZero(Integer zero) {
+    this.zero = zero;
   }
 
   /**
@@ -135,20 +259,30 @@ public class ExampleResponse {
       return false;
     }
     ExampleResponse exampleResponse = (ExampleResponse) o;
-    return Objects.equals(this.myOnlyProperty, exampleResponse.myOnlyProperty)&&
+    return Objects.equals(this.emptyString, exampleResponse.emptyString) &&
+        Objects.equals(this.numberString, exampleResponse.numberString) &&
+        Objects.equals(this.boolString, exampleResponse.boolString) &&
+        Objects.equals(this.nullString, exampleResponse.nullString) &&
+        Objects.equals(this.aBool, exampleResponse.aBool) &&
+        Objects.equals(this.zero, exampleResponse.zero)&&
         Objects.equals(this.additionalProperties, exampleResponse.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(myOnlyProperty, additionalProperties);
+    return Objects.hash(emptyString, numberString, boolString, nullString, aBool, zero, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExampleResponse {\n");
-    sb.append("    myOnlyProperty: ").append(toIndentedString(myOnlyProperty)).append("\n");
+    sb.append("    emptyString: ").append(toIndentedString(emptyString)).append("\n");
+    sb.append("    numberString: ").append(toIndentedString(numberString)).append("\n");
+    sb.append("    boolString: ").append(toIndentedString(boolString)).append("\n");
+    sb.append("    nullString: ").append(toIndentedString(nullString)).append("\n");
+    sb.append("    aBool: ").append(toIndentedString(aBool)).append("\n");
+    sb.append("    zero: ").append(toIndentedString(zero)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -172,7 +306,12 @@ public class ExampleResponse {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("myOnlyProperty");
+    openapiFields.add("emptyString");
+    openapiFields.add("numberString");
+    openapiFields.add("boolString");
+    openapiFields.add("nullString");
+    openapiFields.add("aBool");
+    openapiFields.add("zero");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -190,9 +329,17 @@ public class ExampleResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ExampleResponse is not found in the empty JSON string", ExampleResponse.openapiRequiredFields.toString()));
         }
       }
-      // validate the optional field `myOnlyProperty`
-      if (jsonObj.get("myOnlyProperty") != null && !jsonObj.get("myOnlyProperty").isJsonNull()) {
-        OtherObject.validateJsonObject(jsonObj.getAsJsonObject("myOnlyProperty"));
+      if ((jsonObj.get("emptyString") != null && !jsonObj.get("emptyString").isJsonNull()) && !jsonObj.get("emptyString").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `emptyString` to be a primitive type in the JSON string but got `%s`", jsonObj.get("emptyString").toString()));
+      }
+      if ((jsonObj.get("numberString") != null && !jsonObj.get("numberString").isJsonNull()) && !jsonObj.get("numberString").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `numberString` to be a primitive type in the JSON string but got `%s`", jsonObj.get("numberString").toString()));
+      }
+      if ((jsonObj.get("boolString") != null && !jsonObj.get("boolString").isJsonNull()) && !jsonObj.get("boolString").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `boolString` to be a primitive type in the JSON string but got `%s`", jsonObj.get("boolString").toString()));
+      }
+      if ((jsonObj.get("nullString") != null && !jsonObj.get("nullString").isJsonNull()) && !jsonObj.get("nullString").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `nullString` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nullString").toString()));
       }
   }
 

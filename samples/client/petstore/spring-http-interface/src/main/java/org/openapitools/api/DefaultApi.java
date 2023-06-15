@@ -5,7 +5,7 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.Dummy200ResponseDto;
+import org.openapitools.model.ExampleResponseDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.service.annotation.*;
@@ -31,7 +31,7 @@ public interface DefaultApi {
         value = "/example/someMethod",
         accept = "*/*"
     )
-    ResponseEntity<Dummy200ResponseDto> dummy(
+    ResponseEntity<ExampleResponseDto> dummy(
         
     );
 

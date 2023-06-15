@@ -14,7 +14,7 @@
 package org.openapitools.client.api;
 
 import com.google.gson.reflect.TypeToken;
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -79,7 +79,7 @@ public class DefaultApi {
      * 
      * dummy
      *
-     * return Dummy200Response
+     * return ExampleResponse
      */
     public static class DummyOper implements Oper {
 
@@ -109,10 +109,10 @@ public class DefaultApi {
         /**
          * GET /example/someMethod
          * @param handler handler
-         * @return Dummy200Response
+         * @return ExampleResponse
          */
-        public Dummy200Response executeAs(Function<Response, Response> handler) {
-            Type type = new TypeToken<Dummy200Response>(){}.getType();
+        public ExampleResponse executeAs(Function<Response, Response> handler) {
+            Type type = new TypeToken<ExampleResponse>(){}.getType();
             return execute(handler).as(type);
         }
 

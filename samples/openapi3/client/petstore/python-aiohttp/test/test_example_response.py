@@ -38,9 +38,12 @@ class TestExampleResponse(unittest.TestCase):
         model = petstore_api.models.example_response.ExampleResponse()  # noqa: E501
         if include_optional :
             return ExampleResponse(
-                my_only_property = petstore_api.models.other_object.OtherObject(
-                    my_only_property2 = petstore_api.models.example_response.ExampleResponse(
-                        my_only_property = petstore_api.models.other_object.OtherObject(), ), )
+                empty_string = '', 
+                number_string = '42', 
+                bool_string = 'false', 
+                null_string = 'null', 
+                a_bool = False, 
+                zero = 0
             )
         else :
             return ExampleResponse(

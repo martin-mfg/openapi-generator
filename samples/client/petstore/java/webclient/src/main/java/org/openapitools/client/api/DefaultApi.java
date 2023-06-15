@@ -2,7 +2,7 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.HashMap;
 import java.util.List;
@@ -50,7 +50,7 @@ public class DefaultApi {
      * 
      * dummy
      * <p><b>200</b> - dummy
-     * @return Dummy200Response
+     * @return ExampleResponse
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
     private ResponseSpec dummyRequestCreation() throws WebClientResponseException {
@@ -72,7 +72,7 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<Dummy200Response> localVarReturnType = new ParameterizedTypeReference<Dummy200Response>() {};
+        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
         return apiClient.invokeAPI("/example/someMethod", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     }
 
@@ -80,11 +80,11 @@ public class DefaultApi {
      * 
      * dummy
      * <p><b>200</b> - dummy
-     * @return Dummy200Response
+     * @return ExampleResponse
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Dummy200Response> dummy() throws WebClientResponseException {
-        ParameterizedTypeReference<Dummy200Response> localVarReturnType = new ParameterizedTypeReference<Dummy200Response>() {};
+    public Mono<ExampleResponse> dummy() throws WebClientResponseException {
+        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
         return dummyRequestCreation().bodyToMono(localVarReturnType);
     }
 
@@ -92,11 +92,11 @@ public class DefaultApi {
      * 
      * dummy
      * <p><b>200</b> - dummy
-     * @return ResponseEntity&lt;Dummy200Response&gt;
+     * @return ResponseEntity&lt;ExampleResponse&gt;
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Dummy200Response>> dummyWithHttpInfo() throws WebClientResponseException {
-        ParameterizedTypeReference<Dummy200Response> localVarReturnType = new ParameterizedTypeReference<Dummy200Response>() {};
+    public Mono<ResponseEntity<ExampleResponse>> dummyWithHttpInfo() throws WebClientResponseException {
+        ParameterizedTypeReference<ExampleResponse> localVarReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
         return dummyRequestCreation().toEntity(localVarReturnType);
     }
 

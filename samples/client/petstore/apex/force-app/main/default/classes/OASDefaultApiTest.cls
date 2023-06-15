@@ -14,17 +14,17 @@ private class OASDefaultApiTest {
 
         OASClient client;
         OASDefaultApi api;
-        OASDummy200Response response;
-        OASDummy200Response expectedResponse;
+        OASExampleResponse response;
+        OASExampleResponse expectedResponse;
         String js = '';
 
         api = new OASDefaultApi(new OASClient());
 
-        js = JSON.serialize(OASDummy200Response.getExample());
+        js = JSON.serialize(OASExampleResponse.getExample());
         res.setHeader('Content-Type', '*/*');
         res.setBody(js);
-        expectedResponse = OASDummy200Response.getExample();
-        response = (OASDummy200Response) api.dummy();
+        expectedResponse = OASExampleResponse.getExample();
+        response = (OASExampleResponse) api.dummy();
         System.assertEquals(expectedResponse, response);
     }
 }

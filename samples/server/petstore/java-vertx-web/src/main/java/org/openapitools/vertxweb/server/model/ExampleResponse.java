@@ -3,7 +3,6 @@ package org.openapitools.vertxweb.server.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.openapitools.vertxweb.server.model.OtherObject;
 
 /**
  * dummy
@@ -11,23 +10,78 @@ import org.openapitools.vertxweb.server.model.OtherObject;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ExampleResponse   {
   
-  private OtherObject myOnlyProperty;
+  private String emptyString = "";
+  private String numberString = "42";
+  private String boolString = "false";
+  private String nullString = "null";
+  private Boolean aBool = false;
+  private Integer zero = 0;
 
   public ExampleResponse () {
 
   }
 
-  public ExampleResponse (OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public ExampleResponse (String emptyString, String numberString, String boolString, String nullString, Boolean aBool, Integer zero) {
+    this.emptyString = emptyString;
+    this.numberString = numberString;
+    this.boolString = boolString;
+    this.nullString = nullString;
+    this.aBool = aBool;
+    this.zero = zero;
   }
 
     
-  @JsonProperty("myOnlyProperty")
-  public OtherObject getMyOnlyProperty() {
-    return myOnlyProperty;
+  @JsonProperty("emptyString")
+  public String getEmptyString() {
+    return emptyString;
   }
-  public void setMyOnlyProperty(OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public void setEmptyString(String emptyString) {
+    this.emptyString = emptyString;
+  }
+
+    
+  @JsonProperty("numberString")
+  public String getNumberString() {
+    return numberString;
+  }
+  public void setNumberString(String numberString) {
+    this.numberString = numberString;
+  }
+
+    
+  @JsonProperty("boolString")
+  public String getBoolString() {
+    return boolString;
+  }
+  public void setBoolString(String boolString) {
+    this.boolString = boolString;
+  }
+
+    
+  @JsonProperty("nullString")
+  public String getNullString() {
+    return nullString;
+  }
+  public void setNullString(String nullString) {
+    this.nullString = nullString;
+  }
+
+    
+  @JsonProperty("aBool")
+  public Boolean getaBool() {
+    return aBool;
+  }
+  public void setaBool(Boolean aBool) {
+    this.aBool = aBool;
+  }
+
+    
+  @JsonProperty("zero")
+  public Integer getZero() {
+    return zero;
+  }
+  public void setZero(Integer zero) {
+    this.zero = zero;
   }
 
 
@@ -40,12 +94,17 @@ public class ExampleResponse   {
       return false;
     }
     ExampleResponse exampleResponse = (ExampleResponse) o;
-    return Objects.equals(myOnlyProperty, exampleResponse.myOnlyProperty);
+    return Objects.equals(emptyString, exampleResponse.emptyString) &&
+        Objects.equals(numberString, exampleResponse.numberString) &&
+        Objects.equals(boolString, exampleResponse.boolString) &&
+        Objects.equals(nullString, exampleResponse.nullString) &&
+        Objects.equals(aBool, exampleResponse.aBool) &&
+        Objects.equals(zero, exampleResponse.zero);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(myOnlyProperty);
+    return Objects.hash(emptyString, numberString, boolString, nullString, aBool, zero);
   }
 
   @Override
@@ -53,7 +112,12 @@ public class ExampleResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExampleResponse {\n");
     
-    sb.append("    myOnlyProperty: ").append(toIndentedString(myOnlyProperty)).append("\n");
+    sb.append("    emptyString: ").append(toIndentedString(emptyString)).append("\n");
+    sb.append("    numberString: ").append(toIndentedString(numberString)).append("\n");
+    sb.append("    boolString: ").append(toIndentedString(boolString)).append("\n");
+    sb.append("    nullString: ").append(toIndentedString(nullString)).append("\n");
+    sb.append("    aBool: ").append(toIndentedString(aBool)).append("\n");
+    sb.append("    zero: ").append(toIndentedString(zero)).append("\n");
     sb.append("}");
     return sb.toString();
   }

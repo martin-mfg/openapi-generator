@@ -33,7 +33,7 @@ public class ExampleApi extends RouteBuilder {
                 .clientRequestValidation(false)
                 .bindingMode(RestBindingMode.off)
                 .produces("*/*")
-                .outType(Dummy200Response.class)
+                .outType(ExampleResponse.class)
                 .to("direct:validate-dummy");
         
     }

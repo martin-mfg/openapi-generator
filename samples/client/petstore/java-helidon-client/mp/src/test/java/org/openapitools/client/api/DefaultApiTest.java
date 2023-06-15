@@ -13,7 +13,7 @@
 
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -53,7 +53,7 @@ public class DefaultApiTest {
      */
     @Test
     public void dummyTest() throws Exception {
-        //Dummy200Response response = client.dummy();
+        //ExampleResponse response = client.dummy();
         //assertNotNull(response);
     }
     

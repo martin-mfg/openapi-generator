@@ -15,7 +15,6 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.OtherObject
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerialName
@@ -29,14 +28,34 @@ import kotlinx.serialization.encoding.Encoder
 /**
  * dummy
  *
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 @Serializable
 
 data class ExampleResponse (
 
-    @SerialName(value = "myOnlyProperty")
-    val myOnlyProperty: OtherObject? = null
+    @SerialName(value = "emptyString")
+    val emptyString: kotlin.String? = "",
+
+    @SerialName(value = "numberString")
+    val numberString: kotlin.String? = "42",
+
+    @SerialName(value = "boolString")
+    val boolString: kotlin.String? = "false",
+
+    @SerialName(value = "nullString")
+    val nullString: kotlin.String? = "null",
+
+    @SerialName(value = "aBool")
+    val aBool: kotlin.Boolean? = false,
+
+    @SerialName(value = "zero")
+    val zero: kotlin.Int? = 0
 
 )
 

@@ -15,7 +15,7 @@
 
 package org.openapitools.client.apis
 
-import org.openapitools.client.models.Dummy200Response
+import org.openapitools.client.models.ExampleResponse
 
 import org.openapitools.client.infrastructure.*
 import io.ktor.client.HttpClientConfig
@@ -36,10 +36,10 @@ import java.text.DateFormat
         /**
         * 
         * dummy
-         * @return Dummy200Response
+         * @return ExampleResponse
         */
             @Suppress("UNCHECKED_CAST")
-        open suspend fun dummy(): HttpResponse<Dummy200Response> {
+        open suspend fun dummy(): HttpResponse<ExampleResponse> {
 
             val localVariableAuthNames = listOf<String>()
 

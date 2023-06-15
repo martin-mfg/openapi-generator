@@ -13,7 +13,7 @@
 
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import org.openapitools.client.ApiClient;
 import org.openapitools.client.ApiResponse;
@@ -59,7 +59,7 @@ public class DefaultApiTest {
     public void dummyTest() {
 
         // TODO - uncomment the following two lines to invoke the service with valid parameters.
-        //ApiResponse<Dummy200Response> response = api.dummy();
+        //ApiResponse<ExampleResponse> response = api.dummy();
         //response.webClientResponse().await();
         // TODO - check for appropriate return status
         // assertThat("Return status", response.get().status().code(), is(expectedStatus));

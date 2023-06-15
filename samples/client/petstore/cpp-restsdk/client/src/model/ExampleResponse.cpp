@@ -22,7 +22,18 @@ namespace model {
 
 ExampleResponse::ExampleResponse()
 {
-    m_MyOnlyPropertyIsSet = false;
+    m_EmptyString = utility::conversions::to_string_t("");
+    m_EmptyStringIsSet = false;
+    m_NumberString = utility::conversions::to_string_t("");
+    m_NumberStringIsSet = false;
+    m_BoolString = utility::conversions::to_string_t("");
+    m_BoolStringIsSet = false;
+    m_NullString = utility::conversions::to_string_t("");
+    m_NullStringIsSet = false;
+    m_ABool = false;
+    m_ABoolIsSet = false;
+    m_Zero = 0;
+    m_ZeroIsSet = false;
 }
 
 ExampleResponse::~ExampleResponse()
@@ -39,9 +50,29 @@ web::json::value ExampleResponse::toJson() const
 
     web::json::value val = web::json::value::object();
     
-    if(m_MyOnlyPropertyIsSet)
+    if(m_EmptyStringIsSet)
     {
-        val[utility::conversions::to_string_t(U("myOnlyProperty"))] = ModelBase::toJson(m_MyOnlyProperty);
+        val[utility::conversions::to_string_t(U("emptyString"))] = ModelBase::toJson(m_EmptyString);
+    }
+    if(m_NumberStringIsSet)
+    {
+        val[utility::conversions::to_string_t(U("numberString"))] = ModelBase::toJson(m_NumberString);
+    }
+    if(m_BoolStringIsSet)
+    {
+        val[utility::conversions::to_string_t(U("boolString"))] = ModelBase::toJson(m_BoolString);
+    }
+    if(m_NullStringIsSet)
+    {
+        val[utility::conversions::to_string_t(U("nullString"))] = ModelBase::toJson(m_NullString);
+    }
+    if(m_ABoolIsSet)
+    {
+        val[utility::conversions::to_string_t(U("aBool"))] = ModelBase::toJson(m_ABool);
+    }
+    if(m_ZeroIsSet)
+    {
+        val[utility::conversions::to_string_t(U("zero"))] = ModelBase::toJson(m_Zero);
     }
 
     return val;
@@ -51,14 +82,64 @@ bool ExampleResponse::fromJson(const web::json::value& val)
 {
     bool ok = true;
     
-    if(val.has_field(utility::conversions::to_string_t(U("myOnlyProperty"))))
+    if(val.has_field(utility::conversions::to_string_t(U("emptyString"))))
     {
-        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("myOnlyProperty")));
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("emptyString")));
         if(!fieldValue.is_null())
         {
-            std::shared_ptr<OtherObject> refVal_setMyOnlyProperty;
-            ok &= ModelBase::fromJson(fieldValue, refVal_setMyOnlyProperty);
-            setMyOnlyProperty(refVal_setMyOnlyProperty);
+            utility::string_t refVal_setEmptyString;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setEmptyString);
+            setEmptyString(refVal_setEmptyString);
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(U("numberString"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("numberString")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setNumberString;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setNumberString);
+            setNumberString(refVal_setNumberString);
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(U("boolString"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("boolString")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setBoolString;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setBoolString);
+            setBoolString(refVal_setBoolString);
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(U("nullString"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("nullString")));
+        if(!fieldValue.is_null())
+        {
+            utility::string_t refVal_setNullString;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setNullString);
+            setNullString(refVal_setNullString);
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(U("aBool"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("aBool")));
+        if(!fieldValue.is_null())
+        {
+            bool refVal_setABool;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setABool);
+            setABool(refVal_setABool);
+        }
+    }
+    if(val.has_field(utility::conversions::to_string_t(U("zero"))))
+    {
+        const web::json::value& fieldValue = val.at(utility::conversions::to_string_t(U("zero")));
+        if(!fieldValue.is_null())
+        {
+            int32_t refVal_setZero;
+            ok &= ModelBase::fromJson(fieldValue, refVal_setZero);
+            setZero(refVal_setZero);
         }
     }
     return ok;
@@ -71,9 +152,29 @@ void ExampleResponse::toMultipart(std::shared_ptr<MultipartFormData> multipart, 
     {
         namePrefix += utility::conversions::to_string_t(U("."));
     }
-    if(m_MyOnlyPropertyIsSet)
+    if(m_EmptyStringIsSet)
     {
-        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("myOnlyProperty")), m_MyOnlyProperty));
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("emptyString")), m_EmptyString));
+    }
+    if(m_NumberStringIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("numberString")), m_NumberString));
+    }
+    if(m_BoolStringIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("boolString")), m_BoolString));
+    }
+    if(m_NullStringIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("nullString")), m_NullString));
+    }
+    if(m_ABoolIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("aBool")), m_ABool));
+    }
+    if(m_ZeroIsSet)
+    {
+        multipart->add(ModelBase::toHttpContent(namePrefix + utility::conversions::to_string_t(U("zero")), m_Zero));
     }
 }
 
@@ -86,34 +187,164 @@ bool ExampleResponse::fromMultiPart(std::shared_ptr<MultipartFormData> multipart
         namePrefix += utility::conversions::to_string_t(U("."));
     }
 
-    if(multipart->hasContent(utility::conversions::to_string_t(U("myOnlyProperty"))))
+    if(multipart->hasContent(utility::conversions::to_string_t(U("emptyString"))))
     {
-        std::shared_ptr<OtherObject> refVal_setMyOnlyProperty;
-        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("myOnlyProperty"))), refVal_setMyOnlyProperty );
-        setMyOnlyProperty(refVal_setMyOnlyProperty);
+        utility::string_t refVal_setEmptyString;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("emptyString"))), refVal_setEmptyString );
+        setEmptyString(refVal_setEmptyString);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(U("numberString"))))
+    {
+        utility::string_t refVal_setNumberString;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("numberString"))), refVal_setNumberString );
+        setNumberString(refVal_setNumberString);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(U("boolString"))))
+    {
+        utility::string_t refVal_setBoolString;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("boolString"))), refVal_setBoolString );
+        setBoolString(refVal_setBoolString);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(U("nullString"))))
+    {
+        utility::string_t refVal_setNullString;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("nullString"))), refVal_setNullString );
+        setNullString(refVal_setNullString);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(U("aBool"))))
+    {
+        bool refVal_setABool;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("aBool"))), refVal_setABool );
+        setABool(refVal_setABool);
+    }
+    if(multipart->hasContent(utility::conversions::to_string_t(U("zero"))))
+    {
+        int32_t refVal_setZero;
+        ok &= ModelBase::fromHttpContent(multipart->getContent(utility::conversions::to_string_t(U("zero"))), refVal_setZero );
+        setZero(refVal_setZero);
     }
     return ok;
 }
 
-std::shared_ptr<OtherObject> ExampleResponse::getMyOnlyProperty() const
+utility::string_t ExampleResponse::getEmptyString() const
 {
-    return m_MyOnlyProperty;
+    return m_EmptyString;
 }
 
-void ExampleResponse::setMyOnlyProperty(const std::shared_ptr<OtherObject>& value)
+void ExampleResponse::setEmptyString(const utility::string_t& value)
 {
-    m_MyOnlyProperty = value;
-    m_MyOnlyPropertyIsSet = true;
+    m_EmptyString = value;
+    m_EmptyStringIsSet = true;
 }
 
-bool ExampleResponse::myOnlyPropertyIsSet() const
+bool ExampleResponse::emptyStringIsSet() const
 {
-    return m_MyOnlyPropertyIsSet;
+    return m_EmptyStringIsSet;
 }
 
-void ExampleResponse::unsetMyOnlyProperty()
+void ExampleResponse::unsetEmptyString()
 {
-    m_MyOnlyPropertyIsSet = false;
+    m_EmptyStringIsSet = false;
+}
+utility::string_t ExampleResponse::getNumberString() const
+{
+    return m_NumberString;
+}
+
+void ExampleResponse::setNumberString(const utility::string_t& value)
+{
+    m_NumberString = value;
+    m_NumberStringIsSet = true;
+}
+
+bool ExampleResponse::numberStringIsSet() const
+{
+    return m_NumberStringIsSet;
+}
+
+void ExampleResponse::unsetNumberString()
+{
+    m_NumberStringIsSet = false;
+}
+utility::string_t ExampleResponse::getBoolString() const
+{
+    return m_BoolString;
+}
+
+void ExampleResponse::setBoolString(const utility::string_t& value)
+{
+    m_BoolString = value;
+    m_BoolStringIsSet = true;
+}
+
+bool ExampleResponse::boolStringIsSet() const
+{
+    return m_BoolStringIsSet;
+}
+
+void ExampleResponse::unsetBoolString()
+{
+    m_BoolStringIsSet = false;
+}
+utility::string_t ExampleResponse::getNullString() const
+{
+    return m_NullString;
+}
+
+void ExampleResponse::setNullString(const utility::string_t& value)
+{
+    m_NullString = value;
+    m_NullStringIsSet = true;
+}
+
+bool ExampleResponse::nullStringIsSet() const
+{
+    return m_NullStringIsSet;
+}
+
+void ExampleResponse::unsetNullString()
+{
+    m_NullStringIsSet = false;
+}
+bool ExampleResponse::isABool() const
+{
+    return m_ABool;
+}
+
+void ExampleResponse::setABool(bool value)
+{
+    m_ABool = value;
+    m_ABoolIsSet = true;
+}
+
+bool ExampleResponse::aBoolIsSet() const
+{
+    return m_ABoolIsSet;
+}
+
+void ExampleResponse::unsetABool()
+{
+    m_ABoolIsSet = false;
+}
+int32_t ExampleResponse::getZero() const
+{
+    return m_Zero;
+}
+
+void ExampleResponse::setZero(int32_t value)
+{
+    m_Zero = value;
+    m_ZeroIsSet = true;
+}
+
+bool ExampleResponse::zeroIsSet() const
+{
+    return m_ZeroIsSet;
+}
+
+void ExampleResponse::unsetZero()
+{
+    m_ZeroIsSet = false;
 }
 }
 }

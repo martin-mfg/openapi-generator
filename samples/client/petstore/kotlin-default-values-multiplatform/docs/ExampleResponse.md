@@ -4,7 +4,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**myOnlyProperty** | [**OtherObject**](OtherObject.md) |  |  [optional]
+**emptyString** | **kotlin.String** |  |  [optional]
+**numberString** | **kotlin.String** |  |  [optional]
+**boolString** | **kotlin.String** |  |  [optional]
+**nullString** | **kotlin.String** |  |  [optional]
+**aBool** | **kotlin.Boolean** |  |  [optional]
+**zero** | **kotlin.Int** |  |  [optional]
 
 
 

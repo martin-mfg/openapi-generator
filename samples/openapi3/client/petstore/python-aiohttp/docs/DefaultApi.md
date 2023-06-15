@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **dummy**
-> Dummy200Response dummy()
+> ExampleResponse dummy()
 
 
 
@@ -20,7 +20,7 @@ dummy
 import time
 import os
 import petstore_api
-from petstore_api.models.dummy200_response import Dummy200Response
+from petstore_api.models.example_response import ExampleResponse
 from petstore_api.rest import ApiException
 from pprint import pprint
 
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Dummy200Response**](Dummy200Response.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

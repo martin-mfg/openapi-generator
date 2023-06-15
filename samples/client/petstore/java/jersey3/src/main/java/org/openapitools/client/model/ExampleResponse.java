@@ -22,7 +22,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import org.openapitools.client.model.OtherObject;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.openapitools.client.JSON;
 
@@ -31,38 +30,183 @@ import org.openapitools.client.JSON;
  * dummy
  */
 @JsonPropertyOrder({
-  ExampleResponse.JSON_PROPERTY_MY_ONLY_PROPERTY
+  ExampleResponse.JSON_PROPERTY_EMPTY_STRING,
+  ExampleResponse.JSON_PROPERTY_NUMBER_STRING,
+  ExampleResponse.JSON_PROPERTY_BOOL_STRING,
+  ExampleResponse.JSON_PROPERTY_NULL_STRING,
+  ExampleResponse.JSON_PROPERTY_A_BOOL,
+  ExampleResponse.JSON_PROPERTY_ZERO
 })
 @jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ExampleResponse {
-  public static final String JSON_PROPERTY_MY_ONLY_PROPERTY = "myOnlyProperty";
-  private OtherObject myOnlyProperty;
+  public static final String JSON_PROPERTY_EMPTY_STRING = "emptyString";
+  private String emptyString = "";
+
+  public static final String JSON_PROPERTY_NUMBER_STRING = "numberString";
+  private String numberString = "42";
+
+  public static final String JSON_PROPERTY_BOOL_STRING = "boolString";
+  private String boolString = "false";
+
+  public static final String JSON_PROPERTY_NULL_STRING = "nullString";
+  private String nullString = "null";
+
+  public static final String JSON_PROPERTY_A_BOOL = "aBool";
+  private Boolean aBool = false;
+
+  public static final String JSON_PROPERTY_ZERO = "zero";
+  private Integer zero = 0;
 
   public ExampleResponse() { 
   }
 
-  public ExampleResponse myOnlyProperty(OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public ExampleResponse emptyString(String emptyString) {
+    this.emptyString = emptyString;
     return this;
   }
 
    /**
-   * Get myOnlyProperty
-   * @return myOnlyProperty
+   * Get emptyString
+   * @return emptyString
   **/
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MY_ONLY_PROPERTY)
+  @JsonProperty(JSON_PROPERTY_EMPTY_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public OtherObject getMyOnlyProperty() {
-    return myOnlyProperty;
+  public String getEmptyString() {
+    return emptyString;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MY_ONLY_PROPERTY)
+  @JsonProperty(JSON_PROPERTY_EMPTY_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMyOnlyProperty(OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public void setEmptyString(String emptyString) {
+    this.emptyString = emptyString;
+  }
+
+
+  public ExampleResponse numberString(String numberString) {
+    this.numberString = numberString;
+    return this;
+  }
+
+   /**
+   * Get numberString
+   * @return numberString
+  **/
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_NUMBER_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getNumberString() {
+    return numberString;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_NUMBER_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setNumberString(String numberString) {
+    this.numberString = numberString;
+  }
+
+
+  public ExampleResponse boolString(String boolString) {
+    this.boolString = boolString;
+    return this;
+  }
+
+   /**
+   * Get boolString
+   * @return boolString
+  **/
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_BOOL_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getBoolString() {
+    return boolString;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_BOOL_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setBoolString(String boolString) {
+    this.boolString = boolString;
+  }
+
+
+  public ExampleResponse nullString(String nullString) {
+    this.nullString = nullString;
+    return this;
+  }
+
+   /**
+   * Get nullString
+   * @return nullString
+  **/
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_NULL_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getNullString() {
+    return nullString;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_NULL_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setNullString(String nullString) {
+    this.nullString = nullString;
+  }
+
+
+  public ExampleResponse aBool(Boolean aBool) {
+    this.aBool = aBool;
+    return this;
+  }
+
+   /**
+   * Get aBool
+   * @return aBool
+  **/
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_A_BOOL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getaBool() {
+    return aBool;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_A_BOOL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setaBool(Boolean aBool) {
+    this.aBool = aBool;
+  }
+
+
+  public ExampleResponse zero(Integer zero) {
+    this.zero = zero;
+    return this;
+  }
+
+   /**
+   * Get zero
+   * @return zero
+  **/
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ZERO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getZero() {
+    return zero;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ZERO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setZero(Integer zero) {
+    this.zero = zero;
   }
 
 
@@ -78,19 +222,29 @@ public class ExampleResponse {
       return false;
     }
     ExampleResponse exampleResponse = (ExampleResponse) o;
-    return Objects.equals(this.myOnlyProperty, exampleResponse.myOnlyProperty);
+    return Objects.equals(this.emptyString, exampleResponse.emptyString) &&
+        Objects.equals(this.numberString, exampleResponse.numberString) &&
+        Objects.equals(this.boolString, exampleResponse.boolString) &&
+        Objects.equals(this.nullString, exampleResponse.nullString) &&
+        Objects.equals(this.aBool, exampleResponse.aBool) &&
+        Objects.equals(this.zero, exampleResponse.zero);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(myOnlyProperty);
+    return Objects.hash(emptyString, numberString, boolString, nullString, aBool, zero);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExampleResponse {\n");
-    sb.append("    myOnlyProperty: ").append(toIndentedString(myOnlyProperty)).append("\n");
+    sb.append("    emptyString: ").append(toIndentedString(emptyString)).append("\n");
+    sb.append("    numberString: ").append(toIndentedString(numberString)).append("\n");
+    sb.append("    boolString: ").append(toIndentedString(boolString)).append("\n");
+    sb.append("    nullString: ").append(toIndentedString(nullString)).append("\n");
+    sb.append("    aBool: ").append(toIndentedString(aBool)).append("\n");
+    sb.append("    zero: ").append(toIndentedString(zero)).append("\n");
     sb.append("}");
     return sb.toString();
   }

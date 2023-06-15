@@ -15,7 +15,6 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.OtherObject
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -23,14 +22,34 @@ import com.squareup.moshi.JsonClass
 /**
  * dummy
  *
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 
 
 data class ExampleResponse (
 
-    @Json(name = "myOnlyProperty")
-    var myOnlyProperty: OtherObject? = null
+    @Json(name = "emptyString")
+    var emptyString: kotlin.String? = "",
+
+    @Json(name = "numberString")
+    var numberString: kotlin.String? = "42",
+
+    @Json(name = "boolString")
+    var boolString: kotlin.String? = "false",
+
+    @Json(name = "nullString")
+    var nullString: kotlin.String? = "null",
+
+    @Json(name = "aBool")
+    var aBool: kotlin.Boolean? = false,
+
+    @Json(name = "zero")
+    var zero: kotlin.Int? = 0
 
 )
 

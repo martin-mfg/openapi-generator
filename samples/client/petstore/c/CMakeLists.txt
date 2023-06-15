@@ -54,12 +54,7 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
-    model/dummy_200_response.c
-    model/dummy_200_response_outer_prop.c
-    model/dummy_200_response_outer_prop_inner_prop.c
     model/example_response.c
-    model/node.c
-    model/other_object.c
     api/DefaultAPI.c
 
 )
@@ -71,12 +66,7 @@ set(HDRS
     include/keyValuePair.h
     external/cJSON.h
     model/object.h
-    model/dummy_200_response.h
-    model/dummy_200_response_outer_prop.h
-    model/dummy_200_response_outer_prop_inner_prop.h
     model/example_response.h
-    model/node.h
-    model/other_object.h
     api/DefaultAPI.h
 
 )

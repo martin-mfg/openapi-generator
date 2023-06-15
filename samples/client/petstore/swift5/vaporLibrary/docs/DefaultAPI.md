@@ -45,8 +45,8 @@ This endpoint does not need any parameter.
 
 ```swift
 public enum Dummy {
-    case http200(value: Dummy200Response?, raw: ClientResponse)
-    case http0(value: Dummy200Response?, raw: ClientResponse)
+    case http200(value: ExampleResponse?, raw: ClientResponse)
+    case http0(value: ExampleResponse?, raw: ClientResponse)
 }
 ```
 

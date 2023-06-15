@@ -12,7 +12,7 @@
 
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -43,5 +43,5 @@ public interface DefaultApi  {
     @GET
     
     @Produces({ "*/*" })
-    Dummy200Response dummy() throws ApiException, ProcessingException;
+    ExampleResponse dummy() throws ApiException, ProcessingException;
 }

@@ -6,17 +6,7 @@ api/DefaultApi.h
 impl/DefaultApiImpl.cpp
 impl/DefaultApiImpl.h
 main-api-server.cpp
-model/Dummy_200_response.cpp
-model/Dummy_200_response.h
-model/Dummy_200_response_outerProp.cpp
-model/Dummy_200_response_outerProp.h
-model/Dummy_200_response_outerProp_innerProp.cpp
-model/Dummy_200_response_outerProp_innerProp.h
 model/ExampleResponse.cpp
 model/ExampleResponse.h
 model/Helpers.cpp
 model/Helpers.h
-model/Node.cpp
-model/Node.h
-model/OtherObject.cpp
-model/OtherObject.h

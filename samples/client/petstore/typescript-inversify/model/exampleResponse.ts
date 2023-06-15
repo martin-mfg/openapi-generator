@@ -9,12 +9,16 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { OtherObject } from './otherObject';
 
 
 /**
  * dummy
  */
 export interface ExampleResponse { 
-    myOnlyProperty?: OtherObject;
+    emptyString?: string;
+    numberString?: string;
+    boolString?: string;
+    nullString?: string;
+    aBool?: boolean;
+    zero?: number;
 }

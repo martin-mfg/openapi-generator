@@ -1,6 +1,6 @@
 package org.openapitools.api
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -21,11 +21,11 @@ interface ExampleApiDelegate {
     /**
      * @see ExampleApi#dummy
      */
-    fun dummy(): ResponseEntity<Dummy200Response> {
+    fun dummy(): ResponseEntity<ExampleResponse> {
         getRequest().ifPresent { request ->
             for (mediaType in MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
-                    ApiUtil.setExampleResponse(request, "*/*", "{  \"outerProp\" : {    \"innerProp\" : {      \"myBool\" : true    }  }}")
+                    ApiUtil.setExampleResponse(request, "*/*", "{  \"zero\" : 0,  \"numberString\" : \"42\",  \"nullString\" : \"null\",  \"emptyString\" : \"\",  \"boolString\" : \"false\",  \"aBool\" : false}")
                     break
                 }
             }

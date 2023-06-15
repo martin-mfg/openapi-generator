@@ -17,7 +17,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import org.openapitools.client.model.OtherObject;
 
 
 
@@ -27,25 +26,135 @@ import org.openapitools.client.model.OtherObject;
 
 public class ExampleResponse  {
   
-  private OtherObject myOnlyProperty;
+  private String emptyString = "";
+
+  private String numberString = "42";
+
+  private String boolString = "false";
+
+  private String nullString = "null";
+
+  private Boolean aBool = false;
+
+  private Integer zero = 0;
 
  /**
-   * Get myOnlyProperty
-   * @return myOnlyProperty
+   * Get emptyString
+   * @return emptyString
   **/
-  public OtherObject getMyOnlyProperty() {
-    return myOnlyProperty;
+  public String getEmptyString() {
+    return emptyString;
   }
 
   /**
-    * Set myOnlyProperty
+    * Set emptyString
   **/
-  public void setMyOnlyProperty(OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public void setEmptyString(String emptyString) {
+    this.emptyString = emptyString;
   }
 
-  public ExampleResponse myOnlyProperty(OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public ExampleResponse emptyString(String emptyString) {
+    this.emptyString = emptyString;
+    return this;
+  }
+
+ /**
+   * Get numberString
+   * @return numberString
+  **/
+  public String getNumberString() {
+    return numberString;
+  }
+
+  /**
+    * Set numberString
+  **/
+  public void setNumberString(String numberString) {
+    this.numberString = numberString;
+  }
+
+  public ExampleResponse numberString(String numberString) {
+    this.numberString = numberString;
+    return this;
+  }
+
+ /**
+   * Get boolString
+   * @return boolString
+  **/
+  public String getBoolString() {
+    return boolString;
+  }
+
+  /**
+    * Set boolString
+  **/
+  public void setBoolString(String boolString) {
+    this.boolString = boolString;
+  }
+
+  public ExampleResponse boolString(String boolString) {
+    this.boolString = boolString;
+    return this;
+  }
+
+ /**
+   * Get nullString
+   * @return nullString
+  **/
+  public String getNullString() {
+    return nullString;
+  }
+
+  /**
+    * Set nullString
+  **/
+  public void setNullString(String nullString) {
+    this.nullString = nullString;
+  }
+
+  public ExampleResponse nullString(String nullString) {
+    this.nullString = nullString;
+    return this;
+  }
+
+ /**
+   * Get aBool
+   * @return aBool
+  **/
+  public Boolean getaBool() {
+    return aBool;
+  }
+
+  /**
+    * Set aBool
+  **/
+  public void setaBool(Boolean aBool) {
+    this.aBool = aBool;
+  }
+
+  public ExampleResponse aBool(Boolean aBool) {
+    this.aBool = aBool;
+    return this;
+  }
+
+ /**
+   * Get zero
+   * @return zero
+  **/
+  public Integer getZero() {
+    return zero;
+  }
+
+  /**
+    * Set zero
+  **/
+  public void setZero(Integer zero) {
+    this.zero = zero;
+  }
+
+  public ExampleResponse zero(Integer zero) {
+    this.zero = zero;
     return this;
   }
 
@@ -58,7 +167,12 @@ public class ExampleResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExampleResponse {\n");
     
-    sb.append("    myOnlyProperty: ").append(toIndentedString(myOnlyProperty)).append("\n");
+    sb.append("    emptyString: ").append(toIndentedString(emptyString)).append("\n");
+    sb.append("    numberString: ").append(toIndentedString(numberString)).append("\n");
+    sb.append("    boolString: ").append(toIndentedString(boolString)).append("\n");
+    sb.append("    nullString: ").append(toIndentedString(nullString)).append("\n");
+    sb.append("    aBool: ").append(toIndentedString(aBool)).append("\n");
+    sb.append("    zero: ").append(toIndentedString(zero)).append("\n");
     sb.append("}");
     return sb.toString();
   }

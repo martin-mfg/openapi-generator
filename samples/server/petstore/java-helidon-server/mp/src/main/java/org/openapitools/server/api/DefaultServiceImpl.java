@@ -12,7 +12,7 @@
 
 package org.openapitools.server.api;
 
-import org.openapitools.server.model.Dummy200Response;
+import org.openapitools.server.model.ExampleResponse;
 
 import jakarta.ws.rs.*;
 
@@ -29,8 +29,8 @@ public class DefaultServiceImpl implements DefaultService {
 
     @GET
     @Produces({ "*/*" })
-    public Dummy200Response dummy() {
-        Dummy200Response result = null; // Replace with correct business logic.
+    public ExampleResponse dummy() {
+        ExampleResponse result = null; // Replace with correct business logic.
         return result;
     }
 }

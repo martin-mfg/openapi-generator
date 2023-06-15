@@ -18,14 +18,14 @@ namespace Org.OpenAPITools.Functions
     public partial class DefaultApi
     { 
         [FunctionName("DefaultApi_Dummy")]
-        public async Task<ActionResult<Dummy200Response>> _Dummy([HttpTrigger(AuthorizationLevel.Anonymous, "Get", Route = "example/someMethod")]HttpRequest req, ExecutionContext context)
+        public async Task<ActionResult<ExampleResponse>> _Dummy([HttpTrigger(AuthorizationLevel.Anonymous, "Get", Route = "example/someMethod")]HttpRequest req, ExecutionContext context)
         {
             var method = this.GetType().GetMethod("Dummy");
             if(method == null)
             {
                 return new StatusCodeResult((int)HttpStatusCode.NotImplemented);
             }
-            return (await ((Task<Dummy200Response>)method.Invoke(this, new object[] { req, context, id })).ConfigureAwait(false));
+            return (await ((Task<ExampleResponse>)method.Invoke(this, new object[] { req, context, id })).ConfigureAwait(false));
         }
     }
 }

@@ -70,12 +70,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Dummy200Response](Dummy200Response.md)
- - [Dummy200ResponseOuterProp](Dummy200ResponseOuterProp.md)
- - [Dummy200ResponseOuterPropInnerProp](Dummy200ResponseOuterPropInnerProp.md)
  - [ExampleResponse](ExampleResponse.md)
- - [Node](Node.md)
- - [OtherObject](OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

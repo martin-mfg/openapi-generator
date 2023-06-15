@@ -11,13 +11,22 @@
 */
 package org.openapitools.server.models
 
-import org.openapitools.server.models.OtherObject
 
 /**
  * dummy
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 data class ExampleResponse(
-    var myOnlyProperty: OtherObject? = null
+    var emptyString: kotlin.String? = "",
+    var numberString: kotlin.String? = "42",
+    var boolString: kotlin.String? = "false",
+    var nullString: kotlin.String? = "null",
+    var aBool: kotlin.Boolean? = false,
+    var zero: kotlin.Int? = 0
 ) 
 

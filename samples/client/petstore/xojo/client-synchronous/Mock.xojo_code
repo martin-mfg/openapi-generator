@@ -21,7 +21,7 @@ Public Class Mock
 		  // - defaultResponse: Nil
 		  //
 		  //
-		  Dim DummyData As XojoOpenAPIClientSynchronous.Models.Dummy200Response
+		  Dim DummyData As XojoOpenAPIClientSynchronous.Models.ExampleResponse
 		  If api.Dummy(error, DummyData) Then
 		    Print("[+] DefaultApi.Dummy successful.")
 		  Else

@@ -12,7 +12,7 @@
 
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import org.openapitools.client.Configuration;
 

@@ -5,7 +5,12 @@ dummy
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**my_only_property** | [**OtherObject**](OtherObject.md) |  | [optional] 
+**empty_string** | **str** |  | [optional] [default to '']
+**number_string** | **str** |  | [optional] [default to '42']
+**bool_string** | **str** |  | [optional] [default to 'false']
+**null_string** | **str** |  | [optional] [default to 'null']
+**a_bool** | **bool** |  | [optional] [default to False]
+**zero** | **int** |  | [optional] [default to 0]
 
 ## Example
 

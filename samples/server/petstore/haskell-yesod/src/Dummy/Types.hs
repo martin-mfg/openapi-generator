@@ -4,12 +4,7 @@
 {-# OPTIONS_GHC -fno-warn-unused-binds -fno-warn-unused-imports #-}
 
 module Dummy.Types (
-  Dummy200Response (..),
-  Dummy200ResponseOuterProp (..),
-  Dummy200ResponseOuterPropInnerProp (..),
   ExampleResponse (..),
-  Node (..),
-  OtherObject (..),
   ) where
 
 import ClassyPrelude.Yesod
@@ -24,71 +19,20 @@ import GHC.Generics (Generic)
 import Data.Function ((&))
 
 
--- | 
-data Dummy200Response = Dummy200Response
-  { dummy200ResponseOuterProp :: Maybe Dummy200ResponseOuterProp -- ^ 
-  } deriving (Show, Eq, Generic)
-
-instance FromJSON Dummy200Response where
-  parseJSON = genericParseJSON (removeFieldLabelPrefix True "dummy200Response")
-instance ToJSON Dummy200Response where
-  toJSON = genericToJSON (removeFieldLabelPrefix False "dummy200Response")
-
-
--- | 
-data Dummy200ResponseOuterProp = Dummy200ResponseOuterProp
-  { dummy200ResponseOuterPropInnerProp :: Maybe Dummy200ResponseOuterPropInnerProp -- ^ 
-  } deriving (Show, Eq, Generic)
-
-instance FromJSON Dummy200ResponseOuterProp where
-  parseJSON = genericParseJSON (removeFieldLabelPrefix True "dummy200ResponseOuterProp")
-instance ToJSON Dummy200ResponseOuterProp where
-  toJSON = genericToJSON (removeFieldLabelPrefix False "dummy200ResponseOuterProp")
-
-
--- | 
-data Dummy200ResponseOuterPropInnerProp = Dummy200ResponseOuterPropInnerProp
-  { dummy200ResponseOuterPropInnerPropMyBool :: Maybe Bool -- ^ 
-  } deriving (Show, Eq, Generic)
-
-instance FromJSON Dummy200ResponseOuterPropInnerProp where
-  parseJSON = genericParseJSON (removeFieldLabelPrefix True "dummy200ResponseOuterPropInnerProp")
-instance ToJSON Dummy200ResponseOuterPropInnerProp where
-  toJSON = genericToJSON (removeFieldLabelPrefix False "dummy200ResponseOuterPropInnerProp")
-
-
 -- | dummy
 data ExampleResponse = ExampleResponse
-  { exampleResponseMyOnlyProperty :: Maybe OtherObject -- ^ 
+  { exampleResponseEmptyString :: Maybe Text -- ^ 
+  , exampleResponseNumberString :: Maybe Text -- ^ 
+  , exampleResponseBoolString :: Maybe Text -- ^ 
+  , exampleResponseNullString :: Maybe Text -- ^ 
+  , exampleResponseABool :: Maybe Bool -- ^ 
+  , exampleResponseZero :: Maybe Int -- ^ 
   } deriving (Show, Eq, Generic)
 
 instance FromJSON ExampleResponse where
   parseJSON = genericParseJSON (removeFieldLabelPrefix True "exampleResponse")
 instance ToJSON ExampleResponse where
   toJSON = genericToJSON (removeFieldLabelPrefix False "exampleResponse")
-
-
--- | dummy
-data Node = Node
-  { nodeLeft :: Maybe Node -- ^ 
-  , nodeRight :: Maybe Node -- ^ 
-  } deriving (Show, Eq, Generic)
-
-instance FromJSON Node where
-  parseJSON = genericParseJSON (removeFieldLabelPrefix True "node")
-instance ToJSON Node where
-  toJSON = genericToJSON (removeFieldLabelPrefix False "node")
-
-
--- | dummy
-data OtherObject = OtherObject
-  { otherObjectMyOnlyProperty2 :: Maybe ExampleResponse -- ^ 
-  } deriving (Show, Eq, Generic)
-
-instance FromJSON OtherObject where
-  parseJSON = genericParseJSON (removeFieldLabelPrefix True "otherObject")
-instance ToJSON OtherObject where
-  toJSON = genericToJSON (removeFieldLabelPrefix False "otherObject")
 
 
 uncapitalize :: String -> String

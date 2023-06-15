@@ -6,6 +6,12 @@
   self = [super init];
   if (self) {
     // initialize property's default value, if any
+    self.emptyString = @"";
+    self.numberString = @"42";
+    self.boolString = @"false";
+    self.nullString = @"null";
+    self.aBool = @(NO);
+    self.zero = @0;
     
   }
   return self;
@@ -17,7 +23,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"myOnlyProperty": @"myOnlyProperty" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"emptyString": @"emptyString", @"numberString": @"numberString", @"boolString": @"boolString", @"nullString": @"nullString", @"aBool": @"aBool", @"zero": @"zero" }];
 }
 
 /**
@@ -27,7 +33,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"myOnlyProperty"];
+  NSArray *optionalProperties = @[@"emptyString", @"numberString", @"boolString", @"nullString", @"aBool", @"zero"];
   return [optionalProperties containsObject:propertyName];
 }
 

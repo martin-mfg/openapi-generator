@@ -19,15 +19,20 @@ import json
 
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 
 class ExampleResponse(BaseModel):
     """
     dummy
     """
-    my_only_property: Optional[OtherObject] = Field(None, alias="myOnlyProperty")
+    empty_string: Optional[StrictStr] = Field('', alias="emptyString")
+    number_string: Optional[StrictStr] = Field('42', alias="numberString")
+    bool_string: Optional[StrictStr] = Field('false', alias="boolString")
+    null_string: Optional[StrictStr] = Field('null', alias="nullString")
+    a_bool: Optional[StrictBool] = Field(False, alias="aBool")
+    zero: Optional[StrictInt] = 0
     additional_properties: Dict[str, Any] = {}
-    __properties = ["myOnlyProperty"]
+    __properties = ["emptyString", "numberString", "boolString", "nullString", "aBool", "zero"]
 
     class Config:
         """Pydantic configuration"""
@@ -54,9 +59,6 @@ class ExampleResponse(BaseModel):
                             "additional_properties"
                           },
                           exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of my_only_property
-        if self.my_only_property:
-            _dict['myOnlyProperty'] = self.my_only_property.to_dict()
         # puts key-value pairs in additional_properties in the top level
         if self.additional_properties is not None:
             for _key, _value in self.additional_properties.items():
@@ -74,7 +76,12 @@ class ExampleResponse(BaseModel):
             return ExampleResponse.parse_obj(obj)
 
         _obj = ExampleResponse.parse_obj({
-            "my_only_property": OtherObject.from_dict(obj.get("myOnlyProperty")) if obj.get("myOnlyProperty") is not None else None
+            "empty_string": obj.get("emptyString") if obj.get("emptyString") is not None else '',
+            "number_string": obj.get("numberString") if obj.get("numberString") is not None else '42',
+            "bool_string": obj.get("boolString") if obj.get("boolString") is not None else 'false',
+            "null_string": obj.get("nullString") if obj.get("nullString") is not None else 'null',
+            "a_bool": obj.get("aBool") if obj.get("aBool") is not None else False,
+            "zero": obj.get("zero") if obj.get("zero") is not None else 0
         })
         # store additional fields in additional_properties
         for _key in obj.keys():

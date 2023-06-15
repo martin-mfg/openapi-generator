@@ -10,7 +10,22 @@ namespace app\Models;
  */
 class ExampleResponse {
 
-    /** @var \app\Models\OtherObject $myOnlyProperty */
-    public $myOnlyProperty;
+    /** @var string $emptyString */
+    public $emptyString = '';
+
+    /** @var string $numberString */
+    public $numberString = '42';
+
+    /** @var string $boolString */
+    public $boolString = 'false';
+
+    /** @var string $nullString */
+    public $nullString = 'null';
+
+    /** @var bool $aBool */
+    public $aBool = false;
+
+    /** @var int $zero */
+    public $zero = 0;
 
 }

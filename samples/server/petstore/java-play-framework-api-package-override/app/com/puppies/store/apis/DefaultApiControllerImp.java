@@ -1,6 +1,6 @@
 package com.puppies.store.apis;
 
-import apimodels.Dummy200Response;
+import apimodels.ExampleResponse;
 
 import play.mvc.Http;
 import java.util.List;
@@ -13,9 +13,9 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen")
 public class DefaultApiControllerImp extends DefaultApiControllerImpInterface {
     @Override
-    public Dummy200Response dummy(Http.Request request) throws Exception {
+    public ExampleResponse dummy(Http.Request request) throws Exception {
         //Do your magic!!!
-        return new Dummy200Response();
+        return new ExampleResponse();
     }
 
 }

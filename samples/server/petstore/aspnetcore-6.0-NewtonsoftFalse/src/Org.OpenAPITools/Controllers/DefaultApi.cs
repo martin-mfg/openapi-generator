@@ -37,18 +37,18 @@ namespace Org.OpenAPITools.Controllers
         [Route("/example/someMethod")]
         [ValidateModelState]
         [SwaggerOperation("Dummy")]
-        [SwaggerResponse(statusCode: 200, type: typeof(Dummy200Response), description: "dummy")]
+        [SwaggerResponse(statusCode: 200, type: typeof(ExampleResponse), description: "dummy")]
         public virtual IActionResult Dummy()
         {
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200, default(Dummy200Response));
+            // return StatusCode(200, default(ExampleResponse));
             string exampleJson = null;
-            exampleJson = "{\n  \"outerProp\" : {\n    \"innerProp\" : {\n      \"myBool\" : true\n    }\n  }\n}";
+            exampleJson = "{\n  \"zero\" : 0,\n  \"numberString\" : \"42\",\n  \"nullString\" : \"null\",\n  \"emptyString\" : \"\",\n  \"boolString\" : \"false\",\n  \"aBool\" : false\n}";
             
             var example = exampleJson != null
-            ? JsonSerializer.Deserialize<Dummy200Response>(exampleJson)
-            : default(Dummy200Response);
+            ? JsonSerializer.Deserialize<ExampleResponse>(exampleJson)
+            : default(ExampleResponse);
             //TODO: Change the data returned
             return new ObjectResult(example);
         }

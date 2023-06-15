@@ -21,7 +21,18 @@ namespace org::openapitools::server::model
 
 ExampleResponse::ExampleResponse()
 {
-    m_MyOnlyPropertyIsSet = false;
+    m_EmptyString = "";
+    m_EmptyStringIsSet = false;
+    m_NumberString = "42";
+    m_NumberStringIsSet = false;
+    m_BoolString = "false";
+    m_BoolStringIsSet = false;
+    m_NullString = "null";
+    m_NullStringIsSet = false;
+    m_ABool = false;
+    m_ABoolIsSet = false;
+    m_Zero = 0;
+    m_ZeroIsSet = false;
     
 }
 
@@ -44,7 +55,7 @@ bool ExampleResponse::validate(std::stringstream& msg, const std::string& pathPr
     bool success = true;
     const std::string _pathPrefix = pathPrefix.empty() ? "ExampleResponse" : pathPrefix;
 
-        
+                            
     return success;
 }
 
@@ -54,7 +65,22 @@ bool ExampleResponse::operator==(const ExampleResponse& rhs) const
     
     
     
-    ((!myOnlyPropertyIsSet() && !rhs.myOnlyPropertyIsSet()) || (myOnlyPropertyIsSet() && rhs.myOnlyPropertyIsSet() && getMyOnlyProperty() == rhs.getMyOnlyProperty()))
+    ((!emptyStringIsSet() && !rhs.emptyStringIsSet()) || (emptyStringIsSet() && rhs.emptyStringIsSet() && getEmptyString() == rhs.getEmptyString())) &&
+    
+    
+    ((!numberStringIsSet() && !rhs.numberStringIsSet()) || (numberStringIsSet() && rhs.numberStringIsSet() && getNumberString() == rhs.getNumberString())) &&
+    
+    
+    ((!boolStringIsSet() && !rhs.boolStringIsSet()) || (boolStringIsSet() && rhs.boolStringIsSet() && getBoolString() == rhs.getBoolString())) &&
+    
+    
+    ((!nullStringIsSet() && !rhs.nullStringIsSet()) || (nullStringIsSet() && rhs.nullStringIsSet() && getNullString() == rhs.getNullString())) &&
+    
+    
+    ((!aBoolIsSet() && !rhs.aBoolIsSet()) || (aBoolIsSet() && rhs.aBoolIsSet() && isABool() == rhs.isABool())) &&
+    
+    
+    ((!zeroIsSet() && !rhs.zeroIsSet()) || (zeroIsSet() && rhs.zeroIsSet() && getZero() == rhs.getZero()))
     
     ;
 }
@@ -67,37 +93,157 @@ bool ExampleResponse::operator!=(const ExampleResponse& rhs) const
 void to_json(nlohmann::json& j, const ExampleResponse& o)
 {
     j = nlohmann::json::object();
-    if(o.myOnlyPropertyIsSet())
-        j["myOnlyProperty"] = o.m_MyOnlyProperty;
+    if(o.emptyStringIsSet())
+        j["emptyString"] = o.m_EmptyString;
+    if(o.numberStringIsSet())
+        j["numberString"] = o.m_NumberString;
+    if(o.boolStringIsSet())
+        j["boolString"] = o.m_BoolString;
+    if(o.nullStringIsSet())
+        j["nullString"] = o.m_NullString;
+    if(o.aBoolIsSet())
+        j["aBool"] = o.m_ABool;
+    if(o.zeroIsSet())
+        j["zero"] = o.m_Zero;
     
 }
 
 void from_json(const nlohmann::json& j, ExampleResponse& o)
 {
-    if(j.find("myOnlyProperty") != j.end())
+    if(j.find("emptyString") != j.end())
     {
-        j.at("myOnlyProperty").get_to(o.m_MyOnlyProperty);
-        o.m_MyOnlyPropertyIsSet = true;
+        j.at("emptyString").get_to(o.m_EmptyString);
+        o.m_EmptyStringIsSet = true;
+    } 
+    if(j.find("numberString") != j.end())
+    {
+        j.at("numberString").get_to(o.m_NumberString);
+        o.m_NumberStringIsSet = true;
+    } 
+    if(j.find("boolString") != j.end())
+    {
+        j.at("boolString").get_to(o.m_BoolString);
+        o.m_BoolStringIsSet = true;
+    } 
+    if(j.find("nullString") != j.end())
+    {
+        j.at("nullString").get_to(o.m_NullString);
+        o.m_NullStringIsSet = true;
+    } 
+    if(j.find("aBool") != j.end())
+    {
+        j.at("aBool").get_to(o.m_ABool);
+        o.m_ABoolIsSet = true;
+    } 
+    if(j.find("zero") != j.end())
+    {
+        j.at("zero").get_to(o.m_Zero);
+        o.m_ZeroIsSet = true;
     } 
     
 }
 
-org::openapitools::server::model::OtherObject ExampleResponse::getMyOnlyProperty() const
+std::string ExampleResponse::getEmptyString() const
 {
-    return m_MyOnlyProperty;
+    return m_EmptyString;
 }
-void ExampleResponse::setMyOnlyProperty(org::openapitools::server::model::OtherObject const& value)
+void ExampleResponse::setEmptyString(std::string const& value)
 {
-    m_MyOnlyProperty = value;
-    m_MyOnlyPropertyIsSet = true;
+    m_EmptyString = value;
+    m_EmptyStringIsSet = true;
 }
-bool ExampleResponse::myOnlyPropertyIsSet() const
+bool ExampleResponse::emptyStringIsSet() const
 {
-    return m_MyOnlyPropertyIsSet;
+    return m_EmptyStringIsSet;
 }
-void ExampleResponse::unsetMyOnlyProperty()
+void ExampleResponse::unsetEmptyString()
 {
-    m_MyOnlyPropertyIsSet = false;
+    m_EmptyStringIsSet = false;
+}
+std::string ExampleResponse::getNumberString() const
+{
+    return m_NumberString;
+}
+void ExampleResponse::setNumberString(std::string const& value)
+{
+    m_NumberString = value;
+    m_NumberStringIsSet = true;
+}
+bool ExampleResponse::numberStringIsSet() const
+{
+    return m_NumberStringIsSet;
+}
+void ExampleResponse::unsetNumberString()
+{
+    m_NumberStringIsSet = false;
+}
+std::string ExampleResponse::getBoolString() const
+{
+    return m_BoolString;
+}
+void ExampleResponse::setBoolString(std::string const& value)
+{
+    m_BoolString = value;
+    m_BoolStringIsSet = true;
+}
+bool ExampleResponse::boolStringIsSet() const
+{
+    return m_BoolStringIsSet;
+}
+void ExampleResponse::unsetBoolString()
+{
+    m_BoolStringIsSet = false;
+}
+std::string ExampleResponse::getNullString() const
+{
+    return m_NullString;
+}
+void ExampleResponse::setNullString(std::string const& value)
+{
+    m_NullString = value;
+    m_NullStringIsSet = true;
+}
+bool ExampleResponse::nullStringIsSet() const
+{
+    return m_NullStringIsSet;
+}
+void ExampleResponse::unsetNullString()
+{
+    m_NullStringIsSet = false;
+}
+bool ExampleResponse::isABool() const
+{
+    return m_ABool;
+}
+void ExampleResponse::setABool(bool const value)
+{
+    m_ABool = value;
+    m_ABoolIsSet = true;
+}
+bool ExampleResponse::aBoolIsSet() const
+{
+    return m_ABoolIsSet;
+}
+void ExampleResponse::unsetABool()
+{
+    m_ABoolIsSet = false;
+}
+int32_t ExampleResponse::getZero() const
+{
+    return m_Zero;
+}
+void ExampleResponse::setZero(int32_t const value)
+{
+    m_Zero = value;
+    m_ZeroIsSet = true;
+}
+bool ExampleResponse::zeroIsSet() const
+{
+    return m_ZeroIsSet;
+}
+void ExampleResponse::unsetZero()
+{
+    m_ZeroIsSet = false;
 }
 
 

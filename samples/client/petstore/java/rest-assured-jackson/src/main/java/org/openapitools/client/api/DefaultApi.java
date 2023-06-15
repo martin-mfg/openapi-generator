@@ -13,7 +13,7 @@
 
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -78,7 +78,7 @@ public class DefaultApi {
      * 
      * dummy
      *
-     * return Dummy200Response
+     * return ExampleResponse
      */
     public static class DummyOper implements Oper {
 
@@ -108,10 +108,10 @@ public class DefaultApi {
         /**
          * GET /example/someMethod
          * @param handler handler
-         * @return Dummy200Response
+         * @return ExampleResponse
          */
-        public Dummy200Response executeAs(Function<Response, Response> handler) {
-            TypeRef<Dummy200Response> type = new TypeRef<Dummy200Response>(){};
+        public ExampleResponse executeAs(Function<Response, Response> handler) {
+            TypeRef<ExampleResponse> type = new TypeRef<ExampleResponse>(){};
             return execute(handler).as(type);
         }
 

@@ -19,7 +19,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import org.openapitools.client.models.Dummy200Response
+import org.openapitools.client.models.ExampleResponse
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -49,7 +49,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     /**
      * 
      * dummy
-     * @return Dummy200Response
+     * @return ExampleResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -58,11 +58,11 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dummy() : Dummy200Response {
+    fun dummy() : ExampleResponse {
         val localVarResponse = dummyWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as Dummy200Response
+            ResponseType.Success -> (localVarResponse as Success<*>).data as ExampleResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -79,16 +79,16 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     /**
      * 
      * dummy
-     * @return ApiResponse<Dummy200Response?>
+     * @return ApiResponse<ExampleResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dummyWithHttpInfo() : ApiResponse<Dummy200Response?> {
+    fun dummyWithHttpInfo() : ApiResponse<ExampleResponse?> {
         val localVariableConfig = dummyRequestConfig()
 
-        return request<Unit, Dummy200Response>(
+        return request<Unit, ExampleResponse>(
             localVariableConfig
         )
     }

@@ -17,7 +17,7 @@ import io.micronaut.core.annotation.*;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,10 +32,10 @@ public interface DefaultApi {
     /**
      * dummy
      *
-     * @return Dummy200Response
+     * @return ExampleResponse
      */
     @Get(uri="/example/someMethod")
     
-    Mono<Dummy200Response> dummy();
+    Mono<ExampleResponse> dummy();
 
 }

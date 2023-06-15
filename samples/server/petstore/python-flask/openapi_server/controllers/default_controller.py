@@ -4,7 +4,7 @@ from typing import Dict
 from typing import Tuple
 from typing import Union
 
-from openapi_server.models.dummy200_response import Dummy200Response  # noqa: E501
+from openapi_server.models.example_response import ExampleResponse  # noqa: E501
 from openapi_server import util
 
 
@@ -14,6 +14,6 @@ def dummy():  # noqa: E501
     dummy # noqa: E501
 
 
-    :rtype: Union[Dummy200Response, Tuple[Dummy200Response, int], Tuple[Dummy200Response, int, Dict[str, str]]
+    :rtype: Union[ExampleResponse, Tuple[ExampleResponse, int], Tuple[ExampleResponse, int, Dict[str, str]]
     """
     return 'do some magic!'

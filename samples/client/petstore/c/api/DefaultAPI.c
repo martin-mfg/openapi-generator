@@ -14,7 +14,7 @@
 
 // dummy
 //
-dummy_200_response_t*
+example_response_t*
 DefaultAPI_dummy(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
@@ -48,7 +48,7 @@ DefaultAPI_dummy(apiClient_t *apiClient)
     //}
     //nonprimitive not container
     cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    dummy_200_response_t *elementToReturn = dummy_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+    example_response_t *elementToReturn = example_response_parseFromJSON(DefaultAPIlocalVarJSON);
     cJSON_Delete(DefaultAPIlocalVarJSON);
     if(elementToReturn == NULL) {
         // return 0;

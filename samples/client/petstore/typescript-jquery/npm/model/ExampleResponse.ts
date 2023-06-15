@@ -16,6 +16,16 @@ import * as models from './models';
  * dummy
  */
 export interface ExampleResponse {
-    myOnlyProperty?: models.OtherObject;
+    emptyString?: string;
+
+    numberString?: string;
+
+    boolString?: string;
+
+    nullString?: string;
+
+    aBool?: boolean;
+
+    zero?: number;
 
 }

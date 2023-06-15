@@ -7,7 +7,7 @@ import org.openapitools.api.factories.ExampleApiServiceFactory;
 import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;
@@ -34,9 +34,9 @@ public class ExampleApi  {
     
     
     @Produces({ "*/*" })
-    @io.swagger.annotations.ApiOperation(value = "", notes = "dummy", response = Dummy200Response.class, tags={  })
+    @io.swagger.annotations.ApiOperation(value = "", notes = "dummy", response = ExampleResponse.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "dummy", response = Dummy200Response.class) })
+        @io.swagger.annotations.ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class) })
     public Response dummy()
     throws NotFoundException {
         return delegate.dummy();

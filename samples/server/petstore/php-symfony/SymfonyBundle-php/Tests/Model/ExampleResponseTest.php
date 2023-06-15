@@ -86,13 +86,68 @@ class ExampleResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "myOnlyProperty"
+     * Test attribute "emptyString"
      *
      * @group unit
      * @small
      */
-    public function testPropertyMyOnlyProperty(): void
+    public function testPropertyEmptyString(): void
     {
-        $this->markTestSkipped('Test for property myOnlyProperty not implemented');
+        $this->markTestSkipped('Test for property emptyString not implemented');
+    }
+
+    /**
+     * Test attribute "numberString"
+     *
+     * @group unit
+     * @small
+     */
+    public function testPropertyNumberString(): void
+    {
+        $this->markTestSkipped('Test for property numberString not implemented');
+    }
+
+    /**
+     * Test attribute "boolString"
+     *
+     * @group unit
+     * @small
+     */
+    public function testPropertyBoolString(): void
+    {
+        $this->markTestSkipped('Test for property boolString not implemented');
+    }
+
+    /**
+     * Test attribute "nullString"
+     *
+     * @group unit
+     * @small
+     */
+    public function testPropertyNullString(): void
+    {
+        $this->markTestSkipped('Test for property nullString not implemented');
+    }
+
+    /**
+     * Test attribute "aBool"
+     *
+     * @group unit
+     * @small
+     */
+    public function testPropertyABool(): void
+    {
+        $this->markTestSkipped('Test for property aBool not implemented');
+    }
+
+    /**
+     * Test attribute "zero"
+     *
+     * @group unit
+     * @small
+     */
+    public function testPropertyZero(): void
+    {
+        $this->markTestSkipped('Test for property zero not implemented');
     }
 }

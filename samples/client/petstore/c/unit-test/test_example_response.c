@@ -16,19 +16,27 @@
 #include "../model/example_response.h"
 example_response_t* instantiate_example_response(int include_optional);
 
-#include "test_other_object.c"
 
 
 example_response_t* instantiate_example_response(int include_optional) {
   example_response_t* example_response = NULL;
   if (include_optional) {
     example_response = example_response_create(
-       // false, not to have infinite recursion
-      instantiate_other_object(0)
+      "0",
+      "42",
+      "false",
+      "0",
+      false,
+      0
     );
   } else {
     example_response = example_response_create(
-      NULL
+      "0",
+      "42",
+      "false",
+      "0",
+      false,
+      0
     );
   }
 

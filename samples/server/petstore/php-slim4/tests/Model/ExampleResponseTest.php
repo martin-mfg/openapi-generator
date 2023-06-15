@@ -83,12 +83,62 @@ class ExampleResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "myOnlyProperty"
+     * Test attribute "emptyString"
      */
-    public function testPropertyMyOnlyProperty()
+    public function testPropertyEmptyString()
     {
         $this->markTestIncomplete(
-            'Test of "myOnlyProperty" property in "ExampleResponse" model has not been implemented yet.'
+            'Test of "emptyString" property in "ExampleResponse" model has not been implemented yet.'
+        );
+    }
+
+    /**
+     * Test attribute "numberString"
+     */
+    public function testPropertyNumberString()
+    {
+        $this->markTestIncomplete(
+            'Test of "numberString" property in "ExampleResponse" model has not been implemented yet.'
+        );
+    }
+
+    /**
+     * Test attribute "boolString"
+     */
+    public function testPropertyBoolString()
+    {
+        $this->markTestIncomplete(
+            'Test of "boolString" property in "ExampleResponse" model has not been implemented yet.'
+        );
+    }
+
+    /**
+     * Test attribute "nullString"
+     */
+    public function testPropertyNullString()
+    {
+        $this->markTestIncomplete(
+            'Test of "nullString" property in "ExampleResponse" model has not been implemented yet.'
+        );
+    }
+
+    /**
+     * Test attribute "aBool"
+     */
+    public function testPropertyABool()
+    {
+        $this->markTestIncomplete(
+            'Test of "aBool" property in "ExampleResponse" model has not been implemented yet.'
+        );
+    }
+
+    /**
+     * Test attribute "zero"
+     */
+    public function testPropertyZero()
+    {
+        $this->markTestIncomplete(
+            'Test of "zero" property in "ExampleResponse" model has not been implemented yet.'
         );
     }
 

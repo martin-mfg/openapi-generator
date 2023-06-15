@@ -18,14 +18,14 @@ module Petstore
       @api_client = api_client
     end
     # dummy
-    # @return [Dummy200Response]
+    # @return [ExampleResponse]
     def dummy()
       data, _status_code, _headers = dummy_with_http_info()
       data
     end
 
     # dummy
-    # @return [Array<(Dummy200Response, Integer, Hash)>] Dummy200Response data, response status code and response headers
+    # @return [Array<(ExampleResponse, Integer, Hash)>] ExampleResponse data, response status code and response headers
     def dummy_with_http_info()
       if @api_client.config.debugging
         Log.debug {"Calling API: DefaultApi.dummy ..."}
@@ -48,7 +48,7 @@ module Petstore
       post_body = nil
 
       # return_type
-      return_type = "Dummy200Response"
+      return_type = "ExampleResponse"
 
       # auth_names
       auth_names = [] of String
@@ -65,7 +65,7 @@ module Petstore
       if @api_client.config.debugging
         Log.debug {"API called: DefaultApi#dummy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"}
       end
-      return Dummy200Response.from_json(data), status_code, headers
+      return ExampleResponse.from_json(data), status_code, headers
     end
   end
 end

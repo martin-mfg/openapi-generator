@@ -8,7 +8,7 @@
 #include "Helpers.h"
 #include <list>
 
-#include "Dummy_200_response.h"
+#include "ExampleResponse.h"
 
 namespace Tiny {
 
@@ -29,7 +29,7 @@ public:
     * dummy
     */
     Response<
-                Dummy_200_response
+                ExampleResponse
         >
     dummy(
     );

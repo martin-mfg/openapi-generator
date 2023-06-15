@@ -19,7 +19,7 @@
 #define ExampleResponse_H_
 
 
-#include "OtherObject.h"
+#include <string>
 #include <nlohmann/json.hpp>
 
 namespace org::openapitools::server::model
@@ -61,16 +61,61 @@ public:
     /// <summary>
     /// 
     /// </summary>
-    org::openapitools::server::model::OtherObject getMyOnlyProperty() const;
-    void setMyOnlyProperty(org::openapitools::server::model::OtherObject const& value);
-    bool myOnlyPropertyIsSet() const;
-    void unsetMyOnlyProperty();
+    std::string getEmptyString() const;
+    void setEmptyString(std::string const& value);
+    bool emptyStringIsSet() const;
+    void unsetEmptyString();
+    /// <summary>
+    /// 
+    /// </summary>
+    std::string getNumberString() const;
+    void setNumberString(std::string const& value);
+    bool numberStringIsSet() const;
+    void unsetNumberString();
+    /// <summary>
+    /// 
+    /// </summary>
+    std::string getBoolString() const;
+    void setBoolString(std::string const& value);
+    bool boolStringIsSet() const;
+    void unsetBoolString();
+    /// <summary>
+    /// 
+    /// </summary>
+    std::string getNullString() const;
+    void setNullString(std::string const& value);
+    bool nullStringIsSet() const;
+    void unsetNullString();
+    /// <summary>
+    /// 
+    /// </summary>
+    bool isABool() const;
+    void setABool(bool const value);
+    bool aBoolIsSet() const;
+    void unsetABool();
+    /// <summary>
+    /// 
+    /// </summary>
+    int32_t getZero() const;
+    void setZero(int32_t const value);
+    bool zeroIsSet() const;
+    void unsetZero();
 
     friend  void to_json(nlohmann::json& j, const ExampleResponse& o);
     friend  void from_json(const nlohmann::json& j, ExampleResponse& o);
 protected:
-    org::openapitools::server::model::OtherObject m_MyOnlyProperty;
-    bool m_MyOnlyPropertyIsSet;
+    std::string m_EmptyString;
+    bool m_EmptyStringIsSet;
+    std::string m_NumberString;
+    bool m_NumberStringIsSet;
+    std::string m_BoolString;
+    bool m_BoolStringIsSet;
+    std::string m_NullString;
+    bool m_NullStringIsSet;
+    bool m_ABool;
+    bool m_ABoolIsSet;
+    int32_t m_Zero;
+    bool m_ZeroIsSet;
     
 };
 

@@ -30,7 +30,6 @@ use Log::Any qw($log);
 use Date::Parse;
 use DateTime;
 
-use WWW::OpenAPIClient::Object::OtherObject;
 
 use base ("Class::Accessor", "Class::Data::Inheritable");
 
@@ -220,9 +219,44 @@ __PACKAGE__->class_documentation({description => 'dummy',
 }                                 );
 
 __PACKAGE__->method_documentation({
-    'my_only_property' => {
-        datatype => 'OtherObject',
-        base_name => 'myOnlyProperty',
+    'empty_string' => {
+        datatype => 'string',
+        base_name => 'emptyString',
+        description => '',
+        format => '',
+        read_only => '',
+            },
+    'number_string' => {
+        datatype => 'string',
+        base_name => 'numberString',
+        description => '',
+        format => '',
+        read_only => '',
+            },
+    'bool_string' => {
+        datatype => 'string',
+        base_name => 'boolString',
+        description => '',
+        format => '',
+        read_only => '',
+            },
+    'null_string' => {
+        datatype => 'string',
+        base_name => 'nullString',
+        description => '',
+        format => '',
+        read_only => '',
+            },
+    'a_bool' => {
+        datatype => 'boolean',
+        base_name => 'aBool',
+        description => '',
+        format => '',
+        read_only => '',
+            },
+    'zero' => {
+        datatype => 'int',
+        base_name => 'zero',
         description => '',
         format => '',
         read_only => '',
@@ -230,11 +264,21 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->openapi_types( {
-    'my_only_property' => 'OtherObject'
+    'empty_string' => 'string',
+    'number_string' => 'string',
+    'bool_string' => 'string',
+    'null_string' => 'string',
+    'a_bool' => 'boolean',
+    'zero' => 'int'
 } );
 
 __PACKAGE__->attribute_map( {
-    'my_only_property' => 'myOnlyProperty'
+    'empty_string' => 'emptyString',
+    'number_string' => 'numberString',
+    'bool_string' => 'boolString',
+    'null_string' => 'nullString',
+    'a_bool' => 'aBool',
+    'zero' => 'zero'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

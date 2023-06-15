@@ -14,15 +14,30 @@
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct ExampleResponse {
-    #[serde(rename = "myOnlyProperty", skip_serializing_if = "Option::is_none")]
-    pub my_only_property: Option<Box<crate::models::OtherObject>>,
+    #[serde(rename = "emptyString", skip_serializing_if = "Option::is_none")]
+    pub empty_string: Option<String>,
+    #[serde(rename = "numberString", skip_serializing_if = "Option::is_none")]
+    pub number_string: Option<String>,
+    #[serde(rename = "boolString", skip_serializing_if = "Option::is_none")]
+    pub bool_string: Option<String>,
+    #[serde(rename = "nullString", skip_serializing_if = "Option::is_none")]
+    pub null_string: Option<String>,
+    #[serde(rename = "aBool", skip_serializing_if = "Option::is_none")]
+    pub a_bool: Option<bool>,
+    #[serde(rename = "zero", skip_serializing_if = "Option::is_none")]
+    pub zero: Option<i32>,
 }
 
 impl ExampleResponse {
     /// dummy
     pub fn new() -> ExampleResponse {
         ExampleResponse {
-            my_only_property: None,
+            empty_string: None,
+            number_string: None,
+            bool_string: None,
+            null_string: None,
+            a_bool: None,
+            zero: None,
         }
     }
 }

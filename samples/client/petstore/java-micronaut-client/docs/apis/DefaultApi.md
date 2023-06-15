@@ -38,7 +38,7 @@ More information can be found inside [Inversion of Control guide section](https:
 <a id="dummy"></a>
 # **dummy**
 ```java
-Mono<Dummy200Response> DefaultApi.dummy()
+Mono<ExampleResponse> DefaultApi.dummy()
 ```
 
 
@@ -48,7 +48,7 @@ dummy
 
 
 ### Return type
-[**Dummy200Response**](Dummy200Response.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 
 

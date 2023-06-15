@@ -36,7 +36,7 @@ def apiInstance = new DefaultApi()
 apiInstance.dummy()
     {
     // on success
-    def result = (Dummy200Response)it
+    def result = (ExampleResponse)it
     println result
     
 }

@@ -6,7 +6,7 @@ import unittest
 from flask import json
 from six import BytesIO
 
-from openapi_server.models.dummy200_response import Dummy200Response  # noqa: E501
+from openapi_server.models.example_response import ExampleResponse  # noqa: E501
 from openapi_server.test import BaseTestCase
 
 

@@ -10,7 +10,17 @@ The class is defined in **[ExampleResponse.java](../../src/main/java/org/openapi
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**myOnlyProperty** | [`OtherObject`](OtherObject.md) |  |  [optional property]
+**emptyString** | `String` |  |  [optional property]
+**numberString** | `String` |  |  [optional property]
+**boolString** | `String` |  |  [optional property]
+**nullString** | `String` |  |  [optional property]
+**aBool** | `Boolean` |  |  [optional property]
+**zero** | `Integer` |  |  [optional property]
+
+
+
+
+
 
 
 

@@ -46,7 +46,7 @@ OASDefaultApi api = new OASDefaultApi();
 
 try {
     // cross your fingers
-    OASDummy200Response result = api.dummy();
+    OASExampleResponse result = api.dummy();
     System.debug(result);
 } catch (OAS.ApiException e) {
     // ...handle your exceptions
@@ -64,12 +64,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [OASDummy200Response](OASDummy200Response.md)
- - [OASDummy200ResponseOuterProp](OASDummy200ResponseOuterProp.md)
- - [OASDummy200ResponseOuterPropInnerPro](OASDummy200ResponseOuterPropInnerPro.md)
  - [OASExampleResponse](OASExampleResponse.md)
- - [OASNode](OASNode.md)
- - [OASOtherObject](OASOtherObject.md)
 
 
 ## Documentation for Authorization

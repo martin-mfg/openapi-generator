@@ -1,7 +1,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -32,7 +32,7 @@ class DefaultApiTest {
      */
     @Test
     void dummyTest() {
-        // Dummy200Response response = api.dummy();
+        // ExampleResponse response = api.dummy();
 
         // TODO: test validations
     }

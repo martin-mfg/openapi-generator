@@ -20,7 +20,7 @@
 
 #include <QJsonObject>
 
-#include "OAIOtherObject.h"
+#include <QString>
 
 #include "OAIEnum.h"
 #include "OAIObject.h"
@@ -38,10 +38,35 @@ public:
     void fromJsonObject(QJsonObject json) override;
     void fromJson(QString jsonString) override;
 
-    OAIOtherObject getMyOnlyProperty() const;
-    void setMyOnlyProperty(const OAIOtherObject &my_only_property);
-    bool is_my_only_property_Set() const;
-    bool is_my_only_property_Valid() const;
+    QString getEmptyString() const;
+    void setEmptyString(const QString &empty_string);
+    bool is_empty_string_Set() const;
+    bool is_empty_string_Valid() const;
+
+    QString getNumberString() const;
+    void setNumberString(const QString &number_string);
+    bool is_number_string_Set() const;
+    bool is_number_string_Valid() const;
+
+    QString getBoolString() const;
+    void setBoolString(const QString &bool_string);
+    bool is_bool_string_Set() const;
+    bool is_bool_string_Valid() const;
+
+    QString getNullString() const;
+    void setNullString(const QString &null_string);
+    bool is_null_string_Set() const;
+    bool is_null_string_Valid() const;
+
+    bool isABool() const;
+    void setABool(const bool &a_bool);
+    bool is_a_bool_Set() const;
+    bool is_a_bool_Valid() const;
+
+    qint32 getZero() const;
+    void setZero(const qint32 &zero);
+    bool is_zero_Set() const;
+    bool is_zero_Valid() const;
 
     virtual bool isSet() const override;
     virtual bool isValid() const override;
@@ -49,9 +74,29 @@ public:
 private:
     void initializeModel();
 
-    OAIOtherObject my_only_property;
-    bool m_my_only_property_isSet;
-    bool m_my_only_property_isValid;
+    QString empty_string;
+    bool m_empty_string_isSet;
+    bool m_empty_string_isValid;
+
+    QString number_string;
+    bool m_number_string_isSet;
+    bool m_number_string_isValid;
+
+    QString bool_string;
+    bool m_bool_string_isSet;
+    bool m_bool_string_isValid;
+
+    QString null_string;
+    bool m_null_string_isSet;
+    bool m_null_string_isValid;
+
+    bool a_bool;
+    bool m_a_bool_isSet;
+    bool m_a_bool_isValid;
+
+    qint32 zero;
+    bool m_zero_isSet;
+    bool m_zero_isValid;
 };
 
 } // namespace OpenAPI

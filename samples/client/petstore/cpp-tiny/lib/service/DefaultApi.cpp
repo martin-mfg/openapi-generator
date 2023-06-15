@@ -5,7 +5,7 @@ using namespace Tiny;
 
 
         Response<
-            Dummy_200_response
+            ExampleResponse
         >
         DefaultApi::
         dummy(
@@ -37,10 +37,10 @@ using namespace Tiny;
 
 
 
-            Dummy_200_response obj(output_string);
+            ExampleResponse obj(output_string);
 
 
-            Response<Dummy_200_response> response(obj, httpCode);
+            Response<ExampleResponse> response(obj, httpCode);
             return response;
         }
 

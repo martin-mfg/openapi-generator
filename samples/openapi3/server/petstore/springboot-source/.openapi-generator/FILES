@@ -6,12 +6,7 @@ src/main/java/org/openapitools/api/ApiUtil.java
 src/main/java/org/openapitools/api/ExampleApi.java
 src/main/java/org/openapitools/api/ExampleApiController.java
 src/main/java/org/openapitools/configuration/HomeController.java
-src/main/java/org/openapitools/model/Dummy200Response.java
-src/main/java/org/openapitools/model/Dummy200ResponseOuterProp.java
-src/main/java/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.java
 src/main/java/org/openapitools/model/ExampleResponse.java
-src/main/java/org/openapitools/model/Node.java
-src/main/java/org/openapitools/model/OtherObject.java
 src/main/resources/application.properties
 src/main/resources/openapi.yaml
 src/main/resources/static/swagger-ui.html

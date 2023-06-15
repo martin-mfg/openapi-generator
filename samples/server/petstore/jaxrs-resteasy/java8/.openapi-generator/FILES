@@ -14,12 +14,7 @@ src/gen/java/org/openapitools/api/OffsetDateTimeProvider.java
 src/gen/java/org/openapitools/api/RFC3339DateFormat.java
 src/gen/java/org/openapitools/api/RestApplication.java
 src/gen/java/org/openapitools/api/StringUtil.java
-src/gen/java/org/openapitools/model/Dummy200Response.java
-src/gen/java/org/openapitools/model/Dummy200ResponseOuterProp.java
-src/gen/java/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.java
 src/gen/java/org/openapitools/model/ExampleResponse.java
-src/gen/java/org/openapitools/model/Node.java
-src/gen/java/org/openapitools/model/OtherObject.java
 src/main/java/org/openapitools/api/impl/ExampleApiServiceImpl.java
 src/main/webapp/WEB-INF/jboss-web.xml
 src/main/webapp/WEB-INF/web.xml

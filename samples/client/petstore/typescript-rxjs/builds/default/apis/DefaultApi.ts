@@ -16,7 +16,7 @@ import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts } from '../runtime';
 import type {
-    Dummy200Response,
+    ExampleResponse,
 } from '../models';
 
 /**
@@ -27,10 +27,10 @@ export class DefaultApi extends BaseAPI {
     /**
      * dummy
      */
-    dummy(): Observable<Dummy200Response>
-    dummy(opts?: OperationOpts): Observable<AjaxResponse<Dummy200Response>>
-    dummy(opts?: OperationOpts): Observable<Dummy200Response | AjaxResponse<Dummy200Response>> {
-        return this.request<Dummy200Response>({
+    dummy(): Observable<ExampleResponse>
+    dummy(opts?: OperationOpts): Observable<AjaxResponse<ExampleResponse>>
+    dummy(opts?: OperationOpts): Observable<ExampleResponse | AjaxResponse<ExampleResponse>> {
+        return this.request<ExampleResponse>({
             url: '/example/someMethod',
             method: 'GET',
         }, opts?.responseOpts);

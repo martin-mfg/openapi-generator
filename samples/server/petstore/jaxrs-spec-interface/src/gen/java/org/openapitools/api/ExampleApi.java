@@ -1,6 +1,6 @@
 package org.openapitools.api;
 
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -22,6 +22,6 @@ public interface ExampleApi {
     @Produces({ "*/*" })
     @ApiOperation(value = "", notes = "dummy", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "dummy", response = Dummy200Response.class) })
-    Dummy200Response dummy();
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class) })
+    ExampleResponse dummy();
 }

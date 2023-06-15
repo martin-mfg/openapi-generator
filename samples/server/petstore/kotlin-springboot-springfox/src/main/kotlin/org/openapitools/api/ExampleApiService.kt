@@ -1,6 +1,6 @@
 package org.openapitools.api
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 
 interface ExampleApiService {
 
@@ -11,5 +11,5 @@ interface ExampleApiService {
      * @return dummy (status code 200)
      * @see ExampleApi#dummy
      */
-    fun dummy(): Dummy200Response
+    fun dummy(): ExampleResponse
 }

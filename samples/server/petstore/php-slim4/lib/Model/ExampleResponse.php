@@ -46,12 +46,38 @@ class ExampleResponse extends BaseModel
 {
   "type" : "object",
   "properties" : {
-    "myOnlyProperty" : {
-      "$ref" : "#/components/schemas/OtherObject"
+    "emptyString" : {
+      "type" : "string",
+      "example" : "",
+      "default" : ""
+    },
+    "numberString" : {
+      "type" : "string",
+      "example" : "42",
+      "default" : "42"
+    },
+    "boolString" : {
+      "type" : "string",
+      "example" : "false",
+      "default" : "false"
+    },
+    "nullString" : {
+      "type" : "string",
+      "example" : "null",
+      "default" : "null"
+    },
+    "aBool" : {
+      "type" : "boolean",
+      "example" : false,
+      "default" : false
+    },
+    "zero" : {
+      "type" : "integer",
+      "example" : 0,
+      "default" : 0
     }
   },
-  "description" : "dummy",
-  "x-myextension" : "dummy"
+  "description" : "dummy"
 }
 SCHEMA;
 }

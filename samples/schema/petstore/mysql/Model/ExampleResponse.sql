@@ -7,17 +7,17 @@
 --
 -- SELECT template for table `ExampleResponse`
 --
-SELECT `myOnlyProperty` FROM `ExampleResponse` WHERE 1;
+SELECT `emptyString`, `numberString`, `boolString`, `nullString`, `aBool`, `zero` FROM `ExampleResponse` WHERE 1;
 
 --
 -- INSERT template for table `ExampleResponse`
 --
-INSERT INTO `ExampleResponse`(`myOnlyProperty`) VALUES (?);
+INSERT INTO `ExampleResponse`(`emptyString`, `numberString`, `boolString`, `nullString`, `aBool`, `zero`) VALUES (?, ?, ?, ?, ?, ?);
 
 --
 -- UPDATE template for table `ExampleResponse`
 --
-UPDATE `ExampleResponse` SET `myOnlyProperty` = ? WHERE 1;
+UPDATE `ExampleResponse` SET `emptyString` = ?, `numberString` = ?, `boolString` = ?, `nullString` = ?, `aBool` = ?, `zero` = ? WHERE 1;
 
 --
 -- DELETE template for table `ExampleResponse`

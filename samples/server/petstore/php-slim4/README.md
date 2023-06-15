@@ -157,11 +157,6 @@ Class | Method | HTTP request | Description
 
 ## Models
 
-* OpenAPIServer\Model\Dummy200Response
-* OpenAPIServer\Model\Dummy200ResponseOuterProp
-* OpenAPIServer\Model\Dummy200ResponseOuterPropInnerProp
 * OpenAPIServer\Model\ExampleResponse
-* OpenAPIServer\Model\Node
-* OpenAPIServer\Model\OtherObject
 
 

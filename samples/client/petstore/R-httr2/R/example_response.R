@@ -7,26 +7,73 @@
 #' @title ExampleResponse
 #' @description ExampleResponse Class
 #' @format An \code{R6Class} generator object
-#' @field myOnlyProperty  \link{OtherObject} [optional]
+#' @field emptyString  character [optional]
+#' @field numberString  character [optional]
+#' @field boolString  character [optional]
+#' @field nullString  character [optional]
+#' @field aBool  character [optional]
+#' @field zero  integer [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
 ExampleResponse <- R6::R6Class(
   "ExampleResponse",
   public = list(
-    `myOnlyProperty` = NULL,
+    `emptyString` = NULL,
+    `numberString` = NULL,
+    `boolString` = NULL,
+    `nullString` = NULL,
+    `aBool` = NULL,
+    `zero` = NULL,
     #' Initialize a new ExampleResponse class.
     #'
     #' @description
     #' Initialize a new ExampleResponse class.
     #'
-    #' @param myOnlyProperty myOnlyProperty
+    #' @param emptyString emptyString. Default to "".
+    #' @param numberString numberString. Default to "42".
+    #' @param boolString boolString. Default to "false".
+    #' @param nullString nullString. Default to "null".
+    #' @param aBool aBool. Default to FALSE.
+    #' @param zero zero. Default to 0.
     #' @param ... Other optional arguments.
     #' @export
-    initialize = function(`myOnlyProperty` = NULL, ...) {
-      if (!is.null(`myOnlyProperty`)) {
-        stopifnot(R6::is.R6(`myOnlyProperty`))
-        self$`myOnlyProperty` <- `myOnlyProperty`
+    initialize = function(`emptyString` = "", `numberString` = "42", `boolString` = "false", `nullString` = "null", `aBool` = FALSE, `zero` = 0, ...) {
+      if (!is.null(`emptyString`)) {
+        if (!(is.character(`emptyString`) && length(`emptyString`) == 1)) {
+          stop(paste("Error! Invalid data for `emptyString`. Must be a string:", `emptyString`))
+        }
+        self$`emptyString` <- `emptyString`
+      }
+      if (!is.null(`numberString`)) {
+        if (!(is.character(`numberString`) && length(`numberString`) == 1)) {
+          stop(paste("Error! Invalid data for `numberString`. Must be a string:", `numberString`))
+        }
+        self$`numberString` <- `numberString`
+      }
+      if (!is.null(`boolString`)) {
+        if (!(is.character(`boolString`) && length(`boolString`) == 1)) {
+          stop(paste("Error! Invalid data for `boolString`. Must be a string:", `boolString`))
+        }
+        self$`boolString` <- `boolString`
+      }
+      if (!is.null(`nullString`)) {
+        if (!(is.character(`nullString`) && length(`nullString`) == 1)) {
+          stop(paste("Error! Invalid data for `nullString`. Must be a string:", `nullString`))
+        }
+        self$`nullString` <- `nullString`
+      }
+      if (!is.null(`aBool`)) {
+        if (!(is.logical(`aBool`) && length(`aBool`) == 1)) {
+          stop(paste("Error! Invalid data for `aBool`. Must be a boolean:", `aBool`))
+        }
+        self$`aBool` <- `aBool`
+      }
+      if (!is.null(`zero`)) {
+        if (!(is.numeric(`zero`) && length(`zero`) == 1)) {
+          stop(paste("Error! Invalid data for `zero`. Must be an integer:", `zero`))
+        }
+        self$`zero` <- `zero`
       }
     },
     #' To JSON string
@@ -38,9 +85,29 @@ ExampleResponse <- R6::R6Class(
     #' @export
     toJSON = function() {
       ExampleResponseObject <- list()
-      if (!is.null(self$`myOnlyProperty`)) {
-        ExampleResponseObject[["myOnlyProperty"]] <-
-          self$`myOnlyProperty`$toJSON()
+      if (!is.null(self$`emptyString`)) {
+        ExampleResponseObject[["emptyString"]] <-
+          self$`emptyString`
+      }
+      if (!is.null(self$`numberString`)) {
+        ExampleResponseObject[["numberString"]] <-
+          self$`numberString`
+      }
+      if (!is.null(self$`boolString`)) {
+        ExampleResponseObject[["boolString"]] <-
+          self$`boolString`
+      }
+      if (!is.null(self$`nullString`)) {
+        ExampleResponseObject[["nullString"]] <-
+          self$`nullString`
+      }
+      if (!is.null(self$`aBool`)) {
+        ExampleResponseObject[["aBool"]] <-
+          self$`aBool`
+      }
+      if (!is.null(self$`zero`)) {
+        ExampleResponseObject[["zero"]] <-
+          self$`zero`
       }
       ExampleResponseObject
     },
@@ -54,10 +121,23 @@ ExampleResponse <- R6::R6Class(
     #' @export
     fromJSON = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
-      if (!is.null(this_object$`myOnlyProperty`)) {
-        `myonlyproperty_object` <- OtherObject$new()
-        `myonlyproperty_object`$fromJSON(jsonlite::toJSON(this_object$`myOnlyProperty`, auto_unbox = TRUE, digits = NA))
-        self$`myOnlyProperty` <- `myonlyproperty_object`
+      if (!is.null(this_object$`emptyString`)) {
+        self$`emptyString` <- this_object$`emptyString`
+      }
+      if (!is.null(this_object$`numberString`)) {
+        self$`numberString` <- this_object$`numberString`
+      }
+      if (!is.null(this_object$`boolString`)) {
+        self$`boolString` <- this_object$`boolString`
+      }
+      if (!is.null(this_object$`nullString`)) {
+        self$`nullString` <- this_object$`nullString`
+      }
+      if (!is.null(this_object$`aBool`)) {
+        self$`aBool` <- this_object$`aBool`
+      }
+      if (!is.null(this_object$`zero`)) {
+        self$`zero` <- this_object$`zero`
       }
       self
     },
@@ -70,12 +150,52 @@ ExampleResponse <- R6::R6Class(
     #' @export
     toJSONString = function() {
       jsoncontent <- c(
-        if (!is.null(self$`myOnlyProperty`)) {
+        if (!is.null(self$`emptyString`)) {
           sprintf(
-          '"myOnlyProperty":
-          %s
-          ',
-          jsonlite::toJSON(self$`myOnlyProperty`$toJSON(), auto_unbox = TRUE, digits = NA)
+          '"emptyString":
+            "%s"
+                    ',
+          self$`emptyString`
+          )
+        },
+        if (!is.null(self$`numberString`)) {
+          sprintf(
+          '"numberString":
+            "%s"
+                    ',
+          self$`numberString`
+          )
+        },
+        if (!is.null(self$`boolString`)) {
+          sprintf(
+          '"boolString":
+            "%s"
+                    ',
+          self$`boolString`
+          )
+        },
+        if (!is.null(self$`nullString`)) {
+          sprintf(
+          '"nullString":
+            "%s"
+                    ',
+          self$`nullString`
+          )
+        },
+        if (!is.null(self$`aBool`)) {
+          sprintf(
+          '"aBool":
+            %s
+                    ',
+          tolower(self$`aBool`)
+          )
+        },
+        if (!is.null(self$`zero`)) {
+          sprintf(
+          '"zero":
+            %d
+                    ',
+          self$`zero`
           )
         }
       )
@@ -92,7 +212,12 @@ ExampleResponse <- R6::R6Class(
     #' @export
     fromJSONString = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
-      self$`myOnlyProperty` <- OtherObject$new()$fromJSON(jsonlite::toJSON(this_object$`myOnlyProperty`, auto_unbox = TRUE, digits = NA))
+      self$`emptyString` <- this_object$`emptyString`
+      self$`numberString` <- this_object$`numberString`
+      self$`boolString` <- this_object$`boolString`
+      self$`nullString` <- this_object$`nullString`
+      self$`aBool` <- this_object$`aBool`
+      self$`zero` <- this_object$`zero`
       self
     },
     #' Validate JSON input with respect to ExampleResponse

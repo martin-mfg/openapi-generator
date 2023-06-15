@@ -27,10 +27,45 @@ namespace Org.OpenAPITools.Models
     public partial class ExampleResponse 
     {
         /// <summary>
-        /// Gets or Sets MyOnlyProperty
+        /// Gets or Sets EmptyString
         /// </summary>
-        [DataMember(Name="myOnlyProperty", EmitDefaultValue=false)]
-        public OtherObject MyOnlyProperty { get; set; }
+        [DataMember(Name="emptyString", EmitDefaultValue=false)]
+        public string EmptyString { get; set; } = "";
+
+        /// <summary>
+        /// Gets or Sets NumberString
+        /// </summary>
+        /// <example>42</example>
+        [DataMember(Name="numberString", EmitDefaultValue=false)]
+        public string NumberString { get; set; } = "42";
+
+        /// <summary>
+        /// Gets or Sets BoolString
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name="boolString", EmitDefaultValue=false)]
+        public string BoolString { get; set; } = "false";
+
+        /// <summary>
+        /// Gets or Sets NullString
+        /// </summary>
+        /// <example>null</example>
+        [DataMember(Name="nullString", EmitDefaultValue=false)]
+        public string NullString { get; set; } = "null";
+
+        /// <summary>
+        /// Gets or Sets ABool
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name="aBool", EmitDefaultValue=true)]
+        public bool ABool { get; set; } = false;
+
+        /// <summary>
+        /// Gets or Sets Zero
+        /// </summary>
+        /// <example>0</example>
+        [DataMember(Name="zero", EmitDefaultValue=true)]
+        public int Zero { get; set; } = 0;
 
     }
 }

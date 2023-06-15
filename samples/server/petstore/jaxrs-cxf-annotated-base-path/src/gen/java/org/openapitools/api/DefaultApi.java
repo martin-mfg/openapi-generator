@@ -1,6 +1,6 @@
 package org.openapitools.api;
 
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -34,6 +34,6 @@ public interface DefaultApi  {
     @Produces({ "*/*" })
     @ApiOperation(value = "", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "dummy", response = Dummy200Response.class) })
-    public Dummy200Response dummy();
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class) })
+    public ExampleResponse dummy();
 }

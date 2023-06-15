@@ -32,8 +32,8 @@ type DefaultAPI interface {
 	Dummy(ctx context.Context) ApiDummyRequest
 
 	// DummyExecute executes the request
-	//  @return Dummy200Response
-	DummyExecute(r ApiDummyRequest) (*Dummy200Response, *http.Response, error)
+	//  @return ExampleResponse
+	DummyExecute(r ApiDummyRequest) (*ExampleResponse, *http.Response, error)
 }
 
 // DefaultAPIService DefaultAPI service
@@ -44,7 +44,7 @@ type ApiDummyRequest struct {
 	ApiService DefaultAPI
 }
 
-func (r ApiDummyRequest) Execute() (*Dummy200Response, *http.Response, error) {
+func (r ApiDummyRequest) Execute() (*ExampleResponse, *http.Response, error) {
 	return r.ApiService.DummyExecute(r)
 }
 
@@ -64,13 +64,13 @@ func (a *DefaultAPIService) Dummy(ctx context.Context) ApiDummyRequest {
 }
 
 // Execute executes the request
-//  @return Dummy200Response
-func (a *DefaultAPIService) DummyExecute(r ApiDummyRequest) (*Dummy200Response, *http.Response, error) {
+//  @return ExampleResponse
+func (a *DefaultAPIService) DummyExecute(r ApiDummyRequest) (*ExampleResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *Dummy200Response
+		localVarReturnValue  *ExampleResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.Dummy")

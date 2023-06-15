@@ -14,7 +14,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -45,7 +45,7 @@ public class DefaultApiTest {
      */
     @Test
     public void dummyTest() throws ApiException {
-        CompletableFuture<Dummy200Response> response = 
+        CompletableFuture<ExampleResponse> response = 
         api.dummy();
         
         // TODO: test validations

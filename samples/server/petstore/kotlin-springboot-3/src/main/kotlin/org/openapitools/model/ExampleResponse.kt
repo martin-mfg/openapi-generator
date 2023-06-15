@@ -2,7 +2,6 @@ package org.openapitools.model
 
 import java.util.Objects
 import com.fasterxml.jackson.annotation.JsonProperty
-import org.openapitools.model.OtherObject
 import jakarta.validation.constraints.DecimalMax
 import jakarta.validation.constraints.DecimalMin
 import jakarta.validation.constraints.Email
@@ -15,12 +14,26 @@ import jakarta.validation.Valid
 
 /**
  * dummy
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 data class ExampleResponse(
 
-    @field:Valid
-    @get:JsonProperty("myOnlyProperty") val myOnlyProperty: OtherObject? = null
+    @get:JsonProperty("emptyString") val emptyString: kotlin.String? = "",
+
+    @get:JsonProperty("numberString") val numberString: kotlin.String? = "42",
+
+    @get:JsonProperty("boolString") val boolString: kotlin.String? = "false",
+
+    @get:JsonProperty("nullString") val nullString: kotlin.String? = "null",
+
+    @get:JsonProperty("aBool") val aBool: kotlin.Boolean? = false,
+
+    @get:JsonProperty("zero") val zero: kotlin.Int? = 0
 ) {
 
 }

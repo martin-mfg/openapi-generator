@@ -29,7 +29,7 @@
 #include <DefaultApi.h>
 
 
-#include "Dummy_200_response.h"
+#include "ExampleResponse.h"
 
 namespace org::openapitools::server::api
 {

@@ -1,21 +1,11 @@
 Build.ps1
 README.md
 appveyor.yml
-docs/Dummy200Response.md
-docs/Dummy200ResponseOuterProp.md
-docs/Dummy200ResponseOuterPropInnerProp.md
 docs/ExampleResponse.md
-docs/Node.md
-docs/OtherObject.md
 docs/PSDefaultApi.md
 src/PSPetstore/Api/PSDefaultApi.ps1
 src/PSPetstore/Client/PSConfiguration.ps1
-src/PSPetstore/Model/Dummy200Response.ps1
-src/PSPetstore/Model/Dummy200ResponseOuterProp.ps1
-src/PSPetstore/Model/Dummy200ResponseOuterPropInnerProp.ps1
 src/PSPetstore/Model/ExampleResponse.ps1
-src/PSPetstore/Model/Node.ps1
-src/PSPetstore/Model/OtherObject.ps1
 src/PSPetstore/PSPetstore.psm1
 src/PSPetstore/Private/Get-CommonParameters.ps1
 src/PSPetstore/Private/Out-DebugParameter.ps1
@@ -23,4 +13,3 @@ src/PSPetstore/Private/PSApiClient.ps1
 src/PSPetstore/Private/PSHttpSignatureAuth.ps1
 src/PSPetstore/Private/PSRSAEncryptionProvider.cs
 src/PSPetstore/en-US/about_PSPetstore.help.txt
-tests/Model/ExampleResponse.Tests.ps1

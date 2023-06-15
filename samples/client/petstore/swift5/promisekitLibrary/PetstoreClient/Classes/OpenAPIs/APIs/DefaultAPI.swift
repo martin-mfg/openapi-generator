@@ -15,10 +15,10 @@ open class DefaultAPI {
 
     /**
 
-     - returns: Promise<Dummy200Response>
+     - returns: Promise<ExampleResponse>
      */
-    open class func dummy() -> Promise<Dummy200Response> {
-        let deferred = Promise<Dummy200Response>.pending()
+    open class func dummy() -> Promise<ExampleResponse> {
+        let deferred = Promise<ExampleResponse>.pending()
         dummyWithRequestBuilder().execute { result in
             switch result {
             case let .success(response):
@@ -33,9 +33,9 @@ open class DefaultAPI {
     /**
      - GET /example/someMethod
      - dummy
-     - returns: RequestBuilder<Dummy200Response> 
+     - returns: RequestBuilder<ExampleResponse> 
      */
-    open class func dummyWithRequestBuilder() -> RequestBuilder<Dummy200Response> {
+    open class func dummyWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
@@ -48,7 +48,7 @@ open class DefaultAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<Dummy200Response>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<ExampleResponse>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: false)
     }

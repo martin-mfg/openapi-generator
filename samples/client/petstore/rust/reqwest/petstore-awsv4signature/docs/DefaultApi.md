@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## dummy
 
-> crate::models::Dummy200Response dummy()
+> crate::models::ExampleResponse dummy()
 
 
 dummy
@@ -21,7 +21,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**crate::models::Dummy200Response**](dummy_200_response.md)
+[**crate::models::ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

@@ -14,9 +14,6 @@
 */
 
 
-#import "SWGOtherObject.h"
-@protocol SWGOtherObject;
-@class SWGOtherObject;
 
 
 
@@ -26,6 +23,16 @@
 @interface SWGExampleResponse : SWGObject
 
 
-@property(nonatomic) SWGOtherObject* myOnlyProperty;
+@property(nonatomic) NSString* emptyString;
+
+@property(nonatomic) NSString* numberString;
+
+@property(nonatomic) NSString* boolString;
+
+@property(nonatomic) NSString* nullString;
+
+@property(nonatomic) NSNumber* aBool;
+
+@property(nonatomic) NSNumber* zero;
 
 @end

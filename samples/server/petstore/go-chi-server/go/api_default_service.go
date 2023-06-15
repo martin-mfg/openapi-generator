@@ -31,8 +31,8 @@ func (s *DefaultAPIService) Dummy(ctx context.Context) (ImplResponse, error) {
 	// TODO - update Dummy with the required logic for this service method.
 	// Add api_default_service.go to the .openapi-generator-ignore to avoid overwriting this service implementation when updating open api generation.
 
-	// TODO: Uncomment the next line to return response Response(200, Dummy200Response{}) or use other options such as http.Ok ...
-	// return Response(200, Dummy200Response{}), nil
+	// TODO: Uncomment the next line to return response Response(200, ExampleResponse{}) or use other options such as http.Ok ...
+	// return Response(200, ExampleResponse{}), nil
 
 	return Response(http.StatusNotImplemented, nil), errors.New("Dummy method not implemented")
 }

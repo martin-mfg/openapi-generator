@@ -21,7 +21,7 @@ module Petstore
     end
     # dummy
     # @param [Hash] opts the optional parameters
-    # @return [Dummy200Response]
+    # @return [ExampleResponse]
     def dummy(opts = {})
       data, _status_code, _headers = dummy_with_http_info(opts)
       data
@@ -29,7 +29,7 @@ module Petstore
 
     # dummy
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Dummy200Response, Integer, Hash)>] Dummy200Response data, response status code and response headers
+    # @return [Array<(ExampleResponse, Integer, Hash)>] ExampleResponse data, response status code and response headers
     def dummy_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: DefaultApi.dummy ...'
@@ -52,7 +52,7 @@ module Petstore
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Dummy200Response'
+      return_type = opts[:debug_return_type] || 'ExampleResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []

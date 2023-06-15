@@ -18,7 +18,7 @@ import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.exceptions.HttpStatusException;
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,7 +42,7 @@ public class DefaultController {
     /**
      * dummy
      *
-     * @return Dummy200Response
+     * @return ExampleResponse
      */
     @Operation(
         operationId = "dummy",
@@ -53,7 +53,7 @@ public class DefaultController {
     )
     @Get(uri="/example/someMethod")
     @Produces(value = {})
-    public Mono<Dummy200Response> dummy() {
+    public Mono<ExampleResponse> dummy() {
         // TODO implement dummy();
         return Mono.error(new HttpStatusException(HttpStatus.NOT_IMPLEMENTED, null));
     }

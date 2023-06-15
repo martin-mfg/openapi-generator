@@ -24,45 +24,6 @@ import type { RequestArgs } from './base';
 import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
- * 
- * @export
- * @interface Dummy200Response
- */
-export interface Dummy200Response {
-    /**
-     * 
-     * @type {Dummy200ResponseOuterProp}
-     * @memberof Dummy200Response
-     */
-    'outerProp'?: Dummy200ResponseOuterProp;
-}
-/**
- * 
- * @export
- * @interface Dummy200ResponseOuterProp
- */
-export interface Dummy200ResponseOuterProp {
-    /**
-     * 
-     * @type {Dummy200ResponseOuterPropInnerProp}
-     * @memberof Dummy200ResponseOuterProp
-     */
-    'innerProp'?: Dummy200ResponseOuterPropInnerProp;
-}
-/**
- * 
- * @export
- * @interface Dummy200ResponseOuterPropInnerProp
- */
-export interface Dummy200ResponseOuterPropInnerProp {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Dummy200ResponseOuterPropInnerProp
-     */
-    'myBool'?: boolean;
-}
-/**
  * dummy
  * @export
  * @interface ExampleResponse
@@ -70,42 +31,40 @@ export interface Dummy200ResponseOuterPropInnerProp {
 export interface ExampleResponse {
     /**
      * 
-     * @type {OtherObject}
+     * @type {string}
      * @memberof ExampleResponse
      */
-    'myOnlyProperty'?: OtherObject;
-}
-/**
- * dummy
- * @export
- * @interface Node
- */
-export interface Node {
+    'emptyString'?: string;
     /**
      * 
-     * @type {Node}
-     * @memberof Node
+     * @type {string}
+     * @memberof ExampleResponse
      */
-    'left'?: Node;
+    'numberString'?: string;
     /**
      * 
-     * @type {Node}
-     * @memberof Node
+     * @type {string}
+     * @memberof ExampleResponse
      */
-    'right'?: Node;
-}
-/**
- * dummy
- * @export
- * @interface OtherObject
- */
-export interface OtherObject {
+    'boolString'?: string;
     /**
      * 
-     * @type {ExampleResponse}
-     * @memberof OtherObject
+     * @type {string}
+     * @memberof ExampleResponse
      */
-    'myOnlyProperty2'?: ExampleResponse;
+    'nullString'?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ExampleResponse
+     */
+    'aBool'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof ExampleResponse
+     */
+    'zero'?: number;
 }
 
 /**
@@ -158,7 +117,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async dummy(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Dummy200Response>> {
+        async dummy(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExampleResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.dummy(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -177,7 +136,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        dummy(options?: AxiosRequestConfig): AxiosPromise<Dummy200Response> {
+        dummy(options?: AxiosRequestConfig): AxiosPromise<ExampleResponse> {
             return localVarFp.dummy(options).then((request) => request(axios, basePath));
         },
     };

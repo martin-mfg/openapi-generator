@@ -7,7 +7,7 @@ import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.core.Completable
 import com.squareup.moshi.Json
 
-import org.openapitools.client.models.Dummy200Response
+import org.openapitools.client.models.ExampleResponse
 
 interface DefaultApi {
     /**
@@ -16,9 +16,9 @@ interface DefaultApi {
      * Responses:
      *  - 200: dummy
      *
-     * @return [Call]<[Dummy200Response]>
+     * @return [Call]<[ExampleResponse]>
      */
     @GET("example/someMethod")
-    fun dummy(): Single<Dummy200Response>
+    fun dummy(): Single<ExampleResponse>
 
 }

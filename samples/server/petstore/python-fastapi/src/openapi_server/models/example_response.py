@@ -7,7 +7,6 @@ import re  # noqa: F401
 from typing import Any, Dict, List, Optional  # noqa: F401
 
 from pydantic import AnyUrl, BaseModel, EmailStr, Field, validator  # noqa: F401
-from openapi_server.models.other_object import OtherObject
 
 
 class ExampleResponse(BaseModel):
@@ -17,9 +16,19 @@ class ExampleResponse(BaseModel):
 
     ExampleResponse - a model defined in OpenAPI
 
-        my_only_property: The my_only_property of this ExampleResponse [Optional].
+        empty_string: The empty_string of this ExampleResponse [Optional].
+        number_string: The number_string of this ExampleResponse [Optional].
+        bool_string: The bool_string of this ExampleResponse [Optional].
+        null_string: The null_string of this ExampleResponse [Optional].
+        a_bool: The a_bool of this ExampleResponse [Optional].
+        zero: The zero of this ExampleResponse [Optional].
     """
 
-    my_only_property: Optional[OtherObject] = Field(alias="myOnlyProperty", default=None)
+    empty_string: Optional[str] = Field(alias="emptyString", default=None)
+    number_string: Optional[str] = Field(alias="numberString", default=None)
+    bool_string: Optional[str] = Field(alias="boolString", default=None)
+    null_string: Optional[str] = Field(alias="nullString", default=None)
+    a_bool: Optional[bool] = Field(alias="aBool", default=None)
+    zero: Optional[int] = Field(alias="zero", default=None)
 
 ExampleResponse.update_forward_refs()

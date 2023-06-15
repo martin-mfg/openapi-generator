@@ -1,7 +1,7 @@
 import connexion
 import six
 
-from app.openapi_server.models.dummy200_response import Dummy200Response  # noqa: E501
+from app.openapi_server.models.example_response import ExampleResponse  # noqa: E501
 from openapi_server import util
 
 
@@ -11,6 +11,6 @@ def dummy():  # noqa: E501
     dummy # noqa: E501
 
 
-    :rtype: Dummy200Response
+    :rtype: ExampleResponse
     """
     return 'do some magic!'

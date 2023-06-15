@@ -18,7 +18,7 @@ pub const API_VERSION: &str = "dummy";
 pub enum DummyResponse {
     /// dummy
     Dummy
-    (models::Dummy200Response)
+    (models::ExampleResponse)
 }
 
 /// API

@@ -33,21 +33,66 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExampleResponse" /> class.
         /// </summary>
-        /// <param name="myOnlyProperty">myOnlyProperty</param>
+        /// <param name="aBool">aBool (default to false)</param>
+        /// <param name="boolString">boolString (default to &quot;false&quot;)</param>
+        /// <param name="emptyString">emptyString (default to &quot;&quot;)</param>
+        /// <param name="nullString">nullString (default to &quot;null&quot;)</param>
+        /// <param name="numberString">numberString (default to &quot;42&quot;)</param>
+        /// <param name="zero">zero (default to 0)</param>
         [JsonConstructor]
-        public ExampleResponse(OtherObject myOnlyProperty)
+        public ExampleResponse(bool aBool = false, string boolString = @"false", string emptyString = @"", string nullString = @"null", string numberString = @"42", int zero = 0)
         {
-            MyOnlyProperty = myOnlyProperty;
+            ABool = aBool;
+            BoolString = boolString;
+            EmptyString = emptyString;
+            NullString = nullString;
+            NumberString = numberString;
+            Zero = zero;
             OnCreated();
         }
 
         partial void OnCreated();
 
         /// <summary>
-        /// Gets or Sets MyOnlyProperty
+        /// Gets or Sets ABool
         /// </summary>
-        [JsonPropertyName("myOnlyProperty")]
-        public OtherObject MyOnlyProperty { get; set; }
+        /// <example>false</example>
+        [JsonPropertyName("aBool")]
+        public bool ABool { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BoolString
+        /// </summary>
+        /// <example>false</example>
+        [JsonPropertyName("boolString")]
+        public string BoolString { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EmptyString
+        /// </summary>
+        [JsonPropertyName("emptyString")]
+        public string EmptyString { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NullString
+        /// </summary>
+        /// <example>null</example>
+        [JsonPropertyName("nullString")]
+        public string NullString { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NumberString
+        /// </summary>
+        /// <example>42</example>
+        [JsonPropertyName("numberString")]
+        public string NumberString { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Zero
+        /// </summary>
+        /// <example>0</example>
+        [JsonPropertyName("zero")]
+        public int Zero { get; set; }
 
         /// <summary>
         /// Gets or Sets additional properties
@@ -63,7 +108,12 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ExampleResponse {\n");
-            sb.Append("  MyOnlyProperty: ").Append(MyOnlyProperty).Append("\n");
+            sb.Append("  ABool: ").Append(ABool).Append("\n");
+            sb.Append("  BoolString: ").Append(BoolString).Append("\n");
+            sb.Append("  EmptyString: ").Append(EmptyString).Append("\n");
+            sb.Append("  NullString: ").Append(NullString).Append("\n");
+            sb.Append("  NumberString: ").Append(NumberString).Append("\n");
+            sb.Append("  Zero: ").Append(Zero).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -102,7 +152,12 @@ namespace Org.OpenAPITools.Model
 
             JsonTokenType startingTokenType = utf8JsonReader.TokenType;
 
-            OtherObject? myOnlyProperty = default;
+            bool? aBool = default;
+            string? boolString = default;
+            string? emptyString = default;
+            string? nullString = default;
+            string? numberString = default;
+            int? zero = default;
 
             while (utf8JsonReader.Read())
             {
@@ -119,9 +174,25 @@ namespace Org.OpenAPITools.Model
 
                     switch (propertyName)
                     {
-                        case "myOnlyProperty":
+                        case "aBool":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                myOnlyProperty = JsonSerializer.Deserialize<OtherObject>(ref utf8JsonReader, jsonSerializerOptions);
+                                aBool = utf8JsonReader.GetBoolean();
+                            break;
+                        case "boolString":
+                            boolString = utf8JsonReader.GetString();
+                            break;
+                        case "emptyString":
+                            emptyString = utf8JsonReader.GetString();
+                            break;
+                        case "nullString":
+                            nullString = utf8JsonReader.GetString();
+                            break;
+                        case "numberString":
+                            numberString = utf8JsonReader.GetString();
+                            break;
+                        case "zero":
+                            if (utf8JsonReader.TokenType != JsonTokenType.Null)
+                                zero = utf8JsonReader.GetInt32();
                             break;
                         default:
                             break;
@@ -129,10 +200,25 @@ namespace Org.OpenAPITools.Model
                 }
             }
 
-            if (myOnlyProperty == null)
-                throw new ArgumentNullException(nameof(myOnlyProperty), "Property is required for class ExampleResponse.");
+            if (aBool == null)
+                throw new ArgumentNullException(nameof(aBool), "Property is required for class ExampleResponse.");
 
-            return new ExampleResponse(myOnlyProperty);
+            if (boolString == null)
+                throw new ArgumentNullException(nameof(boolString), "Property is required for class ExampleResponse.");
+
+            if (emptyString == null)
+                throw new ArgumentNullException(nameof(emptyString), "Property is required for class ExampleResponse.");
+
+            if (nullString == null)
+                throw new ArgumentNullException(nameof(nullString), "Property is required for class ExampleResponse.");
+
+            if (numberString == null)
+                throw new ArgumentNullException(nameof(numberString), "Property is required for class ExampleResponse.");
+
+            if (zero == null)
+                throw new ArgumentNullException(nameof(zero), "Property is required for class ExampleResponse.");
+
+            return new ExampleResponse(aBool.Value, boolString, emptyString, nullString, numberString, zero.Value);
         }
 
         /// <summary>
@@ -146,8 +232,12 @@ namespace Org.OpenAPITools.Model
         {
             writer.WriteStartObject();
 
-            writer.WritePropertyName("myOnlyProperty");
-            JsonSerializer.Serialize(writer, exampleResponse.MyOnlyProperty, jsonSerializerOptions);
+            writer.WriteBoolean("aBool", exampleResponse.ABool);
+            writer.WriteString("boolString", exampleResponse.BoolString);
+            writer.WriteString("emptyString", exampleResponse.EmptyString);
+            writer.WriteString("nullString", exampleResponse.NullString);
+            writer.WriteString("numberString", exampleResponse.NumberString);
+            writer.WriteNumber("zero", exampleResponse.Zero);
 
             writer.WriteEndObject();
         }

@@ -8,7 +8,12 @@ dummy
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**myOnlyProperty** | [**OtherObject**](OtherObject.md) |  |  [optional]
+**emptyString** | **String** |  |  [optional]
+**numberString** | **String** |  |  [optional]
+**boolString** | **String** |  |  [optional]
+**nullString** | **String** |  |  [optional]
+**aBool** | **Boolean** |  |  [optional]
+**zero** | **Int** |  |  [optional]
 
 
 

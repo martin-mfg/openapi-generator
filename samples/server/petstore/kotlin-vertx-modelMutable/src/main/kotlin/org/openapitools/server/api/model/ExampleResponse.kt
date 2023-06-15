@@ -11,7 +11,6 @@
 */
 package org.openapitools.server.api.model
 
-import org.openapitools.server.api.model.OtherObject
 
         
 import com.google.gson.annotations.SerializedName
@@ -19,12 +18,22 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonInclude
 /**
  * dummy
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class ExampleResponse (
-    var myOnlyProperty: OtherObject? = null
+    var emptyString: kotlin.String? = "",
+    var numberString: kotlin.String? = "42",
+    var boolString: kotlin.String? = "false",
+    var nullString: kotlin.String? = "null",
+    var aBool: kotlin.Boolean? = false,
+    var zero: kotlin.Int? = 0
 ) {
 
 }

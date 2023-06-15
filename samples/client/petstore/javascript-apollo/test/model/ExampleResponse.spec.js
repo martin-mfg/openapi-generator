@@ -54,8 +54,38 @@
       //expect(instance).to.be.a(Dummy.ExampleResponse);
     });
 
-    it('should have the property myOnlyProperty (base name: "myOnlyProperty")', function() {
-      // uncomment below and update the code to test the property myOnlyProperty
+    it('should have the property emptyString (base name: "emptyString")', function() {
+      // uncomment below and update the code to test the property emptyString
+      //var instance = new Dummy.ExampleResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property numberString (base name: "numberString")', function() {
+      // uncomment below and update the code to test the property numberString
+      //var instance = new Dummy.ExampleResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property boolString (base name: "boolString")', function() {
+      // uncomment below and update the code to test the property boolString
+      //var instance = new Dummy.ExampleResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nullString (base name: "nullString")', function() {
+      // uncomment below and update the code to test the property nullString
+      //var instance = new Dummy.ExampleResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property aBool (base name: "aBool")', function() {
+      // uncomment below and update the code to test the property aBool
+      //var instance = new Dummy.ExampleResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property zero (base name: "zero")', function() {
+      // uncomment below and update the code to test the property zero
       //var instance = new Dummy.ExampleResponse();
       //expect(instance).to.be();
     });

@@ -5,21 +5,41 @@
 @doc raw"""dummy
 
     ExampleResponse(;
-        myOnlyProperty=nothing,
+        emptyString="",
+        numberString="42",
+        boolString="false",
+        nullString="null",
+        aBool=false,
+        zero=0,
     )
 
-    - myOnlyProperty::OtherObject
+    - emptyString::String
+    - numberString::String
+    - boolString::String
+    - nullString::String
+    - aBool::Bool
+    - zero::Int64
 """
 Base.@kwdef mutable struct ExampleResponse <: OpenAPI.APIModel
-    myOnlyProperty = nothing # spec type: Union{ Nothing, OtherObject }
+    emptyString::Union{Nothing, String} = ""
+    numberString::Union{Nothing, String} = "42"
+    boolString::Union{Nothing, String} = "false"
+    nullString::Union{Nothing, String} = "null"
+    aBool::Union{Nothing, Bool} = false
+    zero::Union{Nothing, Int64} = 0
 
-    function ExampleResponse(myOnlyProperty, )
-        OpenAPI.validate_property(ExampleResponse, Symbol("myOnlyProperty"), myOnlyProperty)
-        return new(myOnlyProperty, )
+    function ExampleResponse(emptyString, numberString, boolString, nullString, aBool, zero, )
+        OpenAPI.validate_property(ExampleResponse, Symbol("emptyString"), emptyString)
+        OpenAPI.validate_property(ExampleResponse, Symbol("numberString"), numberString)
+        OpenAPI.validate_property(ExampleResponse, Symbol("boolString"), boolString)
+        OpenAPI.validate_property(ExampleResponse, Symbol("nullString"), nullString)
+        OpenAPI.validate_property(ExampleResponse, Symbol("aBool"), aBool)
+        OpenAPI.validate_property(ExampleResponse, Symbol("zero"), zero)
+        return new(emptyString, numberString, boolString, nullString, aBool, zero, )
     end
 end # type ExampleResponse
 
-const _property_types_ExampleResponse = Dict{Symbol,String}(Symbol("myOnlyProperty")=>"OtherObject", )
+const _property_types_ExampleResponse = Dict{Symbol,String}(Symbol("emptyString")=>"String", Symbol("numberString")=>"String", Symbol("boolString")=>"String", Symbol("nullString")=>"String", Symbol("aBool")=>"Bool", Symbol("zero")=>"Int64", )
 OpenAPI.property_type(::Type{ ExampleResponse }, name::Symbol) = Union{Nothing,eval(Base.Meta.parse(_property_types_ExampleResponse[name]))}
 
 function check_required(o::ExampleResponse)

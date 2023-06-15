@@ -9,7 +9,7 @@ test_that("dummy", {
   # tests for dummy
   # base path: http://localhost
   # dummy
-  # @return [Dummy200Response]
+  # @return [ExampleResponse]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

@@ -1,12 +1,7 @@
 LICENSE
 README
 app/Module.java
-app/apimodels/Dummy200Response.java
-app/apimodels/Dummy200ResponseOuterProp.java
-app/apimodels/Dummy200ResponseOuterPropInnerProp.java
 app/apimodels/ExampleResponse.java
-app/apimodels/Node.java
-app/apimodels/OtherObject.java
 app/controllers/DefaultApiController.java
 app/controllers/DefaultApiControllerImp.java
 app/controllers/DefaultApiControllerImpInterface.java

@@ -6,7 +6,7 @@
 package org.openapitools.api;
 
 import springfox.documentation.annotations.ApiIgnore;
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -42,17 +42,17 @@ public interface ExampleApi {
         value = "",
         nickname = "dummy",
         notes = "dummy",
-        response = Dummy200Response.class
+        response = ExampleResponse.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "dummy", response = Dummy200Response.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default Mono<ResponseEntity<Dummy200Response>> dummy(
+    default Mono<ResponseEntity<ExampleResponse>> dummy(
         @ApiIgnore final ServerWebExchange exchange
     ) {
         return getDelegate().dummy(exchange);

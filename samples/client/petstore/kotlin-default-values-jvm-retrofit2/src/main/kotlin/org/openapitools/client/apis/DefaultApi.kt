@@ -6,7 +6,7 @@ import retrofit2.Call
 import okhttp3.RequestBody
 import com.squareup.moshi.Json
 
-import org.openapitools.client.models.Dummy200Response
+import org.openapitools.client.models.ExampleResponse
 
 interface DefaultApi {
     /**
@@ -15,9 +15,9 @@ interface DefaultApi {
      * Responses:
      *  - 200: dummy
      *
-     * @return [Call]<[Dummy200Response]>
+     * @return [Call]<[ExampleResponse]>
      */
     @GET("example/someMethod")
-    fun dummy(): Call<Dummy200Response>
+    fun dummy(): Call<ExampleResponse>
 
 }

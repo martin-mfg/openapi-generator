@@ -15,7 +15,6 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.OtherObject
 
 import com.google.gson.annotations.SerializedName
 import org.openapitools.client.models.room.ExampleResponseRoomModel
@@ -24,20 +23,45 @@ import org.openapitools.client.infrastructure.ITransformForStorage
 /**
  * dummy
  *
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 
 
 data class ExampleResponse (
 
-    @SerializedName("myOnlyProperty")
-    val myOnlyProperty: OtherObject? = null
+    @SerializedName("emptyString")
+    val emptyString: kotlin.String? = "",
+
+    @SerializedName("numberString")
+    val numberString: kotlin.String? = "42",
+
+    @SerializedName("boolString")
+    val boolString: kotlin.String? = "false",
+
+    @SerializedName("nullString")
+    val nullString: kotlin.String? = "null",
+
+    @SerializedName("aBool")
+    val aBool: kotlin.Boolean? = false,
+
+    @SerializedName("zero")
+    val zero: kotlin.Int? = 0
 
 ): ITransformForStorage<ExampleResponseRoomModel> {
     companion object { }
     override fun toRoomModel(): ExampleResponseRoomModel =
         ExampleResponseRoomModel(roomTableId = 0,
-        myOnlyProperty = this.myOnlyProperty,
+        emptyString = this.emptyString,
+numberString = this.numberString,
+boolString = this.boolString,
+nullString = this.nullString,
+aBool = this.aBool,
+zero = this.zero,
         )
 
 }

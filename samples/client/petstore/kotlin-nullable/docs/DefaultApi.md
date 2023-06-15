@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="dummy"></a>
 # **dummy**
-> Dummy200Response dummy()
+> ExampleResponse dummy()
 
 
 
@@ -23,7 +23,7 @@ dummy
 
 val apiInstance = DefaultApi()
 try {
-    val result : Dummy200Response? = apiInstance.dummy()
+    val result : ExampleResponse? = apiInstance.dummy()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DefaultApi#dummy")
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Dummy200Response**](Dummy200Response.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

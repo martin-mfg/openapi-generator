@@ -122,12 +122,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Dummy.Dummy200Response](docs/Dummy200Response.md)
- - [Dummy.Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
- - [Dummy.Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [Dummy.ExampleResponse](docs/ExampleResponse.md)
- - [Dummy.Node](docs/Node.md)
- - [Dummy.OtherObject](docs/OtherObject.md)
 
 
 ## Documentation for Authorization

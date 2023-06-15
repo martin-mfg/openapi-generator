@@ -19,7 +19,7 @@ void main() {
   group('tests for DefaultApi', () {
     // dummy
     //
-    //Future<Dummy200Response> dummy() async
+    //Future<ExampleResponse> dummy() async
     test('test dummy', () async {
       // TODO
     });

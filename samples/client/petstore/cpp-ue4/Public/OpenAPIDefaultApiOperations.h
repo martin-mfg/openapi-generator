@@ -15,7 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIDefaultApi.h"
 
-#include "OpenAPIDummy200Response.h"
+#include "OpenAPIExampleResponse.h"
 
 namespace OpenAPI
 {
@@ -40,7 +40,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIDummy200Response Content;
+    OpenAPIExampleResponse Content;
 };
 
 }

@@ -33,8 +33,23 @@ PFXExampleResponse::~PFXExampleResponse() {}
 
 void PFXExampleResponse::initializeModel() {
 
-    m_my_only_property_isSet = false;
-    m_my_only_property_isValid = false;
+    m_empty_string_isSet = false;
+    m_empty_string_isValid = false;
+
+    m_number_string_isSet = false;
+    m_number_string_isValid = false;
+
+    m_bool_string_isSet = false;
+    m_bool_string_isValid = false;
+
+    m_null_string_isSet = false;
+    m_null_string_isValid = false;
+
+    m_a_bool_isSet = false;
+    m_a_bool_isValid = false;
+
+    m_zero_isSet = false;
+    m_zero_isValid = false;
 }
 
 void PFXExampleResponse::fromJson(QString jsonString) {
@@ -46,8 +61,23 @@ void PFXExampleResponse::fromJson(QString jsonString) {
 
 void PFXExampleResponse::fromJsonObject(QJsonObject json) {
 
-    m_my_only_property_isValid = ::test_namespace::fromJsonValue(my_only_property, json[QString("myOnlyProperty")]);
-    m_my_only_property_isSet = !json[QString("myOnlyProperty")].isNull() && m_my_only_property_isValid;
+    m_empty_string_isValid = ::test_namespace::fromJsonValue(empty_string, json[QString("emptyString")]);
+    m_empty_string_isSet = !json[QString("emptyString")].isNull() && m_empty_string_isValid;
+
+    m_number_string_isValid = ::test_namespace::fromJsonValue(number_string, json[QString("numberString")]);
+    m_number_string_isSet = !json[QString("numberString")].isNull() && m_number_string_isValid;
+
+    m_bool_string_isValid = ::test_namespace::fromJsonValue(bool_string, json[QString("boolString")]);
+    m_bool_string_isSet = !json[QString("boolString")].isNull() && m_bool_string_isValid;
+
+    m_null_string_isValid = ::test_namespace::fromJsonValue(null_string, json[QString("nullString")]);
+    m_null_string_isSet = !json[QString("nullString")].isNull() && m_null_string_isValid;
+
+    m_a_bool_isValid = ::test_namespace::fromJsonValue(a_bool, json[QString("aBool")]);
+    m_a_bool_isSet = !json[QString("aBool")].isNull() && m_a_bool_isValid;
+
+    m_zero_isValid = ::test_namespace::fromJsonValue(zero, json[QString("zero")]);
+    m_zero_isSet = !json[QString("zero")].isNull() && m_zero_isValid;
 }
 
 QString PFXExampleResponse::asJson() const {
@@ -59,32 +89,152 @@ QString PFXExampleResponse::asJson() const {
 
 QJsonObject PFXExampleResponse::asJsonObject() const {
     QJsonObject obj;
-    if (my_only_property.isSet()) {
-        obj.insert(QString("myOnlyProperty"), ::test_namespace::toJsonValue(my_only_property));
+    if (m_empty_string_isSet) {
+        obj.insert(QString("emptyString"), ::test_namespace::toJsonValue(empty_string));
+    }
+    if (m_number_string_isSet) {
+        obj.insert(QString("numberString"), ::test_namespace::toJsonValue(number_string));
+    }
+    if (m_bool_string_isSet) {
+        obj.insert(QString("boolString"), ::test_namespace::toJsonValue(bool_string));
+    }
+    if (m_null_string_isSet) {
+        obj.insert(QString("nullString"), ::test_namespace::toJsonValue(null_string));
+    }
+    if (m_a_bool_isSet) {
+        obj.insert(QString("aBool"), ::test_namespace::toJsonValue(a_bool));
+    }
+    if (m_zero_isSet) {
+        obj.insert(QString("zero"), ::test_namespace::toJsonValue(zero));
     }
     return obj;
 }
 
-PFXOtherObject PFXExampleResponse::getMyOnlyProperty() const {
-    return my_only_property;
+QString PFXExampleResponse::getEmptyString() const {
+    return empty_string;
 }
-void PFXExampleResponse::setMyOnlyProperty(const PFXOtherObject &my_only_property) {
-    this->my_only_property = my_only_property;
-    this->m_my_only_property_isSet = true;
-}
-
-bool PFXExampleResponse::is_my_only_property_Set() const{
-    return m_my_only_property_isSet;
+void PFXExampleResponse::setEmptyString(const QString &empty_string) {
+    this->empty_string = empty_string;
+    this->m_empty_string_isSet = true;
 }
 
-bool PFXExampleResponse::is_my_only_property_Valid() const{
-    return m_my_only_property_isValid;
+bool PFXExampleResponse::is_empty_string_Set() const{
+    return m_empty_string_isSet;
+}
+
+bool PFXExampleResponse::is_empty_string_Valid() const{
+    return m_empty_string_isValid;
+}
+
+QString PFXExampleResponse::getNumberString() const {
+    return number_string;
+}
+void PFXExampleResponse::setNumberString(const QString &number_string) {
+    this->number_string = number_string;
+    this->m_number_string_isSet = true;
+}
+
+bool PFXExampleResponse::is_number_string_Set() const{
+    return m_number_string_isSet;
+}
+
+bool PFXExampleResponse::is_number_string_Valid() const{
+    return m_number_string_isValid;
+}
+
+QString PFXExampleResponse::getBoolString() const {
+    return bool_string;
+}
+void PFXExampleResponse::setBoolString(const QString &bool_string) {
+    this->bool_string = bool_string;
+    this->m_bool_string_isSet = true;
+}
+
+bool PFXExampleResponse::is_bool_string_Set() const{
+    return m_bool_string_isSet;
+}
+
+bool PFXExampleResponse::is_bool_string_Valid() const{
+    return m_bool_string_isValid;
+}
+
+QString PFXExampleResponse::getNullString() const {
+    return null_string;
+}
+void PFXExampleResponse::setNullString(const QString &null_string) {
+    this->null_string = null_string;
+    this->m_null_string_isSet = true;
+}
+
+bool PFXExampleResponse::is_null_string_Set() const{
+    return m_null_string_isSet;
+}
+
+bool PFXExampleResponse::is_null_string_Valid() const{
+    return m_null_string_isValid;
+}
+
+bool PFXExampleResponse::isABool() const {
+    return a_bool;
+}
+void PFXExampleResponse::setABool(const bool &a_bool) {
+    this->a_bool = a_bool;
+    this->m_a_bool_isSet = true;
+}
+
+bool PFXExampleResponse::is_a_bool_Set() const{
+    return m_a_bool_isSet;
+}
+
+bool PFXExampleResponse::is_a_bool_Valid() const{
+    return m_a_bool_isValid;
+}
+
+qint32 PFXExampleResponse::getZero() const {
+    return zero;
+}
+void PFXExampleResponse::setZero(const qint32 &zero) {
+    this->zero = zero;
+    this->m_zero_isSet = true;
+}
+
+bool PFXExampleResponse::is_zero_Set() const{
+    return m_zero_isSet;
+}
+
+bool PFXExampleResponse::is_zero_Valid() const{
+    return m_zero_isValid;
 }
 
 bool PFXExampleResponse::isSet() const {
     bool isObjectUpdated = false;
     do {
-        if (my_only_property.isSet()) {
+        if (m_empty_string_isSet) {
+            isObjectUpdated = true;
+            break;
+        }
+
+        if (m_number_string_isSet) {
+            isObjectUpdated = true;
+            break;
+        }
+
+        if (m_bool_string_isSet) {
+            isObjectUpdated = true;
+            break;
+        }
+
+        if (m_null_string_isSet) {
+            isObjectUpdated = true;
+            break;
+        }
+
+        if (m_a_bool_isSet) {
+            isObjectUpdated = true;
+            break;
+        }
+
+        if (m_zero_isSet) {
             isObjectUpdated = true;
             break;
         }

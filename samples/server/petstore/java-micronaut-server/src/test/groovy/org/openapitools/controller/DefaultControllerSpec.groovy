@@ -1,6 +1,6 @@
 package org.openapitools.controller
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 import io.micronaut.test.extensions.spock.annotation.MicronautTest
 import io.micronaut.http.client.HttpClient
 import io.micronaut.http.client.annotation.Client
@@ -52,7 +52,7 @@ class DefaultControllerSpec extends Specification {
         given:
 
         when:
-        Dummy200Response result = controller.dummy().block()
+        ExampleResponse result = controller.dummy().block()
 
         then:
         true
@@ -72,7 +72,7 @@ class DefaultControllerSpec extends Specification {
             .accept('*/*')
 
         when:
-        HttpResponse response = client.toBlocking().exchange(request, Dummy200Response.class);
+        HttpResponse response = client.toBlocking().exchange(request, ExampleResponse.class);
 
         then:
         response.status() == HttpStatus.OK

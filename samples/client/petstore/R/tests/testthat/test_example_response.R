@@ -5,9 +5,44 @@ context("Test ExampleResponse")
 
 model_instance <- ExampleResponse$new()
 
-test_that("myOnlyProperty", {
-  # tests for the property `myOnlyProperty` (OtherObject)
+test_that("emptyString", {
+  # tests for the property `emptyString` (character)
 
   # uncomment below to test the property
-  #expect_equal(model.instance$`myOnlyProperty`, "EXPECTED_RESULT")
+  #expect_equal(model.instance$`emptyString`, "EXPECTED_RESULT")
+})
+
+test_that("numberString", {
+  # tests for the property `numberString` (character)
+
+  # uncomment below to test the property
+  #expect_equal(model.instance$`numberString`, "EXPECTED_RESULT")
+})
+
+test_that("boolString", {
+  # tests for the property `boolString` (character)
+
+  # uncomment below to test the property
+  #expect_equal(model.instance$`boolString`, "EXPECTED_RESULT")
+})
+
+test_that("nullString", {
+  # tests for the property `nullString` (character)
+
+  # uncomment below to test the property
+  #expect_equal(model.instance$`nullString`, "EXPECTED_RESULT")
+})
+
+test_that("aBool", {
+  # tests for the property `aBool` (character)
+
+  # uncomment below to test the property
+  #expect_equal(model.instance$`aBool`, "EXPECTED_RESULT")
+})
+
+test_that("zero", {
+  # tests for the property `zero` (integer)
+
+  # uncomment below to test the property
+  #expect_equal(model.instance$`zero`, "EXPECTED_RESULT")
 })

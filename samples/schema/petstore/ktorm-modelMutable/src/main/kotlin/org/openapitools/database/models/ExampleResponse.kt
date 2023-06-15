@@ -19,16 +19,31 @@ import org.openapitools.client.models.*
 
 /**
  * dummy
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 object ExampleResponses : BaseTable<ExampleResponse>("ExampleResponse") {
-    val myOnlyProperty = long("myOnlyProperty") /* null */
+    val emptyString = text("emptyString") /* null */
+    val numberString = text("numberString") /* null */
+    val boolString = text("boolString") /* null */
+    val nullString = text("nullString") /* null */
+    val aBool = boolean("aBool") /* null */
+    val zero = int("zero") /* null */
 
     /**
      * Create an entity of type ExampleResponse from the model
      */
     override fun doCreateEntity(row: QueryRowSet, withReferences: Boolean) = ExampleResponse(
-        myOnlyProperty = OtherObjects.createEntity(row, withReferences) /* OtherObject? */
+        emptyString = row[emptyString] ?: "" /* kotlin.String? */,
+        numberString = row[numberString] ?: "42" /* kotlin.String? */,
+        boolString = row[boolString] ?: "false" /* kotlin.String? */,
+        nullString = row[nullString] ?: "null" /* kotlin.String? */,
+        aBool = row[aBool] ?: false /* kotlin.Boolean? */,
+        zero = row[zero] ?: 0 /* kotlin.Int? */
     )
 
     /**
@@ -46,7 +61,12 @@ object ExampleResponses : BaseTable<ExampleResponse>("ExampleResponse") {
     */
     fun AssignmentsBuilder.assignFrom(entity: ExampleResponse) {
         this.apply {
-            set(ExampleResponses.myOnlyProperty, entity.myOnlyProperty)
+            set(ExampleResponses.emptyString, entity.emptyString)
+            set(ExampleResponses.numberString, entity.numberString)
+            set(ExampleResponses.boolString, entity.boolString)
+            set(ExampleResponses.nullString, entity.nullString)
+            set(ExampleResponses.aBool, entity.aBool)
+            set(ExampleResponses.zero, entity.zero)
         }
     }
 

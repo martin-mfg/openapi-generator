@@ -15,28 +15,82 @@
  */
 public class OASExampleResponse {
     /**
-     * Get myOnlyProperty
-     * @return myOnlyProperty
+     * Get emptyString
+     * @return emptyString
      */
-    public OASOtherObject myOnlyProperty { get; set; }
+    public String emptyString { get; set; }
+
+    /**
+     * Get numberString
+     * @return numberString
+     */
+    public String numberString { get; set; }
+
+    /**
+     * Get boolString
+     * @return boolString
+     */
+    public String boolString { get; set; }
+
+    /**
+     * Get nullString
+     * @return nullString
+     */
+    public String nullString { get; set; }
+
+    /**
+     * Get aBool
+     * @return aBool
+     */
+    public Boolean aBool { get; set; }
+
+    /**
+     * Get zero
+     * @return zero
+     */
+    public Integer zero { get; set; }
+
+    public OASExampleResponse() {
+        emptyString = '';
+        numberString = '42';
+        boolString = 'false';
+        nullString = 'null';
+        aBool = false;
+        zero = 0;
+    }
 
     public static OASExampleResponse getExample() {
         OASExampleResponse exampleResponse = new OASExampleResponse();
-          exampleResponse.myOnlyProperty = OASOtherObject.getExample();
+          exampleResponse.emptyString = '';
+          exampleResponse.numberString = '42';
+          exampleResponse.boolString = 'false';
+          exampleResponse.nullString = 'null';
+          exampleResponse.aBool = false;
+          exampleResponse.zero = 0;
         return exampleResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASExampleResponse) {           
             OASExampleResponse exampleResponse = (OASExampleResponse) obj;
-            return this.myOnlyProperty == exampleResponse.myOnlyProperty;
+            return this.emptyString == exampleResponse.emptyString
+                && this.numberString == exampleResponse.numberString
+                && this.boolString == exampleResponse.boolString
+                && this.nullString == exampleResponse.nullString
+                && this.aBool == exampleResponse.aBool
+                && this.zero == exampleResponse.zero;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (myOnlyProperty == null ? 0 : System.hashCode(myOnlyProperty));
+        hashCode = (17 * hashCode) + (emptyString == null ? 0 : System.hashCode(emptyString));
+        hashCode = (17 * hashCode) + (numberString == null ? 0 : System.hashCode(numberString));
+        hashCode = (17 * hashCode) + (boolString == null ? 0 : System.hashCode(boolString));
+        hashCode = (17 * hashCode) + (nullString == null ? 0 : System.hashCode(nullString));
+        hashCode = (17 * hashCode) + (aBool == null ? 0 : System.hashCode(aBool));
+        hashCode = (17 * hashCode) + (zero == null ? 0 : System.hashCode(zero));
         return hashCode;
     }
 }

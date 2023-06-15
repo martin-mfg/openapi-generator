@@ -11,15 +11,24 @@
 */
 package org.openapitools.server.models
 
-import org.openapitools.server.models.OtherObject
 
 import java.io.Serializable
 /**
  * dummy
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 data class ExampleResponse(
-    val myOnlyProperty: OtherObject? = null
+    val emptyString: kotlin.String? = "",
+    val numberString: kotlin.String? = "42",
+    val boolString: kotlin.String? = "false",
+    val nullString: kotlin.String? = "null",
+    val aBool: kotlin.Boolean? = false,
+    val zero: kotlin.Int? = 0
 ) : Serializable 
 {
     companion object {

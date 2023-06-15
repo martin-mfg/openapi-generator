@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:openapi/src/model/dummy200_response.dart';
+import 'package:openapi/src/model/example_response.dart';
 
 class DefaultApi {
 
@@ -28,9 +28,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [Dummy200Response] as data
+  /// Returns a [Future] containing a [Response] with a [ExampleResponse] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<Dummy200Response>> dummy({ 
+  Future<Response<ExampleResponse>> dummy({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -59,14 +59,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    Dummy200Response? _responseData;
+    ExampleResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(Dummy200Response),
-      ) as Dummy200Response;
+        specifiedType: const FullType(ExampleResponse),
+      ) as ExampleResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -78,7 +78,7 @@ class DefaultApi {
       );
     }
 
-    return Response<Dummy200Response>(
+    return Response<ExampleResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

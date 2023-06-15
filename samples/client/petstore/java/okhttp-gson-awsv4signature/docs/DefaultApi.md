@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 <a id="dummy"></a>
 # **dummy**
-> Dummy200Response dummy()
+> ExampleResponse dummy()
 
 
 
@@ -33,7 +33,7 @@ public class Example {
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     try {
-      Dummy200Response result = apiInstance.dummy();
+      ExampleResponse result = apiInstance.dummy();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#dummy");
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Dummy200Response**](Dummy200Response.md)
+[**ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

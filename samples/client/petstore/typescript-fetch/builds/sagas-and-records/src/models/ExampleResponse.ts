@@ -13,13 +13,6 @@
  */
 
 import { exists, mapValues } from '../runtime';
-import type { OtherObject } from './OtherObject';
-import {
-    OtherObjectFromJSON,
-    OtherObjectFromJSONTyped,
-    OtherObjectToJSON,
-} from './OtherObject';
-
 /**
  * dummy
  * @export
@@ -28,10 +21,40 @@ import {
 export interface ExampleResponse {
     /**
      * 
-     * @type {OtherObject}
+     * @type {string}
      * @memberof ExampleResponse
      */
-    myOnlyProperty?: OtherObject;
+    emptyString?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    numberString?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    boolString?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ExampleResponse
+     */
+    nullString?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ExampleResponse
+     */
+    aBool?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof ExampleResponse
+     */
+    zero?: number;
 }
 
 /**
@@ -53,7 +76,12 @@ export function ExampleResponseFromJSONTyped(json: any, ignoreDiscriminator: boo
     }
     return {
         
-        'myOnlyProperty': !exists(json, 'myOnlyProperty') ? undefined : OtherObjectFromJSON(json['myOnlyProperty']),
+        'emptyString': !exists(json, 'emptyString') ? undefined : json['emptyString'],
+        'numberString': !exists(json, 'numberString') ? undefined : json['numberString'],
+        'boolString': !exists(json, 'boolString') ? undefined : json['boolString'],
+        'nullString': !exists(json, 'nullString') ? undefined : json['nullString'],
+        'aBool': !exists(json, 'aBool') ? undefined : json['aBool'],
+        'zero': !exists(json, 'zero') ? undefined : json['zero'],
     };
 }
 
@@ -66,7 +94,12 @@ export function ExampleResponseToJSON(value?: ExampleResponse | null): any {
     }
     return {
         
-        'myOnlyProperty': OtherObjectToJSON(value.myOnlyProperty),
+        'emptyString': value.emptyString,
+        'numberString': value.numberString,
+        'boolString': value.boolString,
+        'nullString': value.nullString,
+        'aBool': value.aBool,
+        'zero': value.zero,
     };
 }
 

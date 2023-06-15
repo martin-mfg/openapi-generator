@@ -7,7 +7,6 @@ authors     = ["F. Bar (foo@bar.baz)"]
 
 imports {
   Root = tosca.resourceTypes.Root
-  OtherObject = openapi_server.resourceTypes.OtherObject
 }
 resourceTypes {
 
@@ -16,8 +15,33 @@ resourceTypes {
     description = ExampleResponse
     derivedFrom = Root
     properties {
-        my_only_property {
-          type = OtherObject
+        empty_string {
+          type =  string
+          description = ""
+          optional = false
+        }
+        number_string {
+          type =  string
+          description = ""
+          optional = false
+        }
+        bool_string {
+          type =  string
+          description = ""
+          optional = false
+        }
+        null_string {
+          type =  string
+          description = ""
+          optional = false
+        }
+        a_bool {
+          type =  boolean
+          description = ""
+          optional = false
+        }
+        zero {
+          type =  integer
           description = ""
           optional = false
         }

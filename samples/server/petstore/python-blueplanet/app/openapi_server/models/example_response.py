@@ -6,7 +6,6 @@ from datetime import date, datetime  # noqa: F401
 from typing import List, Dict  # noqa: F401
 
 from app.openapi_server.models.base_model_ import Model
-from app.openapi_server.models.other_object import OtherObject  # noqa: F401,E501
 from openapi_server import util
 
 
@@ -16,21 +15,46 @@ class ExampleResponse(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, my_only_property: OtherObject=None):  # noqa: E501
+    def __init__(self, empty_string: str='', number_string: str='42', bool_string: str='false', null_string: str='null', a_bool: bool=False, zero: int=0):  # noqa: E501
         """ExampleResponse - a model defined in Swagger
 
-        :param my_only_property: The my_only_property of this ExampleResponse.  # noqa: E501
-        :type my_only_property: OtherObject
+        :param empty_string: The empty_string of this ExampleResponse.  # noqa: E501
+        :type empty_string: str
+        :param number_string: The number_string of this ExampleResponse.  # noqa: E501
+        :type number_string: str
+        :param bool_string: The bool_string of this ExampleResponse.  # noqa: E501
+        :type bool_string: str
+        :param null_string: The null_string of this ExampleResponse.  # noqa: E501
+        :type null_string: str
+        :param a_bool: The a_bool of this ExampleResponse.  # noqa: E501
+        :type a_bool: bool
+        :param zero: The zero of this ExampleResponse.  # noqa: E501
+        :type zero: int
         """
         self.swagger_types = {
-            'my_only_property': OtherObject
+            'empty_string': str,
+            'number_string': str,
+            'bool_string': str,
+            'null_string': str,
+            'a_bool': bool,
+            'zero': int
         }
 
         self.attribute_map = {
-            'my_only_property': 'myOnlyProperty'
+            'empty_string': 'emptyString',
+            'number_string': 'numberString',
+            'bool_string': 'boolString',
+            'null_string': 'nullString',
+            'a_bool': 'aBool',
+            'zero': 'zero'
         }
 
-        self._my_only_property = my_only_property
+        self._empty_string = empty_string
+        self._number_string = number_string
+        self._bool_string = bool_string
+        self._null_string = null_string
+        self._a_bool = a_bool
+        self._zero = zero
 
     @classmethod
     def from_dict(cls, dikt) -> 'ExampleResponse':
@@ -44,22 +68,127 @@ class ExampleResponse(Model):
         return util.deserialize_model(dikt, cls)
 
     @property
-    def my_only_property(self) -> OtherObject:
-        """Gets the my_only_property of this ExampleResponse.
+    def empty_string(self) -> str:
+        """Gets the empty_string of this ExampleResponse.
 
 
-        :return: The my_only_property of this ExampleResponse.
-        :rtype: OtherObject
+        :return: The empty_string of this ExampleResponse.
+        :rtype: str
         """
-        return self._my_only_property
+        return self._empty_string
 
-    @my_only_property.setter
-    def my_only_property(self, my_only_property: OtherObject):
-        """Sets the my_only_property of this ExampleResponse.
+    @empty_string.setter
+    def empty_string(self, empty_string: str):
+        """Sets the empty_string of this ExampleResponse.
 
 
-        :param my_only_property: The my_only_property of this ExampleResponse.
-        :type my_only_property: OtherObject
+        :param empty_string: The empty_string of this ExampleResponse.
+        :type empty_string: str
         """
 
-        self._my_only_property = my_only_property
+        self._empty_string = empty_string
+
+    @property
+    def number_string(self) -> str:
+        """Gets the number_string of this ExampleResponse.
+
+
+        :return: The number_string of this ExampleResponse.
+        :rtype: str
+        """
+        return self._number_string
+
+    @number_string.setter
+    def number_string(self, number_string: str):
+        """Sets the number_string of this ExampleResponse.
+
+
+        :param number_string: The number_string of this ExampleResponse.
+        :type number_string: str
+        """
+
+        self._number_string = number_string
+
+    @property
+    def bool_string(self) -> str:
+        """Gets the bool_string of this ExampleResponse.
+
+
+        :return: The bool_string of this ExampleResponse.
+        :rtype: str
+        """
+        return self._bool_string
+
+    @bool_string.setter
+    def bool_string(self, bool_string: str):
+        """Sets the bool_string of this ExampleResponse.
+
+
+        :param bool_string: The bool_string of this ExampleResponse.
+        :type bool_string: str
+        """
+
+        self._bool_string = bool_string
+
+    @property
+    def null_string(self) -> str:
+        """Gets the null_string of this ExampleResponse.
+
+
+        :return: The null_string of this ExampleResponse.
+        :rtype: str
+        """
+        return self._null_string
+
+    @null_string.setter
+    def null_string(self, null_string: str):
+        """Sets the null_string of this ExampleResponse.
+
+
+        :param null_string: The null_string of this ExampleResponse.
+        :type null_string: str
+        """
+
+        self._null_string = null_string
+
+    @property
+    def a_bool(self) -> bool:
+        """Gets the a_bool of this ExampleResponse.
+
+
+        :return: The a_bool of this ExampleResponse.
+        :rtype: bool
+        """
+        return self._a_bool
+
+    @a_bool.setter
+    def a_bool(self, a_bool: bool):
+        """Sets the a_bool of this ExampleResponse.
+
+
+        :param a_bool: The a_bool of this ExampleResponse.
+        :type a_bool: bool
+        """
+
+        self._a_bool = a_bool
+
+    @property
+    def zero(self) -> int:
+        """Gets the zero of this ExampleResponse.
+
+
+        :return: The zero of this ExampleResponse.
+        :rtype: int
+        """
+        return self._zero
+
+    @zero.setter
+    def zero(self, zero: int):
+        """Sets the zero of this ExampleResponse.
+
+
+        :param zero: The zero of this ExampleResponse.
+        :type zero: int
+        """
+
+        self._zero = zero

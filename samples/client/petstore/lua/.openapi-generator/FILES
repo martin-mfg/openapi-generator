@@ -2,10 +2,4 @@
 git_push.sh
 petstore-1.0.0-1.rockspec
 petstore/api/default_api.lua
-petstore/model/dummy_200_response.lua
-petstore/model/dummy_200_response_outer_prop.lua
-petstore/model/dummy_200_response_outer_prop_inner_prop.lua
 petstore/model/example_response.lua
-petstore/model/node.lua
-petstore/model/other_object.lua
-spec/example_response_spec.lua

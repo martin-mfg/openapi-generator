@@ -9,7 +9,7 @@ import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import okhttp3.MultipartBody;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,10 +23,10 @@ public interface DefaultApi {
   /**
    * 
    * dummy
-   * @return Call&lt;Dummy200Response&gt;
+   * @return Call&lt;ExampleResponse&gt;
    */
   @GET("example/someMethod")
-  CompletionStage<Response<Dummy200Response>> dummy();
+  CompletionStage<Response<ExampleResponse>> dummy();
     
 
 }

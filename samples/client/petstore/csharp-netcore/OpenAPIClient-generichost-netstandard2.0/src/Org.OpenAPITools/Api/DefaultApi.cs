@@ -35,8 +35,8 @@ namespace Org.OpenAPITools.IApi
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task&lt;ApiResponse&lt;Dummy200Response&gt;&gt;</returns>
-        Task<ApiResponse<Dummy200Response>> DummyAsync(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task&lt;ApiResponse&lt;ExampleResponse&gt;&gt;</returns>
+        Task<ApiResponse<ExampleResponse>> DummyAsync(System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -45,8 +45,8 @@ namespace Org.OpenAPITools.IApi
         /// dummy
         /// </remarks>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task&lt;ApiResponse&gt;Dummy200Response&gt;&gt;</returns>
-        Task<ApiResponse<Dummy200Response>> DummyOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task&lt;ApiResponse&gt;ExampleResponse&gt;&gt;</returns>
+        Task<ApiResponse<ExampleResponse>> DummyOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default);
     }
 }
 
@@ -84,7 +84,7 @@ namespace Org.OpenAPITools.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        private void AfterDummyDefaultImplementation(ApiResponse<Dummy200Response> apiResponseLocalVar)
+        private void AfterDummyDefaultImplementation(ApiResponse<ExampleResponse> apiResponseLocalVar)
         {
             Logger.LogInformation("{0,-9} | {1} | {3}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
             AfterDummy(apiResponseLocalVar);
@@ -94,7 +94,7 @@ namespace Org.OpenAPITools.Api
         /// Processes the server response
         /// </summary>
         /// <param name="apiResponseLocalVar"></param>
-        partial void AfterDummy(ApiResponse<Dummy200Response> apiResponseLocalVar);
+        partial void AfterDummy(ApiResponse<ExampleResponse> apiResponseLocalVar);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -120,8 +120,8 @@ namespace Org.OpenAPITools.Api
         ///  dummy
         /// </summary>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Dummy200Response"/></returns>
-        public async Task<ApiResponse<Dummy200Response>> DummyOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ExampleResponse"/></returns>
+        public async Task<ApiResponse<ExampleResponse>> DummyOrDefaultAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
@@ -138,8 +138,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Dummy200Response"/></returns>
-        public async Task<ApiResponse<Dummy200Response>> DummyAsync(System.Threading.CancellationToken cancellationToken = default)
+        /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ExampleResponse"/></returns>
+        public async Task<ApiResponse<ExampleResponse>> DummyAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
@@ -170,7 +170,7 @@ namespace Org.OpenAPITools.Api
                     {
                         string responseContentLocalVar = await httpResponseMessageLocalVar.Content.ReadAsStringAsync().ConfigureAwait(false);
 
-                        ApiResponse<Dummy200Response> apiResponseLocalVar = new ApiResponse<Dummy200Response>(httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/example/someMethod", requestedAtLocalVar, _jsonSerializerOptions);
+                        ApiResponse<ExampleResponse> apiResponseLocalVar = new ApiResponse<ExampleResponse>(httpRequestMessageLocalVar, httpResponseMessageLocalVar, responseContentLocalVar, "/example/someMethod", requestedAtLocalVar, _jsonSerializerOptions);
 
                         AfterDummyDefaultImplementation(apiResponseLocalVar);
 

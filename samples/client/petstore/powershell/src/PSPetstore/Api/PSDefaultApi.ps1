@@ -20,7 +20,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-Dummy200Response
+ExampleResponse
 #>
 function Invoke-PSDummy {
     [CmdletBinding()]
@@ -57,7 +57,7 @@ function Invoke-PSDummy {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "Dummy200Response" `
+                                -ReturnType "ExampleResponse" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

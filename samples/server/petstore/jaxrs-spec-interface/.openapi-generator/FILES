@@ -2,10 +2,5 @@ README.md
 pom.xml
 src/gen/java/org/openapitools/api/ExampleApi.java
 src/gen/java/org/openapitools/api/RestResourceRoot.java
-src/gen/java/org/openapitools/model/Dummy200Response.java
-src/gen/java/org/openapitools/model/Dummy200ResponseOuterProp.java
-src/gen/java/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.java
 src/gen/java/org/openapitools/model/ExampleResponse.java
-src/gen/java/org/openapitools/model/Node.java
-src/gen/java/org/openapitools/model/OtherObject.java
 src/main/openapi/openapi.yaml

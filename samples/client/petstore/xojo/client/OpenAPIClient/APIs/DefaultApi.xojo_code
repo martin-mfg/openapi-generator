@@ -5,7 +5,7 @@ Protected Class DefaultApi
 		  // Operation dummy
 		  // - 
 		  //
-		  // Invokes DefaultApiCallbackHandler.DummyCallback(Dummy200Response) on completion. 
+		  // Invokes DefaultApiCallbackHandler.DummyCallback(ExampleResponse) on completion. 
 		  //
 		  // - GET /example/someMethod
 		  // - dummy
@@ -38,7 +38,7 @@ Protected Class DefaultApi
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function DummyPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As OpenAPIClient.OpenAPIClientException, Content As String, ByRef outData As OpenAPIClient.Models.Dummy200Response) As Boolean
+		Private Function DummyPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As OpenAPIClient.OpenAPIClientException, Content As String, ByRef outData As OpenAPIClient.Models.ExampleResponse) As Boolean
 		  Dim contentType As String = Headers.Value("Content-Type")
 		  Dim contentEncoding As TextEncoding = OpenAPIClient.EncodingFromContentType(contentType)
 		  Content = DefineEncoding(Content, contentEncoding)
@@ -46,7 +46,7 @@ Protected Class DefaultApi
 		  If HTTPStatus > 199 and HTTPStatus < 300 then
 		    If contentType.LeftB(16) = "application/json" then
 		      
-			  outData = New OpenAPIClient.Models.Dummy200Response
+			  outData = New OpenAPIClient.Models.ExampleResponse
 			  Try
 		        Xoson.fromJSON(outData, Content.toText())
 
@@ -99,7 +99,7 @@ Protected Class DefaultApi
 		  If sender <> nil Then sender.Close()
 
 		  Dim error As New OpenAPIClient.OpenAPIClientException(Code)
-		  Dim data As OpenAPIClient.Models.Dummy200Response
+		  Dim data As OpenAPIClient.Models.ExampleResponse
 		  CallbackHandler.DummyCallback(error, data)
 		End Sub
 	#tag EndMethod
@@ -113,7 +113,7 @@ Protected Class DefaultApi
 		  
 		  Dim error As New OpenAPIClient.OpenAPIClientException(HTTPStatus, "", Content)
 		  
-		  Dim data As OpenAPIClient.Models.Dummy200Response
+		  Dim data As OpenAPIClient.Models.ExampleResponse
 		  Call DummyPrivateFuncDeserializeResponse(HTTPStatus, Headers, error, Content, data)
 		  
 		  CallbackHandler.DummyCallback(error, data)

@@ -36,7 +36,7 @@ open class DefaultAPI {
     }
 
     public enum Dummy {
-        case http200(value: Dummy200Response, raw: ClientResponse)
+        case http200(value: ExampleResponse, raw: ClientResponse)
         case http0(raw: ClientResponse)
     }
 
@@ -49,7 +49,7 @@ open class DefaultAPI {
         return dummyRaw(headers: headers, beforeSend: beforeSend).flatMapThrowing { response -> Dummy in
             switch response.status.code {
             case 200:
-                return .http200(value: try response.content.decode(Dummy200Response.self, using: Configuration.contentConfiguration.requireDecoder(for: Dummy200Response.defaultContentType)), raw: response)
+                return .http200(value: try response.content.decode(ExampleResponse.self, using: Configuration.contentConfiguration.requireDecoder(for: ExampleResponse.defaultContentType)), raw: response)
             default:
                 return .http0(raw: response)
             }

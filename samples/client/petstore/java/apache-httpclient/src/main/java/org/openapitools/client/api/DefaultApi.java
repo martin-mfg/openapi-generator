@@ -19,7 +19,7 @@ import org.openapitools.client.ApiClient;
 import org.openapitools.client.Configuration;
 import org.openapitools.client.Pair;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 
 import java.util.ArrayList;
@@ -54,10 +54,10 @@ public class DefaultApi {
   /**
    * 
    * dummy
-   * @return Dummy200Response
+   * @return ExampleResponse
    * @throws ApiException if fails to make API call
    */
-  public Dummy200Response dummy() throws ApiException {
+  public ExampleResponse dummy() throws ApiException {
     return this.dummy(Collections.emptyMap());
   }
 
@@ -66,10 +66,10 @@ public class DefaultApi {
    * 
    * dummy
    * @param additionalHeaders additionalHeaders for this call
-   * @return Dummy200Response
+   * @return ExampleResponse
    * @throws ApiException if fails to make API call
    */
-  public Dummy200Response dummy(Map<String, String> additionalHeaders) throws ApiException {
+  public ExampleResponse dummy(Map<String, String> additionalHeaders) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -100,7 +100,7 @@ public class DefaultApi {
 
     String[] localVarAuthNames = new String[] {  };
 
-    TypeReference<Dummy200Response> localVarReturnType = new TypeReference<Dummy200Response>() {};
+    TypeReference<ExampleResponse> localVarReturnType = new TypeReference<ExampleResponse>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "GET",

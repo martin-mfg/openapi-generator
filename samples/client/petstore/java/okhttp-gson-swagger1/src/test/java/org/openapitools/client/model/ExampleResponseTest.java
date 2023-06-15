@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.client.model.OtherObject;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,51 @@ public class ExampleResponseTest {
     }
 
     /**
-     * Test the property 'myOnlyProperty'
+     * Test the property 'emptyString'
      */
     @Test
-    public void myOnlyPropertyTest() {
-        // TODO: test myOnlyProperty
+    public void emptyStringTest() {
+        // TODO: test emptyString
+    }
+
+    /**
+     * Test the property 'numberString'
+     */
+    @Test
+    public void numberStringTest() {
+        // TODO: test numberString
+    }
+
+    /**
+     * Test the property 'boolString'
+     */
+    @Test
+    public void boolStringTest() {
+        // TODO: test boolString
+    }
+
+    /**
+     * Test the property 'nullString'
+     */
+    @Test
+    public void nullStringTest() {
+        // TODO: test nullString
+    }
+
+    /**
+     * Test the property 'aBool'
+     */
+    @Test
+    public void aBoolTest() {
+        // TODO: test aBool
+    }
+
+    /**
+     * Test the property 'zero'
+     */
+    @Test
+    public void zeroTest() {
+        // TODO: test zero
     }
 
 }

@@ -1,8 +1,3 @@
 README.md
-models/dummy200_response.proto
-models/dummy200_response_outer_prop.proto
-models/dummy200_response_outer_prop_inner_prop.proto
 models/example_response.proto
-models/node.proto
-models/other_object.proto
 services/default_service.proto

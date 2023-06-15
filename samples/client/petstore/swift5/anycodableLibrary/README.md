@@ -30,12 +30,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [PrefixDummy200ResponseOuterPropInnerPropSuffix](docs/PrefixDummy200ResponseOuterPropInnerPropSuffix.md)
- - [PrefixDummy200ResponseOuterPropSuffix](docs/PrefixDummy200ResponseOuterPropSuffix.md)
- - [PrefixDummy200ResponseSuffix](docs/PrefixDummy200ResponseSuffix.md)
  - [PrefixExampleResponseSuffix](docs/PrefixExampleResponseSuffix.md)
- - [PrefixNodeSuffix](docs/PrefixNodeSuffix.md)
- - [PrefixOtherObjectSuffix](docs/PrefixOtherObjectSuffix.md)
 
 
 <a id="documentation-for-authorization"></a>

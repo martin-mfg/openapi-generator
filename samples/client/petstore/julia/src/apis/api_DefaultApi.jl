@@ -12,7 +12,7 @@ This can be used to construct the `OpenAPI.Clients.Client` instance.
 basepath(::Type{ DefaultApi }) = "http://localhost"
 
 const _returntypes_dummy_DefaultApi = Dict{Regex,Type}(
-    Regex("^" * replace("200", "x"=>".") * "\$") => Dummy200Response,
+    Regex("^" * replace("200", "x"=>".") * "\$") => ExampleResponse,
 )
 
 function _oacinternal_dummy(_api::DefaultApi; _mediaType=nothing)
@@ -26,7 +26,7 @@ end
 
 Params:
 
-Return: Dummy200Response, OpenAPI.Clients.ApiResponse
+Return: ExampleResponse, OpenAPI.Clients.ApiResponse
 """
 function dummy(_api::DefaultApi; _mediaType=nothing)
     _ctx = _oacinternal_dummy(_api; _mediaType=_mediaType)

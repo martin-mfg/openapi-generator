@@ -19,9 +19,14 @@ local function cast_example_response(t)
 	return setmetatable(t, example_response_mt)
 end
 
-local function new_example_response(my_only_property)
+local function new_example_response(empty_string, number_string, bool_string, null_string, a_bool, zero)
 	return cast_example_response({
-		["myOnlyProperty"] = my_only_property;
+		["emptyString"] = empty_string;
+		["numberString"] = number_string;
+		["boolString"] = bool_string;
+		["nullString"] = null_string;
+		["aBool"] = a_bool;
+		["zero"] = zero;
 	})
 end
 

@@ -18,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.model.OtherObject;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -28,32 +27,157 @@ import javax.validation.Valid;
  */
 @ApiModel(description = "dummy")
 @JsonPropertyOrder({
-  ExampleResponse.JSON_PROPERTY_MY_ONLY_PROPERTY
+  ExampleResponse.JSON_PROPERTY_EMPTY_STRING,
+  ExampleResponse.JSON_PROPERTY_NUMBER_STRING,
+  ExampleResponse.JSON_PROPERTY_BOOL_STRING,
+  ExampleResponse.JSON_PROPERTY_NULL_STRING,
+  ExampleResponse.JSON_PROPERTY_A_BOOL,
+  ExampleResponse.JSON_PROPERTY_ZERO
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen")
 public class ExampleResponse   {
-  public static final String JSON_PROPERTY_MY_ONLY_PROPERTY = "myOnlyProperty";
-  @JsonProperty(JSON_PROPERTY_MY_ONLY_PROPERTY)
-  private OtherObject myOnlyProperty;
+  public static final String JSON_PROPERTY_EMPTY_STRING = "emptyString";
+  @JsonProperty(JSON_PROPERTY_EMPTY_STRING)
+  private String emptyString = "";
 
-  public ExampleResponse myOnlyProperty(OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public static final String JSON_PROPERTY_NUMBER_STRING = "numberString";
+  @JsonProperty(JSON_PROPERTY_NUMBER_STRING)
+  private String numberString = "42";
+
+  public static final String JSON_PROPERTY_BOOL_STRING = "boolString";
+  @JsonProperty(JSON_PROPERTY_BOOL_STRING)
+  private String boolString = "false";
+
+  public static final String JSON_PROPERTY_NULL_STRING = "nullString";
+  @JsonProperty(JSON_PROPERTY_NULL_STRING)
+  private String nullString = "null";
+
+  public static final String JSON_PROPERTY_A_BOOL = "aBool";
+  @JsonProperty(JSON_PROPERTY_A_BOOL)
+  private Boolean aBool = false;
+
+  public static final String JSON_PROPERTY_ZERO = "zero";
+  @JsonProperty(JSON_PROPERTY_ZERO)
+  private Integer zero = 0;
+
+  public ExampleResponse emptyString(String emptyString) {
+    this.emptyString = emptyString;
     return this;
   }
 
   /**
-   * Get myOnlyProperty
-   * @return myOnlyProperty
+   * Get emptyString
+   * @return emptyString
    **/
-  @JsonProperty(value = "myOnlyProperty")
-  @ApiModelProperty(value = "")
-  @Valid 
-  public OtherObject getMyOnlyProperty() {
-    return myOnlyProperty;
+  @JsonProperty(value = "emptyString")
+  @ApiModelProperty(example = "", value = "")
+  
+  public String getEmptyString() {
+    return emptyString;
   }
 
-  public void setMyOnlyProperty(OtherObject myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public void setEmptyString(String emptyString) {
+    this.emptyString = emptyString;
+  }
+
+  public ExampleResponse numberString(String numberString) {
+    this.numberString = numberString;
+    return this;
+  }
+
+  /**
+   * Get numberString
+   * @return numberString
+   **/
+  @JsonProperty(value = "numberString")
+  @ApiModelProperty(example = "42", value = "")
+  
+  public String getNumberString() {
+    return numberString;
+  }
+
+  public void setNumberString(String numberString) {
+    this.numberString = numberString;
+  }
+
+  public ExampleResponse boolString(String boolString) {
+    this.boolString = boolString;
+    return this;
+  }
+
+  /**
+   * Get boolString
+   * @return boolString
+   **/
+  @JsonProperty(value = "boolString")
+  @ApiModelProperty(example = "false", value = "")
+  
+  public String getBoolString() {
+    return boolString;
+  }
+
+  public void setBoolString(String boolString) {
+    this.boolString = boolString;
+  }
+
+  public ExampleResponse nullString(String nullString) {
+    this.nullString = nullString;
+    return this;
+  }
+
+  /**
+   * Get nullString
+   * @return nullString
+   **/
+  @JsonProperty(value = "nullString")
+  @ApiModelProperty(value = "")
+  
+  public String getNullString() {
+    return nullString;
+  }
+
+  public void setNullString(String nullString) {
+    this.nullString = nullString;
+  }
+
+  public ExampleResponse aBool(Boolean aBool) {
+    this.aBool = aBool;
+    return this;
+  }
+
+  /**
+   * Get aBool
+   * @return aBool
+   **/
+  @JsonProperty(value = "aBool")
+  @ApiModelProperty(example = "false", value = "")
+  
+  public Boolean getaBool() {
+    return aBool;
+  }
+
+  public void setaBool(Boolean aBool) {
+    this.aBool = aBool;
+  }
+
+  public ExampleResponse zero(Integer zero) {
+    this.zero = zero;
+    return this;
+  }
+
+  /**
+   * Get zero
+   * @return zero
+   **/
+  @JsonProperty(value = "zero")
+  @ApiModelProperty(example = "0", value = "")
+  
+  public Integer getZero() {
+    return zero;
+  }
+
+  public void setZero(Integer zero) {
+    this.zero = zero;
   }
 
 
@@ -66,12 +190,17 @@ public class ExampleResponse   {
       return false;
     }
     ExampleResponse exampleResponse = (ExampleResponse) o;
-    return Objects.equals(this.myOnlyProperty, exampleResponse.myOnlyProperty);
+    return Objects.equals(this.emptyString, exampleResponse.emptyString) &&
+        Objects.equals(this.numberString, exampleResponse.numberString) &&
+        Objects.equals(this.boolString, exampleResponse.boolString) &&
+        Objects.equals(this.nullString, exampleResponse.nullString) &&
+        Objects.equals(this.aBool, exampleResponse.aBool) &&
+        Objects.equals(this.zero, exampleResponse.zero);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(myOnlyProperty);
+    return Objects.hash(emptyString, numberString, boolString, nullString, aBool, zero);
   }
 
   @Override
@@ -79,7 +208,12 @@ public class ExampleResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExampleResponse {\n");
     
-    sb.append("    myOnlyProperty: ").append(toIndentedString(myOnlyProperty)).append("\n");
+    sb.append("    emptyString: ").append(toIndentedString(emptyString)).append("\n");
+    sb.append("    numberString: ").append(toIndentedString(numberString)).append("\n");
+    sb.append("    boolString: ").append(toIndentedString(boolString)).append("\n");
+    sb.append("    nullString: ").append(toIndentedString(nullString)).append("\n");
+    sb.append("    aBool: ").append(toIndentedString(aBool)).append("\n");
+    sb.append("    zero: ").append(toIndentedString(zero)).append("\n");
     sb.append("}");
     return sb.toString();
   }

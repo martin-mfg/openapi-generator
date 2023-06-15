@@ -29,7 +29,7 @@ import io.helidon.webclient.WebClientResponse;
 
 import org.openapitools.client.ApiClient;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 /**
  * dummy
@@ -40,7 +40,7 @@ public class DefaultApiImpl implements DefaultApi {
 
   private final ApiClient apiClient;
 
-  protected static final GenericType<Dummy200Response> RESPONSE_TYPE_dummy = ResponseType.create(Dummy200Response.class);
+  protected static final GenericType<ExampleResponse> RESPONSE_TYPE_dummy = ResponseType.create(ExampleResponse.class);
 
   /**
    * Creates a new instance of DefaultApiImpl initialized with the specified {@link ApiClient}.
@@ -55,7 +55,7 @@ public class DefaultApiImpl implements DefaultApi {
   }
 
   @Override
-  public ApiResponse<Dummy200Response> dummy() {
+  public ApiResponse<ExampleResponse> dummy() {
     WebClientRequestBuilder webClientRequestBuilder = dummyRequestBuilder();
     return dummySubmit(webClientRequestBuilder);
   }
@@ -81,9 +81,9 @@ public class DefaultApiImpl implements DefaultApi {
    * Optional customization point for subclasses.
    *
    * @param webClientRequestBuilder the request builder to use for submitting the request
-   * @return {@code ApiResponse<Dummy200Response>} for the submitted request
+   * @return {@code ApiResponse<ExampleResponse>} for the submitted request
    */
-  protected ApiResponse<Dummy200Response> dummySubmit(WebClientRequestBuilder webClientRequestBuilder) {
+  protected ApiResponse<ExampleResponse> dummySubmit(WebClientRequestBuilder webClientRequestBuilder) {
     Single<WebClientResponse> webClientResponse = webClientRequestBuilder.submit();
     return ApiResponse.create(RESPONSE_TYPE_dummy, webClientResponse);
   }

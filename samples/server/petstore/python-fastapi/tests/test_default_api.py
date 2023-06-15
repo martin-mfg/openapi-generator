@@ -3,7 +3,7 @@
 from fastapi.testclient import TestClient
 
 
-from openapi_server.models.dummy200_response import Dummy200Response  # noqa: F401
+from openapi_server.models.example_response import ExampleResponse  # noqa: F401
 
 
 def test_dummy(client: TestClient):

@@ -64,7 +64,7 @@ namespace Org.OpenAPIToolsExample
 
             try
             {
-                Dummy200Response result = await apiInstance.DummyAsync();
+                ExampleResponse result = await apiInstance.DummyAsync();
                 Debug.Log(result);
                 Debug.Log("Done!");
             }
@@ -93,12 +93,7 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Model.Dummy200Response](Dummy200Response.md)
- - [Model.Dummy200ResponseOuterProp](Dummy200ResponseOuterProp.md)
- - [Model.Dummy200ResponseOuterPropInnerProp](Dummy200ResponseOuterPropInnerProp.md)
  - [Model.ExampleResponse](ExampleResponse.md)
- - [Model.Node](Node.md)
- - [Model.OtherObject](OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

@@ -7,12 +7,7 @@ application/config/path_handler.yml
 application/container.php
 composer.json
 public/index.php
-src/App/DTO/Dummy200Response.php
-src/App/DTO/Dummy200ResponseOuterProp.php
-src/App/DTO/Dummy200ResponseOuterPropInnerProp.php
 src/App/DTO/ExampleResponse.php
-src/App/DTO/Node.php
-src/App/DTO/OtherObject.php
 src/App/Factory.php
 src/App/Handler/ExampleSomeMethod.php
 src/App/Middleware/InternalServerError.php

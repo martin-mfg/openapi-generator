@@ -19,11 +19,27 @@ import (
 // ExampleResponse - dummy
 type ExampleResponse struct {
 
-	MyOnlyProperty OtherObject `json:"myOnlyProperty,omitempty"`
+	EmptyString string `json:"emptyString,omitempty"`
+
+	NumberString string `json:"numberString,omitempty"`
+
+	BoolString string `json:"boolString,omitempty"`
+
+	NullString string `json:"nullString,omitempty"`
+
+	ABool bool `json:"aBool,omitempty"`
+
+	Zero int32 `json:"zero,omitempty"`
 }
 
 // UnmarshalJSON sets *m to a copy of data while respecting defaults if specified.
 func (m *ExampleResponse) UnmarshalJSON(data []byte) error {
+	m.EmptyString = ""
+	m.NumberString = "42"
+	m.BoolString = "false"
+	m.NullString = "null"
+	m.ABool = false
+	m.Zero = 0
 
 	type Alias ExampleResponse // To avoid infinite recursion
     return json.Unmarshal(data, (*Alias)(m))
@@ -31,9 +47,6 @@ func (m *ExampleResponse) UnmarshalJSON(data []byte) error {
 
 // AssertExampleResponseRequired checks if the required fields are not zero-ed
 func AssertExampleResponseRequired(obj ExampleResponse) error {
-	if err := AssertOtherObjectRequired(obj.MyOnlyProperty); err != nil {
-		return err
-	}
 	return nil
 }
 

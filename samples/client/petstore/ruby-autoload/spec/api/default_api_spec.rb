@@ -35,7 +35,7 @@ describe 'DefaultApi' do
   # unit tests for dummy
   # dummy
   # @param [Hash] opts the optional parameters
-  # @return [Dummy200Response]
+  # @return [ExampleResponse]
   describe 'dummy test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/

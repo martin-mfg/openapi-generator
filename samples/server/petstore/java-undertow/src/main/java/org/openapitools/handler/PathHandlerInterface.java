@@ -24,7 +24,7 @@ public interface PathHandlerInterface {
      * <p><b>Endpoint</b>: {@link Methods#GET GET} "/example/someMethod" (<i>privileged: false</i>)</p>
      *
      * <p><b>Produces</b>: [{mediaType=*/*}]</p>
-     * <p><b>Returns</b>: {@link Dummy200Response}</p>
+     * <p><b>Returns</b>: {@link ExampleResponse}</p>
      *
      * <p><b>Responses</b>:</p>
      * <ul>

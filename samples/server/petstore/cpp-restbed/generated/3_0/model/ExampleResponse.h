@@ -21,7 +21,7 @@
 
 
 
-#include "OtherObject.h"
+#include <string>
 #include <memory>
 #include <vector>
 #include <boost/property_tree/ptree.hpp>
@@ -60,11 +60,46 @@ public:
     /// <summary>
     /// 
     /// </summary>
-    OtherObject getMyOnlyProperty() const;
-    void setMyOnlyProperty(OtherObject value);
+    std::string getEmptyString() const;
+    void setEmptyString(std::string value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    std::string getNumberString() const;
+    void setNumberString(std::string value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    std::string getBoolString() const;
+    void setBoolString(std::string value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    std::string getNullString() const;
+    void setNullString(std::string value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    bool isABool() const;
+    void setABool(bool value);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    int32_t getZero() const;
+    void setZero(int32_t value);
 
 protected:
-    OtherObject m_MyOnlyProperty;
+    std::string m_EmptyString = "";
+    std::string m_NumberString = "42";
+    std::string m_BoolString = "false";
+    std::string m_NullString = "null";
+    bool m_ABool = false;
+    int32_t m_Zero = 0;
 };
 
 std::vector<ExampleResponse> createExampleResponseVectorFromJsonString(const std::string& json);

@@ -1,15 +1,5 @@
 
-#include "Dummy_200_responseTest.cpp"
-
-#include "Dummy_200_response_outerPropTest.cpp"
-
-#include "Dummy_200_response_outerProp_innerPropTest.cpp"
-
 #include "ExampleResponseTest.cpp"
-
-#include "NodeTest.cpp"
-
-#include "OtherObjectTest.cpp"
 
 
 
@@ -20,35 +10,43 @@ void tearDown(){}
 void runTests(){
     
     
+    RUN_TEST(test_ExampleResponse_emptyString_is_assigned_from_json);
     
     
+    RUN_TEST(test_ExampleResponse_numberString_is_assigned_from_json);
     
     
-    RUN_TEST(test_Dummy_200_response_outerProp_innerProp_myBool_is_assigned_from_json);
+    RUN_TEST(test_ExampleResponse_boolString_is_assigned_from_json);
     
     
+    RUN_TEST(test_ExampleResponse_nullString_is_assigned_from_json);
     
     
+    RUN_TEST(test_ExampleResponse_aBool_is_assigned_from_json);
     
     
-    
+    RUN_TEST(test_ExampleResponse_zero_is_assigned_from_json);
     
     
 
     
     
+    RUN_TEST(test_ExampleResponse_emptyString_is_converted_to_json);
     
     
+    RUN_TEST(test_ExampleResponse_numberString_is_converted_to_json);
     
     
-    RUN_TEST(test_Dummy_200_response_outerProp_innerProp_myBool_is_converted_to_json);
+    RUN_TEST(test_ExampleResponse_boolString_is_converted_to_json);
     
     
+    RUN_TEST(test_ExampleResponse_nullString_is_converted_to_json);
     
     
+    RUN_TEST(test_ExampleResponse_aBool_is_converted_to_json);
     
     
-    
+    RUN_TEST(test_ExampleResponse_zero_is_converted_to_json);
     
     
 

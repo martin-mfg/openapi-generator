@@ -6,11 +6,11 @@
 
 %% @doc 
 %% dummy
--spec dummy(ctx:ctx()) -> {ok, petstore_dummy_200_response:petstore_dummy_200_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
+-spec dummy(ctx:ctx()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
 dummy(Ctx) ->
     dummy(Ctx, #{}).
 
--spec dummy(ctx:ctx(), maps:map()) -> {ok, petstore_dummy_200_response:petstore_dummy_200_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
+-spec dummy(ctx:ctx(), maps:map()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
 dummy(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(petstore_api, config, #{})),

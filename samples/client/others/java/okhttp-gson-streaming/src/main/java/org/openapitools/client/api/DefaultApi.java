@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -138,7 +138,7 @@ public class DefaultApi {
     /**
      * 
      * dummy
-     * @return Dummy200Response
+     * @return ExampleResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -146,15 +146,15 @@ public class DefaultApi {
         <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
      </table>
      */
-    public Dummy200Response dummy() throws ApiException {
-        ApiResponse<Dummy200Response> localVarResp = dummyWithHttpInfo();
+    public ExampleResponse dummy() throws ApiException {
+        ApiResponse<ExampleResponse> localVarResp = dummyWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * 
      * dummy
-     * @return ApiResponse&lt;Dummy200Response&gt;
+     * @return ApiResponse&lt;ExampleResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -162,9 +162,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Dummy200Response> dummyWithHttpInfo() throws ApiException {
+    public ApiResponse<ExampleResponse> dummyWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dummyValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<Dummy200Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<ExampleResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -180,10 +180,10 @@ public class DefaultApi {
         <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dummyAsync(final ApiCallback<Dummy200Response> _callback) throws ApiException {
+    public okhttp3.Call dummyAsync(final ApiCallback<ExampleResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dummyValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<Dummy200Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<ExampleResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

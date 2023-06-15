@@ -10,11 +10,15 @@
  * Do not edit the class manually.
  */
 
-import { OtherObject } from 'model/OtherObject';
 
 /**
  * dummy
  */
 export external public interface ~ExampleResponse {
-    public myOnlyProperty?: OtherObject;
+    public emptyString?: string;
+    public numberString?: string;
+    public boolString?: string;
+    public nullString?: string;
+    public aBool?: boolean;
+    public zero?: int;
 }

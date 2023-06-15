@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.model.OtherObjectDto;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -26,26 +25,136 @@ import javax.annotation.Generated;
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ExampleResponseDto {
 
-  private OtherObjectDto myOnlyProperty;
+  private String emptyString = "";
 
-  public ExampleResponseDto myOnlyProperty(OtherObjectDto myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  private String numberString = "42";
+
+  private String boolString = "false";
+
+  private String nullString = "null";
+
+  private Boolean aBool = false;
+
+  private Integer zero = 0;
+
+  public ExampleResponseDto emptyString(String emptyString) {
+    this.emptyString = emptyString;
     return this;
   }
 
   /**
-   * Get myOnlyProperty
-   * @return myOnlyProperty
+   * Get emptyString
+   * @return emptyString
   */
-  @Valid 
-  @ApiModelProperty(value = "")
-  @JsonProperty("myOnlyProperty")
-  public OtherObjectDto getMyOnlyProperty() {
-    return myOnlyProperty;
+  
+  @ApiModelProperty(example = "", value = "")
+  @JsonProperty("emptyString")
+  public String getEmptyString() {
+    return emptyString;
   }
 
-  public void setMyOnlyProperty(OtherObjectDto myOnlyProperty) {
-    this.myOnlyProperty = myOnlyProperty;
+  public void setEmptyString(String emptyString) {
+    this.emptyString = emptyString;
+  }
+
+  public ExampleResponseDto numberString(String numberString) {
+    this.numberString = numberString;
+    return this;
+  }
+
+  /**
+   * Get numberString
+   * @return numberString
+  */
+  
+  @ApiModelProperty(example = "42", value = "")
+  @JsonProperty("numberString")
+  public String getNumberString() {
+    return numberString;
+  }
+
+  public void setNumberString(String numberString) {
+    this.numberString = numberString;
+  }
+
+  public ExampleResponseDto boolString(String boolString) {
+    this.boolString = boolString;
+    return this;
+  }
+
+  /**
+   * Get boolString
+   * @return boolString
+  */
+  
+  @ApiModelProperty(example = "false", value = "")
+  @JsonProperty("boolString")
+  public String getBoolString() {
+    return boolString;
+  }
+
+  public void setBoolString(String boolString) {
+    this.boolString = boolString;
+  }
+
+  public ExampleResponseDto nullString(String nullString) {
+    this.nullString = nullString;
+    return this;
+  }
+
+  /**
+   * Get nullString
+   * @return nullString
+  */
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("nullString")
+  public String getNullString() {
+    return nullString;
+  }
+
+  public void setNullString(String nullString) {
+    this.nullString = nullString;
+  }
+
+  public ExampleResponseDto aBool(Boolean aBool) {
+    this.aBool = aBool;
+    return this;
+  }
+
+  /**
+   * Get aBool
+   * @return aBool
+  */
+  
+  @ApiModelProperty(example = "false", value = "")
+  @JsonProperty("aBool")
+  public Boolean getaBool() {
+    return aBool;
+  }
+
+  public void setaBool(Boolean aBool) {
+    this.aBool = aBool;
+  }
+
+  public ExampleResponseDto zero(Integer zero) {
+    this.zero = zero;
+    return this;
+  }
+
+  /**
+   * Get zero
+   * @return zero
+  */
+  
+  @ApiModelProperty(example = "0", value = "")
+  @JsonProperty("zero")
+  public Integer getZero() {
+    return zero;
+  }
+
+  public void setZero(Integer zero) {
+    this.zero = zero;
   }
 
   @Override
@@ -57,19 +166,29 @@ public class ExampleResponseDto {
       return false;
     }
     ExampleResponseDto exampleResponse = (ExampleResponseDto) o;
-    return Objects.equals(this.myOnlyProperty, exampleResponse.myOnlyProperty);
+    return Objects.equals(this.emptyString, exampleResponse.emptyString) &&
+        Objects.equals(this.numberString, exampleResponse.numberString) &&
+        Objects.equals(this.boolString, exampleResponse.boolString) &&
+        Objects.equals(this.nullString, exampleResponse.nullString) &&
+        Objects.equals(this.aBool, exampleResponse.aBool) &&
+        Objects.equals(this.zero, exampleResponse.zero);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(myOnlyProperty);
+    return Objects.hash(emptyString, numberString, boolString, nullString, aBool, zero);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExampleResponseDto {\n");
-    sb.append("    myOnlyProperty: ").append(toIndentedString(myOnlyProperty)).append("\n");
+    sb.append("    emptyString: ").append(toIndentedString(emptyString)).append("\n");
+    sb.append("    numberString: ").append(toIndentedString(numberString)).append("\n");
+    sb.append("    boolString: ").append(toIndentedString(boolString)).append("\n");
+    sb.append("    nullString: ").append(toIndentedString(nullString)).append("\n");
+    sb.append("    aBool: ").append(toIndentedString(aBool)).append("\n");
+    sb.append("    zero: ").append(toIndentedString(zero)).append("\n");
     sb.append("}");
     return sb.toString();
   }

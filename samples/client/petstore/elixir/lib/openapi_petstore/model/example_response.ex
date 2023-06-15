@@ -8,19 +8,27 @@ defmodule OpenapiPetstore.Model.ExampleResponse do
 
   @derive [Poison.Encoder]
   defstruct [
-    :myOnlyProperty
+    :emptyString,
+    :numberString,
+    :boolString,
+    :nullString,
+    :aBool,
+    :zero
   ]
 
   @type t :: %__MODULE__{
-    :myOnlyProperty => OpenapiPetstore.Model.OtherObject.t | nil
+    :emptyString => String.t | nil,
+    :numberString => String.t | nil,
+    :boolString => String.t | nil,
+    :nullString => String.t | nil,
+    :aBool => boolean() | nil,
+    :zero => integer() | nil
   }
 end
 
 defimpl Poison.Decoder, for: OpenapiPetstore.Model.ExampleResponse do
-  import OpenapiPetstore.Deserializer
-  def decode(value, options) do
+  def decode(value, _options) do
     value
-    |> deserialize(:myOnlyProperty, :struct, OpenapiPetstore.Model.OtherObject, options)
   end
 end
 

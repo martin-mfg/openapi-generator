@@ -13,7 +13,7 @@
 
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 import org.openapitools.client.ApiClient;
 import org.openapitools.client.api.DefaultApi;
 import io.restassured.builder.RequestSpecBuilder;

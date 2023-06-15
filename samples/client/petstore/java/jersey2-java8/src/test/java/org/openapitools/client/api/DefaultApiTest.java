@@ -15,7 +15,7 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.*;
 import org.openapitools.client.auth.*;
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
@@ -40,7 +40,7 @@ public class DefaultApiTest {
      */
     @Test
     public void dummyTest() throws ApiException {
-        //Dummy200Response response = api.dummy();
+        //ExampleResponse response = api.dummy();
         // TODO: test validations
     }
 

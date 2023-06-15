@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import OtherObject from './OtherObject';
 
 /**
  * The ExampleResponse model module.
@@ -49,8 +48,23 @@ class ExampleResponse {
         if (data) {
             obj = obj || new ExampleResponse();
 
-            if (data.hasOwnProperty('myOnlyProperty')) {
-                obj['myOnlyProperty'] = OtherObject.constructFromObject(data['myOnlyProperty']);
+            if (data.hasOwnProperty('emptyString')) {
+                obj['emptyString'] = ApiClient.convertToType(data['emptyString'], 'String');
+            }
+            if (data.hasOwnProperty('numberString')) {
+                obj['numberString'] = ApiClient.convertToType(data['numberString'], 'String');
+            }
+            if (data.hasOwnProperty('boolString')) {
+                obj['boolString'] = ApiClient.convertToType(data['boolString'], 'String');
+            }
+            if (data.hasOwnProperty('nullString')) {
+                obj['nullString'] = ApiClient.convertToType(data['nullString'], 'String');
+            }
+            if (data.hasOwnProperty('aBool')) {
+                obj['aBool'] = ApiClient.convertToType(data['aBool'], 'Boolean');
+            }
+            if (data.hasOwnProperty('zero')) {
+                obj['zero'] = ApiClient.convertToType(data['zero'], 'Number');
             }
         }
         return obj;
@@ -62,9 +76,21 @@ class ExampleResponse {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExampleResponse</code>.
      */
     static validateJSON(data) {
-        // validate the optional field `myOnlyProperty`
-        if (data['myOnlyProperty']) { // data not null
-          OtherObject.validateJSON(data['myOnlyProperty']);
+        // ensure the json data is a string
+        if (data['emptyString'] && !(typeof data['emptyString'] === 'string' || data['emptyString'] instanceof String)) {
+            throw new Error("Expected the field `emptyString` to be a primitive type in the JSON string but got " + data['emptyString']);
+        }
+        // ensure the json data is a string
+        if (data['numberString'] && !(typeof data['numberString'] === 'string' || data['numberString'] instanceof String)) {
+            throw new Error("Expected the field `numberString` to be a primitive type in the JSON string but got " + data['numberString']);
+        }
+        // ensure the json data is a string
+        if (data['boolString'] && !(typeof data['boolString'] === 'string' || data['boolString'] instanceof String)) {
+            throw new Error("Expected the field `boolString` to be a primitive type in the JSON string but got " + data['boolString']);
+        }
+        // ensure the json data is a string
+        if (data['nullString'] && !(typeof data['nullString'] === 'string' || data['nullString'] instanceof String)) {
+            throw new Error("Expected the field `nullString` to be a primitive type in the JSON string but got " + data['nullString']);
         }
 
         return true;
@@ -76,9 +102,40 @@ class ExampleResponse {
 
 
 /**
- * @member {module:model/OtherObject} myOnlyProperty
+ * @member {String} emptyString
+ * @default ''
  */
-ExampleResponse.prototype['myOnlyProperty'] = undefined;
+ExampleResponse.prototype['emptyString'] = '';
+
+/**
+ * @member {String} numberString
+ * @default '42'
+ */
+ExampleResponse.prototype['numberString'] = '42';
+
+/**
+ * @member {String} boolString
+ * @default 'false'
+ */
+ExampleResponse.prototype['boolString'] = 'false';
+
+/**
+ * @member {String} nullString
+ * @default 'null'
+ */
+ExampleResponse.prototype['nullString'] = 'null';
+
+/**
+ * @member {Boolean} aBool
+ * @default false
+ */
+ExampleResponse.prototype['aBool'] = false;
+
+/**
+ * @member {Number} zero
+ * @default 0
+ */
+ExampleResponse.prototype['zero'] = 0;
 
 
 

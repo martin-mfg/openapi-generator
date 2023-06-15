@@ -11,21 +11,50 @@
  */
 
 import { RequestFile } from './models';
-import { OtherObject } from './otherObject';
 
 /**
 * dummy
 */
 export class ExampleResponse {
-    'myOnlyProperty'?: OtherObject;
+    'emptyString'?: string = '';
+    'numberString'?: string = '42';
+    'boolString'?: string = 'false';
+    'nullString'?: string = 'null';
+    'aBool'?: boolean = false;
+    'zero'?: number = 0;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "myOnlyProperty",
-            "baseName": "myOnlyProperty",
-            "type": "OtherObject"
+            "name": "emptyString",
+            "baseName": "emptyString",
+            "type": "string"
+        },
+        {
+            "name": "numberString",
+            "baseName": "numberString",
+            "type": "string"
+        },
+        {
+            "name": "boolString",
+            "baseName": "boolString",
+            "type": "string"
+        },
+        {
+            "name": "nullString",
+            "baseName": "nullString",
+            "type": "string"
+        },
+        {
+            "name": "aBool",
+            "baseName": "aBool",
+            "type": "boolean"
+        },
+        {
+            "name": "zero",
+            "baseName": "zero",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {

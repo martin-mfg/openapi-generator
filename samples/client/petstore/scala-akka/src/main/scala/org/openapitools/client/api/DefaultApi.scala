@@ -11,7 +11,7 @@
  */
 package org.openapitools.client.api
 
-import org.openapitools.client.model.Dummy200Response
+import org.openapitools.client.model.ExampleResponse
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -27,11 +27,11 @@ class DefaultApi(baseUrl: String) {
    * dummy
    * 
    * Expected answers:
-   *   code 200 : Dummy200Response (dummy)
+   *   code 200 : ExampleResponse (dummy)
    */
-  def dummy(): ApiRequest[Dummy200Response] =
-    ApiRequest[Dummy200Response](ApiMethods.GET, baseUrl, "/example/someMethod", "application/json")
-      .withSuccessResponse[Dummy200Response](200)
+  def dummy(): ApiRequest[ExampleResponse] =
+    ApiRequest[ExampleResponse](ApiMethods.GET, baseUrl, "/example/someMethod", "application/json")
+      .withSuccessResponse[ExampleResponse](200)
       
 
 

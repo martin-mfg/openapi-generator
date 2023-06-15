@@ -47,12 +47,7 @@ Class | Method | HTTP request | Description
 
 ## Models
 
- - [Dummy200Response](docs/Dummy200Response.md)
- - [Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
- - [Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [ExampleResponse](docs/ExampleResponse.md)
- - [Node](docs/Node.md)
- - [OtherObject](docs/OtherObject.md)
 
 
 

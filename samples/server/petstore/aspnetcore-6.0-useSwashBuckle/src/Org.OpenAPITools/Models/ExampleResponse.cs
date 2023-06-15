@@ -27,10 +27,45 @@ namespace Org.OpenAPITools.Models
     public class ExampleResponse : IEquatable<ExampleResponse>
     {
         /// <summary>
-        /// Gets or Sets MyOnlyProperty
+        /// Gets or Sets EmptyString
         /// </summary>
-        [DataMember(Name="myOnlyProperty", EmitDefaultValue=false)]
-        public OtherObject MyOnlyProperty { get; set; }
+        [DataMember(Name="emptyString", EmitDefaultValue=false)]
+        public string EmptyString { get; set; } = "";
+
+        /// <summary>
+        /// Gets or Sets NumberString
+        /// </summary>
+        /// <example>42</example>
+        [DataMember(Name="numberString", EmitDefaultValue=false)]
+        public string NumberString { get; set; } = "42";
+
+        /// <summary>
+        /// Gets or Sets BoolString
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name="boolString", EmitDefaultValue=false)]
+        public string BoolString { get; set; } = "false";
+
+        /// <summary>
+        /// Gets or Sets NullString
+        /// </summary>
+        /// <example>null</example>
+        [DataMember(Name="nullString", EmitDefaultValue=false)]
+        public string NullString { get; set; } = "null";
+
+        /// <summary>
+        /// Gets or Sets ABool
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name="aBool", EmitDefaultValue=true)]
+        public bool ABool { get; set; } = false;
+
+        /// <summary>
+        /// Gets or Sets Zero
+        /// </summary>
+        /// <example>0</example>
+        [DataMember(Name="zero", EmitDefaultValue=true)]
+        public int Zero { get; set; } = 0;
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -40,7 +75,12 @@ namespace Org.OpenAPITools.Models
         {
             var sb = new StringBuilder();
             sb.Append("class ExampleResponse {\n");
-            sb.Append("  MyOnlyProperty: ").Append(MyOnlyProperty).Append("\n");
+            sb.Append("  EmptyString: ").Append(EmptyString).Append("\n");
+            sb.Append("  NumberString: ").Append(NumberString).Append("\n");
+            sb.Append("  BoolString: ").Append(BoolString).Append("\n");
+            sb.Append("  NullString: ").Append(NullString).Append("\n");
+            sb.Append("  ABool: ").Append(ABool).Append("\n");
+            sb.Append("  Zero: ").Append(Zero).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -78,9 +118,34 @@ namespace Org.OpenAPITools.Models
 
             return 
                 (
-                    MyOnlyProperty == other.MyOnlyProperty ||
-                    MyOnlyProperty != null &&
-                    MyOnlyProperty.Equals(other.MyOnlyProperty)
+                    EmptyString == other.EmptyString ||
+                    EmptyString != null &&
+                    EmptyString.Equals(other.EmptyString)
+                ) && 
+                (
+                    NumberString == other.NumberString ||
+                    NumberString != null &&
+                    NumberString.Equals(other.NumberString)
+                ) && 
+                (
+                    BoolString == other.BoolString ||
+                    BoolString != null &&
+                    BoolString.Equals(other.BoolString)
+                ) && 
+                (
+                    NullString == other.NullString ||
+                    NullString != null &&
+                    NullString.Equals(other.NullString)
+                ) && 
+                (
+                    ABool == other.ABool ||
+                    
+                    ABool.Equals(other.ABool)
+                ) && 
+                (
+                    Zero == other.Zero ||
+                    
+                    Zero.Equals(other.Zero)
                 );
         }
 
@@ -94,8 +159,18 @@ namespace Org.OpenAPITools.Models
             {
                 var hashCode = 41;
                 // Suitable nullity checks etc, of course :)
-                    if (MyOnlyProperty != null)
-                    hashCode = hashCode * 59 + MyOnlyProperty.GetHashCode();
+                    if (EmptyString != null)
+                    hashCode = hashCode * 59 + EmptyString.GetHashCode();
+                    if (NumberString != null)
+                    hashCode = hashCode * 59 + NumberString.GetHashCode();
+                    if (BoolString != null)
+                    hashCode = hashCode * 59 + BoolString.GetHashCode();
+                    if (NullString != null)
+                    hashCode = hashCode * 59 + NullString.GetHashCode();
+                    
+                    hashCode = hashCode * 59 + ABool.GetHashCode();
+                    
+                    hashCode = hashCode * 59 + Zero.GetHashCode();
                 return hashCode;
             }
         }

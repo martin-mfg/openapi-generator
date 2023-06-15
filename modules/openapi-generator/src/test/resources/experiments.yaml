@@ -1,62 +1,48 @@
 openapi: 3.0.0
-x-myextension: dummy
 info:
-  x-myextension: dummy
   title: dummy
   version: dummy
   description: dummy
 paths:
-  x-myextension: dummy
   /example/someMethod:
-    x-myextension: dummy
     get:
-      x-myextension: dummy
       description: dummy
       operationId: dummy
       responses:
-        x-myextension: dummy
         200:
-          x-myextension: dummy
           description: dummy
           content:
             "*/*":
-              x-myextension: dummy
               schema:
-                x-myextension: dummy
-                type: object
-                properties:
-                  outerProp:
-                    x-myextension: dummy
-                    type: object
-                    properties:
-                      innerProp:
-                        type: object
-                        properties:
-                          myBool:
-                            type: boolean
+                $ref: '#/components/schemas/ExampleResponse'
 
 components:
-  x-myextension: dummy
   schemas:
     ExampleResponse:
-      x-myextension: dummy
       type: object
       description: dummy
       properties:
-        myOnlyProperty:
-          x-myextension: dummy
-          $ref: '#/components/schemas/OtherObject'
-    OtherObject:
-      type: object
-      description: dummy
-      properties:
-        myOnlyProperty2:
-          $ref: '#/components/schemas/ExampleResponse'
-    Node:
-      type: object
-      description: dummy
-      properties:
-        left:
-          $ref: '#/components/schemas/Node'
-        right:
-          $ref: '#/components/schemas/Node'
+        emptyString:
+          type: string
+          default: ""
+          example: ""
+        numberString:
+          type: string
+          default: "42"
+          example: "42"
+        boolString:
+          type: string
+          default: "false"
+          example: "false"
+        nullString:
+          type: string
+          default: "null"
+          example: "null"
+        aBool:
+          type: boolean
+          default: false
+          example: false
+        zero:
+          type: integer
+          default: 0
+          example: 0

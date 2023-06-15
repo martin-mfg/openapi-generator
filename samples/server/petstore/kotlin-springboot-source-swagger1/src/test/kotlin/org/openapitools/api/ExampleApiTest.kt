@@ -1,6 +1,6 @@
 package org.openapitools.api
 
-import org.openapitools.model.Dummy200Response
+import org.openapitools.model.ExampleResponse
 import org.junit.jupiter.api.Test
 import org.springframework.http.ResponseEntity
 
@@ -17,7 +17,7 @@ class ExampleApiTest {
      */
     @Test
     fun dummyTest() {
-        val response: ResponseEntity<Dummy200Response> = api.dummy()
+        val response: ResponseEntity<ExampleResponse> = api.dummy()
 
         // TODO: test validations
     }

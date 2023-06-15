@@ -1,45 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * 
- * @export
- * @interface Dummy200Response
- */
-export interface Dummy200Response {
-    /**
-     * 
-     * @type {Dummy200ResponseOuterProp}
-     * @memberof Dummy200Response
-     */
-    outerProp?: Dummy200ResponseOuterProp;
-}
-/**
- * 
- * @export
- * @interface Dummy200ResponseOuterProp
- */
-export interface Dummy200ResponseOuterProp {
-    /**
-     * 
-     * @type {Dummy200ResponseOuterPropInnerProp}
-     * @memberof Dummy200ResponseOuterProp
-     */
-    innerProp?: Dummy200ResponseOuterPropInnerProp;
-}
-/**
- * 
- * @export
- * @interface Dummy200ResponseOuterPropInnerProp
- */
-export interface Dummy200ResponseOuterPropInnerProp {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Dummy200ResponseOuterPropInnerProp
-     */
-    myBool?: boolean;
-}
-/**
  * dummy
  * @export
  * @interface ExampleResponse
@@ -47,40 +8,38 @@ export interface Dummy200ResponseOuterPropInnerProp {
 export interface ExampleResponse {
     /**
      * 
-     * @type {OtherObject}
+     * @type {string}
      * @memberof ExampleResponse
      */
-    myOnlyProperty?: OtherObject;
-}
-/**
- * dummy
- * @export
- * @interface Node
- */
-export interface Node {
+    emptyString?: string;
     /**
      * 
-     * @type {Node}
-     * @memberof Node
+     * @type {string}
+     * @memberof ExampleResponse
      */
-    left?: Node;
+    numberString?: string;
     /**
      * 
-     * @type {Node}
-     * @memberof Node
+     * @type {string}
+     * @memberof ExampleResponse
      */
-    right?: Node;
-}
-/**
- * dummy
- * @export
- * @interface OtherObject
- */
-export interface OtherObject {
+    boolString?: string;
     /**
      * 
-     * @type {ExampleResponse}
-     * @memberof OtherObject
+     * @type {string}
+     * @memberof ExampleResponse
      */
-    myOnlyProperty2?: ExampleResponse;
+    nullString?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ExampleResponse
+     */
+    aBool?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof ExampleResponse
+     */
+    zero?: number;
 }

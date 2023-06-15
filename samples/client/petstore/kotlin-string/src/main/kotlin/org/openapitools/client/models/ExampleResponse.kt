@@ -15,7 +15,6 @@
 
 package org.openapitools.client.models
 
-import org.openapitools.client.models.OtherObject
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -24,14 +23,34 @@ import java.io.Serializable
 /**
  * dummy
  *
- * @param myOnlyProperty 
+ * @param emptyString 
+ * @param numberString 
+ * @param boolString 
+ * @param nullString 
+ * @param aBool 
+ * @param zero 
  */
 
 
 data class ExampleResponse (
 
-    @Json(name = "myOnlyProperty")
-    val myOnlyProperty: OtherObject? = null
+    @Json(name = "emptyString")
+    val emptyString: kotlin.String? = "",
+
+    @Json(name = "numberString")
+    val numberString: kotlin.String? = "42",
+
+    @Json(name = "boolString")
+    val boolString: kotlin.String? = "false",
+
+    @Json(name = "nullString")
+    val nullString: kotlin.String? = "null",
+
+    @Json(name = "aBool")
+    val aBool: kotlin.Boolean? = false,
+
+    @Json(name = "zero")
+    val zero: kotlin.Int? = 0
 
 ) : Serializable {
     companion object {

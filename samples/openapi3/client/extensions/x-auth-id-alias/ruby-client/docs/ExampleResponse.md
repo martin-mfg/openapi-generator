@@ -4,7 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **my_only_property** | [**OtherObject**](OtherObject.md) |  | [optional] |
+| **empty_string** | **String** |  | [optional][default to &#39;&#39;] |
+| **number_string** | **String** |  | [optional][default to &#39;42&#39;] |
+| **bool_string** | **String** |  | [optional][default to &#39;false&#39;] |
+| **null_string** | **String** |  | [optional][default to &#39;null&#39;] |
+| **a_bool** | **Boolean** |  | [optional][default to false] |
+| **zero** | **Integer** |  | [optional][default to 0] |
 
 ## Example
 
@@ -12,7 +17,12 @@
 require 'x_auth_id_alias'
 
 instance = XAuthIDAlias::ExampleResponse.new(
-  my_only_property: null
+  empty_string: ,
+  number_string: 42,
+  bool_string: false,
+  null_string: null,
+  a_bool: false,
+  zero: 0
 )
 ```
 

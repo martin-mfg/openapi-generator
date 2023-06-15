@@ -1,6 +1,6 @@
 package org.openapitools.client.api;
 
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
@@ -45,7 +45,7 @@ public class DefaultApiImpl implements DefaultApi {
     * dummy
     * @param resultHandler Asynchronous result handler
     */
-    public void dummy(Handler<AsyncResult<Dummy200Response>> resultHandler) {
+    public void dummy(Handler<AsyncResult<ExampleResponse>> resultHandler) {
         dummy(null, resultHandler);
     }
 
@@ -55,7 +55,7 @@ public class DefaultApiImpl implements DefaultApi {
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void dummy(ApiClient.AuthInfo authInfo, Handler<AsyncResult<Dummy200Response>> resultHandler) {
+    public void dummy(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
         Object localVarBody = null;
         
         // create path and map variables
@@ -77,7 +77,7 @@ public class DefaultApiImpl implements DefaultApi {
         String[] localVarAccepts = { "*/*" };
         String[] localVarContentTypes = {  };
         String[] localVarAuthNames = new String[] {  };
-        TypeReference<Dummy200Response> localVarReturnType = new TypeReference<Dummy200Response>() {};
+        TypeReference<ExampleResponse> localVarReturnType = new TypeReference<ExampleResponse>() {};
         apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccepts, localVarContentTypes, localVarAuthNames, authInfo, localVarReturnType, resultHandler);
     }
 

@@ -11,11 +11,45 @@ use Articus\DataTransfer\Annotation as DTA;
 class ExampleResponse
 {
     /**
-     * @DTA\Data(field="myOnlyProperty", nullable=true)
-     * @DTA\Strategy(name="Object", options={"type":\App\DTO\OtherObject::class})
-     * @DTA\Validator(name="TypeCompliant", options={"type":\App\DTO\OtherObject::class})
-     * @var \App\DTO\OtherObject|null
+     * @DTA\Data(field="emptyString", nullable=true)
+     * @DTA\Validator(name="Scalar", options={"type":"string"})
+     * @var string|null
      */
-    public $my_only_property;
+    public $empty_string;
+
+    /**
+     * @DTA\Data(field="numberString", nullable=true)
+     * @DTA\Validator(name="Scalar", options={"type":"string"})
+     * @var string|null
+     */
+    public $number_string;
+
+    /**
+     * @DTA\Data(field="boolString", nullable=true)
+     * @DTA\Validator(name="Scalar", options={"type":"string"})
+     * @var string|null
+     */
+    public $bool_string;
+
+    /**
+     * @DTA\Data(field="nullString", nullable=true)
+     * @DTA\Validator(name="Scalar", options={"type":"string"})
+     * @var string|null
+     */
+    public $null_string;
+
+    /**
+     * @DTA\Data(field="aBool", nullable=true)
+     * @DTA\Validator(name="Scalar", options={"type":"bool"})
+     * @var bool|null
+     */
+    public $a_bool;
+
+    /**
+     * @DTA\Data(field="zero", nullable=true)
+     * @DTA\Validator(name="Scalar", options={"type":"int"})
+     * @var int|null
+     */
+    public $zero;
 
 }

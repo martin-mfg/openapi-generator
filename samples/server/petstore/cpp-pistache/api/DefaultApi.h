@@ -28,7 +28,7 @@
 #include <optional>
 #include <utility>
 
-#include "Dummy_200_response.h"
+#include "ExampleResponse.h"
 
 namespace org::openapitools::server::api
 {

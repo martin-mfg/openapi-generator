@@ -5,7 +5,7 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.Dummy200Response;
+import org.openapitools.model.ExampleResponse;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -52,7 +52,7 @@ public interface ExampleApi {
         description = "dummy",
         responses = {
             @ApiResponse(responseCode = "200", description = "dummy", content = {
-                @Content(mediaType = "*/*", schema = @Schema(implementation = Dummy200Response.class))
+                @Content(mediaType = "*/*", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
     )
@@ -61,13 +61,13 @@ public interface ExampleApi {
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<Dummy200Response> dummy(
+    default ResponseEntity<ExampleResponse> dummy(
         
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
-                    String exampleString = "{ \"outerProp\" : { \"innerProp\" : { \"myBool\" : true } } }";
+                    String exampleString = "{ \"zero\" : 0, \"numberString\" : \"42\", \"nullString\" : \"null\", \"emptyString\" : \"\", \"boolString\" : \"false\", \"aBool\" : false }";
                     ApiUtil.setExampleResponse(request, "*/*", exampleString);
                     break;
                 }

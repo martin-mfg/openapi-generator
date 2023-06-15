@@ -17,12 +17,7 @@ require 'x_auth_id_alias/version'
 require 'x_auth_id_alias/configuration'
 
 # Models
-require 'x_auth_id_alias/models/dummy200_response'
-require 'x_auth_id_alias/models/dummy200_response_outer_prop'
-require 'x_auth_id_alias/models/dummy200_response_outer_prop_inner_prop'
 require 'x_auth_id_alias/models/example_response'
-require 'x_auth_id_alias/models/node'
-require 'x_auth_id_alias/models/other_object'
 
 # APIs
 require 'x_auth_id_alias/api/default_api'

@@ -1,6 +1,6 @@
 package org.openapitools.vertxweb.server.api;
 
-import org.openapitools.vertxweb.server.model.Dummy200Response;
+import org.openapitools.vertxweb.server.model.ExampleResponse;
 
 import org.openapitools.vertxweb.server.ApiResponse;
 
@@ -11,5 +11,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface DefaultApi  {
-    Future<ApiResponse<Dummy200Response>> dummy();
+    Future<ApiResponse<ExampleResponse>> dummy();
 }

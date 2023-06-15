@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **dummy**
-> models::Dummy200Response dummy()
+> models::ExampleResponse dummy()
 
 
 dummy
@@ -18,7 +18,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**models::Dummy200Response**](dummy_200_response.md)
+[**models::ExampleResponse**](ExampleResponse.md)
 
 ### Authorization
 

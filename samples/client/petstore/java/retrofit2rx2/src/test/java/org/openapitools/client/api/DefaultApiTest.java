@@ -1,7 +1,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
-import org.openapitools.client.model.Dummy200Response;
+import org.openapitools.client.model.ExampleResponse;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,7 +31,7 @@ public class DefaultApiTest {
      */
     @Test
     public void dummyTest() {
-        // Dummy200Response response = api.dummy();
+        // ExampleResponse response = api.dummy();
 
         // TODO: test validations
     }

@@ -16,12 +16,27 @@ require 'time'
 module DynamicServers
   # dummy
   class ExampleResponse
-    attr_accessor :my_only_property
+    attr_accessor :empty_string
+
+    attr_accessor :number_string
+
+    attr_accessor :bool_string
+
+    attr_accessor :null_string
+
+    attr_accessor :a_bool
+
+    attr_accessor :zero
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'my_only_property' => :'myOnlyProperty'
+        :'empty_string' => :'emptyString',
+        :'number_string' => :'numberString',
+        :'bool_string' => :'boolString',
+        :'null_string' => :'nullString',
+        :'a_bool' => :'aBool',
+        :'zero' => :'zero'
       }
     end
 
@@ -33,7 +48,12 @@ module DynamicServers
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'my_only_property' => :'OtherObject'
+        :'empty_string' => :'String',
+        :'number_string' => :'String',
+        :'bool_string' => :'String',
+        :'null_string' => :'String',
+        :'a_bool' => :'Boolean',
+        :'zero' => :'Integer'
       }
     end
 
@@ -58,8 +78,40 @@ module DynamicServers
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'my_only_property')
-        self.my_only_property = attributes[:'my_only_property']
+      if attributes.key?(:'empty_string')
+        self.empty_string = attributes[:'empty_string']
+      else
+        self.empty_string = ''
+      end
+
+      if attributes.key?(:'number_string')
+        self.number_string = attributes[:'number_string']
+      else
+        self.number_string = '42'
+      end
+
+      if attributes.key?(:'bool_string')
+        self.bool_string = attributes[:'bool_string']
+      else
+        self.bool_string = 'false'
+      end
+
+      if attributes.key?(:'null_string')
+        self.null_string = attributes[:'null_string']
+      else
+        self.null_string = 'null'
+      end
+
+      if attributes.key?(:'a_bool')
+        self.a_bool = attributes[:'a_bool']
+      else
+        self.a_bool = false
+      end
+
+      if attributes.key?(:'zero')
+        self.zero = attributes[:'zero']
+      else
+        self.zero = 0
       end
     end
 
@@ -81,7 +133,12 @@ module DynamicServers
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          my_only_property == o.my_only_property
+          empty_string == o.empty_string &&
+          number_string == o.number_string &&
+          bool_string == o.bool_string &&
+          null_string == o.null_string &&
+          a_bool == o.a_bool &&
+          zero == o.zero
     end
 
     # @see the `==` method
@@ -93,7 +150,7 @@ module DynamicServers
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [my_only_property].hash
+      [empty_string, number_string, bool_string, null_string, a_bool, zero].hash
     end
 
     # Builds the object from hash

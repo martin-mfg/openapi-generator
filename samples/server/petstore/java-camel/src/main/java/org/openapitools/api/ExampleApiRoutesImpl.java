@@ -26,7 +26,7 @@ public class ExampleApiRoutesImpl extends RouteBuilder {
                     .log(LoggingLevel.INFO, "BODY TYPE: ${body.getClass().getName()}")
             .end()
             .log(LoggingLevel.INFO, "HEADERS: ${headers}")
-            .setBody(constant("{ \"outerProp\" : { \"innerProp\" : { \"myBool\" : true } } }"))
-            .unmarshal().json(JsonLibrary.Jackson, Dummy200Response.class);
+            .setBody(constant("{ \"zero\" : 0, \"numberString\" : \"42\", \"nullString\" : \"null\", \"emptyString\" : \"\", \"boolString\" : \"false\", \"aBool\" : false }"))
+            .unmarshal().json(JsonLibrary.Jackson, ExampleResponse.class);
     }
 }

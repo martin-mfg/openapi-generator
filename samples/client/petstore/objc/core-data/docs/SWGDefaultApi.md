@@ -10,7 +10,7 @@ Method | HTTP request | Description
 # **dummy**
 ```objc
 -(NSURLSessionTask*) dummyWithCompletionHandler: 
-        (void (^)(SWGDummy200Response* output, NSError* error)) handler;
+        (void (^)(SWGExampleResponse* output, NSError* error)) handler;
 ```
 
 
@@ -24,7 +24,7 @@ dummy
 SWGDefaultApi*apiInstance = [[SWGDefaultApi alloc] init];
 
 [apiInstance dummyWithCompletionHandler: 
-          ^(SWGDummy200Response* output, NSError* error) {
+          ^(SWGExampleResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SWGDummy200Response***](SWGDummy200Response.md)
+[**SWGExampleResponse***](SWGExampleResponse.md)
 
 ### Authorization
 

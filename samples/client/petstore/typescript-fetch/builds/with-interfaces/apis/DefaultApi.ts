@@ -15,11 +15,11 @@
 
 import * as runtime from '../runtime';
 import type {
-  Dummy200Response,
+  ExampleResponse,
 } from '../models/index';
 import {
-    Dummy200ResponseFromJSON,
-    Dummy200ResponseToJSON,
+    ExampleResponseFromJSON,
+    ExampleResponseToJSON,
 } from '../models/index';
 
 /**
@@ -35,12 +35,12 @@ export interface DefaultApiInterface {
      * @throws {RequiredError}
      * @memberof DefaultApiInterface
      */
-    dummyRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Dummy200Response>>;
+    dummyRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ExampleResponse>>;
 
     /**
      * dummy
      */
-    dummy(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Dummy200Response>;
+    dummy(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ExampleResponse>;
 
 }
 
@@ -52,7 +52,7 @@ export class DefaultApi extends runtime.BaseAPI implements DefaultApiInterface {
     /**
      * dummy
      */
-    async dummyRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Dummy200Response>> {
+    async dummyRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ExampleResponse>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -64,13 +64,13 @@ export class DefaultApi extends runtime.BaseAPI implements DefaultApiInterface {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => Dummy200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => ExampleResponseFromJSON(jsonValue));
     }
 
     /**
      * dummy
      */
-    async dummy(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Dummy200Response> {
+    async dummy(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ExampleResponse> {
         const response = await this.dummyRaw(initOverrides);
         return await response.value();
     }

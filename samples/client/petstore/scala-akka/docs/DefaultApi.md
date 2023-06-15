@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## dummy
 
-> dummy(): ApiRequest[Dummy200Response]
+> dummy(): ApiRequest[ExampleResponse]
 
 
 
@@ -66,7 +66,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**Dummy200Response**](Dummy200Response.md)]
+ApiRequest[[**ExampleResponse**](ExampleResponse.md)]
 
 
 ### Authorization

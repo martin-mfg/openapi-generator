@@ -24,18 +24,33 @@ import org.openapitools.client.models.*
 @Entity(tableName = "ExampleResponse")
 /**
 * Room model for dummy
-* @param myOnlyProperty 
+* @param emptyString 
+* @param numberString 
+* @param boolString 
+* @param nullString 
+* @param aBool 
+* @param zero 
 */
 data class ExampleResponseRoomModel (
     @PrimaryKey(autoGenerate = true) var roomTableId: Int,
     
-    var myOnlyProperty: OtherObject? = null,
+    var emptyString: kotlin.String? = null,
+    var numberString: kotlin.String? = null,
+    var boolString: kotlin.String? = null,
+    var nullString: kotlin.String? = null,
+    var aBool: kotlin.Boolean? = null,
+    var zero: kotlin.Int? = null,
     
     ) {
 
     companion object { }
 
         fun toApiModel(): ExampleResponse = ExampleResponse(
-        myOnlyProperty = this.myOnlyProperty,
+        emptyString = this.emptyString,
+        numberString = this.numberString,
+        boolString = this.boolString,
+        nullString = this.nullString,
+        aBool = this.aBool,
+        zero = this.zero,
         )
 }

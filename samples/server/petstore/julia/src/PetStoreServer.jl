@@ -9,7 +9,7 @@ The following server methods must be implemented:
 
 - **dummy**
     - *invocation:* GET /example/someMethod
-    - *signature:* dummy(req::HTTP.Request;) -> Dummy200Response
+    - *signature:* dummy(req::HTTP.Request;) -> ExampleResponse
 """
 module PetStoreServer
 

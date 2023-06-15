@@ -10,22 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { OtherObject } from '../models/OtherObject.ts';
 import { HttpFile } from '../http/http.ts';
 
 /**
 * dummy
 */
 export class ExampleResponse {
-    'myOnlyProperty'?: OtherObject;
+    'emptyString'?: string;
+    'numberString'?: string;
+    'boolString'?: string;
+    'nullString'?: string;
+    'aBool'?: boolean;
+    'zero'?: number;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "myOnlyProperty",
-            "baseName": "myOnlyProperty",
-            "type": "OtherObject",
+            "name": "emptyString",
+            "baseName": "emptyString",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "numberString",
+            "baseName": "numberString",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "boolString",
+            "baseName": "boolString",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "nullString",
+            "baseName": "nullString",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "aBool",
+            "baseName": "aBool",
+            "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "zero",
+            "baseName": "zero",
+            "type": "number",
             "format": ""
         }    ];
 
