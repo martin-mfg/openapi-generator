@@ -1,0 +1,13 @@
+.gitignore
+.swiftformat
+Package.swift
+README.md
+Sources/PetstoreClient/APIs.swift
+Sources/PetstoreClient/APIs/DefaultAPI.swift
+Sources/PetstoreClient/Configuration.swift
+Sources/PetstoreClient/Extensions.swift
+Sources/PetstoreClient/Models/ExampleResponse.swift
+Sources/PetstoreClient/OpenISO8601DateFormatter.swift
+Sources/PetstoreClient/Validation.swift
+docs/DefaultAPI.md
+docs/ExampleResponse.md

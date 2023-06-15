@@ -1,0 +1,11 @@
+README.md
+api/DefaultApi.ts
+api/api.ts
+configuration.ts
+git_push.sh
+index.ts
+model/ExampleResponse.ts
+model/models.ts
+package.json
+tsconfig.json
+variables.ts

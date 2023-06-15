@@ -1,0 +1,13 @@
+OpenAPI.Build.cs
+Private/OpenAPIBaseModel.cpp
+Private/OpenAPIDefaultApi.cpp
+Private/OpenAPIDefaultApiOperations.cpp
+Private/OpenAPIExampleResponse.cpp
+Private/OpenAPIHelpers.cpp
+Private/OpenAPIModule.cpp
+Private/OpenAPIModule.h
+Public/OpenAPIBaseModel.h
+Public/OpenAPIDefaultApi.h
+Public/OpenAPIDefaultApiOperations.h
+Public/OpenAPIExampleResponse.h
+Public/OpenAPIHelpers.h

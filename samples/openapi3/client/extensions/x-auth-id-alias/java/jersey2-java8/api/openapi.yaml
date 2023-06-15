@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  description: ""
+  title: ""
+  version: ""
+servers:
+- url: /
+paths:
+  /example/someMethod:
+    get:
+      description: ""
+      operationId: ""
+      responses:
+        "200":
+          content:
+            /:
+              schema:
+                $ref: '#/components/schemas/ExampleResponse'
+          description: ""
+      x-accepts: /
+components:
+  schemas:
+    ExampleResponse:
+      description: ""
+      properties:
+        myOnlyProperty:
+          items:
+            type: boolean
+          type: array
+      type: object
+
