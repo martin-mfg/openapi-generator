@@ -1,8 +1,0 @@
-.gitignore
-README.md
-composer.json
-src/App/ApiClient.php
-src/App/ApiClientFactory.php
-src/App/DTO/ExampleResponse.php
-src/App/DTO/Node.php
-src/App/DTO/OtherObject.php
