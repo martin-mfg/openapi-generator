@@ -1,7 +1,0 @@
-.openapi-generator-ignore
-README.md
-Setup.hs
-dummy.cabal
-lib/Dummy/API.hs
-lib/Dummy/Types.hs
-stack.yaml

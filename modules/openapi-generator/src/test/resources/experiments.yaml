@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: dummy
-  version: dumy
+  version: dummy
   description: dummy
 paths:
   /example/someMethod:
@@ -22,7 +22,10 @@ components:
       description: dummy
       properties:
         myOnlyProperty:
-          type: array
-          uniqueItems: true
-          items:
-            type: number
+          $ref: '#/components/schemas/OtherObject'
+    OtherObject:
+      type: object
+      description: dummy
+      properties:
+        myOnlyProperty2:
+          $ref: '#/components/schemas/ExampleResponse'
