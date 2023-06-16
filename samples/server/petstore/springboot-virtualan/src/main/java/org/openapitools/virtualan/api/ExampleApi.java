@@ -63,7 +63,7 @@ public interface ExampleApi {
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
-        produces = { "/" }
+        produces = { "*/*" }
     )
     default ResponseEntity<ExampleResponse> exampleSomeMethodGet(
         

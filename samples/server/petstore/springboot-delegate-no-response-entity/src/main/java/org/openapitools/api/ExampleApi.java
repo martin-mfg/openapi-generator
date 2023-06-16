@@ -45,7 +45,7 @@ public interface ExampleApi {
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
-        produces = { "/" }
+        produces = { "*/*" }
     )
     @ResponseStatus(HttpStatus.OK)
     default ExampleResponse exampleSomeMethodGet(
