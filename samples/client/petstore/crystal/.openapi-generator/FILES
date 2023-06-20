@@ -1,0 +1,15 @@
+.gitignore
+.openapi-generator-ignore
+.travis.yml
+README.md
+git_push.sh
+shard.yml
+spec/api/default_api_spec.cr
+spec/models/example_response_spec.cr
+spec/spec_helper.cr
+src/petstore.cr
+src/petstore/api/default_api.cr
+src/petstore/api_client.cr
+src/petstore/api_error.cr
+src/petstore/configuration.cr
+src/petstore/models/example_response.cr

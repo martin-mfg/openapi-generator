@@ -1,0 +1,8 @@
+.gitignore
+.openapi-generator-ignore
+git_push.sh
+petstore-1.0.0-1.rockspec
+petstore/api/default_api.lua
+petstore/model/example_response.lua
+spec/default_api_spec.lua
+spec/example_response_spec.lua

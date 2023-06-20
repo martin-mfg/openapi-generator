@@ -1,0 +1,8 @@
+.openapi-generator-ignore
+Dockerfile
+README.md
+_petstore-cli
+docs/DefaultApi.md
+docs/ExampleResponse.md
+petstore-cli
+petstore-cli.bash-completion

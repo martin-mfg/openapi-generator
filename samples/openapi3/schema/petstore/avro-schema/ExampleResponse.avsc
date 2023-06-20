@@ -1,0 +1,18 @@
+{
+  "namespace": "model",
+  "type": "record",
+  "doc": "dummy",
+  "name": "ExampleResponse",
+  "fields": [
+    {
+      "name": "myOnlyProperty",
+      "type": ["null", {
+        "type": "set",
+        "items": "double"
+      }],
+      "doc": "",
+      "default": null
+    }
+  ]
+
+}

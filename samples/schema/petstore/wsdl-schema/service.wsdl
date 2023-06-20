@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:schemas="http://localhost/soap/ServiceV1/model" xmlns:wsdl="http://localhost/soap/ServiceV1/service" targetNamespace="http://localhost/soap/ServiceV1/service" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:tns="http://localhost/soap/ServiceV1/model" targetNamespace="http://localhost/soap/ServiceV1/model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetExampleSomemethod_RequestMessage" type="schemas:GetExampleSomemethod_RequestMessage" />
+      <xs:element name="GetExampleSomemethod_ResponseMessage" type="schemas:GetExampleSomemethod_ResponseMessage" />
+      <xs:complexType name="ExampleResponse">
+        <xs:annotation>
+          <xs:documentation>dummy</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="myOnlyProperty" type="xs:number" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetExampleSomemethod_RequestMessage" />
+      <xs:complexType name="GetExampleSomemethod_ResponseMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="ExampleResponse" type="schemas:ExampleResponse">
+            <xs:annotation>
+              <xs:documentation>dummy</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="GetExampleSomemethod_RequestMessage">
+    <part name="GetExampleSomemethod_RequestMessage" element="schemas:GetExampleSomemethod_RequestMessage" />
+  </message>
+  <message name="GetExampleSomemethod_ResponseMessage">
+    <part name="GetExampleSomemethod_ResponseMessage" element="schemas:GetExampleSomemethod_ResponseMessage" />
+  </message>
+  <portType name="ServiceV1_PortType">
+    <operation name="GetExampleSomemethod">
+      <documentation>dummy</documentation>
+      <input message="wsdl:GetExampleSomemethod_RequestMessage" />
+      <output message="wsdl:GetExampleSomemethod_ResponseMessage">
+        <documentation>dummy</documentation>
+      </output>
+    </operation>
+  </portType>
+  <binding name="ServiceV1_Binding" type="wsdl:ServiceV1_PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="GetExampleSomemethod">
+      <soap:operation soapAction="GetExampleSomemethod" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServiceV1">
+    <documentation>dummy</documentation>
+    <port name="default_Port" binding="wsdl:ServiceV1_Binding">
+      <soap:address location="http://localhost/soap/ServiceV1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

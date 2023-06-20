@@ -1,0 +1,14 @@
+.openapi-generator-ignore
+App.xojo_code
+Build Automation.xojo_code
+Mock.xojo_code
+README.md
+XojoOpenAPIClientSynchronous.xojo_code
+XojoOpenAPIClientSynchronous.xojo_project
+XojoOpenAPIClientSynchronous.xojo_resources
+XojoOpenAPIClientSynchronous/APIs.xojo_code
+XojoOpenAPIClientSynchronous/APIs/DefaultApi.xojo_code
+XojoOpenAPIClientSynchronous/Models.xojo_code
+XojoOpenAPIClientSynchronous/Models/ExampleResponse.xojo_code
+XojoOpenAPIClientSynchronous/Models/ExampleResponseOptional.xojo_code
+XojoOpenAPIClientSynchronous/XojoOpenAPIClientSynchronousException.xojo_code
