@@ -7,10 +7,10 @@ interface ExampleApiService {
 
     /**
      * GET /example/someMethod
-     * 
+     * dummy
      *
-     * @return  (status code 200)
-     * @see ExampleApi#exampleSomeMethodGet
+     * @return dummy (status code 200)
+     * @see ExampleApi#dummy
      */
-    suspend fun exampleSomeMethodGet(): ExampleResponse
+    suspend fun dummy(): ExampleResponse
 }

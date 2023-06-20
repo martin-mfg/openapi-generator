@@ -1,6 +1,6 @@
-# Auto-Generated OpenAPI Bindings to ``
+# Auto-Generated OpenAPI Bindings to `Dummy`
 
-The library in `lib` provides auto-generated-from-OpenAPI bindings to the  API.
+The library in `lib` provides auto-generated-from-OpenAPI bindings to the Dummy API.
 
 ## Installation
 
@@ -19,22 +19,22 @@ packages:
 
 ## Main Interface
 
-The main interface to this library is in the `.API` module, which exports the Backend type. The Backend
+The main interface to this library is in the `Dummy.API` module, which exports the DummyBackend type. The DummyBackend
 type can be used to create and define servers and clients for the API.
 
 ## Creating a Client
 
-A client can be created via the `createClient` function, which will generate a function for every endpoint of the API.
-Then these functions can be invoked with `runClientWithManager` or more conveniently with `callClient`
+A client can be created via the `createDummyClient` function, which will generate a function for every endpoint of the API.
+Then these functions can be invoked with `runDummyClientWithManager` or more conveniently with `callDummyClient`
 (depending if you want an `Either` back or you want to catch) to access the API endpoint they refer to, if the API is served
 at the `url` you specified.
 
-For example, if `localhost:8080` is serving the  API, you can write:
+For example, if `localhost:8080` is serving the Dummy API, you can write:
 
 ```haskell
 {-# LANGUAGE RecordWildCards #-}
 
-import .API as API
+import Dummy.API as API
 
 import           Network.HTTP.Client     (newManager)
 import           Network.HTTP.Client.TLS (tlsManagerSettings)
@@ -50,42 +50,42 @@ main = do
   manager <- newManager tlsManagerSettings
 
   -- Create the client (all endpoint functions will be available)
-  Backend{..} <- API.createClient
+  DummyBackend{..} <- API.createDummyClient
 
-  -- Any  API call can go here, e.g. here we call `getSomeEndpoint`
-  API.call (mkClientEnv manager url) getSomeEndpoint
+  -- Any Dummy API call can go here, e.g. here we call `getSomeEndpoint`
+  API.callDummy (mkClientEnv manager url) getSomeEndpoint
 ```
 
 ## Creating a Server
 
-In order to create a server, you must use the `runMiddlewareServer` function. However, you unlike the client, in which case you *got* a `Backend`
-from the library, you must instead *provide* a `Backend`. For example, if you have defined handler functions for all the
-functions in `.Handlers`, you can write:
+In order to create a server, you must use the `runDummyMiddlewareServer` function. However, you unlike the client, in which case you *got* a `DummyBackend`
+from the library, you must instead *provide* a `DummyBackend`. For example, if you have defined handler functions for all the
+functions in `Dummy.Handlers`, you can write:
 
 ```haskell
 {-# LANGUAGE RecordWildCards #-}
 
-import .API
+import Dummy.API
 -- required dependency: wai
 import Network.Wai (Middleware)
 -- required dependency: wai-extra
 import Network.Wai.Middleware.RequestLogger (logStdout)
 
--- A module you wrote yourself, containing all handlers needed for the Backend type.
-import .Handlers
+-- A module you wrote yourself, containing all handlers needed for the DummyBackend type.
+import Dummy.Handlers
 
--- If you would like to not use any middlewares you could use runServer instead
+-- If you would like to not use any middlewares you could use runDummyServer instead
 
 -- Combined middlewares
 requestMiddlewares :: Middleware
 requestMiddlewares = logStdout
 
--- Run a  server on localhost:8080
+-- Run a Dummy server on localhost:8080
 main :: IO ()
 main = do
-  let server = Backend{..}
+  let server = DummyBackend{..}
       config = Config "http://localhost:8080/"
-  runMiddlewareServer config requestMiddlewares server
+  runDummyMiddlewareServer config requestMiddlewares server
 ```
 
 ## Authentication
@@ -107,13 +107,13 @@ newtype Account = Account {unAccount :: Text}
 type instance AuthServerData Protected = Account
 ```
 
-Additionally, you have to provide value for the `Auth` type provided by the
-`.API` module:
+Additionally, you have to provide value for the `DummyAuth` type provided by the
+`Dummy.API` module:
 
 ```
-auth :: Auth
+auth :: DummyAuth
 auth =
-  Auth
+  DummyAuth
     { lookupUser = lookupAccount,
       authError = \request -> err401 {errBody = "Missing header"}
     }
@@ -124,5 +124,5 @@ auth =
 functions:
 
 ```
-runMiddlewareServer config requestMiddlewares auth server
+runDummyMiddlewareServer config requestMiddlewares auth server
 ```

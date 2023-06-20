@@ -19,9 +19,9 @@ import javax.validation.Valid;
 public interface ExampleApi {
 
     @GET
-    @Produces({ "/" })
-    @ApiOperation(value = "", notes = "", tags={  })
+    @Produces({ "*/*" })
+    @ApiOperation(value = "", notes = "dummy", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "", response = ExampleResponse.class) })
-    ExampleResponse exampleSomeMethodGet();
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class) })
+    ExampleResponse dummy();
 }

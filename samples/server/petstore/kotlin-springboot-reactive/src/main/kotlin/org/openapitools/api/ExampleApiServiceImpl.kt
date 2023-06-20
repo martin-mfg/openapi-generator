@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service
 @Service
 class ExampleApiServiceImpl : ExampleApiService {
 
-    override suspend fun exampleSomeMethodGet(): ExampleResponse {
+    override suspend fun dummy(): ExampleResponse {
         TODO("Implement me")
     }
 }

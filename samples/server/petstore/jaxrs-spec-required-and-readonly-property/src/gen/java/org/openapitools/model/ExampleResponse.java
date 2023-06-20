@@ -1,9 +1,11 @@
 package org.openapitools.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import java.io.Serializable;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -16,13 +18,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * 
+ * dummy
  **/
-@ApiModel(description = "")
+@ApiModel(description = "dummy")
 @JsonTypeName("ExampleResponse")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen")
 public class ExampleResponse  implements Serializable {
-  private @Valid List<Boolean> myOnlyProperty;
+  private @Valid Set<BigDecimal> myOnlyProperty;
 
   protected ExampleResponse(ExampleResponseBuilder<?, ?> b) {
     this.myOnlyProperty = b.myOnlyProperty;
@@ -33,7 +35,7 @@ public class ExampleResponse  implements Serializable {
 
   /**
    **/
-  public ExampleResponse myOnlyProperty(List<Boolean> myOnlyProperty) {
+  public ExampleResponse myOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
     return this;
   }
@@ -41,25 +43,26 @@ public class ExampleResponse  implements Serializable {
   
   @ApiModelProperty(value = "")
   @JsonProperty("myOnlyProperty")
-  public List<Boolean> getMyOnlyProperty() {
+  public Set<BigDecimal> getMyOnlyProperty() {
     return myOnlyProperty;
   }
 
   @JsonProperty("myOnlyProperty")
-  public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+  @JsonDeserialize(as = LinkedHashSet.class)
+  public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 
-  public ExampleResponse addMyOnlyPropertyItem(Boolean myOnlyPropertyItem) {
+  public ExampleResponse addMyOnlyPropertyItem(BigDecimal myOnlyPropertyItem) {
     if (this.myOnlyProperty == null) {
-      this.myOnlyProperty = new ArrayList<>();
+      this.myOnlyProperty = new LinkedHashSet<>();
     }
 
     this.myOnlyProperty.add(myOnlyPropertyItem);
     return this;
   }
 
-  public ExampleResponse removeMyOnlyPropertyItem(Boolean myOnlyPropertyItem) {
+  public ExampleResponse removeMyOnlyPropertyItem(BigDecimal myOnlyPropertyItem) {
     if (myOnlyPropertyItem != null && this.myOnlyProperty != null) {
       this.myOnlyProperty.remove(myOnlyPropertyItem);
     }
@@ -124,12 +127,12 @@ public class ExampleResponse  implements Serializable {
   }
 
   public static abstract class ExampleResponseBuilder<C extends ExampleResponse, B extends ExampleResponseBuilder<C, B>>  {
-    private List<Boolean> myOnlyProperty;
+    private Set<BigDecimal> myOnlyProperty;
     protected abstract B self();
 
     public abstract C build();
 
-    public B myOnlyProperty(List<Boolean> myOnlyProperty) {
+    public B myOnlyProperty(Set<BigDecimal> myOnlyProperty) {
       this.myOnlyProperty = myOnlyProperty;
       return self();
     }

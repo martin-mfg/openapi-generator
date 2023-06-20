@@ -12,10 +12,10 @@
 }while(0)
 
 
-// 
+// dummy
 //
 example_response_t*
-DefaultAPI_exampleSomeMethodGet(apiClient_t *apiClient)
+DefaultAPI_dummy(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -31,7 +31,7 @@ DefaultAPI_exampleSomeMethodGet(apiClient_t *apiClient)
 
 
 
-    list_addElement(localVarHeaderType,"/"); //produces
+    list_addElement(localVarHeaderType,"*/*"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -44,7 +44,7 @@ DefaultAPI_exampleSomeMethodGet(apiClient_t *apiClient)
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","");
+    //    printf("%s\n","dummy");
     //}
     //nonprimitive not container
     cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);

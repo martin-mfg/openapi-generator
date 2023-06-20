@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
-| [**exampleSomeMethodGetWithHttpInfo**](DefaultApi.md#exampleSomeMethodGetWithHttpInfo) | **GET** /example/someMethod |  |
+| [**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod |  |
+| [**dummyWithHttpInfo**](DefaultApi.md#dummyWithHttpInfo) | **GET** /example/someMethod |  |
 
 
 
-## exampleSomeMethodGet
+## dummy
 
-> CompletableFuture<ExampleResponse> exampleSomeMethodGet()
-
-
+> CompletableFuture<ExampleResponse> dummy()
 
 
+
+dummy
 
 ### Example
 
@@ -35,10 +35,10 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<ExampleResponse> result = apiInstance.exampleSomeMethodGet();
+            CompletableFuture<ExampleResponse> result = apiInstance.dummy();
             System.out.println(result.get());
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet");
+            System.err.println("Exception when calling DefaultApi#dummy");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -64,20 +64,20 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: /
+- **Accept**: */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** |  |  -  |
+| **200** | dummy |  -  |
 
-## exampleSomeMethodGetWithHttpInfo
+## dummyWithHttpInfo
 
-> CompletableFuture<ApiResponse<ExampleResponse>> exampleSomeMethodGet exampleSomeMethodGetWithHttpInfo()
-
-
+> CompletableFuture<ApiResponse<ExampleResponse>> dummy dummyWithHttpInfo()
 
 
+
+dummy
 
 ### Example
 
@@ -98,19 +98,19 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<ApiResponse<ExampleResponse>> response = apiInstance.exampleSomeMethodGetWithHttpInfo();
+            CompletableFuture<ApiResponse<ExampleResponse>> response = apiInstance.dummyWithHttpInfo();
             System.out.println("Status code: " + response.get().getStatusCode());
             System.out.println("Response headers: " + response.get().getHeaders());
             System.out.println("Response body: " + response.get().getData());
         } catch (InterruptedException | ExecutionException e) {
             ApiException apiException = (ApiException)e.getCause();
-            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet");
+            System.err.println("Exception when calling DefaultApi#dummy");
             System.err.println("Status code: " + apiException.getCode());
             System.err.println("Response headers: " + apiException.getResponseHeaders());
             System.err.println("Reason: " + apiException.getResponseBody());
             e.printStackTrace();
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet");
+            System.err.println("Exception when calling DefaultApi#dummy");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Response headers: " + e.getResponseHeaders());
             System.err.println("Reason: " + e.getResponseBody());
@@ -136,10 +136,10 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: /
+- **Accept**: */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** |  |  -  |
+| **200** | dummy |  -  |
 

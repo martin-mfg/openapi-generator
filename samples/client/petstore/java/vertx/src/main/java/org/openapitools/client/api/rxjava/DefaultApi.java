@@ -24,43 +24,43 @@ public class DefaultApi {
 
     /**
     * 
-    * 
+    * dummy
     * @param resultHandler Asynchronous result handler
     */
-    public void exampleSomeMethodGet(Handler<AsyncResult<ExampleResponse>> resultHandler) {
-        delegate.exampleSomeMethodGet(resultHandler);
+    public void dummy(Handler<AsyncResult<ExampleResponse>> resultHandler) {
+        delegate.dummy(resultHandler);
     }
 
     /**
     * 
-    * 
+    * dummy
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void exampleSomeMethodGet(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
-        delegate.exampleSomeMethodGet(authInfo, resultHandler);
+    public void dummy(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
+        delegate.dummy(authInfo, resultHandler);
     }
 
     /**
     * 
-    * 
+    * dummy
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<ExampleResponse> rxExampleSomeMethodGet() {
+    public Single<ExampleResponse> rxDummy() {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
-            delegate.exampleSomeMethodGet(fut)
+            delegate.dummy(fut)
         ));
     }
 
     /**
     * 
-    * 
+    * dummy
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<ExampleResponse> rxExampleSomeMethodGet(ApiClient.AuthInfo authInfo) {
+    public Single<ExampleResponse> rxDummy(ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
-            delegate.exampleSomeMethodGet(authInfo, fut)
+            delegate.dummy(authInfo, fut)
         ));
     }
 

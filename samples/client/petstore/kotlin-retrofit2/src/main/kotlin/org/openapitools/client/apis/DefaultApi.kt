@@ -11,13 +11,13 @@ import org.openapitools.client.models.ExampleResponse
 interface DefaultApi {
     /**
      * 
-     * 
+     * dummy
      * Responses:
-     *  - 200: 
+     *  - 200: dummy
      *
      * @return [Call]<[ExampleResponse]>
      */
     @GET("example/someMethod")
-    fun exampleSomeMethodGet(): Call<ExampleResponse>
+    fun dummy(): Call<ExampleResponse>
 
 }

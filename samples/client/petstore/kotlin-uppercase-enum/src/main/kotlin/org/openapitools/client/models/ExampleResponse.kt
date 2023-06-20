@@ -26,7 +26,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty 
  */
@@ -35,7 +35,7 @@ import kotlinx.serialization.encoding.Encoder
 data class ExampleResponse (
 
     @SerialName(value = "myOnlyProperty")
-    val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    val myOnlyProperty: kotlin.collections.Set<@Contextual java.math.BigDecimal>? = null
 
 )
 

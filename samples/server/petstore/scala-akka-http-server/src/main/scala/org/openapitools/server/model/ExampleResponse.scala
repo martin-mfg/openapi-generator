@@ -2,11 +2,11 @@ package org.openapitools.server.model
 
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty  for example: ''null''
 */
 final case class ExampleResponse (
-  myOnlyProperty: Option[Seq[Boolean]] = None
+  myOnlyProperty: Option[Set[Double]] = None
 )
 

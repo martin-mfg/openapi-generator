@@ -24,14 +24,14 @@ public abstract class DefaultApiControllerImpInterface {
     @Inject private SecurityAPIUtils securityAPIUtils;
     private ObjectMapper mapper = new ObjectMapper();
 
-    public Result exampleSomeMethodGetHttp(Http.Request request) throws Exception {
-        ExampleResponse obj = exampleSomeMethodGet(request);
+    public Result dummyHttp(Http.Request request) throws Exception {
+        ExampleResponse obj = dummy(request);
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);
 
     }
 
-    public abstract ExampleResponse exampleSomeMethodGet(Http.Request request) throws Exception;
+    public abstract ExampleResponse dummy(Http.Request request) throws Exception;
 
 }

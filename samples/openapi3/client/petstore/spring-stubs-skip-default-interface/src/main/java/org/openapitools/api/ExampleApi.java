@@ -39,25 +39,25 @@ public interface ExampleApi {
 
     /**
      * GET /example/someMethod
-     * 
+     * dummy
      *
-     * @return  (status code 200)
+     * @return dummy (status code 200)
      */
     @Operation(
-        operationId = "exampleSomeMethodGet",
-        description = "",
+        operationId = "dummy",
+        description = "dummy",
         responses = {
-            @ApiResponse(responseCode = "200", description = "", content = {
-                @Content(mediaType = "/", schema = @Schema(implementation = ExampleResponse.class))
+            @ApiResponse(responseCode = "200", description = "dummy", content = {
+                @Content(mediaType = "*/*", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
     )
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
-        produces = "/"
+        produces = "*/*"
     )
-    ResponseEntity<ExampleResponse> exampleSomeMethodGet(
+    ResponseEntity<ExampleResponse> dummy(
         
     ) throws Exception;
 

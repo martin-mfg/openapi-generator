@@ -13,10 +13,10 @@ part of openapi.api;
 class ExampleResponse {
   /// Returns a new [ExampleResponse] instance.
   ExampleResponse({
-    this.myOnlyProperty = const [],
+    this.myOnlyProperty = const {},
   });
 
-  List<bool> myOnlyProperty;
+  Set<num> myOnlyProperty;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is ExampleResponse &&
@@ -32,7 +32,7 @@ class ExampleResponse {
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'myOnlyProperty'] = this.myOnlyProperty;
+      json[r'myOnlyProperty'] = this.myOnlyProperty.toList(growable: false);
     return json;
   }
 
@@ -56,8 +56,8 @@ class ExampleResponse {
 
       return ExampleResponse(
         myOnlyProperty: json[r'myOnlyProperty'] is Iterable
-            ? (json[r'myOnlyProperty'] as Iterable).cast<bool>().toList(growable: false)
-            : const [],
+            ? (json[r'myOnlyProperty'] as Iterable).cast<num>().toSet()
+            : const {},
       );
     }
     return null;

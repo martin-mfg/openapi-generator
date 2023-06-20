@@ -36,7 +36,7 @@ const FRAGMENT_ENCODE_SET: &AsciiSet = &percent_encoding::CONTROLS
 const ID_ENCODE_SET: &AsciiSet = &FRAGMENT_ENCODE_SET.add(b'|');
 
 use crate::{Api,
-     ExampleSomeMethodGetResponse
+     DummyResponse
      };
 
 /// Convert input into a base path, e.g. "http://example:123". Also checks the scheme as it goes.
@@ -380,9 +380,9 @@ impl<S, C> Api<C> for Client<S, C> where
         }
     }
 
-    async fn example_some_method_get(
+    async fn dummy(
         &self,
-        context: &C) -> Result<ExampleSomeMethodGetResponse, ApiError>
+        context: &C) -> Result<DummyResponse, ApiError>
     {
         let mut client_service = self.client_service.clone();
         let mut uri = format!(
@@ -430,8 +430,10 @@ impl<S, C> Api<C> for Client<S, C> where
                         .map_err(|e| ApiError(format!("Failed to read response: {}", e))).await?;
                 let body = str::from_utf8(&body)
                     .map_err(|e| ApiError(format!("Response was not valid UTF8: {}", e)))?;
-                let body = body.to_string();
-                Ok(ExampleSomeMethodGetResponse::Status200
+                let body = serde_json::from_str::<models::ExampleResponse>(body).map_err(|e| {
+                    ApiError(format!("Response body did not match the schema: {}", e))
+                })?;
+                Ok(DummyResponse::Dummy
                     (body)
                 )
             }

@@ -17,9 +17,9 @@ open class DefaultAPI {
 
      - returns: Promise<ExampleResponse>
      */
-    open class func exampleSomeMethodGet() -> Promise<ExampleResponse> {
+    open class func dummy() -> Promise<ExampleResponse> {
         let deferred = Promise<ExampleResponse>.pending()
-        exampleSomeMethodGetWithRequestBuilder().execute { result in
+        dummyWithRequestBuilder().execute { result in
             switch result {
             case let .success(response):
                 deferred.resolver.fulfill(response.body)
@@ -32,10 +32,10 @@ open class DefaultAPI {
 
     /**
      - GET /example/someMethod
-     - 
+     - dummy
      - returns: RequestBuilder<ExampleResponse> 
      */
-    open class func exampleSomeMethodGetWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+    open class func dummyWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil

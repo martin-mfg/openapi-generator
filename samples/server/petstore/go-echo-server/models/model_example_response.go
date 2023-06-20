@@ -1,7 +1,7 @@
 package models
 
-// ExampleResponse - 
+// ExampleResponse - dummy
 type ExampleResponse struct {
 
-	MyOnlyProperty []bool `json:"myOnlyProperty,omitempty"`
+	MyOnlyProperty []float32 `json:"myOnlyProperty,omitempty"`
 }

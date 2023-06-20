@@ -19,12 +19,12 @@ import javax.validation.Valid;
 public class ExampleApi {
 
     @GET
-    @Produces({ "/" })
-    @ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
+    @Produces({ "*/*" })
+    @ApiOperation(value = "", notes = "dummy", response = ExampleResponse.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
     })
-    public Response exampleSomeMethodGet() {
+    public Response dummy() {
         return Response.ok().entity("magic!").build();
     }
 }

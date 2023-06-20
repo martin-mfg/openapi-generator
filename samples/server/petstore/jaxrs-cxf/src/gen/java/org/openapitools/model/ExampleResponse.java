@@ -1,8 +1,10 @@
 package org.openapitools.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import io.swagger.annotations.ApiModel;
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
 
@@ -11,33 +13,35 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
-  * 
+  * dummy
  **/
-@ApiModel(description="")
+@ApiModel(description="dummy")
 
 public class ExampleResponse  {
   
   @ApiModelProperty(value = "")
-  private List<Boolean> myOnlyProperty;
+  @Valid
+  private Set<BigDecimal> myOnlyProperty;
  /**
    * Get myOnlyProperty
    * @return myOnlyProperty
   **/
   @JsonProperty("myOnlyProperty")
-  public List<Boolean> getMyOnlyProperty() {
+  public Set<BigDecimal> getMyOnlyProperty() {
     return myOnlyProperty;
   }
 
-  public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+  @JsonDeserialize(as = LinkedHashSet.class)
+  public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 
-  public ExampleResponse myOnlyProperty(List<Boolean> myOnlyProperty) {
+  public ExampleResponse myOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
     return this;
   }
 
-  public ExampleResponse addMyOnlyPropertyItem(Boolean myOnlyPropertyItem) {
+  public ExampleResponse addMyOnlyPropertyItem(BigDecimal myOnlyPropertyItem) {
     this.myOnlyProperty.add(myOnlyPropertyItem);
     return this;
   }

@@ -1,8 +1,8 @@
-#  Bash client
+# dummy Bash client
 
 ## Overview
 
-This is a Bash client script for accessing  service.
+This is a Bash client script for accessing dummy service.
 
 The script uses cURL underneath for making all REST calls.
 
@@ -103,7 +103,7 @@ All URIs are relative to **
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**exampleSomeMethodGet**](docs/DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
+*DefaultApi* | [**dummy**](docs/DefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
 ## Documentation For Models

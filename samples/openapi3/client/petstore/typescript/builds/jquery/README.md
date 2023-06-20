@@ -1,4 +1,4 @@
-## ts-petstore-client@
+## ts-petstore-client@dumy
 
 This generator creates TypeScript/JavaScript client that utilizes jquery.
 
@@ -21,7 +21,7 @@ Navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install ts-petstore-client@ --save
+npm install ts-petstore-client@dumy --save
 ```
 
 _unPublished (not recommended):_

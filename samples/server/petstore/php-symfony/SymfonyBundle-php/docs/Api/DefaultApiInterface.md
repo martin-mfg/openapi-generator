@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultApiInterface.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
+[**dummy**](DefaultApiInterface.md#dummy) | **GET** /example/someMethod | 
 
 
 ## Service Declaration
@@ -18,12 +18,12 @@ services:
     # ...
 ```
 
-## **exampleSomeMethodGet**
-> OpenAPI\Server\Model\ExampleResponse exampleSomeMethodGet()
+## **dummy**
+> OpenAPI\Server\Model\ExampleResponse dummy()
 
 
 
-
+dummy
 
 ### Example Implementation
 ```php
@@ -40,9 +40,9 @@ class DefaultApi implements DefaultApiInterface
     // ...
 
     /**
-     * Implementation of DefaultApiInterface#exampleSomeMethodGet
+     * Implementation of DefaultApiInterface#dummy
      */
-    public function exampleSomeMethodGet(int &$responseCode, array &$responseHeaders): array|object|null
+    public function dummy(int &$responseCode, array &$responseHeaders): array|object|null
     {
         // Implement the operation ...
     }
@@ -65,7 +65,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

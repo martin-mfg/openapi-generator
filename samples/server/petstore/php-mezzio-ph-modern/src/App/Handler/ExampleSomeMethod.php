@@ -17,8 +17,8 @@ class ExampleSomeMethod
      */
     #[PHA\Get()]
     // TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
-    #[PHA\Producer("/", PHProducer\Transfer::class)]
-    public function exampleSomeMethodGet(ServerRequestInterface $request): \App\DTO\ExampleResponse
+    #[PHA\Producer("n/a", PHProducer\Transfer::class)]
+    public function dummy(ServerRequestInterface $request): \App\DTO\ExampleResponse
     {
         //TODO implement method
         throw new PHException\HttpCode(501, "Not implemented");

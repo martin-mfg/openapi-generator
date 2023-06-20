@@ -1,4 +1,4 @@
-# org.openapitools.client - Kotlin client library for 
+# org.openapitools.client - Kotlin client library for dummy
 
 
 A kotlin client for Android using the currently recommended http client, Volley. See https://developer.android.com/training/volley
@@ -175,7 +175,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**exampleSomeMethodGet**](docs/DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
+*DefaultApi* | [**dummy**](docs/DefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
 <a id="documentation-for-models"></a>

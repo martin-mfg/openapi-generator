@@ -27,7 +27,7 @@ import javax.annotation.Generated;
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 @Controller
-@RequestMapping("${openapi..base-path:}")
+@RequestMapping("${openapi.dummy.base-path:}")
 public class ExampleApiController implements ExampleApi {
 
     private final ExampleApiDelegate delegate;

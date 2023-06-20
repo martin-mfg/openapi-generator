@@ -17,7 +17,7 @@ import javax.validation.Valid;
 
 @org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition(
    info = @org.eclipse.microprofile.openapi.annotations.info.Info(
-        title = "", version="", description=""
+        title = "", version="dumy", description=""
    ),
    tags = @org.eclipse.microprofile.openapi.annotations.tags.Tag(name="", description="")
 )
@@ -28,19 +28,19 @@ public class ExampleApi {
 
     @GET
     @Produces({ "*/*" })
-    @ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
+    @ApiOperation(value = "", notes = "dummy", response = ExampleResponse.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
     })
     
-    @org.eclipse.microprofile.openapi.annotations.Operation(operationId = "exampleSomeMethodGet", summary = "", description = "")
+    @org.eclipse.microprofile.openapi.annotations.Operation(operationId = "dummy", summary = "", description = "dummy")
     
     @org.eclipse.microprofile.openapi.annotations.responses.APIResponses(value = { 
-            @org.eclipse.microprofile.openapi.annotations.responses.APIResponse(responseCode = "200", description = "",  content = { 
-                @org.eclipse.microprofile.openapi.annotations.media.Content(mediaType="/", schema = @org.eclipse.microprofile.openapi.annotations.media.Schema(implementation = ExampleResponse.class))
+            @org.eclipse.microprofile.openapi.annotations.responses.APIResponse(responseCode = "200", description = "dummy",  content = { 
+                @org.eclipse.microprofile.openapi.annotations.media.Content(mediaType="*/*", schema = @org.eclipse.microprofile.openapi.annotations.media.Schema(implementation = ExampleResponse.class))
             })
         })
-    public Response exampleSomeMethodGet() {
+    public Response dummy() {
         return Response.ok().entity("magic!").build();
     }
 }

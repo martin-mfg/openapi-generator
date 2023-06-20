@@ -4,13 +4,13 @@ use crate::models;
 #[cfg(any(feature = "client", feature = "server"))]
 use crate::header;
 
-/// 
+/// dummy
 #[derive(Debug, Clone, PartialEq, serde::Serialize, serde::Deserialize)]
 #[cfg_attr(feature = "conversion", derive(frunk::LabelledGeneric))]
 pub struct ExampleResponse {
     #[serde(rename = "myOnlyProperty")]
     #[serde(skip_serializing_if="Option::is_none")]
-    pub my_only_property: Option<Vec<bool>>,
+    pub my_only_property: Option<Vec<f64>>,
 
 }
 
@@ -54,7 +54,7 @@ impl std::str::FromStr for ExampleResponse {
         #[derive(Default)]
         #[allow(dead_code)]
         struct IntermediateRep {
-            pub my_only_property: Vec<Vec<bool>>,
+            pub my_only_property: Vec<Vec<f64>>,
         }
 
         let mut intermediate_rep = IntermediateRep::default();

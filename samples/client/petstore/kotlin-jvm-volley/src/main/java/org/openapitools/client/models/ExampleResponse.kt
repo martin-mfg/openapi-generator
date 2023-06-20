@@ -21,7 +21,7 @@ import org.openapitools.client.models.room.ExampleResponseRoomModel
 import org.openapitools.client.infrastructure.ITransformForStorage
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty 
  */
@@ -30,13 +30,13 @@ import org.openapitools.client.infrastructure.ITransformForStorage
 data class ExampleResponse (
 
     @SerializedName("myOnlyProperty")
-    val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    val myOnlyProperty: kotlin.collections.Set<java.math.BigDecimal>? = null
 
 ): ITransformForStorage<ExampleResponseRoomModel> {
     companion object { }
     override fun toRoomModel(): ExampleResponseRoomModel =
         ExampleResponseRoomModel(roomTableId = 0,
-        myOnlyProperty = this.myOnlyProperty,
+        
         )
 
 }

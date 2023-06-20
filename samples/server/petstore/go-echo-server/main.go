@@ -17,8 +17,8 @@ func main() {
 	e.Use(middleware.Recover())
 
 
-	// ExampleSomeMethodGet - 
-	e.GET("/example/someMethod", c.ExampleSomeMethodGet)
+	// Dummy - 
+	e.GET("/example/someMethod", c.Dummy)
 
 
 	// Start server

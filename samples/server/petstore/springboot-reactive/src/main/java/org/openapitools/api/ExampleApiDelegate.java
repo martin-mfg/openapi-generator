@@ -31,17 +31,17 @@ public interface ExampleApiDelegate {
 
     /**
      * GET /example/someMethod
-     * 
+     * dummy
      *
-     * @return  (status code 200)
-     * @see ExampleApi#exampleSomeMethodGet
+     * @return dummy (status code 200)
+     * @see ExampleApi#dummy
      */
-    default Mono<ResponseEntity<ExampleResponse>> exampleSomeMethodGet(ServerWebExchange exchange) {
+    default Mono<ResponseEntity<ExampleResponse>> dummy(ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
         for (MediaType mediaType : exchange.getRequest().getHeaders().getAccept()) {
-            if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {
-                String exampleString = "Custom MIME type example not yet supported: /";
+            if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
+                String exampleString = "{ \"myOnlyProperty\" : [ 0.8008281904610115, 0.8008281904610115 ] }";
                 result = ApiUtil.getExampleResponse(exchange, mediaType, exampleString);
                 break;
             }

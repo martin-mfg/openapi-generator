@@ -14,13 +14,14 @@ import javax.validation.Valid
 import io.swagger.annotations.ApiModelProperty
 
 /**
- * 
+ * dummy
  * @param myOnlyProperty 
  */
 data class ExampleResponse(
 
+    @field:Valid
     @ApiModelProperty(example = "null", value = "")
-    @get:JsonProperty("myOnlyProperty") val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    @get:JsonProperty("myOnlyProperty") val myOnlyProperty: kotlin.collections.Set<java.math.BigDecimal>? = null
 ) {
 
 }

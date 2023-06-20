@@ -14,13 +14,14 @@ import javax.validation.Valid
 import io.swagger.v3.oas.annotations.media.Schema
 
 /**
- * 
+ * dummy
  * @param myOnlyProperty 
  */
 data class ExampleResponse(
 
+    @field:Valid
     @Schema(example = "null", description = "")
-    @get:JsonProperty("myOnlyProperty") var myOnlyProperty: kotlin.collections.MutableList<kotlin.Boolean>? = null
+    @get:JsonProperty("myOnlyProperty") var myOnlyProperty: kotlin.collections.MutableSet<java.math.BigDecimal>? = null
 ) {
 
 }

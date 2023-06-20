@@ -4,7 +4,7 @@
     <artifactId>spring-http-interface</artifactId>
     <packaging>jar</packaging>
     <name>spring-http-interface</name>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>dumy-SNAPSHOT</version>
     <properties>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

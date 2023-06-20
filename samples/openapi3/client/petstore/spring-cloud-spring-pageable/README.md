@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>org.openapitools.openapi3</groupId>
     <artifactId>spring-cloud-spring-pageable</artifactId>
-    <version>1.0.0</version>
+    <version>dumy</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools.openapi3:spring-cloud-spring-pageable:1.0.0"
+compile "org.openapitools.openapi3:spring-cloud-spring-pageable:dumy"
 ```
 
 ### Others
@@ -49,5 +49,5 @@ mvn package
 
 Then manually install the following JARs:
 
-* target/spring-cloud-spring-pageable-1.0.0.jar
+* target/spring-cloud-spring-pageable-dumy.jar
 * target/lib/*.jar

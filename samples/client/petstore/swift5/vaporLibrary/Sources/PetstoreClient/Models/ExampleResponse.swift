@@ -11,12 +11,12 @@ import AnyCodable
 #endif
 import Vapor
 
-/**  */
+/** dummy */
 public final class ExampleResponse: Content, Hashable {
 
-    public var myOnlyProperty: [Bool]?
+    public var myOnlyProperty: Set<Double>?
 
-    public init(myOnlyProperty: [Bool]? = nil) {
+    public init(myOnlyProperty: Set<Double>? = nil) {
         self.myOnlyProperty = myOnlyProperty
     }
 

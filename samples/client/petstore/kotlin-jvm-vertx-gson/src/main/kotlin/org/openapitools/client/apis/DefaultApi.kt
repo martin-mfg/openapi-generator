@@ -37,7 +37,7 @@ import org.openapitools.client.infrastructure.*
 class DefaultApi(basePath: kotlin.String = ApiClient.defaultBasePath, accessToken: String? = null, apiKey: MutableMap<String, String> = mutableMapOf(), apiKeyPrefix: MutableMap<String, String> = mutableMapOf(), username: String? = null, password: String? = null, vertx: Vertx): ApiClient(basePath, accessToken, apiKey, apiKeyPrefix, username, password, vertx) {
     /**
      * 
-     * 
+     * dummy
      * @return ExampleResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -47,8 +47,8 @@ class DefaultApi(basePath: kotlin.String = ApiClient.defaultBasePath, accessToke
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun exampleSomeMethodGet() : Future<ExampleResponse> {
-        return exampleSomeMethodGetWithHttpInfo().map { localVarResponse ->
+    fun dummy() : Future<ExampleResponse> {
+        return dummyWithHttpInfo().map { localVarResponse ->
             when (localVarResponse.responseType) {
                 ResponseType.Success -> (localVarResponse as Success<*>).data as ExampleResponse
                 ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
@@ -67,21 +67,21 @@ class DefaultApi(basePath: kotlin.String = ApiClient.defaultBasePath, accessToke
 
     /**
      * 
-     * 
+     * dummy
      * @return ApiResponse<ExampleResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun exampleSomeMethodGetWithHttpInfo() : Future<ApiResponse<ExampleResponse?>> {
+    fun dummyWithHttpInfo() : Future<ApiResponse<ExampleResponse?>> {
         val vertxClient = WebClient.create(vertx)
         val request = vertxClient.requestAbs(HttpMethod.GET, UriTemplate.of("$basePath/example/someMethod"))
 
         
         
         
-        request.putHeader("Accept", "/")
+        request.putHeader("Accept", "*/*")
 
 
 

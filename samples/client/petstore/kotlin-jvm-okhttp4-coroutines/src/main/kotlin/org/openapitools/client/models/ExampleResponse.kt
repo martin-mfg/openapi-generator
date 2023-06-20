@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty 
  */
@@ -29,7 +29,7 @@ import java.io.Serializable
 data class ExampleResponse (
 
     @SerializedName("myOnlyProperty")
-    val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    val myOnlyProperty: kotlin.collections.Set<java.math.BigDecimal>? = null
 
 ) : Serializable {
     companion object {

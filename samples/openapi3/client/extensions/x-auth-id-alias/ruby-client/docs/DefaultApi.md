@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**example_some_method_get**](DefaultApi.md#example_some_method_get) | **GET** /example/someMethod |  |
+| [**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod |  |
 
 
-## example_some_method_get
+## dummy
 
-> <ExampleResponse> example_some_method_get
-
-
+> <ExampleResponse> dummy
 
 
+
+dummy
 
 ### Examples
 
@@ -25,28 +25,28 @@ api_instance = XAuthIDAlias::DefaultApi.new
 
 begin
   
-  result = api_instance.example_some_method_get
+  result = api_instance.dummy
   p result
 rescue XAuthIDAlias::ApiError => e
-  puts "Error when calling DefaultApi->example_some_method_get: #{e}"
+  puts "Error when calling DefaultApi->dummy: #{e}"
 end
 ```
 
-#### Using the example_some_method_get_with_http_info variant
+#### Using the dummy_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ExampleResponse>, Integer, Hash)> example_some_method_get_with_http_info
+> <Array(<ExampleResponse>, Integer, Hash)> dummy_with_http_info
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.example_some_method_get_with_http_info
+  data, status_code, headers = api_instance.dummy_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ExampleResponse>
 rescue XAuthIDAlias::ApiError => e
-  puts "Error when calling DefaultApi->example_some_method_get_with_http_info: #{e}"
+  puts "Error when calling DefaultApi->dummy_with_http_info: #{e}"
 end
 ```
 
@@ -65,5 +65,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: /
+- **Accept**: */*
 

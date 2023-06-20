@@ -22,16 +22,16 @@ public interface DefaultApi {
 
     /**
      * GET /example/someMethod
-     * 
+     * dummy
      *
-     * @return  (status code 200)
+     * @return dummy (status code 200)
      */
     @HttpExchange(
         method = "GET",
         value = "/example/someMethod",
-        accept = "/"
+        accept = "*/*"
     )
-    ResponseEntity<ExampleResponseDto> exampleSomeMethodGet(
+    ResponseEntity<ExampleResponseDto> dummy(
         
     );
 

@@ -22,10 +22,10 @@ export class PromiseDefaultApi {
     }
 
     /**
-     * 
+     * dummy
      */
-    public exampleSomeMethodGet(_options?: Configuration): Promise<ExampleResponse> {
-        const result = this.api.exampleSomeMethodGet(_options);
+    public dummy(_options?: Configuration): Promise<ExampleResponse> {
+        const result = this.api.dummy(_options);
         return result.toPromise();
     }
 

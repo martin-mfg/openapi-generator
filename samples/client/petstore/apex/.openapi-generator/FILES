@@ -12,5 +12,5 @@ force-app/main/default/classes/OASResponseMock.cls
 force-app/main/default/classes/OASResponseMock.cls-meta.xml
 force-app/main/default/classes/OASTest.cls
 force-app/main/default/classes/OASTest.cls-meta.xml
-force-app/main/default/namedCredentials/.namedCredential-meta.xml
+force-app/main/default/namedCredentials/dummy.namedCredential-meta.xml
 sfdx-project.json

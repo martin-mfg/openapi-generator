@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
+| [**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod |  |
 
 
-<a id="exampleSomeMethodGet"></a>
-# **exampleSomeMethodGet**
-> ExampleResponse exampleSomeMethodGet()
+<a id="dummy"></a>
+# **dummy**
+> ExampleResponse dummy()
 
 
 
-
+dummy
 
 ### Example
 ```java
@@ -26,7 +26,7 @@ DefaultApi api = ApiClient.api(ApiClient.Config.apiConfig().withReqSpecSupplier(
                 () -> new RequestSpecBuilder()
                         .setBaseUri("http://localhost")))._default();
 
-api.exampleSomeMethodGet().execute(r -> r.prettyPeek());
+api.dummy().execute(r -> r.prettyPeek());
 ```
 
 ### Parameters
@@ -43,5 +43,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 

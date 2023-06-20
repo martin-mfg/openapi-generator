@@ -3,31 +3,34 @@ package org.openapitools.vertxweb.server.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
- * 
+ * dummy
  **/
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ExampleResponse   {
   
-  private List<Boolean> myOnlyProperty;
+  private Set<BigDecimal> myOnlyProperty;
 
   public ExampleResponse () {
 
   }
 
-  public ExampleResponse (List<Boolean> myOnlyProperty) {
+  public ExampleResponse (Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 
     
   @JsonProperty("myOnlyProperty")
-  public List<Boolean> getMyOnlyProperty() {
+  public Set<BigDecimal> getMyOnlyProperty() {
     return myOnlyProperty;
   }
-  public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+  @JsonDeserialize(as = LinkedHashSet.class)
+  public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 

@@ -9,15 +9,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**example_some_method_get**](DefaultApi.md#example_some_method_get) | **GET** /example/someMethod | 
+[**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
-# **example_some_method_get**
-> ExampleResponse example_some_method_get()
+# **dummy**
+> ExampleResponse dummy()
 
 
 
-
+dummy
 
 ### Example
 ```perl
@@ -28,11 +28,11 @@ my $api_instance = WWW::OpenAPIClient::DefaultApi->new(
 
 
 eval {
-    my $result = $api_instance->example_some_method_get();
+    my $result = $api_instance->dummy();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DefaultApi->example_some_method_get: $@\n";
+    warn "Exception when calling DefaultApi->dummy: $@\n";
 }
 ```
 
@@ -50,7 +50,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

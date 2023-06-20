@@ -4,18 +4,18 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**exampleSomeMethodGet()**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
+| [**dummy()**](DefaultApi.md#dummy) | **GET** /example/someMethod |  |
 
 
-## `exampleSomeMethodGet()`
+## `dummy()`
 
 ```php
-exampleSomeMethodGet(): \OpenAPI\Client\Model\ExampleResponse
+dummy(): \OpenAPI\Client\Model\ExampleResponse
 ```
 
 
 
-
+dummy
 
 ### Example
 
@@ -32,10 +32,10 @@ $apiInstance = new OpenAPI\Client\Api\DefaultApi(
 );
 
 try {
-    $result = $apiInstance->exampleSomeMethodGet();
+    $result = $apiInstance->dummy();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->exampleSomeMethodGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->dummy: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -54,7 +54,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `/`
+- **Accept**: `*/*`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ExampleSomeMethodGet**](DefaultAPI.md#ExampleSomeMethodGet) | **Get** /example/someMethod | 
+[**Dummy**](DefaultAPI.md#Dummy) | **Get** /example/someMethod | 
 
 
 
-## ExampleSomeMethodGet
+## Dummy
 
-> ExampleResponse ExampleSomeMethodGet(ctx).Execute()
+> ExampleResponse Dummy(ctx).Execute()
 
 
 
@@ -32,13 +32,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultAPI.ExampleSomeMethodGet(context.Background()).Execute()
+    resp, r, err := apiClient.DefaultAPI.Dummy(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.ExampleSomeMethodGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.Dummy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ExampleSomeMethodGet`: ExampleResponse
-    fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.ExampleSomeMethodGet`: %v\n", resp)
+    // response from `Dummy`: ExampleResponse
+    fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.Dummy`: %v\n", resp)
 }
 ```
 
@@ -48,7 +48,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiExampleSomeMethodGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDummyRequest struct via the builder pattern
 
 
 ### Return type
@@ -62,7 +62,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: /
+- **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

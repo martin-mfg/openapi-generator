@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** example/someMethod | 
+[**dummy**](DefaultApi.md#dummy) | **GET** example/someMethod | 
 
 
 
 
 
-
+dummy
 
 ### Example
 ```kotlin
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DefaultApi::class.java)
 
-val result : ExampleResponse = webService.exampleSomeMethodGet()
+val result : ExampleResponse = webService.dummy()
 ```
 
 ### Parameters
@@ -39,5 +39,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 

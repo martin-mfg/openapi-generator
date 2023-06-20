@@ -17,7 +17,7 @@ resourceTypes {
     properties {
         my_only_property {
           type = array
-          items.type =  boolean
+          items.type =  
           description = ""
           optional = false
         }

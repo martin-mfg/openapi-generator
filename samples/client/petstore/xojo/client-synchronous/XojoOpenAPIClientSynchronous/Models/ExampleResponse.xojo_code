@@ -2,7 +2,7 @@
 Protected Class ExampleResponse
 
 	#tag Property, Flags = &h0
-		myOnlyProperty() As Boolean
+		myOnlyProperty() As Double
 	#tag EndProperty
 
 
@@ -47,7 +47,7 @@ Protected Class ExampleResponse
 			Visible=false
 			Group="Behavior"
 			InitialValue=""
-			Type="Boolean"
+			Type="Double"
 			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior

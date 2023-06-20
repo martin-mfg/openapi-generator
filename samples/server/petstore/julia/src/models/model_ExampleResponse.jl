@@ -2,16 +2,16 @@
 # Do not modify this file directly. Modify the OpenAPI specification instead.
 
 
-@doc raw"""
+@doc raw"""dummy
 
     ExampleResponse(;
         myOnlyProperty=nothing,
     )
 
-    - myOnlyProperty::Vector{Bool}
+    - myOnlyProperty::Vector{Float64}
 """
 Base.@kwdef mutable struct ExampleResponse <: OpenAPI.APIModel
-    myOnlyProperty::Union{Nothing, Vector{Bool}} = nothing
+    myOnlyProperty::Union{Nothing, Vector{Float64}} = nothing
 
     function ExampleResponse(myOnlyProperty, )
         OpenAPI.validate_property(ExampleResponse, Symbol("myOnlyProperty"), myOnlyProperty)
@@ -19,7 +19,7 @@ Base.@kwdef mutable struct ExampleResponse <: OpenAPI.APIModel
     end
 end # type ExampleResponse
 
-const _property_types_ExampleResponse = Dict{Symbol,String}(Symbol("myOnlyProperty")=>"Vector{Bool}", )
+const _property_types_ExampleResponse = Dict{Symbol,String}(Symbol("myOnlyProperty")=>"Vector{Float64}", )
 OpenAPI.property_type(::Type{ ExampleResponse }, name::Symbol) = Union{Nothing,eval(Base.Meta.parse(_property_types_ExampleResponse[name]))}
 
 function check_required(o::ExampleResponse)
@@ -27,4 +27,7 @@ function check_required(o::ExampleResponse)
 end
 
 function OpenAPI.validate_property(::Type{ ExampleResponse }, name::Symbol, val)
+    if name === Symbol("myOnlyProperty")
+        OpenAPI.validate_param(name, "ExampleResponse", :uniqueItems, val, true)
+    end
 end

@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
+| [**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod |  |
 
 
 
-## exampleSomeMethodGet
+## dummy
 
-> ExampleResponse exampleSomeMethodGet()
-
-
+> ExampleResponse dummy()
 
 
+
+dummy
 
 ### Parameters
 
@@ -31,11 +31,11 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: /
+- **Accept**: */*
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** |  |  -  |
+| **200** | dummy |  -  |
 

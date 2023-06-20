@@ -3,26 +3,28 @@ package org.openapitools.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
- * 
+ * dummy
  */
-@ApiModel(description = "")
+@ApiModel(description = "dummy")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen")
 public class ExampleResponse   {
   @JsonProperty("myOnlyProperty")
-  private List<Boolean> myOnlyProperty = null;
+  private Set<BigDecimal> myOnlyProperty = null;
 
-  public ExampleResponse myOnlyProperty(List<Boolean> myOnlyProperty) {
+  public ExampleResponse myOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
     return this;
   }
 
-  public ExampleResponse addMyOnlyPropertyItem(Boolean myOnlyPropertyItem) {
+  public ExampleResponse addMyOnlyPropertyItem(BigDecimal myOnlyPropertyItem) {
     if (this.myOnlyProperty == null) {
       this.myOnlyProperty = ;
     }
@@ -35,11 +37,12 @@ public class ExampleResponse   {
    * @return myOnlyProperty
   **/
   @ApiModelProperty(value = "")
-  public List<Boolean> getMyOnlyProperty() {
+  public Set<BigDecimal> getMyOnlyProperty() {
     return myOnlyProperty;
   }
 
-  public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+  @JsonDeserialize(as = LinkedHashSet.class)
+  public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 

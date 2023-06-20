@@ -2,7 +2,7 @@
 /*
  * ExampleResponse.h
  *
- * 
+ * dummy
  */
 
 #ifndef TINY_CPP_CLIENT_ExampleResponse_H_
@@ -12,12 +12,12 @@
 #include <string>
 #include "bourne/json.hpp"
 #include "Helpers.h"
-#include <list>
+#include "Set.h"
 
 namespace Tiny {
 
 
-/*! \brief 
+/*! \brief dummy
  *
  *  \ingroup Models
  *
@@ -48,15 +48,15 @@ public:
 
 	/*! \brief Get 
 	 */
-	std::list<bool> getMyOnlyProperty();
+	Set<long> getMyOnlyProperty();
 
 	/*! \brief Set 
 	 */
-	void setMyOnlyProperty(std::list <bool> myOnlyProperty);
+	void setMyOnlyProperty(Set <long> myOnlyProperty);
 
 
     private:
-    std::list<bool> myOnlyProperty;
+    Set<long> myOnlyProperty;
 };
 }
 

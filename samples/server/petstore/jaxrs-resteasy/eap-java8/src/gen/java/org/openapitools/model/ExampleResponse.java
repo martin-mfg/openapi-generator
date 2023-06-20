@@ -4,27 +4,30 @@ import java.util.Objects;
 import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import javax.validation.constraints.*;
 import io.swagger.annotations.*;
 
-@ApiModel(description="")@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen")
+@ApiModel(description="dummy")@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen")
 public class ExampleResponse   {
   
-  private List<Boolean> myOnlyProperty;
+  private Set<BigDecimal> myOnlyProperty;
 
   /**
    **/
   
   @ApiModelProperty(value = "")
   @JsonProperty("myOnlyProperty")
-  public List<Boolean> getMyOnlyProperty() {
+  public Set<BigDecimal> getMyOnlyProperty() {
     return myOnlyProperty;
   }
-  public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+  @JsonDeserialize(as = LinkedHashSet.class)
+  public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 

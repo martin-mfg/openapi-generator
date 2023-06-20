@@ -20,6 +20,6 @@ import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen")
 public abstract class ExampleApiService {
-      public abstract Response exampleSomeMethodGet(SecurityContext securityContext)
+      public abstract Response dummy(SecurityContext securityContext)
       throws NotFoundException;
 }

@@ -10,12 +10,12 @@ import Foundation
 import AnyCodable
 #endif
 
-/**  */
+/** dummy */
 internal struct ExampleResponse: Codable, JSONEncodable, Hashable {
 
-    internal var myOnlyProperty: [Bool]?
+    internal var myOnlyProperty: Set<Double>?
 
-    internal init(myOnlyProperty: [Bool]? = nil) {
+    internal init(myOnlyProperty: Set<Double>? = nil) {
         self.myOnlyProperty = myOnlyProperty
     }
 

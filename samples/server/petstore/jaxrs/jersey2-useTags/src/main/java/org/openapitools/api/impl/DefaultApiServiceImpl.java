@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen")
 public class DefaultApiServiceImpl extends DefaultApiService {
     @Override
-    public Response exampleSomeMethodGet(SecurityContext securityContext) throws NotFoundException {
+    public Response dummy(SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }

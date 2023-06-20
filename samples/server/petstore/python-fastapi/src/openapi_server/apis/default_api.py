@@ -35,12 +35,12 @@ for _, name, _ in pkgutil.iter_modules(ns_pkg.__path__, ns_pkg.__name__ + "."):
 @router.get(
     "/example/someMethod",
     responses={
-        200: {"model": ExampleResponse, "description": ""},
+        200: {"model": ExampleResponse, "description": "dummy"},
     },
     tags=["default"],
     response_model_by_alias=True,
 )
-async def example_some_method_get(
+async def dummy(
 ) -> ExampleResponse:
-    """"""
-    return BaseDefaultApi.subclasses[0]().example_some_method_get()
+    """dummy"""
+    return BaseDefaultApi.subclasses[0]().dummy()

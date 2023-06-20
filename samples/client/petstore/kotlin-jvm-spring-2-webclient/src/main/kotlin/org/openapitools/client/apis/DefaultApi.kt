@@ -41,24 +41,24 @@ class DefaultApi(client: WebClient) : ApiClient(client) {
 
 
     @Throws(WebClientResponseException::class)
-    fun exampleSomeMethodGet(): Mono<ExampleResponse> {
-        return exampleSomeMethodGetWithHttpInfo()
+    fun dummy(): Mono<ExampleResponse> {
+        return dummyWithHttpInfo()
             .map { it.body }
     }
 
     @Throws(WebClientResponseException::class)
-    fun exampleSomeMethodGetWithHttpInfo(): Mono<ResponseEntity<ExampleResponse>> {
-        val localVariableConfig = exampleSomeMethodGetRequestConfig()
+    fun dummyWithHttpInfo(): Mono<ResponseEntity<ExampleResponse>> {
+        val localVariableConfig = dummyRequestConfig()
         return request<Unit, ExampleResponse>(
             localVariableConfig
         )
     }
 
-    fun exampleSomeMethodGetRequestConfig() : RequestConfig<Unit> {
+    fun dummyRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "/"
+        localVariableHeaders["Accept"] = "*/*"
 
         return RequestConfig(
             method = RequestMethod.GET,

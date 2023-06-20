@@ -5,7 +5,7 @@
     <artifactId>echo-api-apache-httpclient</artifactId>
     <packaging>jar</packaging>
     <name>echo-api-apache-httpclient</name>
-    <version>1.0.0</version>
+    <version>dumy</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

@@ -4,8 +4,10 @@ import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import jakarta.validation.constraints.NotNull;
@@ -15,23 +17,23 @@ import java.util.*;
 import jakarta.annotation.Generated;
 
 /**
- * 
+ * dummy
  */
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ExampleResponse {
 
   
-  private List<Boolean> myOnlyProperty;
+  private Set<BigDecimal> myOnlyProperty;
 
-  public ExampleResponse myOnlyProperty(List<Boolean> myOnlyProperty) {
+  public ExampleResponse myOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
     return this;
   }
 
-  public ExampleResponse addMyOnlyPropertyItem(Boolean myOnlyPropertyItem) {
+  public ExampleResponse addMyOnlyPropertyItem(BigDecimal myOnlyPropertyItem) {
     if (this.myOnlyProperty == null) {
-      this.myOnlyProperty = new ArrayList<>();
+      this.myOnlyProperty = new LinkedHashSet<>();
     }
     this.myOnlyProperty.add(myOnlyPropertyItem);
     return this;
@@ -43,11 +45,12 @@ public class ExampleResponse {
   */
   
   @JsonProperty("myOnlyProperty")
-  public List<Boolean> getMyOnlyProperty() {
+  public Set<BigDecimal> getMyOnlyProperty() {
     return myOnlyProperty;
   }
 
-  public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+  @JsonDeserialize(as = LinkedHashSet.class)
+  public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 

@@ -28,7 +28,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty 
  */
@@ -38,7 +38,7 @@ import kotlinx.parcelize.Parcelize
 data class ExampleResponse (
 
     @SerialName(value = "myOnlyProperty")
-    val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    val myOnlyProperty: kotlin.collections.Set<@Contextual java.math.BigDecimal>? = null
 
 ) : Parcelable
 

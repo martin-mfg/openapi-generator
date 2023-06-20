@@ -1,4 +1,4 @@
-# php-base - PHP Slim 4 Server library for 
+# php-base - PHP Slim 4 Server library for dummy
 
 * [OpenAPI Generator](https://openapi-generator.tech)
 * [Slim 4 Documentation](https://www.slimframework.com/docs/v4/)
@@ -152,7 +152,7 @@ For instance, when abstract class located at `./lib/Api/AbstractPetApi.php` you 
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AbstractDefaultApi* | **exampleSomeMethodGet** | **GET** /example/someMethod | 
+*AbstractDefaultApi* | **dummy** | **GET** /example/someMethod | 
 
 
 ## Models

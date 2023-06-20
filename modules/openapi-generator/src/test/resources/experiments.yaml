@@ -1,27 +1,28 @@
 openapi: 3.0.0
 info:
-  title: ''
-  version: ""
-  description: ""
+  title: dummy
+  version: dumy
+  description: dummy
 paths:
   /example/someMethod:
     get:
-      description: ""
-      operationId: ""
+      description: dummy
+      operationId: dummy
       responses:
         200:
-          description: ""
+          description: dummy
           content:
-            "/":
+            "*/*":
               schema:
                 $ref: '#/components/schemas/ExampleResponse'
 components:
   schemas:
     ExampleResponse:
       type: object
-      description: ""
+      description: dummy
       properties:
         myOnlyProperty:
           type: array
+          uniqueItems: true
           items:
-            type: boolean
+            type: number

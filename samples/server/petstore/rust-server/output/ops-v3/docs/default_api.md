@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-****](default_api.md#) | **GET** /example/someMethod | 
+**dummy**](default_api.md#dummy) | **GET** /example/someMethod | 
 
 
-# ****
-> models::ExampleResponse ()
+# **dummy**
+> models::ExampleResponse dummy()
 
 
-
+dummy
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -27,7 +27,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

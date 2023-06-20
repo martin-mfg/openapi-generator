@@ -4,20 +4,20 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
+[**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
 
-## exampleSomeMethodGet
+## dummy
 
 
 
-
+dummy
 
 ### Example
 
 ```bash
-petstore-cli exampleSomeMethodGet
+petstore-cli dummy
 ```
 
 ### Parameters
@@ -35,7 +35,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: /
+- **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

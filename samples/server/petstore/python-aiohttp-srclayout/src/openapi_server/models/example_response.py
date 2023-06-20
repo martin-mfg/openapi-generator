@@ -14,13 +14,13 @@ class ExampleResponse(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, my_only_property: List[bool]=None):
+    def __init__(self, my_only_property: list[float]=None):
         """ExampleResponse - a model defined in OpenAPI
 
         :param my_only_property: The my_only_property of this ExampleResponse.
         """
         self.openapi_types = {
-            'my_only_property': List[bool]
+            'my_only_property': list[float]
         }
 
         self.attribute_map = {
@@ -44,7 +44,7 @@ class ExampleResponse(Model):
 
 
         :return: The my_only_property of this ExampleResponse.
-        :rtype: List[bool]
+        :rtype: list[float]
         """
         return self._my_only_property
 
@@ -54,7 +54,7 @@ class ExampleResponse(Model):
 
 
         :param my_only_property: The my_only_property of this ExampleResponse.
-        :type my_only_property: List[bool]
+        :type my_only_property: list[float]
         """
 
         self._my_only_property = my_only_property

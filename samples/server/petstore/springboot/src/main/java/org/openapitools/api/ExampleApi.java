@@ -33,32 +33,32 @@ public interface ExampleApi {
 
     /**
      * GET /example/someMethod
-     * 
+     * dummy
      *
-     * @return  (status code 200)
+     * @return dummy (status code 200)
      */
     @ApiOperation(
         value = "",
-        nickname = "exampleSomeMethodGet",
-        notes = "",
+        nickname = "dummy",
+        notes = "dummy",
         response = ExampleResponseDto.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "", response = ExampleResponseDto.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponseDto.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<ExampleResponseDto> exampleSomeMethodGet(
+    default ResponseEntity<ExampleResponseDto> dummy(
         
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
-                if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {
-                    String exampleString = "Custom MIME type example not yet supported: /";
-                    ApiUtil.setExampleResponse(request, "/", exampleString);
+                if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
+                    String exampleString = "{ \"myOnlyProperty\" : [ 0.8008281904610115, 0.8008281904610115 ] }";
+                    ApiUtil.setExampleResponse(request, "*/*", exampleString);
                     break;
                 }
             }

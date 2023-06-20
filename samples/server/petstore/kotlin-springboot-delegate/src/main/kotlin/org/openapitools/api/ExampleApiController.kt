@@ -6,7 +6,7 @@ import java.util.Optional
 
 @jakarta.annotation.Generated(value = ["org.openapitools.codegen.languages.KotlinSpringServerCodegen"])
 @Controller
-@RequestMapping("\${openapi..base-path:}")
+@RequestMapping("\${openapi.dummy.base-path:}")
 class ExampleApiController(
         @org.springframework.beans.factory.annotation.Autowired(required = false) delegate: ExampleApiDelegate?
 ) : ExampleApi {

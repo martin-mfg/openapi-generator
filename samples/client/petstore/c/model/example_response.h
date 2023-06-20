@@ -1,7 +1,7 @@
 /*
  * example_response.h
  *
- * 
+ * dummy
  */
 
 #ifndef _example_response_H_
@@ -15,16 +15,17 @@
 
 typedef struct example_response_t example_response_t;
 
+#include "set.h"
 
 
 
 typedef struct example_response_t {
-    list_t *my_only_property; //primitive container
+    set_t *my_only_property; //primitive container
 
 } example_response_t;
 
 example_response_t *example_response_create(
-    list_t *my_only_property
+    set_t *my_only_property
 );
 
 void example_response_free(example_response_t *example_response);

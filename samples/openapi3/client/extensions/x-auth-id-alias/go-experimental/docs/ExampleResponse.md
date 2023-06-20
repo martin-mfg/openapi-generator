@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MyOnlyProperty** | Pointer to **[]bool** |  | [optional] 
+**MyOnlyProperty** | Pointer to **[]float32** |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetMyOnlyProperty
 
-`func (o *ExampleResponse) GetMyOnlyProperty() []bool`
+`func (o *ExampleResponse) GetMyOnlyProperty() []float32`
 
 GetMyOnlyProperty returns the MyOnlyProperty field if non-nil, zero value otherwise.
 
 ### GetMyOnlyPropertyOk
 
-`func (o *ExampleResponse) GetMyOnlyPropertyOk() (*[]bool, bool)`
+`func (o *ExampleResponse) GetMyOnlyPropertyOk() (*[]float32, bool)`
 
 GetMyOnlyPropertyOk returns a tuple with the MyOnlyProperty field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMyOnlyProperty
 
-`func (o *ExampleResponse) SetMyOnlyProperty(v []bool)`
+`func (o *ExampleResponse) SetMyOnlyProperty(v []float32)`
 
 SetMyOnlyProperty sets MyOnlyProperty field to given value.
 

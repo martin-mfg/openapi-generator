@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty 
  */
@@ -29,7 +29,7 @@ import com.squareup.moshi.JsonClass
 data class ExampleResponse (
 
     @Json(name = "myOnlyProperty")
-    var myOnlyProperty: kotlin.collections.MutableList<kotlin.Boolean>? = null
+    var myOnlyProperty: kotlin.collections.MutableSet<java.math.BigDecimal>? = null
 
 )
 

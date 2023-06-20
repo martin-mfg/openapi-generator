@@ -33,8 +33,8 @@ public class DefaultApiController extends Controller {
     }
 
     @ApiAction
-    public Result exampleSomeMethodGet(Http.Request request) throws Exception {
-        return imp.exampleSomeMethodGetHttp(request);
+    public Result dummy(Http.Request request) throws Exception {
+        return imp.dummyHttp(request);
     }
 
 }

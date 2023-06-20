@@ -4,7 +4,7 @@
   <artifactId>jaxrs-jersey-petstore-server</artifactId>
   <packaging>jar</packaging>
   <name>jaxrs-jersey-petstore-server</name>
-  <version>1.0.0</version>
+  <version>dumy</version>
 
 
   <licenses>

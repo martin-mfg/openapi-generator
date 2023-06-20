@@ -11,31 +11,31 @@ This can be used to construct the `OpenAPI.Clients.Client` instance.
 """
 basepath(::Type{ DefaultApi }) = "http://localhost"
 
-const _returntypes_example_some_method_get_DefaultApi = Dict{Regex,Type}(
+const _returntypes_dummy_DefaultApi = Dict{Regex,Type}(
     Regex("^" * replace("200", "x"=>".") * "\$") => ExampleResponse,
 )
 
-function _oacinternal_example_some_method_get(_api::DefaultApi; _mediaType=nothing)
-    _ctx = OpenAPI.Clients.Ctx(_api.client, "GET", _returntypes_example_some_method_get_DefaultApi, "/example/someMethod", [])
-    OpenAPI.Clients.set_header_accept(_ctx, ["/", ])
+function _oacinternal_dummy(_api::DefaultApi; _mediaType=nothing)
+    _ctx = OpenAPI.Clients.Ctx(_api.client, "GET", _returntypes_dummy_DefaultApi, "/example/someMethod", [])
+    OpenAPI.Clients.set_header_accept(_ctx, ["*/*", ])
     OpenAPI.Clients.set_header_content_type(_ctx, (_mediaType === nothing) ? [] : [_mediaType])
     return _ctx
 end
 
-@doc raw"""
+@doc raw"""dummy
 
 Params:
 
 Return: ExampleResponse, OpenAPI.Clients.ApiResponse
 """
-function example_some_method_get(_api::DefaultApi; _mediaType=nothing)
-    _ctx = _oacinternal_example_some_method_get(_api; _mediaType=_mediaType)
+function dummy(_api::DefaultApi; _mediaType=nothing)
+    _ctx = _oacinternal_dummy(_api; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx)
 end
 
-function example_some_method_get(_api::DefaultApi, response_stream::Channel; _mediaType=nothing)
-    _ctx = _oacinternal_example_some_method_get(_api; _mediaType=_mediaType)
+function dummy(_api::DefaultApi, response_stream::Channel; _mediaType=nothing)
+    _ctx = _oacinternal_dummy(_api; _mediaType=_mediaType)
     return OpenAPI.Clients.exec(_ctx, response_stream)
 end
 
-export example_some_method_get
+export dummy

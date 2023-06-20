@@ -57,13 +57,13 @@ public class ExampleApi  {
     @javax.ws.rs.GET
     
     
-    @Produces({ "/" })
-    @io.swagger.annotations.ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
+    @Produces({ "*/*" })
+    @io.swagger.annotations.ApiOperation(value = "", notes = "dummy", response = ExampleResponse.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = {
-        @io.swagger.annotations.ApiResponse(code = 200, message = "", response = ExampleResponse.class)
+        @io.swagger.annotations.ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
     })
-    public Response exampleSomeMethodGet(@Context SecurityContext securityContext)
+    public Response dummy(@Context SecurityContext securityContext)
     throws NotFoundException {
-        return delegate.exampleSomeMethodGet(securityContext);
+        return delegate.dummy(securityContext);
     }
 }

@@ -1,10 +1,10 @@
 # petstore::ExampleResponse
 
-
+dummy
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**myOnlyProperty** | **array[character]** |  | [optional] 
+**myOnlyProperty** | **set[numeric]** |  | [optional] 
 
 

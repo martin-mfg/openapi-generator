@@ -4,7 +4,7 @@
     <artifactId>springboot-oneof</artifactId>
     <packaging>jar</packaging>
     <name>springboot-oneof</name>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>dumy-SNAPSHOT</version>
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>

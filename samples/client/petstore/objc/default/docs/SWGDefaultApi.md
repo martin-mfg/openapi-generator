@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](SWGDefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
+[**dummy**](SWGDefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
-# **exampleSomeMethodGet**
+# **dummy**
 ```objc
--(NSURLSessionTask*) exampleSomeMethodGetWithCompletionHandler: 
+-(NSURLSessionTask*) dummyWithCompletionHandler: 
         (void (^)(SWGExampleResponse* output, NSError* error)) handler;
 ```
 
 
 
-
+dummy
 
 ### Example
 ```objc
@@ -23,13 +23,13 @@ Method | HTTP request | Description
 
 SWGDefaultApi*apiInstance = [[SWGDefaultApi alloc] init];
 
-[apiInstance exampleSomeMethodGetWithCompletionHandler: 
+[apiInstance dummyWithCompletionHandler: 
           ^(SWGExampleResponse* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
                         if (error) {
-                            NSLog(@"Error calling SWGDefaultApi->exampleSomeMethodGet: %@", error);
+                            NSLog(@"Error calling SWGDefaultApi->dummy: %@", error);
                         }
                     }];
 ```
@@ -48,7 +48,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

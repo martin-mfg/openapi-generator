@@ -1,16 +1,17 @@
 -module(petstore_default_api).
 
--export([example_some_method_get/1, example_some_method_get/2]).
+-export([dummy/1, dummy/2]).
 
 -define(BASE_URL, <<"">>).
 
 %% @doc 
--spec example_some_method_get(ctx:ctx()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
-example_some_method_get(Ctx) ->
-    example_some_method_get(Ctx, #{}).
+%% dummy
+-spec dummy(ctx:ctx()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
+dummy(Ctx) ->
+    dummy(Ctx, #{}).
 
--spec example_some_method_get(ctx:ctx(), maps:map()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
-example_some_method_get(Ctx, Optional) ->
+-spec dummy(ctx:ctx(), maps:map()) -> {ok, petstore_example_response:petstore_example_response(), petstore_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), petstore_utils:response_info()}.
+dummy(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(petstore_api, config, #{})),
 

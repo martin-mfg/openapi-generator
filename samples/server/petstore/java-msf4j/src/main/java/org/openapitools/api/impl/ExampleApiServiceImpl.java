@@ -19,7 +19,7 @@ import javax.ws.rs.core.SecurityContext;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen")
 public class ExampleApiServiceImpl extends ExampleApiService {
     @Override
-    public Response exampleSomeMethodGet() throws NotFoundException {
+    public Response dummy() throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }

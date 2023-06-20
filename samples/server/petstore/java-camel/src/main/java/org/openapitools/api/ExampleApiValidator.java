@@ -18,9 +18,9 @@ public class ExampleApiValidator extends RouteBuilder {
             .handled(true)
             .process("validationErrorProcessor");
         
-        from("direct:validate-exampleSomeMethodGet")
-            .id("validate-exampleSomeMethodGet")
-            .to("direct:exampleSomeMethodGet")
+        from("direct:validate-dummy")
+            .id("validate-dummy")
+            .to("direct:dummy")
             .to("bean-validator://validate-response");
         
     }

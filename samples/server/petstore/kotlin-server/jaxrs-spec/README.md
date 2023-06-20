@@ -1,4 +1,4 @@
-# org.openapitools.server - Kotlin Server library for 
+# org.openapitools.server - Kotlin Server library for dummy
 
 ## Requires
 
@@ -34,7 +34,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**exampleSomeMethodGet**](docs/DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
+*DefaultApi* | [**dummy**](docs/DefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
 <a id="documentation-for-models"></a>

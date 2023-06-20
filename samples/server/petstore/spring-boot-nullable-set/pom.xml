@@ -4,7 +4,7 @@
     <artifactId>spring-boot-nullable-set</artifactId>
     <packaging>jar</packaging>
     <name>spring-boot-nullable-set</name>
-    <version>1.0.0</version>
+    <version>dumy</version>
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>

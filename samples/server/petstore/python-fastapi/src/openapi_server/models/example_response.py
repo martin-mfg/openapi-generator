@@ -19,6 +19,6 @@ class ExampleResponse(BaseModel):
         my_only_property: The my_only_property of this ExampleResponse [Optional].
     """
 
-    my_only_property: Optional[List[bool]] = Field(alias="myOnlyProperty", default=None)
+    my_only_property: Optional[list[float]] = Field(alias="myOnlyProperty", default=None)
 
 ExampleResponse.update_forward_refs()

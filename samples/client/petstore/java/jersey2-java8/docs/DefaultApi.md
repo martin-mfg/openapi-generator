@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod |  |
+| [**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod |  |
 
 
 
-## exampleSomeMethodGet
+## dummy
 
-> ExampleResponse exampleSomeMethodGet()
-
-
+> ExampleResponse dummy()
 
 
+
+dummy
 
 ### Example
 
@@ -33,10 +33,10 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ExampleResponse result = apiInstance.exampleSomeMethodGet();
+            ExampleResponse result = apiInstance.dummy();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet");
+            System.err.println("Exception when calling DefaultApi#dummy");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -61,10 +61,10 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: /
+- **Accept**: */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** |  |  -  |
+| **200** | dummy |  -  |
 

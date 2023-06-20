@@ -58,12 +58,12 @@ cleanup() -> ok.
 initial_state() -> #{}.
 
 %%==============================================================================
-%% example_some_method_get
+%% dummy
 %%==============================================================================
 
-example_some_method_get() ->
-  petstore_api:example_some_method_get().
+dummy() ->
+  petstore_api:dummy().
 
-example_some_method_get_args(_S) ->
+dummy_args(_S) ->
   [].
 

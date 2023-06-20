@@ -18,9 +18,9 @@ import { ExampleResponse } from '../models/ExampleResponse';
 export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
 
     /**
-     * 
+     * dummy
      */
-    public async exampleSomeMethodGet(_options?: Configuration): Promise<RequestContext> {
+    public async dummy(_options?: Configuration): Promise<RequestContext> {
         let _config = _options || this.configuration;
 
         // Path Params
@@ -48,10 +48,10 @@ export class DefaultApiResponseProcessor {
      * Unwraps the actual response sent by the server from the response context and deserializes the response content
      * to the expected objects
      *
-     * @params response Response returned by the server for a request to exampleSomeMethodGet
+     * @params response Response returned by the server for a request to dummy
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async exampleSomeMethodGet(response: ResponseContext): Promise<ExampleResponse > {
+     public async dummy(response: ResponseContext): Promise<ExampleResponse > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: ExampleResponse = ObjectSerializer.deserialize(

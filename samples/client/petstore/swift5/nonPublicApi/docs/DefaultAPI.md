@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultAPI.md#examplesomemethodget) | **GET** /example/someMethod | 
+[**dummy**](DefaultAPI.md#dummy) | **GET** /example/someMethod | 
 
 
-# **exampleSomeMethodGet**
+# **dummy**
 ```swift
-    internal class func exampleSomeMethodGet(completion: @escaping (_ data: ExampleResponse?, _ error: Error?) -> Void)
+    internal class func dummy(completion: @escaping (_ data: ExampleResponse?, _ error: Error?) -> Void)
 ```
 
 
 
-
+dummy
 
 ### Example
 ```swift
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 import PetstoreClient
 
 
-DefaultAPI.exampleSomeMethodGet() { (response, error) in
+DefaultAPI.dummy() { (response, error) in
     guard error == nil else {
         print(error)
         return
@@ -48,7 +48,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

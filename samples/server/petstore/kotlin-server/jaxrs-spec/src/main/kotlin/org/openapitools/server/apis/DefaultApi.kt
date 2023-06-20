@@ -15,8 +15,8 @@ import java.io.InputStream
 class DefaultApi {
 
     @GET
-    @Produces("/")
-    suspend fun exampleSomeMethodGet(): Response {
+    @Produces("*/*")
+    suspend fun dummy(): Response {
         return Response.ok().entity("magic!").build();
     }
 }

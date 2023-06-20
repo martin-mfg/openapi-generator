@@ -26,12 +26,12 @@ public:
     /**
     * .
     *
-    * 
+    * dummy
     */
     Response<
                 ExampleResponse
         >
-    exampleSomeMethodGet(
+    dummy(
     );
 }; 
 

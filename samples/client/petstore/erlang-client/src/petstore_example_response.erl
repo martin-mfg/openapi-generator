@@ -5,7 +5,7 @@
 -export_type([petstore_example_response/0]).
 
 -type petstore_example_response() ::
-    #{ 'myOnlyProperty' => list()
+    #{ 'myOnlyProperty' => petstore_set:petstore_set()
      }.
 
 encode(#{ 'myOnlyProperty' := MyOnlyProperty

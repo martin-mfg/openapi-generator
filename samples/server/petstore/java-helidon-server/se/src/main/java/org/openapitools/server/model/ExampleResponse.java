@@ -1,15 +1,17 @@
 package org.openapitools.server.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 
 /**
- * 
+ * dummy
  */
 public class ExampleResponse   {
 
-    private List<Boolean> myOnlyProperty;
+    private Set<BigDecimal> myOnlyProperty;
 
     /**
      * Default constructor.
@@ -24,7 +26,7 @@ public class ExampleResponse   {
      * @param myOnlyProperty myOnlyProperty
      */
     public ExampleResponse(
-        List<Boolean> myOnlyProperty
+        Set<BigDecimal> myOnlyProperty
     ) {
         this.myOnlyProperty = myOnlyProperty;
     }
@@ -35,11 +37,11 @@ public class ExampleResponse   {
      * Get myOnlyProperty
      * @return myOnlyProperty
      */
-    public List<Boolean> getMyOnlyProperty() {
+    public Set<BigDecimal> getMyOnlyProperty() {
         return myOnlyProperty;
     }
 
-    public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+    public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
         this.myOnlyProperty = myOnlyProperty;
     }
 

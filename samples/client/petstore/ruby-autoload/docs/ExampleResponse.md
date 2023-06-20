@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **my_only_property** | **Array&lt;Boolean&gt;** |  | [optional] |
+| **my_only_property** | **Array&lt;Float&gt;** |  | [optional] |
 
 ## Example
 

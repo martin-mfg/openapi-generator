@@ -6,7 +6,7 @@
 
 
 example_response_t *example_response_create(
-    list_t *my_only_property
+    set_t *my_only_property
     ) {
     example_response_t *example_response_local_var = malloc(sizeof(example_response_t));
     if (!example_response_local_var) {
@@ -45,7 +45,7 @@ cJSON *example_response_convertToJSON(example_response_t *example_response) {
 
     listEntry_t *my_only_propertyListEntry;
     list_ForEach(my_only_propertyListEntry, example_response->my_only_property) {
-    if(cJSON_AddBoolToObject(my_only_property, "", *(cJSON_bool *)my_only_propertyListEntry->data) == NULL)
+    if(cJSON_AddNumberToObject(my_only_property, "", *(double *)my_only_propertyListEntry->data) == NULL)
     {
         goto fail;
     }
@@ -78,11 +78,17 @@ example_response_t *example_response_parseFromJSON(cJSON *example_responseJSON){
 
     cJSON_ArrayForEach(my_only_property_local, my_only_property)
     {
-        if(!cJSON_IsBool(my_only_property_local))
+        if(!cJSON_IsNumber(my_only_property_local))
         {
             goto end;
         }
-        list_addElement(my_only_propertyList , my_only_property_local->valueint);
+        double *my_only_property_local_value = (double *)calloc(1, sizeof(double));
+        if(!my_only_property_local_value)
+        {
+            goto end;
+        }
+        *my_only_property_local_value = my_only_property_local->valuedouble;
+        list_addElement(my_only_propertyList , my_only_property_local_value);
     }
     }
 
@@ -94,6 +100,11 @@ example_response_t *example_response_parseFromJSON(cJSON *example_responseJSON){
     return example_response_local_var;
 end:
     if (my_only_propertyList) {
+        listEntry_t *listEntry = NULL;
+        list_ForEach(listEntry, my_only_propertyList) {
+            free(listEntry->data);
+            listEntry->data = NULL;
+        }
         list_freeList(my_only_propertyList);
         my_only_propertyList = NULL;
     }

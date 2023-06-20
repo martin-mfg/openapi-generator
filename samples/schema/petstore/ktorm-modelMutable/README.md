@@ -1,4 +1,4 @@
-# org.openapitools.database - Kotlin database library for 
+# org.openapitools.database - Kotlin database library for dummy
 
 ## Requires
 

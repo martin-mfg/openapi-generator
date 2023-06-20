@@ -3,9 +3,9 @@
 # Do not edit the class manually.
 
 # default
-open_api_server_default_examplesomemethodget:
+open_api_server_default_dummy:
     path:     /example/someMethod
     methods:  [GET]
     defaults:
-        _controller: open_api_server.controller.default::exampleSomeMethodGetAction
+        _controller: open_api_server.controller.default::dummyAction
 

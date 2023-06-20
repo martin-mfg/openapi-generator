@@ -7,9 +7,9 @@ Encapsulates generated server code for PetStoreServer
 
 The following server methods must be implemented:
 
-- **example_some_method_get**
+- **dummy**
     - *invocation:* GET /example/someMethod
-    - *signature:* example_some_method_get(req::HTTP.Request;) -> ExampleResponse
+    - *signature:* dummy(req::HTTP.Request;) -> ExampleResponse
 """
 module PetStoreServer
 
@@ -20,7 +20,7 @@ using TimeZones
 using OpenAPI
 using OpenAPI.Servers
 
-const API_VERSION = ""
+const API_VERSION = "dumy"
 
 include("modelincludes.jl")
 

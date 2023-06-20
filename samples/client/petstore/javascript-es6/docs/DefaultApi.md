@@ -1,28 +1,28 @@
-# OpenapiJsClient.DefaultApi
+# Dummy.DefaultApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
+[**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
 
-## exampleSomeMethodGet
+## dummy
 
-> ExampleResponse exampleSomeMethodGet()
-
-
+> ExampleResponse dummy()
 
 
+
+dummy
 
 ### Example
 
 ```javascript
-import OpenapiJsClient from 'openapi-js-client';
+import Dummy from 'dummy';
 
-let apiInstance = new OpenapiJsClient.DefaultApi();
-apiInstance.exampleSomeMethodGet((error, data, response) => {
+let apiInstance = new Dummy.DefaultApi();
+apiInstance.dummy((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -46,5 +46,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: /
+- **Accept**: */*
 

@@ -4,7 +4,7 @@
   <artifactId>jaxrs-spec-petstore-server</artifactId>
   <packaging>war</packaging>
   <name>jaxrs-spec-petstore-server</name>
-  <version>1.0.0</version>
+  <version>dumy</version>
 
 
   <build>

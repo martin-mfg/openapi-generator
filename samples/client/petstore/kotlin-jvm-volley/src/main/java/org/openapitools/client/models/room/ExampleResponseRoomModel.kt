@@ -23,15 +23,17 @@ import org.openapitools.client.models.*
 
 @Entity(tableName = "ExampleResponse")
 /**
-* Room model for 
+* Room model for dummy
 * @param myOnlyProperty 
 */
 data class ExampleResponseRoomModel (
     @PrimaryKey(autoGenerate = true) var roomTableId: Int,
-    var myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null,
     
     
     ) {
+
+    @Ignore
+    var myOnlyProperty: kotlin.collections.List<java.math.BigDecimal>? = null
 
     companion object { }
 

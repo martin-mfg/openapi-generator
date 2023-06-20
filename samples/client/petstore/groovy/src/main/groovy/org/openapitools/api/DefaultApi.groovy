@@ -8,7 +8,7 @@ class DefaultApi {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def exampleSomeMethodGet ( Closure onSuccess, Closure onFailure)  {
+    def dummy ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/example/someMethod"
 
         // params

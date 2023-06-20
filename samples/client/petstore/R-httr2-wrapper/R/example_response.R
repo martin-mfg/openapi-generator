@@ -1,13 +1,13 @@
 #' Create a new ExampleResponse
 #'
 #' @description
-#' 
+#' dummy
 #'
 #' @docType class
 #' @title ExampleResponse
 #' @description ExampleResponse Class
 #' @format An \code{R6Class} generator object
-#' @field myOnlyProperty  list(character) [optional]
+#' @field myOnlyProperty  list(numeric) [optional]
 #' @field _field_list a list of fields list(character)
 #' @field additional_properties additional properties list(character) [optional]
 #' @importFrom R6 R6Class
@@ -32,6 +32,9 @@ ExampleResponse <- R6::R6Class(
       if (!is.null(`myOnlyProperty`)) {
         stopifnot(is.vector(`myOnlyProperty`), length(`myOnlyProperty`) != 0)
         sapply(`myOnlyProperty`, function(x) stopifnot(is.character(x)))
+        if (!identical(`myOnlyProperty`, unique(`myOnlyProperty`))) {
+          stop("Error! Items in `myOnlyProperty` are not unique.")
+        }
         self$`myOnlyProperty` <- `myOnlyProperty`
       }
       if (!is.null(additional_properties)) {
@@ -70,7 +73,10 @@ ExampleResponse <- R6::R6Class(
     fromJSON = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
       if (!is.null(this_object$`myOnlyProperty`)) {
-        self$`myOnlyProperty` <- ApiClient$new()$deserializeObj(this_object$`myOnlyProperty`, "array[character]", loadNamespace("petstore"))
+        self$`myOnlyProperty` <- ApiClient$new()$deserializeObj(this_object$`myOnlyProperty`, "set[numeric]", loadNamespace("petstore"))
+        if (!identical(self$`myOnlyProperty`, unique(self$`myOnlyProperty`))) {
+          stop("Error! Items in `myOnlyProperty` are not unique.")
+        }
       }
       # process additional properties/fields in the payload
       for (key in names(this_object)) {
@@ -117,7 +123,10 @@ ExampleResponse <- R6::R6Class(
     #' @export
     fromJSONString = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
-      self$`myOnlyProperty` <- ApiClient$new()$deserializeObj(this_object$`myOnlyProperty`, "array[character]", loadNamespace("petstore"))
+      self$`myOnlyProperty` <- ApiClient$new()$deserializeObj(this_object$`myOnlyProperty`, "set[numeric]", loadNamespace("petstore"))
+      if (!identical(self$`myOnlyProperty`, unique(self$`myOnlyProperty`))) {
+        stop("Error! Items in `myOnlyProperty` are not unique.")
+      }
       # process additional properties/fields in the payload
       for (key in names(this_object)) {
         if (!(key %in% self$`_field_list`)) { # json key not in list of fields
@@ -155,6 +164,7 @@ ExampleResponse <- R6::R6Class(
     #' @return true if the values in all fields are valid.
     #' @export
     isValid = function() {
+
       TRUE
     },
     #' Return a list of invalid fields (if any).
@@ -166,6 +176,7 @@ ExampleResponse <- R6::R6Class(
     #' @export
     getInvalidFields = function() {
       invalid_fields <- list()
+
       invalid_fields
     },
     #' Print the object

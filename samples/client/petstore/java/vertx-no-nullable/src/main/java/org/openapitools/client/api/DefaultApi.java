@@ -10,8 +10,8 @@ import java.util.*;
 
 public interface DefaultApi {
 
-    void exampleSomeMethodGet(Handler<AsyncResult<ExampleResponse>> handler);
+    void dummy(Handler<AsyncResult<ExampleResponse>> handler);
 
-    void exampleSomeMethodGet(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> handler);
+    void dummy(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> handler);
 
 }

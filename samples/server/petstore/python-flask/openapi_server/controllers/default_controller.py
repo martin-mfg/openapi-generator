@@ -8,10 +8,10 @@ from openapi_server.models.example_response import ExampleResponse  # noqa: E501
 from openapi_server import util
 
 
-def example_some_method_get():  # noqa: E501
-    """example_some_method_get
+def dummy():  # noqa: E501
+    """dummy
 
-     # noqa: E501
+    dummy # noqa: E501
 
 
     :rtype: Union[ExampleResponse, Tuple[ExampleResponse, int], Tuple[ExampleResponse, int, Dict[str, str]]

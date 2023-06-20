@@ -6,11 +6,11 @@ namespace app\Models;
 
 /**
  * ExampleResponse
- * @description 
+ * @description dummy
  */
 class ExampleResponse {
 
-    /** @var bool[] $myOnlyProperty */
+    /** @var float[] $myOnlyProperty */
     public $myOnlyProperty = [];
 
 }

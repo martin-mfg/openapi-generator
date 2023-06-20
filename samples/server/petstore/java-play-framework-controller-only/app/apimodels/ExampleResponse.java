@@ -1,30 +1,33 @@
 package apimodels;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
 import java.util.Objects;
 import javax.validation.constraints.*;
 /**
- * 
+ * dummy
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen")
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
 public class ExampleResponse   {
   @JsonProperty("myOnlyProperty")
-  
-  private List<Boolean> myOnlyProperty = null;
+  @Valid
 
-  public ExampleResponse myOnlyProperty(List<Boolean> myOnlyProperty) {
+  private Set<BigDecimal> myOnlyProperty = null;
+
+  public ExampleResponse myOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
     return this;
   }
 
-  public ExampleResponse addMyOnlyPropertyItem(Boolean myOnlyPropertyItem) {
+  public ExampleResponse addMyOnlyPropertyItem(BigDecimal myOnlyPropertyItem) {
     if (this.myOnlyProperty == null) {
-      this.myOnlyProperty = new ArrayList<>();
+      this.myOnlyProperty = new LinkedHashSet<>();
     }
     this.myOnlyProperty.add(myOnlyPropertyItem);
     return this;
@@ -34,11 +37,12 @@ public class ExampleResponse   {
    * Get myOnlyProperty
    * @return myOnlyProperty
   **/
-  public List<Boolean> getMyOnlyProperty() {
+  public Set<BigDecimal> getMyOnlyProperty() {
     return myOnlyProperty;
   }
 
-  public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+  @JsonDeserialize(as = LinkedHashSet.class)
+  public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 

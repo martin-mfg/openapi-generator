@@ -8,9 +8,9 @@
 #include "../model/example_response.h"
 
 
-// 
+// dummy
 //
 example_response_t*
-DefaultAPI_exampleSomeMethodGet(apiClient_t *apiClient);
+DefaultAPI_dummy(apiClient_t *apiClient);
 
 

@@ -25,17 +25,17 @@ public interface ExampleApiDelegate {
 
     /**
      * GET /example/someMethod
-     * 
+     * dummy
      *
-     * @return  (status code 200)
-     * @see ExampleApi#exampleSomeMethodGet
+     * @return dummy (status code 200)
+     * @see ExampleApi#dummy
      */
-    default ExampleResponse exampleSomeMethodGet() {
+    default ExampleResponse dummy() {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
-                if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {
-                    String exampleString = "Custom MIME type example not yet supported: /";
-                    ApiUtil.setExampleResponse(request, "/", exampleString);
+                if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
+                    String exampleString = "{ \"myOnlyProperty\" : [ 0.8008281904610115, 0.8008281904610115 ] }";
+                    ApiUtil.setExampleResponse(request, "*/*", exampleString);
                     break;
                 }
             }

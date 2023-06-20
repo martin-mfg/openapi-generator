@@ -38,11 +38,11 @@ public class ExampleApi  {
     @GET
     
     
-    @Produces({ "/" })
-    @ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
+    @Produces({ "*/*" })
+    @ApiOperation(value = "", notes = "dummy", response = ExampleResponse.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "", response = ExampleResponse.class) })
-    public Response exampleSomeMethodGet() {
-        return delegate.exampleSomeMethodGet(securityContext);
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class) })
+    public Response dummy() {
+        return delegate.dummy(securityContext);
     }
 }

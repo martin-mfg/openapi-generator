@@ -15,10 +15,10 @@ open class DefaultAPI {
 
     /**
      GET /example/someMethod
-     
+     dummy
      - returns: `EventLoopFuture` of `ClientResponse` 
      */
-    open class func exampleSomeMethodGetRaw(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<ClientResponse> {
+    open class func dummyRaw(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<ClientResponse> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
 
@@ -35,18 +35,18 @@ open class DefaultAPI {
         }
     }
 
-    public enum ExampleSomeMethodGet {
+    public enum Dummy {
         case http200(value: ExampleResponse, raw: ClientResponse)
         case http0(raw: ClientResponse)
     }
 
     /**
      GET /example/someMethod
-     
-     - returns: `EventLoopFuture` of `ExampleSomeMethodGet` 
+     dummy
+     - returns: `EventLoopFuture` of `Dummy` 
      */
-    open class func exampleSomeMethodGet(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<ExampleSomeMethodGet> {
-        return exampleSomeMethodGetRaw(headers: headers, beforeSend: beforeSend).flatMapThrowing { response -> ExampleSomeMethodGet in
+    open class func dummy(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<Dummy> {
+        return dummyRaw(headers: headers, beforeSend: beforeSend).flatMapThrowing { response -> Dummy in
             switch response.status.code {
             case 200:
                 return .http200(value: try response.content.decode(ExampleResponse.self, using: Configuration.contentConfiguration.requireDecoder(for: ExampleResponse.defaultContentType)), raw: response)

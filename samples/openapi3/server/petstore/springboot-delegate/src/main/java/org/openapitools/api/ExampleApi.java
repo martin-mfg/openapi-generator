@@ -39,16 +39,16 @@ public interface ExampleApi {
 
     /**
      * GET /example/someMethod
-     * 
+     * dummy
      *
-     * @return  (status code 200)
+     * @return dummy (status code 200)
      */
     @Operation(
-        operationId = "exampleSomeMethodGet",
-        description = "",
+        operationId = "dummy",
+        description = "dummy",
         responses = {
-            @ApiResponse(responseCode = "200", description = "", content = {
-                @Content(mediaType = "/", schema = @Schema(implementation = ExampleResponse.class))
+            @ApiResponse(responseCode = "200", description = "dummy", content = {
+                @Content(mediaType = "*/*", schema = @Schema(implementation = ExampleResponse.class))
             })
         }
     )
@@ -57,10 +57,10 @@ public interface ExampleApi {
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<ExampleResponse> exampleSomeMethodGet(
+    default ResponseEntity<ExampleResponse> dummy(
         
     ) {
-        return getDelegate().exampleSomeMethodGet();
+        return getDelegate().dummy();
     }
 
 }

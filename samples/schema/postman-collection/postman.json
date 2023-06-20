@@ -1,11 +1,11 @@
 {
 	"info": {
-		"name": "",
+		"name": "dummy",
 		"description": {
-		    "content": "",
+		    "content": "dummy",
 		    "type": "text/markdown"
 		},
-		"version": "",
+		"version": "dumy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -14,16 +14,16 @@
 	            "item": [
 	                        {
     "name": "/example/someMethod",
-                "description": "",
+                "description": "dummy",
                  "item": [
                             {
-                                "name": "exampleSomeMethodGet",
+                                "name": "dummy",
                                 "request": {
                                     "method": "GET",
                                     "header": [
                                         {
                                             "key": "Accept",
-                                            "value": "/"
+                                            "value": "*/*"
                                         }
                                     ],
                                     "body": {
@@ -49,7 +49,7 @@
                                         "query": [
                                         ]
                                     },
-                                    "description": ""
+                                    "description": "dummy"
                                 }
                             }
                             ]

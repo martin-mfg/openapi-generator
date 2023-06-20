@@ -3,7 +3,7 @@
 
 defmodule OpenapiPetstore.Model.ExampleResponse do
   @moduledoc """
-  
+  dummy
   """
 
   @derive [Poison.Encoder]
@@ -12,7 +12,7 @@ defmodule OpenapiPetstore.Model.ExampleResponse do
   ]
 
   @type t :: %__MODULE__{
-    :myOnlyProperty => [boolean()] | nil
+    :myOnlyProperty => [float()] | nil
   }
 end
 

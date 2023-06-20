@@ -2,7 +2,7 @@
 
 # ExampleResponse
 
-
+dummy
 
 The class is defined in **[ExampleResponse.java](../../src/main/java/org/openapitools/model/ExampleResponse.java)**
 
@@ -10,7 +10,7 @@ The class is defined in **[ExampleResponse.java](../../src/main/java/org/openapi
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**myOnlyProperty** | `List&lt;Boolean&gt;` |  |  [optional property]
+**myOnlyProperty** | `Set&lt;BigDecimal&gt;` |  |  [optional property]
 
 
 

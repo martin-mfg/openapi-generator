@@ -19,7 +19,7 @@ package org.openapitools.client.models
 import com.fasterxml.jackson.annotation.JsonProperty
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty 
  */
@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 data class ExampleResponse (
 
     @field:JsonProperty("myOnlyProperty")
-    val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    val myOnlyProperty: kotlin.collections.Set<java.math.BigDecimal>? = null
 
 )
 

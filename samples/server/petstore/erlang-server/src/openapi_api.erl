@@ -15,7 +15,7 @@
 -spec request_params(OperationID :: operation_id()) -> [Param :: request_param()].
 
 
-request_params('ExampleSomeMethodGet') ->
+request_params('Dummy') ->
     [
     ];
 
@@ -96,7 +96,7 @@ populate_request_param(OperationID, Name, Req0, ValidatorState) ->
 ) -> ok | no_return().
 
 
-validate_response('ExampleSomeMethodGet', 200, Body, ValidatorState) ->
+validate_response('Dummy', 200, Body, ValidatorState) ->
     validate_response_body('ExampleResponse', 'ExampleResponse', Body, ValidatorState);
 
 

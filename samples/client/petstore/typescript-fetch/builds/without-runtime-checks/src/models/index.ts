@@ -1,15 +1,15 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * 
+ * dummy
  * @export
  * @interface ExampleResponse
  */
 export interface ExampleResponse {
     /**
      * 
-     * @type {Array<boolean>}
+     * @type {Set<number>}
      * @memberof ExampleResponse
      */
-    myOnlyProperty?: Array<boolean>;
+    myOnlyProperty?: Set<number>;
 }

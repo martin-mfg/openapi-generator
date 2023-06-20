@@ -96,7 +96,7 @@ defmodule OpenapiPetstore.Connection do
         Keyword.get(
           tesla_options,
           :user_agent,
-          "openapi-generator - OpenapiPetstore  - elixir"
+          "openapi-generator - OpenapiPetstore dumy - elixir"
         )
       )
 

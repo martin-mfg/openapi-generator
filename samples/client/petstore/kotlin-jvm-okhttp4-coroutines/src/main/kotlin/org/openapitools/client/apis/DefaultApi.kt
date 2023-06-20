@@ -49,7 +49,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
     /**
      * 
-     * 
+     * dummy
      * @return ExampleResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -59,8 +59,8 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    suspend fun exampleSomeMethodGet() : ExampleResponse = withContext(Dispatchers.IO) {
-        val localVarResponse = exampleSomeMethodGetWithHttpInfo()
+    suspend fun dummy() : ExampleResponse = withContext(Dispatchers.IO) {
+        val localVarResponse = dummyWithHttpInfo()
 
         return@withContext when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as ExampleResponse
@@ -79,15 +79,15 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
 
     /**
      * 
-     * 
+     * dummy
      * @return ApiResponse<ExampleResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    suspend fun exampleSomeMethodGetWithHttpInfo() : ApiResponse<ExampleResponse?> = withContext(Dispatchers.IO) {
-        val localVariableConfig = exampleSomeMethodGetRequestConfig()
+    suspend fun dummyWithHttpInfo() : ApiResponse<ExampleResponse?> = withContext(Dispatchers.IO) {
+        val localVariableConfig = dummyRequestConfig()
 
         return@withContext request<Unit, ExampleResponse>(
             localVariableConfig
@@ -95,11 +95,11 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     }
 
     /**
-     * To obtain the request config of the operation exampleSomeMethodGet
+     * To obtain the request config of the operation dummy
      *
      * @return RequestConfig
      */
-    fun exampleSomeMethodGetRequestConfig() : RequestConfig<Unit> {
+    fun dummyRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

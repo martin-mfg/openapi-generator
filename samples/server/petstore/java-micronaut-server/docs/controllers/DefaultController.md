@@ -6,17 +6,17 @@ The controller class is defined in **[DefaultController.java](../../src/main/jav
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](#exampleSomeMethodGet) | **GET** /example/someMethod | 
+[**dummy**](#dummy) | **GET** /example/someMethod | 
 
-<a id="exampleSomeMethodGet"></a>
-# **exampleSomeMethodGet**
+<a id="dummy"></a>
+# **dummy**
 ```java
-Mono<ExampleResponse> DefaultController.exampleSomeMethodGet()
+Mono<ExampleResponse> DefaultController.dummy()
 ```
 
 
 
-
+dummy
 
 
 ### Return type
@@ -25,5 +25,5 @@ Mono<ExampleResponse> DefaultController.exampleSomeMethodGet()
 
 ### HTTP request headers
  - **Accepts Content-Type**: Not defined
- - **Produces Content-Type**: `/`
+ - **Produces Content-Type**: Not defined
 

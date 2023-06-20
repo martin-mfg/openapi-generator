@@ -4,10 +4,12 @@ import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -17,24 +19,24 @@ import java.util.*;
 import javax.annotation.Generated;
 
 /**
- * 
+ * dummy
  */
 
-@ApiModel(description = "")
+@ApiModel(description = "dummy")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ExampleResponse {
 
   @Valid
-  private List<Boolean> myOnlyProperty;
+  private Set<BigDecimal> myOnlyProperty;
 
-  public ExampleResponse myOnlyProperty(List<Boolean> myOnlyProperty) {
+  public ExampleResponse myOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
     return this;
   }
 
-  public ExampleResponse addMyOnlyPropertyItem(Boolean myOnlyPropertyItem) {
+  public ExampleResponse addMyOnlyPropertyItem(BigDecimal myOnlyPropertyItem) {
     if (this.myOnlyProperty == null) {
-      this.myOnlyProperty = new ArrayList<>();
+      this.myOnlyProperty = new LinkedHashSet<>();
     }
     this.myOnlyProperty.add(myOnlyPropertyItem);
     return this;
@@ -44,14 +46,15 @@ public class ExampleResponse {
    * Get myOnlyProperty
    * @return myOnlyProperty
   */
-  
+  @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("myOnlyProperty")
-  public List<Boolean> getMyOnlyProperty() {
+  public Set<BigDecimal> getMyOnlyProperty() {
     return myOnlyProperty;
   }
 
-  public void setMyOnlyProperty(List<Boolean> myOnlyProperty) {
+  @JsonDeserialize(as = LinkedHashSet.class)
+  public void setMyOnlyProperty(Set<BigDecimal> myOnlyProperty) {
     this.myOnlyProperty = myOnlyProperty;
   }
 

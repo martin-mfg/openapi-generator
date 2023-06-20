@@ -36,9 +36,9 @@ interface DefaultApi {
     @RequestMapping(
             method = [RequestMethod.GET],
             value = ["/example/someMethod"],
-            produces = ["/"]
+            produces = ["*/*"]
     )
-    fun exampleSomeMethodGet(): ResponseEntity<ExampleResponse> {
+    fun dummy(): ResponseEntity<ExampleResponse> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
     }
 }

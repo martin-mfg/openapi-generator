@@ -15,12 +15,12 @@ public typealias ExampleResponse = PetstoreClientAPI.ExampleResponse
 
 extension PetstoreClientAPI {
 
-/**  */
+/** dummy */
 public final class ExampleResponse: Codable, JSONEncodable, Hashable {
 
-    public var myOnlyProperty: [Bool]?
+    public var myOnlyProperty: Set<Double>?
 
-    public init(myOnlyProperty: [Bool]? = nil) {
+    public init(myOnlyProperty: Set<Double>? = nil) {
         self.myOnlyProperty = myOnlyProperty
     }
 

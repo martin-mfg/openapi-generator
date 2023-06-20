@@ -40,8 +40,8 @@ public class DefaultApiController extends Controller {
     }
 
     @ApiAction
-    public Result exampleSomeMethodGet(Http.Request request) throws Exception {
-                ExampleResponse obj = imp.exampleSomeMethodGet(request);
+    public Result dummy(Http.Request request) throws Exception {
+                ExampleResponse obj = imp.dummy(request);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
             OpenAPIUtils.validate(obj);

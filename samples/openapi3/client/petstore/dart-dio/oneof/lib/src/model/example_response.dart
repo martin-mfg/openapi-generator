@@ -9,14 +9,14 @@ import 'package:built_value/serializer.dart';
 
 part 'example_response.g.dart';
 
-/// 
+/// dummy
 ///
 /// Properties:
 /// * [myOnlyProperty] 
 @BuiltValue()
 abstract class ExampleResponse implements Built<ExampleResponse, ExampleResponseBuilder> {
   @BuiltValueField(wireName: r'myOnlyProperty')
-  BuiltList<bool>? get myOnlyProperty;
+  BuiltSet<num>? get myOnlyProperty;
 
   ExampleResponse._();
 
@@ -45,7 +45,7 @@ class _$ExampleResponseSerializer implements PrimitiveSerializer<ExampleResponse
       yield r'myOnlyProperty';
       yield serializers.serialize(
         object.myOnlyProperty,
-        specifiedType: const FullType(BuiltList, [FullType(bool)]),
+        specifiedType: const FullType(BuiltSet, [FullType(num)]),
       );
     }
   }
@@ -74,8 +74,8 @@ class _$ExampleResponseSerializer implements PrimitiveSerializer<ExampleResponse
         case r'myOnlyProperty':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(bool)]),
-          ) as BuiltList<bool>;
+            specifiedType: const FullType(BuiltSet, [FullType(num)]),
+          ) as BuiltSet<num>;
           result.myOnlyProperty.replace(valueDes);
           break;
         default:

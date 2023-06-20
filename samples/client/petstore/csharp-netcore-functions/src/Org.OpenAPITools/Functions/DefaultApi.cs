@@ -17,10 +17,10 @@ namespace Org.OpenAPITools.Functions
 { 
     public partial class DefaultApi
     { 
-        [FunctionName("DefaultApi_ExampleSomeMethodGet")]
-        public async Task<ActionResult<ExampleResponse>> _ExampleSomeMethodGet([HttpTrigger(AuthorizationLevel.Anonymous, "Get", Route = "example/someMethod")]HttpRequest req, ExecutionContext context)
+        [FunctionName("DefaultApi_Dummy")]
+        public async Task<ActionResult<ExampleResponse>> _Dummy([HttpTrigger(AuthorizationLevel.Anonymous, "Get", Route = "example/someMethod")]HttpRequest req, ExecutionContext context)
         {
-            var method = this.GetType().GetMethod("ExampleSomeMethodGet");
+            var method = this.GetType().GetMethod("Dummy");
             if(method == null)
             {
                 return new StatusCodeResult((int)HttpStatusCode.NotImplemented);

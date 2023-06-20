@@ -42,20 +42,20 @@ public class DefaultApiImpl implements DefaultApi {
 
     /**
     * 
-    * 
+    * dummy
     * @param resultHandler Asynchronous result handler
     */
-    public void exampleSomeMethodGet(Handler<AsyncResult<ExampleResponse>> resultHandler) {
-        exampleSomeMethodGet(null, resultHandler);
+    public void dummy(Handler<AsyncResult<ExampleResponse>> resultHandler) {
+        dummy(null, resultHandler);
     }
 
     /**
     * 
-    * 
+    * dummy
     * @param authInfo per call authentication override.
     * @param resultHandler Asynchronous result handler
     */
-    public void exampleSomeMethodGet(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
+    public void dummy(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
         Object localVarBody = null;
         
         // create path and map variables
@@ -74,7 +74,7 @@ public class DefaultApiImpl implements DefaultApi {
         // TODO: sending files within multipart/form-data is not supported yet (because of vertx web-client)
         Map<String, Object> localVarFormParams = new HashMap<>();
         
-        String[] localVarAccepts = { "/" };
+        String[] localVarAccepts = { "*/*" };
         String[] localVarContentTypes = {  };
         String[] localVarAuthNames = new String[] {  };
         TypeReference<ExampleResponse> localVarReturnType = new TypeReference<ExampleResponse>() {};

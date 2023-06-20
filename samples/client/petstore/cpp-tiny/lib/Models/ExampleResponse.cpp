@@ -6,7 +6,7 @@ using namespace Tiny;
 
 ExampleResponse::ExampleResponse()
 {
-	myOnlyProperty = std::list<bool>();
+	myOnlyProperty = std::list<long>();
 }
 
 ExampleResponse::ExampleResponse(std::string jsonString)
@@ -31,12 +31,12 @@ ExampleResponse::fromJson(std::string jsonObj)
         bourne::json value = object[myOnlyPropertyKey];
 
 
-        std::list<bool> myOnlyProperty_list;
-        bool element;
+        std::list<long> myOnlyProperty_list;
+        long element;
         for(auto& var : value.array_range())
         {
 
-            jsonToValue(&element, var, "bool");
+            jsonToValue(&element, var, "long");
 
 
             myOnlyProperty_list.push_back(element);
@@ -57,7 +57,7 @@ ExampleResponse::toJson()
 
 
 
-    std::list<bool> myOnlyProperty_list = isMyOnlyProperty();
+    std::list<long> myOnlyProperty_list = getMyOnlyProperty();
     bourne::json myOnlyProperty_arr = bourne::json::array();
 
     for(auto& var : myOnlyProperty_list)
@@ -75,14 +75,14 @@ ExampleResponse::toJson()
 
 }
 
-std::list<bool>
+Set<long>
 ExampleResponse::getMyOnlyProperty()
 {
 	return myOnlyProperty;
 }
 
 void
-ExampleResponse::setMyOnlyProperty(std::list <bool> myOnlyProperty)
+ExampleResponse::setMyOnlyProperty(Set <long> myOnlyProperty)
 {
 	this->myOnlyProperty = myOnlyProperty;
 }

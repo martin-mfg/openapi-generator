@@ -20,11 +20,11 @@ import java.util.Set;
 public interface DefaultApi {
   /**
    * 
-   * 
+   * dummy
    * @return Call&lt;ExampleResponse&gt;
    */
   @GET("example/someMethod")
-  Call<ExampleResponse> exampleSomeMethodGet();
+  Call<ExampleResponse> dummy();
     
 
 }

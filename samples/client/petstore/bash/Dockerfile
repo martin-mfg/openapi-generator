@@ -23,8 +23,8 @@ source /etc/bash-completion.d/petstore-cli\n\
 #
 # Setup prompt
 #
-RUN echo 'export PS1="[] \$ "' >> ~/.bashrc
-RUN echo 'export PROMPT="[] \$ "' >> ~/.zshrc
+RUN echo 'export PS1="[dummy] \$ "' >> ~/.bashrc
+RUN echo 'export PROMPT="[dummy] \$ "' >> ~/.zshrc
 
 #
 # Setup a welcome message with basic instruction
@@ -32,7 +32,7 @@ RUN echo 'export PROMPT="[] \$ "' >> ~/.zshrc
 RUN echo -e 'echo "\
 \n\
 This Docker provides preconfigured environment for running the command\n\
-line REST client for $(tput setaf 6)$(tput sgr0).\n\
+line REST client for $(tput setaf 6)dummy$(tput sgr0).\n\
 \n\
 For convenience, you can export the following environment variables:\n\
 \n\

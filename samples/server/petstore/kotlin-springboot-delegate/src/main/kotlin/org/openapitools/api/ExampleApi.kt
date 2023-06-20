@@ -41,18 +41,18 @@ interface ExampleApi {
 
     @Operation(
         summary = "",
-        operationId = "exampleSomeMethodGet",
-        description = """""",
+        operationId = "dummy",
+        description = """dummy""",
         responses = [
-            ApiResponse(responseCode = "200", description = "", content = [Content(schema = Schema(implementation = ExampleResponse::class))])
+            ApiResponse(responseCode = "200", description = "dummy", content = [Content(schema = Schema(implementation = ExampleResponse::class))])
         ]
     )
     @RequestMapping(
             method = [RequestMethod.GET],
             value = ["/example/someMethod"],
-            produces = ["/"]
+            produces = ["*/*"]
     )
-    fun exampleSomeMethodGet(): ResponseEntity<ExampleResponse> {
-        return getDelegate().exampleSomeMethodGet()
+    fun dummy(): ResponseEntity<ExampleResponse> {
+        return getDelegate().dummy()
     }
 }

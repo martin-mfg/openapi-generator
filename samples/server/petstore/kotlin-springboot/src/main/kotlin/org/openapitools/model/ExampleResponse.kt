@@ -13,12 +13,13 @@ import javax.validation.constraints.Size
 import javax.validation.Valid
 
 /**
- * 
+ * dummy
  * @param myOnlyProperty 
  */
 data class ExampleResponse(
 
-    @get:JsonProperty("myOnlyProperty") val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    @field:Valid
+    @get:JsonProperty("myOnlyProperty") val myOnlyProperty: kotlin.collections.Set<java.math.BigDecimal>? = null
 ) {
 
 }

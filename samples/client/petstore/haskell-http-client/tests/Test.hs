@@ -12,8 +12,8 @@ import Test.Hspec.QuickCheck
 import PropMime
 import Instances ()
 
-import OpenAPI.Model
-import OpenAPI.MimeTypes
+import Dummy.Model
+import Dummy.MimeTypes
 
 main :: IO ()
 main =

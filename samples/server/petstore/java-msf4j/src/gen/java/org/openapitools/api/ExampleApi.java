@@ -33,12 +33,12 @@ public class ExampleApi  {
     @GET
     
     
-    @Produces({ "/" })
-    @io.swagger.annotations.ApiOperation(value = "", notes = "", response = ExampleResponse.class, tags={  })
+    @Produces({ "*/*" })
+    @io.swagger.annotations.ApiOperation(value = "", notes = "dummy", response = ExampleResponse.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "", response = ExampleResponse.class) })
-    public Response exampleSomeMethodGet()
+        @io.swagger.annotations.ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class) })
+    public Response dummy()
     throws NotFoundException {
-        return delegate.exampleSomeMethodGet();
+        return delegate.dummy();
     }
 }

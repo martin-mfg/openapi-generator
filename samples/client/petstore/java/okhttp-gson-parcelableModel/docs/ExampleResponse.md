@@ -2,13 +2,13 @@
 
 # ExampleResponse
 
-
+dummy
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**myOnlyProperty** | **List&lt;Boolean&gt;** |  |  [optional] |
+|**myOnlyProperty** | **Set&lt;BigDecimal&gt;** |  |  [optional] |
 
 
 ## Implemented Interfaces

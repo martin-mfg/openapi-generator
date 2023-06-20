@@ -1,15 +1,15 @@
 #tag Class
 Protected Class DefaultApi
 	#tag Method, Flags = &h0
-		Function ExampleSomeMethodGet(ByRef localOutStatus As XojoOpenAPIClientSynchronous.XojoOpenAPIClientSynchronousException, ByRef localOutData As XojoOpenAPIClientSynchronous.Models.ExampleResponse) As Boolean
-		  // Operation 
+		Function Dummy(ByRef localOutStatus As XojoOpenAPIClientSynchronous.XojoOpenAPIClientSynchronousException, ByRef localOutData As XojoOpenAPIClientSynchronous.Models.ExampleResponse) As Boolean
+		  // Operation dummy
 		  // - parameter localOutStatus: Information on whether the operation succeeded.
 		  // - parameter localOutData: On success, contains the data returned by the API.
 		  //
 		  // 
 		  //
 		  // - GET /example/someMethod
-		  // - 
+		  // - dummy
 		  // - defaultResponse: Nil
 		  //
 		  //
@@ -42,12 +42,12 @@ Protected Class DefaultApi
 
 		  localVarHTTPSocket.Close
 		  
-		  Return ExampleSomeMethodGetPrivateFuncDeserializeResponse(localVarHTTPStatus, localVarHeaders, localOutStatus, localVarContent, localOutData)
+		  Return DummyPrivateFuncDeserializeResponse(localVarHTTPStatus, localVarHeaders, localOutStatus, localVarContent, localOutData)
 		End Function
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function ExampleSomeMethodGetPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As XojoOpenAPIClientSynchronous.XojoOpenAPIClientSynchronousException, Content As String, ByRef outData As XojoOpenAPIClientSynchronous.Models.ExampleResponse) As Boolean
+		Private Function DummyPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As XojoOpenAPIClientSynchronous.XojoOpenAPIClientSynchronousException, Content As String, ByRef outData As XojoOpenAPIClientSynchronous.Models.ExampleResponse) As Boolean
 		  Dim contentType As String = Headers.Value("Content-Type")
 		  Dim contentEncoding As TextEncoding = XojoOpenAPIClientSynchronous.EncodingFromContentType(contentType)
 		  Content = DefineEncoding(Content, contentEncoding)

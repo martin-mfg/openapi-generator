@@ -5,10 +5,10 @@ from openapi_server.models.example_response import ExampleResponse
 from openapi_server import util
 
 
-async def example_some_method_get(request: web.Request, ) -> web.Response:
-    """example_some_method_get
+async def dummy(request: web.Request, ) -> web.Response:
+    """dummy
 
-    
+    dummy
 
 
     """

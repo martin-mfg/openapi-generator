@@ -18,14 +18,14 @@ class ExampleSomeMethod
     /**
      * @PHA\Get()
      * TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
-     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="/")
+     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="n/a")
      * @param ServerRequestInterface $request
      *
      * @throws PHException\HttpCode 501 if the method is not implemented
      *
      * @return \App\DTO\ExampleResponse
      */
-    public function exampleSomeMethodGet(ServerRequestInterface $request): \App\DTO\ExampleResponse
+    public function dummy(ServerRequestInterface $request): \App\DTO\ExampleResponse
     {
         //TODO implement method
         throw new PHException\HttpCode(501, "Not implemented");

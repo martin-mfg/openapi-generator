@@ -51,10 +51,10 @@ NSInteger kSWGDefaultApiMissingParamErrorCode = 234513;
 
 ///
 /// 
-/// 
+/// dummy
 ///  @returns SWGExampleResponse*
 ///
--(NSURLSessionTask*) exampleSomeMethodGetWithCompletionHandler: 
+-(NSURLSessionTask*) dummyWithCompletionHandler: 
     (void (^)(SWGExampleResponse* output, NSError* error)) handler {
     NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/example/someMethod"];
 
@@ -64,7 +64,7 @@ NSInteger kSWGDefaultApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"/"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"*/*"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }

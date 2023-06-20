@@ -33,11 +33,11 @@ import com.fasterxml.jackson.databind.ObjectMapper
 
         /**
         * 
-        * 
+        * dummy
          * @return ExampleResponse
         */
             @Suppress("UNCHECKED_CAST")
-        open suspend fun exampleSomeMethodGet(): HttpResponse<ExampleResponse> {
+        open suspend fun dummy(): HttpResponse<ExampleResponse> {
 
             val localVariableAuthNames = listOf<String>()
 

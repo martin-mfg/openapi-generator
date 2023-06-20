@@ -42,31 +42,31 @@ public class DefaultApi {
     }
 
   /**
-    * 
-    * <p><b>200</b> - 
+    * dummy
+    * <p><b>200</b> - dummy
     * @return ExampleResponse
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public ExampleResponse exampleSomeMethodGet() throws IOException {
-        HttpResponse response = exampleSomeMethodGetForHttpResponse();
+    public ExampleResponse dummy() throws IOException {
+        HttpResponse response = dummyForHttpResponse();
         TypeReference<ExampleResponse> typeRef = new TypeReference<ExampleResponse>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 
   /**
-    * 
-    * <p><b>200</b> - 
+    * dummy
+    * <p><b>200</b> - dummy
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
     * @return ExampleResponse
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
-    public ExampleResponse exampleSomeMethodGet(Map<String, Object> params) throws IOException {
-        HttpResponse response = exampleSomeMethodGetForHttpResponse(params);
+    public ExampleResponse dummy(Map<String, Object> params) throws IOException {
+        HttpResponse response = dummyForHttpResponse(params);
         TypeReference<ExampleResponse> typeRef = new TypeReference<ExampleResponse>() {};
         return apiClient.getObjectMapper().readValue(response.getContent(), typeRef);
     }
 
-    public HttpResponse exampleSomeMethodGetForHttpResponse() throws IOException {
+    public HttpResponse dummyForHttpResponse() throws IOException {
         
         UriBuilder uriBuilder = UriBuilder.fromUri(apiClient.getBasePath() + "/example/someMethod");
 
@@ -77,7 +77,7 @@ public class DefaultApi {
         return apiClient.getHttpRequestFactory().buildRequest(HttpMethods.GET, genericUrl, content).execute();
     }
 
-    public HttpResponse exampleSomeMethodGetForHttpResponse(Map<String, Object> params) throws IOException {
+    public HttpResponse dummyForHttpResponse(Map<String, Object> params) throws IOException {
         
         UriBuilder uriBuilder = UriBuilder.fromUri(apiClient.getBasePath() + "/example/someMethod");
 

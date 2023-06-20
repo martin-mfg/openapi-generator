@@ -1,13 +1,13 @@
 #' Create a new ExampleResponse
 #'
 #' @description
-#' 
+#' dummy
 #'
 #' @docType class
 #' @title ExampleResponse
 #' @description ExampleResponse Class
 #' @format An \code{R6Class} generator object
-#' @field myOnlyProperty  list(character) [optional]
+#' @field myOnlyProperty  list(numeric) [optional]
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -27,6 +27,9 @@ ExampleResponse <- R6::R6Class(
       if (!is.null(`myOnlyProperty`)) {
         stopifnot(is.vector(`myOnlyProperty`), length(`myOnlyProperty`) != 0)
         sapply(`myOnlyProperty`, function(x) stopifnot(is.character(x)))
+        if (!identical(`myOnlyProperty`, unique(`myOnlyProperty`))) {
+          stop("Error! Items in `myOnlyProperty` are not unique.")
+        }
         self$`myOnlyProperty` <- `myOnlyProperty`
       }
     },
@@ -56,7 +59,10 @@ ExampleResponse <- R6::R6Class(
     fromJSON = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
       if (!is.null(this_object$`myOnlyProperty`)) {
-        self$`myOnlyProperty` <- ApiClient$new()$deserializeObj(this_object$`myOnlyProperty`, "array[character]", loadNamespace("petstore"))
+        self$`myOnlyProperty` <- ApiClient$new()$deserializeObj(this_object$`myOnlyProperty`, "set[numeric]", loadNamespace("petstore"))
+        if (!identical(self$`myOnlyProperty`, unique(self$`myOnlyProperty`))) {
+          stop("Error! Items in `myOnlyProperty` are not unique.")
+        }
       }
       self
     },
@@ -91,7 +97,10 @@ ExampleResponse <- R6::R6Class(
     #' @export
     fromJSONString = function(input_json) {
       this_object <- jsonlite::fromJSON(input_json)
-      self$`myOnlyProperty` <- ApiClient$new()$deserializeObj(this_object$`myOnlyProperty`, "array[character]", loadNamespace("petstore"))
+      self$`myOnlyProperty` <- ApiClient$new()$deserializeObj(this_object$`myOnlyProperty`, "set[numeric]", loadNamespace("petstore"))
+      if (!identical(self$`myOnlyProperty`, unique(self$`myOnlyProperty`))) {
+        stop("Error! Items in `myOnlyProperty` are not unique.")
+      }
       self
     },
     #' Validate JSON input with respect to ExampleResponse
@@ -122,6 +131,7 @@ ExampleResponse <- R6::R6Class(
     #' @return true if the values in all fields are valid.
     #' @export
     isValid = function() {
+
       TRUE
     },
     #' Return a list of invalid fields (if any).
@@ -133,6 +143,7 @@ ExampleResponse <- R6::R6Class(
     #' @export
     getInvalidFields = function() {
       invalid_fields <- list()
+
       invalid_fields
     },
     #' Print the object

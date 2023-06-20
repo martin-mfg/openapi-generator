@@ -18,26 +18,26 @@ public interface DefaultApi extends ApiClient.Api {
 
   /**
    * 
-   * 
+   * dummy
    * @return ExampleResponse
    */
   @RequestLine("GET /example/someMethod")
   @Headers({
-    "Accept: /",
+    "Accept: */*",
   })
-  ExampleResponse exampleSomeMethodGet();
+  ExampleResponse dummy();
 
   /**
    * 
-   * Similar to <code>exampleSomeMethodGet</code> but it also returns the http response headers .
-   * 
+   * Similar to <code>dummy</code> but it also returns the http response headers .
+   * dummy
    * @return A ApiResponse that wraps the response boyd and the http headers.
    */
   @RequestLine("GET /example/someMethod")
   @Headers({
-    "Accept: /",
+    "Accept: */*",
   })
-  ApiResponse<ExampleResponse> exampleSomeMethodGetWithHttpInfo();
+  ApiResponse<ExampleResponse> dummyWithHttpInfo();
 
 
 }

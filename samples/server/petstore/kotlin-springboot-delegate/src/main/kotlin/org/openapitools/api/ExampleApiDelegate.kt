@@ -19,13 +19,13 @@ interface ExampleApiDelegate {
     fun getRequest(): Optional<NativeWebRequest> = Optional.empty()
 
     /**
-     * @see ExampleApi#exampleSomeMethodGet
+     * @see ExampleApi#dummy
      */
-    fun exampleSomeMethodGet(): ResponseEntity<ExampleResponse> {
+    fun dummy(): ResponseEntity<ExampleResponse> {
         getRequest().ifPresent { request ->
             for (mediaType in MediaType.parseMediaTypes(request.getHeader("Accept"))) {
-                if (mediaType.isCompatibleWith(MediaType.valueOf("/"))) {
-                    ApiUtil.setExampleResponse(request, "/", "Custom MIME type example not yet supported: /")
+                if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
+                    ApiUtil.setExampleResponse(request, "*/*", "{  \"myOnlyProperty\" : [ 0.8008281904610115, 0.8008281904610115 ]}")
                     break
                 }
             }

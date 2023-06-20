@@ -9,15 +9,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod | 
+[**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
-# **exampleSomeMethodGet**
-> ExampleResponse exampleSomeMethodGet()
+# **dummy**
+> ExampleResponse dummy()
 
 
 
-
+dummy
 
 ### Example
 ```dart
@@ -26,10 +26,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getDefaultApi();
 
 try {
-    final response = api.exampleSomeMethodGet();
+    final response = api.dummy();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling DefaultApi->exampleSomeMethodGet: $e\n');
+    print('Exception when calling DefaultApi->dummy: $e\n');
 }
 ```
 
@@ -47,7 +47,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

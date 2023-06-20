@@ -26,7 +26,7 @@ After the client library is installed/deployed, you can use it in your Maven pro
 <dependency>
     <groupId>org.openapitools</groupId>
     <artifactId>echo-api-feign-json</artifactId>
-    <version>1.0.0</version>
+    <version>dumy</version>
     <scope>compile</scope>
 </dependency>
 

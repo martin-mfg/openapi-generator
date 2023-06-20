@@ -55,7 +55,7 @@ group_paths() ->
 
 get_operations() ->
     #{ 
-        'ExampleSomeMethodGet' => #{
+        'Dummy' => #{
             path => "/example/someMethod",
             method => <<"GET">>,
             handler => 'openapi_default_handler'

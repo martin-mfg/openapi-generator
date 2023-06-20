@@ -4,24 +4,24 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-PSExampleSomeMethodGet**](PSDefaultApi.md#Invoke-PSExampleSomeMethodGet) | **GET** /example/someMethod | 
+[**Invoke-PSDummy**](PSDefaultApi.md#Invoke-PSDummy) | **GET** /example/someMethod | 
 
 
-<a id="Invoke-PSExampleSomeMethodGet"></a>
-# **Invoke-PSExampleSomeMethodGet**
-> ExampleResponse Invoke-PSExampleSomeMethodGet<br>
+<a id="Invoke-PSDummy"></a>
+# **Invoke-PSDummy**
+> ExampleResponse Invoke-PSDummy<br>
 
 
 
-
+dummy
 
 ### Example
 ```powershell
 
 try {
-    $Result = Invoke-PSExampleSomeMethodGet
+    $Result = Invoke-PSDummy
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-PSExampleSomeMethodGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-PSDummy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -40,7 +40,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

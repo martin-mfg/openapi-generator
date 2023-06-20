@@ -5,7 +5,7 @@
     <artifactId>openapi3-extensions-x-auth-id-alias-jersey2-java8</artifactId>
     <packaging>jar</packaging>
     <name>openapi3-extensions-x-auth-id-alias-jersey2-java8</name>
-    <version>1.0.0</version>
+    <version>dumy</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

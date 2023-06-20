@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultAPI.md#examplesomemethodget) | **GET** /example/someMethod | 
+[**dummy**](DefaultAPI.md#dummy) | **GET** /example/someMethod | 
 
 
-# **exampleSomeMethodGet**
+# **dummy**
 ```swift
-    open class func exampleSomeMethodGet() -> Observable<ExampleResponse>
+    open class func dummy() -> Observable<ExampleResponse>
 ```
 
 
 
-
+dummy
 
 ### Example
 ```swift
@@ -39,7 +39,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -21,10 +21,10 @@ export class ObservableDefaultApi {
     }
 
     /**
-     * 
+     * dummy
      */
-    public exampleSomeMethodGet(_options?: Configuration): Observable<ExampleResponse> {
-        const requestContextPromise = this.requestFactory.exampleSomeMethodGet(_options);
+    public dummy(_options?: Configuration): Observable<ExampleResponse> {
+        const requestContextPromise = this.requestFactory.dummy(_options);
 
         // build promise chain
         let middlewarePreObservable = from<RequestContext>(requestContextPromise);
@@ -38,7 +38,7 @@ export class ObservableDefaultApi {
                 for (let middleware of this.configuration.middleware) {
                     middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
                 }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.exampleSomeMethodGet(rsp)));
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.dummy(rsp)));
             }));
     }
 

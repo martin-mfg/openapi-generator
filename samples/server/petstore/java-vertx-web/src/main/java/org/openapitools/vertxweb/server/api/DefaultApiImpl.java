@@ -14,7 +14,7 @@ import java.util.Map;
 // Implement this class
 
 public class DefaultApiImpl implements DefaultApi {
-    public Future<ApiResponse<ExampleResponse>> exampleSomeMethodGet() {
+    public Future<ApiResponse<ExampleResponse>> dummy() {
         return Future.failedFuture(new HttpException(501));
     }
 

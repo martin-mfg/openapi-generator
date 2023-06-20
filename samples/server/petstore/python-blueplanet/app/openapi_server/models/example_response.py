@@ -15,14 +15,14 @@ class ExampleResponse(Model):
     Do not edit the class manually.
     """
 
-    def __init__(self, my_only_property: List[bool]=None):  # noqa: E501
+    def __init__(self, my_only_property: list[float]=None):  # noqa: E501
         """ExampleResponse - a model defined in Swagger
 
         :param my_only_property: The my_only_property of this ExampleResponse.  # noqa: E501
-        :type my_only_property: List[bool]
+        :type my_only_property: list[float]
         """
         self.swagger_types = {
-            'my_only_property': List[bool]
+            'my_only_property': list[float]
         }
 
         self.attribute_map = {
@@ -43,22 +43,22 @@ class ExampleResponse(Model):
         return util.deserialize_model(dikt, cls)
 
     @property
-    def my_only_property(self) -> List[bool]:
+    def my_only_property(self) -> list[float]:
         """Gets the my_only_property of this ExampleResponse.
 
 
         :return: The my_only_property of this ExampleResponse.
-        :rtype: List[bool]
+        :rtype: list[float]
         """
         return self._my_only_property
 
     @my_only_property.setter
-    def my_only_property(self, my_only_property: List[bool]):
+    def my_only_property(self, my_only_property: list[float]):
         """Sets the my_only_property of this ExampleResponse.
 
 
         :param my_only_property: The my_only_property of this ExampleResponse.
-        :type my_only_property: List[bool]
+        :type my_only_property: list[float]
         """
 
         self._my_only_property = my_only_property

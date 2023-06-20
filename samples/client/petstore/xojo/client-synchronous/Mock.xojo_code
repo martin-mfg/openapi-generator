@@ -12,20 +12,20 @@ Public Class Mock
 		  api.UseHTTPS = false
 		  
 		  
-		  // Operation 
+		  // Operation dummy
 		  // - parameter localOutStatus: Information on whether the operation succeeded.
 		  // - parameter localOutData: On success, contains the data returned by the API.
 		  //
 		  // - GET /example/someMethod
-		  // - 
+		  // - dummy
 		  // - defaultResponse: Nil
 		  //
 		  //
-		  Dim ExampleSomeMethodGetData As XojoOpenAPIClientSynchronous.Models.ExampleResponse
-		  If api.ExampleSomeMethodGet(error, ExampleSomeMethodGetData) Then
-		    Print("[+] DefaultApi.ExampleSomeMethodGet successful.")
+		  Dim DummyData As XojoOpenAPIClientSynchronous.Models.ExampleResponse
+		  If api.Dummy(error, DummyData) Then
+		    Print("[+] DefaultApi.Dummy successful.")
 		  Else
-		    Print("[-] DefaultApi.ExampleSomeMethodGet unsuccessful.")
+		    Print("[-] DefaultApi.Dummy unsuccessful.")
 			Print("    " + " | ErrorNumber: " + Str(error.ErrorNumber) + " | HTTP Status: " + Str(error.HTTPCode) + " | SocketCode: " + Str(error.SocketCode) + " | Message: " + error.Message)
 		  End If
 		  

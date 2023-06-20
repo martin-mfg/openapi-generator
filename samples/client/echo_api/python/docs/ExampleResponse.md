@@ -1,11 +1,11 @@
 # ExampleResponse
 
-
+dummy
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**my_only_property** | **List[bool]** |  | [optional] 
+**my_only_property** | **List[float]** |  | [optional] 
 
 ## Example
 

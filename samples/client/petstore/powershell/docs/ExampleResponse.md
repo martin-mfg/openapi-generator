@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MyOnlyProperty** | **Boolean[]** |  | [optional] 
+**MyOnlyProperty** | **Decimal[]** |  | [optional] 
 
 ## Examples
 

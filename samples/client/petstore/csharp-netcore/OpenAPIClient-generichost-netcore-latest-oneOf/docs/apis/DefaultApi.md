@@ -4,13 +4,15 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ExampleSomeMethodGet**](DefaultApi.md#examplesomemethodget) | **GET** /example/someMethod |  |
+| [**Dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod |  |
 
-<a id="examplesomemethodget"></a>
-# **ExampleSomeMethodGet**
-> ExampleResponse ExampleSomeMethodGet ()
+<a id="dummy"></a>
+# **Dummy**
+> ExampleResponse Dummy ()
 
 
+
+dummy
 
 ### Example
 ```csharp
@@ -22,7 +24,7 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class ExampleSomeMethodGetExample
+    public class DummyExample
     {
         public static void Main()
         {
@@ -32,12 +34,12 @@ namespace Example
 
             try
             {
-                ExampleResponse result = apiInstance.ExampleSomeMethodGet();
+                ExampleResponse result = apiInstance.Dummy();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DefaultApi.ExampleSomeMethodGet: " + e.Message);
+                Debug.Print("Exception when calling DefaultApi.Dummy: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -46,20 +48,20 @@ namespace Example
 }
 ```
 
-#### Using the ExampleSomeMethodGetWithHttpInfo variant
+#### Using the DummyWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    ApiResponse<ExampleResponse> response = apiInstance.ExampleSomeMethodGetWithHttpInfo();
+    ApiResponse<ExampleResponse> response = apiInstance.DummyWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DefaultApi.ExampleSomeMethodGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DefaultApi.DummyWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -78,13 +80,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** |  |  -  |
+| **200** | dummy |  -  |
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

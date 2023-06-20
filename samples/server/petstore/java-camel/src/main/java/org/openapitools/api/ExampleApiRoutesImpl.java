@@ -19,14 +19,14 @@ public class ExampleApiRoutesImpl extends RouteBuilder {
         /**
         GET /example/someMethod
         **/
-        from("direct:exampleSomeMethodGet")
-            .id("exampleSomeMethodGet")
+        from("direct:dummy")
+            .id("dummy")
             .choice()
                 .when(simple("${body} != null"))
                     .log(LoggingLevel.INFO, "BODY TYPE: ${body.getClass().getName()}")
             .end()
             .log(LoggingLevel.INFO, "HEADERS: ${headers}")
-            .setBody(constant("Custom MIME type example not yet supported: /"))
+            .setBody(constant("{ \"myOnlyProperty\" : [ 0.8008281904610115, 0.8008281904610115 ] }"))
             .unmarshal().json(JsonLibrary.Jackson, ExampleResponse.class);
     }
 }

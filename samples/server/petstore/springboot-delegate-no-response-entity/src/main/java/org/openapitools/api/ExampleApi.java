@@ -29,18 +29,18 @@ public interface ExampleApi {
 
     /**
      * GET /example/someMethod
-     * 
+     * dummy
      *
-     * @return  (status code 200)
+     * @return dummy (status code 200)
      */
     @ApiOperation(
         value = "",
-        nickname = "exampleSomeMethodGet",
-        notes = "",
+        nickname = "dummy",
+        notes = "dummy",
         response = ExampleResponse.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
@@ -48,10 +48,10 @@ public interface ExampleApi {
         produces = { "*/*" }
     )
     @ResponseStatus(HttpStatus.OK)
-    default ExampleResponse exampleSomeMethodGet(
+    default ExampleResponse dummy(
         
     ) {
-        return getDelegate().exampleSomeMethodGet();
+        return getDelegate().dummy();
     }
 
 }

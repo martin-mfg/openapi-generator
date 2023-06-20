@@ -18,7 +18,7 @@ import javax.ws.rs.core.SecurityContext;
 @RequestScoped
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen")
 public class ExampleApiServiceImpl implements ExampleApiService {
-      public Response exampleSomeMethodGet(SecurityContext securityContext)
+      public Response dummy(SecurityContext securityContext)
       throws NotFoundException {
       // do some magic!
       return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();

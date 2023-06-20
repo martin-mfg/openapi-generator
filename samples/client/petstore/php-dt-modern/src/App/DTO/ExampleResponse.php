@@ -6,7 +6,7 @@ namespace App\DTO;
 use Articus\DataTransfer\PhpAttribute as DTA;
 
 /**
- * 
+ * dummy
  */
 class ExampleResponse
 {

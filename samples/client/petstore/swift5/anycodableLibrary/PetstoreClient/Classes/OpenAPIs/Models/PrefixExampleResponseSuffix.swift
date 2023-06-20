@@ -10,12 +10,12 @@ import Foundation
 import AnyCodable
 #endif
 
-/**  */
+/** dummy */
 public struct PrefixExampleResponseSuffix: Codable, JSONEncodable, Hashable {
 
-    public var myOnlyProperty: [Bool]?
+    public var myOnlyProperty: Set<Double>?
 
-    public init(myOnlyProperty: [Bool]? = nil) {
+    public init(myOnlyProperty: Set<Double>? = nil) {
         self.myOnlyProperty = myOnlyProperty
     }
 

@@ -47,23 +47,23 @@ public class DefaultApi {
 
     /**
      * 
-     * 
-     * <p><b>200</b> - 
+     * dummy
+     * <p><b>200</b> - dummy
      * @return ExampleResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ExampleResponse exampleSomeMethodGet() throws RestClientException {
-        return exampleSomeMethodGetWithHttpInfo().getBody();
+    public ExampleResponse dummy() throws RestClientException {
+        return dummyWithHttpInfo().getBody();
     }
 
     /**
      * 
-     * 
-     * <p><b>200</b> - 
+     * dummy
+     * <p><b>200</b> - dummy
      * @return ResponseEntity&lt;ExampleResponse&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ExampleResponse> exampleSomeMethodGetWithHttpInfo() throws RestClientException {
+    public ResponseEntity<ExampleResponse> dummyWithHttpInfo() throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -73,7 +73,7 @@ public class DefaultApi {
         final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "/"
+            "*/*"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] localVarContentTypes = {  };

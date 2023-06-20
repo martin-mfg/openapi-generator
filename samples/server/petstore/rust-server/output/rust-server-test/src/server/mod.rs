@@ -22,7 +22,7 @@ pub use crate::context;
 type ServiceFuture = BoxFuture<'static, Result<Response<Body>, crate::ServiceError>>;
 
 use crate::{Api,
-     ExampleSomeMethodGetResponse
+     DummyResponse
 };
 
 mod paths {
@@ -139,9 +139,9 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
 
         match method {
 
-            // ExampleSomeMethodGet - GET /example/someMethod
+            // Dummy - GET /example/someMethod
             hyper::Method::GET if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => {
-                                let result = api_impl.example_some_method_get(
+                                let result = api_impl.dummy(
                                         &context
                                     ).await;
                                 let mut response = Response::new(Body::empty());
@@ -152,15 +152,15 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
 
                                         match result {
                                             Ok(rsp) => match rsp {
-                                                ExampleSomeMethodGetResponse::Status200
+                                                DummyResponse::Dummy
                                                     (body)
                                                 => {
                                                     *response.status_mut() = StatusCode::from_u16(200).expect("Unable to turn 200 into a StatusCode");
                                                     response.headers_mut().insert(
                                                         CONTENT_TYPE,
-                                                        HeaderValue::from_str("/")
-                                                            .expect("Unable to create Content-Type header for EXAMPLE_SOME_METHOD_GET_STATUS200"));
-                                                    let body = body;
+                                                        HeaderValue::from_str("*/*")
+                                                            .expect("Unable to create Content-Type header for DUMMY_DUMMY"));
+                                                    let body = serde_json::to_string(&body).expect("impossible to fail to serialize");
                                                     *response.body_mut() = Body::from(body);
                                                 },
                                             },
@@ -189,8 +189,8 @@ impl<T> RequestParser<T> for ApiRequestParser {
     fn parse_operation_id(request: &Request<T>) -> Option<&'static str> {
         let path = paths::GLOBAL_REGEX_SET.matches(request.uri().path());
         match *request.method() {
-            // ExampleSomeMethodGet - GET /example/someMethod
-            hyper::Method::GET if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => Some("ExampleSomeMethodGet"),
+            // Dummy - GET /example/someMethod
+            hyper::Method::GET if path.matched(paths::ID_EXAMPLE_SOMEMETHOD) => Some("Dummy"),
             _ => None,
         }
     }

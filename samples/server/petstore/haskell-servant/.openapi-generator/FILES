@@ -1,6 +1,6 @@
-.cabal
 README.md
 Setup.hs
-lib/API.hs
-lib/Types.hs
+dummy.cabal
+lib/Dummy/API.hs
+lib/Dummy/Types.hs
 stack.yaml

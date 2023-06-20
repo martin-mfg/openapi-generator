@@ -16,7 +16,7 @@ public interface DefaultService extends Service {
      */
     @Override
     default void update(Routing.Rules rules) {
-        rules.get("/example/someMethod", this::exampleSomeMethodGet);
+        rules.get("/example/someMethod", this::dummy);
     }
 
 
@@ -25,6 +25,6 @@ public interface DefaultService extends Service {
      * @param request the server request
      * @param response the server response
      */
-    void exampleSomeMethodGet(ServerRequest request, ServerResponse response);
+    void dummy(ServerRequest request, ServerResponse response);
 
 }

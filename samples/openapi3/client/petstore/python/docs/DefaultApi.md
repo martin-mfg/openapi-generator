@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**example_some_method_get**](DefaultApi.md#example_some_method_get) | **GET** /example/someMethod | 
+[**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod | 
 
 
-# **example_some_method_get**
-> ExampleResponse example_some_method_get()
+# **dummy**
+> ExampleResponse dummy()
 
 
 
-
+dummy
 
 ### Example
 
@@ -37,11 +37,11 @@ with petstore_api.ApiClient(configuration) as api_client:
     api_instance = petstore_api.DefaultApi(api_client)
 
     try:
-        api_response = api_instance.example_some_method_get()
-        print("The response of DefaultApi->example_some_method_get:\n")
+        api_response = api_instance.dummy()
+        print("The response of DefaultApi->dummy:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->example_some_method_get: %s\n" % e)
+        print("Exception when calling DefaultApi->dummy: %s\n" % e)
 ```
 
 
@@ -59,12 +59,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**200** | dummy |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

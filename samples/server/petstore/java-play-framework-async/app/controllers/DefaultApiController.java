@@ -40,8 +40,8 @@ public class DefaultApiController extends Controller {
     }
 
     @ApiAction
-    public CompletionStage<Result> exampleSomeMethodGet(Http.Request request) throws Exception {
-        return imp.exampleSomeMethodGetHttp(request);
+    public CompletionStage<Result> dummy(Http.Request request) throws Exception {
+        return imp.dummyHttp(request);
     }
 
 }

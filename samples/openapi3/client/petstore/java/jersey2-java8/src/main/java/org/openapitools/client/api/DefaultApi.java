@@ -48,35 +48,35 @@ public class DefaultApi {
 
   /**
    * 
-   * 
+   * dummy
    * @return ExampleResponse
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-       <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
+       <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
      </table>
    */
-  public ExampleResponse exampleSomeMethodGet() throws ApiException {
-    return exampleSomeMethodGetWithHttpInfo().getData();
+  public ExampleResponse dummy() throws ApiException {
+    return dummyWithHttpInfo().getData();
   }
 
   /**
    * 
-   * 
+   * dummy
    * @return ApiResponse&lt;ExampleResponse&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-       <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
+       <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<ExampleResponse> exampleSomeMethodGetWithHttpInfo() throws ApiException {
-    String localVarAccept = apiClient.selectHeaderAccept("/");
+  public ApiResponse<ExampleResponse> dummyWithHttpInfo() throws ApiException {
+    String localVarAccept = apiClient.selectHeaderAccept("*/*");
     String localVarContentType = apiClient.selectHeaderContentType();
     GenericType<ExampleResponse> localVarReturnType = new GenericType<ExampleResponse>() {};
-    return apiClient.invokeAPI("DefaultApi.exampleSomeMethodGet", "/example/someMethod", "GET", new ArrayList<>(), null,
+    return apiClient.invokeAPI("DefaultApi.dummy", "/example/someMethod", "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                null, localVarReturnType, false);
   }

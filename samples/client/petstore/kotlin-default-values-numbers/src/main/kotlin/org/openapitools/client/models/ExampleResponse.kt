@@ -19,7 +19,7 @@ package org.openapitools.client.models
 import com.google.gson.annotations.SerializedName
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty 
  */
@@ -28,7 +28,7 @@ import com.google.gson.annotations.SerializedName
 data class ExampleResponse (
 
     @SerializedName("myOnlyProperty")
-    val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    val myOnlyProperty: kotlin.collections.Set<java.math.BigDecimal>? = null
 
 )
 

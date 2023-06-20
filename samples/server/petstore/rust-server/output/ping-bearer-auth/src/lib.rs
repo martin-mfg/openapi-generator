@@ -12,13 +12,13 @@ use serde::{Serialize, Deserialize};
 type ServiceError = Box<dyn Error + Send + Sync + 'static>;
 
 pub const BASE_PATH: &str = "";
-pub const API_VERSION: &str = "";
+pub const API_VERSION: &str = "dumy";
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub enum ExampleSomeMethodGetResponse {
-    /// 
-    Status200
-    (String)
+pub enum DummyResponse {
+    /// dummy
+    Dummy
+    (models::ExampleResponse)
 }
 
 /// API
@@ -29,9 +29,9 @@ pub trait Api<C: Send + Sync> {
         Poll::Ready(Ok(()))
     }
 
-    async fn example_some_method_get(
+    async fn dummy(
         &self,
-        context: &C) -> Result<ExampleSomeMethodGetResponse, ApiError>;
+        context: &C) -> Result<DummyResponse, ApiError>;
 
 }
 
@@ -44,9 +44,9 @@ pub trait ApiNoContext<C: Send + Sync> {
 
     fn context(&self) -> &C;
 
-    async fn example_some_method_get(
+    async fn dummy(
         &self,
-        ) -> Result<ExampleSomeMethodGetResponse, ApiError>;
+        ) -> Result<DummyResponse, ApiError>;
 
 }
 
@@ -73,12 +73,12 @@ impl<T: Api<C> + Send + Sync, C: Clone + Send + Sync> ApiNoContext<C> for Contex
         ContextWrapper::context(self)
     }
 
-    async fn example_some_method_get(
+    async fn dummy(
         &self,
-        ) -> Result<ExampleSomeMethodGetResponse, ApiError>
+        ) -> Result<DummyResponse, ApiError>
     {
         let context = self.context().clone();
-        self.api().example_some_method_get(&context).await
+        self.api().dummy(&context).await
     }
 
 }

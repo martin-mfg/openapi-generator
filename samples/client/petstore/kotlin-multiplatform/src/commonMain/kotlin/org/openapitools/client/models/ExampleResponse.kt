@@ -21,7 +21,7 @@ import kotlinx.serialization.descriptors.*
 import kotlinx.serialization.encoding.*
 
 /**
- * 
+ * dummy
  *
  * @param myOnlyProperty 
  */
@@ -29,7 +29,7 @@ import kotlinx.serialization.encoding.*
 
 data class ExampleResponse (
 
-    @SerialName(value = "myOnlyProperty") val myOnlyProperty: kotlin.collections.List<kotlin.Boolean>? = null
+    @SerialName(value = "myOnlyProperty") val myOnlyProperty: kotlin.collections.Set<kotlin.Double>? = null
 
 )
 

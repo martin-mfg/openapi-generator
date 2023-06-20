@@ -15,7 +15,7 @@ import javax.ws.rs.core.SecurityContext;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen")
 public class ExampleApiServiceImpl implements ExampleApi {
-      public Response exampleSomeMethodGet(SecurityContext securityContext) {
+      public Response dummy(SecurityContext securityContext) {
       // do some magic!
       return Response.ok().build();
   }

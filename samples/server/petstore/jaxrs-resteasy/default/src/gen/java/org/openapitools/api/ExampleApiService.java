@@ -16,6 +16,6 @@ import javax.ws.rs.core.SecurityContext;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen")
 public interface ExampleApiService {
-      Response exampleSomeMethodGet(SecurityContext securityContext)
+      Response dummy(SecurityContext securityContext)
       throws NotFoundException;
 }

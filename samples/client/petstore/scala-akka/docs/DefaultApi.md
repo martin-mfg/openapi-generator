@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultApi.md#exampleSomeMethodGet) | **GET** /example/someMethod | 
-[**exampleSomeMethodGetWithHttpInfo**](DefaultApi.md#exampleSomeMethodGetWithHttpInfo) | **GET** /example/someMethod | 
+[**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod | 
+[**dummyWithHttpInfo**](DefaultApi.md#dummyWithHttpInfo) | **GET** /example/someMethod | 
 
 
 
-## exampleSomeMethodGet
+## dummy
 
-> exampleSomeMethodGet(): ApiRequest[ExampleResponse]
-
-
+> dummy(): ApiRequest[ExampleResponse]
 
 
+
+dummy
 
 ### Example
 
@@ -37,7 +37,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DefaultApi("http://localhost")    
-    val request = apiInstance.exampleSomeMethodGet()
+    val request = apiInstance.dummy()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -47,14 +47,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet")
+            System.err.println("Exception when calling DefaultApi#dummy")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling DefaultApi#exampleSomeMethodGet")
+            System.err.println("Exception when calling DefaultApi#dummy")
             exception.printStackTrace();
     }
 }
@@ -76,10 +76,10 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: /
+- **Accept**: */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** |  |  -  |
+| **200** | dummy |  -  |
 

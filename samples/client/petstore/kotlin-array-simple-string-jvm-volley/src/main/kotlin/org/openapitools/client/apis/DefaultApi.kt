@@ -35,10 +35,10 @@ class DefaultApi (
 
     /**
      * 
-     * 
+     * dummy
      * @return ExampleResponse
      */
-    suspend fun exampleSomeMethodGet(): ExampleResponse? {
+    suspend fun dummy(): ExampleResponse? {
         val body: Any? = null
 
         val contentTypes : Array<String> = arrayOf()

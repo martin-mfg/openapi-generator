@@ -3,8 +3,8 @@
 
 module Instances where
 
-import OpenAPI.Model
-import OpenAPI.Core
+import Dummy.Model
+import Dummy.Core
 
 import qualified Data.Aeson as A
 import qualified Data.ByteString.Lazy as BL
@@ -119,7 +119,7 @@ instance Arbitrary ExampleResponse where
 genExampleResponse :: Int -> Gen ExampleResponse
 genExampleResponse n =
   ExampleResponse
-    <$> arbitraryReducedMaybe n -- exampleResponseMyOnlyProperty :: Maybe [Bool]
+    <$> arbitraryReducedMaybe n -- exampleResponseMyOnlyProperty :: Maybe [Double]
   
 
 

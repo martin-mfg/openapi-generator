@@ -35,7 +35,7 @@ public class DefaultApiController extends Controller {
     }
 
     @ApiAction
-    public Result exampleSomeMethodGet(Http.Request request) throws Exception {
+    public Result dummy(Http.Request request) throws Exception {
         return ok();
     }
 

@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exampleSomeMethodGet**](DefaultAPI.md#examplesomemethodget) | **GET** /example/someMethod | 
+[**dummy**](DefaultAPI.md#dummy) | **GET** /example/someMethod | 
 
 
-# **exampleSomeMethodGet**
+# **dummy**
 ```swift
-    open class func exampleSomeMethodGet(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<ExampleSomeMethodGet>
+    open class func dummy(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<Dummy>
 ```
 
 
 
-
+dummy
 
 ### Example
 ```swift
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 import PetstoreClient
 
 
-DefaultAPI.exampleSomeMethodGet().whenComplete { result in
+DefaultAPI.dummy().whenComplete { result in
     switch result {
     case .failure(let error):
     // process error
@@ -41,10 +41,10 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-#### ExampleSomeMethodGet
+#### Dummy
 
 ```swift
-public enum ExampleSomeMethodGet {
+public enum Dummy {
     case http200(value: ExampleResponse?, raw: ClientResponse)
     case http0(value: ExampleResponse?, raw: ClientResponse)
 }
@@ -57,7 +57,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: /
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

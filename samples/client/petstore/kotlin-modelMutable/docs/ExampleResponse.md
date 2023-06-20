@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**myOnlyProperty** | **kotlin.collections.MutableList&lt;kotlin.Boolean&gt;** |  |  [optional]
+**myOnlyProperty** | [**kotlin.collections.MutableSet&lt;java.math.BigDecimal&gt;**](java.math.BigDecimal.md) |  |  [optional]
 
 
 

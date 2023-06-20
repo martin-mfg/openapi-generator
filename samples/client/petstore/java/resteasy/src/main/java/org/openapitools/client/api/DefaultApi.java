@@ -36,11 +36,11 @@ public class DefaultApi {
 
   /**
    * 
-   * 
+   * dummy
    * @return a {@code ExampleResponse}
    * @throws ApiException if fails to make API call
    */
-  public ExampleResponse exampleSomeMethodGet() throws ApiException {
+  public ExampleResponse dummy() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -57,7 +57,7 @@ public class DefaultApi {
     
     
     final String[] localVarAccepts = {
-      "/"
+      "*/*"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
