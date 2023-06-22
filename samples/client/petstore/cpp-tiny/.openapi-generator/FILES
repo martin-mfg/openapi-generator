@@ -7,6 +7,7 @@ lib/Models/Node.cpp
 lib/Models/Node.h
 lib/Models/OtherObject.cpp
 lib/Models/OtherObject.h
+lib/TestFiles/NodeTest.cpp
 lib/service/DefaultApi.cpp
 lib/service/DefaultApi.h
 lib/service/Response.h

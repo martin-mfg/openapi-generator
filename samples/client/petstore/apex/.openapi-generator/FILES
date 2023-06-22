@@ -10,6 +10,8 @@ force-app/main/default/classes/OASExampleResponse.cls
 force-app/main/default/classes/OASExampleResponse.cls-meta.xml
 force-app/main/default/classes/OASNode.cls
 force-app/main/default/classes/OASNode.cls-meta.xml
+force-app/main/default/classes/OASNodeTest.cls
+force-app/main/default/classes/OASNodeTest.cls-meta.xml
 force-app/main/default/classes/OASOtherObject.cls
 force-app/main/default/classes/OASOtherObject.cls-meta.xml
 force-app/main/default/classes/OASResponseMock.cls

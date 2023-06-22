@@ -22,5 +22,6 @@ lib/x_auth_id_alias/models/other_object.rb
 lib/x_auth_id_alias/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
+spec/models/node_spec.rb
 spec/spec_helper.rb
 x_auth_id_alias.gemspec

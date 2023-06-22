@@ -19,3 +19,4 @@ lib/src/model/example_response.dart
 lib/src/model/node.dart
 lib/src/model/other_object.dart
 pubspec.yaml
+test/node_test.dart

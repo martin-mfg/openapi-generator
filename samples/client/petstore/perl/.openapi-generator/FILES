@@ -16,3 +16,4 @@ lib/WWW/OpenAPIClient/Object/Node.pm
 lib/WWW/OpenAPIClient/Object/OtherObject.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
+t/NodeTest.t

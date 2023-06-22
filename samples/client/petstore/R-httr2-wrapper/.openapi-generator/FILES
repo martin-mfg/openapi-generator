@@ -20,3 +20,4 @@ docs/Node.md
 docs/OtherObject.md
 git_push.sh
 tests/testthat.R
+tests/testthat/test_node.R

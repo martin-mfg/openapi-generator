@@ -21,3 +21,4 @@ lib/src/model/node.dart
 lib/src/model/other_object.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/node_test.dart

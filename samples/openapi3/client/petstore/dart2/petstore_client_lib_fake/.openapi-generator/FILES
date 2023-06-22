@@ -21,3 +21,4 @@ lib/model/example_response.dart
 lib/model/node.dart
 lib/model/other_object.dart
 pubspec.yaml
+test/node_test.dart
