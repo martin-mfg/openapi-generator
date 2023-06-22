@@ -1,0 +1,10 @@
+README.md
+pom.xml
+src/main/java/org/openapitools/vertxweb/server/ApiResponse.java
+src/main/java/org/openapitools/vertxweb/server/HttpServerVerticle.java
+src/main/java/org/openapitools/vertxweb/server/api/DefaultApi.java
+src/main/java/org/openapitools/vertxweb/server/api/DefaultApiHandler.java
+src/main/java/org/openapitools/vertxweb/server/api/DefaultApiImpl.java
+src/main/java/org/openapitools/vertxweb/server/model/ExampleResponse.java
+src/main/java/org/openapitools/vertxweb/server/model/OtherObject.java
+src/main/resources/openapi.yaml

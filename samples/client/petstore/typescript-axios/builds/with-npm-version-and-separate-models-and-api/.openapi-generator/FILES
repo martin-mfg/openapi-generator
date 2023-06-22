@@ -1,0 +1,16 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
+README.md
+api.ts
+api/another/level/default-api.ts
+base.ts
+common.ts
+configuration.ts
+git_push.sh
+index.ts
+model/some/levels/deep/example-response.ts
+model/some/levels/deep/index.ts
+model/some/levels/deep/other-object.ts
+package.json
+tsconfig.json

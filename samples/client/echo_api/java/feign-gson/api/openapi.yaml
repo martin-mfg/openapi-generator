@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  description: dummy
+  title: dummy
+  version: dummy
+servers:
+- url: /
+paths:
+  /example/someMethod:
+    get:
+      description: dummy
+      operationId: dummy
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ExampleResponse'
+          description: dummy
+      x-accepts: '*/*'
+components:
+  schemas:
+    ExampleResponse:
+      description: dummy
+      example:
+        myOnlyProperty:
+          myOnlyProperty2: null
+      properties:
+        myOnlyProperty:
+          $ref: '#/components/schemas/OtherObject'
+      type: object
+    OtherObject:
+      description: dummy
+      example:
+        myOnlyProperty2: null
+      properties:
+        myOnlyProperty2:
+          $ref: '#/components/schemas/ExampleResponse'
+      type: object
+

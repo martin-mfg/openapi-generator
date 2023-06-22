@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+
+    <entity name="SWGExampleResponseManagedObject" representedClassName="SWGExampleResponseManagedObject" syncable="YES">
+        <relationship name="myOnlyProperty" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGOtherObjectManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="SWGOtherObjectManagedObject" representedClassName="SWGOtherObjectManagedObject" syncable="YES">
+        <relationship name="myOnlyProperty2" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGExampleResponseManagedObject" syncable="YES"/>
+    </entity>
+    
+</model>

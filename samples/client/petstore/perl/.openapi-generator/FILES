@@ -1,0 +1,16 @@
+.gitignore
+.travis.yml
+README.md
+bin/autodoc
+docs/DefaultApi.md
+docs/ExampleResponse.md
+docs/OtherObject.md
+git_push.sh
+lib/WWW/OpenAPIClient/ApiClient.pm
+lib/WWW/OpenAPIClient/ApiFactory.pm
+lib/WWW/OpenAPIClient/Configuration.pm
+lib/WWW/OpenAPIClient/DefaultApi.pm
+lib/WWW/OpenAPIClient/Object/ExampleResponse.pm
+lib/WWW/OpenAPIClient/Object/OtherObject.pm
+lib/WWW/OpenAPIClient/Role.pm
+lib/WWW/OpenAPIClient/Role/AutoDoc.pm
