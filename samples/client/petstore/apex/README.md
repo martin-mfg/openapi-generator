@@ -65,6 +65,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [OASExampleResponse](OASExampleResponse.md)
+ - [OASNode](OASNode.md)
  - [OASOtherObject](OASOtherObject.md)
 
 

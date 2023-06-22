@@ -6,6 +6,7 @@
 package org.openapitools.api;
 
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -34,6 +35,7 @@ public interface ExampleApi {
      * dummy
      *
      * @return dummy (status code 200)
+     *         or dummy (status code 201)
      */
     @RequestMapping(
         method = RequestMethod.GET,

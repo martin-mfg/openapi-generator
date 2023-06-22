@@ -17,6 +17,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/ExampleResponse'
           description: dummy
+        "201":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Node'
+          description: dummy
 components:
   schemas:
     ExampleResponse:
@@ -37,4 +43,13 @@ components:
         myOnlyProperty2:
           $ref: '#/components/schemas/ExampleResponse'
       title: OtherObject
+      type: object
+    Node:
+      description: dummy
+      properties:
+        left:
+          $ref: '#/components/schemas/Node'
+        right:
+          $ref: '#/components/schemas/Node'
+      title: Node
       type: object

@@ -30,6 +30,7 @@ DefaultAPI.dummy().whenComplete { result in
         switch response {
         // process decoded response value or raw ClientResponse
         case .http200(let value, let raw):
+        case .http201(let value, let raw):
         case .http0(let value, let raw):
         }
     }
@@ -46,6 +47,7 @@ This endpoint does not need any parameter.
 ```swift
 public enum Dummy {
     case http200(value: ExampleResponse?, raw: ClientResponse)
+    case http201(value: Node?, raw: ClientResponse)
     case http0(value: ExampleResponse?, raw: ClientResponse)
 }
 ```

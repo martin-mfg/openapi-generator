@@ -5,4 +5,5 @@ src/main/java/org/openapitools/api/DefaultApiClient.java
 src/main/java/org/openapitools/configuration/ApiKeyRequestInterceptor.java
 src/main/java/org/openapitools/configuration/ClientConfiguration.java
 src/main/java/org/openapitools/model/ExampleResponse.java
+src/main/java/org/openapitools/model/Node.java
 src/main/java/org/openapitools/model/OtherObject.java

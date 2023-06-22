@@ -2,6 +2,7 @@ README.md
 build.sbt
 docs/DefaultApi.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 pom.xml
 project/build.properties
@@ -14,4 +15,5 @@ src/main/scala/org/openapitools/client/core/ApiSettings.scala
 src/main/scala/org/openapitools/client/core/Serializers.scala
 src/main/scala/org/openapitools/client/core/requests.scala
 src/main/scala/org/openapitools/client/model/ExampleResponse.scala
+src/main/scala/org/openapitools/client/model/Node.scala
 src/main/scala/org/openapitools/client/model/OtherObject.scala

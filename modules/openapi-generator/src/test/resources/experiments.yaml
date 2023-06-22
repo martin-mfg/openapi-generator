@@ -15,6 +15,13 @@ paths:
             "*/*":
               schema:
                 $ref: '#/components/schemas/ExampleResponse'
+        201:
+          description: dummy
+          content:
+            "*/*":
+              schema:
+                $ref: '#/components/schemas/Node'
+
 components:
   schemas:
     ExampleResponse:
@@ -29,3 +36,11 @@ components:
       properties:
         myOnlyProperty2:
           $ref: '#/components/schemas/ExampleResponse'
+    Node:
+      type: object
+      description: dummy
+      properties:
+        left:
+          $ref: '#/components/schemas/Node'
+        right:
+          $ref: '#/components/schemas/Node'

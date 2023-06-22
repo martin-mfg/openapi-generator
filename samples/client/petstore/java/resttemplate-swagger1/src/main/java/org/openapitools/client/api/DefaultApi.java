@@ -3,6 +3,7 @@ package org.openapitools.client.api;
 import org.openapitools.client.ApiClient;
 
 import org.openapitools.client.model.ExampleResponse;
+import org.openapitools.client.model.Node;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -49,6 +50,7 @@ public class DefaultApi {
      * 
      * dummy
      * <p><b>200</b> - dummy
+     * <p><b>201</b> - dummy
      * @return ExampleResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -60,6 +62,7 @@ public class DefaultApi {
      * 
      * dummy
      * <p><b>200</b> - dummy
+     * <p><b>201</b> - dummy
      * @return ResponseEntity&lt;ExampleResponse&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */

@@ -2,6 +2,7 @@ package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
 import org.openapitools.model.ExampleResponse
+import org.openapitools.model.Node
 
 class DefaultApi {
     String basePath = "http://localhost"

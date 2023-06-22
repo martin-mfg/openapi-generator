@@ -16,6 +16,8 @@ server/src/models/OAIHelpers.cpp
 server/src/models/OAIHelpers.h
 server/src/models/OAIHttpFileElement.cpp
 server/src/models/OAIHttpFileElement.h
+server/src/models/OAINode.cpp
+server/src/models/OAINode.h
 server/src/models/OAIObject.h
 server/src/models/OAIOtherObject.cpp
 server/src/models/OAIOtherObject.h

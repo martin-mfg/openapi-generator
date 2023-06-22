@@ -55,6 +55,7 @@ set(SRCS
     external/cJSON.c
     model/object.c
     model/example_response.c
+    model/node.c
     model/other_object.c
     api/DefaultAPI.c
 
@@ -68,6 +69,7 @@ set(HDRS
     external/cJSON.h
     model/object.h
     model/example_response.h
+    model/node.h
     model/other_object.h
     api/DefaultAPI.h
 

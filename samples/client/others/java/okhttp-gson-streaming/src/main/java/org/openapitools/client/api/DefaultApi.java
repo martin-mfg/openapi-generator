@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import org.openapitools.client.model.ExampleResponse;
+import org.openapitools.client.model.Node;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -83,6 +84,7 @@ public class DefaultApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call dummyCall(final ApiCallback _callback) throws ApiException {
@@ -144,6 +146,7 @@ public class DefaultApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
      </table>
      */
     public ExampleResponse dummy() throws ApiException {
@@ -160,6 +163,7 @@ public class DefaultApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<ExampleResponse> dummyWithHttpInfo() throws ApiException {
@@ -178,6 +182,7 @@ public class DefaultApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call dummyAsync(final ApiCallback<ExampleResponse> _callback) throws ApiException {

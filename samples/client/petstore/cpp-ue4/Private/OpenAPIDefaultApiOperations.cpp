@@ -46,6 +46,9 @@ void OpenAPIDefaultApi::DummyResponse::SetHttpResponseCode(EHttpResponseCodes::T
 	case 200:
 		SetResponseString(TEXT("dummy"));
 		break;
+	case 201:
+		SetResponseString(TEXT("dummy"));
+		break;
 	}
 }
 

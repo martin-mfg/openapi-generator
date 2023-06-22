@@ -4,6 +4,7 @@ Cargo.toml
 README.md
 docs/DefaultApi.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 git_push.sh
 src/apis/client.rs
@@ -14,4 +15,5 @@ src/apis/request.rs
 src/lib.rs
 src/models/example_response.rs
 src/models/mod.rs
+src/models/node.rs
 src/models/other_object.rs

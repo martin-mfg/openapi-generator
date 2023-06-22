@@ -7,6 +7,7 @@ import org.wso2.msf4j.formparam.FormDataParam;
 import org.wso2.msf4j.formparam.FileInfo;
 
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;

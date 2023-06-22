@@ -1,6 +1,7 @@
 import localVarRequest from 'request';
 
 export * from './exampleResponse';
+export * from './node';
 export * from './otherObject';
 
 import * as fs from 'fs';
@@ -17,6 +18,7 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
 import { ExampleResponse } from './exampleResponse';
+import { Node } from './node';
 import { OtherObject } from './otherObject';
 
 /* tslint:disable:no-unused-variable */
@@ -36,6 +38,7 @@ let enumsMap: {[index: string]: any} = {
 
 let typeMap: {[index: string]: any} = {
     "ExampleResponse": ExampleResponse,
+    "Node": Node,
     "OtherObject": OtherObject,
 }
 

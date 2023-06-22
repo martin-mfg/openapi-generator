@@ -23,6 +23,9 @@ import {
     ExampleResponse,
     ExampleResponseRecord,
     exampleResponseRecordUtils,
+    Node,
+    NodeRecord,
+    nodeRecordUtils,
 } from '../models/index';
 
 const createSagaAction = <T>(type: string) => originalCreateSagaAction<T>(type, {namespace: "api_defaultApi"});

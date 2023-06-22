@@ -5,6 +5,7 @@ README.md
 composer.json
 docs/Api/DefaultApi.md
 docs/Model/ExampleResponse.md
+docs/Model/Node.md
 docs/Model/OtherObject.md
 git_push.sh
 lib/Api/DefaultApi.php
@@ -13,6 +14,8 @@ lib/Configuration.php
 lib/HeaderSelector.php
 lib/Model/ExampleResponse.php
 lib/Model/ModelInterface.php
+lib/Model/Node.php
 lib/Model/OtherObject.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/NodeTest.php

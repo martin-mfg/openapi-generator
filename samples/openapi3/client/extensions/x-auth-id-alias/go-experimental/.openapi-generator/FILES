@@ -7,11 +7,13 @@ client.go
 configuration.go
 docs/DefaultAPI.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 git_push.sh
 go.mod
 go.sum
 model_example_response.go
+model_node.go
 model_other_object.go
 response.go
 utils.go

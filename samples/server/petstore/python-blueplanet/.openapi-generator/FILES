@@ -24,6 +24,7 @@ app/openapi_server/models/__init__.py
 app/openapi_server/models/base_model_.py
 app/openapi_server/models/base_model_.py
 app/openapi_server/models/example_response.py
+app/openapi_server/models/node.py
 app/openapi_server/models/other_object.py
 app/openapi_server/swagger/swagger.yaml
 app/openapi_server/swagger/swagger.yaml
@@ -41,7 +42,11 @@ app/test-requirements.txt
 app/test-requirements.txt
 app/tox.ini
 app/tox.ini
+model-definitions/types/ddui-views/openapi_server.resourceTypes.Node/create.json
+model-definitions/types/ddui-views/openapi_server.resourceTypes.Node/high.json
+model-definitions/types/ddui-views/openapi_server.resourceTypes.Node/low.json
 model-definitions/types/tosca/openapi_server/ExampleResponse_ResourceType.tosca
+model-definitions/types/tosca/openapi_server/Node_ResourceType.tosca
 model-definitions/types/tosca/openapi_server/OtherObject_ResourceType.tosca
 requirements.txt
 requirements.txt

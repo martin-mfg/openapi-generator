@@ -16,6 +16,7 @@ import { HttpService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
 import { Observable } from 'rxjs';
 import { ExampleResponse } from '../model/exampleResponse';
+import { Node } from '../model/node';
 import { Configuration } from '../configuration';
 
 

@@ -4,6 +4,7 @@ README.md
 analysis_options.yaml
 doc/DefaultApi.md
 doc/ExampleResponse.md
+doc/Node.md
 doc/OtherObject.md
 git_push.sh
 lib/api.dart
@@ -17,5 +18,7 @@ lib/auth/http_basic_auth.dart
 lib/auth/http_bearer_auth.dart
 lib/auth/oauth.dart
 lib/model/example_response.dart
+lib/model/node.dart
 lib/model/other_object.dart
 pubspec.yaml
+test/node_test.dart

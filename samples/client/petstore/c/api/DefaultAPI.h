@@ -6,6 +6,7 @@
 #include "../include/keyValuePair.h"
 #include "../include/binary.h"
 #include "../model/example_response.h"
+#include "../model/node.h"
 
 
 // dummy

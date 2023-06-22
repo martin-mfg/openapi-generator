@@ -37,6 +37,7 @@ open class DefaultAPI {
 
     public enum Dummy {
         case http200(value: ExampleResponse, raw: ClientResponse)
+        case http201(value: Node, raw: ClientResponse)
         case http0(raw: ClientResponse)
     }
 
@@ -50,6 +51,8 @@ open class DefaultAPI {
             switch response.status.code {
             case 200:
                 return .http200(value: try response.content.decode(ExampleResponse.self, using: Configuration.contentConfiguration.requireDecoder(for: ExampleResponse.defaultContentType)), raw: response)
+            case 201:
+                return .http201(value: try response.content.decode(Node.self, using: Configuration.contentConfiguration.requireDecoder(for: Node.defaultContentType)), raw: response)
             default:
                 return .http0(raw: response)
             }

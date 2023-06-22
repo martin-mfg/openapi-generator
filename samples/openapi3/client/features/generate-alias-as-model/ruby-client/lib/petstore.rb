@@ -18,6 +18,7 @@ require 'petstore/configuration'
 
 # Models
 require 'petstore/models/example_response'
+require 'petstore/models/node'
 require 'petstore/models/other_object'
 
 # APIs

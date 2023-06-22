@@ -13,6 +13,7 @@
 package org.openapitools.server.api;
 
 import org.openapitools.server.model.ExampleResponse;
+import org.openapitools.server.model.Node;
 
 import jakarta.ws.rs.*;
 

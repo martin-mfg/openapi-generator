@@ -12,6 +12,7 @@
 package org.openapitools.client.api
 
 import org.openapitools.client.model.ExampleResponse
+import org.openapitools.client.model.Node
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -28,10 +29,12 @@ class DefaultApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : ExampleResponse (dummy)
+   *   code 201 : Node (dummy)
    */
   def dummy(): ApiRequest[ExampleResponse] =
     ApiRequest[ExampleResponse](ApiMethods.GET, baseUrl, "/example/someMethod", "application/json")
       .withSuccessResponse[ExampleResponse](200)
+      .withSuccessResponse[Node](201)
       
 
 

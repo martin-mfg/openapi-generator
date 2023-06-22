@@ -12,6 +12,15 @@
           <xs:element minOccurs="0" name="myOnlyProperty" type="schemas:OtherObject" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="Node">
+        <xs:annotation>
+          <xs:documentation>dummy</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="left" type="schemas:Node" />
+          <xs:element minOccurs="0" name="right" type="schemas:Node" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="OtherObject">
         <xs:annotation>
           <xs:documentation>dummy</xs:documentation>
@@ -30,6 +39,15 @@
           </xs:element>
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="GetExampleSomemethod_ResponseMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Node" type="schemas:Node">
+            <xs:annotation>
+              <xs:documentation>dummy</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
     </xs:schema>
   </types>
   <message name="GetExampleSomemethod_RequestMessage">
@@ -38,10 +56,16 @@
   <message name="GetExampleSomemethod_ResponseMessage">
     <part name="GetExampleSomemethod_ResponseMessage" element="schemas:GetExampleSomemethod_ResponseMessage" />
   </message>
+  <message name="GetExampleSomemethod_ResponseMessage">
+    <part name="GetExampleSomemethod_ResponseMessage" element="schemas:GetExampleSomemethod_ResponseMessage" />
+  </message>
   <portType name="ServiceV1_PortType">
     <operation name="GetExampleSomemethod">
       <documentation>dummy</documentation>
       <input message="wsdl:GetExampleSomemethod_RequestMessage" />
+      <output message="wsdl:GetExampleSomemethod_ResponseMessage">
+        <documentation>dummy</documentation>
+      </output>
       <output message="wsdl:GetExampleSomemethod_ResponseMessage">
         <documentation>dummy</documentation>
       </output>
@@ -54,6 +78,9 @@
       <input>
         <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
       <output>
         <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>

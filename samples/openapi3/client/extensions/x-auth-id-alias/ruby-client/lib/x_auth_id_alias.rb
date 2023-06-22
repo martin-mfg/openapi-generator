@@ -18,6 +18,7 @@ require 'x_auth_id_alias/configuration'
 
 # Models
 require 'x_auth_id_alias/models/example_response'
+require 'x_auth_id_alias/models/node'
 require 'x_auth_id_alias/models/other_object'
 
 # APIs

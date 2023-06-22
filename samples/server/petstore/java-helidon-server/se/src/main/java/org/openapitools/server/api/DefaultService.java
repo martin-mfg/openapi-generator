@@ -1,6 +1,7 @@
 package org.openapitools.server.api;
 
 import org.openapitools.server.model.ExampleResponse;
+import org.openapitools.server.model.Node;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.helidon.webserver.Routing;

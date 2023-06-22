@@ -164,6 +164,7 @@ class DefaultApi(object):
 
         _response_types_map = {
             '200': "ExampleResponse",
+            '201': "Node",
         }
 
         return self.api_client.call_api(

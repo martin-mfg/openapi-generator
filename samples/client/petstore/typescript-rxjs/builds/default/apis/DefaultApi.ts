@@ -17,6 +17,7 @@ import { BaseAPI } from '../runtime';
 import type { OperationOpts } from '../runtime';
 import type {
     ExampleResponse,
+    Node,
 } from '../models';
 
 /**

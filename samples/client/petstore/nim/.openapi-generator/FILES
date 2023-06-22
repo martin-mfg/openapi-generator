@@ -3,5 +3,6 @@ config.nim
 petstore.nim
 petstore/apis/api_default.nim
 petstore/models/model_example_response.nim
+petstore/models/model_node.nim
 petstore/models/model_other_object.nim
 sample_client.nim

@@ -76,6 +76,7 @@ Class | Method | HTTP request | Description
 ## Models
 
 - [ExampleResponse](docs/Model/ExampleResponse.md)
+- [Node](docs/Model/Node.md)
 - [OtherObject](docs/Model/OtherObject.md)
 
 ## Authorization

@@ -16,6 +16,7 @@
 #include "OpenAPIDefaultApi.h"
 
 #include "OpenAPIExampleResponse.h"
+#include "OpenAPINode.h"
 
 namespace OpenAPI
 {

@@ -79,6 +79,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Petstore::ExampleResponse](docs/ExampleResponse.md)
+ - [Petstore::Node](docs/Node.md)
  - [Petstore::OtherObject](docs/OtherObject.md)
 
 

@@ -26,6 +26,7 @@ Class | Method
 ## Models
 
  - [ExampleResponse](docs/ExampleResponse.md)
+ - [Node](docs/Node.md)
  - [OtherObject](docs/OtherObject.md)
 
 

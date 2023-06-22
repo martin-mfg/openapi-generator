@@ -29,6 +29,7 @@
 #include <utility>
 
 #include "ExampleResponse.h"
+#include "Node.h"
 
 namespace org::openapitools::server::api
 {

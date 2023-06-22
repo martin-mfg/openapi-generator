@@ -9,9 +9,11 @@
 
 # Models
 import petstore/models/model_example_response
+import petstore/models/model_node
 import petstore/models/model_other_object
 
 export model_example_response
+export model_node
 export model_other_object
 
 # APIs

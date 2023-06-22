@@ -3,4 +3,6 @@ git_push.sh
 petstore-1.0.0-1.rockspec
 petstore/api/default_api.lua
 petstore/model/example_response.lua
+petstore/model/node.lua
 petstore/model/other_object.lua
+spec/node_spec.lua

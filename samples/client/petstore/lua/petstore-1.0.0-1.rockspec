@@ -25,6 +25,7 @@ build = {
 	modules = {
 		["petstore.api.default_api"] = "petstore/api/default_api.lua";
 		["petstore.model.example_response"] = "petstore/model/example_response.lua";
+		["petstore.model.node"] = "petstore/model/node.lua";
 		["petstore.model.other_object"] = "petstore/model/other_object.lua";
 	}
 }

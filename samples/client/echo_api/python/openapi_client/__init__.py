@@ -32,4 +32,5 @@ from openapi_client.exceptions import ApiException
 
 # import models into sdk package
 from openapi_client.models.example_response import ExampleResponse
+from openapi_client.models.node import Node
 from openapi_client.models.other_object import OtherObject

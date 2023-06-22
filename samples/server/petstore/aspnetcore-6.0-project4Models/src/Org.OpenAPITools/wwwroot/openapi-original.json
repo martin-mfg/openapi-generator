@@ -23,6 +23,16 @@
               }
             },
             "description" : "dummy"
+          },
+          "201" : {
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Node"
+                }
+              }
+            },
+            "description" : "dummy"
           }
         }
       }
@@ -52,6 +62,18 @@
         "properties" : {
           "myOnlyProperty2" : {
             "$ref" : "#/components/schemas/ExampleResponse"
+          }
+        },
+        "type" : "object"
+      },
+      "Node" : {
+        "description" : "dummy",
+        "properties" : {
+          "left" : {
+            "$ref" : "#/components/schemas/Node"
+          },
+          "right" : {
+            "$ref" : "#/components/schemas/Node"
           }
         },
         "type" : "object"

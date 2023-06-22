@@ -1,8 +1,10 @@
 README.md
 build.gradle
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 ktorm_schema.sql
 settings.gradle
 src/main/kotlin/org/openapitools/database/models/ExampleResponse.kt
+src/main/kotlin/org/openapitools/database/models/Node.kt
 src/main/kotlin/org/openapitools/database/models/OtherObject.kt

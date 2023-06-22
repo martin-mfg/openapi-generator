@@ -3,6 +3,7 @@
 from typing import ClassVar, Dict, List, Tuple  # noqa: F401
 
 from openapi_server.models.example_response import ExampleResponse
+from openapi_server.models.node import Node
 
 
 class BaseDefaultApi:

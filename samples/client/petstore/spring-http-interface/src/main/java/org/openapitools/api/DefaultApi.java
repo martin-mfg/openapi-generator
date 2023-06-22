@@ -6,6 +6,7 @@
 package org.openapitools.api;
 
 import org.openapitools.model.ExampleResponseDto;
+import org.openapitools.model.NodeDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.service.annotation.*;
@@ -25,6 +26,7 @@ public interface DefaultApi {
      * dummy
      *
      * @return dummy (status code 200)
+     *         or dummy (status code 201)
      */
     @HttpExchange(
         method = "GET",

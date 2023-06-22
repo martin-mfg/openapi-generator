@@ -37,5 +37,6 @@ All URIs are relative to http://localhosthttp://localhost
 |Class | Description|
 |------------- | -------------|
 |*ExampleResponse* | dummy|
+|*Node* | dummy|
 |*OtherObject* | dummy|
 

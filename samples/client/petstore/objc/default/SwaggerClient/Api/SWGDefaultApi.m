@@ -2,6 +2,7 @@
 #import "SWGQueryParamCollection.h"
 #import "SWGApiClient.h"
 #import "SWGExampleResponse.h"
+#import "SWGNode.h"
 
 
 @interface SWGDefaultApi ()

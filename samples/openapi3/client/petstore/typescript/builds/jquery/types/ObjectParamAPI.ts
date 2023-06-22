@@ -2,6 +2,7 @@ import { ResponseContext, RequestContext, HttpFile } from '../http/http';
 import { Configuration} from '../configuration'
 
 import { ExampleResponse } from '../models/ExampleResponse';
+import { Node } from '../models/Node';
 import { OtherObject } from '../models/OtherObject';
 
 import { ObservableDefaultApi } from "./ObservableAPI";
@@ -21,7 +22,7 @@ export class ObjectDefaultApi {
      * dummy
      * @param param the request object
      */
-    public dummy(param: DefaultApiDummyRequest = {}, options?: Configuration): Promise<ExampleResponse> {
+    public dummy(param: DefaultApiDummyRequest = {}, options?: Configuration): Promise<ExampleResponse | Node> {
         return this.api.dummy( options).toPromise();
     }
 

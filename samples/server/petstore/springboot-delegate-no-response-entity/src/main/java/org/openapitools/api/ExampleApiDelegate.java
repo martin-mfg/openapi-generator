@@ -1,6 +1,7 @@
 package org.openapitools.api;
 
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -28,6 +29,7 @@ public interface ExampleApiDelegate {
      * dummy
      *
      * @return dummy (status code 200)
+     *         or dummy (status code 201)
      * @see ExampleApi#dummy
      */
     default ExampleResponse dummy() {

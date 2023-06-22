@@ -18,6 +18,7 @@ require 'petstore/configuration'
 
 # Models
 Petstore.autoload :ExampleResponse, 'petstore/models/example_response'
+Petstore.autoload :Node, 'petstore/models/node'
 Petstore.autoload :OtherObject, 'petstore/models/other_object'
 
 # APIs

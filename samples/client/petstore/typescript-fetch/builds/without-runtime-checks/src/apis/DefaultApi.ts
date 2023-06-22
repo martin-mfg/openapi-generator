@@ -16,6 +16,7 @@
 import * as runtime from '../runtime';
 import type {
   ExampleResponse,
+  Node,
 } from '../models/index';
 
 /**

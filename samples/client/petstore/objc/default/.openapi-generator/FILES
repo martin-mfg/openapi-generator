@@ -27,9 +27,12 @@ SwaggerClient/Core/SWGSanitizer.h
 SwaggerClient/Core/SWGSanitizer.m
 SwaggerClient/Model/SWGExampleResponse.h
 SwaggerClient/Model/SWGExampleResponse.m
+SwaggerClient/Model/SWGNode.h
+SwaggerClient/Model/SWGNode.m
 SwaggerClient/Model/SWGOtherObject.h
 SwaggerClient/Model/SWGOtherObject.m
 docs/SWGDefaultApi.md
 docs/SWGExampleResponse.md
+docs/SWGNode.md
 docs/SWGOtherObject.md
 git_push.sh

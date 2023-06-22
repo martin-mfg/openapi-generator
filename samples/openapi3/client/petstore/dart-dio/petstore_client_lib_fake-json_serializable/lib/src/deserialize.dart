@@ -1,4 +1,5 @@
 import 'package:openapi/src/model/example_response.dart';
+import 'package:openapi/src/model/node.dart';
 import 'package:openapi/src/model/other_object.dart';
 
 final _regList = RegExp(r'^List<(.*)>$');
@@ -21,6 +22,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return (value is double ? value : double.parse('$value')) as ReturnType;
         case 'ExampleResponse':
           return ExampleResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'Node':
+          return Node.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'OtherObject':
           return OtherObject.fromJson(value as Map<String, dynamic>) as ReturnType;
         default:

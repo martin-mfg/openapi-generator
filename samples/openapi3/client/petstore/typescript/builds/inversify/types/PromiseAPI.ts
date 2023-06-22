@@ -4,6 +4,7 @@ import { injectable, inject, optional } from "inversify";
 import { AbstractConfiguration } from "../services/configuration";
 
 import { ExampleResponse } from '../models/ExampleResponse';
+import { Node } from '../models/Node';
 import { OtherObject } from '../models/OtherObject';
 import { ObservableDefaultApi } from './ObservableAPI';
 
@@ -25,7 +26,7 @@ export class PromiseDefaultApi {
     /**
      * dummy
      */
-    public dummy(_options?: Configuration): Promise<ExampleResponse> {
+    public dummy(_options?: Configuration): Promise<ExampleResponse | Node> {
         const result = this.api.dummy(_options);
         return result.toPromise();
     }

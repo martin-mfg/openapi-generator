@@ -12,6 +12,7 @@ import {SecurityAuthentication} from '../auth/auth';
 import { injectable } from "inversify";
 
 import { ExampleResponse } from '../models/ExampleResponse';
+import { Node } from '../models/Node';
 
 /**
  * no description
@@ -50,7 +51,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to dummy
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async dummy(response: ResponseContext): Promise<ExampleResponse > {
+     public async dummy(response: ResponseContext): Promise<ExampleResponse | Node > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: ExampleResponse = ObjectSerializer.deserialize(
@@ -59,13 +60,20 @@ export class DefaultApiResponseProcessor {
             ) as ExampleResponse;
             return body;
         }
+        if (isCodeInRange("201", response.httpStatusCode)) {
+            const body: Node = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Node", ""
+            ) as Node;
+            return body;
+        }
 
         // Work around for missing responses in specification, e.g. for petstore.yaml
         if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
-            const body: ExampleResponse = ObjectSerializer.deserialize(
+            const body: ExampleResponse | Node = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "ExampleResponse", ""
-            ) as ExampleResponse;
+                "ExampleResponse | Node", ""
+            ) as ExampleResponse | Node;
             return body;
         }
 

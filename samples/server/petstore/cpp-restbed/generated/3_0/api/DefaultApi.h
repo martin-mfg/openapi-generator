@@ -32,6 +32,7 @@
 #include <corvusoft/restbed/settings.hpp>
 
 #include "ExampleResponse.h"
+#include "Node.h"
 
 namespace org {
 namespace openapitools {

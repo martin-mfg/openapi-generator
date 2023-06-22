@@ -1,6 +1,7 @@
 package controllers;
 
 import apimodels.ExampleResponse;
+import apimodels.Node;
 
 import com.typesafe.config.Config;
 import play.mvc.Controller;

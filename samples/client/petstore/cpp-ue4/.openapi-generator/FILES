@@ -6,10 +6,12 @@ Private/OpenAPIExampleResponse.cpp
 Private/OpenAPIHelpers.cpp
 Private/OpenAPIModule.cpp
 Private/OpenAPIModule.h
+Private/OpenAPINode.cpp
 Private/OpenAPIOtherObject.cpp
 Public/OpenAPIBaseModel.h
 Public/OpenAPIDefaultApi.h
 Public/OpenAPIDefaultApiOperations.h
 Public/OpenAPIExampleResponse.h
 Public/OpenAPIHelpers.h
+Public/OpenAPINode.h
 Public/OpenAPIOtherObject.h

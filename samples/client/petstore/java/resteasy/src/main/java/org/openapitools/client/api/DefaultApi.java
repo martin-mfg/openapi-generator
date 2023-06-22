@@ -8,6 +8,7 @@ import org.openapitools.client.Pair;
 import javax.ws.rs.core.GenericType;
 
 import org.openapitools.client.model.ExampleResponse;
+import org.openapitools.client.model.Node;
 
 import java.util.ArrayList;
 import java.util.HashMap;

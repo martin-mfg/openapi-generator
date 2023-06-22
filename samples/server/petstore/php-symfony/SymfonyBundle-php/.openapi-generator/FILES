@@ -9,6 +9,7 @@ Controller/DefaultController.php
 DependencyInjection/Compiler/OpenAPIServerApiPass.php
 DependencyInjection/OpenAPIServerExtension.php
 Model/ExampleResponse.php
+Model/Node.php
 Model/OtherObject.php
 OpenAPIServerBundle.php
 README.md
@@ -23,11 +24,13 @@ Service/TypeMismatchException.php
 Service/ValidatorInterface.php
 Tests/AppKernel.php
 Tests/Controller/ControllerTest.php
+Tests/Model/NodeTest.php
 Tests/test_config.yaml
 autoload.php
 composer.json
 docs/Api/DefaultApiInterface.md
 docs/Model/ExampleResponse.md
+docs/Model/Node.md
 docs/Model/OtherObject.md
 git_push.sh
 phpunit.xml.dist

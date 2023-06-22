@@ -26,6 +26,7 @@ import org.springframework.http.MediaType
 import reactor.core.publisher.Mono
 
 import org.openapitools.client.models.ExampleResponse
+import org.openapitools.client.models.Node
 import org.openapitools.client.infrastructure.*
 
 class DefaultApi(client: WebClient) : ApiClient(client) {

@@ -20,6 +20,8 @@ import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
 import { ExampleResponse } from '../model/exampleResponse';
+// @ts-ignore
+import { Node } from '../model/node';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';

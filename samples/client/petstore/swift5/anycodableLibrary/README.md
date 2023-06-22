@@ -31,6 +31,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [PrefixExampleResponseSuffix](docs/PrefixExampleResponseSuffix.md)
+ - [PrefixNodeSuffix](docs/PrefixNodeSuffix.md)
  - [PrefixOtherObjectSuffix](docs/PrefixOtherObjectSuffix.md)
 
 

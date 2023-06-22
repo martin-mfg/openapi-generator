@@ -6,6 +6,7 @@
 package org.openapitools.api;
 
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
@@ -32,6 +33,7 @@ public interface ExampleApi {
      * dummy
      *
      * @return dummy (status code 200)
+     *         or dummy (status code 201)
      */
     @ApiOperation(
         value = "",
@@ -40,7 +42,8 @@ public interface ExampleApi {
         response = ExampleResponse.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class),
+        @ApiResponse(code = 201, message = "dummy", response = Node.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,

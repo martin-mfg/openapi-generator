@@ -182,6 +182,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [org.openapitools.client.models.ExampleResponse](docs/ExampleResponse.md)
+ - [org.openapitools.client.models.Node](docs/Node.md)
  - [org.openapitools.client.models.OtherObject](docs/OtherObject.md)
 
 

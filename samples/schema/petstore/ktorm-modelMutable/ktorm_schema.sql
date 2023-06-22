@@ -11,6 +11,17 @@ CREATE TABLE IF NOT EXISTS `ExampleResponse` (
 
 
 -- --------------------------------------------------------------------------
+-- Table structure for table `Node` generated from model 'node'
+-- dummy
+--
+
+CREATE TABLE IF NOT EXISTS `Node` (
+  `left` long,
+  `right` long
+);  /*dummy*/
+
+
+-- --------------------------------------------------------------------------
 -- Table structure for table `OtherObject` generated from model 'otherObject'
 -- dummy
 --

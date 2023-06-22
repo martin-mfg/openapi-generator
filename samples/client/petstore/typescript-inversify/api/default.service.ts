@@ -21,6 +21,7 @@ import { Headers } from '../Headers';
 import HttpResponse from '../HttpResponse';
 
 import { ExampleResponse } from '../model/exampleResponse';
+import { Node } from '../model/node';
 
 import { COLLECTION_FORMATS }  from '../variables';
 

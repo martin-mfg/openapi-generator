@@ -8,6 +8,7 @@ application/container.php
 composer.json
 public/index.php
 src/App/DTO/ExampleResponse.php
+src/App/DTO/Node.php
 src/App/DTO/OtherObject.php
 src/App/Factory.php
 src/App/Handler/ExampleSomeMethod.php

@@ -183,6 +183,8 @@ class ApiClient {
           return value is DateTime ? value : DateTime.tryParse(value);
         case 'ExampleResponse':
           return ExampleResponse.fromJson(value);
+        case 'Node':
+          return Node.fromJson(value);
         case 'OtherObject':
           return OtherObject.fromJson(value);
         default:

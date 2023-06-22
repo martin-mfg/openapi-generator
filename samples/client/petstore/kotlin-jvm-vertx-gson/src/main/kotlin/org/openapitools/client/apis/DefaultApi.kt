@@ -18,6 +18,7 @@ package org.openapitools.client.apis
 import java.io.IOException
 
 import org.openapitools.client.models.ExampleResponse
+import org.openapitools.client.models.Node
 
 import com.google.gson.reflect.TypeToken
 import com.google.gson.annotations.SerializedName

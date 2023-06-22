@@ -28,6 +28,13 @@
 #'
 #' \tabular{ll}{
 #' }
+#' \item status code : 201 | dummy
+#'
+#' \item return type : Node
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
 #' }
 #'
 #' }

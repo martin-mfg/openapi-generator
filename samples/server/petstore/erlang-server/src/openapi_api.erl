@@ -98,6 +98,8 @@ populate_request_param(OperationID, Name, Req0, ValidatorState) ->
 
 validate_response('Dummy', 200, Body, ValidatorState) ->
     validate_response_body('ExampleResponse', 'ExampleResponse', Body, ValidatorState);
+validate_response('Dummy', 201, Body, ValidatorState) ->
+    validate_response_body('Node', 'Node', Body, ValidatorState);
 
 
 validate_response(_OperationID, _Code, _Body, _ValidatorState) ->

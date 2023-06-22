@@ -18,6 +18,7 @@ import org.openapitools.client.request.RequestFactory
 import org.openapitools.client.infrastructure.CollectionFormats.*
 
 import org.openapitools.client.models.ExampleResponse
+import org.openapitools.client.models.Node
 
 /*
 * If you wish to use a custom http stack with your client you

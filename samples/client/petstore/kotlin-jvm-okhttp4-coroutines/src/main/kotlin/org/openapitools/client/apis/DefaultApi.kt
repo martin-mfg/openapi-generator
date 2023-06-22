@@ -20,6 +20,7 @@ import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
 import org.openapitools.client.models.ExampleResponse
+import org.openapitools.client.models.Node
 
 import com.google.gson.annotations.SerializedName
 

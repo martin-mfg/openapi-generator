@@ -79,6 +79,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [DynamicServers::ExampleResponse](docs/ExampleResponse.md)
+ - [DynamicServers::Node](docs/Node.md)
  - [DynamicServers::OtherObject](docs/OtherObject.md)
 
 

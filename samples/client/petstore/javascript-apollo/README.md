@@ -125,6 +125,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Dummy.ExampleResponse](docs/ExampleResponse.md)
+ - [Dummy.Node](docs/Node.md)
  - [Dummy.OtherObject](docs/OtherObject.md)
 
 

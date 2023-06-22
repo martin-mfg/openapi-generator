@@ -20,6 +20,7 @@
 
 #include <qhttpengine/socket.h>
 #include "OAIExampleResponse.h"
+#include "OAINode.h"
 #include <QString>
 #include "OAIDefaultApiHandler.h"
 

@@ -7,6 +7,7 @@ build.gradle
 build.sbt
 docs/DefaultApi.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 git_push.sh
 gradle.properties
@@ -27,4 +28,6 @@ src/main/java/org/openapitools/client/ServerVariable.java
 src/main/java/org/openapitools/client/api/DefaultApi.java
 src/main/java/org/openapitools/client/api/Oper.java
 src/main/java/org/openapitools/client/model/ExampleResponse.java
+src/main/java/org/openapitools/client/model/Node.java
 src/main/java/org/openapitools/client/model/OtherObject.java
+src/test/java/org/openapitools/client/model/NodeTest.java

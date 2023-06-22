@@ -60,6 +60,18 @@ class RegisterRoutes
   }
 }',
                 ],
+                '201' => [
+                    'jsonSchema' => '{
+  "description" : "dummy",
+  "content" : {
+    "*/*" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Node"
+      }
+    }
+  }
+}',
+                ],
             ],
             'authMethods' => [
             ],

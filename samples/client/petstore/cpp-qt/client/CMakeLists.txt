@@ -9,6 +9,7 @@ include(CMakePackageConfigHelpers)
 
 add_library(${PROJECT_NAME}
   PFXExampleResponse.h
+  PFXNode.h
   PFXOtherObject.h
   PFXDefaultApi.h
   PFXHelpers.h
@@ -20,6 +21,7 @@ add_library(${PROJECT_NAME}
   PFXServerVariable.h
   PFXOauth.h
   PFXExampleResponse.cpp
+  PFXNode.cpp
   PFXOtherObject.cpp
   PFXDefaultApi.cpp
   PFXHelpers.cpp

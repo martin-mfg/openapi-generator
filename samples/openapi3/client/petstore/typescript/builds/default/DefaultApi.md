@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **dummy**
-> ExampleResponse dummy()
+> ExampleResponse | Node dummy()
 
 dummy
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**ExampleResponse**
+**ExampleResponse | Node**
 
 ### Authorization
 
@@ -52,6 +52,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | dummy |  -  |
+**201** | dummy |  -  |
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 

@@ -11,4 +11,5 @@ export 'package:openapi/src/auth/oauth.dart';
 export 'package:openapi/src/api/default_api.dart';
 
 export 'package:openapi/src/model/example_response.dart';
+export 'package:openapi/src/model/node.dart';
 export 'package:openapi/src/model/other_object.dart';

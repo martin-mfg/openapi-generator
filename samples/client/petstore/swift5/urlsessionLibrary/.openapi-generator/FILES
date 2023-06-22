@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .swiftformat
 Cartfile
 Package.swift
@@ -15,6 +14,7 @@ Sources/PetstoreClient/JSONDataEncoding.swift
 Sources/PetstoreClient/JSONEncodingHelper.swift
 Sources/PetstoreClient/Models.swift
 Sources/PetstoreClient/Models/ExampleResponse.swift
+Sources/PetstoreClient/Models/Node.swift
 Sources/PetstoreClient/Models/OtherObject.swift
 Sources/PetstoreClient/OpenISO8601DateFormatter.swift
 Sources/PetstoreClient/SynchronizedDictionary.swift
@@ -22,6 +22,7 @@ Sources/PetstoreClient/URLSessionImplementations.swift
 Sources/PetstoreClient/Validation.swift
 docs/DefaultAPI.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 git_push.sh
 project.yml

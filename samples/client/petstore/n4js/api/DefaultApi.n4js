@@ -13,6 +13,7 @@
 
 import { ApiExecuterI, ApiError, checkRequiredParams } from "api/ApiHelper"
 import { ExampleResponse } from 'model/ExampleResponse';
+import { Node } from 'model/Node';
 
 
 
@@ -21,6 +22,7 @@ import { ExampleResponse } from 'model/ExampleResponse';
  * dummy
  * @param fe Callback interface that runs the fetch query
  * @response 200 [ExampleResponse] dummy
+ * @response 201 [Node] dummy
  */
 export public async function DefaultApi__dummy(fe : ApiExecuterI, ) : Promise<ExampleResponse, Object> {
     checkRequiredParams('dummy', {  });

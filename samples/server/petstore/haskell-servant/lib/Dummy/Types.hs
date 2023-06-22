@@ -5,6 +5,7 @@
 
 module Dummy.Types (
   ExampleResponse (..),
+  Node (..),
   OtherObject (..),
   ) where
 
@@ -39,6 +40,22 @@ instance ToSchema ExampleResponse where
   declareNamedSchema = Swagger.genericDeclareNamedSchema
     $ Swagger.fromAesonOptions
     $ removeFieldLabelPrefix False "exampleResponse"
+
+
+-- | dummy
+data Node = Node
+  { nodeLeft :: Maybe Node -- ^ 
+  , nodeRight :: Maybe Node -- ^ 
+  } deriving (Show, Eq, Generic, Data)
+
+instance FromJSON Node where
+  parseJSON = genericParseJSON (removeFieldLabelPrefix True "node")
+instance ToJSON Node where
+  toJSON = genericToJSON (removeFieldLabelPrefix False "node")
+instance ToSchema Node where
+  declareNamedSchema = Swagger.genericDeclareNamedSchema
+    $ Swagger.fromAesonOptions
+    $ removeFieldLabelPrefix False "node"
 
 
 -- | dummy

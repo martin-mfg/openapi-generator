@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.ExampleResponse](ExampleResponse.md)
+ - [Model.Node](Node.md)
  - [Model.OtherObject](OtherObject.md)
 
 

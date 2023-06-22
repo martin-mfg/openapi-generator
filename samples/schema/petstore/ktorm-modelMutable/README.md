@@ -21,5 +21,6 @@ This runs all tests and packages the library.
 ## Documentation for Models
 
  - [org.openapitools.database.models.ExampleResponse](docs/ExampleResponse.md)
+ - [org.openapitools.database.models.Node](docs/Node.md)
  - [org.openapitools.database.models.OtherObject](docs/OtherObject.md)
 

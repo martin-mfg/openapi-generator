@@ -4,6 +4,7 @@
 README.md
 docs/DefaultApi.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 git_push.sh
 mocha.opts
@@ -12,4 +13,6 @@ src/ApiClient.js
 src/api/DefaultApi.js
 src/index.js
 src/model/ExampleResponse.js
+src/model/Node.js
 src/model/OtherObject.js
+test/model/Node.spec.js

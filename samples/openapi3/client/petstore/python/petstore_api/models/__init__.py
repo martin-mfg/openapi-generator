@@ -15,4 +15,5 @@
 
 # import models into model package
 from petstore_api.models.example_response import ExampleResponse
+from petstore_api.models.node import Node
 from petstore_api.models.other_object import OtherObject

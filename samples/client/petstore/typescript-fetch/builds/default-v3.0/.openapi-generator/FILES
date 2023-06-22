@@ -1,8 +1,8 @@
-.openapi-generator-ignore
 apis/DefaultApi.ts
 apis/index.ts
 index.ts
 models/ExampleResponse.ts
+models/Node.ts
 models/OtherObject.ts
 models/index.ts
 runtime.ts

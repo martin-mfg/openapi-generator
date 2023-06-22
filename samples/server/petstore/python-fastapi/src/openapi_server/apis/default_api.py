@@ -23,6 +23,7 @@ from fastapi import (  # noqa: F401
 
 from openapi_server.models.extra_models import TokenModel  # noqa: F401
 from openapi_server.models.example_response import ExampleResponse
+from openapi_server.models.node import Node
 
 
 router = APIRouter()
@@ -36,6 +37,7 @@ for _, name, _ in pkgutil.iter_modules(ns_pkg.__path__, ns_pkg.__name__ + "."):
     "/example/someMethod",
     responses={
         200: {"model": ExampleResponse, "description": "dummy"},
+        201: {"model": Node, "description": "dummy"},
     },
     tags=["default"],
     response_model_by_alias=True,

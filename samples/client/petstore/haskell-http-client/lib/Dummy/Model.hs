@@ -98,6 +98,39 @@ mkExampleResponse =
   { exampleResponseMyOnlyProperty = Nothing
   }
 
+-- ** Node
+-- | Node
+-- dummy
+data Node = Node
+  { nodeLeft :: !(Maybe Node) -- ^ "left"
+  , nodeRight :: !(Maybe Node) -- ^ "right"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON Node
+instance A.FromJSON Node where
+  parseJSON = A.withObject "Node" $ \o ->
+    Node
+      <$> (o .:? "left")
+      <*> (o .:? "right")
+
+-- | ToJSON Node
+instance A.ToJSON Node where
+  toJSON Node {..} =
+   _omitNulls
+      [ "left" .= nodeLeft
+      , "right" .= nodeRight
+      ]
+
+
+-- | Construct a value of type 'Node' (by applying it's required fields, if any)
+mkNode
+  :: Node
+mkNode =
+  Node
+  { nodeLeft = Nothing
+  , nodeRight = Nothing
+  }
+
 -- ** OtherObject
 -- | OtherObject
 -- dummy

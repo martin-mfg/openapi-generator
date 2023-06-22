@@ -17,6 +17,7 @@ export(ApiException)
 
 # Models
 export(ExampleResponse)
+export(Node)
 export(OtherObject)
 
 # APIs

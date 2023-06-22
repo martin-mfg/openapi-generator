@@ -5,6 +5,7 @@
 README.md
 docs/DefaultApi.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 git_push.sh
 petstore_api/__init__.py
@@ -16,6 +17,7 @@ petstore_api/configuration.py
 petstore_api/exceptions.py
 petstore_api/models/__init__.py
 petstore_api/models/example_response.py
+petstore_api/models/node.py
 petstore_api/models/other_object.py
 petstore_api/py.typed
 petstore_api/rest.py
@@ -25,4 +27,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_node.py
 tox.ini

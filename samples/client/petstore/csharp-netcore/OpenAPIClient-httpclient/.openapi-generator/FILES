@@ -5,8 +5,10 @@ api/openapi.yaml
 appveyor.yml
 docs/DefaultApi.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 git_push.sh
+src/Org.OpenAPITools.Test/Model/NodeTests.cs
 src/Org.OpenAPITools.Test/Org.OpenAPITools.Test.csproj
 src/Org.OpenAPITools/Api/DefaultApi.cs
 src/Org.OpenAPITools/Client/ApiClient.cs
@@ -28,5 +30,6 @@ src/Org.OpenAPITools/Client/RetryConfiguration.cs
 src/Org.OpenAPITools/Client/WebRequestPathBuilder.cs
 src/Org.OpenAPITools/Model/AbstractOpenAPISchema.cs
 src/Org.OpenAPITools/Model/ExampleResponse.cs
+src/Org.OpenAPITools/Model/Node.cs
 src/Org.OpenAPITools/Model/OtherObject.cs
 src/Org.OpenAPITools/Org.OpenAPITools.csproj

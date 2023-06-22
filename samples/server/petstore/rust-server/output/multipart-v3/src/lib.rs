@@ -15,10 +15,15 @@ pub const BASE_PATH: &str = "";
 pub const API_VERSION: &str = "dummy";
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
+#[must_use]
 pub enum DummyResponse {
     /// dummy
     Dummy
     (models::ExampleResponse)
+    ,
+    /// dummy
+    Dummy_2
+    (models::Node)
 }
 
 /// API

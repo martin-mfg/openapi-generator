@@ -7,6 +7,7 @@ build.gradle
 docs/apis/DefaultApi.md
 docs/apis/auth.md
 docs/models/ExampleResponse.md
+docs/models/Node.md
 docs/models/OtherObject.md
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -19,6 +20,8 @@ pom.xml
 settings.gradle
 src/main/java/org/openapitools/api/DefaultApi.java
 src/main/java/org/openapitools/model/ExampleResponse.java
+src/main/java/org/openapitools/model/Node.java
 src/main/java/org/openapitools/model/OtherObject.java
 src/main/resources/application.yml
 src/main/resources/logback.xml
+src/test/groovy/org/openapitools/model/NodeSpec.groovy

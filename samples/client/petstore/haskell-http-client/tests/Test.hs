@@ -21,5 +21,6 @@ main =
     describe "JSON instances" $ do
       pure ()
       propMimeEq MimeJSON (Proxy :: Proxy ExampleResponse)
+      propMimeEq MimeJSON (Proxy :: Proxy Node)
       propMimeEq MimeJSON (Proxy :: Proxy OtherObject)
       

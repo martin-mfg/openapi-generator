@@ -8,6 +8,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 import org.openapitools.client.models.ExampleResponse
+import org.openapitools.client.models.Node
 
 interface DefaultApi {
     /**
@@ -15,6 +16,7 @@ interface DefaultApi {
      * dummy
      * Responses:
      *  - 200: dummy
+     *  - 201: dummy
      *
      * @return [Call]<[ExampleResponse]>
      */

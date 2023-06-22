@@ -31,6 +31,9 @@ export default function() {
             check(request, {
                 "dummy": (r) => r.status === 200
             });
+            check(request, {
+                "dummy": (r) => r.status === 201
+            });
         }
     });
 

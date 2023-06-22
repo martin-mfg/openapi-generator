@@ -2,6 +2,7 @@ import { ResponseContext, RequestContext, HttpFile } from '../http/http.ts';
 import { Configuration} from '../configuration.ts'
 
 import { ExampleResponse } from '../models/ExampleResponse.ts';
+import { Node } from '../models/Node.ts';
 import { OtherObject } from '../models/OtherObject.ts';
 import { ObservableDefaultApi } from './ObservableAPI.ts';
 
@@ -20,7 +21,7 @@ export class PromiseDefaultApi {
     /**
      * dummy
      */
-    public dummy(_options?: Configuration): Promise<ExampleResponse> {
+    public dummy(_options?: Configuration): Promise<ExampleResponse | Node> {
         const result = this.api.dummy(_options);
         return result.toPromise();
     }

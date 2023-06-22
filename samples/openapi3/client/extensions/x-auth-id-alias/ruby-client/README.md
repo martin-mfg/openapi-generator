@@ -79,6 +79,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [XAuthIDAlias::ExampleResponse](docs/ExampleResponse.md)
+ - [XAuthIDAlias::Node](docs/Node.md)
  - [XAuthIDAlias::OtherObject](docs/OtherObject.md)
 
 

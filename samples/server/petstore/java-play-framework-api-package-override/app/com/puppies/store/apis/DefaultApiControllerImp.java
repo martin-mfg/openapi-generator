@@ -1,6 +1,7 @@
 package com.puppies.store.apis;
 
 import apimodels.ExampleResponse;
+import apimodels.Node;
 
 import play.mvc.Http;
 import java.util.List;

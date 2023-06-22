@@ -48,6 +48,7 @@ Class | Method | HTTP request | Description
 ## Models
 
  - [ExampleResponse](docs/ExampleResponse.md)
+ - [Node](docs/Node.md)
  - [OtherObject](docs/OtherObject.md)
 
 

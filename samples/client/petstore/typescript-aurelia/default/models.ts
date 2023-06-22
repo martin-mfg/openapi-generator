@@ -22,6 +22,15 @@ export interface ExampleResponse {
 /**
  * dummy
  */
+export interface Node {
+  left?: Node;
+  right?: Node;
+}
+
+
+/**
+ * dummy
+ */
 export interface OtherObject {
   myOnlyProperty2?: ExampleResponse;
 }

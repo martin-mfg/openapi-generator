@@ -112,6 +112,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [ExampleResponse](docs/ExampleResponse.md)
+ - [Node](docs/Node.md)
  - [OtherObject](docs/OtherObject.md)
 
 

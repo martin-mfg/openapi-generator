@@ -73,6 +73,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [OpenAPIClient.Models.ExampleResponse](ExampleResponse.md)
+ - [OpenAPIClient.Models.Node](Node.md)
  - [OpenAPIClient.Models.OtherObject](OtherObject.md)
 
 

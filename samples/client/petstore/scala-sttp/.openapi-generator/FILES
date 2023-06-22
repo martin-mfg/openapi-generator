@@ -6,4 +6,5 @@ src/main/scala/org/openapitools/client/core/AdditionalTypeSerializers.scala
 src/main/scala/org/openapitools/client/core/DateSerializers.scala
 src/main/scala/org/openapitools/client/core/JsonSupport.scala
 src/main/scala/org/openapitools/client/model/ExampleResponse.scala
+src/main/scala/org/openapitools/client/model/Node.scala
 src/main/scala/org/openapitools/client/model/OtherObject.scala

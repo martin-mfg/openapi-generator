@@ -5,6 +5,7 @@ from typing import Tuple
 from typing import Union
 
 from openapi_server.models.example_response import ExampleResponse  # noqa: E501
+from openapi_server.models.node import Node  # noqa: E501
 from openapi_server import util
 
 

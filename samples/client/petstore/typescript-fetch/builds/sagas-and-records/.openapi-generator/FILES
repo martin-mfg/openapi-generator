@@ -1,6 +1,5 @@
 .gitignore
 .npmignore
-.openapi-generator-ignore
 README.md
 package.json
 src/ApiEntitiesRecord.ts
@@ -14,6 +13,8 @@ src/apis/index.ts
 src/index.ts
 src/models/ExampleResponse.ts
 src/models/ExampleResponseRecord.ts
+src/models/Node.ts
+src/models/NodeRecord.ts
 src/models/OtherObject.ts
 src/models/OtherObjectRecord.ts
 src/models/index.ts

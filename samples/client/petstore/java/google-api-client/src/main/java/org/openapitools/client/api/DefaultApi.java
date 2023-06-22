@@ -3,6 +3,7 @@ package org.openapitools.client.api;
 import org.openapitools.client.ApiClient;
 
 import org.openapitools.client.model.ExampleResponse;
+import org.openapitools.client.model.Node;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.google.api.client.http.EmptyContent;
@@ -44,6 +45,7 @@ public class DefaultApi {
   /**
     * dummy
     * <p><b>200</b> - dummy
+    * <p><b>201</b> - dummy
     * @return ExampleResponse
     * @throws IOException if an error occurs while attempting to invoke the API
     **/
@@ -56,6 +58,7 @@ public class DefaultApi {
   /**
     * dummy
     * <p><b>200</b> - dummy
+    * <p><b>201</b> - dummy
     * @param params Map of query params. A collection will be interpreted as passing in multiple instances of the same query param.
     * @return ExampleResponse
     * @throws IOException if an error occurs while attempting to invoke the API

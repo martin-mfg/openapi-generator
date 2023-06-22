@@ -5,6 +5,7 @@ api/DefaultAPI.c
 api/DefaultAPI.h
 docs/DefaultAPI.md
 docs/example_response.md
+docs/node.md
 docs/other_object.md
 external/cJSON.c
 external/cJSON.h
@@ -16,6 +17,8 @@ include/list.h
 libcurl.licence
 model/example_response.c
 model/example_response.h
+model/node.c
+model/node.h
 model/object.c
 model/object.h
 model/other_object.c
@@ -25,3 +28,4 @@ src/apiKey.c
 src/binary.c
 src/list.c
 uncrustify-rules.cfg
+unit-test/test_node.c

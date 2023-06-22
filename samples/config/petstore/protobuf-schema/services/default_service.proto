@@ -14,6 +14,7 @@ package petstore.services.defaultservice;
 
 import "google/protobuf/empty.proto";
 import public "models/example_response.proto";
+import public "models/node.proto";
 
 service DefaultService {
   rpc Dummy (google.protobuf.Empty) returns (ExampleResponse);

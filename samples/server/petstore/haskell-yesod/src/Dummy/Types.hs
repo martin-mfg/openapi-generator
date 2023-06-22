@@ -5,6 +5,7 @@
 
 module Dummy.Types (
   ExampleResponse (..),
+  Node (..),
   OtherObject (..),
   ) where
 
@@ -29,6 +30,18 @@ instance FromJSON ExampleResponse where
   parseJSON = genericParseJSON (removeFieldLabelPrefix True "exampleResponse")
 instance ToJSON ExampleResponse where
   toJSON = genericToJSON (removeFieldLabelPrefix False "exampleResponse")
+
+
+-- | dummy
+data Node = Node
+  { nodeLeft :: Maybe Node -- ^ 
+  , nodeRight :: Maybe Node -- ^ 
+  } deriving (Show, Eq, Generic)
+
+instance FromJSON Node where
+  parseJSON = genericParseJSON (removeFieldLabelPrefix True "node")
+instance ToJSON Node where
+  toJSON = genericToJSON (removeFieldLabelPrefix False "node")
 
 
 -- | dummy

@@ -18,6 +18,7 @@ import io.micronaut.http.client.annotation.Client;
 import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;

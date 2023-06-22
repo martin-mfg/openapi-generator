@@ -3,6 +3,7 @@ pom.xml
 src/main/java/org/openapitools/handler/PathHandlerInterface.java
 src/main/java/org/openapitools/handler/PathHandlerProvider.java
 src/main/java/org/openapitools/model/ExampleResponse.java
+src/main/java/org/openapitools/model/Node.java
 src/main/java/org/openapitools/model/OtherObject.java
 src/main/resources/META-INF/services/com.networknt.server.HandlerProvider
 src/main/resources/config/oauth/primary.crt

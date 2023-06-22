@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .swiftformat
 Cartfile
 Package.swift
@@ -14,6 +13,7 @@ PetstoreClient/Classes/OpenAPIs/JSONDataEncoding.swift
 PetstoreClient/Classes/OpenAPIs/JSONEncodingHelper.swift
 PetstoreClient/Classes/OpenAPIs/Models.swift
 PetstoreClient/Classes/OpenAPIs/Models/PrefixExampleResponseSuffix.swift
+PetstoreClient/Classes/OpenAPIs/Models/PrefixNodeSuffix.swift
 PetstoreClient/Classes/OpenAPIs/Models/PrefixOtherObjectSuffix.swift
 PetstoreClient/Classes/OpenAPIs/OpenISO8601DateFormatter.swift
 PetstoreClient/Classes/OpenAPIs/SynchronizedDictionary.swift
@@ -22,6 +22,7 @@ PetstoreClient/Classes/OpenAPIs/Validation.swift
 README.md
 docs/DefaultAPI.md
 docs/PrefixExampleResponseSuffix.md
+docs/PrefixNodeSuffix.md
 docs/PrefixOtherObjectSuffix.md
 git_push.sh
 project.yml

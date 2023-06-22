@@ -3,6 +3,7 @@ QT += network
 HEADERS += \
 # Models
     $${PWD}/PFXExampleResponse.h \
+    $${PWD}/PFXNode.h \
     $${PWD}/PFXOtherObject.h \
 # APIs
     $${PWD}/PFXDefaultApi.h \
@@ -19,6 +20,7 @@ HEADERS += \
 SOURCES += \
 # Models
     $${PWD}/PFXExampleResponse.cpp \
+    $${PWD}/PFXNode.cpp \
     $${PWD}/PFXOtherObject.cpp \
 # APIs
     $${PWD}/PFXDefaultApi.cpp \

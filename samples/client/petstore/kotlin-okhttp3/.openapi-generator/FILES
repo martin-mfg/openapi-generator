@@ -2,6 +2,7 @@ README.md
 build.gradle
 docs/DefaultApi.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -28,4 +29,5 @@ src/main/kotlin/org/openapitools/client/infrastructure/SerializerHelper.kt
 src/main/kotlin/org/openapitools/client/infrastructure/URIAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/UUIDAdapter.kt
 src/main/kotlin/org/openapitools/client/models/ExampleResponse.kt
+src/main/kotlin/org/openapitools/client/models/Node.kt
 src/main/kotlin/org/openapitools/client/models/OtherObject.kt

@@ -69,6 +69,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [XojoOpenAPIClientSynchronous.Models.ExampleResponse](ExampleResponse.md)
+ - [XojoOpenAPIClientSynchronous.Models.Node](Node.md)
  - [XojoOpenAPIClientSynchronous.Models.OtherObject](OtherObject.md)
 
 

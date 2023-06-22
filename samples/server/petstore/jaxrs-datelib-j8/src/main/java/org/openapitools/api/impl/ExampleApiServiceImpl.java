@@ -2,6 +2,7 @@ package org.openapitools.api.impl;
 
 import org.openapitools.api.*;
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;

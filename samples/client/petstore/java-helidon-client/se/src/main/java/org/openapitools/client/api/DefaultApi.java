@@ -14,6 +14,7 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiResponse;
 import org.openapitools.client.model.ExampleResponse;
+import org.openapitools.client.model.Node;
 
 /**
  * dummy

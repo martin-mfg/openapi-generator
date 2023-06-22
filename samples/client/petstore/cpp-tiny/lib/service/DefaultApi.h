@@ -9,6 +9,7 @@
 #include <list>
 
 #include "ExampleResponse.h"
+#include "Node.h"
 
 namespace Tiny {
 

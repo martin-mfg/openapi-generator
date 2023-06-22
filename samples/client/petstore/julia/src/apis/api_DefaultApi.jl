@@ -13,6 +13,7 @@ basepath(::Type{ DefaultApi }) = "http://localhost"
 
 const _returntypes_dummy_DefaultApi = Dict{Regex,Type}(
     Regex("^" * replace("200", "x"=>".") * "\$") => ExampleResponse,
+    Regex("^" * replace("201", "x"=>".") * "\$") => Node,
 )
 
 function _oacinternal_dummy(_api::DefaultApi; _mediaType=nothing)

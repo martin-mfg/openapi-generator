@@ -1,6 +1,8 @@
 
 #include "ExampleResponseTest.cpp"
 
+#include "NodeTest.cpp"
+
 #include "OtherObjectTest.cpp"
 
 
@@ -15,7 +17,13 @@ void runTests(){
     
     
     
+    
+    
+    
 
+    
+    
+    
     
     
     

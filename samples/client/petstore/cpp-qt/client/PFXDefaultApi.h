@@ -18,6 +18,7 @@
 #include "PFXOauth.h"
 
 #include "PFXExampleResponse.h"
+#include "PFXNode.h"
 #include <QString>
 
 #include <QObject>

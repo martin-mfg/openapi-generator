@@ -30,6 +30,7 @@ import io.helidon.webclient.WebClientResponse;
 import org.openapitools.client.ApiClient;
 
 import org.openapitools.client.model.ExampleResponse;
+import org.openapitools.client.model.Node;
 
 /**
  * dummy

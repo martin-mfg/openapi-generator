@@ -61,6 +61,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [PSPetstore/Model.ExampleResponse](docs/ExampleResponse.md)
+ - [PSPetstore/Model.Node](docs/Node.md)
  - [PSPetstore/Model.OtherObject](docs/OtherObject.md)
 
 

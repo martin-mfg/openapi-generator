@@ -14,6 +14,7 @@
 
 import ApiClient from './ApiClient';
 import ExampleResponse from './model/ExampleResponse';
+import Node from './model/Node';
 import OtherObject from './model/OtherObject';
 import DefaultApi from './api/DefaultApi';
 
@@ -61,6 +62,12 @@ export {
      * @property {module:model/ExampleResponse}
      */
     ExampleResponse,
+
+    /**
+     * The Node model constructor.
+     * @property {module:model/Node}
+     */
+    Node,
 
     /**
      * The OtherObject model constructor.

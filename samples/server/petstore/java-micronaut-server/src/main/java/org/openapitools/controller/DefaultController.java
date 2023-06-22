@@ -19,6 +19,7 @@ import reactor.core.publisher.Mono;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.exceptions.HttpStatusException;
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,6 +49,8 @@ public class DefaultController {
         operationId = "dummy",
         responses = {
             @ApiResponse(responseCode = "200", description = "dummy", content = {
+            }),
+            @ApiResponse(responseCode = "201", description = "dummy", content = {
             })
         }
     )

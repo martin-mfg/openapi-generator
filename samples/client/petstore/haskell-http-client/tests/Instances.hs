@@ -121,6 +121,15 @@ genExampleResponse n =
   ExampleResponse
     <$> arbitraryReducedMaybe n -- exampleResponseMyOnlyProperty :: Maybe OtherObject
   
+instance Arbitrary Node where
+  arbitrary = sized genNode
+
+genNode :: Int -> Gen Node
+genNode n =
+  Node
+    <$> arbitraryReducedMaybe n -- nodeLeft :: Maybe Node
+    <*> arbitraryReducedMaybe n -- nodeRight :: Maybe Node
+  
 instance Arbitrary OtherObject where
   arbitrary = sized genOtherObject
 

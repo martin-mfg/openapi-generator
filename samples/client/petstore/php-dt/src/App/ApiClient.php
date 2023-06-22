@@ -50,6 +50,10 @@ class ApiClient extends OAGAC\AbstractApiClient
                 /* dummy */
                 $responseContent = new \App\DTO\ExampleResponse();
                 break;
+            case 201:
+                /* dummy */
+                $responseContent = new \App\DTO\Node();
+                break;
         }
         $this->parseBody($response, $responseContent);
         return [$responseContent, $response->getHeaders(), $response->getStatusCode(), $response->getReasonPhrase()];

@@ -5,6 +5,7 @@ import org.openapitools.client.EncodingUtils;
 import org.openapitools.client.model.ApiResponse;
 
 import org.openapitools.client.model.ExampleResponse;
+import org.openapitools.client.model.Node;
 
 import java.util.ArrayList;
 import java.util.HashMap;

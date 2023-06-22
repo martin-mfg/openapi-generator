@@ -101,6 +101,7 @@ Method | HTTP request | Description
 ## Documentation For Models
 
  - [ExampleResponse](docs/ExampleResponse.md)
+ - [Node](docs/Node.md)
  - [OtherObject](docs/OtherObject.md)
 
 

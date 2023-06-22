@@ -192,6 +192,16 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
         returnResponse(session, 200, result.empty() ? "{}" : result, responseHeaders);
         return;
     }
+    if (status_code == 201) {
+        responseHeaders.insert(std::make_pair("Content-Type", selectPreferredContentType(contentTypes)));
+        if (!acceptTypes.empty()) {
+            responseHeaders.insert(std::make_pair("Accept", acceptTypes));
+        }
+    
+        result = resultObject.toJsonString();
+        returnResponse(session, 201, result.empty() ? "{}" : result, responseHeaders);
+        return;
+    }
     defaultSessionClose(session, status_code, result);
 }
 

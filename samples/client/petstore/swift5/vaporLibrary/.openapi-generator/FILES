@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .swiftformat
 Package.swift
 README.md
@@ -8,9 +7,11 @@ Sources/PetstoreClient/APIs/DefaultAPI.swift
 Sources/PetstoreClient/Configuration.swift
 Sources/PetstoreClient/Extensions.swift
 Sources/PetstoreClient/Models/ExampleResponse.swift
+Sources/PetstoreClient/Models/Node.swift
 Sources/PetstoreClient/Models/OtherObject.swift
 Sources/PetstoreClient/OpenISO8601DateFormatter.swift
 Sources/PetstoreClient/Validation.swift
 docs/DefaultAPI.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md

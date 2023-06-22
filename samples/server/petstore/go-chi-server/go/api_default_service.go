@@ -34,5 +34,8 @@ func (s *DefaultAPIService) Dummy(ctx context.Context) (ImplResponse, error) {
 	// TODO: Uncomment the next line to return response Response(200, ExampleResponse{}) or use other options such as http.Ok ...
 	// return Response(200, ExampleResponse{}), nil
 
+	// TODO: Uncomment the next line to return response Response(201, Node{}) or use other options such as http.Ok ...
+	// return Response(201, Node{}), nil
+
 	return Response(http.StatusNotImplemented, nil), errors.New("Dummy method not implemented")
 }

@@ -46,6 +46,10 @@ DefaultAPI_dummy(apiClient_t *apiClient)
     //if (apiClient->response_code == 200) {
     //    printf("%s\n","dummy");
     //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 201) {
+    //    printf("%s\n","dummy");
+    //}
     //nonprimitive not container
     cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     example_response_t *elementToReturn = example_response_parseFromJSON(DefaultAPIlocalVarJSON);

@@ -23,6 +23,7 @@
 #include "CppRestPetstoreClient/ApiClient.h"
 
 #include "CppRestPetstoreClient/model/ExampleResponse.h"
+#include "CppRestPetstoreClient/model/Node.h"
 #include <boost/optional.hpp>
 
 namespace org {

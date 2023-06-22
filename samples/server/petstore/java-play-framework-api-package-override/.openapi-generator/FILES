@@ -2,6 +2,7 @@ LICENSE
 README
 app/Module.java
 app/apimodels/ExampleResponse.java
+app/apimodels/Node.java
 app/apimodels/OtherObject.java
 app/com/puppies/store/apis/ApiDocController.java
 app/com/puppies/store/apis/DefaultApiController.java

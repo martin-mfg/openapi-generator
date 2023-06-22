@@ -17,6 +17,7 @@ local basexx = require "basexx"
 
 -- model import
 local petstore_example_response = require "petstore.model.example_response"
+local petstore_node = require "petstore.model.node"
 
 local default_api = {}
 local default_api_mt = {

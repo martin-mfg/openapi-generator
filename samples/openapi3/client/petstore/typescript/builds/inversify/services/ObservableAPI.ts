@@ -3,10 +3,11 @@ import type { Observable } from "../rxjsStub";
 import type { Configuration } from "../configuration";
 
 import { ExampleResponse } from "../models/ExampleResponse";
+import { Node } from "../models/Node";
 import { OtherObject } from "../models/OtherObject";
 
 
 export abstract class AbstractObservableDefaultApi {
-    public abstract dummy(options?: Configuration): Observable<ExampleResponse>;
+    public abstract dummy(options?: Configuration): Observable<ExampleResponse | Node>;
 
 }

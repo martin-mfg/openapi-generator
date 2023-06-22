@@ -6,6 +6,7 @@
 package org.openapitools.api;
 
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -42,6 +43,7 @@ public interface DefaultApi {
      * dummy
      *
      * @return dummy (status code 200)
+     *         or dummy (status code 201)
      */
     @Operation(
         operationId = "dummy",
@@ -49,6 +51,9 @@ public interface DefaultApi {
         responses = {
             @ApiResponse(responseCode = "200", description = "dummy", content = {
                 @Content(mediaType = "*/*", schema = @Schema(implementation = ExampleResponse.class))
+            }),
+            @ApiResponse(responseCode = "201", description = "dummy", content = {
+                @Content(mediaType = "*/*", schema = @Schema(implementation = Node.class))
             })
         }
     )

@@ -6,6 +6,7 @@
 package org.openapitools.api;
 
 import org.openapitools.model.ExampleResponseDto;
+import org.openapitools.model.NodeDto;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -36,6 +37,7 @@ public interface ExampleApi {
      * dummy
      *
      * @return dummy (status code 200)
+     *         or dummy (status code 201)
      */
     @ApiOperation(
         value = "",
@@ -44,7 +46,8 @@ public interface ExampleApi {
         response = ExampleResponseDto.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "dummy", response = ExampleResponseDto.class)
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponseDto.class),
+        @ApiResponse(code = 201, message = "dummy", response = NodeDto.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,

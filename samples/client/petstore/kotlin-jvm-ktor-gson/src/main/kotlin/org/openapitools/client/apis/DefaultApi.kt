@@ -16,6 +16,7 @@
 package org.openapitools.client.apis
 
 import org.openapitools.client.models.ExampleResponse
+import org.openapitools.client.models.Node
 
 import org.openapitools.client.infrastructure.*
 import io.ktor.client.HttpClientConfig

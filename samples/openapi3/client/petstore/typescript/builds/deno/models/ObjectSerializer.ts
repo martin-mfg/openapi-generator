@@ -1,7 +1,9 @@
 export * from '../models/ExampleResponse.ts';
+export * from '../models/Node.ts';
 export * from '../models/OtherObject.ts';
 
 import { ExampleResponse } from '../models/ExampleResponse.ts';
+import { Node } from '../models/Node.ts';
 import { OtherObject } from '../models/OtherObject.ts';
 
 /* tslint:disable:no-unused-variable */
@@ -28,6 +30,7 @@ let enumsMap: Set<string> = new Set<string>([
 
 let typeMap: {[index: string]: any} = {
     "ExampleResponse": ExampleResponse,
+    "Node": Node,
     "OtherObject": OtherObject,
 }
 

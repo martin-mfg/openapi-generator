@@ -31,6 +31,7 @@ namespace OpenAPI\Server\Api;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use OpenAPI\Server\Model\ExampleResponse;
+use OpenAPI\Server\Model\Node;
 
 /**
  * DefaultApiInterface Interface Doc Comment

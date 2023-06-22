@@ -33,6 +33,12 @@ SwaggerClient/Model/SWGExampleResponseManagedObjectBuilder.h
 SwaggerClient/Model/SWGExampleResponseManagedObjectBuilder.m
 SwaggerClient/Model/SWGModel.xcdatamodeld/.xccurrentversion
 SwaggerClient/Model/SWGModel.xcdatamodeld/SWGModel.xcdatamodel/contents
+SwaggerClient/Model/SWGNode.h
+SwaggerClient/Model/SWGNode.m
+SwaggerClient/Model/SWGNodeManagedObject.h
+SwaggerClient/Model/SWGNodeManagedObject.m
+SwaggerClient/Model/SWGNodeManagedObjectBuilder.h
+SwaggerClient/Model/SWGNodeManagedObjectBuilder.m
 SwaggerClient/Model/SWGOtherObject.h
 SwaggerClient/Model/SWGOtherObject.m
 SwaggerClient/Model/SWGOtherObjectManagedObject.h
@@ -41,5 +47,6 @@ SwaggerClient/Model/SWGOtherObjectManagedObjectBuilder.h
 SwaggerClient/Model/SWGOtherObjectManagedObjectBuilder.m
 docs/SWGDefaultApi.md
 docs/SWGExampleResponse.md
+docs/SWGNode.md
 docs/SWGOtherObject.md
 git_push.sh

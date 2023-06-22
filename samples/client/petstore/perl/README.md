@@ -237,6 +237,7 @@ use WWW::OpenAPIClient::DefaultApi;
 To load the models:
 ```perl
 use WWW::OpenAPIClient::Object::ExampleResponse;
+use WWW::OpenAPIClient::Object::Node;
 use WWW::OpenAPIClient::Object::OtherObject;
 
 ````
@@ -253,6 +254,7 @@ use WWW::OpenAPIClient::DefaultApi;
 
 # load the models
 use WWW::OpenAPIClient::Object::ExampleResponse;
+use WWW::OpenAPIClient::Object::Node;
 use WWW::OpenAPIClient::Object::OtherObject;
 
 # for displaying the API response data
@@ -284,6 +286,7 @@ Class | Method | HTTP request | Description
 
 # DOCUMENTATION FOR MODELS
  - [WWW::OpenAPIClient::Object::ExampleResponse](docs/ExampleResponse.md)
+ - [WWW::OpenAPIClient::Object::Node](docs/Node.md)
  - [WWW::OpenAPIClient::Object::OtherObject](docs/OtherObject.md)
 
 

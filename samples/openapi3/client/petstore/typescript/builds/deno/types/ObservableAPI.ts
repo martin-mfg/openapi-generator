@@ -3,6 +3,7 @@ import { Configuration} from '../configuration.ts'
 import { Observable, of, from } from '../rxjsStub.ts';
 import {mergeMap, map} from  '../rxjsStub.ts';
 import { ExampleResponse } from '../models/ExampleResponse.ts';
+import { Node } from '../models/Node.ts';
 import { OtherObject } from '../models/OtherObject.ts';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi.ts";
@@ -24,7 +25,7 @@ export class ObservableDefaultApi {
     /**
      * dummy
      */
-    public dummy(_options?: Configuration): Observable<ExampleResponse> {
+    public dummy(_options?: Configuration): Observable<ExampleResponse | Node> {
         const requestContextPromise = this.requestFactory.dummy(_options);
 
         // build promise chain

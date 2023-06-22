@@ -1,6 +1,7 @@
 package org.openapitools.client.api.rxjava;
 
 import org.openapitools.client.model.ExampleResponse;
+import org.openapitools.client.model.Node;
 import org.openapitools.client.ApiClient;
 
 import java.util.*;

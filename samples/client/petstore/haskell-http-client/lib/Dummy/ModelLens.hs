@@ -45,6 +45,20 @@ exampleResponseMyOnlyPropertyL f ExampleResponse{..} = (\exampleResponseMyOnlyPr
 
 
 
+-- * Node
+
+-- | 'nodeLeft' Lens
+nodeLeftL :: Lens_' Node (Maybe Node)
+nodeLeftL f Node{..} = (\nodeLeft -> Node { nodeLeft, ..} ) <$> f nodeLeft
+{-# INLINE nodeLeftL #-}
+
+-- | 'nodeRight' Lens
+nodeRightL :: Lens_' Node (Maybe Node)
+nodeRightL f Node{..} = (\nodeRight -> Node { nodeRight, ..} ) <$> f nodeRight
+{-# INLINE nodeRightL #-}
+
+
+
 -- * OtherObject
 
 -- | 'otherObjectMyOnlyProperty2' Lens

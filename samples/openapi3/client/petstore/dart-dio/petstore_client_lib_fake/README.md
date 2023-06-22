@@ -69,6 +69,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [ExampleResponse](doc/ExampleResponse.md)
+ - [Node](doc/Node.md)
  - [OtherObject](doc/OtherObject.md)
 
 

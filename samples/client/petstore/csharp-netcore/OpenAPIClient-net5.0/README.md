@@ -120,6 +120,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.ExampleResponse](docs/ExampleResponse.md)
+ - [Model.Node](docs/Node.md)
  - [Model.OtherObject](docs/OtherObject.md)
 
 

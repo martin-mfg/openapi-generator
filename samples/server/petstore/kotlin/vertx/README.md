@@ -33,6 +33,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [org.openapitools.server.api.model.ExampleResponse](docs/ExampleResponse.md)
+ - [org.openapitools.server.api.model.Node](docs/Node.md)
  - [org.openapitools.server.api.model.OtherObject](docs/OtherObject.md)
 
 

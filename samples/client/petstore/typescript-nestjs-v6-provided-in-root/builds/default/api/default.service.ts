@@ -15,6 +15,7 @@ import { HttpService, Inject, Injectable, Optional } from '@nestjs/common';
 import { AxiosResponse } from 'axios';
 import { Observable } from 'rxjs';
 import { ExampleResponse } from '../model/exampleResponse';
+import { Node } from '../model/node';
 import { Configuration } from '../configuration';
 
 

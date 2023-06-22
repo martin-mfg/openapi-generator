@@ -15,5 +15,6 @@ export { AuthStorage } from './AuthStorage';
 export { DefaultApi } from './DefaultApi';
 export {
   ExampleResponse,
+  Node,
   OtherObject,
 } from './models';

@@ -12,6 +12,7 @@
 package org.openapitools.client.api
 
 import org.openapitools.client.model.ExampleResponse
+import org.openapitools.client.model.Node
 import org.openapitools.client.core.JsonSupport._
 import sttp.client3._
 import sttp.model.Method
@@ -28,6 +29,7 @@ class DefaultApi(baseUrl: String) {
    * 
    * Expected answers:
    *   code 200 : ExampleResponse (dummy)
+   *   code 201 : Node (dummy)
    */
   def dummy(
 ): Request[Either[ResponseException[String, Exception], ExampleResponse], Any] =

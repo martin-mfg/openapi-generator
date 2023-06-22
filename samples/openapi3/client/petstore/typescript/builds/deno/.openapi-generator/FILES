@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 DefaultApi.md
 apis/DefaultApi.ts
 apis/baseapi.ts
@@ -12,6 +11,7 @@ http/isomorphic-fetch.ts
 index.ts
 middleware.ts
 models/ExampleResponse.ts
+models/Node.ts
 models/ObjectSerializer.ts
 models/OtherObject.ts
 models/all.ts

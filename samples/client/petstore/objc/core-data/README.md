@@ -42,6 +42,7 @@ Import the following:
 #import <SwaggerClient/SWGDefaultConfiguration.h>
 // load models
 #import <SwaggerClient/SWGExampleResponse.h>
+#import <SwaggerClient/SWGNode.h>
 #import <SwaggerClient/SWGOtherObject.h>
 // load API classes for accessing endpoints
 #import <SwaggerClient/SWGDefaultApi.h>
@@ -86,6 +87,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [SWGExampleResponse](docs/SWGExampleResponse.md)
+ - [SWGNode](docs/SWGNode.md)
  - [SWGOtherObject](docs/SWGOtherObject.md)
 
 

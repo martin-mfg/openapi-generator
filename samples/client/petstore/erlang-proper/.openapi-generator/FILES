@@ -1,6 +1,7 @@
 README.md
 rebar.config
 src/model/petstore_example_response.erl
+src/model/petstore_node.erl
 src/model/petstore_other_object.erl
 src/petstore.app.src
 src/petstore.hrl

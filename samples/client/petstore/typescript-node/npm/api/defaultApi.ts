@@ -16,6 +16,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { ExampleResponse } from '../model/exampleResponse';
+import { Node } from '../model/node';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 

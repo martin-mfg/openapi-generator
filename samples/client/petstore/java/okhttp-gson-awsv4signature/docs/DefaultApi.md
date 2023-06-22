@@ -66,4 +66,5 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | dummy |  -  |
+| **201** | dummy |  -  |
 

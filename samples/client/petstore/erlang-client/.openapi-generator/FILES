@@ -3,5 +3,6 @@ rebar.config
 src/petstore.app.src
 src/petstore_default_api.erl
 src/petstore_example_response.erl
+src/petstore_node.erl
 src/petstore_other_object.erl
 src/petstore_utils.erl

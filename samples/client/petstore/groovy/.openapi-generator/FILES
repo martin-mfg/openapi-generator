@@ -3,4 +3,5 @@ build.gradle
 src/main/groovy/org/openapitools/api/ApiUtils.groovy
 src/main/groovy/org/openapitools/api/DefaultApi.groovy
 src/main/groovy/org/openapitools/model/ExampleResponse.groovy
+src/main/groovy/org/openapitools/model/Node.groovy
 src/main/groovy/org/openapitools/model/OtherObject.groovy

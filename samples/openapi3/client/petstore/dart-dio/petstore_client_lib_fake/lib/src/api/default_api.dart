@@ -8,6 +8,7 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:openapi/src/model/example_response.dart';
+import 'package:openapi/src/model/node.dart';
 
 class DefaultApi {
 

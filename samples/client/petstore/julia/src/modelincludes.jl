@@ -2,4 +2,5 @@
 # Do not modify this file directly. Modify the OpenAPI specification instead.
 
 include("models/model_ExampleResponse.jl")
+include("models/model_Node.jl")
 include("models/model_OtherObject.jl")

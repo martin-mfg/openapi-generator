@@ -1,6 +1,7 @@
 README.md
 docs/DefaultApi.md
 docs/ExampleResponse.md
+docs/Node.md
 docs/OtherObject.md
 pom.xml
 src/main/java/org/openapitools/client/ApiClient.java
@@ -12,4 +13,6 @@ src/main/java/org/openapitools/client/api/DefaultApi.java
 src/main/java/org/openapitools/client/api/DefaultApiImpl.java
 src/main/java/org/openapitools/client/api/ResponseType.java
 src/main/java/org/openapitools/client/model/ExampleResponse.java
+src/main/java/org/openapitools/client/model/Node.java
 src/main/java/org/openapitools/client/model/OtherObject.java
+src/test/java/org/openapitools/client/model/NodeTest.java

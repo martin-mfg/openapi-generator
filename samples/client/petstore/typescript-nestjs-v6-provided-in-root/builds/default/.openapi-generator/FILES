@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 api.module.ts
 api/api.ts
@@ -9,6 +8,7 @@ git_push.sh
 index.ts
 model/exampleResponse.ts
 model/models.ts
+model/node.ts
 model/otherObject.ts
 package.json
 tsconfig.build.json

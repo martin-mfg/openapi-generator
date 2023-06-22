@@ -16,6 +16,25 @@ export interface ExampleResponse {
 /**
  * dummy
  * @export
+ * @interface Node
+ */
+export interface Node {
+    /**
+     * 
+     * @type {Node}
+     * @memberof Node
+     */
+    left?: Node;
+    /**
+     * 
+     * @type {Node}
+     * @memberof Node
+     */
+    right?: Node;
+}
+/**
+ * dummy
+ * @export
  * @interface OtherObject
  */
 export interface OtherObject {

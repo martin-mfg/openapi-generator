@@ -15,10 +15,13 @@
 
 module Api.Data exposing
     ( ExampleResponse, ExampleResponseMyOnlyProperty(..)
+    , Node, NodeLeft(..), NodeRight(..)
     , OtherObject, OtherObjectMyOnlyProperty2(..)
     , encodeExampleResponse
+    , encodeNode
     , encodeOtherObject
     , exampleResponseDecoder
+    , nodeDecoder
     , otherObjectDecoder
     )
 
@@ -43,6 +46,28 @@ type ExampleResponseMyOnlyProperty = ExampleResponseMyOnlyProperty (Maybe OtherO
 
 unwrapExampleResponseMyOnlyProperty : ExampleResponseMyOnlyProperty -> Maybe OtherObject
 unwrapExampleResponseMyOnlyProperty (ExampleResponseMyOnlyProperty myOnlyProperty) = myOnlyProperty
+
+
+{-| dummy
+-}
+type alias Node =
+    { left : NodeLeft
+    , right : NodeRight
+    }
+
+
+type NodeLeft = NodeLeft (Maybe Node)
+
+
+unwrapNodeLeft : NodeLeft -> Maybe Node
+unwrapNodeLeft (NodeLeft left) = left
+
+
+type NodeRight = NodeRight (Maybe Node)
+
+
+unwrapNodeRight : NodeRight -> Maybe Node
+unwrapNodeRight (NodeRight right) = right
 
 
 {-| dummy
@@ -82,6 +107,27 @@ encodeExampleResponsePairs model =
     pairs
 
 
+encodeNode : Node -> Json.Encode.Value
+encodeNode =
+    encodeObject << encodeNodePairs
+
+
+encodeNodeWithTag : ( String, String ) -> Node -> Json.Encode.Value
+encodeNodeWithTag (tagField, tag) model =
+    encodeObject (encodeNodePairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeNodePairs : Node -> List EncodedField
+encodeNodePairs model =
+    let
+        pairs =
+            [ maybeEncode "left" encodeNode <| unwrapNodeLeft model.left
+            , maybeEncode "right" encodeNode <| unwrapNodeRight model.right
+            ]
+    in
+    pairs
+
+
 encodeOtherObject : OtherObject -> Json.Encode.Value
 encodeOtherObject =
     encodeObject << encodeOtherObjectPairs
@@ -109,6 +155,13 @@ exampleResponseDecoder : Json.Decode.Decoder ExampleResponse
 exampleResponseDecoder =
     Json.Decode.succeed ExampleResponse
         |> maybeDecodeLazy ExampleResponseMyOnlyProperty "myOnlyProperty" (Json.Decode.lazy (\_ -> otherObjectDecoder)) Nothing
+
+
+nodeDecoder : Json.Decode.Decoder Node
+nodeDecoder =
+    Json.Decode.succeed Node
+        |> maybeDecodeLazy NodeLeft "left" (Json.Decode.lazy (\_ -> nodeDecoder)) Nothing
+        |> maybeDecodeLazy NodeRight "right" (Json.Decode.lazy (\_ -> nodeDecoder)) Nothing
 
 
 otherObjectDecoder : Json.Decode.Decoder OtherObject

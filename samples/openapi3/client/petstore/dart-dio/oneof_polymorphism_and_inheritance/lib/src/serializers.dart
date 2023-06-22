@@ -15,12 +15,14 @@ import 'package:openapi/src/date_serializer.dart';
 import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/example_response.dart';
+import 'package:openapi/src/model/node.dart';
 import 'package:openapi/src/model/other_object.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
   ExampleResponse,
+  Node,
   OtherObject,
 ])
 Serializers serializers = (_$serializers.toBuilder()

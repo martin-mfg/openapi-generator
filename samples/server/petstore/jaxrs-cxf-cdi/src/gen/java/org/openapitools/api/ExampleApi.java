@@ -1,6 +1,7 @@
 package org.openapitools.api;
 
 import org.openapitools.model.ExampleResponse;
+import org.openapitools.model.Node;
 import org.openapitools.api.ExampleApiService;
 
 import javax.ws.rs.*;
@@ -41,7 +42,8 @@ public class ExampleApi  {
     @Produces({ "*/*" })
     @ApiOperation(value = "", notes = "dummy", response = ExampleResponse.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class) })
+        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class),
+        @ApiResponse(code = 201, message = "dummy", response = Node.class) })
     public Response dummy() {
         return delegate.dummy(securityContext);
     }

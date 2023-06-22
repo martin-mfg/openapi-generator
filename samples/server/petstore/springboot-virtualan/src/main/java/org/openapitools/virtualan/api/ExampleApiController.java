@@ -1,6 +1,7 @@
 package org.openapitools.virtualan.api;
 
 import org.openapitools.virtualan.model.ExampleResponse;
+import org.openapitools.virtualan.model.Node;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -129,7 +129,7 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ExampleResponse
+     * @return \OpenAPI\Client\Model\ExampleResponse|\OpenAPI\Client\Model\Node
      */
     public function dummy(string $contentType = self::contentTypes['dummy'][0])
     {
@@ -144,7 +144,7 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ExampleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ExampleResponse|\OpenAPI\Client\Model\Node, HTTP status code, HTTP response headers (array of strings)
      */
     public function dummyWithHttpInfo(string $contentType = self::contentTypes['dummy'][0])
     {
@@ -201,6 +201,21 @@ class DefaultApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\OpenAPI\Client\Model\Node' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\Node' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Node', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
             }
 
             $returnType = '\OpenAPI\Client\Model\ExampleResponse';
@@ -225,6 +240,14 @@ class DefaultApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\OpenAPI\Client\Model\ExampleResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\Node',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

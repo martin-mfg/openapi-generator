@@ -3,6 +3,7 @@ README.md
 analysis_options.yaml
 doc/DefaultApi.md
 doc/ExampleResponse.md
+doc/Node.md
 doc/OtherObject.md
 lib/openapi.dart
 lib/src/api.dart
@@ -16,6 +17,8 @@ lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/date.dart
 lib/src/model/example_response.dart
+lib/src/model/node.dart
 lib/src/model/other_object.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/node_test.dart

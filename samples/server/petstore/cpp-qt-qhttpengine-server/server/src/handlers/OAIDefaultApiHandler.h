@@ -15,6 +15,7 @@
 #include <QObject>
 
 #include "OAIExampleResponse.h"
+#include "OAINode.h"
 #include <QString>
 
 namespace OpenAPI {

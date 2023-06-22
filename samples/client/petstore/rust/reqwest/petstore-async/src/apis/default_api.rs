@@ -20,6 +20,7 @@ use super::{Error, configuration};
 #[serde(untagged)]
 pub enum DummySuccess {
     Status200(crate::models::ExampleResponse),
+    Status201(crate::models::Node),
     UnknownValue(serde_json::Value),
 }
 

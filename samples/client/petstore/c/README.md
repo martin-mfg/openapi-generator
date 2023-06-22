@@ -70,6 +70,7 @@ Category | Method | HTTP request | Description
 ## Documentation for Models
 
  - [example_response_t](docs/example_response.md)
+ - [node_t](docs/node.md)
  - [other_object_t](docs/other_object.md)
 
 

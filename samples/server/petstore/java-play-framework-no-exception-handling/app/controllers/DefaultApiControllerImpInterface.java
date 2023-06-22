@@ -1,6 +1,7 @@
 package controllers;
 
 import apimodels.ExampleResponse;
+import apimodels.Node;
 
 import com.google.inject.Inject;
 import com.typesafe.config.Config;

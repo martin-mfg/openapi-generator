@@ -19,6 +19,7 @@ import typetraits
 import uri
 
 import ../models/model_example_response
+import ../models/model_node
 
 const basepath = "http://localhost"
 

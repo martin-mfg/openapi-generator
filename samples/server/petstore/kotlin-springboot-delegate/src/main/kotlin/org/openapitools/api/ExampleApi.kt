@@ -6,6 +6,7 @@
 package org.openapitools.api
 
 import org.openapitools.model.ExampleResponse
+import org.openapitools.model.Node
 import io.swagger.v3.oas.annotations.*
 import io.swagger.v3.oas.annotations.enums.*
 import io.swagger.v3.oas.annotations.media.*
@@ -44,7 +45,8 @@ interface ExampleApi {
         operationId = "dummy",
         description = """dummy""",
         responses = [
-            ApiResponse(responseCode = "200", description = "dummy", content = [Content(schema = Schema(implementation = ExampleResponse::class))])
+            ApiResponse(responseCode = "200", description = "dummy", content = [Content(schema = Schema(implementation = ExampleResponse::class))]),
+            ApiResponse(responseCode = "201", description = "dummy", content = [Content(schema = Schema(implementation = Node::class))])
         ]
     )
     @RequestMapping(

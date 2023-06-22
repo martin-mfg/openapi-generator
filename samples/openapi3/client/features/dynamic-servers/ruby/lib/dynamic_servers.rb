@@ -18,6 +18,7 @@ require 'dynamic_servers/configuration'
 
 # Models
 require 'dynamic_servers/models/example_response'
+require 'dynamic_servers/models/node'
 require 'dynamic_servers/models/other_object'
 
 # APIs

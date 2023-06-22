@@ -29,6 +29,7 @@ public interface PathHandlerInterface {
      * <p><b>Responses</b>:</p>
      * <ul>
      * <li><b>200 (success)</b>: dummy</li>
+     * <li><b>201 (success)</b>: dummy</li>
      * </ul>
      */
     @javax.annotation.Nonnull

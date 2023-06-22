@@ -22,6 +22,7 @@ dummy
 ```scala
 // Import classes:
 import 
+import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -82,4 +83,5 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | dummy |  -  |
+| **201** | dummy |  -  |
 

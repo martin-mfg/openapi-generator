@@ -15,6 +15,16 @@ CREATE TABLE IF NOT EXISTS `ExampleResponse` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='dummy';
 
 --
+-- Table structure for table `Node` generated from model 'Node'
+-- dummy
+--
+
+CREATE TABLE IF NOT EXISTS `Node` (
+  `left` TEXT DEFAULT NULL,
+  `right` TEXT DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='dummy';
+
+--
 -- Table structure for table `OtherObject` generated from model 'OtherObject'
 -- dummy
 --
