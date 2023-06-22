@@ -8,7 +8,6 @@ docs/ExampleResponse.md
 docs/Node.md
 docs/OtherObject.md
 git_push.sh
-src/Org.OpenAPITools.Test/Model/NodeTests.cs
 src/Org.OpenAPITools.Test/Org.OpenAPITools.Test.csproj
 src/Org.OpenAPITools/Api/DefaultApi.cs
 src/Org.OpenAPITools/Client/ApiClient.cs

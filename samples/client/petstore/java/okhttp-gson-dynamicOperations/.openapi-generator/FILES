@@ -41,4 +41,3 @@ src/main/java/org/openapitools/client/model/ExampleResponse.java
 src/main/java/org/openapitools/client/model/Node.java
 src/main/java/org/openapitools/client/model/OtherObject.java
 src/main/resources/openapi/openapi.yaml
-src/test/java/org/openapitools/client/model/NodeTest.java

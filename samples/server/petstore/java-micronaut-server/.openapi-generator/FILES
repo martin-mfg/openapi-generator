@@ -24,4 +24,3 @@ src/main/java/org/openapitools/model/Node.java
 src/main/java/org/openapitools/model/OtherObject.java
 src/main/resources/application.yml
 src/main/resources/logback.xml
-src/test/groovy/org/openapitools/model/NodeSpec.groovy

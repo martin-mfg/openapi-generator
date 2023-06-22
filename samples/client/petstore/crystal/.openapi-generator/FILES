@@ -3,7 +3,6 @@
 README.md
 git_push.sh
 shard.yml
-spec/models/node_spec.cr
 spec/spec_helper.cr
 src/petstore.cr
 src/petstore/api/default_api.cr

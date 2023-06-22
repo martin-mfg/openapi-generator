@@ -15,4 +15,3 @@ src/index.js
 src/model/ExampleResponse.js
 src/model/Node.js
 src/model/OtherObject.js
-test/model/Node.spec.js

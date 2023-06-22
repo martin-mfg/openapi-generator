@@ -42,9 +42,6 @@ app/test-requirements.txt
 app/test-requirements.txt
 app/tox.ini
 app/tox.ini
-model-definitions/types/ddui-views/openapi_server.resourceTypes.Node/create.json
-model-definitions/types/ddui-views/openapi_server.resourceTypes.Node/high.json
-model-definitions/types/ddui-views/openapi_server.resourceTypes.Node/low.json
 model-definitions/types/tosca/openapi_server/ExampleResponse_ResourceType.tosca
 model-definitions/types/tosca/openapi_server/Node_ResourceType.tosca
 model-definitions/types/tosca/openapi_server/OtherObject_ResourceType.tosca

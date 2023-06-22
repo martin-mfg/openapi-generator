@@ -20,4 +20,3 @@ phpunit.xml.dist
 public/.htaccess
 public/index.php
 tests/BaseModelTest.php
-tests/Model/NodeTest.php

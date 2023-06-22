@@ -18,4 +18,3 @@ lib/Model/Node.php
 lib/Model/OtherObject.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/NodeTest.php

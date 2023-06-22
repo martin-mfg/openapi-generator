@@ -32,4 +32,3 @@ src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java
 src/main/java/org/openapitools/client/model/ExampleResponse.java
 src/main/java/org/openapitools/client/model/Node.java
 src/main/java/org/openapitools/client/model/OtherObject.java
-src/test/java/org/openapitools/client/model/NodeTest.java
