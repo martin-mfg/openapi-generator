@@ -24,7 +24,7 @@ pub enum DummyError {
 
 
 /// dummy
-pub fn dummy(configuration: &configuration::Configuration, ) -> Result<crate::models::ExampleResponse, Error<DummyError>> {
+pub fn dummy(configuration: &configuration::Configuration, ) -> Result<crate::models::Dummy200Response, Error<DummyError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

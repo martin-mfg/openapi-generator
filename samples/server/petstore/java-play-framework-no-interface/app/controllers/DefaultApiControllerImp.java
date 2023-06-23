@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.Dummy200Response;
 import apimodels.ExampleResponse;
 
 import play.mvc.Http;
@@ -13,9 +14,9 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen")
 public class DefaultApiControllerImp  {
     
-    public ExampleResponse dummy(Http.Request request) throws Exception {
+    public Dummy200Response dummy(Http.Request request) throws Exception {
         //Do your magic!!!
-        return new ExampleResponse();
+        return new Dummy200Response();
     }
 
 }

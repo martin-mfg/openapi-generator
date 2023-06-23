@@ -36,7 +36,8 @@ open class DefaultAPI {
     }
 
     public enum Dummy {
-        case http200(value: ExampleResponse, raw: ClientResponse)
+        case http201(value: ExampleResponse, raw: ClientResponse)
+        case http200(value: Dummy200Response, raw: ClientResponse)
         case http0(raw: ClientResponse)
     }
 
@@ -48,8 +49,10 @@ open class DefaultAPI {
     open class func dummy(headers: HTTPHeaders = PetstoreClientAPI.customHeaders, beforeSend: (inout ClientRequest) throws -> () = { _ in }) -> EventLoopFuture<Dummy> {
         return dummyRaw(headers: headers, beforeSend: beforeSend).flatMapThrowing { response -> Dummy in
             switch response.status.code {
+            case 201:
+                return .http201(value: try response.content.decode(ExampleResponse.self, using: Configuration.contentConfiguration.requireDecoder(for: ExampleResponse.defaultContentType)), raw: response)
             case 200:
-                return .http200(value: try response.content.decode(ExampleResponse.self, using: Configuration.contentConfiguration.requireDecoder(for: ExampleResponse.defaultContentType)), raw: response)
+                return .http200(value: try response.content.decode(Dummy200Response.self, using: Configuration.contentConfiguration.requireDecoder(for: Dummy200Response.defaultContentType)), raw: response)
             default:
                 return .http0(raw: response)
             }

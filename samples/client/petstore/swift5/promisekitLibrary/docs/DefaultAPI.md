@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **dummy**
 ```swift
-    open class func dummy() -> Promise<ExampleResponse>
+    open class func dummy() -> Promise<Dummy200Response>
 ```
 
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 

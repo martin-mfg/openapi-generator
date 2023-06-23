@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -33,20 +34,21 @@ public interface ExampleApi {
      * GET /example/someMethod
      * dummy
      *
-     * @return dummy (status code 200)
+     * @return dummy (status code 201)
+     *         or dummy (status code 200)
      */
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<ExampleResponse> dummy(
+    default ResponseEntity<Dummy200Response> dummy(
         
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
-                    String exampleString = "{ \"zero\" : 0, \"numberString\" : \"42\", \"nullString\" : \"null\", \"emptyString\" : \"\", \"boolString\" : \"false\", \"aBool\" : false }";
+                    String exampleString = "{ \"outerProp\" : { \"innerProp\" : { \"myBool\" : true } } }";
                     ApiUtil.setExampleResponse(request, "*/*", exampleString);
                     break;
                 }

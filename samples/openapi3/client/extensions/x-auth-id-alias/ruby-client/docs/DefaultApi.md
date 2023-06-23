@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 ## dummy
 
-> <ExampleResponse> dummy
+> <Dummy200Response> dummy
 
 
 
@@ -36,7 +36,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ExampleResponse>, Integer, Hash)> dummy_with_http_info
+> <Array(<Dummy200Response>, Integer, Hash)> dummy_with_http_info
 
 ```ruby
 begin
@@ -44,7 +44,7 @@ begin
   data, status_code, headers = api_instance.dummy_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ExampleResponse>
+  p data # => <Dummy200Response>
 rescue XAuthIDAlias::ApiError => e
   puts "Error when calling DefaultApi->dummy_with_http_info: #{e}"
 end
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 

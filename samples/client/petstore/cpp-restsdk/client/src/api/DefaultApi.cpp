@@ -35,7 +35,7 @@ DefaultApi::~DefaultApi()
 {
 }
 
-pplx::task<std::shared_ptr<ExampleResponse>> DefaultApi::dummy() const
+pplx::task<std::shared_ptr<Dummy_200_response>> DefaultApi::dummy() const
 {
 
 
@@ -136,7 +136,7 @@ pplx::task<std::shared_ptr<ExampleResponse>> DefaultApi::dummy() const
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::shared_ptr<ExampleResponse> localVarResult(new ExampleResponse());
+        std::shared_ptr<Dummy_200_response> localVarResult(new Dummy_200_response());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {

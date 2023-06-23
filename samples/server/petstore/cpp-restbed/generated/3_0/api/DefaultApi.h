@@ -31,6 +31,7 @@
 #include <corvusoft/restbed/service.hpp>
 #include <corvusoft/restbed/settings.hpp>
 
+#include "Dummy_200_response.h"
 #include "ExampleResponse.h"
 
 namespace org {
@@ -79,9 +80,9 @@ public:
     /////////////////////////////////////////////////////
     // Set these to implement the server functionality //
     /////////////////////////////////////////////////////
-    std::function<std::pair<int, ExampleResponse>(
+    std::function<std::pair<int, Dummy_200_response>(
         )> handler_GET_func =
-            []() -> std::pair<int, ExampleResponse>
+            []() -> std::pair<int, Dummy_200_response>
                 { throw DefaultApiException(501, "Not implemented"); };
 
 
@@ -91,7 +92,7 @@ protected:
     // override these to implement the server functionality //
     //////////////////////////////////////////////////////////
 
-    virtual std::pair<int, ExampleResponse> handler_GET(
+    virtual std::pair<int, Dummy_200_response> handler_GET(
         );
 
 

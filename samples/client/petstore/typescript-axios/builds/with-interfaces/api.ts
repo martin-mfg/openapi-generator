@@ -24,6 +24,45 @@ import type { RequestArgs } from './base';
 import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError } from './base';
 
 /**
+ * 
+ * @export
+ * @interface Dummy200Response
+ */
+export interface Dummy200Response {
+    /**
+     * 
+     * @type {Dummy200ResponseOuterProp}
+     * @memberof Dummy200Response
+     */
+    'outerProp'?: Dummy200ResponseOuterProp;
+}
+/**
+ * 
+ * @export
+ * @interface Dummy200ResponseOuterProp
+ */
+export interface Dummy200ResponseOuterProp {
+    /**
+     * 
+     * @type {Dummy200ResponseOuterPropInnerProp}
+     * @memberof Dummy200ResponseOuterProp
+     */
+    'innerProp'?: Dummy200ResponseOuterPropInnerProp;
+}
+/**
+ * 
+ * @export
+ * @interface Dummy200ResponseOuterPropInnerProp
+ */
+export interface Dummy200ResponseOuterPropInnerProp {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof Dummy200ResponseOuterPropInnerProp
+     */
+    'myBool'?: boolean;
+}
+/**
  * dummy
  * @export
  * @interface ExampleResponse
@@ -65,6 +104,38 @@ export interface ExampleResponse {
      * @memberof ExampleResponse
      */
     'zero'?: number;
+}
+/**
+ * dummy
+ * @export
+ * @interface Node
+ */
+export interface Node {
+    /**
+     * 
+     * @type {Node}
+     * @memberof Node
+     */
+    'left'?: Node;
+    /**
+     * 
+     * @type {Node}
+     * @memberof Node
+     */
+    'right'?: Node;
+}
+/**
+ * dummy
+ * @export
+ * @interface OtherObject
+ */
+export interface OtherObject {
+    /**
+     * 
+     * @type {ExampleResponse}
+     * @memberof OtherObject
+     */
+    'myOnlyProperty2'?: ExampleResponse;
 }
 
 /**
@@ -117,7 +188,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async dummy(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExampleResponse>> {
+        async dummy(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Dummy200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.dummy(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -136,7 +207,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        dummy(options?: any): AxiosPromise<ExampleResponse> {
+        dummy(options?: any): AxiosPromise<Dummy200Response> {
             return localVarFp.dummy(options).then((request) => request(axios, basePath));
         },
     };
@@ -154,7 +225,7 @@ export interface DefaultApiInterface {
      * @throws {RequiredError}
      * @memberof DefaultApiInterface
      */
-    dummy(options?: AxiosRequestConfig): AxiosPromise<ExampleResponse>;
+    dummy(options?: AxiosRequestConfig): AxiosPromise<Dummy200Response>;
 
 }
 

@@ -14,6 +14,7 @@
 
 
 import ApiClient from "../ApiClient";
+import Dummy200Response from '../model/Dummy200Response';
 import ExampleResponse from '../model/ExampleResponse';
 
 /**
@@ -36,7 +37,7 @@ export default class DefaultApi extends ApiClient {
     /**
      * dummy
      * @param requestInit Dynamic configuration. @see {@link https://github.com/apollographql/apollo-server/pull/1277}
-     * @return {Promise<module:model/ExampleResponse>}
+     * @return {Promise<module:model/Dummy200Response>}
      */
     async dummy(requestInit) {
       let postBody = null;
@@ -54,7 +55,7 @@ export default class DefaultApi extends ApiClient {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['*/*'];
-      let returnType = ExampleResponse;
+      let returnType = Dummy200Response;
 
       return this.callApi(
         '/example/someMethod', 'GET',

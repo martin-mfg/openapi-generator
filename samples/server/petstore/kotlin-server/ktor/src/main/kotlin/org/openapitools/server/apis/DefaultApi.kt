@@ -26,6 +26,7 @@ import io.ktor.server.resources.head
 import io.ktor.server.resources.patch
 import io.ktor.server.routing.*
 import org.openapitools.server.infrastructure.ApiPrincipal
+import org.openapitools.server.models.Dummy200Response
 import org.openapitools.server.models.ExampleResponse
 
 fun Route.DefaultApi() {
@@ -35,12 +36,11 @@ fun Route.DefaultApi() {
     get<Paths.dummy> {
         val exampleContentType = "*/*"
         val exampleContentString = """{
-          "zero" : 0,
-          "numberString" : "42",
-          "nullString" : "null",
-          "emptyString" : "",
-          "boolString" : "false",
-          "aBool" : false
+          "outerProp" : {
+            "innerProp" : {
+              "myBool" : true
+            }
+          }
         }"""
         
         when (exampleContentType) {

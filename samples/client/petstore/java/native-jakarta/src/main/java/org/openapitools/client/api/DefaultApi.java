@@ -17,6 +17,7 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -84,21 +85,21 @@ public class DefaultApi {
   /**
    * 
    * dummy
-   * @return ExampleResponse
+   * @return Dummy200Response
    * @throws ApiException if fails to make API call
    */
-  public ExampleResponse dummy() throws ApiException {
-    ApiResponse<ExampleResponse> localVarResponse = dummyWithHttpInfo();
+  public Dummy200Response dummy() throws ApiException {
+    ApiResponse<Dummy200Response> localVarResponse = dummyWithHttpInfo();
     return localVarResponse.getData();
   }
 
   /**
    * 
    * dummy
-   * @return ApiResponse&lt;ExampleResponse&gt;
+   * @return ApiResponse&lt;Dummy200Response&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<ExampleResponse> dummyWithHttpInfo() throws ApiException {
+  public ApiResponse<Dummy200Response> dummyWithHttpInfo() throws ApiException {
     HttpRequest.Builder localVarRequestBuilder = dummyRequestBuilder();
     try {
       HttpResponse<InputStream> localVarResponse = memberVarHttpClient.send(
@@ -111,10 +112,10 @@ public class DefaultApi {
         if (localVarResponse.statusCode()/ 100 != 2) {
           throw getApiException("dummy", localVarResponse);
         }
-        return new ApiResponse<ExampleResponse>(
+        return new ApiResponse<Dummy200Response>(
           localVarResponse.statusCode(),
           localVarResponse.headers().map(),
-          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<ExampleResponse>() {}) // closes the InputStream
+          localVarResponse.body() == null ? null : memberVarObjectMapper.readValue(localVarResponse.body(), new TypeReference<Dummy200Response>() {}) // closes the InputStream
         );
       } finally {
       }

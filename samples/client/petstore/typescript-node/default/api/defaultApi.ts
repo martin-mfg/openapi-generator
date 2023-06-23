@@ -15,6 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { Dummy200Response } from '../model/dummy200Response';
 import { ExampleResponse } from '../model/exampleResponse';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -89,7 +90,7 @@ export class DefaultApi {
     /**
      * dummy
      */
-    public async dummy (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ExampleResponse;  }> {
+    public async dummy (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Dummy200Response;  }> {
         const localVarPath = this.basePath + '/example/someMethod';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -131,13 +132,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ExampleResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Dummy200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ExampleResponse");
+                            body = ObjectSerializer.deserialize(body, "Dummy200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

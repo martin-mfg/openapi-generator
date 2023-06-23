@@ -8,6 +8,7 @@ import org.openapitools.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
@@ -49,33 +50,35 @@ public class DefaultApi {
   /**
    * 
    * dummy
-   * @return ExampleResponse
+   * @return Dummy200Response
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+       <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
        <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
      </table>
    */
-  public ExampleResponse dummy() throws ApiException {
+  public Dummy200Response dummy() throws ApiException {
     return dummyWithHttpInfo().getData();
   }
 
   /**
    * 
    * dummy
-   * @return ApiResponse&lt;ExampleResponse&gt;
+   * @return ApiResponse&lt;Dummy200Response&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+       <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
        <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<ExampleResponse> dummyWithHttpInfo() throws ApiException {
+  public ApiResponse<Dummy200Response> dummyWithHttpInfo() throws ApiException {
     String localVarAccept = apiClient.selectHeaderAccept("*/*");
     String localVarContentType = apiClient.selectHeaderContentType();
-    GenericType<ExampleResponse> localVarReturnType = new GenericType<ExampleResponse>() {};
+    GenericType<Dummy200Response> localVarReturnType = new GenericType<Dummy200Response>() {};
     return apiClient.invokeAPI("DefaultApi.dummy", "/example/someMethod", "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                null, localVarReturnType, false);

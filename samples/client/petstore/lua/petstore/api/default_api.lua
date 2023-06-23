@@ -17,6 +17,7 @@ local basexx = require "basexx"
 
 -- model import
 local petstore_example_response = require "petstore.model.example_response"
+local petstore_dummy_200_response = require "petstore.model.dummy_200_response"
 
 local default_api = {}
 local default_api_mt = {
@@ -78,7 +79,7 @@ function default_api:dummy()
 		if result == nil then
 			return nil, err3
 		end
-		return petstore_example_response.cast(result), headers
+		return petstore_dummy_200_response.cast(result), headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then

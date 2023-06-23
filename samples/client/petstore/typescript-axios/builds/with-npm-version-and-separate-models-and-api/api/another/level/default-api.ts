@@ -22,6 +22,8 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../../../base';
 // @ts-ignore
+import { Dummy200Response } from '../../../model/some/levels/deep';
+// @ts-ignore
 import { ExampleResponse } from '../../../model/some/levels/deep';
 /**
  * DefaultApi - axios parameter creator
@@ -73,7 +75,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async dummy(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExampleResponse>> {
+        async dummy(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Dummy200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.dummy(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -92,7 +94,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        dummy(options?: any): AxiosPromise<ExampleResponse> {
+        dummy(options?: any): AxiosPromise<Dummy200Response> {
             return localVarFp.dummy(options).then((request) => request(axios, basePath));
         },
     };

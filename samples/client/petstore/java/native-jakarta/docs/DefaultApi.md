@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 ## dummy
 
-> ExampleResponse dummy()
+> Dummy200Response dummy()
 
 
 
@@ -34,7 +34,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ExampleResponse result = apiInstance.dummy();
+            Dummy200Response result = apiInstance.dummy();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#dummy");
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 
 ### Authorization
@@ -68,11 +68,12 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | dummy |  -  |
 | **200** | dummy |  -  |
 
 ## dummyWithHttpInfo
 
-> ApiResponse<ExampleResponse> dummy dummyWithHttpInfo()
+> ApiResponse<Dummy200Response> dummy dummyWithHttpInfo()
 
 
 
@@ -96,7 +97,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            ApiResponse<ExampleResponse> response = apiInstance.dummyWithHttpInfo();
+            ApiResponse<Dummy200Response> response = apiInstance.dummyWithHttpInfo();
             System.out.println("Status code: " + response.getStatusCode());
             System.out.println("Response headers: " + response.getHeaders());
             System.out.println("Response body: " + response.getData());
@@ -117,7 +118,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiResponse<[**ExampleResponse**](ExampleResponse.md)>
+ApiResponse<[**Dummy200Response**](Dummy200Response.md)>
 
 
 ### Authorization
@@ -132,5 +133,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | dummy |  -  |
 | **200** | dummy |  -  |
 

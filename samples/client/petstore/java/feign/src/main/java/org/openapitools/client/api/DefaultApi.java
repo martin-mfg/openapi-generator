@@ -4,6 +4,7 @@ import org.openapitools.client.ApiClient;
 import org.openapitools.client.EncodingUtils;
 import org.openapitools.client.model.ApiResponse;
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
@@ -19,13 +20,13 @@ public interface DefaultApi extends ApiClient.Api {
   /**
    * 
    * dummy
-   * @return ExampleResponse
+   * @return Dummy200Response
    */
   @RequestLine("GET /example/someMethod")
   @Headers({
     "Accept: */*",
   })
-  ExampleResponse dummy();
+  Dummy200Response dummy();
 
   /**
    * 
@@ -37,7 +38,7 @@ public interface DefaultApi extends ApiClient.Api {
   @Headers({
     "Accept: */*",
   })
-  ApiResponse<ExampleResponse> dummyWithHttpInfo();
+  ApiResponse<Dummy200Response> dummyWithHttpInfo();
 
 
 }

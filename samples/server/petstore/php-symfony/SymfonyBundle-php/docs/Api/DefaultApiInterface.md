@@ -19,7 +19,7 @@ services:
 ```
 
 ## **dummy**
-> OpenAPI\Server\Model\ExampleResponse dummy()
+> OpenAPI\Server\Model\Dummy200Response dummy()
 
 
 
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**OpenAPI\Server\Model\ExampleResponse**](../Model/ExampleResponse.md)
+[**OpenAPI\Server\Model\Dummy200Response**](../Model/Dummy200Response.md)
 
 ### Authorization
 

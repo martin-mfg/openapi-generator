@@ -19,7 +19,8 @@ use super::{Error, configuration};
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum DummySuccess {
-    Status200(crate::models::ExampleResponse),
+    Status201(crate::models::ExampleResponse),
+    Status200(crate::models::Dummy200Response),
     UnknownValue(serde_json::Value),
 }
 

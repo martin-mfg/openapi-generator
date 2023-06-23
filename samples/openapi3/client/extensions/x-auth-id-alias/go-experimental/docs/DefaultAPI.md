@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## Dummy
 
-> ExampleResponse Dummy(ctx).Execute()
+> Dummy200Response Dummy(ctx).Execute()
 
 
 
@@ -37,7 +37,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.Dummy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `Dummy`: ExampleResponse
+    // response from `Dummy`: Dummy200Response
     fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.Dummy`: %v\n", resp)
 }
 ```
@@ -53,7 +53,7 @@ Other parameters are passed through a pointer to a apiDummyRequest struct via th
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 

@@ -8,6 +8,7 @@ import {canConsumeForm, isCodeInRange} from '../util';
 import {SecurityAuthentication} from '../auth/auth';
 
 
+import { Dummy200Response } from '../models/Dummy200Response';
 import { ExampleResponse } from '../models/ExampleResponse';
 
 /**
@@ -49,22 +50,29 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to dummy
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async dummy(response: ResponseContext): Promise<ExampleResponse > {
+     public async dummy(response: ResponseContext): Promise<ExampleResponse | Dummy200Response > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
-        if (isCodeInRange("200", response.httpStatusCode)) {
+        if (isCodeInRange("201", response.httpStatusCode)) {
             const body: ExampleResponse = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
                 "ExampleResponse", ""
             ) as ExampleResponse;
             return body;
         }
+        if (isCodeInRange("200", response.httpStatusCode)) {
+            const body: Dummy200Response = ObjectSerializer.deserialize(
+                ObjectSerializer.parse(await response.body.text(), contentType),
+                "Dummy200Response", ""
+            ) as Dummy200Response;
+            return body;
+        }
 
         // Work around for missing responses in specification, e.g. for petstore.yaml
         if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
-            const body: ExampleResponse = ObjectSerializer.deserialize(
+            const body: ExampleResponse | Dummy200Response = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "ExampleResponse", ""
-            ) as ExampleResponse;
+                "ExampleResponse | Dummy200Response", ""
+            ) as ExampleResponse | Dummy200Response;
             return body;
         }
 

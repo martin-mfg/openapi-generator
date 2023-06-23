@@ -1,6 +1,11 @@
 README.md
 docs/DefaultApi.md
+docs/Dummy200Response.md
+docs/Dummy200ResponseOuterProp.md
+docs/Dummy200ResponseOuterPropInnerProp.md
 docs/ExampleResponse.md
+docs/Node.md
+docs/OtherObject.md
 pom.xml
 src/main/java/org/openapitools/client/ApiClient.java
 src/main/java/org/openapitools/client/ApiResponse.java
@@ -10,4 +15,9 @@ src/main/java/org/openapitools/client/RFC3339DateFormat.java
 src/main/java/org/openapitools/client/api/DefaultApi.java
 src/main/java/org/openapitools/client/api/DefaultApiImpl.java
 src/main/java/org/openapitools/client/api/ResponseType.java
+src/main/java/org/openapitools/client/model/Dummy200Response.java
+src/main/java/org/openapitools/client/model/Dummy200ResponseOuterProp.java
+src/main/java/org/openapitools/client/model/Dummy200ResponseOuterPropInnerProp.java
 src/main/java/org/openapitools/client/model/ExampleResponse.java
+src/main/java/org/openapitools/client/model/Node.java
+src/main/java/org/openapitools/client/model/OtherObject.java

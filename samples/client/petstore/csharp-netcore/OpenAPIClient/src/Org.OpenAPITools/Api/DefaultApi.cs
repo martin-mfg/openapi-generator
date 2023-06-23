@@ -34,8 +34,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExampleResponse</returns>
-        ExampleResponse Dummy(int operationIndex = 0);
+        /// <returns>Dummy200Response</returns>
+        Dummy200Response Dummy(int operationIndex = 0);
 
         /// <summary>
         /// 
@@ -45,8 +45,8 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExampleResponse</returns>
-        ApiResponse<ExampleResponse> DummyWithHttpInfo(int operationIndex = 0);
+        /// <returns>ApiResponse of Dummy200Response</returns>
+        ApiResponse<Dummy200Response> DummyWithHttpInfo(int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -65,8 +65,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExampleResponse</returns>
-        System.Threading.Tasks.Task<ExampleResponse> DummyAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of Dummy200Response</returns>
+        System.Threading.Tasks.Task<Dummy200Response> DummyAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -77,8 +77,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExampleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExampleResponse>> DummyWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (Dummy200Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dummy200Response>> DummyWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -204,10 +204,10 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ExampleResponse</returns>
-        public ExampleResponse Dummy(int operationIndex = 0)
+        /// <returns>Dummy200Response</returns>
+        public Dummy200Response Dummy(int operationIndex = 0)
         {
-            Org.OpenAPITools.Client.ApiResponse<ExampleResponse> localVarResponse = DummyWithHttpInfo();
+            Org.OpenAPITools.Client.ApiResponse<Dummy200Response> localVarResponse = DummyWithHttpInfo();
             return localVarResponse.Data;
         }
 
@@ -216,8 +216,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ExampleResponse</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ExampleResponse> DummyWithHttpInfo(int operationIndex = 0)
+        /// <returns>ApiResponse of Dummy200Response</returns>
+        public Org.OpenAPITools.Client.ApiResponse<Dummy200Response> DummyWithHttpInfo(int operationIndex = 0)
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -247,7 +247,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ExampleResponse>("/example/someMethod", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Dummy200Response>("/example/someMethod", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Dummy", localVarResponse);
@@ -266,10 +266,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ExampleResponse</returns>
-        public async System.Threading.Tasks.Task<ExampleResponse> DummyAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of Dummy200Response</returns>
+        public async System.Threading.Tasks.Task<Dummy200Response> DummyAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ExampleResponse> localVarResponse = await DummyWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<Dummy200Response> localVarResponse = await DummyWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -279,8 +279,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ExampleResponse)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ExampleResponse>> DummyWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (Dummy200Response)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Dummy200Response>> DummyWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -311,7 +311,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ExampleResponse>("/example/someMethod", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Dummy200Response>("/example/someMethod", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

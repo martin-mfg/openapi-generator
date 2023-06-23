@@ -5,6 +5,7 @@ import org.openapitools.model.*;
 
 import org.apache.cxf.jaxrs.ext.multipart.Attachment;
 
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 
 import java.util.List;

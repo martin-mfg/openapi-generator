@@ -1,6 +1,7 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
+import org.openapitools.model.Dummy200Response
 import org.openapitools.model.ExampleResponse
 
 class DefaultApi {
@@ -24,7 +25,7 @@ class DefaultApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ExampleResponse.class )
+                    Dummy200Response.class )
 
     }
 

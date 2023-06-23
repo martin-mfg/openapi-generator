@@ -69,6 +69,90 @@ import qualified Prelude as P
 -- * Models
 
 
+-- ** Dummy200Response
+-- | Dummy200Response
+data Dummy200Response = Dummy200Response
+  { dummy200ResponseOuterProp :: !(Maybe Dummy200ResponseOuterProp) -- ^ "outerProp"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON Dummy200Response
+instance A.FromJSON Dummy200Response where
+  parseJSON = A.withObject "Dummy200Response" $ \o ->
+    Dummy200Response
+      <$> (o .:? "outerProp")
+
+-- | ToJSON Dummy200Response
+instance A.ToJSON Dummy200Response where
+  toJSON Dummy200Response {..} =
+   _omitNulls
+      [ "outerProp" .= dummy200ResponseOuterProp
+      ]
+
+
+-- | Construct a value of type 'Dummy200Response' (by applying it's required fields, if any)
+mkDummy200Response
+  :: Dummy200Response
+mkDummy200Response =
+  Dummy200Response
+  { dummy200ResponseOuterProp = Nothing
+  }
+
+-- ** Dummy200ResponseOuterProp
+-- | Dummy200ResponseOuterProp
+data Dummy200ResponseOuterProp = Dummy200ResponseOuterProp
+  { dummy200ResponseOuterPropInnerProp :: !(Maybe Dummy200ResponseOuterPropInnerProp) -- ^ "innerProp"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON Dummy200ResponseOuterProp
+instance A.FromJSON Dummy200ResponseOuterProp where
+  parseJSON = A.withObject "Dummy200ResponseOuterProp" $ \o ->
+    Dummy200ResponseOuterProp
+      <$> (o .:? "innerProp")
+
+-- | ToJSON Dummy200ResponseOuterProp
+instance A.ToJSON Dummy200ResponseOuterProp where
+  toJSON Dummy200ResponseOuterProp {..} =
+   _omitNulls
+      [ "innerProp" .= dummy200ResponseOuterPropInnerProp
+      ]
+
+
+-- | Construct a value of type 'Dummy200ResponseOuterProp' (by applying it's required fields, if any)
+mkDummy200ResponseOuterProp
+  :: Dummy200ResponseOuterProp
+mkDummy200ResponseOuterProp =
+  Dummy200ResponseOuterProp
+  { dummy200ResponseOuterPropInnerProp = Nothing
+  }
+
+-- ** Dummy200ResponseOuterPropInnerProp
+-- | Dummy200ResponseOuterPropInnerProp
+data Dummy200ResponseOuterPropInnerProp = Dummy200ResponseOuterPropInnerProp
+  { dummy200ResponseOuterPropInnerPropMyBool :: !(Maybe Bool) -- ^ "myBool"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON Dummy200ResponseOuterPropInnerProp
+instance A.FromJSON Dummy200ResponseOuterPropInnerProp where
+  parseJSON = A.withObject "Dummy200ResponseOuterPropInnerProp" $ \o ->
+    Dummy200ResponseOuterPropInnerProp
+      <$> (o .:? "myBool")
+
+-- | ToJSON Dummy200ResponseOuterPropInnerProp
+instance A.ToJSON Dummy200ResponseOuterPropInnerProp where
+  toJSON Dummy200ResponseOuterPropInnerProp {..} =
+   _omitNulls
+      [ "myBool" .= dummy200ResponseOuterPropInnerPropMyBool
+      ]
+
+
+-- | Construct a value of type 'Dummy200ResponseOuterPropInnerProp' (by applying it's required fields, if any)
+mkDummy200ResponseOuterPropInnerProp
+  :: Dummy200ResponseOuterPropInnerProp
+mkDummy200ResponseOuterPropInnerProp =
+  Dummy200ResponseOuterPropInnerProp
+  { dummy200ResponseOuterPropInnerPropMyBool = Nothing
+  }
+
 -- ** ExampleResponse
 -- | ExampleResponse
 -- dummy
@@ -116,6 +200,68 @@ mkExampleResponse =
   , exampleResponseNullString = Nothing
   , exampleResponseABool = Nothing
   , exampleResponseZero = Nothing
+  }
+
+-- ** Node
+-- | Node
+-- dummy
+data Node = Node
+  { nodeLeft :: !(Maybe Node) -- ^ "left"
+  , nodeRight :: !(Maybe Node) -- ^ "right"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON Node
+instance A.FromJSON Node where
+  parseJSON = A.withObject "Node" $ \o ->
+    Node
+      <$> (o .:? "left")
+      <*> (o .:? "right")
+
+-- | ToJSON Node
+instance A.ToJSON Node where
+  toJSON Node {..} =
+   _omitNulls
+      [ "left" .= nodeLeft
+      , "right" .= nodeRight
+      ]
+
+
+-- | Construct a value of type 'Node' (by applying it's required fields, if any)
+mkNode
+  :: Node
+mkNode =
+  Node
+  { nodeLeft = Nothing
+  , nodeRight = Nothing
+  }
+
+-- ** OtherObject
+-- | OtherObject
+-- dummy
+data OtherObject = OtherObject
+  { otherObjectMyOnlyProperty2 :: !(Maybe ExampleResponse) -- ^ "myOnlyProperty2"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON OtherObject
+instance A.FromJSON OtherObject where
+  parseJSON = A.withObject "OtherObject" $ \o ->
+    OtherObject
+      <$> (o .:? "myOnlyProperty2")
+
+-- | ToJSON OtherObject
+instance A.ToJSON OtherObject where
+  toJSON OtherObject {..} =
+   _omitNulls
+      [ "myOnlyProperty2" .= otherObjectMyOnlyProperty2
+      ]
+
+
+-- | Construct a value of type 'OtherObject' (by applying it's required fields, if any)
+mkOtherObject
+  :: OtherObject
+mkOtherObject =
+  OtherObject
+  { otherObjectMyOnlyProperty2 = Nothing
   }
 
 

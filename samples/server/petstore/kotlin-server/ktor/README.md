@@ -55,7 +55,12 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [org.openapitools.server.models.Dummy200Response](docs/Dummy200Response.md)
+ - [org.openapitools.server.models.Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
+ - [org.openapitools.server.models.Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [org.openapitools.server.models.ExampleResponse](docs/ExampleResponse.md)
+ - [org.openapitools.server.models.Node](docs/Node.md)
+ - [org.openapitools.server.models.OtherObject](docs/OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

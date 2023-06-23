@@ -8,7 +8,7 @@ All URIs are relative to *http://localhost*
 
 <a id="dummy"></a>
 # **Dummy**
-> ExampleResponse Dummy ()
+> Dummy200Response Dummy ()
 
 
 
@@ -38,7 +38,7 @@ namespace Example
 
             try
             {
-                ExampleResponse result = apiInstance.Dummy();
+                Dummy200Response result = apiInstance.Dummy();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -58,7 +58,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    ApiResponse<ExampleResponse> response = apiInstance.DummyWithHttpInfo();
+    ApiResponse<Dummy200Response> response = apiInstance.DummyWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -75,7 +75,7 @@ catch (ApiException e)
 This endpoint does not need any parameter.
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 
@@ -90,6 +90,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | dummy |  -  |
 | **200** | dummy |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

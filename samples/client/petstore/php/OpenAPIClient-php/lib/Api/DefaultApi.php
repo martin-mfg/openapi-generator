@@ -129,7 +129,7 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ExampleResponse
+     * @return \OpenAPI\Client\Model\ExampleResponse|\OpenAPI\Client\Model\Dummy200Response
      */
     public function dummy(string $contentType = self::contentTypes['dummy'][0])
     {
@@ -144,7 +144,7 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ExampleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ExampleResponse|\OpenAPI\Client\Model\Dummy200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dummyWithHttpInfo(string $contentType = self::contentTypes['dummy'][0])
     {
@@ -186,7 +186,7 @@ class DefaultApi
             }
 
             switch($statusCode) {
-                case 200:
+                case 201:
                     if ('\OpenAPI\Client\Model\ExampleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
@@ -201,9 +201,24 @@ class DefaultApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 200:
+                    if ('\OpenAPI\Client\Model\Dummy200Response' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\Dummy200Response' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Dummy200Response', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ExampleResponse';
+            $returnType = '\OpenAPI\Client\Model\Dummy200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -221,10 +236,18 @@ class DefaultApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
+                case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\OpenAPI\Client\Model\ExampleResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\Dummy200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +285,7 @@ class DefaultApi
      */
     public function dummyAsyncWithHttpInfo(string $contentType = self::contentTypes['dummy'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ExampleResponse';
+        $returnType = '\OpenAPI\Client\Model\Dummy200Response';
         $request = $this->dummyRequest($contentType);
 
         return $this->client

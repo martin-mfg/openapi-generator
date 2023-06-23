@@ -1,5 +1,6 @@
 package org.openapitools.api
 
+import org.openapitools.model.Dummy200Response
 import org.openapitools.model.ExampleResponse
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
@@ -41,15 +42,15 @@ class ExampleApiController(@Autowired(required = true) val service: ExampleApiSe
         value = "",
         nickname = "dummy",
         notes = "dummy",
-        response = ExampleResponse::class)
+        response = Dummy200Response::class)
     @ApiResponses(
-        value = [ApiResponse(code = 200, message = "dummy", response = ExampleResponse::class)])
+        value = [ApiResponse(code = 201, message = "dummy", response = ExampleResponse::class),ApiResponse(code = 200, message = "dummy", response = Dummy200Response::class)])
     @RequestMapping(
         method = [RequestMethod.GET],
         value = ["/example/someMethod"],
         produces = ["*/*"]
     )
-    fun dummy(): ResponseEntity<ExampleResponse> {
-        return ResponseEntity(service.dummy(), HttpStatus.valueOf(200))
+    fun dummy(): ResponseEntity<Dummy200Response> {
+        return ResponseEntity(service.dummy(), HttpStatus.valueOf(201))
     }
 }

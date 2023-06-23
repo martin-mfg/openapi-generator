@@ -29,6 +29,9 @@ export default function() {
             let request = http.get(url);
 
             check(request, {
+                "dummy": (r) => r.status === 201
+            });
+            check(request, {
                 "dummy": (r) => r.status === 200
             });
         }

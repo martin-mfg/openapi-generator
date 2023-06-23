@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.Dummy200Response;
 import apimodels.ExampleResponse;
 
 import com.google.inject.Inject;
@@ -30,7 +31,7 @@ public abstract class DefaultApiControllerImpInterface {
     private ObjectMapper mapper = new ObjectMapper();
 
     public CompletionStage<Result> dummyHttp(Http.Request request) throws Exception {
-        CompletionStage<ExampleResponse> stage = dummy(request).thenApply(obj -> { 
+        CompletionStage<Dummy200Response> stage = dummy(request).thenApply(obj -> { 
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
             OpenAPIUtils.validate(obj);
@@ -46,6 +47,6 @@ return stage.thenApply(obj -> {
 
     }
 
-    public abstract CompletionStage<ExampleResponse> dummy(Http.Request request) throws Exception;
+    public abstract CompletionStage<Dummy200Response> dummy(Http.Request request) throws Exception;
 
 }

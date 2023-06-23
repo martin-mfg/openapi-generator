@@ -1,1 +1,6 @@
+Dummy200Response.avsc
+Dummy200ResponseOuterProp.avsc
+Dummy200ResponseOuterPropInnerProp.avsc
 ExampleResponse.avsc
+Node.avsc
+OtherObject.avsc

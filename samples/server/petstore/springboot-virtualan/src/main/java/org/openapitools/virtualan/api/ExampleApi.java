@@ -5,6 +5,7 @@
  */
 package org.openapitools.virtualan.api;
 
+import org.openapitools.virtualan.model.Dummy200Response;
 import org.openapitools.virtualan.model.ExampleResponse;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
@@ -48,15 +49,19 @@ public interface ExampleApi {
      * GET /example/someMethod
      * dummy
      *
-     * @return dummy (status code 200)
+     * @return dummy (status code 201)
+     *         or dummy (status code 200)
      */
     @ApiVirtual
     @Operation(
         operationId = "dummy",
         description = "dummy",
         responses = {
-            @ApiResponse(responseCode = "200", description = "dummy", content = {
+            @ApiResponse(responseCode = "201", description = "dummy", content = {
                 @Content(mediaType = "*/*", schema = @Schema(implementation = ExampleResponse.class))
+            }),
+            @ApiResponse(responseCode = "200", description = "dummy", content = {
+                @Content(mediaType = "*/*", schema = @Schema(implementation = Dummy200Response.class))
             })
         }
     )
@@ -65,13 +70,13 @@ public interface ExampleApi {
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<ExampleResponse> dummy(
+    default ResponseEntity<Dummy200Response> dummy(
         
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
-                    String exampleString = "{ \"zero\" : 0, \"numberString\" : \"42\", \"nullString\" : \"null\", \"emptyString\" : \"\", \"boolString\" : \"false\", \"aBool\" : false }";
+                    String exampleString = "{ \"outerProp\" : { \"innerProp\" : { \"myBool\" : true } } }";
                     ApiUtil.setExampleResponse(request, "*/*", exampleString);
                     break;
                 }

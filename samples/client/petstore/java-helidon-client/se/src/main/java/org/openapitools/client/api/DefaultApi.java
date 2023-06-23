@@ -13,6 +13,7 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiResponse;
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 /**
@@ -22,6 +23,6 @@ import org.openapitools.client.model.ExampleResponse;
  */
 public interface DefaultApi {
 
-  ApiResponse<ExampleResponse> dummy();
+  ApiResponse<Dummy200Response> dummy();
 
 }

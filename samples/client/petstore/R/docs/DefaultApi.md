@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **Dummy**
-> ExampleResponse Dummy()
+> Dummy200Response Dummy()
 
 
 
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](dummy_200_response.md)
 
 ### Authorization
 
@@ -59,5 +59,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | dummy |  -  |
 | **200** | dummy |  -  |
 

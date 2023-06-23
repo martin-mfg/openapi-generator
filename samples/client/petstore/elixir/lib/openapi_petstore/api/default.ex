@@ -19,10 +19,10 @@ defmodule OpenapiPetstore.Api.Default do
 
   ### Returns
 
-  - `{:ok, OpenapiPetstore.Model.ExampleResponse.t}` on success
+  - `{:ok, OpenapiPetstore.Model.Dummy200Response.t}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dummy(Tesla.Env.client, keyword()) :: {:ok, OpenapiPetstore.Model.ExampleResponse.t} | {:error, Tesla.Env.t}
+  @spec dummy(Tesla.Env.client, keyword()) :: {:ok, OpenapiPetstore.Model.ExampleResponse.t} | {:ok, OpenapiPetstore.Model.Dummy200Response.t} | {:error, Tesla.Env.t}
   def dummy(connection, _opts \\ []) do
     request =
       %{}
@@ -33,7 +33,8 @@ defmodule OpenapiPetstore.Api.Default do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, %OpenapiPetstore.Model.ExampleResponse{}}
+      {201, %OpenapiPetstore.Model.ExampleResponse{}},
+      {200, %OpenapiPetstore.Model.Dummy200Response{}}
     ])
   end
 end

@@ -1,5 +1,6 @@
 package org.openapitools.server.api.verticle
 
+import org.openapitools.server.api.model.Dummy200Response
 import org.openapitools.server.api.model.ExampleResponse
 import io.vertx.core.Vertx
 import io.vertx.core.json.JsonObject
@@ -19,7 +20,7 @@ interface DefaultApi  {
     fun init(vertx:Vertx,config:JsonObject)
     /* dummy
      *  */
-    suspend fun dummy(context:OperationRequest):Response<ExampleResponse>
+    suspend fun dummy(context:OperationRequest):Response<Dummy200Response>
     companion object {
         const val address = "DefaultApi-service"
         suspend fun createRouterFactory(vertx: Vertx,path:String): io.vertx.ext.web.api.contract.openapi3.OpenAPI3RouterFactory {

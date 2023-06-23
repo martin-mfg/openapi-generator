@@ -14,6 +14,7 @@
 
 #include <QObject>
 
+#include "OAIDummy_200_response.h"
 #include "OAIExampleResponse.h"
 #include <QString>
 

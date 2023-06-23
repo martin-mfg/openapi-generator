@@ -6,8 +6,13 @@ api/default.service.ts
 configuration.ts
 git_push.sh
 index.ts
+model/dummy200Response.ts
+model/dummy200ResponseOuterProp.ts
+model/dummy200ResponseOuterPropInnerProp.ts
 model/exampleResponse.ts
 model/models.ts
+model/node.ts
+model/otherObject.ts
 package.json
 tsconfig.build.json
 tsconfig.json

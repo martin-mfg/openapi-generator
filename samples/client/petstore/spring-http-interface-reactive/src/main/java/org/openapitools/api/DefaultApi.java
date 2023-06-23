@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,14 +29,15 @@ public interface DefaultApi {
      * GET /example/someMethod
      * dummy
      *
-     * @return dummy (status code 200)
+     * @return dummy (status code 201)
+     *         or dummy (status code 200)
      */
     @HttpExchange(
         method = "GET",
         value = "/example/someMethod",
         accept = "*/*"
     )
-    Mono<ResponseEntity<ExampleResponse>> dummy(
+    Mono<ResponseEntity<Dummy200Response>> dummy(
         
     );
 

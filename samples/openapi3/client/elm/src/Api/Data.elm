@@ -14,9 +14,24 @@
 
 
 module Api.Data exposing
-    ( ExampleResponse
+    ( Dummy200Response
+    , Dummy200ResponseOuterProp
+    , Dummy200ResponseOuterPropInnerProp
+    , ExampleResponse
+    , Node, NodeLeft(..), NodeRight(..)
+    , OtherObject
+    , encodeDummy200Response
+    , encodeDummy200ResponseOuterProp
+    , encodeDummy200ResponseOuterPropInnerProp
     , encodeExampleResponse
+    , encodeNode
+    , encodeOtherObject
+    , dummy200ResponseDecoder
+    , dummy200ResponseOuterPropDecoder
+    , dummy200ResponseOuterPropInnerPropDecoder
     , exampleResponseDecoder
+    , nodeDecoder
+    , otherObjectDecoder
     )
 
 import Api
@@ -26,6 +41,21 @@ import Json.Encode
 
 
 -- MODEL
+
+
+type alias Dummy200Response =
+    { outerProp : Maybe Dummy200ResponseOuterProp
+    }
+
+
+type alias Dummy200ResponseOuterProp =
+    { innerProp : Maybe Dummy200ResponseOuterPropInnerProp
+    }
+
+
+type alias Dummy200ResponseOuterPropInnerProp =
+    { myBool : Maybe Bool
+    }
 
 
 {-| dummy
@@ -40,7 +70,96 @@ type alias ExampleResponse =
     }
 
 
+{-| dummy
+-}
+type alias Node =
+    { left : NodeLeft
+    , right : NodeRight
+    }
+
+
+type NodeLeft = NodeLeft (Maybe Node)
+
+
+unwrapNodeLeft : NodeLeft -> Maybe Node
+unwrapNodeLeft (NodeLeft left) = left
+
+
+type NodeRight = NodeRight (Maybe Node)
+
+
+unwrapNodeRight : NodeRight -> Maybe Node
+unwrapNodeRight (NodeRight right) = right
+
+
+{-| dummy
+-}
+type alias OtherObject =
+    { myOnlyProperty2 : Maybe ExampleResponse
+    }
+
+
 -- ENCODER
+
+
+encodeDummy200Response : Dummy200Response -> Json.Encode.Value
+encodeDummy200Response =
+    encodeObject << encodeDummy200ResponsePairs
+
+
+encodeDummy200ResponseWithTag : ( String, String ) -> Dummy200Response -> Json.Encode.Value
+encodeDummy200ResponseWithTag (tagField, tag) model =
+    encodeObject (encodeDummy200ResponsePairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeDummy200ResponsePairs : Dummy200Response -> List EncodedField
+encodeDummy200ResponsePairs model =
+    let
+        pairs =
+            [ maybeEncode "outerProp" encodeDummy200ResponseOuterProp model.outerProp
+            ]
+    in
+    pairs
+
+
+encodeDummy200ResponseOuterProp : Dummy200ResponseOuterProp -> Json.Encode.Value
+encodeDummy200ResponseOuterProp =
+    encodeObject << encodeDummy200ResponseOuterPropPairs
+
+
+encodeDummy200ResponseOuterPropWithTag : ( String, String ) -> Dummy200ResponseOuterProp -> Json.Encode.Value
+encodeDummy200ResponseOuterPropWithTag (tagField, tag) model =
+    encodeObject (encodeDummy200ResponseOuterPropPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeDummy200ResponseOuterPropPairs : Dummy200ResponseOuterProp -> List EncodedField
+encodeDummy200ResponseOuterPropPairs model =
+    let
+        pairs =
+            [ maybeEncode "innerProp" encodeDummy200ResponseOuterPropInnerProp model.innerProp
+            ]
+    in
+    pairs
+
+
+encodeDummy200ResponseOuterPropInnerProp : Dummy200ResponseOuterPropInnerProp -> Json.Encode.Value
+encodeDummy200ResponseOuterPropInnerProp =
+    encodeObject << encodeDummy200ResponseOuterPropInnerPropPairs
+
+
+encodeDummy200ResponseOuterPropInnerPropWithTag : ( String, String ) -> Dummy200ResponseOuterPropInnerProp -> Json.Encode.Value
+encodeDummy200ResponseOuterPropInnerPropWithTag (tagField, tag) model =
+    encodeObject (encodeDummy200ResponseOuterPropInnerPropPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeDummy200ResponseOuterPropInnerPropPairs : Dummy200ResponseOuterPropInnerProp -> List EncodedField
+encodeDummy200ResponseOuterPropInnerPropPairs model =
+    let
+        pairs =
+            [ maybeEncode "myBool" Json.Encode.bool model.myBool
+            ]
+    in
+    pairs
 
 
 encodeExampleResponse : ExampleResponse -> Json.Encode.Value
@@ -68,7 +187,66 @@ encodeExampleResponsePairs model =
     pairs
 
 
+encodeNode : Node -> Json.Encode.Value
+encodeNode =
+    encodeObject << encodeNodePairs
+
+
+encodeNodeWithTag : ( String, String ) -> Node -> Json.Encode.Value
+encodeNodeWithTag (tagField, tag) model =
+    encodeObject (encodeNodePairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeNodePairs : Node -> List EncodedField
+encodeNodePairs model =
+    let
+        pairs =
+            [ maybeEncode "left" encodeNode <| unwrapNodeLeft model.left
+            , maybeEncode "right" encodeNode <| unwrapNodeRight model.right
+            ]
+    in
+    pairs
+
+
+encodeOtherObject : OtherObject -> Json.Encode.Value
+encodeOtherObject =
+    encodeObject << encodeOtherObjectPairs
+
+
+encodeOtherObjectWithTag : ( String, String ) -> OtherObject -> Json.Encode.Value
+encodeOtherObjectWithTag (tagField, tag) model =
+    encodeObject (encodeOtherObjectPairs model ++ [ encode tagField Json.Encode.string tag ])
+
+
+encodeOtherObjectPairs : OtherObject -> List EncodedField
+encodeOtherObjectPairs model =
+    let
+        pairs =
+            [ maybeEncode "myOnlyProperty2" encodeExampleResponse model.myOnlyProperty2
+            ]
+    in
+    pairs
+
+
 -- DECODER
+
+
+dummy200ResponseDecoder : Json.Decode.Decoder Dummy200Response
+dummy200ResponseDecoder =
+    Json.Decode.succeed Dummy200Response
+        |> maybeDecode "outerProp" dummy200ResponseOuterPropDecoder Nothing
+
+
+dummy200ResponseOuterPropDecoder : Json.Decode.Decoder Dummy200ResponseOuterProp
+dummy200ResponseOuterPropDecoder =
+    Json.Decode.succeed Dummy200ResponseOuterProp
+        |> maybeDecode "innerProp" dummy200ResponseOuterPropInnerPropDecoder Nothing
+
+
+dummy200ResponseOuterPropInnerPropDecoder : Json.Decode.Decoder Dummy200ResponseOuterPropInnerProp
+dummy200ResponseOuterPropInnerPropDecoder =
+    Json.Decode.succeed Dummy200ResponseOuterPropInnerProp
+        |> maybeDecode "myBool" Json.Decode.bool Nothing
 
 
 exampleResponseDecoder : Json.Decode.Decoder ExampleResponse
@@ -80,6 +258,19 @@ exampleResponseDecoder =
         |> maybeDecode "nullString" Json.Decode.string (Just "null")
         |> maybeDecode "aBool" Json.Decode.bool (Just False)
         |> maybeDecode "zero" Json.Decode.int (Just 0)
+
+
+nodeDecoder : Json.Decode.Decoder Node
+nodeDecoder =
+    Json.Decode.succeed Node
+        |> maybeDecodeLazy NodeLeft "left" (Json.Decode.lazy (\_ -> nodeDecoder)) Nothing
+        |> maybeDecodeLazy NodeRight "right" (Json.Decode.lazy (\_ -> nodeDecoder)) Nothing
+
+
+otherObjectDecoder : Json.Decode.Decoder OtherObject
+otherObjectDecoder =
+    Json.Decode.succeed OtherObject
+        |> maybeDecode "myOnlyProperty2" exampleResponseDecoder Nothing
 
 
 

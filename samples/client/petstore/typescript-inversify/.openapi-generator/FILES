@@ -5,5 +5,10 @@ HttpResponse.ts
 IAPIConfiguration.ts
 IHttpClient.ts
 api/default.service.ts
+model/dummy200Response.ts
+model/dummy200ResponseOuterProp.ts
+model/dummy200ResponseOuterPropInnerProp.ts
 model/exampleResponse.ts
+model/node.ts
+model/otherObject.ts
 variables.ts

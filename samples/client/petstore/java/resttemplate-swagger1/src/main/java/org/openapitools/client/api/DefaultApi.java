@@ -2,6 +2,7 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiClient;
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 import java.util.Collections;
@@ -48,22 +49,24 @@ public class DefaultApi {
     /**
      * 
      * dummy
+     * <p><b>201</b> - dummy
      * <p><b>200</b> - dummy
-     * @return ExampleResponse
+     * @return Dummy200Response
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ExampleResponse dummy() throws RestClientException {
+    public Dummy200Response dummy() throws RestClientException {
         return dummyWithHttpInfo().getBody();
     }
 
     /**
      * 
      * dummy
+     * <p><b>201</b> - dummy
      * <p><b>200</b> - dummy
-     * @return ResponseEntity&lt;ExampleResponse&gt;
+     * @return ResponseEntity&lt;Dummy200Response&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ExampleResponse> dummyWithHttpInfo() throws RestClientException {
+    public ResponseEntity<Dummy200Response> dummyWithHttpInfo() throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -81,7 +84,7 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] {  };
 
-        ParameterizedTypeReference<ExampleResponse> localReturnType = new ParameterizedTypeReference<ExampleResponse>() {};
+        ParameterizedTypeReference<Dummy200Response> localReturnType = new ParameterizedTypeReference<Dummy200Response>() {};
         return apiClient.invokeAPI("/example/someMethod", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

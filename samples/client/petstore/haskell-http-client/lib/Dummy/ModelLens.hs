@@ -36,6 +36,33 @@ import Dummy.Model
 import Dummy.Core
 
 
+-- * Dummy200Response
+
+-- | 'dummy200ResponseOuterProp' Lens
+dummy200ResponseOuterPropL :: Lens_' Dummy200Response (Maybe Dummy200ResponseOuterProp)
+dummy200ResponseOuterPropL f Dummy200Response{..} = (\dummy200ResponseOuterProp -> Dummy200Response { dummy200ResponseOuterProp, ..} ) <$> f dummy200ResponseOuterProp
+{-# INLINE dummy200ResponseOuterPropL #-}
+
+
+
+-- * Dummy200ResponseOuterProp
+
+-- | 'dummy200ResponseOuterPropInnerProp' Lens
+dummy200ResponseOuterPropInnerPropL :: Lens_' Dummy200ResponseOuterProp (Maybe Dummy200ResponseOuterPropInnerProp)
+dummy200ResponseOuterPropInnerPropL f Dummy200ResponseOuterProp{..} = (\dummy200ResponseOuterPropInnerProp -> Dummy200ResponseOuterProp { dummy200ResponseOuterPropInnerProp, ..} ) <$> f dummy200ResponseOuterPropInnerProp
+{-# INLINE dummy200ResponseOuterPropInnerPropL #-}
+
+
+
+-- * Dummy200ResponseOuterPropInnerProp
+
+-- | 'dummy200ResponseOuterPropInnerPropMyBool' Lens
+dummy200ResponseOuterPropInnerPropMyBoolL :: Lens_' Dummy200ResponseOuterPropInnerProp (Maybe Bool)
+dummy200ResponseOuterPropInnerPropMyBoolL f Dummy200ResponseOuterPropInnerProp{..} = (\dummy200ResponseOuterPropInnerPropMyBool -> Dummy200ResponseOuterPropInnerProp { dummy200ResponseOuterPropInnerPropMyBool, ..} ) <$> f dummy200ResponseOuterPropInnerPropMyBool
+{-# INLINE dummy200ResponseOuterPropInnerPropMyBoolL #-}
+
+
+
 -- * ExampleResponse
 
 -- | 'exampleResponseEmptyString' Lens
@@ -67,5 +94,28 @@ exampleResponseABoolL f ExampleResponse{..} = (\exampleResponseABool -> ExampleR
 exampleResponseZeroL :: Lens_' ExampleResponse (Maybe Int)
 exampleResponseZeroL f ExampleResponse{..} = (\exampleResponseZero -> ExampleResponse { exampleResponseZero, ..} ) <$> f exampleResponseZero
 {-# INLINE exampleResponseZeroL #-}
+
+
+
+-- * Node
+
+-- | 'nodeLeft' Lens
+nodeLeftL :: Lens_' Node (Maybe Node)
+nodeLeftL f Node{..} = (\nodeLeft -> Node { nodeLeft, ..} ) <$> f nodeLeft
+{-# INLINE nodeLeftL #-}
+
+-- | 'nodeRight' Lens
+nodeRightL :: Lens_' Node (Maybe Node)
+nodeRightL f Node{..} = (\nodeRight -> Node { nodeRight, ..} ) <$> f nodeRight
+{-# INLINE nodeRightL #-}
+
+
+
+-- * OtherObject
+
+-- | 'otherObjectMyOnlyProperty2' Lens
+otherObjectMyOnlyProperty2L :: Lens_' OtherObject (Maybe ExampleResponse)
+otherObjectMyOnlyProperty2L f OtherObject{..} = (\otherObjectMyOnlyProperty2 -> OtherObject { otherObjectMyOnlyProperty2, ..} ) <$> f otherObjectMyOnlyProperty2
+{-# INLINE otherObjectMyOnlyProperty2L #-}
 
 

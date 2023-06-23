@@ -20,6 +20,7 @@ import json
 
 from typing import Optional
 from pydantic import BaseModel, Field
+from openapi_client.models.example_response import ExampleResponse
 
 class OtherObject(BaseModel):
     """

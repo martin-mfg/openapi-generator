@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ```c
 // dummy
 //
-example_response_t* DefaultAPI_dummy(apiClient_t *apiClient);
+dummy_200_response_t* DefaultAPI_dummy(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -21,7 +21,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[example_response_t](example_response.md) *
+[dummy_200_response_t](dummy_200_response.md) *
 
 
 ### Authorization

@@ -3,4 +3,9 @@ README.md
 composer.json
 src/App/ApiClient.php
 src/App/ApiClientFactory.php
+src/App/DTO/Dummy200Response.php
+src/App/DTO/Dummy200ResponseOuterProp.php
+src/App/DTO/Dummy200ResponseOuterPropInnerProp.php
 src/App/DTO/ExampleResponse.php
+src/App/DTO/Node.php
+src/App/DTO/OtherObject.php

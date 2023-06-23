@@ -16,7 +16,12 @@ export(ApiResponse)
 export(ApiException)
 
 # Models
+export(Dummy200Response)
+export(Dummy200ResponseOuterProp)
+export(Dummy200ResponseOuterPropInnerProp)
 export(ExampleResponse)
+export(Node)
+export(OtherObject)
 
 # APIs
 export(DefaultApi)

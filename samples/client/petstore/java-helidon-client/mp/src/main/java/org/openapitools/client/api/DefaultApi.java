@@ -25,6 +25,7 @@ import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 /**
@@ -40,5 +41,5 @@ public interface DefaultApi  {
     @GET
     
     @Produces({ "*/*" })
-    ExampleResponse dummy() throws ApiException, ProcessingException;
+    Dummy200Response dummy() throws ApiException, ProcessingException;
 }

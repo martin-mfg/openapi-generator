@@ -35,13 +35,13 @@ impl<C: hyper::client::connect::Connect> DefaultApiClient<C>
 }
 
 pub trait DefaultApi {
-    fn dummy(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::ExampleResponse, Error>>>>;
+    fn dummy(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::Dummy200Response, Error>>>>;
 }
 
 impl<C: hyper::client::connect::Connect>DefaultApi for DefaultApiClient<C>
     where C: Clone + std::marker::Send + Sync {
     #[allow(unused_mut)]
-    fn dummy(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::ExampleResponse, Error>>>> {
+    fn dummy(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::Dummy200Response, Error>>>> {
         let mut req = __internal_request::Request::new(hyper::Method::GET, "/example/someMethod".to_string())
         ;
 

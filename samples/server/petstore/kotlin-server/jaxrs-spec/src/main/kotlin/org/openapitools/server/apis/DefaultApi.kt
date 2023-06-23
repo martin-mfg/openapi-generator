@@ -1,5 +1,6 @@
 package org.openapitools.server.apis;
 
+import org.openapitools.server.models.Dummy200Response
 import org.openapitools.server.models.ExampleResponse
 
 import javax.ws.rs.*

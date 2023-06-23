@@ -236,7 +236,12 @@ use WWW::OpenAPIClient::DefaultApi;
 
 To load the models:
 ```perl
+use WWW::OpenAPIClient::Object::Dummy200Response;
+use WWW::OpenAPIClient::Object::Dummy200ResponseOuterProp;
+use WWW::OpenAPIClient::Object::Dummy200ResponseOuterPropInnerProp;
 use WWW::OpenAPIClient::Object::ExampleResponse;
+use WWW::OpenAPIClient::Object::Node;
+use WWW::OpenAPIClient::Object::OtherObject;
 
 ````
 
@@ -251,7 +256,12 @@ use warnings;
 use WWW::OpenAPIClient::DefaultApi;
 
 # load the models
+use WWW::OpenAPIClient::Object::Dummy200Response;
+use WWW::OpenAPIClient::Object::Dummy200ResponseOuterProp;
+use WWW::OpenAPIClient::Object::Dummy200ResponseOuterPropInnerProp;
 use WWW::OpenAPIClient::Object::ExampleResponse;
+use WWW::OpenAPIClient::Object::Node;
+use WWW::OpenAPIClient::Object::OtherObject;
 
 # for displaying the API response data
 use Data::Dumper;
@@ -281,7 +291,12 @@ Class | Method | HTTP request | Description
 
 
 # DOCUMENTATION FOR MODELS
+ - [WWW::OpenAPIClient::Object::Dummy200Response](docs/Dummy200Response.md)
+ - [WWW::OpenAPIClient::Object::Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
+ - [WWW::OpenAPIClient::Object::Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [WWW::OpenAPIClient::Object::ExampleResponse](docs/ExampleResponse.md)
+ - [WWW::OpenAPIClient::Object::Node](docs/Node.md)
+ - [WWW::OpenAPIClient::Object::OtherObject](docs/OtherObject.md)
 
 
 # DOCUMENTATION FOR AUTHORIZATION

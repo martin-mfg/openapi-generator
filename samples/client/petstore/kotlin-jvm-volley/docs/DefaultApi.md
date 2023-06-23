@@ -22,7 +22,7 @@ dummy
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(DefaultApi::class.java)
 
-val result : ExampleResponse = webService.dummy()
+val result : Dummy200Response = webService.dummy()
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 

@@ -20,6 +20,7 @@ import { IAPIConfiguration } from '../IAPIConfiguration';
 import { Headers } from '../Headers';
 import HttpResponse from '../HttpResponse';
 
+import { Dummy200Response } from '../model/dummy200Response';
 import { ExampleResponse } from '../model/exampleResponse';
 
 import { COLLECTION_FORMATS }  from '../variables';
@@ -41,15 +42,15 @@ export class DefaultService {
      * dummy
      
      */
-    public dummy(observe?: 'body', headers?: Headers): Observable<ExampleResponse>;
-    public dummy(observe?: 'response', headers?: Headers): Observable<HttpResponse<ExampleResponse>>;
+    public dummy(observe?: 'body', headers?: Headers): Observable<Dummy200Response>;
+    public dummy(observe?: 'response', headers?: Headers): Observable<HttpResponse<Dummy200Response>>;
     public dummy(observe: any = 'body', headers: Headers = {}): Observable<any> {
         headers['Accept'] = '*/*';
 
-        const response: Observable<HttpResponse<ExampleResponse>> = this.httpClient.get(`${this.basePath}/example/someMethod`, headers);
+        const response: Observable<HttpResponse<Dummy200Response>> = this.httpClient.get(`${this.basePath}/example/someMethod`, headers);
         if (observe === 'body') {
                return response.pipe(
-                   map((httpResponse: HttpResponse) => <ExampleResponse>(httpResponse.response))
+                   map((httpResponse: HttpResponse) => <Dummy200Response>(httpResponse.response))
                );
         }
         return response;

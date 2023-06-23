@@ -7,6 +7,7 @@ import okhttp3.RequestBody
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+import org.openapitools.client.models.Dummy200Response
 import org.openapitools.client.models.ExampleResponse
 
 interface DefaultApi {
@@ -14,11 +15,12 @@ interface DefaultApi {
      * 
      * dummy
      * Responses:
+     *  - 201: dummy
      *  - 200: dummy
      *
-     * @return [Call]<[ExampleResponse]>
+     * @return [Call]<[Dummy200Response]>
      */
     @GET("example/someMethod")
-    fun dummy(): Call<ExampleResponse>
+    fun dummy(): Call<Dummy200Response>
 
 }

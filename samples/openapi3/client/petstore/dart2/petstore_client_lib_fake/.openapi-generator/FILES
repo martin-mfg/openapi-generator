@@ -3,7 +3,12 @@
 README.md
 analysis_options.yaml
 doc/DefaultApi.md
+doc/Dummy200Response.md
+doc/Dummy200ResponseOuterProp.md
+doc/Dummy200ResponseOuterPropInnerProp.md
 doc/ExampleResponse.md
+doc/Node.md
+doc/OtherObject.md
 git_push.sh
 lib/api.dart
 lib/api/default_api.dart
@@ -15,5 +20,10 @@ lib/auth/authentication.dart
 lib/auth/http_basic_auth.dart
 lib/auth/http_bearer_auth.dart
 lib/auth/oauth.dart
+lib/model/dummy200_response.dart
+lib/model/dummy200_response_outer_prop.dart
+lib/model/dummy200_response_outer_prop_inner_prop.dart
 lib/model/example_response.dart
+lib/model/node.dart
+lib/model/other_object.dart
 pubspec.yaml

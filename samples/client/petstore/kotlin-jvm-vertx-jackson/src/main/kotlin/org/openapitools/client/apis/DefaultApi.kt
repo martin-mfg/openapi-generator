@@ -17,6 +17,7 @@ package org.openapitools.client.apis
 
 import java.io.IOException
 
+import org.openapitools.client.models.Dummy200Response
 import org.openapitools.client.models.ExampleResponse
 
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -38,7 +39,7 @@ class DefaultApi(basePath: kotlin.String = ApiClient.defaultBasePath, accessToke
     /**
      * 
      * dummy
-     * @return ExampleResponse
+     * @return Dummy200Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -47,10 +48,10 @@ class DefaultApi(basePath: kotlin.String = ApiClient.defaultBasePath, accessToke
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dummy() : Future<ExampleResponse> {
+    fun dummy() : Future<Dummy200Response> {
         return dummyWithHttpInfo().map { localVarResponse ->
             when (localVarResponse.responseType) {
-                ResponseType.Success -> (localVarResponse as Success<*>).data as ExampleResponse
+                ResponseType.Success -> (localVarResponse as Success<*>).data as Dummy200Response
                 ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
                 ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
                 ResponseType.ClientError -> {
@@ -68,13 +69,13 @@ class DefaultApi(basePath: kotlin.String = ApiClient.defaultBasePath, accessToke
     /**
      * 
      * dummy
-     * @return ApiResponse<ExampleResponse?>
+     * @return ApiResponse<Dummy200Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dummyWithHttpInfo() : Future<ApiResponse<ExampleResponse?>> {
+    fun dummyWithHttpInfo() : Future<ApiResponse<Dummy200Response?>> {
         val vertxClient = WebClient.create(vertx)
         val request = vertxClient.requestAbs(HttpMethod.GET, UriTemplate.of("$basePath/example/someMethod"))
 
@@ -89,7 +90,7 @@ class DefaultApi(basePath: kotlin.String = ApiClient.defaultBasePath, accessToke
         return request
             .send()
             .map {
-                val apiResponse: ApiResponse<ExampleResponse?> = handleResponse(it)
+                val apiResponse: ApiResponse<Dummy200Response?> = handleResponse(it)
                 apiResponse
             }
     }

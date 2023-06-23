@@ -15,6 +15,7 @@
 
 package org.openapitools.client.apis
 
+import org.openapitools.client.models.Dummy200Response
 import org.openapitools.client.models.ExampleResponse
 
 import org.openapitools.client.infrastructure.*
@@ -36,10 +37,10 @@ import java.text.DateFormat
         /**
         * 
         * dummy
-         * @return ExampleResponse
+         * @return Dummy200Response
         */
             @Suppress("UNCHECKED_CAST")
-        open suspend fun dummy(): HttpResponse<ExampleResponse> {
+        open suspend fun dummy(): HttpResponse<Dummy200Response> {
 
             val localVariableAuthNames = listOf<String>()
 

@@ -17,6 +17,7 @@
 #include "PFXServerConfiguration.h"
 #include "PFXOauth.h"
 
+#include "PFXDummy_200_response.h"
 #include "PFXExampleResponse.h"
 #include <QString>
 
@@ -86,11 +87,11 @@ private:
 
 signals:
 
-    void dummySignal(PFXExampleResponse summary);
+    void dummySignal(PFXDummy_200_response summary);
 
-    void dummySignalFull(PFXHttpRequestWorker *worker, PFXExampleResponse summary);
+    void dummySignalFull(PFXHttpRequestWorker *worker, PFXDummy_200_response summary);
 
-    void dummySignalE(PFXExampleResponse summary, QNetworkReply::NetworkError error_type, QString error_str);
+    void dummySignalE(PFXDummy_200_response summary, QNetworkReply::NetworkError error_type, QString error_str);
 
     void dummySignalEFull(PFXHttpRequestWorker *worker, QNetworkReply::NetworkError error_type, QString error_str);
 

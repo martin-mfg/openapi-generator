@@ -36,6 +36,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraints as Assert;
 use OpenAPI\Server\Api\DefaultApiInterface;
+use OpenAPI\Server\Model\Dummy200Response;
 use OpenAPI\Server\Model\ExampleResponse;
 
 /**
@@ -90,6 +91,9 @@ class DefaultController extends Controller
 
             // Find a more specific message, if available
             switch ($responseCode) {
+                case 201:
+                    $message = 'dummy';
+                    break;
                 case 200:
                     $message = 'dummy';
                     break;

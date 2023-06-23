@@ -61,7 +61,7 @@ void OAIDefaultApiRequest::dummyRequest(){
 
 
 
-void OAIDefaultApiRequest::dummyResponse(const OAIExampleResponse& res){
+void OAIDefaultApiRequest::dummyResponse(const OAIDummy_200_response& res){
     setSocketResponseHeaders();
     QJsonDocument resDoc(::OpenAPI::toJsonValue(res).toObject());
     socket->writeJson(resDoc);
@@ -71,7 +71,7 @@ void OAIDefaultApiRequest::dummyResponse(const OAIExampleResponse& res){
 }
 
 
-void OAIDefaultApiRequest::dummyError(const OAIExampleResponse& res, QNetworkReply::NetworkError error_type, QString& error_str){
+void OAIDefaultApiRequest::dummyError(const OAIDummy_200_response& res, QNetworkReply::NetworkError error_type, QString& error_str){
     Q_UNUSED(error_type); // TODO: Remap error_type to QHttpEngine::Socket errors
     setSocketResponseHeaders();
     Q_UNUSED(error_str);  // response will be used instead of error string

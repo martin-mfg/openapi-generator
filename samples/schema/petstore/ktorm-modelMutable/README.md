@@ -20,5 +20,10 @@ This runs all tests and packages the library.
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [org.openapitools.database.models.Dummy200Response](docs/Dummy200Response.md)
+ - [org.openapitools.database.models.Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
+ - [org.openapitools.database.models.Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [org.openapitools.database.models.ExampleResponse](docs/ExampleResponse.md)
+ - [org.openapitools.database.models.Node](docs/Node.md)
+ - [org.openapitools.database.models.OtherObject](docs/OtherObject.md)
 

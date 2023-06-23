@@ -24,6 +24,11 @@ build = {
 	type = "builtin",
 	modules = {
 		["petstore.api.default_api"] = "petstore/api/default_api.lua";
+		["petstore.model.dummy_200_response"] = "petstore/model/dummy_200_response.lua";
+		["petstore.model.dummy_200_response_outer_prop"] = "petstore/model/dummy_200_response_outer_prop.lua";
+		["petstore.model.dummy_200_response_outer_prop_inner_prop"] = "petstore/model/dummy_200_response_outer_prop_inner_prop.lua";
 		["petstore.model.example_response"] = "petstore/model/example_response.lua";
+		["petstore.model.node"] = "petstore/model/node.lua";
+		["petstore.model.other_object"] = "petstore/model/other_object.lua";
 	}
 }

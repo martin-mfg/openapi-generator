@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 ## dummy
 
-> CompletableFuture<ExampleResponse> dummy()
+> CompletableFuture<Dummy200Response> dummy()
 
 
 
@@ -35,7 +35,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<ExampleResponse> result = apiInstance.dummy();
+            CompletableFuture<Dummy200Response> result = apiInstance.dummy();
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#dummy");
@@ -54,7 +54,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<[**ExampleResponse**](ExampleResponse.md)>
+CompletableFuture<[**Dummy200Response**](Dummy200Response.md)>
 
 
 ### Authorization
@@ -69,11 +69,12 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | dummy |  -  |
 | **200** | dummy |  -  |
 
 ## dummyWithHttpInfo
 
-> CompletableFuture<ApiResponse<ExampleResponse>> dummy dummyWithHttpInfo()
+> CompletableFuture<ApiResponse<Dummy200Response>> dummy dummyWithHttpInfo()
 
 
 
@@ -98,7 +99,7 @@ public class Example {
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
-            CompletableFuture<ApiResponse<ExampleResponse>> response = apiInstance.dummyWithHttpInfo();
+            CompletableFuture<ApiResponse<Dummy200Response>> response = apiInstance.dummyWithHttpInfo();
             System.out.println("Status code: " + response.get().getStatusCode());
             System.out.println("Response headers: " + response.get().getHeaders());
             System.out.println("Response body: " + response.get().getData());
@@ -126,7 +127,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-CompletableFuture<ApiResponse<[**ExampleResponse**](ExampleResponse.md)>>
+CompletableFuture<ApiResponse<[**Dummy200Response**](Dummy200Response.md)>>
 
 
 ### Authorization
@@ -141,5 +142,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | dummy |  -  |
 | **200** | dummy |  -  |
 

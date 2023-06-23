@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## dummy
 
-> dummy(): ApiRequest[ExampleResponse]
+> dummy(): ApiRequest[Dummy200Response]
 
 
 
@@ -21,6 +21,7 @@ dummy
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -66,7 +67,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**ExampleResponse**](ExampleResponse.md)]
+ApiRequest[[**Dummy200Response**](Dummy200Response.md)]
 
 
 ### Authorization
@@ -81,5 +82,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | dummy |  -  |
 | **200** | dummy |  -  |
 

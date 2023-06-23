@@ -19,6 +19,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
+import org.openapitools.client.models.Dummy200Response
 import org.openapitools.client.models.ExampleResponse
 
 import com.google.gson.annotations.SerializedName
@@ -48,7 +49,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     /**
      * 
      * dummy
-     * @return ExampleResponse
+     * @return Dummy200Response
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -57,11 +58,11 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dummy() : ExampleResponse {
+    fun dummy() : Dummy200Response {
         val localVarResponse = dummyWithHttpInfo()
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as ExampleResponse
+            ResponseType.Success -> (localVarResponse as Success<*>).data as Dummy200Response
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -78,16 +79,16 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     /**
      * 
      * dummy
-     * @return ApiResponse<ExampleResponse?>
+     * @return ApiResponse<Dummy200Response?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dummyWithHttpInfo() : ApiResponse<ExampleResponse?> {
+    fun dummyWithHttpInfo() : ApiResponse<Dummy200Response?> {
         val localVariableConfig = dummyRequestConfig()
 
-        return request<Unit, ExampleResponse>(
+        return request<Unit, Dummy200Response>(
             localVariableConfig
         )
     }

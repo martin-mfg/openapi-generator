@@ -20,9 +20,10 @@ import { ExampleResponse } from 'model/ExampleResponse';
 /**
  * dummy
  * @param fe Callback interface that runs the fetch query
- * @response 200 [ExampleResponse] dummy
+ * @response 201 [ExampleResponse] dummy
+ * @response 200 [~Object+] dummy
  */
-export public async function DefaultApi__dummy(fe : ApiExecuterI, ) : Promise<ExampleResponse, Object> {
+export public async function DefaultApi__dummy(fe : ApiExecuterI, ) : Promise<~Object+, Object> {
     checkRequiredParams('dummy', {  });
 
     const _pathParams = { };
@@ -30,7 +31,7 @@ export public async function DefaultApi__dummy(fe : ApiExecuterI, ) : Promise<Ex
     const _headerParams = { };
     const _body = undefined;
 
-    return await fe.<ExampleResponse, undefined>exec(
+    return await fe.<~Object+, undefined>exec(
         'GET', '' + '/example/someMethod',
         _pathParams, _queryParams, _headerParams,
         undefined,

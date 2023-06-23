@@ -1,6 +1,7 @@
 #import "SWGDefaultApi.h"
 #import "SWGQueryParamCollection.h"
 #import "SWGApiClient.h"
+#import "SWGDummy200Response.h"
 #import "SWGExampleResponse.h"
 
 
@@ -52,10 +53,10 @@ NSInteger kSWGDefaultApiMissingParamErrorCode = 234513;
 ///
 /// 
 /// dummy
-///  @returns SWGExampleResponse*
+///  @returns SWGDummy200Response*
 ///
 -(NSURLSessionTask*) dummyWithCompletionHandler: 
-    (void (^)(SWGExampleResponse* output, NSError* error)) handler {
+    (void (^)(SWGDummy200Response* output, NSError* error)) handler {
     NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/example/someMethod"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
@@ -93,10 +94,10 @@ NSInteger kSWGDefaultApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"SWGExampleResponse*"
+                              responseType: @"SWGDummy200Response*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((SWGExampleResponse*)data, error);
+                                    handler((SWGDummy200Response*)data, error);
                                 }
                             }];
 }

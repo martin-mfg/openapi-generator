@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 import java.lang.reflect.Type;
@@ -124,16 +125,16 @@ public class DefaultApi {
     }
 
 
-    private ApiResponse<ExampleResponse> dummyWithHttpInfo() throws ApiException {
+    private ApiResponse<Dummy200Response> dummyWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = dummyValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<ExampleResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<Dummy200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
-    private okhttp3.Call dummyAsync(final ApiCallback<ExampleResponse> _callback) throws ApiException {
+    private okhttp3.Call dummyAsync(final ApiCallback<Dummy200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dummyValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<ExampleResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<Dummy200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -151,6 +152,7 @@ public class DefaultApi {
          * @http.response.details
          <table summary="Response Details" border="1">
             <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
             <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
          </table>
          */
@@ -160,30 +162,32 @@ public class DefaultApi {
 
         /**
          * Execute dummy request
-         * @return ExampleResponse
+         * @return Dummy200Response
          * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
          * @http.response.details
          <table summary="Response Details" border="1">
             <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
             <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
          </table>
          */
-        public ExampleResponse execute() throws ApiException {
-            ApiResponse<ExampleResponse> localVarResp = dummyWithHttpInfo();
+        public Dummy200Response execute() throws ApiException {
+            ApiResponse<Dummy200Response> localVarResp = dummyWithHttpInfo();
             return localVarResp.getData();
         }
 
         /**
          * Execute dummy request with HTTP info returned
-         * @return ApiResponse&lt;ExampleResponse&gt;
+         * @return ApiResponse&lt;Dummy200Response&gt;
          * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
          * @http.response.details
          <table summary="Response Details" border="1">
             <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
             <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
          </table>
          */
-        public ApiResponse<ExampleResponse> executeWithHttpInfo() throws ApiException {
+        public ApiResponse<Dummy200Response> executeWithHttpInfo() throws ApiException {
             return dummyWithHttpInfo();
         }
 
@@ -195,10 +199,11 @@ public class DefaultApi {
          * @http.response.details
          <table summary="Response Details" border="1">
             <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
             <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
          </table>
          */
-        public okhttp3.Call executeAsync(final ApiCallback<ExampleResponse> _callback) throws ApiException {
+        public okhttp3.Call executeAsync(final ApiCallback<Dummy200Response> _callback) throws ApiException {
             return dummyAsync(_callback);
         }
     }
@@ -210,6 +215,7 @@ public class DefaultApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> dummy </td><td>  -  </td></tr>
         <tr><td> 200 </td><td> dummy </td><td>  -  </td></tr>
      </table>
      */

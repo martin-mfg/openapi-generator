@@ -1,5 +1,6 @@
 package com.puppies.store.apis;
 
+import apimodels.Dummy200Response;
 import apimodels.ExampleResponse;
 
 import com.google.inject.Inject;
@@ -27,7 +28,7 @@ public abstract class DefaultApiControllerImpInterface {
     private ObjectMapper mapper = new ObjectMapper();
 
     public Result dummyHttp(Http.Request request) throws Exception {
-        ExampleResponse obj = dummy(request);
+        Dummy200Response obj = dummy(request);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
             OpenAPIUtils.validate(obj);
@@ -39,6 +40,6 @@ public abstract class DefaultApiControllerImpInterface {
 
     }
 
-    public abstract ExampleResponse dummy(Http.Request request) throws Exception;
+    public abstract Dummy200Response dummy(Http.Request request) throws Exception;
 
 }

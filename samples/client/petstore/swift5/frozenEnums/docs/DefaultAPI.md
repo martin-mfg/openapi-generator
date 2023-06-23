@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **dummy**
 ```swift
-    open class func dummy(completion: @escaping (_ data: ExampleResponse?, _ error: Error?) -> Void)
+    open class func dummy(completion: @escaping (_ data: Dummy200Response?, _ error: Error?) -> Void)
 ```
 
 
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 

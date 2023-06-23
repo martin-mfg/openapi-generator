@@ -18,6 +18,7 @@ import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.exceptions.HttpStatusException;
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 import javax.annotation.Generated;
 import java.util.ArrayList;
@@ -42,18 +43,20 @@ public class DefaultController {
     /**
      * dummy
      *
-     * @return ExampleResponse
+     * @return Dummy200Response
      */
     @Operation(
         operationId = "dummy",
         responses = {
+            @ApiResponse(responseCode = "201", description = "dummy", content = {
+            }),
             @ApiResponse(responseCode = "200", description = "dummy", content = {
             })
         }
     )
     @Get(uri="/example/someMethod")
     @Produces(value = {})
-    public Mono<ExampleResponse> dummy() {
+    public Mono<Dummy200Response> dummy() {
         // TODO implement dummy();
         return Mono.error(new HttpStatusException(HttpStatus.NOT_IMPLEMENTED, null));
     }

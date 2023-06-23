@@ -10,6 +10,7 @@ import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import okhttp3.MultipartBody;
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 import java.util.ArrayList;
@@ -22,10 +23,10 @@ public interface DefaultApi {
   /**
    * 
    * dummy
-   * @return Observable&lt;ExampleResponse&gt;
+   * @return Observable&lt;Dummy200Response&gt;
    */
   @GET("example/someMethod")
-  Observable<ExampleResponse> dummy();
+  Observable<Dummy200Response> dummy();
     
 
 }

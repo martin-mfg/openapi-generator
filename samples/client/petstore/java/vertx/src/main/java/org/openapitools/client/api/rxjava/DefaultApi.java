@@ -1,5 +1,6 @@
 package org.openapitools.client.api.rxjava;
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 import org.openapitools.client.ApiClient;
 
@@ -27,7 +28,7 @@ public class DefaultApi {
     * dummy
     * @param resultHandler Asynchronous result handler
     */
-    public void dummy(Handler<AsyncResult<ExampleResponse>> resultHandler) {
+    public void dummy(Handler<AsyncResult<Dummy200Response>> resultHandler) {
         delegate.dummy(resultHandler);
     }
 
@@ -37,7 +38,7 @@ public class DefaultApi {
     * @param authInfo call specific auth overrides
     * @param resultHandler Asynchronous result handler
     */
-    public void dummy(ApiClient.AuthInfo authInfo, Handler<AsyncResult<ExampleResponse>> resultHandler) {
+    public void dummy(ApiClient.AuthInfo authInfo, Handler<AsyncResult<Dummy200Response>> resultHandler) {
         delegate.dummy(authInfo, resultHandler);
     }
 
@@ -46,7 +47,7 @@ public class DefaultApi {
     * dummy
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<ExampleResponse> rxDummy() {
+    public Single<Dummy200Response> rxDummy() {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.dummy(fut)
         ));
@@ -58,7 +59,7 @@ public class DefaultApi {
     * @param authInfo call specific auth overrides
     * @return Asynchronous result handler (RxJava Single)
     */
-    public Single<ExampleResponse> rxDummy(ApiClient.AuthInfo authInfo) {
+    public Single<Dummy200Response> rxDummy(ApiClient.AuthInfo authInfo) {
         return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut ->
             delegate.dummy(authInfo, fut)
         ));

@@ -8,8 +8,8 @@ Method | HTTP request | Description
 
 
 # **dummy**
-> dummy(_api::DefaultApi; _mediaType=nothing) -> ExampleResponse, OpenAPI.Clients.ApiResponse <br/>
-> dummy(_api::DefaultApi, response_stream::Channel; _mediaType=nothing) -> Channel{ ExampleResponse }, OpenAPI.Clients.ApiResponse
+> dummy(_api::DefaultApi; _mediaType=nothing) -> Dummy200Response, OpenAPI.Clients.ApiResponse <br/>
+> dummy(_api::DefaultApi, response_stream::Channel; _mediaType=nothing) -> Channel{ Dummy200Response }, OpenAPI.Clients.ApiResponse
 
 
 
@@ -20,7 +20,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 

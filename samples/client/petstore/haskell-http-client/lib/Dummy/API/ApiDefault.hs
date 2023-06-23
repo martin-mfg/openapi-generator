@@ -65,7 +65,7 @@ import qualified Prelude as P
 -- 
 dummy
   :: Accept accept -- ^ request accept ('MimeType')
-  -> DummyRequest Dummy MimeNoContent ExampleResponse accept
+  -> DummyRequest Dummy MimeNoContent Dummy200Response accept
 dummy  _ =
   _mkRequest "GET" ["/example/someMethod"]
 

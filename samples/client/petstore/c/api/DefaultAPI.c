@@ -14,7 +14,7 @@
 
 // dummy
 //
-example_response_t*
+dummy_200_response_t*
 DefaultAPI_dummy(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
@@ -43,12 +43,16 @@ DefaultAPI_dummy(apiClient_t *apiClient)
                     "GET");
 
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 201) {
+    //    printf("%s\n","dummy");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
     //    printf("%s\n","dummy");
     //}
     //nonprimitive not container
     cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    example_response_t *elementToReturn = example_response_parseFromJSON(DefaultAPIlocalVarJSON);
+    dummy_200_response_t *elementToReturn = dummy_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
     cJSON_Delete(DefaultAPIlocalVarJSON);
     if(elementToReturn == NULL) {
         // return 0;

@@ -9,15 +9,47 @@ paths:
       description: dummy
       operationId: dummy
       responses:
-        200:
+        201:
           description: dummy
           content:
             "*/*":
               schema:
                 $ref: '#/components/schemas/ExampleResponse'
-
+        200:
+          x-myextension: dummy
+          description: dummy
+          content:
+            "*/*":
+              x-myextension: dummy
+              schema:
+                x-myextension: dummy
+                type: object
+                properties:
+                  outerProp:
+                    x-myextension: dummy
+                    type: object
+                    properties:
+                      innerProp:
+                        type: object
+                        properties:
+                          myBool:
+                            type: boolean
 components:
   schemas:
+    OtherObject:
+      type: object
+      description: dummy
+      properties:
+        myOnlyProperty2:
+          $ref: '#/components/schemas/ExampleResponse'
+    Node:
+      type: object
+      description: dummy
+      properties:
+        left:
+          $ref: '#/components/schemas/Node'
+        right:
+          $ref: '#/components/schemas/Node'
     ExampleResponse:
       type: object
       description: dummy

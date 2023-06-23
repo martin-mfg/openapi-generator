@@ -32,23 +32,27 @@ namespace Org.OpenAPITools.Controllers
         /// 
         /// </summary>
         /// <remarks>dummy</remarks>
+        /// <response code="201">dummy</response>
         /// <response code="200">dummy</response>
         [HttpGet]
         [Route("/example/someMethod")]
         [ValidateModelState]
         [SwaggerOperation("Dummy")]
-        [SwaggerResponse(statusCode: 200, type: typeof(ExampleResponse), description: "dummy")]
+        [SwaggerResponse(statusCode: 201, type: typeof(ExampleResponse), description: "dummy")]
+        [SwaggerResponse(statusCode: 200, type: typeof(Dummy200Response), description: "dummy")]
         public virtual IActionResult Dummy()
         {
 
+            //TODO: Uncomment the next line to return response 201 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
+            // return StatusCode(201, default(ExampleResponse));
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200, default(ExampleResponse));
+            // return StatusCode(200, default(Dummy200Response));
             string exampleJson = null;
-            exampleJson = "{\n  \"zero\" : 0,\n  \"numberString\" : \"42\",\n  \"nullString\" : \"null\",\n  \"emptyString\" : \"\",\n  \"boolString\" : \"false\",\n  \"aBool\" : false\n}";
+            exampleJson = "{\n  \"outerProp\" : {\n    \"innerProp\" : {\n      \"myBool\" : true\n    }\n  }\n}";
             
             var example = exampleJson != null
-            ? JsonSerializer.Deserialize<ExampleResponse>(exampleJson)
-            : default(ExampleResponse);
+            ? JsonSerializer.Deserialize<Dummy200Response>(exampleJson)
+            : default(Dummy200Response);
             //TODO: Change the data returned
             return new ObjectResult(example);
         }

@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
@@ -41,14 +42,18 @@ public interface ExampleApi {
      * GET /example/someMethod
      * dummy
      *
-     * @return dummy (status code 200)
+     * @return dummy (status code 201)
+     *         or dummy (status code 200)
      */
     @Operation(
         operationId = "dummy",
         description = "dummy",
         responses = {
-            @ApiResponse(responseCode = "200", description = "dummy", content = {
+            @ApiResponse(responseCode = "201", description = "dummy", content = {
                 @Content(mediaType = "*/*", schema = @Schema(implementation = ExampleResponse.class))
+            }),
+            @ApiResponse(responseCode = "200", description = "dummy", content = {
+                @Content(mediaType = "*/*", schema = @Schema(implementation = Dummy200Response.class))
             })
         }
     )
@@ -57,7 +62,7 @@ public interface ExampleApi {
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<ExampleResponse> dummy(
+    default ResponseEntity<Dummy200Response> dummy(
         
     ) {
         return getDelegate().dummy();

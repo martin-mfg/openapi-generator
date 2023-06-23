@@ -4,6 +4,21 @@
     <xs:schema xmlns:tns="http://localhost/soap/ServiceV1/model" targetNamespace="http://localhost/soap/ServiceV1/model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="GetExampleSomemethod_RequestMessage" type="schemas:GetExampleSomemethod_RequestMessage" />
       <xs:element name="GetExampleSomemethod_ResponseMessage" type="schemas:GetExampleSomemethod_ResponseMessage" />
+      <xs:complexType name="Dummy200Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="outerProp" type="schemas:dummy_200_response_outerProp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Dummy200ResponseOuterProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="innerProp" type="schemas:dummy_200_response_outerProp_innerProp" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Dummy200ResponseOuterPropInnerProp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="myBool" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="ExampleResponse">
         <xs:annotation>
           <xs:documentation>dummy</xs:documentation>
@@ -17,10 +32,36 @@
           <xs:element minOccurs="0" default="0" name="zero" type="xs:integer" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="Node">
+        <xs:annotation>
+          <xs:documentation>dummy</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="left" type="schemas:Node" />
+          <xs:element minOccurs="0" name="right" type="schemas:Node" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OtherObject">
+        <xs:annotation>
+          <xs:documentation>dummy</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="myOnlyProperty2" type="schemas:ExampleResponse" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="GetExampleSomemethod_RequestMessage" />
       <xs:complexType name="GetExampleSomemethod_ResponseMessage">
         <xs:sequence>
           <xs:element minOccurs="1" name="ExampleResponse" type="schemas:ExampleResponse">
+            <xs:annotation>
+              <xs:documentation>dummy</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetExampleSomemethod_ResponseMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Dummy_200_response" type="schemas:Dummy_200_response">
             <xs:annotation>
               <xs:documentation>dummy</xs:documentation>
             </xs:annotation>
@@ -35,10 +76,16 @@
   <message name="GetExampleSomemethod_ResponseMessage">
     <part name="GetExampleSomemethod_ResponseMessage" element="schemas:GetExampleSomemethod_ResponseMessage" />
   </message>
+  <message name="GetExampleSomemethod_ResponseMessage">
+    <part name="GetExampleSomemethod_ResponseMessage" element="schemas:GetExampleSomemethod_ResponseMessage" />
+  </message>
   <portType name="ServiceV1_PortType">
     <operation name="GetExampleSomemethod">
       <documentation>dummy</documentation>
       <input message="wsdl:GetExampleSomemethod_RequestMessage" />
+      <output message="wsdl:GetExampleSomemethod_ResponseMessage">
+        <documentation>dummy</documentation>
+      </output>
       <output message="wsdl:GetExampleSomemethod_ResponseMessage">
         <documentation>dummy</documentation>
       </output>
@@ -51,6 +98,9 @@
       <input>
         <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
       <output>
         <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>

@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
@@ -31,23 +32,25 @@ public interface DefaultApi {
      * GET /example/someMethod
      * dummy
      *
-     * @return dummy (status code 200)
+     * @return dummy (status code 201)
+     *         or dummy (status code 200)
      */
     @ApiOperation(
         value = "",
         nickname = "dummy",
         notes = "dummy",
-        response = ExampleResponse.class
+        response = Dummy200Response.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
+        @ApiResponse(code = 201, message = "dummy", response = ExampleResponse.class),
+        @ApiResponse(code = 200, message = "dummy", response = Dummy200Response.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = "*/*"
     )
-    ResponseEntity<ExampleResponse> dummy(
+    ResponseEntity<Dummy200Response> dummy(
         
     );
 

@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 
 import javax.ws.rs.*;
@@ -28,16 +29,20 @@ public class ExampleApi {
 
     @GET
     @Produces({ "*/*" })
-    @ApiOperation(value = "", notes = "dummy", response = ExampleResponse.class, tags={  })
+    @ApiOperation(value = "", notes = "dummy", response = Dummy200Response.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "dummy", response = ExampleResponse.class)
+        @ApiResponse(code = 201, message = "dummy", response = ExampleResponse.class),
+        @ApiResponse(code = 200, message = "dummy", response = Dummy200Response.class)
     })
     
     @org.eclipse.microprofile.openapi.annotations.Operation(operationId = "dummy", summary = "", description = "dummy")
     
     @org.eclipse.microprofile.openapi.annotations.responses.APIResponses(value = { 
-            @org.eclipse.microprofile.openapi.annotations.responses.APIResponse(responseCode = "200", description = "dummy",  content = { 
+            @org.eclipse.microprofile.openapi.annotations.responses.APIResponse(responseCode = "201", description = "dummy",  content = { 
                 @org.eclipse.microprofile.openapi.annotations.media.Content(mediaType="*/*", schema = @org.eclipse.microprofile.openapi.annotations.media.Schema(implementation = ExampleResponse.class))
+            }),
+            @org.eclipse.microprofile.openapi.annotations.responses.APIResponse(responseCode = "200", description = "dummy",  content = { 
+                @org.eclipse.microprofile.openapi.annotations.media.Content(mediaType="*/*", schema = @org.eclipse.microprofile.openapi.annotations.media.Schema(implementation = Dummy200Response.class))
             })
         })
     public Response dummy() {

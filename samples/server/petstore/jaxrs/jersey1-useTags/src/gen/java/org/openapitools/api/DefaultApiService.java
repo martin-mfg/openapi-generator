@@ -5,6 +5,7 @@ import org.openapitools.model.*;
 
 import com.sun.jersey.multipart.FormDataParam;
 
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 
 import java.util.List;

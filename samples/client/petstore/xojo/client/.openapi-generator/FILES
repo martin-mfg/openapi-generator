@@ -8,7 +8,17 @@ OpenAPIClient/APIs.xojo_code
 OpenAPIClient/APIs/DefaultApi.xojo_code
 OpenAPIClient/APIs/DefaultApiCallbackHandler.xojo_code
 OpenAPIClient/Models.xojo_code
+OpenAPIClient/Models/Dummy200Response.xojo_code
+OpenAPIClient/Models/Dummy200ResponseOptional.xojo_code
+OpenAPIClient/Models/Dummy200ResponseOuterProp.xojo_code
+OpenAPIClient/Models/Dummy200ResponseOuterPropInnerProp.xojo_code
+OpenAPIClient/Models/Dummy200ResponseOuterPropInnerPropOptional.xojo_code
+OpenAPIClient/Models/Dummy200ResponseOuterPropOptional.xojo_code
 OpenAPIClient/Models/ExampleResponse.xojo_code
 OpenAPIClient/Models/ExampleResponseOptional.xojo_code
+OpenAPIClient/Models/Node.xojo_code
+OpenAPIClient/Models/NodeOptional.xojo_code
+OpenAPIClient/Models/OtherObject.xojo_code
+OpenAPIClient/Models/OtherObjectOptional.xojo_code
 OpenAPIClient/OpenAPIClientException.xojo_code
 README.md

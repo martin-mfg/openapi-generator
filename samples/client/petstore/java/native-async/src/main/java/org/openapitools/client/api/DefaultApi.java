@@ -17,6 +17,7 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.ApiResponse;
 import org.openapitools.client.Pair;
 
+import org.openapitools.client.model.Dummy200Response;
 import org.openapitools.client.model.ExampleResponse;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -85,10 +86,10 @@ public class DefaultApi {
   /**
    * 
    * dummy
-   * @return CompletableFuture&lt;ExampleResponse&gt;
+   * @return CompletableFuture&lt;Dummy200Response&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ExampleResponse> dummy() throws ApiException {
+  public CompletableFuture<Dummy200Response> dummy() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = dummyRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -100,7 +101,7 @@ public class DefaultApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<ExampleResponse>() {})
+                  responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<Dummy200Response>() {})
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));
@@ -115,10 +116,10 @@ public class DefaultApi {
   /**
    * 
    * dummy
-   * @return CompletableFuture&lt;ApiResponse&lt;ExampleResponse&gt;&gt;
+   * @return CompletableFuture&lt;ApiResponse&lt;Dummy200Response&gt;&gt;
    * @throws ApiException if fails to make API call
    */
-  public CompletableFuture<ApiResponse<ExampleResponse>> dummyWithHttpInfo() throws ApiException {
+  public CompletableFuture<ApiResponse<Dummy200Response>> dummyWithHttpInfo() throws ApiException {
     try {
       HttpRequest.Builder localVarRequestBuilder = dummyRequestBuilder();
       return memberVarHttpClient.sendAsync(
@@ -133,10 +134,10 @@ public class DefaultApi {
             try {
               String responseBody = localVarResponse.body();
               return CompletableFuture.completedFuture(
-                  new ApiResponse<ExampleResponse>(
+                  new ApiResponse<Dummy200Response>(
                       localVarResponse.statusCode(),
                       localVarResponse.headers().map(),
-                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<ExampleResponse>() {}))
+                      responseBody == null || responseBody.isBlank() ? null : memberVarObjectMapper.readValue(responseBody, new TypeReference<Dummy200Response>() {}))
               );
             } catch (IOException e) {
               return CompletableFuture.failedFuture(new ApiException(e));

@@ -8,7 +8,12 @@ common.ts
 configuration.ts
 git_push.sh
 index.ts
+model/some/levels/deep/dummy200-response-outer-prop-inner-prop.ts
+model/some/levels/deep/dummy200-response-outer-prop.ts
+model/some/levels/deep/dummy200-response.ts
 model/some/levels/deep/example-response.ts
 model/some/levels/deep/index.ts
+model/some/levels/deep/node.ts
+model/some/levels/deep/other-object.ts
 package.json
 tsconfig.json

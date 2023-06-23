@@ -5,6 +5,7 @@
  */
 package org.openapitools.api;
 
+import org.openapitools.model.Dummy200ResponseDto;
 import org.openapitools.model.ExampleResponseDto;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
@@ -35,29 +36,31 @@ public interface ExampleApi {
      * GET /example/someMethod
      * dummy
      *
-     * @return dummy (status code 200)
+     * @return dummy (status code 201)
+     *         or dummy (status code 200)
      */
     @ApiOperation(
         value = "",
         nickname = "dummy",
         notes = "dummy",
-        response = ExampleResponseDto.class
+        response = Dummy200ResponseDto.class
     )
     @ApiResponses({
-        @ApiResponse(code = 200, message = "dummy", response = ExampleResponseDto.class)
+        @ApiResponse(code = 201, message = "dummy", response = ExampleResponseDto.class),
+        @ApiResponse(code = 200, message = "dummy", response = Dummy200ResponseDto.class)
     })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/example/someMethod",
         produces = { "*/*" }
     )
-    default ResponseEntity<ExampleResponseDto> dummy(
+    default ResponseEntity<Dummy200ResponseDto> dummy(
         
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
-                    String exampleString = "{ \"zero\" : 0, \"numberString\" : \"42\", \"nullString\" : \"null\", \"emptyString\" : \"\", \"boolString\" : \"false\", \"aBool\" : false }";
+                    String exampleString = "{ \"outerProp\" : { \"innerProp\" : { \"myBool\" : true } } }";
                     ApiUtil.setExampleResponse(request, "*/*", exampleString);
                     break;
                 }

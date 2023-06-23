@@ -113,6 +113,30 @@ arbitraryReducedMaybeValue n = do
 
 -- * Models
 
+instance Arbitrary Dummy200Response where
+  arbitrary = sized genDummy200Response
+
+genDummy200Response :: Int -> Gen Dummy200Response
+genDummy200Response n =
+  Dummy200Response
+    <$> arbitraryReducedMaybe n -- dummy200ResponseOuterProp :: Maybe Dummy200ResponseOuterProp
+  
+instance Arbitrary Dummy200ResponseOuterProp where
+  arbitrary = sized genDummy200ResponseOuterProp
+
+genDummy200ResponseOuterProp :: Int -> Gen Dummy200ResponseOuterProp
+genDummy200ResponseOuterProp n =
+  Dummy200ResponseOuterProp
+    <$> arbitraryReducedMaybe n -- dummy200ResponseOuterPropInnerProp :: Maybe Dummy200ResponseOuterPropInnerProp
+  
+instance Arbitrary Dummy200ResponseOuterPropInnerProp where
+  arbitrary = sized genDummy200ResponseOuterPropInnerProp
+
+genDummy200ResponseOuterPropInnerProp :: Int -> Gen Dummy200ResponseOuterPropInnerProp
+genDummy200ResponseOuterPropInnerProp n =
+  Dummy200ResponseOuterPropInnerProp
+    <$> arbitraryReducedMaybe n -- dummy200ResponseOuterPropInnerPropMyBool :: Maybe Bool
+  
 instance Arbitrary ExampleResponse where
   arbitrary = sized genExampleResponse
 
@@ -125,6 +149,23 @@ genExampleResponse n =
     <*> arbitraryReducedMaybe n -- exampleResponseNullString :: Maybe Text
     <*> arbitraryReducedMaybe n -- exampleResponseABool :: Maybe Bool
     <*> arbitraryReducedMaybe n -- exampleResponseZero :: Maybe Int
+  
+instance Arbitrary Node where
+  arbitrary = sized genNode
+
+genNode :: Int -> Gen Node
+genNode n =
+  Node
+    <$> arbitraryReducedMaybe n -- nodeLeft :: Maybe Node
+    <*> arbitraryReducedMaybe n -- nodeRight :: Maybe Node
+  
+instance Arbitrary OtherObject where
+  arbitrary = sized genOtherObject
+
+genOtherObject :: Int -> Gen OtherObject
+genOtherObject n =
+  OtherObject
+    <$> arbitraryReducedMaybe n -- otherObjectMyOnlyProperty2 :: Maybe ExampleResponse
   
 
 

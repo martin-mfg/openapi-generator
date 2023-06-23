@@ -6,4 +6,9 @@ handlers/api_default.go
 handlers/container.go
 main.go
 models/hello-world.go
+models/model_dummy_200_response.go
+models/model_dummy_200_response_outer_prop.go
+models/model_dummy_200_response_outer_prop_inner_prop.go
 models/model_example_response.go
+models/model_node.go
+models/model_other_object.go

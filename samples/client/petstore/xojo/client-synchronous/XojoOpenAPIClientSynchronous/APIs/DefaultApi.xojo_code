@@ -1,7 +1,7 @@
 #tag Class
 Protected Class DefaultApi
 	#tag Method, Flags = &h0
-		Function Dummy(ByRef localOutStatus As XojoOpenAPIClientSynchronous.XojoOpenAPIClientSynchronousException, ByRef localOutData As XojoOpenAPIClientSynchronous.Models.ExampleResponse) As Boolean
+		Function Dummy(ByRef localOutStatus As XojoOpenAPIClientSynchronous.XojoOpenAPIClientSynchronousException, ByRef localOutData As XojoOpenAPIClientSynchronous.Models.Dummy200Response) As Boolean
 		  // Operation dummy
 		  // - parameter localOutStatus: Information on whether the operation succeeded.
 		  // - parameter localOutData: On success, contains the data returned by the API.
@@ -47,7 +47,7 @@ Protected Class DefaultApi
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function DummyPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As XojoOpenAPIClientSynchronous.XojoOpenAPIClientSynchronousException, Content As String, ByRef outData As XojoOpenAPIClientSynchronous.Models.ExampleResponse) As Boolean
+		Private Function DummyPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As XojoOpenAPIClientSynchronous.XojoOpenAPIClientSynchronousException, Content As String, ByRef outData As XojoOpenAPIClientSynchronous.Models.Dummy200Response) As Boolean
 		  Dim contentType As String = Headers.Value("Content-Type")
 		  Dim contentEncoding As TextEncoding = XojoOpenAPIClientSynchronous.EncodingFromContentType(contentType)
 		  Content = DefineEncoding(Content, contentEncoding)
@@ -55,7 +55,7 @@ Protected Class DefaultApi
 		  If HTTPStatus > 199 and HTTPStatus < 300 then
 		    If contentType.LeftB(16) = "application/json" then
 		      
-			  outData = New XojoOpenAPIClientSynchronous.Models.ExampleResponse
+			  outData = New XojoOpenAPIClientSynchronous.Models.Dummy200Response
 			  Try
 		        Xoson.fromJSON(outData, Content.toText())
 

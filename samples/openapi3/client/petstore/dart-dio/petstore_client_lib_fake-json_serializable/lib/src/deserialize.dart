@@ -1,4 +1,9 @@
+import 'package:openapi/src/model/dummy200_response.dart';
+import 'package:openapi/src/model/dummy200_response_outer_prop.dart';
+import 'package:openapi/src/model/dummy200_response_outer_prop_inner_prop.dart';
 import 'package:openapi/src/model/example_response.dart';
+import 'package:openapi/src/model/node.dart';
+import 'package:openapi/src/model/other_object.dart';
 
 final _regList = RegExp(r'^List<(.*)>$');
 final _regSet = RegExp(r'^Set<(.*)>$');
@@ -18,8 +23,18 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return (valueString == 'true' || valueString == '1') as ReturnType;
         case 'double':
           return (value is double ? value : double.parse('$value')) as ReturnType;
+        case 'Dummy200Response':
+          return Dummy200Response.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'Dummy200ResponseOuterProp':
+          return Dummy200ResponseOuterProp.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'Dummy200ResponseOuterPropInnerProp':
+          return Dummy200ResponseOuterPropInnerProp.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ExampleResponse':
           return ExampleResponse.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'Node':
+          return Node.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'OtherObject':
+          return OtherObject.fromJson(value as Map<String, dynamic>) as ReturnType;
         default:
           RegExpMatch? match;
 

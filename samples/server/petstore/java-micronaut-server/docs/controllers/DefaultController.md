@@ -11,7 +11,7 @@ Method | HTTP request | Description
 <a id="dummy"></a>
 # **dummy**
 ```java
-Mono<ExampleResponse> DefaultController.dummy()
+Mono<Dummy200Response> DefaultController.dummy()
 ```
 
 
@@ -20,7 +20,7 @@ dummy
 
 
 ### Return type
-[**ExampleResponse**](../../docs/models/ExampleResponse.md)
+[**Dummy200Response**](../../docs/models/Dummy200Response.md)
 
 
 ### HTTP request headers

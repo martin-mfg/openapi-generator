@@ -104,7 +104,7 @@ namespace Example
 
             try
             {
-                ExampleResponse result = apiInstance.Dummy();
+                Dummy200Response result = apiInstance.Dummy();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -132,7 +132,12 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.Dummy200Response](docs/Dummy200Response.md)
+ - [Model.Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
+ - [Model.Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
  - [Model.ExampleResponse](docs/ExampleResponse.md)
+ - [Model.Node](docs/Node.md)
+ - [Model.OtherObject](docs/OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

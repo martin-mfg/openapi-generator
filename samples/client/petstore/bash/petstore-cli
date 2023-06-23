@@ -559,6 +559,8 @@ print_dummy_help() {
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;dummy${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;dummy${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }

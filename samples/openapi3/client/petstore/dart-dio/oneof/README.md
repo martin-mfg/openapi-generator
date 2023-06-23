@@ -68,7 +68,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Dummy200Response](doc/Dummy200Response.md)
+ - [Dummy200ResponseOuterProp](doc/Dummy200ResponseOuterProp.md)
+ - [Dummy200ResponseOuterPropInnerProp](doc/Dummy200ResponseOuterPropInnerProp.md)
  - [ExampleResponse](doc/ExampleResponse.md)
+ - [Node](doc/Node.md)
+ - [OtherObject](doc/OtherObject.md)
 
 
 ## Documentation For Authorization

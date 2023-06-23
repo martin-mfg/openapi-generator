@@ -158,7 +158,7 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
     const auto request = session->get_request();
     
     int status_code = 500;
-    ExampleResponse resultObject = ExampleResponse{};
+    Dummy_200_response resultObject = Dummy_200_response{};
     std::string result = "";
     
     try {
@@ -182,6 +182,16 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
     static const std::string acceptTypes{
     };
     
+    if (status_code == 201) {
+        responseHeaders.insert(std::make_pair("Content-Type", selectPreferredContentType(contentTypes)));
+        if (!acceptTypes.empty()) {
+            responseHeaders.insert(std::make_pair("Accept", acceptTypes));
+        }
+    
+        result = resultObject.toJsonString();
+        returnResponse(session, 201, result.empty() ? "{}" : result, responseHeaders);
+        return;
+    }
     if (status_code == 200) {
         responseHeaders.insert(std::make_pair("Content-Type", selectPreferredContentType(contentTypes)));
         if (!acceptTypes.empty()) {
@@ -196,7 +206,7 @@ void ExampleSomeMethodResource::handler_GET_internal(const std::shared_ptr<restb
 }
 
 
-std::pair<int, ExampleResponse> ExampleSomeMethodResource::handler_GET(
+std::pair<int, Dummy_200_response> ExampleSomeMethodResource::handler_GET(
         )
 {
     return handler_GET_func();

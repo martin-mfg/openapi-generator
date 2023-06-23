@@ -14,19 +14,19 @@ open class DefaultAPI {
 
     /**
 
-     - returns: ExampleResponse
+     - returns: Dummy200Response
      */
     @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-    open class func dummy() async throws -> ExampleResponse {
+    open class func dummy() async throws -> Dummy200Response {
         return try await dummyWithRequestBuilder().execute().body
     }
 
     /**
      - GET /example/someMethod
      - dummy
-     - returns: RequestBuilder<ExampleResponse> 
+     - returns: RequestBuilder<Dummy200Response> 
      */
-    open class func dummyWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+    open class func dummyWithRequestBuilder() -> RequestBuilder<Dummy200Response> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
@@ -39,7 +39,7 @@ open class DefaultAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ExampleResponse>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Dummy200Response>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: false)
     }

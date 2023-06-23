@@ -11,7 +11,12 @@ lib/App/RegisterMiddlewares.php
 lib/App/RegisterRoutes.php
 lib/App/ResponseEmitter.php
 lib/BaseModel.php
+lib/Model/Dummy200Response.php
+lib/Model/Dummy200ResponseOuterProp.php
+lib/Model/Dummy200ResponseOuterPropInnerProp.php
 lib/Model/ExampleResponse.php
+lib/Model/Node.php
+lib/Model/OtherObject.php
 logs/.htaccess
 phpcs.xml.dist
 phpunit.xml.dist

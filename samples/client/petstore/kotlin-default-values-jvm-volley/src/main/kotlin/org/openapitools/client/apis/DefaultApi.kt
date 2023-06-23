@@ -17,6 +17,7 @@ import org.openapitools.client.request.IRequestFactory
 import org.openapitools.client.request.RequestFactory
 import org.openapitools.client.infrastructure.CollectionFormats.*
 
+import org.openapitools.client.models.Dummy200Response
 import org.openapitools.client.models.ExampleResponse
 
 /*
@@ -36,9 +37,9 @@ class DefaultApi (
     /**
      * 
      * dummy
-     * @return ExampleResponse
+     * @return Dummy200Response
      */
-    suspend fun dummy(): ExampleResponse? {
+    suspend fun dummy(): Dummy200Response? {
         val body: Any? = null
 
         val contentTypes : Array<String> = arrayOf()
@@ -64,7 +65,7 @@ class DefaultApi (
         val headerParams: Map<String, String> = mapOf()
 
         return suspendCoroutine { continuation ->
-            val responseListener = Response.Listener<ExampleResponse> { response ->
+            val responseListener = Response.Listener<Dummy200Response> { response ->
                 continuation.resume(response)
             }
 
@@ -72,11 +73,11 @@ class DefaultApi (
                 continuation.resumeWithException(error)
             }
 
-            val responseType = object : TypeToken<ExampleResponse>() {}.type
+            val responseType = object : TypeToken<Dummy200Response>() {}.type
 
             // Call the correct request builder based on whether we have a return type or a body.
             // All other switching on types must be done in code inside the builder
-            val request: Request<ExampleResponse> = requestFactory.build(
+            val request: Request<Dummy200Response> = requestFactory.build(
                     Request.Method.GET,
                     "$basePath$path",
                     body,

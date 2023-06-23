@@ -18,7 +18,7 @@ open class DefaultAPI {
      - parameter completion: completion handler to receive the result
      */
     @discardableResult
-    open class func dummy(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ result: Swift.Result<ExampleResponse, ErrorResponse>) -> Void)) -> RequestTask {
+    open class func dummy(apiResponseQueue: DispatchQueue = PetstoreClientAPI.apiResponseQueue, completion: @escaping ((_ result: Swift.Result<Dummy200Response, ErrorResponse>) -> Void)) -> RequestTask {
         return dummyWithRequestBuilder().execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -32,9 +32,9 @@ open class DefaultAPI {
     /**
      - GET /example/someMethod
      - dummy
-     - returns: RequestBuilder<ExampleResponse> 
+     - returns: RequestBuilder<Dummy200Response> 
      */
-    open class func dummyWithRequestBuilder() -> RequestBuilder<ExampleResponse> {
+    open class func dummyWithRequestBuilder() -> RequestBuilder<Dummy200Response> {
         let localVariablePath = "/example/someMethod"
         let localVariableURLString = PetstoreClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
@@ -47,7 +47,7 @@ open class DefaultAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<ExampleResponse>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Dummy200Response>.Type = PetstoreClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: false)
     }

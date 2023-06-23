@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## dummy
 
-> ExampleResponse dummy()
+> Dummy200Response dummy()
 
 
 
@@ -22,7 +22,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 
@@ -37,5 +37,6 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **201** | dummy |  -  |
 | **200** | dummy |  -  |
 

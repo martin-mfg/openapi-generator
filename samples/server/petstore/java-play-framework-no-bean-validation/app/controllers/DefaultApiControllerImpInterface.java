@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.Dummy200Response;
 import apimodels.ExampleResponse;
 
 import com.google.inject.Inject;
@@ -25,13 +26,13 @@ public abstract class DefaultApiControllerImpInterface {
     private ObjectMapper mapper = new ObjectMapper();
 
     public Result dummyHttp(Http.Request request) throws Exception {
-        ExampleResponse obj = dummy(request);
+        Dummy200Response obj = dummy(request);
         JsonNode result = mapper.valueToTree(obj);
 
         return ok(result);
 
     }
 
-    public abstract ExampleResponse dummy(Http.Request request) throws Exception;
+    public abstract Dummy200Response dummy(Http.Request request) throws Exception;
 
 }

@@ -48,7 +48,7 @@ class RegisterRoutes
             'userClassname' => 'DefaultApi',
             'operationId' => 'dummy',
             'responses' => [
-                '200' => [
+                '201' => [
                     'jsonSchema' => '{
   "description" : "dummy",
   "content" : {
@@ -58,6 +58,20 @@ class RegisterRoutes
       }
     }
   }
+}',
+                ],
+                '200' => [
+                    'jsonSchema' => '{
+  "description" : "dummy",
+  "content" : {
+    "*/*" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/dummy_200_response"
+      },
+      "x-myextension" : "dummy"
+    }
+  },
+  "x-myextension" : "dummy"
 }',
                 ],
             ],

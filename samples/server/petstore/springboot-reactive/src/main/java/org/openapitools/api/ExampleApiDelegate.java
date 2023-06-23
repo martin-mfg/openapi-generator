@@ -1,6 +1,7 @@
 package org.openapitools.api;
 
 import springfox.documentation.annotations.ApiIgnore;
+import org.openapitools.model.Dummy200Response;
 import org.openapitools.model.ExampleResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -33,15 +34,16 @@ public interface ExampleApiDelegate {
      * GET /example/someMethod
      * dummy
      *
-     * @return dummy (status code 200)
+     * @return dummy (status code 201)
+     *         or dummy (status code 200)
      * @see ExampleApi#dummy
      */
-    default Mono<ResponseEntity<ExampleResponse>> dummy(ServerWebExchange exchange) {
+    default Mono<ResponseEntity<Dummy200Response>> dummy(ServerWebExchange exchange) {
         Mono<Void> result = Mono.empty();
         exchange.getResponse().setStatusCode(HttpStatus.NOT_IMPLEMENTED);
         for (MediaType mediaType : exchange.getRequest().getHeaders().getAccept()) {
             if (mediaType.isCompatibleWith(MediaType.valueOf("*/*"))) {
-                String exampleString = "{ \"zero\" : 0, \"numberString\" : \"42\", \"nullString\" : \"null\", \"emptyString\" : \"\", \"boolString\" : \"false\", \"aBool\" : false }";
+                String exampleString = "{ \"outerProp\" : { \"innerProp\" : { \"myBool\" : true } } }";
                 result = ApiUtil.getExampleResponse(exchange, mediaType, exampleString);
                 break;
             }

@@ -19,6 +19,7 @@
 #include <QSharedPointer>
 
 #include <qhttpengine/socket.h>
+#include "OAIDummy_200_response.h"
 #include "OAIExampleResponse.h"
 #include <QString>
 #include "OAIDefaultApiHandler.h"
@@ -36,10 +37,10 @@ public:
     void dummyRequest();
     
 
-    void dummyResponse(const OAIExampleResponse& res);
+    void dummyResponse(const OAIDummy_200_response& res);
     
 
-    void dummyError(const OAIExampleResponse& res, QNetworkReply::NetworkError error_type, QString& error_str);
+    void dummyError(const OAIDummy_200_response& res, QNetworkReply::NetworkError error_type, QString& error_str);
     
 
     void sendCustomResponse(QByteArray & res, QNetworkReply::NetworkError error_type);

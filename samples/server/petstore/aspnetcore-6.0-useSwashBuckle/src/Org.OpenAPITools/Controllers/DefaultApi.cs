@@ -29,11 +29,13 @@ namespace Org.OpenAPITools.Controllers
         /// 
         /// </summary>
         /// <remarks>dummy</remarks>
+        /// <response code="201">dummy</response>
         /// <response code="200">dummy</response>
         [HttpGet]
         [Route("/example/someMethod")]
         [ValidateModelState]
-        [ProducesResponseType(statusCode: 200, type: typeof(ExampleResponse))]
+        [ProducesResponseType(statusCode: 201, type: typeof(ExampleResponse))]
+        [ProducesResponseType(statusCode: 200, type: typeof(Dummy200Response))]
         public abstract IActionResult Dummy();
     }
 }

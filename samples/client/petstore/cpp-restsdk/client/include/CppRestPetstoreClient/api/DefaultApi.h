@@ -22,6 +22,7 @@
 
 #include "CppRestPetstoreClient/ApiClient.h"
 
+#include "CppRestPetstoreClient/model/Dummy_200_response.h"
 #include "CppRestPetstoreClient/model/ExampleResponse.h"
 #include <boost/optional.hpp>
 
@@ -48,7 +49,7 @@ public:
     /// <remarks>
     /// dummy
     /// </remarks>
-    pplx::task<std::shared_ptr<ExampleResponse>> dummy(
+    pplx::task<std::shared_ptr<Dummy_200_response>> dummy(
     ) const;
 
 protected:

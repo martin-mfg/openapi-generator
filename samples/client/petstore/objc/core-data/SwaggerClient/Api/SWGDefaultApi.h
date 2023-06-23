@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "SWGDummy200Response.h"
 #import "SWGExampleResponse.h"
 #import "SWGApi.h"
 
@@ -27,11 +28,12 @@ extern NSInteger kSWGDefaultApiMissingParamErrorCode;
 /// dummy
 ///
 /// 
+///  code:201 message:"dummy",
 ///  code:200 message:"dummy"
 ///
-/// @return SWGExampleResponse*
+/// @return SWGDummy200Response*
 -(NSURLSessionTask*) dummyWithCompletionHandler: 
-    (void (^)(SWGExampleResponse* output, NSError* error)) handler;
+    (void (^)(SWGDummy200Response* output, NSError* error)) handler;
 
 
 

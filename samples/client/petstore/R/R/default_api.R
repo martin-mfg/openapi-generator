@@ -17,13 +17,20 @@
 #' dummy
 #'
 #' \itemize{
-#' \item \emph{ @returnType } \link{ExampleResponse} \cr
+#' \item \emph{ @returnType } \link{Dummy200Response} \cr
 #'
 #' \item On encountering errors, an error of subclass ApiException will be thrown.
 #'
-#' \item status code : 200 | dummy
+#' \item status code : 201 | dummy
 #'
 #' \item return type : ExampleResponse
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' \item status code : 200 | dummy
+#'
+#' \item return type : Dummy200Response
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -96,7 +103,7 @@ DefaultApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return ExampleResponse
+    #' @return Dummy200Response
     #' @export
     Dummy = function(data_file = NULL, ...) {
       local_var_response <- self$DummyWithHttpInfo(data_file = data_file, ...)
@@ -117,7 +124,7 @@ DefaultApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (ExampleResponse) with additional information such as HTTP status code, headers
+    #' @return API response (Dummy200Response) with additional information such as HTTP status code, headers
     #' @export
     DummyWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -157,7 +164,7 @@ DefaultApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "ExampleResponse", loadNamespace("petstore")),
+          self$api_client$deserialize(local_var_resp$response, "Dummy200Response", loadNamespace("petstore")),
           error = function(e) {
             rlang::abort(message = "Failed to deserialize response",
                          .subclass = "ApiException",

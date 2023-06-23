@@ -23,9 +23,9 @@ class ExampleSomeMethod
      *
      * @throws PHException\HttpCode 501 if the method is not implemented
      *
-     * @return \App\DTO\ExampleResponse
+     * @return \App\DTO\Dummy200Response
      */
-    public function dummy(ServerRequestInterface $request): \App\DTO\ExampleResponse
+    public function dummy(ServerRequestInterface $request): \App\DTO\Dummy200Response
     {
         //TODO implement method
         throw new PHException\HttpCode(501, "Not implemented");

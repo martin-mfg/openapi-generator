@@ -1,7 +1,12 @@
 README.md
 build.gradle.kts
 docs/DefaultApi.md
+docs/Dummy200Response.md
+docs/Dummy200ResponseOuterProp.md
+docs/Dummy200ResponseOuterPropInnerProp.md
 docs/ExampleResponse.md
+docs/Node.md
+docs/OtherObject.md
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
@@ -26,4 +31,9 @@ src/main/kotlin/org/openapitools/client/infrastructure/OctetByteArray.kt
 src/main/kotlin/org/openapitools/client/infrastructure/PartConfig.kt
 src/main/kotlin/org/openapitools/client/infrastructure/RequestConfig.kt
 src/main/kotlin/org/openapitools/client/infrastructure/RequestMethod.kt
+src/main/kotlin/org/openapitools/client/models/Dummy200Response.kt
+src/main/kotlin/org/openapitools/client/models/Dummy200ResponseOuterProp.kt
+src/main/kotlin/org/openapitools/client/models/Dummy200ResponseOuterPropInnerProp.kt
 src/main/kotlin/org/openapitools/client/models/ExampleResponse.kt
+src/main/kotlin/org/openapitools/client/models/Node.kt
+src/main/kotlin/org/openapitools/client/models/OtherObject.kt

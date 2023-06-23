@@ -2,7 +2,12 @@ import { ResponseContext, RequestContext, HttpFile } from '../http/http';
 import { Configuration} from '../configuration'
 import { Observable, of, from } from '../rxjsStub';
 import {mergeMap, map} from  '../rxjsStub';
+import { Dummy200Response } from '../models/Dummy200Response';
+import { Dummy200ResponseOuterProp } from '../models/Dummy200ResponseOuterProp';
+import { Dummy200ResponseOuterPropInnerProp } from '../models/Dummy200ResponseOuterPropInnerProp';
 import { ExampleResponse } from '../models/ExampleResponse';
+import { Node } from '../models/Node';
+import { OtherObject } from '../models/OtherObject';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
 export class ObservableDefaultApi {
@@ -23,7 +28,7 @@ export class ObservableDefaultApi {
     /**
      * dummy
      */
-    public dummy(_options?: Configuration): Observable<ExampleResponse> {
+    public dummy(_options?: Configuration): Observable<ExampleResponse | Dummy200Response> {
         const requestContextPromise = this.requestFactory.dummy(_options);
 
         // build promise chain

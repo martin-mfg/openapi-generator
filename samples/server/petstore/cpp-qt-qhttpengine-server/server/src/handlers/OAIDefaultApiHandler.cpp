@@ -32,7 +32,7 @@ void OAIDefaultApiHandler::dummy() {
     auto reqObj = qobject_cast<OAIDefaultApiRequest*>(sender());
     if( reqObj != nullptr )
     {
-        OAIExampleResponse res;
+        OAIDummy_200_response res;
         reqObj->dummyResponse(res);
     }
 }

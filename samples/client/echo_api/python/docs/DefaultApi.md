@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **dummy**
-> ExampleResponse dummy()
+> Dummy200Response dummy()
 
 
 
@@ -20,7 +20,7 @@ dummy
 import time
 import os
 import openapi_client
-from openapi_client.models.example_response import ExampleResponse
+from openapi_client.models.dummy200_response import Dummy200Response
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 
@@ -64,6 +64,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**201** | dummy |  -  |
 **200** | dummy |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

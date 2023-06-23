@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `dummy()`
 
 ```php
-dummy(): \OpenAPI\Client\Model\ExampleResponse
+dummy(): \OpenAPI\Client\Model\Dummy200Response
 ```
 
 
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExampleResponse**](../Model/ExampleResponse.md)
+[**\OpenAPI\Client\Model\Dummy200Response**](../Model/Dummy200Response.md)
 
 ### Authorization
 

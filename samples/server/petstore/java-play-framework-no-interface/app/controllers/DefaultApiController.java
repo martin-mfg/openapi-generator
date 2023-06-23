@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.Dummy200Response;
 import apimodels.ExampleResponse;
 
 import com.typesafe.config.Config;
@@ -41,7 +42,7 @@ public class DefaultApiController extends Controller {
 
     @ApiAction
     public Result dummy(Http.Request request) throws Exception {
-                ExampleResponse obj = imp.dummy(request);
+                Dummy200Response obj = imp.dummy(request);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
             OpenAPIUtils.validate(obj);

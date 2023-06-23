@@ -12,6 +12,7 @@
 
 package org.openapitools.server.api;
 
+import org.openapitools.server.model.Dummy200Response;
 import org.openapitools.server.model.ExampleResponse;
 
 import jakarta.ws.rs.*;
@@ -28,5 +29,5 @@ public interface DefaultService {
 
     @GET
     @Produces({ "*/*" })
-    ExampleResponse dummy();
+    Dummy200Response dummy();
 }

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **dummy**
-> dummy(req::HTTP.Request;) -> ExampleResponse
+> dummy(req::HTTP.Request;) -> Dummy200Response
 
 
 
@@ -19,7 +19,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ExampleResponse**](ExampleResponse.md)
+[**Dummy200Response**](Dummy200Response.md)
 
 ### Authorization
 
