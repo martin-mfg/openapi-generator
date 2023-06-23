@@ -1,6 +1,0 @@
-export * from '../models/Dummy200Response.ts'
-export * from '../models/Dummy200ResponseOuterProp.ts'
-export * from '../models/Dummy200ResponseOuterPropInnerProp.ts'
-export * from '../models/ExampleResponse.ts'
-export * from '../models/Node.ts'
-export * from '../models/OtherObject.ts'
