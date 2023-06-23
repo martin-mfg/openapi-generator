@@ -1,0 +1,60 @@
+"$schema"   = "http://cyaninc.com/json-schemas/tosca-lite-v1/definition-module#"
+title       = "openapi_server ExampleResponse"
+package     = openapi_server
+version     = "1.0"
+description = "Defines a ExampleResponse"
+authors     = ["F. Bar (foo@bar.baz)"]
+
+imports {
+  Root = tosca.resourceTypes.Root
+}
+resourceTypes {
+
+  ExampleResponse {
+    title = ExampleResponse
+    description = ExampleResponse
+    derivedFrom = Root
+    properties {
+        empty_string {
+          type =  string
+          description = ""
+          optional = false
+        }
+        number_string {
+          type =  string
+          description = ""
+          optional = false
+        }
+        bool_string {
+          type =  string
+          description = ""
+          optional = false
+        }
+        null_string {
+          type =  string
+          description = ""
+          optional = false
+        }
+        a_bool {
+          type =  boolean
+          description = ""
+          optional = false
+        }
+        zero {
+          type =  integer
+          description = ""
+          optional = false
+        }
+    }
+  }
+}
+
+serviceTemplates {
+
+  ExampleResponse {
+    title = ExampleResponse
+    description = ExampleResponse
+    implements = openapi_server.resourceTypes.ExampleResponse
+
+  }
+}

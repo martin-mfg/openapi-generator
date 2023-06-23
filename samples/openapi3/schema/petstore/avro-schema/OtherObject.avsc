@@ -1,0 +1,15 @@
+{
+  "namespace": "model",
+  "type": "record",
+  "doc": "dummy",
+  "name": "OtherObject",
+  "fields": [
+    {
+      "name": "myOnlyProperty2",
+      "type": ["null", "model.ExampleResponse"],
+      "doc": "",
+      "default": null
+    }
+  ]
+
+}

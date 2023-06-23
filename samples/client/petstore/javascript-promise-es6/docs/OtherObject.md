@@ -1,0 +1,9 @@
+# Dummy.OtherObject
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**myOnlyProperty2** | [**ExampleResponse**](ExampleResponse.md) |  | [optional] 
+
+

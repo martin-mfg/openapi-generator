@@ -1,0 +1,21 @@
+{
+  "namespace": "model",
+  "type": "record",
+  "doc": "dummy",
+  "name": "Node",
+  "fields": [
+    {
+      "name": "left",
+      "type": ["null", "model.Node"],
+      "doc": "",
+      "default": null
+    },
+    {
+      "name": "right",
+      "type": ["null", "model.Node"],
+      "doc": "",
+      "default": null
+    }
+  ]
+
+}

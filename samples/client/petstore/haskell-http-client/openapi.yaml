@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  description: dummy
+  title: dummy
+  version: dummy
+servers:
+- url: /
+paths:
+  /example/someMethod:
+    get:
+      description: dummy
+      operationId: dummy
+      responses:
+        "201":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ExampleResponse'
+          description: dummy
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/dummy_200_response'
+              x-myextension: dummy
+          description: dummy
+          x-myextension: dummy
+components:
+  schemas:
+    OtherObject:
+      description: dummy
+      properties:
+        myOnlyProperty2:
+          $ref: '#/components/schemas/ExampleResponse'
+      type: object
+    Node:
+      description: dummy
+      properties:
+        left:
+          $ref: '#/components/schemas/Node'
+        right:
+          $ref: '#/components/schemas/Node'
+      type: object
+    ExampleResponse:
+      description: dummy
+      properties:
+        emptyString:
+          default: ""
+          example: ""
+          type: string
+        numberString:
+          default: "42"
+          example: "42"
+          type: string
+        boolString:
+          default: "false"
+          example: "false"
+          type: string
+        nullString:
+          default: "null"
+          example: "null"
+          type: string
+        aBool:
+          default: false
+          example: false
+          type: boolean
+        zero:
+          default: 0
+          example: 0
+          type: integer
+      type: object
+    dummy_200_response_outerProp_innerProp:
+      example:
+        myBool: true
+      properties:
+        myBool:
+          type: boolean
+      type: object
+    dummy_200_response_outerProp:
+      example:
+        innerProp:
+          myBool: true
+      properties:
+        innerProp:
+          $ref: '#/components/schemas/dummy_200_response_outerProp_innerProp'
+      type: object
+      x-myextension: dummy
+    dummy_200_response:
+      example:
+        outerProp:
+          innerProp:
+            myBool: true
+      properties:
+        outerProp:
+          $ref: '#/components/schemas/dummy_200_response_outerProp'
+      type: object
+      x-myextension: dummy

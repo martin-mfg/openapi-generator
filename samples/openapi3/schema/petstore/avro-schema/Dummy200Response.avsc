@@ -1,0 +1,15 @@
+{
+  "namespace": "model",
+  "type": "record",
+  "doc": "",
+  "name": "Dummy200Response",
+  "fields": [
+    {
+      "name": "outerProp",
+      "type": ["null", "model.Dummy200ResponseOuterProp"],
+      "doc": "",
+      "default": null
+    }
+  ]
+
+}

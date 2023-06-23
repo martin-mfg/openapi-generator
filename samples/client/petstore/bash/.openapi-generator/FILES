@@ -1,0 +1,12 @@
+Dockerfile
+README.md
+_petstore-cli
+docs/DefaultApi.md
+docs/Dummy200Response.md
+docs/Dummy200ResponseOuterProp.md
+docs/Dummy200ResponseOuterPropInnerProp.md
+docs/ExampleResponse.md
+docs/Node.md
+docs/OtherObject.md
+petstore-cli
+petstore-cli.bash-completion

@@ -1,0 +1,64 @@
+# DefaultApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**dummy**](DefaultApi.md#dummy) | **GET** /example/someMethod | 
+
+
+# **dummy**
+> Dummy200Response dummy()
+
+
+
+dummy
+
+### Example
+```R
+library(petstore)
+
+
+api_instance <- petstore_api$new()
+result <- tryCatch(
+             # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+             # api_instance$default_api$dummy(data_file = "result.txt"),
+             api_instance$default_api$dummy(),
+             ApiException = function(ex) ex
+          )
+# In case of error, print the error object
+if (!is.null(result$ApiException)) {
+  print("Exception occurs when calling `dummy`:")
+  dput(result$ApiException$toString())
+  # error object
+  dput(result$ApiException$error_object$toJSONString())
+} else {
+  # deserialized response object
+  print("The response is ...")
+  dput(result$toString())
+}
+
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Dummy200Response**](dummy_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | dummy |  -  |
+| **200** | dummy |  -  |
+
