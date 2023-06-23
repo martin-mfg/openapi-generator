@@ -1,6 +1,5 @@
 .gitignore
 .gitlab-ci.yml
-.openapi-generator-ignore
 .rspec
 .rubocop.yml
 .travis.yml
@@ -22,10 +21,6 @@ lib/dynamic_servers/models/dummy200_response.rb
 lib/dynamic_servers/models/dummy200_response_outer_prop.rb
 lib/dynamic_servers/models/dummy200_response_outer_prop_inner_prop.rb
 lib/dynamic_servers/version.rb
-spec/api/default_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/dummy200_response_outer_prop_inner_prop_spec.rb
-spec/models/dummy200_response_outer_prop_spec.rb
-spec/models/dummy200_response_spec.rb
 spec/spec_helper.rb

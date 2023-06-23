@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 SwaggerClient.podspec
 SwaggerClient/Api/SWGDefaultApi.h

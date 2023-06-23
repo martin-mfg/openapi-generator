@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 README.md
 build.gradle.kts
 pom.xml
@@ -13,4 +12,3 @@ src/main/kotlin/org/openapitools/model/Dummy200Response.kt
 src/main/kotlin/org/openapitools/model/Dummy200ResponseOuterProp.kt
 src/main/kotlin/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.kt
 src/main/resources/application.yaml
-src/test/kotlin/org/openapitools/api/ExampleApiTest.kt

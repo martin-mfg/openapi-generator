@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 Build.ps1
 README.md
 appveyor.yml
@@ -18,7 +17,3 @@ src/PSPetstore/Private/PSApiClient.ps1
 src/PSPetstore/Private/PSHttpSignatureAuth.ps1
 src/PSPetstore/Private/PSRSAEncryptionProvider.cs
 src/PSPetstore/en-US/about_PSPetstore.help.txt
-tests/Api/PSDefaultApi.Tests.ps1
-tests/Model/Dummy200Response.Tests.ps1
-tests/Model/Dummy200ResponseOuterProp.Tests.ps1
-tests/Model/Dummy200ResponseOuterPropInnerProp.Tests.ps1

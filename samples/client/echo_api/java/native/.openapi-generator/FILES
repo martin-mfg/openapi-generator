@@ -1,6 +1,5 @@
 .github/workflows/maven.yml
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -33,7 +32,3 @@ src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java
 src/main/java/org/openapitools/client/model/Dummy200Response.java
 src/main/java/org/openapitools/client/model/Dummy200ResponseOuterProp.java
 src/main/java/org/openapitools/client/model/Dummy200ResponseOuterPropInnerProp.java
-src/test/java/org/openapitools/client/api/DefaultApiTest.java
-src/test/java/org/openapitools/client/model/Dummy200ResponseOuterPropInnerPropTest.java
-src/test/java/org/openapitools/client/model/Dummy200ResponseOuterPropTest.java
-src/test/java/org/openapitools/client/model/Dummy200ResponseTest.java

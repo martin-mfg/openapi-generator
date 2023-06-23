@@ -2,7 +2,6 @@
 .github/workflows/r-client.yaml
 .gitignore
 .lintr
-.openapi-generator-ignore
 .travis.yml
 DESCRIPTION
 NAMESPACE
@@ -21,7 +20,3 @@ docs/Dummy200ResponseOuterProp.md
 docs/Dummy200ResponseOuterPropInnerProp.md
 git_push.sh
 tests/testthat.R
-tests/testthat/test_default_api.R
-tests/testthat/test_dummy200_response.R
-tests/testthat/test_dummy200_response_outer_prop.R
-tests/testthat/test_dummy200_response_outer_prop_inner_prop.R

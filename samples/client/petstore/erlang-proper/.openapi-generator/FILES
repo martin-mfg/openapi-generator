@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 README.md
 rebar.config
 src/model/petstore_dummy_200_response.erl

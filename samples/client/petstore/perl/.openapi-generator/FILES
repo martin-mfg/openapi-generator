@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 bin/autodoc
@@ -17,7 +16,3 @@ lib/WWW/OpenAPIClient/Object/Dummy200ResponseOuterProp.pm
 lib/WWW/OpenAPIClient/Object/Dummy200ResponseOuterPropInnerProp.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
-t/DefaultApiTest.t
-t/Dummy200ResponseOuterPropInnerPropTest.t
-t/Dummy200ResponseOuterPropTest.t
-t/Dummy200ResponseTest.t

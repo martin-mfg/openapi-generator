@@ -1,13 +1,8 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 git_push.sh
 shard.yml
-spec/api/default_api_spec.cr
-spec/models/dummy200_response_outer_prop_inner_prop_spec.cr
-spec/models/dummy200_response_outer_prop_spec.cr
-spec/models/dummy200_response_spec.cr
 spec/spec_helper.cr
 src/petstore.cr
 src/petstore/api/default_api.cr

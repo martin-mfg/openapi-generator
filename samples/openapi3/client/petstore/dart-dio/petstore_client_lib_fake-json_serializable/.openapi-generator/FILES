@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 analysis_options.yaml
 build.yaml
@@ -20,7 +19,3 @@ lib/src/model/dummy200_response.dart
 lib/src/model/dummy200_response_outer_prop.dart
 lib/src/model/dummy200_response_outer_prop_inner_prop.dart
 pubspec.yaml
-test/default_api_test.dart
-test/dummy200_response_outer_prop_inner_prop_test.dart
-test/dummy200_response_outer_prop_test.dart
-test/dummy200_response_test.dart

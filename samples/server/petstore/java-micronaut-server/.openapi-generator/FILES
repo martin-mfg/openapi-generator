@@ -2,7 +2,6 @@
 .mvn/wrapper/MavenWrapperDownloader.java
 .mvn/wrapper/maven-wrapper.jar
 .mvn/wrapper/maven-wrapper.properties
-.openapi-generator-ignore
 README.md
 build.gradle
 docs/controllers/DefaultController.md
@@ -25,7 +24,3 @@ src/main/java/org/openapitools/model/Dummy200ResponseOuterProp.java
 src/main/java/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.java
 src/main/resources/application.yml
 src/main/resources/logback.xml
-src/test/groovy/org/openapitools/controller/DefaultControllerSpec.groovy
-src/test/groovy/org/openapitools/model/Dummy200ResponseOuterPropInnerPropSpec.groovy
-src/test/groovy/org/openapitools/model/Dummy200ResponseOuterPropSpec.groovy
-src/test/groovy/org/openapitools/model/Dummy200ResponseSpec.groovy
