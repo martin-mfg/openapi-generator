@@ -1,0 +1,10 @@
+.openapi-generator-ignore
+Dockerfile
+README.md
+_petstore-cli
+docs/DefaultApi.md
+docs/Dummy200Response.md
+docs/Dummy200ResponseOuterProp.md
+docs/Dummy200ResponseOuterPropInnerProp.md
+petstore-cli
+petstore-cli.bash-completion

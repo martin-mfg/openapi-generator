@@ -1,0 +1,17 @@
+.openapi-generator-ignore
+Org.OpenAPITools.sln
+README.md
+build.bat
+build.sh
+src/Org.OpenAPITools/.gitignore
+src/Org.OpenAPITools/Attributes/ValidateModelStateAttribute.cs
+src/Org.OpenAPITools/Authentication/ApiAuthentication.cs
+src/Org.OpenAPITools/Controllers/DefaultApi.cs
+src/Org.OpenAPITools/Converters/CustomEnumConverter.cs
+src/Org.OpenAPITools/Formatters/InputFormatterStream.cs
+src/Org.OpenAPITools/Models/Dummy200Response.cs
+src/Org.OpenAPITools/Models/Dummy200ResponseOuterProp.cs
+src/Org.OpenAPITools/Models/Dummy200ResponseOuterPropInnerProp.cs
+src/Org.OpenAPITools/OpenApi/TypeExtensions.cs
+src/Org.OpenAPITools/Org.OpenAPITools.csproj
+src/Org.OpenAPITools/Org.OpenAPITools.nuspec

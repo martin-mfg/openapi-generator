@@ -1,0 +1,17 @@
+.openapi-generator-ignore
+README.md
+docs/DefaultApi.md
+docs/Dummy200Response.md
+docs/Dummy200ResponseOuterProp.md
+docs/Dummy200ResponseOuterPropInnerProp.md
+pom.xml
+src/main/java/org/openapitools/client/api/ApiException.java
+src/main/java/org/openapitools/client/api/ApiExceptionMapper.java
+src/main/java/org/openapitools/client/api/DefaultApi.java
+src/main/java/org/openapitools/client/model/Dummy200Response.java
+src/main/java/org/openapitools/client/model/Dummy200ResponseOuterProp.java
+src/main/java/org/openapitools/client/model/Dummy200ResponseOuterPropInnerProp.java
+src/test/java/org/openapitools/client/api/DefaultApiTest.java
+src/test/java/org/openapitools/client/model/Dummy200ResponseOuterPropInnerPropTest.java
+src/test/java/org/openapitools/client/model/Dummy200ResponseOuterPropTest.java
+src/test/java/org/openapitools/client/model/Dummy200ResponseTest.java

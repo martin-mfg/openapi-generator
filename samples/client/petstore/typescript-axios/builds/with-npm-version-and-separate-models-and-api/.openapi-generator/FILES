@@ -1,0 +1,17 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
+README.md
+api.ts
+api/another/level/default-api.ts
+base.ts
+common.ts
+configuration.ts
+git_push.sh
+index.ts
+model/some/levels/deep/dummy200-response-outer-prop-inner-prop.ts
+model/some/levels/deep/dummy200-response-outer-prop.ts
+model/some/levels/deep/dummy200-response.ts
+model/some/levels/deep/index.ts
+package.json
+tsconfig.json

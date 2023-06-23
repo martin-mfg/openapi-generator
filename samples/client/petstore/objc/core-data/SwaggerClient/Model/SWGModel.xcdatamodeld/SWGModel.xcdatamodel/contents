@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+
+    <entity name="SWGDummy200ResponseManagedObject" representedClassName="SWGDummy200ResponseManagedObject" syncable="YES">
+        <relationship name="outerProp" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGDummy200ResponseOuterPropManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="SWGDummy200ResponseOuterPropManagedObject" representedClassName="SWGDummy200ResponseOuterPropManagedObject" syncable="YES">
+        <relationship name="innerProp" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGDummy200ResponseOuterPropInnerPropManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="SWGDummy200ResponseOuterPropInnerPropManagedObject" representedClassName="SWGDummy200ResponseOuterPropInnerPropManagedObject" syncable="YES">
+        <attribute name="myBool" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    
+</model>

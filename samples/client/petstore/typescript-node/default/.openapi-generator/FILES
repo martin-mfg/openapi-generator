@@ -1,0 +1,10 @@
+.gitignore
+.openapi-generator-ignore
+api.ts
+api/apis.ts
+api/defaultApi.ts
+git_push.sh
+model/dummy200Response.ts
+model/dummy200ResponseOuterProp.ts
+model/dummy200ResponseOuterPropInnerProp.ts
+model/models.ts

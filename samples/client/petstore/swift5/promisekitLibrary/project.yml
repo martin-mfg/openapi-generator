@@ -1,0 +1,16 @@
+name: PetstoreClient
+targets:
+  PetstoreClient:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: [PetstoreClient]
+    info:
+      path: ./Info.plist
+      version: dummy
+    settings:
+      APPLICATION_EXTENSION_API_ONLY: true
+    scheme: {}
+    dependencies:
+    - carthage: AnyCodable
+    - carthage: PromiseKit

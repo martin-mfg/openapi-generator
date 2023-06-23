@@ -1,0 +1,12 @@
+.openapi-generator-ignore
+README.md
+build.gradle.kts
+pom.xml
+settings.gradle
+src/main/kotlin/org/openapitools/api/DefaultApi.kt
+src/main/kotlin/org/openapitools/api/DefaultApiClient.kt
+src/main/kotlin/org/openapitools/configuration/ApiKeyRequestInterceptor.kt
+src/main/kotlin/org/openapitools/configuration/ClientConfiguration.kt
+src/main/kotlin/org/openapitools/model/Dummy200Response.kt
+src/main/kotlin/org/openapitools/model/Dummy200ResponseOuterProp.kt
+src/main/kotlin/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.kt

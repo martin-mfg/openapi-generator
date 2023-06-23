@@ -1,0 +1,8 @@
+.openapi-generator-ignore
+pom.xml
+src/gen/java/org/openapitools/api/DefaultApi.java
+src/gen/java/org/openapitools/model/Dummy200Response.java
+src/gen/java/org/openapitools/model/Dummy200ResponseOuterProp.java
+src/gen/java/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.java
+src/main/java/org/openapitools/api/impl/DefaultApiServiceImpl.java
+src/test/java/org/openapitools/api/DefaultApiTest.java

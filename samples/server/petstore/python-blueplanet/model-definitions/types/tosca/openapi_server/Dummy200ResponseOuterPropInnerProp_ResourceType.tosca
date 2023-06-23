@@ -1,0 +1,35 @@
+"$schema"   = "http://cyaninc.com/json-schemas/tosca-lite-v1/definition-module#"
+title       = "openapi_server Dummy200ResponseOuterPropInnerProp"
+package     = openapi_server
+version     = "1.0"
+description = "Defines a Dummy200ResponseOuterPropInnerProp"
+authors     = ["F. Bar (foo@bar.baz)"]
+
+imports {
+  Root = tosca.resourceTypes.Root
+}
+resourceTypes {
+
+  Dummy200ResponseOuterPropInnerProp {
+    title = Dummy200ResponseOuterPropInnerProp
+    description = Dummy200ResponseOuterPropInnerProp
+    derivedFrom = Root
+    properties {
+        my_bool {
+          type =  boolean
+          description = ""
+          optional = false
+        }
+    }
+  }
+}
+
+serviceTemplates {
+
+  Dummy200ResponseOuterPropInnerProp {
+    title = Dummy200ResponseOuterPropInnerProp
+    description = Dummy200ResponseOuterPropInnerProp
+    implements = openapi_server.resourceTypes.Dummy200ResponseOuterPropInnerProp
+
+  }
+}

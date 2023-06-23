@@ -1,0 +1,6 @@
+.openapi-generator-ignore
+Model/Dummy200Response.sql
+Model/Dummy200ResponseOuterProp.sql
+Model/Dummy200ResponseOuterPropInnerProp.sql
+README.md
+mysql_schema.sql

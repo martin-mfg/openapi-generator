@@ -1,0 +1,15 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/org/openapitools/OpenApiGeneratorApplication.java
+src/main/java/org/openapitools/RFC3339DateFormat.java
+src/main/java/org/openapitools/RestConfiguration.java
+src/main/java/org/openapitools/ValidationErrorProcessor.java
+src/main/java/org/openapitools/api/ExampleApi.java
+src/main/java/org/openapitools/api/ExampleApiRoutesImpl.java
+src/main/java/org/openapitools/api/ExampleApiValidator.java
+src/main/java/org/openapitools/model/Dummy200Response.java
+src/main/java/org/openapitools/model/Dummy200ResponseOuterProp.java
+src/main/java/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.java
+src/main/resources/application.properties
+src/test/java/org/openapitools/api/ExampleApiTest.java

@@ -1,0 +1,9 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+composer.json
+src/App/ApiClient.php
+src/App/ApiClientFactory.php
+src/App/DTO/Dummy200Response.php
+src/App/DTO/Dummy200ResponseOuterProp.php
+src/App/DTO/Dummy200ResponseOuterPropInnerProp.php
