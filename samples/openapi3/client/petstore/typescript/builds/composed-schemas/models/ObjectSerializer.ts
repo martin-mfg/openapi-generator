@@ -1,10 +1,16 @@
 export * from '../models/Dummy200Response';
 export * from '../models/Dummy200ResponseOuterProp';
 export * from '../models/Dummy200ResponseOuterPropInnerProp';
+export * from '../models/ExampleResponse';
+export * from '../models/Node';
+export * from '../models/OtherObject';
 
 import { Dummy200Response } from '../models/Dummy200Response';
 import { Dummy200ResponseOuterProp } from '../models/Dummy200ResponseOuterProp';
 import { Dummy200ResponseOuterPropInnerProp } from '../models/Dummy200ResponseOuterPropInnerProp';
+import { ExampleResponse } from '../models/ExampleResponse';
+import { Node } from '../models/Node';
+import { OtherObject } from '../models/OtherObject';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -32,6 +38,9 @@ let typeMap: {[index: string]: any} = {
     "Dummy200Response": Dummy200Response,
     "Dummy200ResponseOuterProp": Dummy200ResponseOuterProp,
     "Dummy200ResponseOuterPropInnerProp": Dummy200ResponseOuterPropInnerProp,
+    "ExampleResponse": ExampleResponse,
+    "Node": Node,
+    "OtherObject": OtherObject,
 }
 
 export class ObjectSerializer {

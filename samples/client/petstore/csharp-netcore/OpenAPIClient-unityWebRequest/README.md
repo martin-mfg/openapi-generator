@@ -96,6 +96,9 @@ Class | Method | HTTP request | Description
  - [Model.Dummy200Response](Dummy200Response.md)
  - [Model.Dummy200ResponseOuterProp](Dummy200ResponseOuterProp.md)
  - [Model.Dummy200ResponseOuterPropInnerProp](Dummy200ResponseOuterPropInnerProp.md)
+ - [Model.ExampleResponse](ExampleResponse.md)
+ - [Model.Node](Node.md)
+ - [Model.OtherObject](OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

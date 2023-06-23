@@ -11,4 +11,10 @@ model/Dummy_200_response_outerProp.cpp
 model/Dummy_200_response_outerProp.h
 model/Dummy_200_response_outerProp_innerProp.cpp
 model/Dummy_200_response_outerProp_innerProp.h
+model/ExampleResponse.cpp
+model/ExampleResponse.h
+model/Node.cpp
+model/Node.h
+model/OtherObject.cpp
+model/OtherObject.h
 model/helpers.h

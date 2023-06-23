@@ -17,3 +17,6 @@
 from petstore_api.models.dummy200_response import Dummy200Response
 from petstore_api.models.dummy200_response_outer_prop import Dummy200ResponseOuterProp
 from petstore_api.models.dummy200_response_outer_prop_inner_prop import Dummy200ResponseOuterPropInnerProp
+from petstore_api.models.example_response import ExampleResponse
+from petstore_api.models.node import Node
+from petstore_api.models.other_object import OtherObject

@@ -34,3 +34,6 @@ from openapi_client.exceptions import ApiException
 from openapi_client.models.dummy200_response import Dummy200Response
 from openapi_client.models.dummy200_response_outer_prop import Dummy200ResponseOuterProp
 from openapi_client.models.dummy200_response_outer_prop_inner_prop import Dummy200ResponseOuterPropInnerProp
+from openapi_client.models.example_response import ExampleResponse
+from openapi_client.models.node import Node
+from openapi_client.models.other_object import OtherObject

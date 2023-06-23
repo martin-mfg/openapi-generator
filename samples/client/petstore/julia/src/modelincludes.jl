@@ -4,3 +4,6 @@
 include("models/model_Dummy200Response.jl")
 include("models/model_Dummy200ResponseOuterProp.jl")
 include("models/model_Dummy200ResponseOuterPropInnerProp.jl")
+include("models/model_ExampleResponse.jl")
+include("models/model_Node.jl")
+include("models/model_OtherObject.jl")

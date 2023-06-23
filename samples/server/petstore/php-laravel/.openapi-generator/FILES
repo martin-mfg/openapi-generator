@@ -19,6 +19,9 @@ lib/app/Http/Middleware/VerifyCsrfToken.php
 lib/app/Models/Dummy200Response.php
 lib/app/Models/Dummy200ResponseOuterProp.php
 lib/app/Models/Dummy200ResponseOuterPropInnerProp.php
+lib/app/Models/ExampleResponse.php
+lib/app/Models/Node.php
+lib/app/Models/OtherObject.php
 lib/app/Providers/AppServiceProvider.php
 lib/app/Providers/AuthServiceProvider.php
 lib/app/Providers/BroadcastServiceProvider.php

@@ -35,6 +35,9 @@ Class | Method | HTTP request | Description
  - [org.openapitools.server.api.model.Dummy200Response](docs/Dummy200Response.md)
  - [org.openapitools.server.api.model.Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
  - [org.openapitools.server.api.model.Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
+ - [org.openapitools.server.api.model.ExampleResponse](docs/ExampleResponse.md)
+ - [org.openapitools.server.api.model.Node](docs/Node.md)
+ - [org.openapitools.server.api.model.OtherObject](docs/OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

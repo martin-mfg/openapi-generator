@@ -10,4 +10,7 @@ index.ts
 model/dummy200-response-outer-prop-inner-prop.ts
 model/dummy200-response-outer-prop.ts
 model/dummy200-response.ts
+model/example-response.ts
 model/index.ts
+model/node.ts
+model/other-object.ts

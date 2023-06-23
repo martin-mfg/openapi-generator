@@ -34,3 +34,29 @@ paths:
                         properties:
                           myBool:
                             type: boolean
+
+components:
+  x-myextension: dummy
+  schemas:
+    ExampleResponse:
+      x-myextension: dummy
+      type: object
+      description: dummy
+      properties:
+        myOnlyProperty:
+          x-myextension: dummy
+          $ref: '#/components/schemas/OtherObject'
+    OtherObject:
+      type: object
+      description: dummy
+      properties:
+        myOnlyProperty2:
+          $ref: '#/components/schemas/ExampleResponse'
+    Node:
+      type: object
+      description: dummy
+      properties:
+        left:
+          $ref: '#/components/schemas/Node'
+        right:
+          $ref: '#/components/schemas/Node'

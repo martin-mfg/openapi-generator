@@ -81,6 +81,9 @@ Class | Method | HTTP request | Description
  - [DynamicServers::Dummy200Response](docs/Dummy200Response.md)
  - [DynamicServers::Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
  - [DynamicServers::Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
+ - [DynamicServers::ExampleResponse](docs/ExampleResponse.md)
+ - [DynamicServers::Node](docs/Node.md)
+ - [DynamicServers::OtherObject](docs/OtherObject.md)
 
 
 ## Documentation for Authorization

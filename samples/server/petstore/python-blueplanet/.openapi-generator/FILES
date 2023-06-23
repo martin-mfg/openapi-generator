@@ -26,6 +26,9 @@ app/openapi_server/models/base_model_.py
 app/openapi_server/models/dummy200_response.py
 app/openapi_server/models/dummy200_response_outer_prop.py
 app/openapi_server/models/dummy200_response_outer_prop_inner_prop.py
+app/openapi_server/models/example_response.py
+app/openapi_server/models/node.py
+app/openapi_server/models/other_object.py
 app/openapi_server/swagger/swagger.yaml
 app/openapi_server/swagger/swagger.yaml
 app/openapi_server/test/__init__.py
@@ -42,9 +45,15 @@ app/test-requirements.txt
 app/test-requirements.txt
 app/tox.ini
 app/tox.ini
+model-definitions/types/ddui-views/openapi_server.resourceTypes.ExampleResponse/create.json
+model-definitions/types/ddui-views/openapi_server.resourceTypes.ExampleResponse/high.json
+model-definitions/types/ddui-views/openapi_server.resourceTypes.ExampleResponse/low.json
 model-definitions/types/tosca/openapi_server/Dummy200ResponseOuterPropInnerProp_ResourceType.tosca
 model-definitions/types/tosca/openapi_server/Dummy200ResponseOuterProp_ResourceType.tosca
 model-definitions/types/tosca/openapi_server/Dummy200Response_ResourceType.tosca
+model-definitions/types/tosca/openapi_server/ExampleResponse_ResourceType.tosca
+model-definitions/types/tosca/openapi_server/Node_ResourceType.tosca
+model-definitions/types/tosca/openapi_server/OtherObject_ResourceType.tosca
 requirements.txt
 requirements.txt
 solution/fig.yml

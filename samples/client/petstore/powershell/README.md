@@ -63,6 +63,9 @@ Class | Method | HTTP request | Description
  - [PSPetstore/Model.Dummy200Response](docs/Dummy200Response.md)
  - [PSPetstore/Model.Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
  - [PSPetstore/Model.Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
+ - [PSPetstore/Model.ExampleResponse](docs/ExampleResponse.md)
+ - [PSPetstore/Model.Node](docs/Node.md)
+ - [PSPetstore/Model.OtherObject](docs/OtherObject.md)
 
 
 <a id="documentation-for-authorization"></a>

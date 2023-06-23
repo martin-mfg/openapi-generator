@@ -5,7 +5,11 @@ docs/DefaultApi.md
 docs/Dummy200Response.md
 docs/Dummy200ResponseOuterProp.md
 docs/Dummy200ResponseOuterPropInnerProp.md
+docs/ExampleResponse.md
+docs/Node.md
+docs/OtherObject.md
 git_push.sh
+src/Org.OpenAPITools.Test/Model/ExampleResponseTests.cs
 src/Org.OpenAPITools.Test/Org.OpenAPITools.Test.asmdef
 src/Org.OpenAPITools/Api/DefaultApi.cs
 src/Org.OpenAPITools/Client/ApiClient.cs
@@ -29,4 +33,7 @@ src/Org.OpenAPITools/Model/AbstractOpenAPISchema.cs
 src/Org.OpenAPITools/Model/Dummy200Response.cs
 src/Org.OpenAPITools/Model/Dummy200ResponseOuterProp.cs
 src/Org.OpenAPITools/Model/Dummy200ResponseOuterPropInnerProp.cs
+src/Org.OpenAPITools/Model/ExampleResponse.cs
+src/Org.OpenAPITools/Model/Node.cs
+src/Org.OpenAPITools/Model/OtherObject.cs
 src/Org.OpenAPITools/Org.OpenAPITools.asmdef

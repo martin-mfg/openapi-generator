@@ -15,7 +15,10 @@ middleware.ts
 models/Dummy200Response.ts
 models/Dummy200ResponseOuterProp.ts
 models/Dummy200ResponseOuterPropInnerProp.ts
+models/ExampleResponse.ts
+models/Node.ts
 models/ObjectSerializer.ts
+models/OtherObject.ts
 models/all.ts
 package.json
 rxjsStub.ts

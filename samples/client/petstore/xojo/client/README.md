@@ -75,6 +75,9 @@ Class | Method | HTTP request | Description
  - [OpenAPIClient.Models.Dummy200Response](Dummy200Response.md)
  - [OpenAPIClient.Models.Dummy200ResponseOuterProp](Dummy200ResponseOuterProp.md)
  - [OpenAPIClient.Models.Dummy200ResponseOuterPropInnerProp](Dummy200ResponseOuterPropInnerProp.md)
+ - [OpenAPIClient.Models.ExampleResponse](ExampleResponse.md)
+ - [OpenAPIClient.Models.Node](Node.md)
+ - [OpenAPIClient.Models.OtherObject](OtherObject.md)
 
 
 ## Documentation For Authorization

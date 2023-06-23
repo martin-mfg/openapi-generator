@@ -3,6 +3,9 @@ docs/DefaultApi.md
 docs/Dummy200Response.md
 docs/Dummy200ResponseOuterProp.md
 docs/Dummy200ResponseOuterPropInnerProp.md
+docs/ExampleResponse.md
+docs/Node.md
+docs/OtherObject.md
 pom.xml
 src/main/java/org/openapitools/client/api/ApiException.java
 src/main/java/org/openapitools/client/api/ApiExceptionMapper.java
@@ -10,3 +13,7 @@ src/main/java/org/openapitools/client/api/DefaultApi.java
 src/main/java/org/openapitools/client/model/Dummy200Response.java
 src/main/java/org/openapitools/client/model/Dummy200ResponseOuterProp.java
 src/main/java/org/openapitools/client/model/Dummy200ResponseOuterPropInnerProp.java
+src/main/java/org/openapitools/client/model/ExampleResponse.java
+src/main/java/org/openapitools/client/model/Node.java
+src/main/java/org/openapitools/client/model/OtherObject.java
+src/test/java/org/openapitools/client/model/ExampleResponseTest.java

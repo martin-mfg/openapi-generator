@@ -39,4 +39,7 @@ All URIs are relative to http://localhosthttp://localhost
 |*Dummy_200_response* | |
 |*Dummy_200_response_outerProp* | |
 |*Dummy_200_response_outerProp_innerProp* | |
+|*ExampleResponse* | dummy|
+|*Node* | dummy|
+|*OtherObject* | dummy|
 

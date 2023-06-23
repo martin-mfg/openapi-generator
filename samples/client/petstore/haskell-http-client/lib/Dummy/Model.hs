@@ -153,6 +153,97 @@ mkDummy200ResponseOuterPropInnerProp =
   { dummy200ResponseOuterPropInnerPropMyBool = Nothing
   }
 
+-- ** ExampleResponse
+-- | ExampleResponse
+-- dummy
+data ExampleResponse = ExampleResponse
+  { exampleResponseMyOnlyProperty :: !(Maybe OtherObject) -- ^ "myOnlyProperty"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON ExampleResponse
+instance A.FromJSON ExampleResponse where
+  parseJSON = A.withObject "ExampleResponse" $ \o ->
+    ExampleResponse
+      <$> (o .:? "myOnlyProperty")
+
+-- | ToJSON ExampleResponse
+instance A.ToJSON ExampleResponse where
+  toJSON ExampleResponse {..} =
+   _omitNulls
+      [ "myOnlyProperty" .= exampleResponseMyOnlyProperty
+      ]
+
+
+-- | Construct a value of type 'ExampleResponse' (by applying it's required fields, if any)
+mkExampleResponse
+  :: ExampleResponse
+mkExampleResponse =
+  ExampleResponse
+  { exampleResponseMyOnlyProperty = Nothing
+  }
+
+-- ** Node
+-- | Node
+-- dummy
+data Node = Node
+  { nodeLeft :: !(Maybe Node) -- ^ "left"
+  , nodeRight :: !(Maybe Node) -- ^ "right"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON Node
+instance A.FromJSON Node where
+  parseJSON = A.withObject "Node" $ \o ->
+    Node
+      <$> (o .:? "left")
+      <*> (o .:? "right")
+
+-- | ToJSON Node
+instance A.ToJSON Node where
+  toJSON Node {..} =
+   _omitNulls
+      [ "left" .= nodeLeft
+      , "right" .= nodeRight
+      ]
+
+
+-- | Construct a value of type 'Node' (by applying it's required fields, if any)
+mkNode
+  :: Node
+mkNode =
+  Node
+  { nodeLeft = Nothing
+  , nodeRight = Nothing
+  }
+
+-- ** OtherObject
+-- | OtherObject
+-- dummy
+data OtherObject = OtherObject
+  { otherObjectMyOnlyProperty2 :: !(Maybe ExampleResponse) -- ^ "myOnlyProperty2"
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON OtherObject
+instance A.FromJSON OtherObject where
+  parseJSON = A.withObject "OtherObject" $ \o ->
+    OtherObject
+      <$> (o .:? "myOnlyProperty2")
+
+-- | ToJSON OtherObject
+instance A.ToJSON OtherObject where
+  toJSON OtherObject {..} =
+   _omitNulls
+      [ "myOnlyProperty2" .= otherObjectMyOnlyProperty2
+      ]
+
+
+-- | Construct a value of type 'OtherObject' (by applying it's required fields, if any)
+mkOtherObject
+  :: OtherObject
+mkOtherObject =
+  OtherObject
+  { otherObjectMyOnlyProperty2 = Nothing
+  }
+
 
 
 

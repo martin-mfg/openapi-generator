@@ -10,6 +10,9 @@ src/main/java/org/openapitools/configuration/SpringFoxConfiguration.java
 src/main/java/org/openapitools/model/Dummy200ResponseDto.java
 src/main/java/org/openapitools/model/Dummy200ResponseOuterPropDto.java
 src/main/java/org/openapitools/model/Dummy200ResponseOuterPropInnerPropDto.java
+src/main/java/org/openapitools/model/ExampleResponseDto.java
+src/main/java/org/openapitools/model/NodeDto.java
+src/main/java/org/openapitools/model/OtherObjectDto.java
 src/main/resources/application.properties
 src/main/resources/openapi.yaml
 src/main/resources/static/swagger-ui.html

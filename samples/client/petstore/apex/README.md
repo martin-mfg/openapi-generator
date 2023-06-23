@@ -67,6 +67,9 @@ Class | Method | HTTP request | Description
  - [OASDummy200Response](OASDummy200Response.md)
  - [OASDummy200ResponseOuterProp](OASDummy200ResponseOuterProp.md)
  - [OASDummy200ResponseOuterPropInnerPro](OASDummy200ResponseOuterPropInnerPro.md)
+ - [OASExampleResponse](OASExampleResponse.md)
+ - [OASNode](OASNode.md)
+ - [OASOtherObject](OASOtherObject.md)
 
 
 ## Documentation for Authorization

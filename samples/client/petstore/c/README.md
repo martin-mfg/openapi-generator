@@ -72,6 +72,9 @@ Category | Method | HTTP request | Description
  - [dummy_200_response_t](docs/dummy_200_response.md)
  - [dummy_200_response_outer_prop_t](docs/dummy_200_response_outer_prop.md)
  - [dummy_200_response_outer_prop_inner_prop_t](docs/dummy_200_response_outer_prop_inner_prop.md)
+ - [example_response_t](docs/example_response.md)
+ - [node_t](docs/node.md)
+ - [other_object_t](docs/other_object.md)
 
 
 ## Documentation for Authorization

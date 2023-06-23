@@ -137,6 +137,31 @@ genDummy200ResponseOuterPropInnerProp n =
   Dummy200ResponseOuterPropInnerProp
     <$> arbitraryReducedMaybe n -- dummy200ResponseOuterPropInnerPropMyBool :: Maybe Bool
   
+instance Arbitrary ExampleResponse where
+  arbitrary = sized genExampleResponse
+
+genExampleResponse :: Int -> Gen ExampleResponse
+genExampleResponse n =
+  ExampleResponse
+    <$> arbitraryReducedMaybe n -- exampleResponseMyOnlyProperty :: Maybe OtherObject
+  
+instance Arbitrary Node where
+  arbitrary = sized genNode
+
+genNode :: Int -> Gen Node
+genNode n =
+  Node
+    <$> arbitraryReducedMaybe n -- nodeLeft :: Maybe Node
+    <*> arbitraryReducedMaybe n -- nodeRight :: Maybe Node
+  
+instance Arbitrary OtherObject where
+  arbitrary = sized genOtherObject
+
+genOtherObject :: Int -> Gen OtherObject
+genOtherObject n =
+  OtherObject
+    <$> arbitraryReducedMaybe n -- otherObjectMyOnlyProperty2 :: Maybe ExampleResponse
+  
 
 
 

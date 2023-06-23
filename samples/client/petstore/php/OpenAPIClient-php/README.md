@@ -78,6 +78,9 @@ Class | Method | HTTP request | Description
 - [Dummy200Response](docs/Model/Dummy200Response.md)
 - [Dummy200ResponseOuterProp](docs/Model/Dummy200ResponseOuterProp.md)
 - [Dummy200ResponseOuterPropInnerProp](docs/Model/Dummy200ResponseOuterPropInnerProp.md)
+- [ExampleResponse](docs/Model/ExampleResponse.md)
+- [Node](docs/Model/Node.md)
+- [OtherObject](docs/Model/OtherObject.md)
 
 ## Authorization
 Endpoints do not require authorization.

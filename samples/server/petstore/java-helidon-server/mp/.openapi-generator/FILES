@@ -8,8 +8,12 @@ src/main/java/org/openapitools/server/api/DefaultServiceImpl.java
 src/main/java/org/openapitools/server/model/Dummy200Response.java
 src/main/java/org/openapitools/server/model/Dummy200ResponseOuterProp.java
 src/main/java/org/openapitools/server/model/Dummy200ResponseOuterPropInnerProp.java
+src/main/java/org/openapitools/server/model/ExampleResponse.java
+src/main/java/org/openapitools/server/model/Node.java
+src/main/java/org/openapitools/server/model/OtherObject.java
 src/main/java/org/openapitools/server/package-info.java
 src/main/resources/META-INF/beans.xml
 src/main/resources/META-INF/microprofile-config.properties
 src/main/resources/META-INF/openapi.yml
 src/main/resources/logging.properties
+src/test/java/org/openapitools/server/model/ExampleResponseTest.java

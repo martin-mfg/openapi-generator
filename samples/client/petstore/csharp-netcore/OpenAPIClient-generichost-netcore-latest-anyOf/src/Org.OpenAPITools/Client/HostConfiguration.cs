@@ -45,6 +45,9 @@ namespace Org.OpenAPITools.Client
             _jsonOptions.Converters.Add(new Dummy200ResponseJsonConverter());
             _jsonOptions.Converters.Add(new Dummy200ResponseOuterPropJsonConverter());
             _jsonOptions.Converters.Add(new Dummy200ResponseOuterPropInnerPropJsonConverter());
+            _jsonOptions.Converters.Add(new ExampleResponseJsonConverter());
+            _jsonOptions.Converters.Add(new NodeJsonConverter());
+            _jsonOptions.Converters.Add(new OtherObjectJsonConverter());
             _services.AddSingleton(new JsonSerializerOptionsProvider(_jsonOptions));
             _services.AddSingleton<IApiFactory, ApiFactory>();
             _services.AddTransient<IDefaultApi, DefaultApi>();

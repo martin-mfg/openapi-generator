@@ -26,6 +26,30 @@ paths:
     x-myextension: dummy
 components:
   schemas:
+    ExampleResponse:
+      description: dummy
+      properties:
+        myOnlyProperty:
+          $ref: '#/components/schemas/OtherObject'
+      title: ExampleResponse
+      type: object
+      x-myextension: dummy
+    OtherObject:
+      description: dummy
+      properties:
+        myOnlyProperty2:
+          $ref: '#/components/schemas/ExampleResponse'
+      title: OtherObject
+      type: object
+    Node:
+      description: dummy
+      properties:
+        left:
+          $ref: '#/components/schemas/Node'
+        right:
+          $ref: '#/components/schemas/Node'
+      title: Node
+      type: object
     dummy_200_response_outerProp_innerProp:
       example:
         myBool: true
@@ -35,6 +59,16 @@ components:
           type: boolean
       title: dummy_200_response_outerProp_innerProp
       type: object
+    dummy_200_response_outerProp:
+      example:
+        innerProp:
+          myBool: true
+      properties:
+        innerProp:
+          $ref: '#/components/schemas/dummy_200_response_outerProp_innerProp'
+      title: dummy_200_response_outerProp
+      type: object
+      x-myextension: dummy
     dummy_200_response:
       example:
         outerProp:
@@ -46,14 +80,5 @@ components:
       title: dummy_200_response
       type: object
       x-myextension: dummy
-    dummy_200_response_outerProp:
-      example:
-        innerProp:
-          myBool: true
-      properties:
-        innerProp:
-          $ref: '#/components/schemas/dummy_200_response_outerProp_innerProp'
-      title: dummy_200_response_outerProp
-      type: object
-      x-myextension: dummy
+  x-myextension: dummy
 x-myextension: dummy

@@ -7,6 +7,9 @@ module Dummy.Types (
   Dummy200Response (..),
   Dummy200ResponseOuterProp (..),
   Dummy200ResponseOuterPropInnerProp (..),
+  ExampleResponse (..),
+  Node (..),
+  OtherObject (..),
   ) where
 
 import ClassyPrelude.Yesod
@@ -52,6 +55,40 @@ instance FromJSON Dummy200ResponseOuterPropInnerProp where
   parseJSON = genericParseJSON (removeFieldLabelPrefix True "dummy200ResponseOuterPropInnerProp")
 instance ToJSON Dummy200ResponseOuterPropInnerProp where
   toJSON = genericToJSON (removeFieldLabelPrefix False "dummy200ResponseOuterPropInnerProp")
+
+
+-- | dummy
+data ExampleResponse = ExampleResponse
+  { exampleResponseMyOnlyProperty :: Maybe OtherObject -- ^ 
+  } deriving (Show, Eq, Generic)
+
+instance FromJSON ExampleResponse where
+  parseJSON = genericParseJSON (removeFieldLabelPrefix True "exampleResponse")
+instance ToJSON ExampleResponse where
+  toJSON = genericToJSON (removeFieldLabelPrefix False "exampleResponse")
+
+
+-- | dummy
+data Node = Node
+  { nodeLeft :: Maybe Node -- ^ 
+  , nodeRight :: Maybe Node -- ^ 
+  } deriving (Show, Eq, Generic)
+
+instance FromJSON Node where
+  parseJSON = genericParseJSON (removeFieldLabelPrefix True "node")
+instance ToJSON Node where
+  toJSON = genericToJSON (removeFieldLabelPrefix False "node")
+
+
+-- | dummy
+data OtherObject = OtherObject
+  { otherObjectMyOnlyProperty2 :: Maybe ExampleResponse -- ^ 
+  } deriving (Show, Eq, Generic)
+
+instance FromJSON OtherObject where
+  parseJSON = genericParseJSON (removeFieldLabelPrefix True "otherObject")
+instance ToJSON OtherObject where
+  toJSON = genericToJSON (removeFieldLabelPrefix False "otherObject")
 
 
 uncapitalize :: String -> String

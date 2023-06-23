@@ -81,6 +81,9 @@ Class | Method | HTTP request | Description
  - [XAuthIDAlias::Dummy200Response](docs/Dummy200Response.md)
  - [XAuthIDAlias::Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
  - [XAuthIDAlias::Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
+ - [XAuthIDAlias::ExampleResponse](docs/ExampleResponse.md)
+ - [XAuthIDAlias::Node](docs/Node.md)
+ - [XAuthIDAlias::OtherObject](docs/OtherObject.md)
 
 
 ## Documentation for Authorization

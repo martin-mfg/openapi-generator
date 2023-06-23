@@ -15,6 +15,9 @@ openapi_server/models/base_model_.py
 openapi_server/models/dummy200_response.py
 openapi_server/models/dummy200_response_outer_prop.py
 openapi_server/models/dummy200_response_outer_prop_inner_prop.py
+openapi_server/models/example_response.py
+openapi_server/models/node.py
+openapi_server/models/other_object.py
 openapi_server/openapi/openapi.yaml
 openapi_server/test/__init__.py
 openapi_server/typing_utils.py

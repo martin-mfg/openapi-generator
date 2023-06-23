@@ -16,6 +16,9 @@ include/CppRestPetstoreClient/api/DefaultApi.h
 include/CppRestPetstoreClient/model/Dummy_200_response.h
 include/CppRestPetstoreClient/model/Dummy_200_response_outerProp.h
 include/CppRestPetstoreClient/model/Dummy_200_response_outerProp_innerProp.h
+include/CppRestPetstoreClient/model/ExampleResponse.h
+include/CppRestPetstoreClient/model/Node.h
+include/CppRestPetstoreClient/model/OtherObject.h
 src/ApiClient.cpp
 src/ApiConfiguration.cpp
 src/ApiException.cpp
@@ -28,3 +31,6 @@ src/api/DefaultApi.cpp
 src/model/Dummy_200_response.cpp
 src/model/Dummy_200_response_outerProp.cpp
 src/model/Dummy_200_response_outerProp_innerProp.cpp
+src/model/ExampleResponse.cpp
+src/model/Node.cpp
+src/model/OtherObject.cpp

@@ -5,6 +5,9 @@ import {mergeMap, map} from  '../rxjsStub.ts';
 import { Dummy200Response } from '../models/Dummy200Response.ts';
 import { Dummy200ResponseOuterProp } from '../models/Dummy200ResponseOuterProp.ts';
 import { Dummy200ResponseOuterPropInnerProp } from '../models/Dummy200ResponseOuterPropInnerProp.ts';
+import { ExampleResponse } from '../models/ExampleResponse.ts';
+import { Node } from '../models/Node.ts';
+import { OtherObject } from '../models/OtherObject.ts';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi.ts";
 export class ObservableDefaultApi {

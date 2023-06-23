@@ -12,5 +12,8 @@ go/logger.go
 go/model_dummy_200_response.go
 go/model_dummy_200_response_outer_prop.go
 go/model_dummy_200_response_outer_prop_inner_prop.go
+go/model_example_response.go
+go/model_node.go
+go/model_other_object.go
 go/routers.go
 main.go

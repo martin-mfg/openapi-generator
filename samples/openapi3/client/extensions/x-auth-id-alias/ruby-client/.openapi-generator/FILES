@@ -10,6 +10,9 @@ docs/DefaultApi.md
 docs/Dummy200Response.md
 docs/Dummy200ResponseOuterProp.md
 docs/Dummy200ResponseOuterPropInnerProp.md
+docs/ExampleResponse.md
+docs/Node.md
+docs/OtherObject.md
 git_push.sh
 lib/x_auth_id_alias.rb
 lib/x_auth_id_alias/api/default_api.rb
@@ -19,8 +22,12 @@ lib/x_auth_id_alias/configuration.rb
 lib/x_auth_id_alias/models/dummy200_response.rb
 lib/x_auth_id_alias/models/dummy200_response_outer_prop.rb
 lib/x_auth_id_alias/models/dummy200_response_outer_prop_inner_prop.rb
+lib/x_auth_id_alias/models/example_response.rb
+lib/x_auth_id_alias/models/node.rb
+lib/x_auth_id_alias/models/other_object.rb
 lib/x_auth_id_alias/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
+spec/models/example_response_spec.rb
 spec/spec_helper.rb
 x_auth_id_alias.gemspec

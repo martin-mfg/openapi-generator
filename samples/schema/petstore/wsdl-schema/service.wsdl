@@ -19,6 +19,31 @@
           <xs:element minOccurs="0" name="myBool" type="xs:boolean" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="ExampleResponse">
+        <xs:annotation>
+          <xs:documentation>dummy</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="myOnlyProperty" type="schemas:OtherObject" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Node">
+        <xs:annotation>
+          <xs:documentation>dummy</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="left" type="schemas:Node" />
+          <xs:element minOccurs="0" name="right" type="schemas:Node" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OtherObject">
+        <xs:annotation>
+          <xs:documentation>dummy</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="myOnlyProperty2" type="schemas:ExampleResponse" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="GetExampleSomemethod_RequestMessage" />
       <xs:complexType name="GetExampleSomemethod_ResponseMessage">
         <xs:sequence>

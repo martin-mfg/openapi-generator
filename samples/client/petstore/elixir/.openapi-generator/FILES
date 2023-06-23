@@ -9,6 +9,9 @@ lib/openapi_petstore/deserializer.ex
 lib/openapi_petstore/model/dummy_200_response.ex
 lib/openapi_petstore/model/dummy_200_response_outer_prop.ex
 lib/openapi_petstore/model/dummy_200_response_outer_prop_inner_prop.ex
+lib/openapi_petstore/model/example_response.ex
+lib/openapi_petstore/model/node.ex
+lib/openapi_petstore/model/other_object.ex
 lib/openapi_petstore/request_builder.ex
 mix.exs
 test/test_helper.exs

@@ -13,3 +13,6 @@ export 'package:openapi/src/api/default_api.dart';
 export 'package:openapi/src/model/dummy200_response.dart';
 export 'package:openapi/src/model/dummy200_response_outer_prop.dart';
 export 'package:openapi/src/model/dummy200_response_outer_prop_inner_prop.dart';
+export 'package:openapi/src/model/example_response.dart';
+export 'package:openapi/src/model/node.dart';
+export 'package:openapi/src/model/other_object.dart';

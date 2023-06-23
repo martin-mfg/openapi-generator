@@ -3,6 +3,9 @@ import localVarRequest from 'request';
 export * from './dummy200Response';
 export * from './dummy200ResponseOuterProp';
 export * from './dummy200ResponseOuterPropInnerProp';
+export * from './exampleResponse';
+export * from './node';
+export * from './otherObject';
 
 import * as fs from 'fs';
 
@@ -20,6 +23,9 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 import { Dummy200Response } from './dummy200Response';
 import { Dummy200ResponseOuterProp } from './dummy200ResponseOuterProp';
 import { Dummy200ResponseOuterPropInnerProp } from './dummy200ResponseOuterPropInnerProp';
+import { ExampleResponse } from './exampleResponse';
+import { Node } from './node';
+import { OtherObject } from './otherObject';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -40,6 +46,9 @@ let typeMap: {[index: string]: any} = {
     "Dummy200Response": Dummy200Response,
     "Dummy200ResponseOuterProp": Dummy200ResponseOuterProp,
     "Dummy200ResponseOuterPropInnerProp": Dummy200ResponseOuterPropInnerProp,
+    "ExampleResponse": ExampleResponse,
+    "Node": Node,
+    "OtherObject": OtherObject,
 }
 
 export class ObjectSerializer {

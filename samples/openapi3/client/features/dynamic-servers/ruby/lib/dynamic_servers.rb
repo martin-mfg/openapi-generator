@@ -20,6 +20,9 @@ require 'dynamic_servers/configuration'
 require 'dynamic_servers/models/dummy200_response'
 require 'dynamic_servers/models/dummy200_response_outer_prop'
 require 'dynamic_servers/models/dummy200_response_outer_prop_inner_prop'
+require 'dynamic_servers/models/example_response'
+require 'dynamic_servers/models/node'
+require 'dynamic_servers/models/other_object'
 
 # APIs
 require 'dynamic_servers/api/default_api'

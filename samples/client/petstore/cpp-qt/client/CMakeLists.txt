@@ -11,6 +11,9 @@ add_library(${PROJECT_NAME}
   PFXDummy_200_response.h
   PFXDummy_200_response_outerProp.h
   PFXDummy_200_response_outerProp_innerProp.h
+  PFXExampleResponse.h
+  PFXNode.h
+  PFXOtherObject.h
   PFXDefaultApi.h
   PFXHelpers.h
   PFXHttpRequest.h
@@ -23,6 +26,9 @@ add_library(${PROJECT_NAME}
   PFXDummy_200_response.cpp
   PFXDummy_200_response_outerProp.cpp
   PFXDummy_200_response_outerProp_innerProp.cpp
+  PFXExampleResponse.cpp
+  PFXNode.cpp
+  PFXOtherObject.cpp
   PFXDefaultApi.cpp
   PFXHelpers.cpp
   PFXHttpRequest.cpp

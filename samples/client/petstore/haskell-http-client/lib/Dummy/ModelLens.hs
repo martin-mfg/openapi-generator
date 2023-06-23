@@ -62,3 +62,35 @@ dummy200ResponseOuterPropInnerPropMyBoolL f Dummy200ResponseOuterPropInnerProp{.
 {-# INLINE dummy200ResponseOuterPropInnerPropMyBoolL #-}
 
 
+
+-- * ExampleResponse
+
+-- | 'exampleResponseMyOnlyProperty' Lens
+exampleResponseMyOnlyPropertyL :: Lens_' ExampleResponse (Maybe OtherObject)
+exampleResponseMyOnlyPropertyL f ExampleResponse{..} = (\exampleResponseMyOnlyProperty -> ExampleResponse { exampleResponseMyOnlyProperty, ..} ) <$> f exampleResponseMyOnlyProperty
+{-# INLINE exampleResponseMyOnlyPropertyL #-}
+
+
+
+-- * Node
+
+-- | 'nodeLeft' Lens
+nodeLeftL :: Lens_' Node (Maybe Node)
+nodeLeftL f Node{..} = (\nodeLeft -> Node { nodeLeft, ..} ) <$> f nodeLeft
+{-# INLINE nodeLeftL #-}
+
+-- | 'nodeRight' Lens
+nodeRightL :: Lens_' Node (Maybe Node)
+nodeRightL f Node{..} = (\nodeRight -> Node { nodeRight, ..} ) <$> f nodeRight
+{-# INLINE nodeRightL #-}
+
+
+
+-- * OtherObject
+
+-- | 'otherObjectMyOnlyProperty2' Lens
+otherObjectMyOnlyProperty2L :: Lens_' OtherObject (Maybe ExampleResponse)
+otherObjectMyOnlyProperty2L f OtherObject{..} = (\otherObjectMyOnlyProperty2 -> OtherObject { otherObjectMyOnlyProperty2, ..} ) <$> f otherObjectMyOnlyProperty2
+{-# INLINE otherObjectMyOnlyProperty2L #-}
+
+

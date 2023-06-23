@@ -20,6 +20,9 @@ require 'petstore/configuration'
 require 'petstore/models/dummy200_response'
 require 'petstore/models/dummy200_response_outer_prop'
 require 'petstore/models/dummy200_response_outer_prop_inner_prop'
+require 'petstore/models/example_response'
+require 'petstore/models/node'
+require 'petstore/models/other_object'
 
 # APIs
 require 'petstore/api/default_api'

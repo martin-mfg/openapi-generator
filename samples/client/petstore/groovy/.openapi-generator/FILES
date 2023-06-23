@@ -5,3 +5,6 @@ src/main/groovy/org/openapitools/api/DefaultApi.groovy
 src/main/groovy/org/openapitools/model/Dummy200Response.groovy
 src/main/groovy/org/openapitools/model/Dummy200ResponseOuterProp.groovy
 src/main/groovy/org/openapitools/model/Dummy200ResponseOuterPropInnerProp.groovy
+src/main/groovy/org/openapitools/model/ExampleResponse.groovy
+src/main/groovy/org/openapitools/model/Node.groovy
+src/main/groovy/org/openapitools/model/OtherObject.groovy

@@ -5,8 +5,15 @@ lib/Models/Dummy200ResponseOuterProp.cpp
 lib/Models/Dummy200ResponseOuterProp.h
 lib/Models/Dummy200ResponseOuterPropInnerProp.cpp
 lib/Models/Dummy200ResponseOuterPropInnerProp.h
+lib/Models/ExampleResponse.cpp
+lib/Models/ExampleResponse.h
 lib/Models/Helpers.cpp
 lib/Models/Helpers.h
+lib/Models/Node.cpp
+lib/Models/Node.h
+lib/Models/OtherObject.cpp
+lib/Models/OtherObject.h
+lib/TestFiles/ExampleResponseTest.cpp
 lib/service/DefaultApi.cpp
 lib/service/DefaultApi.h
 lib/service/Response.h

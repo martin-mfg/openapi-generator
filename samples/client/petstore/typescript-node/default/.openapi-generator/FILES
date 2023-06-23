@@ -6,4 +6,7 @@ git_push.sh
 model/dummy200Response.ts
 model/dummy200ResponseOuterProp.ts
 model/dummy200ResponseOuterPropInnerProp.ts
+model/exampleResponse.ts
 model/models.ts
+model/node.ts
+model/otherObject.ts

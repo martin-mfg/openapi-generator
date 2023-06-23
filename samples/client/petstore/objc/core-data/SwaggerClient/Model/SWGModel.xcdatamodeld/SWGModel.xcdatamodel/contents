@@ -10,5 +10,15 @@
     <entity name="SWGDummy200ResponseOuterPropInnerPropManagedObject" representedClassName="SWGDummy200ResponseOuterPropInnerPropManagedObject" syncable="YES">
         <attribute name="myBool" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
+    <entity name="SWGExampleResponseManagedObject" representedClassName="SWGExampleResponseManagedObject" syncable="YES">
+        <relationship name="myOnlyProperty" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGOtherObjectManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="SWGNodeManagedObject" representedClassName="SWGNodeManagedObject" syncable="YES">
+        <relationship name="left" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGNodeManagedObject" syncable="YES"/>
+        <relationship name="right" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGNodeManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="SWGOtherObjectManagedObject" representedClassName="SWGOtherObjectManagedObject" syncable="YES">
+        <relationship name="myOnlyProperty2" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SWGExampleResponseManagedObject" syncable="YES"/>
+    </entity>
     
 </model>

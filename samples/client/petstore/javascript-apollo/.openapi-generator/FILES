@@ -6,6 +6,9 @@ docs/DefaultApi.md
 docs/Dummy200Response.md
 docs/Dummy200ResponseOuterProp.md
 docs/Dummy200ResponseOuterPropInnerProp.md
+docs/ExampleResponse.md
+docs/Node.md
+docs/OtherObject.md
 git_push.sh
 mocha.opts
 package.json
@@ -15,3 +18,7 @@ src/index.js
 src/model/Dummy200Response.js
 src/model/Dummy200ResponseOuterProp.js
 src/model/Dummy200ResponseOuterPropInnerProp.js
+src/model/ExampleResponse.js
+src/model/Node.js
+src/model/OtherObject.js
+test/model/ExampleResponse.spec.js

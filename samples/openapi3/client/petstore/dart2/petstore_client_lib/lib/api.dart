@@ -32,6 +32,9 @@ part 'api/default_api.dart';
 part 'model/dummy200_response.dart';
 part 'model/dummy200_response_outer_prop.dart';
 part 'model/dummy200_response_outer_prop_inner_prop.dart';
+part 'model/example_response.dart';
+part 'model/node.dart';
+part 'model/other_object.dart';
 
 
 const _delimiters = {'csv': ',', 'ssv': ' ', 'tsv': '\t', 'pipes': '|'};

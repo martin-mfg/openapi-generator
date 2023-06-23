@@ -81,6 +81,9 @@ Class | Method | HTTP request | Description
  - [Petstore::Dummy200Response](docs/Dummy200Response.md)
  - [Petstore::Dummy200ResponseOuterProp](docs/Dummy200ResponseOuterProp.md)
  - [Petstore::Dummy200ResponseOuterPropInnerProp](docs/Dummy200ResponseOuterPropInnerProp.md)
+ - [Petstore::ExampleResponse](docs/ExampleResponse.md)
+ - [Petstore::Node](docs/Node.md)
+ - [Petstore::OtherObject](docs/OtherObject.md)
 
 
 ## Documentation for Authorization

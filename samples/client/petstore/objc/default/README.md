@@ -44,6 +44,9 @@ Import the following:
 #import <SwaggerClient/SWGDummy200Response.h>
 #import <SwaggerClient/SWGDummy200ResponseOuterProp.h>
 #import <SwaggerClient/SWGDummy200ResponseOuterPropInnerProp.h>
+#import <SwaggerClient/SWGExampleResponse.h>
+#import <SwaggerClient/SWGNode.h>
+#import <SwaggerClient/SWGOtherObject.h>
 // load API classes for accessing endpoints
 #import <SwaggerClient/SWGDefaultApi.h>
 
@@ -89,6 +92,9 @@ Class | Method | HTTP request | Description
  - [SWGDummy200Response](docs/SWGDummy200Response.md)
  - [SWGDummy200ResponseOuterProp](docs/SWGDummy200ResponseOuterProp.md)
  - [SWGDummy200ResponseOuterPropInnerProp](docs/SWGDummy200ResponseOuterPropInnerProp.md)
+ - [SWGExampleResponse](docs/SWGExampleResponse.md)
+ - [SWGNode](docs/SWGNode.md)
+ - [SWGOtherObject](docs/SWGOtherObject.md)
 
 
 ## Documentation For Authorization

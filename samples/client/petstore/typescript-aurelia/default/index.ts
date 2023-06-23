@@ -17,4 +17,7 @@ export {
   Dummy200Response,
   Dummy200ResponseOuterProp,
   Dummy200ResponseOuterPropInnerProp,
+  ExampleResponse,
+  Node,
+  OtherObject,
 } from './models';

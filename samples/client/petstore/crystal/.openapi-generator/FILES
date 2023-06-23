@@ -3,6 +3,7 @@
 README.md
 git_push.sh
 shard.yml
+spec/models/example_response_spec.cr
 spec/spec_helper.cr
 src/petstore.cr
 src/petstore/api/default_api.cr
@@ -12,3 +13,6 @@ src/petstore/configuration.cr
 src/petstore/models/dummy200_response.cr
 src/petstore/models/dummy200_response_outer_prop.cr
 src/petstore/models/dummy200_response_outer_prop_inner_prop.cr
+src/petstore/models/example_response.cr
+src/petstore/models/node.cr
+src/petstore/models/other_object.cr
