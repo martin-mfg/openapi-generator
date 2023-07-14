@@ -151,6 +151,10 @@ public interface IJsonSchemaValidationProperties {
 
     void setIsNull(boolean isNull);
 
+    boolean getIsVoid();
+
+    void setIsVoid(boolean isVoid);
+
     boolean getHasValidation();
 
     void setHasValidation(boolean hasValidation);
@@ -222,11 +226,8 @@ public interface IJsonSchemaValidationProperties {
      * @param p the schema which contains the type info
      */
     default void setTypeProperties(Schema p) {
-        if (ModelUtils.isTypeObjectSchema(p)) {
-            setIsMap(true);
-            if (ModelUtils.isModelWithPropertiesOnly(p)) {
+        if (ModelUtils.isModelWithPropertiesOnly(p)) {
                 setIsModel(true);
-            }
         } else if (ModelUtils.isArraySchema(p)) {
             setIsArray(true);
         } else if (ModelUtils.isFileSchema(p) && !ModelUtils.isStringSchema(p)) {
@@ -278,9 +279,8 @@ public interface IJsonSchemaValidationProperties {
             setIsNull(true);
         } else if (ModelUtils.isAnyType(p)) {
             setIsAnyType(true);
-            if (ModelUtils.isModelWithPropertiesOnly(p)) {
-                setIsModel(true);
-            }
+        } else if (ModelUtils.isTypeObjectSchema(p)) {
+            setIsMap(true);
         }
     }
 

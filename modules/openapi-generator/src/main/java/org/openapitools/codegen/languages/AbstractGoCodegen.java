@@ -145,6 +145,8 @@ public abstract class AbstractGoCodegen extends DefaultCodegen implements Codege
                         "float32", "float64")
         );
 
+        apiNameSuffix = "API";
+
         cliOptions.clear();
         cliOptions.add(new CliOption(CodegenConstants.PACKAGE_NAME, "Go package name (convention: lowercase).")
                 .defaultValue("openapi"));
@@ -363,7 +365,7 @@ public abstract class AbstractGoCodegen extends DefaultCodegen implements Codege
             }
             return "[]" + typDecl;
         } else if (ModelUtils.isMapSchema(p)) {
-            Schema inner = getAdditionalProperties(p);
+            Schema inner = ModelUtils.getAdditionalProperties(p);
             return getSchemaType(p) + "[string]" +  getTypeDeclaration(unaliasSchema(inner));
         }
 

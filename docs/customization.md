@@ -445,16 +445,27 @@ For example, to name the inline schema `meta_200_response` as `MetaObject`, use 
 java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g java -i  modules/openapi-generator/src/test/resources/3_0/inline_model_resolver.yaml -o /tmp/java3/ --skip-validate-spec --inline-schema-name-mappings meta_200_response=MetaObject,arbitraryObjectRequestBodyProperty_request=ArbitraryRequest
 ```
 
-Another useful option is `inlineSchemaNameDefaults`, which allows you to customize the suffix of the auto-generated inline schema name, e.g. in CLI
+Another useful option is `inlineSchemaOptions`, which allows you to customize how inline schemas are handled or named
 ```
---inline-schema-name-defaults arrayItemSuffix=_array_item,mapItemSuffix=_map_item
+--inline-schema-options ARRAY_ITEM_SUFFIX=_array_item,MAP_ITEM_SUFFIX=_map_item,RESOLVE_INLINE_ENUMS=true
 ```
 
-Note: Only arrayItemSuffix, mapItemSuffix are supported at the moment. `SKIP_SCHEMA_REUSE=true` is a special value to skip reusing inline schemas.
+- `ARRAY_ITEM_SUFFIX` sets the array item suffix
+- `MAP_ITEM_SUFFIX` set the map item suffix
+- `SKIP_SCHEMA_REUSE=true` is a special value to skip reusing inline schemas during refactoring
+- `REFACTOR_ALLOF_INLINE_SCHEMAS=true` will restore the 6.x (or below) behaviour to refactor allOf inline schemas into $ref. (v7.0.0 will skip the refactoring of these allOf inline schmeas by default)
+- `RESOLVE_INLINE_ENUMS=true` will refactor inline enum definitions into $ref
 
 ## OpenAPI Normalizer
 
-OpenAPI Normalizer (off by default) transforms the input OpenAPI doc/spec (which may not perfectly conform to the specification) to make it workable with OpenAPI Generator. Here is a list of rules supported:
+OpenAPI Normalizer transforms the input OpenAPI doc/spec (which may not perfectly conform to the specification) to make it workable with OpenAPI Generator. A few rules are switched on by default since 7.0.0 release:
+
+- SIMPLIFY_ONEOF_ANYOF 
+- SIMPLIFY_BOOLEAN_ENUM
+
+(One can use `DISABLE_ALL=true` to disable all the rules)
+
+Here is a list of rules supported:
 
 - `REF_AS_PARENT_IN_ALLOF`: when set to `true`, child schemas in `allOf` is considered a parent if it's a `$ref` (instead of inline schema).
 
