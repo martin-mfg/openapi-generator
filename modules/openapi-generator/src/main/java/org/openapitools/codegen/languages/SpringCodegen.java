@@ -335,10 +335,6 @@ public class SpringCodegen extends AbstractJavaCodegen
                 .map(e -> Pair.of(e.getKey(), e.getValue().toString())).collect(Collectors.toList());
         additionalProperties.put("configOptions", configOptions);
 
-        // TODO remove "file" from reserved word list as feign client doesn't support using `baseName`
-        // as the parameter name yet
-        reservedWords.remove("file");
-
         // Process java8 option before common java ones to change the default
         // dateLibrary to java8.
         LOGGER.info("----------------------------------");
@@ -558,6 +554,7 @@ public class SpringCodegen extends AbstractJavaCodegen
         if (isUseSpringBoot3()) {
             importMapping.put("ParameterObject", "org.springdoc.core.annotations.ParameterObject");
         }
+        updateReservedWords();
 
         if (useOptional) {
             writePropertyBack(USE_OPTIONAL, useOptional);
@@ -735,6 +732,15 @@ public class SpringCodegen extends AbstractJavaCodegen
             modelTemplateFiles.clear();
         }
         supportsAdditionalPropertiesWithComposedSchema = true;
+    }
+
+    @Override
+    protected void updateReservedWords() {
+        super.updateReservedWords();
+
+        // TODO remove "file" from reserved word list as feign client doesn't support using `baseName`
+        // as the parameter name yet
+        reservedWords.remove("file");
     }
 
     private boolean containsEnums() {
@@ -1236,6 +1242,7 @@ public class SpringCodegen extends AbstractJavaCodegen
         // this allows to use a custom Pageable schema without importing Spring Pageable.
         if (Boolean.TRUE.equals(operation.getExtensions().get("x-spring-paginated"))) {
             importMapping.put("Pageable", "org.springframework.data.domain.Pageable");
+            updateReservedWords();
         }
 
         CodegenOperation codegenOperation = super.fromOperation(path, httpMethod, operation, servers);
