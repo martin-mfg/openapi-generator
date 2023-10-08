@@ -72,13 +72,13 @@ namespace Org.OpenAPITools.Model
         /// <exception cref="NotImplementedException"></exception>
         public static TypeEnum TypeEnumFromString(string value)
         {
-            if (value == "plains")
+            if (value.Equals("plains"))
                 return TypeEnum.Plains;
 
-            if (value == "mountain")
+            if (value.Equals("mountain"))
                 return TypeEnum.Mountain;
 
-            if (value == "grevys")
+            if (value.Equals("grevys"))
                 return TypeEnum.Grevys;
 
             throw new NotImplementedException($"Could not convert value to type TypeEnum: '{value}'");
@@ -91,13 +91,13 @@ namespace Org.OpenAPITools.Model
         /// <returns></returns>
         public static TypeEnum? TypeEnumFromStringOrDefault(string value)
         {
-            if (value == "plains")
+            if (value.Equals("plains"))
                 return TypeEnum.Plains;
 
-            if (value == "mountain")
+            if (value.Equals("mountain"))
                 return TypeEnum.Mountain;
 
-            if (value == "grevys")
+            if (value.Equals("grevys"))
                 return TypeEnum.Grevys;
 
             return null;
@@ -164,6 +164,16 @@ namespace Org.OpenAPITools.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
             yield break;
         }
     }
@@ -203,10 +213,10 @@ namespace Org.OpenAPITools.Model
 
                 if (utf8JsonReader.TokenType == JsonTokenType.PropertyName && currentDepth == utf8JsonReader.CurrentDepth - 1)
                 {
-                    string propertyName = utf8JsonReader.GetString();
+                    string localVarJsonPropertyName = utf8JsonReader.GetString();
                     utf8JsonReader.Read();
 
-                    switch (propertyName)
+                    switch (localVarJsonPropertyName)
                     {
                         case "className":
                             className = utf8JsonReader.GetString();

@@ -85,6 +85,7 @@ Class | Method | HTTP request | Description
 *FakeAPI* | [**FakeOuterCompositeSerialize**](docs/FakeAPI.md#fakeoutercompositeserialize) | **Post** /fake/outer/composite | 
 *FakeAPI* | [**FakeOuterNumberSerialize**](docs/FakeAPI.md#fakeouternumberserialize) | **Post** /fake/outer/number | 
 *FakeAPI* | [**FakeOuterStringSerialize**](docs/FakeAPI.md#fakeouterstringserialize) | **Post** /fake/outer/string | 
+*FakeAPI* | [**GetParameterNameMapping**](docs/FakeAPI.md#getparameternamemapping) | **Get** /fake/parameter-name-mapping | parameter name mapping test
 *FakeAPI* | [**TestBodyWithFileSchema**](docs/FakeAPI.md#testbodywithfileschema) | **Put** /fake/body-with-file-schema | 
 *FakeAPI* | [**TestBodyWithQueryParams**](docs/FakeAPI.md#testbodywithqueryparams) | **Put** /fake/body-with-query-params | 
 *FakeAPI* | [**TestClientModel**](docs/FakeAPI.md#testclientmodel) | **Patch** /fake | To test \&quot;client\&quot; model
@@ -92,6 +93,7 @@ Class | Method | HTTP request | Description
 *FakeAPI* | [**TestEnumParameters**](docs/FakeAPI.md#testenumparameters) | **Get** /fake | To test enum parameters
 *FakeAPI* | [**TestGroupParameters**](docs/FakeAPI.md#testgroupparameters) | **Delete** /fake | Fake endpoint to test group parameters (optional)
 *FakeAPI* | [**TestInlineAdditionalProperties**](docs/FakeAPI.md#testinlineadditionalproperties) | **Post** /fake/inline-additionalProperties | test inline additionalProperties
+*FakeAPI* | [**TestInlineFreeformAdditionalProperties**](docs/FakeAPI.md#testinlinefreeformadditionalproperties) | **Post** /fake/inline-freeform-additionalProperties | test inline free-form additionalProperties
 *FakeAPI* | [**TestJsonFormData**](docs/FakeAPI.md#testjsonformdata) | **Get** /fake/jsonFormData | test json serialization of form data
 *FakeAPI* | [**TestQueryDeepObject**](docs/FakeAPI.md#testquerydeepobject) | **Get** /fake/deep_object_test | 
 *FakeAPI* | [**TestQueryParameterCollectionFormat**](docs/FakeAPI.md#testqueryparametercollectionformat) | **Put** /fake/test-query-parameters | 
@@ -175,11 +177,13 @@ Class | Method | HTTP request | Description
  - [OuterEnumInteger](docs/OuterEnumInteger.md)
  - [OuterEnumIntegerDefaultValue](docs/OuterEnumIntegerDefaultValue.md)
  - [Pet](docs/Pet.md)
+ - [PropertyNameMapping](docs/PropertyNameMapping.md)
  - [ReadOnlyFirst](docs/ReadOnlyFirst.md)
  - [ReadOnlyWithDefault](docs/ReadOnlyWithDefault.md)
  - [Return](docs/Return.md)
  - [SpecialModelName](docs/SpecialModelName.md)
  - [Tag](docs/Tag.md)
+ - [TestInlineFreeformAdditionalPropertiesRequest](docs/TestInlineFreeformAdditionalPropertiesRequest.md)
  - [User](docs/User.md)
  - [Whale](docs/Whale.md)
  - [Zebra](docs/Zebra.md)

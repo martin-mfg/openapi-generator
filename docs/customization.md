@@ -318,7 +318,6 @@ CONFIG OPTIONS
 ...... (results omitted)
 	library
 	    library template (sub-template) to use:
-	    jersey1 - HTTP client: Jersey client 1.18. JSON processing: Jackson 2.4.2
 	    jersey2 - HTTP client: Jersey client 2.6
 	    feign - HTTP client: Netflix Feign 8.1.1.  JSON processing: Jackson 2.6.3
 	    okhttp-gson (default) - HTTP client: OkHttp 2.4.0. JSON processing: Gson 2.3.1
@@ -395,11 +394,42 @@ or
 --import-mappings Pet=my.models.MyPet --import-mappings Order=my.models.MyOrder
 ```
 
+## Name Mapping
+
+One can map the property name using `nameMappings` option and parameter name using `parameterNameMappings` option to something else. Consider the following schema:
+```
+    PropertyNameCollision:
+      properties:
+        _type:
+          type: string
+        type:
+          type: string
+        type_:
+          type: string
+      type: object
+```
+`_type`, `type`, `type_` will result in property name collision in the Java client generator for example. We can resolve the issue using `nameMappings` by mapping `_type` to `underscoreType`, `type_` to `typeWithUnderscore`.
+
+Here is an example to use `nameMappings` and `parameterNameMapping` in CLI:
+```sh
+java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g java -i modules/openapi-generator/src/test/resources/3_0/java/petstore-with-fake-endpoints-models-for-testing-okhttp-gson.yaml  -o /tmp/java2/ --name-mappings _type=underscoreType,type_=typeWithUnderscore, --parameter-name-mappings _type=paramType,type_=typeParam
+```
+
+To map model names, use `modelNameMappings` option, e.g.
+```sh
+java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g csharp -i modules/openapi-generator/src/test/resources/3_0/petstore.yaml  -o /tmp/csharp/ --model-name-mappings Tag=Label
+```
+will rename the `Tag` schema to `Label` instead.
+
+Not all generators support thess features yet. Please give it a try to confirm the behaviour and open an issue (ticket) to let us know which generators you would like to have this feature enabled and we'll prioritize accordingly. We also welcome PRs to add these features to generators. Related PRs for reference: #16209, #16234 (modelNameMappings), #16194, #16206 (nameMappings, parameterNameMappings).
+
+NOTE: some generators use `baseName` (original name obtained direclty from OpenAPI spec, e.g. `shipping-date`) mustache tag in the templates so the mapping feature won't work.
+
 ## Schema Mapping
 
 One can map the schema to something else (e.g. external objects/models outside of the package) using the `schemaMappings` option, e.g. in CLI
 ```sh
-java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g java -i modules/openapi-generator/src/test/resources/3_0/type-alias.yaml -o /tmp/java2/ --schema-mapping TypeAlias=foo.bar.TypeAlias
+java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g java -i modules/openapi-generator/src/test/resources/3_0/type-alias.yaml -o /tmp/java2/ --schema-mappings TypeAlias=foo.bar.TypeAlias
 ```
 Another example (in conjunction with --type-mappings):
 ```sh
@@ -513,7 +543,7 @@ java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generat
 
 Example:
 ```
-java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g java -i modules/openapi-generator/src/test/resources/3_0/enableKeepOnlyFirstTagInOperation_test.yaml -o /tmp/java-okhttp/ --openapi-normalizer SET_TAGS_FOR_ALL_OPERATIONS=true
+java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -g java -i modules/openapi-generator/src/test/resources/3_0/enableKeepOnlyFirstTagInOperation_test.yaml -o /tmp/java-okhttp/ --openapi-normalizer SET_TAGS_FOR_ALL_OPERATIONS=another_tag_name
 ```
 
 - `ADD_UNSIGNED_TO_INTEGER_WITH_INVALID_MAX_VALUE`: when set to true, auto fix integer with maximum value 4294967295 (2^32-1) or long with 18446744073709551615 (2^64-1) by adding x-unsigned to the schema
