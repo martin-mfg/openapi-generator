@@ -57,12 +57,12 @@ public interface PetApi {
                 @Content(mediaType = "application/xml", schema = @Schema(implementation = Pet.class)),
                 @Content(mediaType = "application/json", schema = @Schema(implementation = Pet.class), examples = {
                     @ExampleObject(
-                        name = "Pet1",
-                        value = "{\"id\":12345,\"category\":{\"id\":12345,\"name\":\"cats\"},\"name\":\"Fluffy\",\"photoUrls\":[{\"url\":\"https://www.example.com/fluffy.jpg\"}],\"tags\":[{\"id\":12345,\"name\":\"fluffy\"}],\"status\":\"available\"}"
+                        name = "Pet3",
+                        value = "{\"id\":12347,\"category\":{\"id\":12347,\"name\":\"monkeys\"},\"name\":\"George\",\"photoUrls\":[{\"url\":\"https://www.example.com/george.jpg\"}],\"tags\":[{\"id\":12347,\"name\":\"george\"}],\"status\":\"available\"}"
                     ),
                     @ExampleObject(
-                        name = "Pet2",
-                        value = "{\"id\":12346,\"category\":{\"id\":12346,\"name\":\"dogs\"},\"name\":\"Fido\",\"photoUrls\":[{\"url\":\"https://www.example.com/fido.jpg\"}],\"tags\":[{\"id\":12346,\"name\":\"fido\"}],\"status\":\"available\"}"
+                        name = "Pet4",
+                        value = "{\"id\":12348,\"category\":{\"id\":12348,\"name\":\"fish\"},\"name\":\"Nemo\",\"photoUrls\":[{\"url\":\"https://www.example.com/nemo.jpg\"}],\"tags\":[{\"id\":12348,\"name\":\"nemo\"}],\"status\":\"available\"}"
                     )
                 })
 
@@ -136,7 +136,13 @@ public interface PetApi {
         responses = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = {
                 @Content(mediaType = "application/xml", array = @ArraySchema(schema = @Schema(implementation = Pet.class))),
-                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Pet.class)))
+                @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = Pet.class)), examples = {
+                    @ExampleObject(
+                        name = "Pets",
+                        value = "[{\"id\":12345,\"category\":{\"id\":12345,\"name\":\"cats\"},\"name\":\"Fluffy\",\"photoUrls\":[{\"url\":\"https://www.example.com/fluffy.jpg\"}],\"tags\":[{\"id\":12345,\"name\":\"fluffy\"}],\"status\":\"available\"},{\"id\":12346,\"category\":{\"id\":12346,\"name\":\"dogs\"},\"name\":\"Fido\",\"photoUrls\":[{\"url\":\"https://www.example.com/fido.jpg\"}],\"tags\":[{\"id\":12346,\"name\":\"fido\"}],\"status\":\"available\"}]"
+                    )
+                })
+
             }),
             @ApiResponse(responseCode = "400", description = "Invalid status value")
         },

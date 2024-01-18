@@ -65,7 +65,7 @@ public interface PetApi {
     @RequestMapping(
         method = RequestMethod.POST,
         value = "/pet",
-        produces = "application/json",
+        produces = "application/json,application/xml",
         consumes = "application/json"
     )
     

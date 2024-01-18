@@ -134,7 +134,7 @@ public interface StoreApi {
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/store/order/{orderId}",
-        produces = "application/json"
+        produces = "application/json,application/xml"
     )
     
     default ResponseEntity<Order> getOrderById(
@@ -183,7 +183,7 @@ public interface StoreApi {
     @RequestMapping(
         method = RequestMethod.POST,
         value = "/store/order",
-        produces = "application/json",
+        produces = "application/json,application/xml",
         consumes = "application/json"
     )
     

@@ -63,7 +63,7 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
             }
             final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
             final TypeAdapter<String> adapterString = gson.getDelegateAdapter(this, TypeToken.get(String.class));
-            final TypeAdapter<Object> adapterObject = gson.getDelegateAdapter(this, TypeToken.get(Object.class));
+            final TypeAdapter<Integer> adapterInteger = gson.getDelegateAdapter(this, TypeToken.get(Integer.class));
 
             return (TypeAdapter<T>) new TypeAdapter<OneOfStringOrInt>() {
                 @Override
@@ -79,13 +79,13 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
                       elementAdapter.write(out, primitive);
                       return;
                     }
-                    // check if the actual instance is of the type `Object`
-                    if (value.getActualInstance() instanceof Object) {
-                      JsonPrimitive primitive = adapterObject.toJsonTree((Object)value.getActualInstance()).getAsJsonPrimitive();
+                    // check if the actual instance is of the type `Integer`
+                    if (value.getActualInstance() instanceof Integer) {
+                      JsonPrimitive primitive = adapterInteger.toJsonTree((Integer)value.getActualInstance()).getAsJsonPrimitive();
                       elementAdapter.write(out, primitive);
                       return;
                     }
-                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: Object, String");
+                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: Integer, String");
                 }
 
                 @Override
@@ -111,19 +111,19 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
                       errorMessages.add(String.format("Deserialization for String failed with `%s`.", e.getMessage()));
                       log.log(Level.FINER, "Input data does not match schema 'String'", e);
                     }
-                    // deserialize Object
+                    // deserialize Integer
                     try {
                       // validate the JSON object to see if any exception is thrown
                       if(!jsonElement.getAsJsonPrimitive().isNumber()) {
                         throw new IllegalArgumentException(String.format("Expected json element to be of type Number in the JSON string but got `%s`", jsonElement.toString()));
                       }
-                      actualAdapter = adapterObject;
+                      actualAdapter = adapterInteger;
                       match++;
-                      log.log(Level.FINER, "Input data matches schema 'Object'");
+                      log.log(Level.FINER, "Input data matches schema 'Integer'");
                     } catch (Exception e) {
                       // deserialization failed, continue
-                      errorMessages.add(String.format("Deserialization for Object failed with `%s`.", e.getMessage()));
-                      log.log(Level.FINER, "Input data does not match schema 'Object'", e);
+                      errorMessages.add(String.format("Deserialization for Integer failed with `%s`.", e.getMessage()));
+                      log.log(Level.FINER, "Input data does not match schema 'Integer'", e);
                     }
 
                     if (match == 1) {
@@ -145,7 +145,7 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
         super("oneOf", Boolean.FALSE);
     }
 
-    public OneOfStringOrInt(Object o) {
+    public OneOfStringOrInt(Integer o) {
         super("oneOf", Boolean.FALSE);
         setActualInstance(o);
     }
@@ -157,7 +157,7 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
 
     static {
         schemas.put("String", String.class);
-        schemas.put("Object", Object.class);
+        schemas.put("Integer", Integer.class);
     }
 
     @Override
@@ -168,7 +168,7 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
     /**
      * Set the instance that matches the oneOf child schema, check
      * the instance parameter is valid against the oneOf child schemas:
-     * Object, String
+     * Integer, String
      *
      * It could be an instance of the 'oneOf' schemas.
      */
@@ -179,19 +179,19 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
             return;
         }
 
-        if (instance instanceof Object) {
+        if (instance instanceof Integer) {
             super.setActualInstance(instance);
             return;
         }
 
-        throw new RuntimeException("Invalid instance type. Must be Object, String");
+        throw new RuntimeException("Invalid instance type. Must be Integer, String");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * Object, String
+     * Integer, String
      *
-     * @return The actual instance (Object, String)
+     * @return The actual instance (Integer, String)
      */
     @Override
     public Object getActualInstance() {
@@ -209,14 +209,14 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
         return (String)super.getActualInstance();
     }
     /**
-     * Get the actual instance of `Object`. If the actual instance is not `Object`,
+     * Get the actual instance of `Integer`. If the actual instance is not `Integer`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `Object`
-     * @throws ClassCastException if the instance is not `Object`
+     * @return The actual instance of `Integer`
+     * @throws ClassCastException if the instance is not `Integer`
      */
-    public Object getObject() throws ClassCastException {
-        return (Object)super.getActualInstance();
+    public Integer getInteger() throws ClassCastException {
+        return (Integer)super.getActualInstance();
     }
 
  /**
@@ -239,18 +239,18 @@ public class OneOfStringOrInt extends AbstractOpenApiSchema {
       errorMessages.add(String.format("Deserialization for String failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
-    // validate the json string with Object
+    // validate the json string with Integer
     try {
       if(!jsonElement.getAsJsonPrimitive().isNumber()) {
         throw new IllegalArgumentException(String.format("Expected json element to be of type Number in the JSON string but got `%s`", jsonElement.toString()));
       }
       validCount++;
     } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for Object failed with `%s`.", e.getMessage()));
+      errorMessages.add(String.format("Deserialization for Integer failed with `%s`.", e.getMessage()));
       // continue to the next one
     }
     if (validCount != 1) {
-      throw new IOException(String.format("The JSON string is invalid for OneOfStringOrInt with oneOf schemas: Object, String. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
+      throw new IOException(String.format("The JSON string is invalid for OneOfStringOrInt with oneOf schemas: Integer, String. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonElement.toString()));
     }
   }
 

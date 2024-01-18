@@ -20,7 +20,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -58,7 +60,7 @@ public class AnyTypeTest {
 
   public static final String SERIALIZED_NAME_ARRAY_PROP = "array_prop";
   @SerializedName(SERIALIZED_NAME_ARRAY_PROP)
-  private Object arrayProp = null;
+  private List<String> arrayProp;
 
   public AnyTypeTest() {
   }
@@ -82,8 +84,16 @@ public class AnyTypeTest {
   }
 
 
-  public AnyTypeTest arrayProp(Object arrayProp) {
+  public AnyTypeTest arrayProp(List<String> arrayProp) {
     this.arrayProp = arrayProp;
+    return this;
+  }
+
+  public AnyTypeTest addArrayPropItem(String arrayPropItem) {
+    if (this.arrayProp == null) {
+      this.arrayProp = new ArrayList<>();
+    }
+    this.arrayProp.add(arrayPropItem);
     return this;
   }
 
@@ -92,11 +102,11 @@ public class AnyTypeTest {
    * @return arrayProp
   **/
   @javax.annotation.Nullable
-  public Object getArrayProp() {
+  public List<String> getArrayProp() {
     return arrayProp;
   }
 
-  public void setArrayProp(Object arrayProp) {
+  public void setArrayProp(List<String> arrayProp) {
     this.arrayProp = arrayProp;
   }
 
@@ -225,6 +235,10 @@ public class AnyTypeTest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("array_prop") != null && !jsonObj.get("array_prop").isJsonNull() && !jsonObj.get("array_prop").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `array_prop` to be an array in the JSON string but got `%s`", jsonObj.get("array_prop").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -18,6 +18,7 @@ docs/Order.md
 docs/Pet.md
 docs/PetApi.md
 docs/StoreApi.md
+docs/StringOrInt.md
 docs/Tag.md
 docs/User.md
 docs/UserApi.md
@@ -66,5 +67,6 @@ src/main/java/org/openapitools/client/model/ModelApiResponse.java
 src/main/java/org/openapitools/client/model/OneOfStringOrInt.java
 src/main/java/org/openapitools/client/model/Order.java
 src/main/java/org/openapitools/client/model/Pet.java
+src/main/java/org/openapitools/client/model/StringOrInt.java
 src/main/java/org/openapitools/client/model/Tag.java
 src/main/java/org/openapitools/client/model/User.java
