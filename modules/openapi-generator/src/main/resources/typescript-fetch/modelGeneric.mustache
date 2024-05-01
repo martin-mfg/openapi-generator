@@ -4,12 +4,24 @@ import { exists, mapValues } from '../runtime';
 import type { {{{.}}} } from './{{.}}';
 import {
     {{.}}FromJSON,
+{{^discriminator}}
     {{.}}FromJSONTyped,
+{{/discriminator}}
     {{.}}ToJSON,
 } from './{{.}}';
 {{/imports}}
 
 {{/hasImports}}
+{{#legacyDiscriminatorBehavior}}
+    {{#discriminator}}
+        import {
+        {{#discriminator.mappedModels}}
+            {{modelName}}FromJSONTyped{{^-last}},{{/-last}}
+        {{/discriminator.mappedModels}}
+        } from './';
+
+    {{/discriminator}}
+{{/legacyDiscriminatorBehavior}}
 {{>modelGenericInterfaces}}
 
 /**
