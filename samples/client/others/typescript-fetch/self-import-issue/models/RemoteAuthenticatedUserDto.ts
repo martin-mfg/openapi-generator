@@ -12,19 +12,20 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from '../runtime';
+import { mapValues } from '../runtime';
 import type { AbstractUserDto } from './AbstractUserDto';
 import {
     AbstractUserDtoFromJSON,
-    AbstractUserDtoFromJSONTyped,
     AbstractUserDtoToJSON,
 } from './AbstractUserDto';
 import type { BranchDto } from './BranchDto';
 import {
     BranchDtoFromJSON,
-    BranchDtoFromJSONTyped,
     BranchDtoToJSON,
 } from './BranchDto';
+
+import {
+} from './index';
 
 /**
  * 
@@ -38,9 +39,7 @@ export interface RemoteAuthenticatedUserDto extends AbstractUserDto {
  * Check if a given object implements the RemoteAuthenticatedUserDto interface.
  */
 export function instanceOfRemoteAuthenticatedUserDto(value: object): boolean {
-    let isInstance = true;
-
-    return isInstance;
+    return true;
 }
 
 export function RemoteAuthenticatedUserDtoFromJSON(json: any): RemoteAuthenticatedUserDto {

@@ -13,11 +13,6 @@
  */
 
 import { mapValues } from '../runtime';
-import {
-     CatFromJSONTyped,
-     DogFromJSONTyped
-} from './index';
-
 /**
  * 
  * @export
