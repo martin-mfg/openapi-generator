@@ -13,10 +13,6 @@
  */
 
 import { mapValues } from '../runtime';
-import {
-     ChildWithNullableFromJSONTyped
-} from './index';
-
 /**
  * 
  * @export
