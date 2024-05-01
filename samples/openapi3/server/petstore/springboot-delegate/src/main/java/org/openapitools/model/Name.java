@@ -19,7 +19,7 @@ import javax.annotation.Generated;
  */
 
 @Schema(name = "Name", description = "Model for testing model name same as property name")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class Name {
 
   private Integer name;
@@ -30,11 +30,6 @@ public class Name {
 
   private Integer _123number;
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link Name#Name(Integer)}
-   */
-  @Deprecated
   public Name() {
     super();
   }

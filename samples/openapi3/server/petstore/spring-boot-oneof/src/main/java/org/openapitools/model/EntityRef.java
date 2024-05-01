@@ -32,7 +32,7 @@ import javax.annotation.Generated;
   @JsonSubTypes.Type(value = FooRef.class, name = "FooRef")
 })
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class EntityRef {
 
   private String name;
@@ -49,11 +49,6 @@ public class EntityRef {
 
   private String atType;
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link EntityRef#EntityRef(String)}
-   */
-  @Deprecated
   public EntityRef() {
     super();
   }

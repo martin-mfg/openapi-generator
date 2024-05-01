@@ -16,18 +16,13 @@ import jakarta.annotation.Generated;
  * Category
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class Category {
 
   private Long id;
 
   private String name = "default-name";
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link Category#Category(String)}
-   */
-  @Deprecated
   public Category() {
     super();
   }

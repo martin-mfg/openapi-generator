@@ -32,16 +32,11 @@ import javax.annotation.Generated;
   @JsonSubTypes.Type(value = BigCat.class, name = "BigCat")
 })
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class Cat extends Animal {
 
   private Boolean declawed;
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link Cat#Cat(String)}
-   */
-  @Deprecated
   public Cat() {
     super();
   }
@@ -73,16 +68,16 @@ public class Cat extends Animal {
     this.declawed = declawed;
   }
 
+
   public Cat className(String className) {
-    super.setClassName(className);
+    super.className(className);
     return this;
   }
 
   public Cat color(String color) {
-    super.setColor(color);
+    super.color(color);
     return this;
   }
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {

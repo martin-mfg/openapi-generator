@@ -23,7 +23,7 @@ import javax.annotation.Generated;
  */
 
 @JsonTypeName("Enum_Test")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class EnumTest {
 
   /**
@@ -180,11 +180,6 @@ public class EnumTest {
 
   private OuterEnum outerEnum;
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link EnumTest#EnumTest(EnumStringRequiredEnum)}
-   */
-  @Deprecated
   public EnumTest() {
     super();
   }

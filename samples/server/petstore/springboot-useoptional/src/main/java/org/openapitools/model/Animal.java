@@ -33,18 +33,13 @@ import javax.annotation.Generated;
   @JsonSubTypes.Type(value = Dog.class, name = "Dog")
 })
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class Animal {
 
   private String className;
 
-  private String color = "red";
+  private Optional<String> color = Optional.of("red");
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link Animal#Animal(String)}
-   */
-  @Deprecated
   public Animal() {
     super();
   }
@@ -77,7 +72,7 @@ public class Animal {
   }
 
   public Animal color(String color) {
-    this.color = color;
+    this.color = Optional.of(color);
     return this;
   }
 
@@ -88,11 +83,11 @@ public class Animal {
   
   @ApiModelProperty(value = "")
   @JsonProperty("color")
-  public String getColor() {
+  public Optional<String> getColor() {
     return color;
   }
 
-  public void setColor(String color) {
+  public void setColor(Optional<String> color) {
     this.color = color;
   }
 

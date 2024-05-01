@@ -22,7 +22,7 @@ import javax.annotation.Generated;
 
 @ApiModel(description = "Model for testing model name same as property name")
 @JsonTypeName("Name")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class NameDto {
 
   private Integer name;
@@ -33,11 +33,6 @@ public class NameDto {
 
   private Integer _123Number;
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link NameDto#NameDto(Integer)}
-   */
-  @Deprecated
   public NameDto() {
     super();
   }

@@ -21,18 +21,13 @@ import javax.annotation.Generated;
  */
 
 @JsonTypeName("Category")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class CategoryDto {
 
   private Long id;
 
   private String name = "default-name";
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link CategoryDto#CategoryDto(String)}
-   */
-  @Deprecated
   public CategoryDto() {
     super();
   }

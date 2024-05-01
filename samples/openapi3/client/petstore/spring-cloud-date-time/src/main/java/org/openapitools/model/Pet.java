@@ -22,7 +22,7 @@ import javax.annotation.Generated;
  * Pet
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class Pet {
 
   private String atType = "Pet";
@@ -39,11 +39,6 @@ public class Pet {
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
   private LocalDate dateOfBirth = LocalDate.parse("2021-01-01");
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link Pet#Pet(String)}
-   */
-  @Deprecated
   public Pet() {
     super();
   }

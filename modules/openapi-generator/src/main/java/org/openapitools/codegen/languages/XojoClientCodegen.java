@@ -235,8 +235,7 @@ public class XojoClientCodegen extends DefaultCodegen implements CodegenConfig {
     @Override
     public String getTypeDeclaration(Schema p) {
         if (ModelUtils.isArraySchema(p)) {
-            ArraySchema ap = (ArraySchema) p;
-            Schema inner = ap.getItems();
+            Schema inner = ModelUtils.getSchemaItems(p);
             return super.getTypeDeclaration(inner);
         }
         return super.getTypeDeclaration(p);
@@ -662,7 +661,7 @@ public class XojoClientCodegen extends DefaultCodegen implements CodegenConfig {
             return schema.getExample().toString();
         }
 
-        return getPropertyDefaultValue(schema);
+        return getDefaultPropertyValue(schema);
     }
 
     @Override
@@ -671,7 +670,7 @@ public class XojoClientCodegen extends DefaultCodegen implements CodegenConfig {
             return schema.getDefault().toString();
         }
 
-        return getPropertyDefaultValue(schema);
+        return getDefaultPropertyValue(schema);
     }
 
     @Override
@@ -716,7 +715,7 @@ public class XojoClientCodegen extends DefaultCodegen implements CodegenConfig {
         }
     }
 
-    private String getPropertyDefaultValue(Schema schema) {
+    private String getDefaultPropertyValue(Schema schema) {
         if (ModelUtils.isBooleanSchema(schema)) {
             return "False";
         } else if (ModelUtils.isDateSchema(schema)) {

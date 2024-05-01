@@ -23,7 +23,7 @@ import javax.annotation.Generated;
  */
 
 @JsonTypeName("Enum_Test")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.6.0-SNAPSHOT")
 public class EnumTest {
 
   /**
@@ -63,7 +63,7 @@ public class EnumTest {
     }
   }
 
-  private EnumStringEnum enumString;
+  private Optional<EnumStringEnum> enumString = Optional.empty();
 
   /**
    * Gets or Sets enumStringRequired
@@ -139,7 +139,7 @@ public class EnumTest {
     }
   }
 
-  private EnumIntegerEnum enumInteger;
+  private Optional<EnumIntegerEnum> enumInteger = Optional.empty();
 
   /**
    * Gets or Sets enumNumber
@@ -176,15 +176,10 @@ public class EnumTest {
     }
   }
 
-  private EnumNumberEnum enumNumber;
+  private Optional<EnumNumberEnum> enumNumber = Optional.empty();
 
-  private OuterEnum outerEnum;
+  private Optional<OuterEnum> outerEnum = Optional.empty();
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link EnumTest#EnumTest(EnumStringRequiredEnum)}
-   */
-  @Deprecated
   public EnumTest() {
     super();
   }
@@ -197,7 +192,7 @@ public class EnumTest {
   }
 
   public EnumTest enumString(EnumStringEnum enumString) {
-    this.enumString = enumString;
+    this.enumString = Optional.of(enumString);
     return this;
   }
 
@@ -208,11 +203,11 @@ public class EnumTest {
   
   @ApiModelProperty(value = "")
   @JsonProperty("enum_string")
-  public EnumStringEnum getEnumString() {
+  public Optional<EnumStringEnum> getEnumString() {
     return enumString;
   }
 
-  public void setEnumString(EnumStringEnum enumString) {
+  public void setEnumString(Optional<EnumStringEnum> enumString) {
     this.enumString = enumString;
   }
 
@@ -237,7 +232,7 @@ public class EnumTest {
   }
 
   public EnumTest enumInteger(EnumIntegerEnum enumInteger) {
-    this.enumInteger = enumInteger;
+    this.enumInteger = Optional.of(enumInteger);
     return this;
   }
 
@@ -248,16 +243,16 @@ public class EnumTest {
   
   @ApiModelProperty(value = "")
   @JsonProperty("enum_integer")
-  public EnumIntegerEnum getEnumInteger() {
+  public Optional<EnumIntegerEnum> getEnumInteger() {
     return enumInteger;
   }
 
-  public void setEnumInteger(EnumIntegerEnum enumInteger) {
+  public void setEnumInteger(Optional<EnumIntegerEnum> enumInteger) {
     this.enumInteger = enumInteger;
   }
 
   public EnumTest enumNumber(EnumNumberEnum enumNumber) {
-    this.enumNumber = enumNumber;
+    this.enumNumber = Optional.of(enumNumber);
     return this;
   }
 
@@ -268,16 +263,16 @@ public class EnumTest {
   
   @ApiModelProperty(value = "")
   @JsonProperty("enum_number")
-  public EnumNumberEnum getEnumNumber() {
+  public Optional<EnumNumberEnum> getEnumNumber() {
     return enumNumber;
   }
 
-  public void setEnumNumber(EnumNumberEnum enumNumber) {
+  public void setEnumNumber(Optional<EnumNumberEnum> enumNumber) {
     this.enumNumber = enumNumber;
   }
 
   public EnumTest outerEnum(OuterEnum outerEnum) {
-    this.outerEnum = outerEnum;
+    this.outerEnum = Optional.of(outerEnum);
     return this;
   }
 
@@ -288,11 +283,11 @@ public class EnumTest {
   @Valid 
   @ApiModelProperty(value = "")
   @JsonProperty("outerEnum")
-  public OuterEnum getOuterEnum() {
+  public Optional<OuterEnum> getOuterEnum() {
     return outerEnum;
   }
 
-  public void setOuterEnum(OuterEnum outerEnum) {
+  public void setOuterEnum(Optional<OuterEnum> outerEnum) {
     this.outerEnum = outerEnum;
   }
 
