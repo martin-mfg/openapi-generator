@@ -42,7 +42,7 @@ public class ParentWithNullable {
    * Gets or Sets type
    */
   public enum TypeEnum {
-    CHILDWITHNULLABLE("ChildWithNullable");
+    CHILD_WITH_NULLABLE("ChildWithNullable");
 
     private String value;
 
@@ -83,7 +83,7 @@ public class ParentWithNullable {
   /**
    * Get type
    * @return type
-  */
+   */
   
   @ApiModelProperty(value = "")
   @JsonProperty("type")
@@ -103,7 +103,7 @@ public class ParentWithNullable {
   /**
    * Get nullableProperty
    * @return nullableProperty
-  */
+   */
   
   @ApiModelProperty(value = "")
   @JsonProperty("nullableProperty")

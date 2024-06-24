@@ -41,7 +41,7 @@ public class ParentWithNullable {
    * Gets or Sets type
    */
   public enum TypeEnum {
-    CHILDWITHNULLABLE("ChildWithNullable");
+    CHILD_WITH_NULLABLE("ChildWithNullable");
 
     private String value;
 
@@ -82,7 +82,7 @@ public class ParentWithNullable {
   /**
    * Get type
    * @return type
-  */
+   */
   
   @Schema(name = "type", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("type")
@@ -102,7 +102,7 @@ public class ParentWithNullable {
   /**
    * Get nullableProperty
    * @return nullableProperty
-  */
+   */
   
   @Schema(name = "nullableProperty", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("nullableProperty")

@@ -52,7 +52,7 @@ public class ParentWithNullable {
    * Gets or Sets type
    */
   public enum TypeEnum {
-    CHILDWITHNULLABLE("ChildWithNullable");
+    CHILD_WITH_NULLABLE("ChildWithNullable");
 
     private String value;
 
@@ -96,10 +96,10 @@ public class ParentWithNullable {
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
@@ -121,10 +121,10 @@ public class ParentWithNullable {
     return this;
   }
 
-   /**
+  /**
    * Get nullableProperty
    * @return nullableProperty
-  **/
+   */
   @jakarta.annotation.Nullable
   @JsonIgnore
 
