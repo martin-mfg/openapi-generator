@@ -3,7 +3,6 @@ name: Samples Java Server
 on:
   push:
     paths:
-      # java-camel is tested locally for the time being
       - 'samples/server/petstore/java-camel/**'
       - 'samples/server/petstore/java-vertx-web/**'
       - 'samples/server/petstore/java-inflector/**'
@@ -28,7 +27,7 @@ jobs:
       matrix:
         sample:
           # servers
-          #- samples/server/petstore/java-camel/
+          - samples/server/petstore/java-camel/
           - samples/server/petstore/java-vertx-web/
           - samples/server/petstore/java-inflector/
           - samples/server/petstore/java-pkmst/
