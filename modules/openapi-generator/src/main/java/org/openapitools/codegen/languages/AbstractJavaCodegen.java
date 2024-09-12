@@ -865,10 +865,16 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
 
     @Override
     public String toVarName(String name) {
+        return toVarName(name, false);
+    }
+
+    public String toVarName(String name, boolean isEnumProperty) {
         // obtain the name from nameMapping directly if provided
         if (nameMapping.containsKey(name)) {
             return nameMapping.get(name);
         }
+
+        boolean skipCamelize = isEnumProperty && getEnumPropertyNaming() == CodegenConstants.ENUM_PROPERTY_NAMING_TYPE.original && name.matches("^[$A-Za-z_][$A-Za-z0-9_]*$");
 
         // sanitize name
         name = sanitizeName(name, "\\W-[\\$]"); // FIXME: a parameter should not be assigned. Also declare the methods parameters as 'final'.
@@ -891,7 +897,7 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
             return name;
         }
 
-        if (startsWithTwoUppercaseLetters(name)) {
+        if (startsWithTwoUppercaseLetters(name) && (!isEnumProperty || getEnumPropertyNaming() != CodegenConstants.ENUM_PROPERTY_NAMING_TYPE.original)) {
             name = name.substring(0, 2).toLowerCase(Locale.ROOT) + name.substring(2);
         }
 
@@ -905,12 +911,13 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
 
         // camelize (lower first character) the variable name
         // pet_id => petId
-        if (camelCaseDollarSign) {
-            name = camelize(name, LOWERCASE_FIRST_CHAR);
-        } else {
-            name = camelize(name, LOWERCASE_FIRST_LETTER);
+        if (!skipCamelize) {
+            if (camelCaseDollarSign) {
+                name = camelize(name, LOWERCASE_FIRST_CHAR);
+            } else {
+                name = camelize(name, LOWERCASE_FIRST_LETTER);
+            }
         }
-
         // for reserved word or word starting with number, append _
         if (isReservedWord(name) || name.matches("^\\d.*")) {
             name = escapeReservedWord(name);
@@ -2002,7 +2009,7 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
                 modified = value;
                 if (modified.matches("^[$A-Za-z_][$A-Za-z0-9_]*$") && !reservedWords.contains(modified)) {
                     // if it's valid already, skip toVarName
-                    return modified;
+                    //return modified;
                 }
                 break;
             case camelCase:
@@ -2013,7 +2020,7 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
                 // NOTE: Removes hyphens and underscores
                 modified = camelize(modified, UPPERCASE_FIRST_CHAR);
                 modified = escapeReservedWord(modified);
-                modified = toVarName(modified);
+                modified = toVarName(modified, true);
                 // recamelize if first char is not underscore because toVarName will turn PascalCase into camelCase
                 if (modified.charAt(0) != '_') {
                     modified = camelize(modified, UPPERCASE_FIRST_CHAR);
@@ -2024,14 +2031,14 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
                 modified = underscore(modified);
                 if (modified.matches("^[$a-z_][$a-z0-9_]*$") && !reservedWords.contains(modified)) {
                     // if it's valid already, skip toVarName
-                    return modified;
+                    //return modified;
                 }
                 else {
                     modified = escapeReservedWord(modified);
-                    modified = toVarName(modified);
+                    modified = toVarName(modified, true);
                     // underscore again, because toVarName camelizes
                     modified = underscore(modified);
-                    return modified;
+                    //return modified;
                 }
             case UPPERCASE:
                 modified = modified.replaceAll("\\W+", "_");
@@ -2047,7 +2054,7 @@ public abstract class AbstractJavaCodegen extends DefaultCodegen implements Code
             modified = "_";
         }
 
-        return toVarName(modified);
+        return toVarName(modified, true);
     }
 
     @Override
