@@ -584,7 +584,7 @@ public class JavaClientCodegenTest {
         List<File> files = new DefaultGenerator().opts(configurator.toClientOptInput()).generate();
 
         validateJavaSourceFiles(files);
-        assertThat(output.resolve("src/main/java/xyz/abcdef/model/FormatTestPostRequest.java")).content()
+        assertThat(output.resolve("src/main/java/xyz/abcdef/model/PostRequest.java")).content()
                 .containsOnlyOnce("public Object getObject() throws ClassCastException");
     }
 
