@@ -209,9 +209,3 @@ src/main/java/org/openapitools/client/model/TriangleInterface.java
 src/main/java/org/openapitools/client/model/User.java
 src/main/java/org/openapitools/client/model/Whale.java
 src/main/java/org/openapitools/client/model/Zebra.java
-src/test/java/org/openapitools/client/model/AnyOf1Test.java
-src/test/java/org/openapitools/client/model/AnyOf2Test.java
-src/test/java/org/openapitools/client/model/AnyofArray200ResponseTest.java
-src/test/java/org/openapitools/client/model/AnyofArrayOneOfParamParameterTest.java
-src/test/java/org/openapitools/client/model/AnyofArrayRequestMapPropTest.java
-src/test/java/org/openapitools/client/model/AnyofArrayRequestTest.java
