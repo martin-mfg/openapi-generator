@@ -272,6 +272,7 @@ public class {{classname}} extends AbstractOpenApiSchema{{#vendorExtensions.x-im
 
     {{#composedSchemas}}
     {{#oneOf}}
+    {{^vendorExtensions.x-duplicated-data-type}}
     /**
      * Get the actual instance of `{{{dataType}}}`. If the actual instance is not `{{{dataType}}}`,
      * the ClassCastException will be thrown.
@@ -297,6 +298,7 @@ public class {{classname}} extends AbstractOpenApiSchema{{#vendorExtensions.x-im
     }
     {{/isArray}}
 
+    {{/vendorExtensions.x-duplicated-data-type}}
     {{/oneOf}}
     {{/composedSchemas}}
 }
