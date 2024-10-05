@@ -280,23 +280,9 @@ public class {{classname}} extends AbstractOpenApiSchema{{#vendorExtensions.x-im
      * @return The actual instance of `{{{dataType}}}`
      * @throws ClassCastException if the instance is not `{{{dataType}}}`
      */
-    {{^isArray}}
-    {{^isMap}}
-    public {{{dataType}}} get{{{dataType}}}() throws ClassCastException {
+    public {{{dataType}}} get{{#isArray}}{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}{{/isArray}}{{#isMap}}{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}{{/isMap}}{{^isArray}}{{^isMap}}{{{dataType}}}{{/isMap}}{{/isArray}}() throws ClassCastException {
         return ({{{dataType}}})super.getActualInstance();
     }
-    {{/isMap}}
-    {{#isMap}}
-    public {{{dataType}}} get{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}() throws ClassCastException {
-        return ({{{dataType}}})super.getActualInstance();
-    }
-    {{/isMap}}
-    {{/isArray}}
-    {{#isArray}}
-    public {{{dataType}}} get{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}() throws ClassCastException {
-        return ({{{dataType}}})super.getActualInstance();
-    }
-    {{/isArray}}
 
     {{/vendorExtensions.x-duplicated-data-type-ignoring-erasure}}
     {{/oneOf}}

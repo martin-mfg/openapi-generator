@@ -10,12 +10,10 @@ import java.util.HashSet;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -70,79 +68,29 @@ public class {{classname}} extends AbstractOpenApiSchema{{#vendorExtensions.x-im
                 return ret;
             }
             {{/discriminator}}
-            boolean typeCoercion = ctxt.isEnabled(MapperFeature.ALLOW_COERCION_OF_SCALARS);
-            JsonToken token = tree.traverse(jp.getCodec()).nextToken();
             {{#composedSchemas}}
             {{#anyOf}}
             // deserialize {{{dataType}}}{{#isNullable}} (nullable){{/isNullable}}
             try {
                 {{^isArray}}
-                boolean attemptParsing = true;
-                {{#isPrimitiveType}}
-                attemptParsing = typeCoercion; //respect type coercion setting
-                if (!attemptParsing) {
-                    {{#isString}}
-                    attemptParsing |= (token == JsonToken.VALUE_STRING);
-                    {{/isString}}
-                    {{#isInteger}}
-                    attemptParsing |= (token == JsonToken.VALUE_NUMBER_INT);
-                    {{/isInteger}}
-                    {{#isLong}}
-                    attemptParsing |= (token == JsonToken.VALUE_NUMBER_INT);
-                    {{/isLong}}
-                    {{#isShort}}
-                    attemptParsing |= (token == JsonToken.VALUE_NUMBER_INT);
-                    {{/isShort}}
-                    {{#isFloat}}
-                    attemptParsing |= (token == JsonToken.VALUE_NUMBER_FLOAT);
-                    {{/isFloat}}
-                    {{#isDouble}}
-                    attemptParsing |= (token == JsonToken.VALUE_NUMBER_FLOAT);
-                    {{/isDouble}}
-                    {{#isNumber}}
-                    attemptParsing |= (token == JsonToken.VALUE_NUMBER_FLOAT);
-                    {{/isNumber}}
-                    {{#isDecimal}}
-                    attemptParsing |= (token == JsonToken.VALUE_NUMBER_FLOAT);
-                    {{/isDecimal}}
-                    {{#isBoolean}}
-                    attemptParsing |= (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE);
-                    {{/isBoolean}}
-                    {{#isNullable}}
-                    attemptParsing |= (token == JsonToken.VALUE_NULL);
-                    {{/isNullable}}
-                }
-                {{/isPrimitiveType}}
-                if (attemptParsing) {
-                    {{#isMap}}
-                    final TypeReference<{{{dataType}}}> ref = new TypeReference<{{{dataType}}}>(){};
-                    deserialized = tree.traverse(jp.getCodec()).readValueAs(ref);
-                    {{/isMap}}
-                    {{^isMap}}
-                    deserialized = tree.traverse(jp.getCodec()).readValueAs({{{dataType}}}.class);
-                    {{/isMap}}
-                    // TODO: there is no validation against JSON schema constraints
-                    // (min, max, enum, pattern...), this does not perform a strict JSON
-                    // validation, which means the 'match' count may be higher than it should be.
-                    log.log(Level.FINER, "Input data matches schema '{{{dataType}}}'");
-                }
+                {{^isMap}}
+                deserialized = tree.traverse(jp.getCodec()).readValueAs({{{dataType}}}.class);
+                {{/isMap}}
                 {{/isArray}}
                 {{#isArray}}
-                if (token == JsonToken.START_ARRAY) {
-                    final TypeReference<{{{dataType}}}> ref = new TypeReference<{{{dataType}}}>(){};
-                    deserialized = tree.traverse(jp.getCodec()).readValueAs(ref);
-                    // TODO: there is no validation against JSON schema constraints
-                    // (min, max, enum, pattern...), this does not perform a strict JSON
-                    // validation, which means the 'match' count may be higher than it should be.
-                    log.log(Level.FINER, "Input data matches schema '{{{dataType}}}'");
-                }
+                final TypeReference<{{{dataType}}}> ref = new TypeReference<{{{dataType}}}>(){};
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(ref);
                 {{/isArray}}
+                {{#isMap}}
+                final TypeReference<{{{dataType}}}> ref = new TypeReference<{{{dataType}}}>(){};
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(ref);
+                {{/isMap}}
                 {{classname}} ret = new {{classname}}();
                 ret.setActualInstance(deserialized);
                 return ret;
             } catch (Exception e) {
-                // deserialization failed, continue
-                log.log(Level.FINER, "Input data does not match schema '{{{dataType}}}'", e);
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match '{{classname}}'", e);
             }
 
             {{/anyOf}}
@@ -262,31 +210,19 @@ public class {{classname}} extends AbstractOpenApiSchema{{#vendorExtensions.x-im
 
     {{#composedSchemas}}
     {{#anyOf}}
+    {{^vendorExtensions.x-duplicated-data-type-ignoring-erasure}}
     /**
-    * Get the actual instance of `{{{dataType}}}`. If the actual instance is not `{{{dataType}}}`,
-    * the ClassCastException will be thrown.
-    *
-    * @return The actual instance of `{{{dataType}}}`
-    * @throws ClassCastException if the instance is not `{{{dataType}}}`
-    */
-    {{^isArray}}
-    {{^isMap}}
-    public {{{dataType}}} get{{{dataType}}}() throws ClassCastException {
+     * Get the actual instance of `{{{dataType}}}`. If the actual instance is not `{{{dataType}}}`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `{{{dataType}}}`
+     * @throws ClassCastException if the instance is not `{{{dataType}}}`
+     */
+    public {{{dataType}}} get{{#isArray}}{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}{{/isArray}}{{#isMap}}{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}{{/isMap}}{{^isArray}}{{^isMap}}{{{dataType}}}{{/isMap}}{{/isArray}}() throws ClassCastException {
         return ({{{dataType}}})super.getActualInstance();
     }
-    {{/isMap}}
-    {{#isMap}}
-    public {{{dataType}}} get{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}() throws ClassCastException {
-        return ({{{dataType}}})super.getActualInstance();
-    }
-    {{/isMap}}
-    {{/isArray}}
-    {{#isArray}}
-    public {{{dataType}}} get{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}() throws ClassCastException {
-        return ({{{dataType}}})super.getActualInstance();
-    }
-    {{/isArray}}
 
+    {{/vendorExtensions.x-duplicated-data-type-ignoring-erasure}}
     {{/anyOf}}
     {{/composedSchemas}}
 }

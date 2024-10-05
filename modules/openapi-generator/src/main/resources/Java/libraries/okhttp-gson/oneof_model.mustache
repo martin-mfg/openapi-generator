@@ -361,7 +361,7 @@ public class {{classname}} extends AbstractOpenApiSchema{{#vendorExtensions.x-im
 
     {{#composedSchemas}}
     {{#oneOf}}
-    {{^vendorExtensions.x-duplicated-data-type}}
+    {{^vendorExtensions.x-duplicated-data-type-ignoring-erasure}}
     /**
      * Get the actual instance of `{{{dataType}}}`. If the actual instance is not `{{{dataType}}}`,
      * the ClassCastException will be thrown.
@@ -369,13 +369,13 @@ public class {{classname}} extends AbstractOpenApiSchema{{#vendorExtensions.x-im
      * @return The actual instance of `{{{dataType}}}`
      * @throws ClassCastException if the instance is not `{{{dataType}}}`
      */
-    public {{{dataType}}} get{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}() throws ClassCastException {
+    public {{{dataType}}} get{{#isArray}}{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}{{/isArray}}{{#isMap}}{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}{{/isMap}}{{^isArray}}{{^isMap}}{{{dataType}}}{{/isMap}}{{/isArray}}() throws ClassCastException {
         return ({{{dataType}}})super.getActualInstance();
     }
-    {{/vendorExtensions.x-duplicated-data-type}}
+
+    {{/vendorExtensions.x-duplicated-data-type-ignoring-erasure}}
     {{/oneOf}}
     {{/composedSchemas}}
-
     /**
      * Validates the JSON Element and throws an exception if issues found
      *

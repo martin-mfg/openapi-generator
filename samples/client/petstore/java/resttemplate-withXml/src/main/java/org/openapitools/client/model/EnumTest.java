@@ -61,13 +61,13 @@ public class EnumTest {
   @XmlEnum(String.class)
   public enum EnumStringEnum {
     @XmlEnumValue("UPPER")
-    UPPER("UPPER"),
+    UPPER(String.valueOf("UPPER")),
     
     @XmlEnumValue("lower")
-    LOWER("lower"),
+    LOWER(String.valueOf("lower")),
     
     @XmlEnumValue("")
-    EMPTY("");
+    EMPTY(String.valueOf(""));
 
     private String value;
 
@@ -107,13 +107,13 @@ public class EnumTest {
   @XmlEnum(String.class)
   public enum EnumStringRequiredEnum {
     @XmlEnumValue("UPPER")
-    UPPER("UPPER"),
+    UPPER(String.valueOf("UPPER")),
     
     @XmlEnumValue("lower")
-    LOWER("lower"),
+    LOWER(String.valueOf("lower")),
     
     @XmlEnumValue("")
-    EMPTY("");
+    EMPTY(String.valueOf(""));
 
     private String value;
 

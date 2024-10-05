@@ -43,12 +43,10 @@ import java.util.HashSet;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -91,42 +89,26 @@ public class GmFruit extends AbstractOpenApiSchema {
             JsonNode tree = jp.readValueAsTree();
 
             Object deserialized = null;
-            boolean typeCoercion = ctxt.isEnabled(MapperFeature.ALLOW_COERCION_OF_SCALARS);
-            JsonToken token = tree.traverse(jp.getCodec()).nextToken();
             // deserialize Apple (nullable)
             try {
-                boolean attemptParsing = true;
-                if (attemptParsing) {
-                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Apple.class);
-                    // TODO: there is no validation against JSON schema constraints
-                    // (min, max, enum, pattern...), this does not perform a strict JSON
-                    // validation, which means the 'match' count may be higher than it should be.
-                    log.log(Level.FINER, "Input data matches schema 'Apple'");
-                }
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(Apple.class);
                 GmFruit ret = new GmFruit();
                 ret.setActualInstance(deserialized);
                 return ret;
             } catch (Exception e) {
-                // deserialization failed, continue
-                log.log(Level.FINER, "Input data does not match schema 'Apple'", e);
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'GmFruit'", e);
             }
 
             // deserialize Banana
             try {
-                boolean attemptParsing = true;
-                if (attemptParsing) {
-                    deserialized = tree.traverse(jp.getCodec()).readValueAs(Banana.class);
-                    // TODO: there is no validation against JSON schema constraints
-                    // (min, max, enum, pattern...), this does not perform a strict JSON
-                    // validation, which means the 'match' count may be higher than it should be.
-                    log.log(Level.FINER, "Input data matches schema 'Banana'");
-                }
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(Banana.class);
                 GmFruit ret = new GmFruit();
                 ret.setActualInstance(deserialized);
                 return ret;
             } catch (Exception e) {
-                // deserialization failed, continue
-                log.log(Level.FINER, "Input data does not match schema 'Banana'", e);
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'GmFruit'", e);
             }
 
             throw new IOException(String.format("Failed deserialization for GmFruit: no match found"));
@@ -206,23 +188,23 @@ public class GmFruit extends AbstractOpenApiSchema {
     }
 
     /**
-    * Get the actual instance of `Apple`. If the actual instance is not `Apple`,
-    * the ClassCastException will be thrown.
-    *
-    * @return The actual instance of `Apple`
-    * @throws ClassCastException if the instance is not `Apple`
-    */
+     * Get the actual instance of `Apple`. If the actual instance is not `Apple`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Apple`
+     * @throws ClassCastException if the instance is not `Apple`
+     */
     public Apple getApple() throws ClassCastException {
         return (Apple)super.getActualInstance();
     }
 
     /**
-    * Get the actual instance of `Banana`. If the actual instance is not `Banana`,
-    * the ClassCastException will be thrown.
-    *
-    * @return The actual instance of `Banana`
-    * @throws ClassCastException if the instance is not `Banana`
-    */
+     * Get the actual instance of `Banana`. If the actual instance is not `Banana`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `Banana`
+     * @throws ClassCastException if the instance is not `Banana`
+     */
     public Banana getBanana() throws ClassCastException {
         return (Banana)super.getActualInstance();
     }
