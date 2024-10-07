@@ -945,7 +945,7 @@ public class OpenAPINormalizer {
         }
 
         if (schema instanceof JsonSchema) { // 3.1 spec
-            if (Boolean.TRUE.equals(schema.getNullable()) && schema.get$ref() == null) {
+            if (Boolean.TRUE.equals(schema.getNullable())) {
                 return true;
             }
 
