@@ -1,0 +1,27 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  description: 'Specification to reproduce incorrectly generated Java Jersey code when using oneOf with "additionalProperties: false" to specify requirements'
+  title: OneOf required Test Api
+paths:
+  /:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                prop1:
+                  type: string
+                prop2:
+                  type: string
+              oneOf:
+                - required:
+                    - prop1
+                - required:
+                    - prop2
+      responses:
+        '200':
+          description: OK
