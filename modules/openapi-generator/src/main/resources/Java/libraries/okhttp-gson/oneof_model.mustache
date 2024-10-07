@@ -369,7 +369,7 @@ public class {{classname}} extends AbstractOpenApiSchema{{#vendorExtensions.x-im
      * @return The actual instance of `{{{dataType}}}`
      * @throws ClassCastException if the instance is not `{{{dataType}}}`
      */
-    public {{{dataType}}} get{{#isArray}}{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}{{/isArray}}{{#isMap}}{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}{{/isMap}}{{^isArray}}{{^isMap}}{{{dataType}}}{{/isMap}}{{/isArray}}() throws ClassCastException {
+    public {{{dataType}}} get{{#sanitizeGeneric}}{{{dataType}}}{{/sanitizeGeneric}}() throws ClassCastException {
         return ({{{dataType}}})super.getActualInstance();
     }
 
