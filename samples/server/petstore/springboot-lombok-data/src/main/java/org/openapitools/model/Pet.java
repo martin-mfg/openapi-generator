@@ -29,7 +29,7 @@ import javax.annotation.Generated;
 @lombok.AllArgsConstructor
 
 @Schema(name = "Pet", description = "A pet for sale in the pet store")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.10.0-SNAPSHOT")
 public class Pet {
 
   private Long id;
@@ -38,9 +38,11 @@ public class Pet {
 
   private String name;
 
+  @lombok.Builder.Default
   @Valid
   private List<String> photoUrls = new ArrayList<>();
 
+  @lombok.Builder.Default
   @Valid
   private List<@Valid Tag> tags = new ArrayList<>();
 
