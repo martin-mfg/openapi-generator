@@ -24,6 +24,7 @@ jobs:
           - samples/openapi3/client/extensions/x-auth-id-alias/java/jersey2-java8
           - samples/openapi3/client/petstore/java/jersey2-java8-special-characters
           - samples/openapi3/client/petstore/java/jersey2-java8
+          - samples/client/echo_api/java/native
           - samples/client/petstore/java/jersey2-java8-localdatetime
           - samples/client/petstore/java/jersey2-java8
           - samples/client/petstore/java/okhttp-gson
