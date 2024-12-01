@@ -59,6 +59,6 @@ class JacksonTest {
         assertEquals(expectedModel, model);
 
         TestInlineFreeformAdditionalPropertiesRequest invalidModel = new TestInlineFreeformAdditionalPropertiesRequest("value");
-        assertNotEquals(invalidModel, model);
+        assertEquals(invalidModel, model); // should fail
     }
 }
