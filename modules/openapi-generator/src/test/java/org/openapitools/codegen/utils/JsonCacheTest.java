@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.node.JsonNodeType;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.fasterxml.jackson.datatype.threetenbp.ThreeTenModule;
+import com.fasterxml.jackson.datatype.threetenbp.ThreeTenTimeModule;
 import org.openapitools.codegen.utils.JsonCache.CacheException;
 import org.openapitools.codegen.utils.JsonCache.Root.MergePolicy;
 import org.testng.annotations.BeforeMethod;
@@ -216,7 +216,7 @@ public class JsonCacheTest {
         ObjectMapper mapper = root.getMapper();
         mapper.registerModule(new JavaTimeModule());
         mapper.registerModule(new JodaModule());
-        mapper.registerModule(new ThreeTenModule());
+        mapper.registerModule(new ThreeTenTimeModule());
         cache = root.child("/JsonCacheTest");
         reload();
     }
