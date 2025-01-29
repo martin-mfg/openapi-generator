@@ -13,6 +13,8 @@
 
 package org.openapitools.client.model;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.util.Objects;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -318,25 +320,12 @@ public class PetRef {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    PetRef petRef = (PetRef) o;
-    return Objects.equals(this.id, petRef.id) &&
-        Objects.equals(this.category, petRef.category) &&
-        Objects.equals(this.name, petRef.name) &&
-        Objects.equals(this.photoUrls, petRef.photoUrls) &&
-        Objects.equals(this.tags, petRef.tags) &&
-        Objects.equals(this.status, petRef.status)&&
-        Objects.equals(this.additionalProperties, petRef.additionalProperties);
+    return EqualsBuilder.reflectionEquals(this, o, false, null, true);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, category, name, photoUrls, tags, status, additionalProperties);
+    return HashCodeBuilder.reflectionHashCode(this);
   }
 
   @Override

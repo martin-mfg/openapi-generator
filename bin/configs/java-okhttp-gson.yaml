@@ -14,7 +14,7 @@ additionalProperties:
   hideGenerationTimestamp: true
   useOneOfDiscriminatorLookup: true
   disallowAdditionalPropertiesIfNotPresent: false
-  useReflectionEqualsHashCode:: true
+  useReflectionEqualsHashCode: true
   removeEnumValuePrefix: true
 enumNameMappings:
   s: LOWER_CASE_S

@@ -13,6 +13,8 @@
 
 package org.openapitools.client.model;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.util.Objects;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -125,15 +127,7 @@ public class HealthCheckResult {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    HealthCheckResult healthCheckResult = (HealthCheckResult) o;
-    return Objects.equals(this.nullableMessage, healthCheckResult.nullableMessage)&&
-        Objects.equals(this.additionalProperties, healthCheckResult.additionalProperties);
+    return EqualsBuilder.reflectionEquals(this, o, false, null, true);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -142,7 +136,7 @@ public class HealthCheckResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(nullableMessage, additionalProperties);
+    return HashCodeBuilder.reflectionHashCode(this);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {

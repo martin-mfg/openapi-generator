@@ -13,6 +13,8 @@
 
 package org.openapitools.client.model;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.util.Objects;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -390,28 +392,12 @@ public class NewPet {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    NewPet newPet = (NewPet) o;
-    return Objects.equals(this.id, newPet.id) &&
-        Objects.equals(this.categoryInlineAllof, newPet.categoryInlineAllof) &&
-        Objects.equals(this.categoryAllOfRef, newPet.categoryAllOfRef) &&
-        Objects.equals(this.categoryAllOfRefDescription, newPet.categoryAllOfRefDescription) &&
-        Objects.equals(this.categoryAllOfRefDescriptionReadonly, newPet.categoryAllOfRefDescriptionReadonly) &&
-        Objects.equals(this.name, newPet.name) &&
-        Objects.equals(this.photoUrls, newPet.photoUrls) &&
-        Objects.equals(this.tags, newPet.tags) &&
-        Objects.equals(this.status, newPet.status)&&
-        Objects.equals(this.additionalProperties, newPet.additionalProperties);
+    return EqualsBuilder.reflectionEquals(this, o, false, null, true);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, categoryInlineAllof, categoryAllOfRef, categoryAllOfRefDescription, categoryAllOfRefDescriptionReadonly, name, photoUrls, tags, status, additionalProperties);
+    return HashCodeBuilder.reflectionHashCode(this);
   }
 
   @Override
