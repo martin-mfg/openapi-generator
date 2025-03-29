@@ -3588,6 +3588,17 @@ public class JavaClientCodegenTest {
                 "implements TestResponse"
         );
 
+        if(client.equals("okhttp-gson")){
+            TestUtils.assertFileNotContains(
+                    output.resolve("src/main/java/org/openapitools/client/model/TestResponse.java"),
+                    "CustomTypeAdapterFactory"
+            );
+            TestUtils.assertFileNotContains(
+                    output.resolve("src/main/java/org/openapitools/client/JSON.java"),
+                    "new org.openapitools.client.model.TestResponse.CustomTypeAdapterFactory()"
+            );
+        }
+
     }
 
     @Test(dataProvider = "allJavaClients")
