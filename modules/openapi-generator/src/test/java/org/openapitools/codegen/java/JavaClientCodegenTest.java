@@ -1304,7 +1304,7 @@ public class JavaClientCodegenTest {
                 .contains(
                         "@RequestLine(\"POST /events/{eventId}:undelete\")",
                         // baseName is kept for form parameters
-                        "@Param(\"some_file\") File someFile"
+                        "@Param(\"some_file\") @javax.annotation.Nullable File someFile"
                 );
     }
 
@@ -2609,16 +2609,16 @@ public class JavaClientCodegenTest {
         TestUtils.assertFileContains(
                 output.resolve("src/main/java/xyz/abcdef/api/MultipartApi.java"),
                 // multiple files
-                "multipartArray(List<File> files)",
+                "multipartArray(@jakarta.annotation.Nullable List<File> files)",
                 "formParams.addAll(\"files\","
                         + " files.stream().map(FileSystemResource::new).collect(Collectors.toList()));",
 
                 // mixed
-                "multipartMixed(MultipartMixedStatus status, File _file, MultipartMixedRequestMarker marker, List<MultipartMixedStatus> statusArray)",
+                "multipartMixed(@jakarta.annotation.Nonnull MultipartMixedStatus status, @jakarta.annotation.Nonnull File _file, @jakarta.annotation.Nullable MultipartMixedRequestMarker marker, @jakarta.annotation.Nullable List<MultipartMixedStatus> statusArray)",
                 "formParams.add(\"file\", new FileSystemResource(_file));",
 
                 // single file
-                "multipartSingle(File _file)",
+                "multipartSingle(@jakarta.annotation.Nullable File _file)",
                 "formParams.add(\"file\", new FileSystemResource(_file));"
         );
     }
@@ -2644,7 +2644,7 @@ public class JavaClientCodegenTest {
                 "formParams.addAll(\"files\", files.stream().collect(Collectors.toList()));",
 
                 // mixed
-                "multipartMixed(MultipartMixedStatus status, org.springframework.core.io.AbstractResource _file, MultipartMixedRequestMarker marker, List<MultipartMixedStatus> statusArray)",
+                "multipartMixed(@jakarta.annotation.Nonnull MultipartMixedStatus status, org.springframework.core.io.AbstractResource _file, @jakarta.annotation.Nullable MultipartMixedRequestMarker marker, @jakarta.annotation.Nullable List<MultipartMixedStatus> statusArray)",
                 "formParams.add(\"file\", _file);",
 
                 // single file
@@ -3197,13 +3197,13 @@ public class JavaClientCodegenTest {
 
         TestUtils.assertFileContains(
                 output.resolve("src/main/java/xyz/abcdef/api/PetApi.java"),
-                "public record DeletePetRequest(Long petId, String apiKey){}",
+                "public record DeletePetRequest(@jakarta.annotation.Nonnull Long petId, @jakarta.annotation.Nullable String apiKey){}",
                 "public void deletePet(DeletePetRequest requestParameters) throws RestClientResponseException {",
                 "public ResponseEntity<Void> deletePetWithHttpInfo(DeletePetRequest requestParameters) throws RestClientResponseException {",
                 "public ResponseSpec deletePetWithResponseSpec(DeletePetRequest requestParameters) throws RestClientResponseException {",
-                "public void deletePet(Long petId, String apiKey) throws RestClientResponseException {",
-                "public ResponseEntity<Void> deletePetWithHttpInfo(Long petId, String apiKey) throws RestClientResponseException {",
-                "public ResponseSpec deletePetWithResponseSpec(Long petId, String apiKey) throws RestClientResponseException {"
+                "public void deletePet(@jakarta.annotation.Nonnull Long petId, @jakarta.annotation.Nullable String apiKey) throws RestClientResponseException {",
+                "public ResponseEntity<Void> deletePetWithHttpInfo(@jakarta.annotation.Nonnull Long petId, @jakarta.annotation.Nullable String apiKey) throws RestClientResponseException {",
+                "public ResponseSpec deletePetWithResponseSpec(@jakarta.annotation.Nonnull Long petId, @jakarta.annotation.Nullable String apiKey) throws RestClientResponseException {"
         );
     }
 
@@ -3225,17 +3225,17 @@ public class JavaClientCodegenTest {
         TestUtils.assertFileContains(
                 output.resolve("src/main/java/xyz/abcdef/api/PetApi.java"),
                 "public static class DeletePetRequest {",
-                "DeletePetRequest(Long petId, String apiKey)",
+                "DeletePetRequest(@jakarta.annotation.Nonnull Long petId, @jakarta.annotation.Nullable String apiKey)",
                 "Long petId()",
-                "DeletePetRequest petId(Long petId) {",
+                "DeletePetRequest petId(@jakarta.annotation.Nonnull Long petId) {",
                 "String apiKey()",
-                "DeletePetRequest apiKey(String apiKey) {",
+                "DeletePetRequest apiKey(@jakarta.annotation.Nullable String apiKey) {",
                 "public void deletePet(DeletePetRequest requestParameters) throws RestClientResponseException {",
                 "public ResponseEntity<Void> deletePetWithHttpInfo(DeletePetRequest requestParameters) throws RestClientResponseException {",
                 "public ResponseSpec deletePetWithResponseSpec(DeletePetRequest requestParameters) throws RestClientResponseException {",
-                "public void deletePet(Long petId, String apiKey) throws RestClientResponseException {",
-                "public ResponseEntity<Void> deletePetWithHttpInfo(Long petId, String apiKey) throws RestClientResponseException {",
-                "public ResponseSpec deletePetWithResponseSpec(Long petId, String apiKey) throws RestClientResponseException {"
+                "public void deletePet(@jakarta.annotation.Nonnull Long petId, @jakarta.annotation.Nullable String apiKey) throws RestClientResponseException {",
+                "public ResponseEntity<Void> deletePetWithHttpInfo(@jakarta.annotation.Nonnull Long petId, @jakarta.annotation.Nullable String apiKey) throws RestClientResponseException {",
+                "public ResponseSpec deletePetWithResponseSpec(@jakarta.annotation.Nonnull Long petId, @jakarta.annotation.Nullable String apiKey) throws RestClientResponseException {"
         );
         TestUtils.assertFileNotContains(output.resolve("src/main/java/xyz/abcdef/api/PetApi.java"),
                 "public record DeletePetRequest(Long petId, String apiKey){}");
@@ -3296,15 +3296,15 @@ public class JavaClientCodegenTest {
         TestUtils.assertFileContains(
                 output.resolve("src/main/java/xyz/abcdef/api/PetApi.java"),
                 "public class DeletePetRequest {",
-                "DeletePetRequest(Long petId, String apiKey)",
+                "DeletePetRequest(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey)",
                 "Long petId()",
                 "String apiKey()",
                 "public Mono<Void> deletePet(DeletePetRequest requestParameters) throws WebClientResponseException {",
                 "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(DeletePetRequest requestParameters) throws WebClientResponseException {",
                 "public ResponseSpec deletePetWithResponseSpec(DeletePetRequest requestParameters) throws WebClientResponseException {",
-                "public Mono<Void> deletePet(Long petId, String apiKey) throws WebClientResponseException {",
-                "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(Long petId, String apiKey) throws WebClientResponseException {",
-                "public ResponseSpec deletePetWithResponseSpec(Long petId, String apiKey) throws WebClientResponseException {"
+                "public Mono<Void> deletePet(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {",
+                "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {",
+                "public ResponseSpec deletePetWithResponseSpec(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {"
         );
     }
 
@@ -3326,15 +3326,15 @@ public class JavaClientCodegenTest {
         TestUtils.assertFileContains(
                 output.resolve("src/main/java/xyz/abcdef/api/PetApi.java"),
                 "public static class DeletePetRequest {",
-                "DeletePetRequest(Long petId, String apiKey)",
+                "DeletePetRequest(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey)",
                 "Long petId()",
                 "String apiKey()",
                 "public Mono<Void> deletePet(DeletePetRequest requestParameters) throws WebClientResponseException {",
                 "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(DeletePetRequest requestParameters) throws WebClientResponseException {",
                 "public ResponseSpec deletePetWithResponseSpec(DeletePetRequest requestParameters) throws WebClientResponseException {",
-                "public Mono<Void> deletePet(Long petId, String apiKey) throws WebClientResponseException {",
-                "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(Long petId, String apiKey) throws WebClientResponseException {",
-                "public ResponseSpec deletePetWithResponseSpec(Long petId, String apiKey) throws WebClientResponseException {"
+                "public Mono<Void> deletePet(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {",
+                "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {",
+                "public ResponseSpec deletePetWithResponseSpec(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {"
         );
     }
 
@@ -3356,17 +3356,17 @@ public class JavaClientCodegenTest {
         TestUtils.assertFileContains(
                 output.resolve("src/main/java/xyz/abcdef/api/PetApi.java"),
                 "public static class DeletePetRequest {",
-                "DeletePetRequest(Long petId, String apiKey)",
+                "DeletePetRequest(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey)",
                 "Long petId()",
-                "DeletePetRequest petId(Long petId) {",
+                "DeletePetRequest petId(@javax.annotation.Nonnull Long petId) {",
                 "String apiKey()",
-                "DeletePetRequest apiKey(String apiKey) {",
+                "DeletePetRequest apiKey(@javax.annotation.Nullable String apiKey) {",
                 "public Mono<Void> deletePet(DeletePetRequest requestParameters) throws WebClientResponseException {",
                 "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(DeletePetRequest requestParameters) throws WebClientResponseException {",
                 "public ResponseSpec deletePetWithResponseSpec(DeletePetRequest requestParameters) throws WebClientResponseException {",
-                "public Mono<Void> deletePet(Long petId, String apiKey) throws WebClientResponseException {",
-                "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(Long petId, String apiKey) throws WebClientResponseException {",
-                "public ResponseSpec deletePetWithResponseSpec(Long petId, String apiKey) throws WebClientResponseException {"
+                "public Mono<Void> deletePet(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {",
+                "public Mono<ResponseEntity<Void>> deletePetWithHttpInfo(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {",
+                "public ResponseSpec deletePetWithResponseSpec(@javax.annotation.Nonnull Long petId, @javax.annotation.Nullable String apiKey) throws WebClientResponseException {"
         );
     }
 
@@ -3386,7 +3386,7 @@ public class JavaClientCodegenTest {
 
         TestUtils.assertFileContains(
                 output.resolve("src/main/java/xyz/abcdef/api/ATagApi.java"),
-                " getCall(String pathParameter, Integer queryParameter, final ApiCallback _callback)"
+                " getCall(@javax.annotation.Nonnull String pathParameter, @javax.annotation.Nullable Integer queryParameter, final ApiCallback _callback)"
         );
 
         TestUtils.assertFileNotContains(
@@ -3476,4 +3476,160 @@ public class JavaClientCodegenTest {
 
         JavaFileAssert.assertThat(files.get("Type.java")).fileContains("Type implements java.io.Serializable {");
     }
+
+    @DataProvider(name = "allJavaClients")
+    public Object[][] allJavaClients() {
+        return new Object[][] {
+                { JavaClientCodegen.FEIGN },
+                { JavaClientCodegen.GOOGLE_API_CLIENT },
+                { JavaClientCodegen.JERSEY2 },
+                { JavaClientCodegen.JERSEY3 },
+                { JavaClientCodegen.NATIVE },
+                { JavaClientCodegen.OKHTTP_GSON },
+                { JavaClientCodegen.RESTEASY },
+                { JavaClientCodegen.RESTTEMPLATE },
+                { JavaClientCodegen.WEBCLIENT },
+                { JavaClientCodegen.RESTCLIENT },
+                { JavaClientCodegen.REST_ASSURED },
+                { JavaClientCodegen.RETROFIT_2 },
+                { JavaClientCodegen.VERTX },
+                { JavaClientCodegen.MICROPROFILE },
+                { JavaClientCodegen.APACHE }
+        };
+    }
+
+    @Test(dataProvider = "allJavaClients")
+    public void testClientWithAnyOfCausedCompileError(String client) {
+        if(JavaClientCodegen.MICROPROFILE.equals(client))
+        {
+            // MikroProfile currently does not support anyOf
+            return;
+        }
+
+        final Path output = newTempFolder();
+        final OpenAPI openAPI = new OpenAPIParser()
+                .readLocation("src/test/resources/3_1/java/petstore.yaml", null, new ParseOptions())
+                .getOpenAPI();
+        final JavaClientCodegen codegen = new JavaClientCodegen();
+        codegen.setOutputDir(output.toString());
+        codegen.setLibrary(client);
+
+        final ClientOptInput input = new ClientOptInput().openAPI(openAPI).config(codegen);
+
+        List<File> files = new DefaultGenerator().opts(input).generate();
+
+        validateJavaSourceFiles(files);
+    }
+
+    @Test(dataProvider = "allJavaClients")
+    public void testClientWithUseOneOfInterface_issue_17419(String client) {
+        // given
+        final Path output = newTempFolder();
+        final OpenAPI openAPI = new OpenAPIParser()
+                .readLocation("src/test/resources/bugs/issue_17419.yaml", null, new ParseOptions())
+                .getOpenAPI();
+        final JavaClientCodegen codegen = new JavaClientCodegen();
+        codegen.setOutputDir(output.toString());
+        codegen.setUseOneOfInterfaces(true);
+        codegen.setLibrary(client);
+
+        final ClientOptInput input = new ClientOptInput().openAPI(openAPI).config(codegen);
+
+        // when
+        List<File> files = new DefaultGenerator().opts(input).generate();
+
+        // then
+        validateJavaSourceFiles(files);
+
+        TestUtils.assertFileContains(
+                output.resolve("src/main/java/org/openapitools/client/model/Details.java"),
+                "public interface Details {"
+        );
+        TestUtils.assertFileContains(
+                output.resolve("src/main/java/org/openapitools/client/model/InlineDetails.java"),
+                "implements Details"
+        );
+        TestUtils.assertFileContains(
+                output.resolve("src/main/java/org/openapitools/client/model/ReferencedDetails.java"),
+                "implements Details"
+        );
+
+    }
+
+    @Test(dataProvider = "allJavaClients")
+    public void testClientWithUseOneOfInterfaceWithoutDiscriminator_issue_17419(String client) {
+        // given
+        final Path output = newTempFolder();
+        final CodegenConfigurator configurator = new CodegenConfigurator()
+                .setGeneratorName("java")
+                .setLibrary(client)
+                .setAdditionalProperties(Map.of("useOneOfInterfaces", "true"))
+                .setInputSpec("src/test/resources/3_0/typescript-fetch/oneOf.yaml")
+                .setOutputDir(output.toString().replace("\\", "/"));
+
+        final ClientOptInput input = configurator.toClientOptInput();
+
+        // when
+        List<File> files = new DefaultGenerator().opts(input).generate();
+
+        // then
+        validateJavaSourceFiles(files);
+
+        TestUtils.assertFileContains(
+                output.resolve("src/main/java/org/openapitools/client/model/TestResponse.java"),
+                "public interface TestResponse {"
+        );
+        TestUtils.assertFileContains(
+                output.resolve("src/main/java/org/openapitools/client/model/TestA.java"),
+                "implements TestResponse"
+        );
+        TestUtils.assertFileContains(
+                output.resolve("src/main/java/org/openapitools/client/model/TestB.java"),
+                "implements TestResponse"
+        );
+
+        if(client.equals("okhttp-gson")){
+            TestUtils.assertFileNotContains(
+                    output.resolve("src/main/java/org/openapitools/client/model/TestResponse.java"),
+                    "CustomTypeAdapterFactory"
+            );
+            TestUtils.assertFileNotContains(
+                    output.resolve("src/main/java/org/openapitools/client/JSON.java"),
+                    "new org.openapitools.client.model.TestResponse.CustomTypeAdapterFactory()"
+            );
+        }
+
+    }
+
+    @Test(dataProvider = "allJavaClients")
+    public void testClientWithUseOneOfInterfaceShouldntGenerateOneOfExample_issue_17419(String client) {
+        // given
+        final Path output = newTempFolder();
+        final CodegenConfigurator configurator = new CodegenConfigurator()
+                .setGeneratorName("java")
+                .setLibrary(client)
+                .setAdditionalProperties(Map.of("useOneOfInterfaces", "true"))
+                .setInputSpec("src/test/resources/3_0/typescript-fetch/oneOf.yaml")
+                .setOutputDir(output.toString().replace("\\", "/"));
+
+        final ClientOptInput input = configurator.toClientOptInput();
+
+        // when
+        List<File> files = new DefaultGenerator().opts(input).generate();
+
+        // then
+        validateJavaSourceFiles(files);
+
+        // must only check if the library generates the doc
+        if(Files.exists(output.resolve("docs/TestResponse.md")))
+        {
+            TestUtils.assertFileNotContains(
+                    output.resolve("docs/TestResponse.md"),
+                    "## Example",
+                    "exampleTestResponse.setActualInstance(exampleTestA);"
+            );
+        }
+
+    }
+
 }
