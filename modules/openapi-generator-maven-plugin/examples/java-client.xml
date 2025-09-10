@@ -38,6 +38,7 @@
 
                             <!-- override the default library to jersey2 -->
                             <library>jersey2</library>
+                            <cleanupOutput>true</cleanupOutput>
                         </configuration>
                     </execution>
                     <execution>
@@ -92,6 +93,7 @@
 
                             <!-- override the default library to jersey2 -->
                             <library>jersey2</library>
+                            <cleanupOutput>true</cleanupOutput>
                         </configuration>
                     </execution>
                 </executions>
